@@ -1,0 +1,30 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+
+\title{School Closures and Housing Prices}
+\author{Jacob Herbstman and Noah Liu}
+\date{Draft: \today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This project studies how the 2013 Chicago public-school closures affected nearby home prices, housing-market activity, and neighborhood change. The starting design compares schools that appeared on the final closure-candidate list and ultimately closed with schools on the same list that remained open.
+\end{abstract}
+
+\section{Research question}
+
+Closing a neighborhood school can change both access to schooling and the use of a prominent local site. These changes may be capitalized into home prices, alter the likelihood that homes transact, and induce residential sorting. Existing work links Chicago's 2013 closures to crime and studies school closures as a precursor to neighborhood change \cite{brazil2020schoolclosurescrime,pearman2022schoolclosuresgentrification}. Related evidence shows that changes in neighborhood-school access can be capitalized into housing prices \cite{hanidoux2025equilibrium}. We ask how the Chicago closures affected prices and market activity at the parcel level.
+
+\section{Starting empirical design}
+
+In February 2013, Chicago Public Schools published a list of elementary schools that could close. The Board later closed only a subset. We begin by comparing locations near listed schools that closed with locations near listed schools that remained open. This comparison holds fixed an important stage of administrative selection and is therefore more credible than comparing closed schools with every open school in the city.
+
+The analysis will preserve separately the candidate-list announcement, final closure decision, end-of-school-year closure, and later building disposition. It will measure prices conditional on sale alongside transaction activity, and it will make overlapping school exposures and former attendance boundaries explicit.
+
+\bibliographystyle{plain}
+\bibliography{../lit_review/references}
+
+\end{document}

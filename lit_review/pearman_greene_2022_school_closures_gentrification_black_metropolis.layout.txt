@@ -1,0 +1,1844 @@
+                                               CEPA Working Paper No. 21-02
+
+
+School Closures and the Gentrification of the Black
+Metropolis
+
+AUTHORS                   ABSTRACT
+
+Francis A. Pearman, II    Largely overlooked in the empirical literature on gentrification is the potential impact that
+Stanford University       school closures play in this process. This study examines whether the weakening of the
+                          neighborhood-school connection brought about by school closures aﬀects the likelihood
+Danielle Marie Greene     that nearby neighborhoods experience gentrification. Integrating longitudinal data from the
+Stanford University
+                          U.S. Census with data on every urban school closure that occurred nationwide between
+                          2000 and 2012, this study finds that college-educated White households were far more
+                          likely to gentrify Black neighborhoods following the closure of a local school. In particular,
+                          school closures increased the likelihood that the most racially segregated Black
+                          neighborhoods gentrified by 9 percentage points, a process that corresponded during this
+                          period to an average loss in these neighborhoods of roughly 200 Black residents. Results
+                          suggest that school closures do not simply alter the educational landscape, school closures
+                          are also emblematic of a larger spatial and racial reimagining of U.S. cities that dispossess
+                          and displaces communities of color.
+
+
+
+
+                         VERSION
+
+                         March 2021
+
+
+
+                         Suggested citation: Pearman, F.A., & Greene, D.M. (2021). School Closures and the Gentrification of the
+                         Black Metropolis. (CEPA Working Paper No.21-02). Retrieved from Stanford Center for Education Policy
+                         Analysis: http://cepa.stanford.edu/wp21-02
+Running head: SCHOOL CLOSURES AND GENTRIFICATION
+
+
+
+
+                School Closures and the Gentrification of the Black Metropolis
+
+                                      Francis A. Pearman, II†
+
+                                      Danielle Marie Greene†
+
+
+
+                                       †
+                                           Stanford University
+
+                                              March 2021
+
+
+
+
+Corresponding Author
+
+Francis Pearman, Stanford University, Graduate School of Education, CERAS 524, 485 Lausen
+
+Mall, Stanford, CA 94305 (apearman@stanford.edu).
+
+
+
+Keywords: school closures, gentrification, urban schooling, segregation, displacement
+School Closures and Gentrification
+
+                   School Closures and the Gentrification of the Black Metropolis
+Introduction
+
+       An underappreciated aspect of the recent back-to-the-city movement is that it is situated
+
+within a broader pattern of racialized sorting that has long guided the U.S. housing market (e.g.,
+
+Krysan, Couper, Farley, & Forman, 2009; Lewis, Emerson, & Klineberg, 2011). In particular,
+
+patterns of gentrification—influxes of relatively affluent residents and subsequent rises in property
+
+values in previously disinvested urban neighborhoods—are governed by a racial logic (Hwang &
+
+Sampson, 2014). As White households have moved back to the city, taking up residence in and
+
+transforming certain parts of the urban core, many lower-income Black neighborhoods in the inner
+
+city have mostly remained structurally disinvested, racially isolated, and untouched by broader
+
+patterns of urban redevelopment (Sharkey, 2013). Notwithstanding noteworthy instances of
+
+historically Black neighborhoods being gentrified by affluent White households (e.g., McElroy &
+
+Werth, 2019; Prince, 2016; Summers, 2021), the predominant pattern of gentrification is one in
+
+which White gentrifiers move into urban neighborhoods with few Black residents (Sutton, 2020;
+
+Timberlake & Johns-Wolfe, 2017).
+
+       Scholars have advanced several theories for why higher-socioeconomic status (SES) White
+
+households have been less likely to move into inner-city Black neighborhoods than racially mixed or
+
+predominantly White urban neighborhoods, including perceptions of crime and disorder, racial
+
+anxieties, employment opportunities, social networks, and residential amenities (Couture &
+
+Handbury, 2016; Ellen, Mertens Horn, & Reed, 2017; Sampson, 2012). However, there is emerging
+
+evidence that schools may play a key part in this process (Pearman & Swain, 2017). This issue arises
+
+because children typically attend schools nearby their homes. For instance, in 2018, upwards of
+
+three-quarters of public-school children nationwide attended their assigned neighborhood school
+
+(NCES, 2019). This maps onto residential sorting patterns because living in a lower-income Black
+
+neighborhood has historically meant sending a child to a racially segregated, under-resourced school
+
+                                                   2
+School Closures and Gentrification
+
+
+(Orfield, 2013). In other words, Black neighborhoods may be least likely to experience gentrification,
+
+in part, due to an unwillingness of affluent White households to send their children to economically
+
+disadvantaged Black schools.
+
+        Nevertheless, disadvantaged schools do not always stay open (Tieken & Auldridge-Reveles,
+
+2019). In fact, school closures are becoming increasingly common in urban areas. For instance,
+
+across roughly the first decade of the twenty-first century, the number of school closures in the 100
+
+largest metropolitan areas increased by nearly 50%, from 5.5 to 10.6 closures per 1000 schools
+
+(McFarland et al., 2017). Moreover, in recent years, a growing number of cities have issued mass
+
+school closures—where a district may close dozens of schools at once (Caven, 2019; Han et al.,
+
+2017; Nerenberg, 2020). For example, in 2013 alone, Chicago shuttered 47 of its elementary schools,
+
+and other cities, like Detroit and Philadelphia, have followed suit, closing over 50 schools,
+
+respectively, in the years that followed (Brazil, 2020).
+
+        Notably, these school closures have not only disproportionately impacted Black students,
+
+they have also disproportionately occurred in disinvested neighborhoods, the very neighborhoods
+
+most vulnerable to gentrification (Burdick-Will, Keels, & Schuble, 2013; Tieken & Auldridge-
+
+Reveles, 2019). And although school closures are often rationalized on the grounds of improved
+
+efficiency, expanded educational opportunities, and fiscal responsibility, school closures are often
+
+met with ardent resistance on the part of families, students, educators, and community residents
+
+who fear that closing schools can diminish neighborhood cohesion and negatively affect the
+
+economic health and well-being of the local community (Alexander & Massaro, 2020; Bierbaum,
+
+2018; Ewing, 2018; Smith & Stovall, 2008).
+
+        Despite concerns about potential adverse effects on communities, there has been limited
+
+quantitative evidence about the impacts of school closures on neighborhood conditions, and
+
+virtually no evidence on whether school closures affect patterns of gentrification, a notable oversight
+
+
+
+                                                    3
+School Closures and Gentrification
+
+
+given that gentrification, just like school closures, has at times been met by fierce protest from
+
+community groups who view it as a threat to the future of Black neighborhoods (Addie & Fraser,
+
+2019; Ewing, 2018; Newman & Wyly, 2006). The current study begins to fill this gap by drawing
+
+national data from the U.S. Census and American Community Survey along with data on every
+
+urban school closure that took place nationwide between 2000 and 2012 and examining whether the
+
+shuttering of neighborhood schools affects patterns of gentrification in U.S. cities. In particular, this
+
+study is interested in whether the likelihood that affluent White households gentrify Black
+
+neighborhoods changes after the closure of a local school.
+
+Background
+
+        In its most general sense, gentrification refers to a type of physical, economic, cultural, and
+
+demographic transition in urban areas in which previously disinvested, oftentimes minoritized
+
+neighborhoods experience an influx of higher-SES, oftentimes White households and an increase in
+
+property values (Smith, 1996). Although the literature is largely unsettled on whether racialized
+
+turnover in previously disinvested neighborhoods is required for gentrification to occur (Freeman &
+
+Braconi, 2004; Hwang & Sampson, 2014), this study foregrounds race in its conceptualization of
+
+gentrification given this study’s interest in understanding prevailing patterns of racial segregation in
+
+urban areas, as well as unique role that affluent white households play in the educational landscape
+
+of gentrifying neighborhoods (Cucchiara, 2013; Cucchiara & Horvat, 2009; Pearman, 2020; Linn
+
+Posey-Maddox, Kimelberg, & Cucchiara, 2014; Stillman, 2012).
+
+        There are two general explanations for why gentrification occurs: production-side reasons
+
+related to the economic opportunities available in disinvested urban neighborhoods, and
+
+consumption-side reasons having to do with an emerging alignment between the preferences of
+
+gentrifiers and the social and cultural opportunities available in urban neighborhoods (Ley, 1996;
+
+Smith, 1982). Moreover, prior research has indicated that school closures may contribute to both.
+
+
+
+                                                    4
+School Closures and Gentrification
+
+
+Production-side theories view gentrification in economic terms and conceive of the inflow of capital into
+
+lower-income neighborhoods and the revitalization of urban infrastructure as a strategic investment
+
+response to sustained disinvestment and under-valuation of certain neighborhoods. That is,
+
+gentrification is viewed as a structural product of the housing and land markets. This perspective is
+
+codified most formally in Neil Smith’s “rent gap theory,” which argues that the gap between actual
+
+and potential land-use values in any given locale drives investment opportunities for homebuyers,
+
+developers, and investors and structures the flow of capital into and out of disinvested urban
+
+neighborhoods (Smith, 1982).
+
+        Although most research into production-side explanations for gentrification has documented
+
+associations between gentrification and the age and quality of the housing stock, local school
+
+closures may also contribute to the so-called rent-gap in a given neighborhood. For instance, prior
+
+research has shown that perceptions of school quality are capitalized into housing prices (Black,
+
+1999; Clapp, Nanda, & Ross, 2008; Clotfelter, Ladd, & Vigdor, 2005, 2006; Dhar & Ross, 2012;
+
+Stullich, 2011). Clapp, Nanda, and Ross (2008) found that a 1 standard deviation increase in math
+
+scores at a local school increased nearby property values by around 1.5 percent. In an earlier study,
+
+Black (1999) noted a similar pattern, documenting that households were willing to pay 2.5 percent
+
+more for housing for every 5 percent increase in achievement scores. To the extent that Black
+
+neighborhoods are tied to schools perceived to be of lower quality by gentrifiers, the shuttering of
+
+these lower-quality schools could plausibly raise the “ceiling” of the rent-gap in these
+
+neighborhoods, thereby increasing the likelihood that a given neighborhood experiences
+
+gentrification (Brunner, Cho, & Reback, 2012). On the other hand, if a school closure results in a
+
+building that is abandoned as opposed to repurposed, such a closure could plausibly lower the
+
+ceiling of the rent gap and decrease the likelihood of gentrification by depressing property values
+
+and contributing to visual cues of disorder and neighborhood blight.
+
+
+
+                                                    5
+School Closures and Gentrification
+
+
+        In contrast to production side explanations for gentrification, consumption-side theories frame
+
+gentrification as the result of consumer demand. Scholarship in this vein views gentrification as an
+
+expression of advanced capitalism and a response to the shifting consumption choices of certain
+
+parts of the middle class (Bader, 2011; Lloyd, 2010). According to this perspective, gentrification
+
+occurs because higher-SES households have become inclined toward the types of lifestyles made
+
+possible by proximity to urban amenities, including cultural institutions, cafes, and diverse residential
+
+environments. In other words, gentrification arises because of an emerging alignment between the
+
+cultural tastes and dispositions of the gentry and the structural features of urban neighborhoods.
+
+        School closures may serve as a consumption-side determinant of gentrification by changing
+
+the consumable amenities associated with urban neighborhoods. In particular, higher-SES
+
+households looking to relocate to urban areas are especially sensitive to perceptions of “fit” at local
+
+schools, i.e., perceptions of whether the demographic composition, facilities, governance,
+
+curriculum, and enrichment opportunities at local schools align with their social and educational
+
+priorities (Cucchiara, 2013; Cucchiara & Horvat, 2009; Posey-Maddox, 2014; Stillman, 2012). These
+
+preferences indicate that local schools that do not meet gentrifiers’ standards for quality, leadership,
+
+or school climate could plausibly serve as a deterrent to higher-SES White parents looking to
+
+relocate to central city areas. By extension, the shuttering of a neighborhood school that gentrifiers
+
+would have otherwise perceived to be less than desirable could in turn make the neighborhood itself
+
+more appealing. That is, in addition to school closures potentially influencing patterns of
+
+gentrification because closures may contribute to the economic viability of urban neighborhoods,
+
+school closures may influence patterns of gentrification by providing gentrifiers alternative and
+
+preferrable publicly funded schooling options for them to consume.
+
+Theoretical Framework
+
+
+
+
+                                                    6
+School Closures and Gentrification
+
+
+        Two competing theories about residential segregation provide alternative hypotheses for the
+
+role school closures may play as a moderator of the relation between neighborhood racial
+
+composition and patterns of gentrification. Both are grouped under place stratification theory. Place
+
+stratification theory maintains the primacy of race as a stratifying device in residential sorting
+
+patterns, wherein socially advantaged groups (i.e., affluent White households) maintain physical
+
+distance from socially disadvantaged groups (i.e., non-White, working class, etc.) (Alba & Logan,
+
+1993). This hierarchy of place is reinforced and institutionalized through public policy (e.g.,
+
+exclusionary zoning and urban renewal plans) and prevailing practices in the housing and lending
+
+markets (e.g., predatory lending practices, and prejudiced and discriminatory decisions on behalf of
+
+landlords, property developers, real estate agents, and banks) (Rugh, Albright, & Massey, 2015; Rugh
+
+& Massey, 2010; Shertzer, Twinam, & Walsh, 2016; Wilson, 2012). Although place stratification
+
+theory is traditionally used to describe racialized barriers to upward spatial mobility (i.e., moving from
+
+a less to a more socioeconomically advantaged neighborhood), at its core, place stratification theory
+
+simply assumes that spatial mobility in general (either upward mobility to a more affluent
+
+neighborhood or “downward,” strategic mobility to a gentrifying neighborhood) is governed by an
+
+enduring racial hierarchy where proximity to whiteness yields material benefits in terms of quality of
+
+life and long-term economic prospects. Therefore, according to place stratification theory, urban
+
+neighborhoods with fewer Black residents would be more likely to gentrify as compared to
+
+disinvested majority Black neighborhoods. More simply, according to place stratification theory,
+
+low-income Black communities are the least likely to be gentrified due to racialized reticence on
+
+behalf of White affluent households.
+
+        Following Pais, South, and Crowder (2012), this study draws on two variants of place
+
+stratification theory—a strong and weak version—to explain the how school closures may relate to
+
+the persistence of racial stratification in urban neighborhoods. The strong version of place
+
+
+
+                                                    7
+School Closures and Gentrification
+
+
+stratification theory holds that the primacy of neighborhood racial composition would nullify any
+
+perceived improvements in school quality in Black neighborhoods associated with a local school
+
+closure. According to the strong version of place stratification theory, the impact of neighborhood
+
+racial composition on patterns of gentrification would either be invariant to whether a local school
+
+closes, net other factors, or be amplified if school closures, for instance, are more likely to depress
+
+property values in minoritized neighborhoods than otherwise similar neighborhoods with higher
+
+shares of White residents. In either case, the strong version of place stratification theory would
+
+predict that closing a local school would not encourage affluent White residents to move into a
+
+disinvested Black neighborhood due to prevailing patterns of racial animus. In contrast, the weak
+
+version of place stratification theory, which maintains the primacy of race as a stratifying device in
+
+locational attainment but allows for improvements at the margins, would posit that school closures,
+
+as an educational reform strategy that endeavors to improve the local educational landscape, would
+
+depress but not entirely account for the role of racial stratification in determining patterns of
+
+gentrification. In particular, the weak version of place stratification theory would posit that school
+
+closures would lessen the aversion that affluent White households have for moving into a Black
+
+neighborhood due to fundamental changes to the local educational landscape that are appealing to
+
+affluent White households.
+
+        Empirically, this study considers these two competing theoretical models by specifying an
+
+interaction between school closure and the share of Black residents living in disinvested urban
+
+neighborhoods. Assuming significant main effects for neighborhood racial composition where
+
+neighborhoods with more Black residents are less likely to experience gentrification, a positive
+
+interaction in which the effect of neighborhood racial composition becomes less negative when a
+
+local school closes would provide evidence in favor of a weak version of place stratification theory–
+
+indicating that White households become less deterred from moving into Black neighborhoods
+
+
+
+                                                    8
+School Closures and Gentrification
+
+
+when a local school is shuttered. A lack of moderation between school closures and racial
+
+composition suggests that we cannot rule out the possibility that the effects of racial composition on
+
+gentrification are invariant to whether local schools are closed, as would be anticipated under a
+
+strong version of place stratification theory.
+
+Method
+
+        Examining the impact of school closures on patterns of gentrification required the
+
+integration of several national datasets. Data on school closures were collected annually from the
+
+National Center for Educational Statistics’ Common Core of Data for school years 2000 through
+
+2012. Baseline and pre-baseline characteristics of individual neighborhoods were gathered from the
+
+1990 and 2000 Neighborhood Change Database (NCDB). NCDB’s proprietary software provides
+
+normalized census tract information across years that accounts for any boundary changes. Given
+
+that this study focused on school closures that occurred between 2000 and 2012, this study also used
+
+census tract data from the 2010-14 American Community Survey to determine which
+
+neighborhoods underwent gentrification during the observation period.
+
+Primary Outcome of Interest
+
+        The primary outcome of interest in this study was whether an urban neighborhood
+
+experienced gentrification during the observation period. Given prior research on the distinct role
+
+that higher-SES White households play in the educational landscape of gentrifying neighborhoods
+
+(see Cucchiara, 2013b; Stillman, 2012), this study follows prior national studies of gentrification and
+
+schooling (e.g., Pearman & Swain, 2017; Pearman, 2020) and focuses on a racialized definition of
+
+gentrification that specifies that incoming gentry are White (Pearman & Swain, 2017). First,
+
+gentrifiable neighborhoods were defined as neighborhoods that had (a) a median income below the
+
+50th percentile of its respective city and (b) a share of recently constructed housing, defined as the
+
+percent of housing built in the 20 years preceding baseline, also below the 50th percentile of its
+
+
+
+                                                    9
+School Closures and Gentrification
+
+
+respective city. A neighborhood was considered gentrified if it met criteria (a) and (b) at baseline but
+
+also underwent between 2000 and 2012 (c) an increase in inflation-adjusted housing prices, and (d) a
+
+percentage increase in college-educated White households that exceeded the increase in college-
+
+educated White households in the city during this period (given an increase in absolute number of
+
+college-educated White households in the neighborhood). Neighborhoods that met the first set of
+
+criteria but failed to meet that latter were considered persistently disinvested neighborhoods, i.e.,
+
+neighborhoods eligible for gentrification that did not experience gentrification. Neighborhoods that
+
+met all four criteria were considered gentrified neighborhoods.
+
+Independent Variable
+
+        The primary independent variable of interest in this study was whether a neighborhood
+
+experienced a school closure nearby. As noted previously, data on school closures were gathered
+
+from the National Center for Educational Statistics’ Common Core of Data, which provides annual
+
+information on school characteristics, including codes for operational status that specify whether a
+
+school was closed. This dataset provides addresses for every school, including those that were
+
+closed. These addresses were subsequently geocoded to corresponding longitude-latitude
+
+coordinates (geocoding successfully located longitude-latitude coordinates 99% of schools). For the
+
+primary analysis, this study focused on school closures that occurred within 1-mile of neighborhood
+
+boundaries, although subsequent analyses vary this distance as a robustness check. Moreover, this
+
+study narrows its focus on school closures to that which occurred to traditional neighborhood
+
+schools. Vocational, alternative, special education, charters, magnet schools, and schools classified as
+
+“other” were excluded from the measure of school closures. (Figure 2 relaxes this restriction and
+
+reports results based on the inclusion of charter and magnet schools.)
+
+Control Variables
+
+
+
+
+                                                   10
+School Closures and Gentrification
+
+
+       To account for other factors that might influence patterns of school closures as well as
+
+gentrification, this study controls for a host of confounding factors at the neighborhood and district
+
+level. Baseline neighborhood controls were measured in the year 2000 and included the total number
+
+of residents, the percent of housing that is owner-occupied, the share of residents who are children
+
+under age 18, the share of households led by a single mother, the share of residents who are White
+
+with a bachelor’s degree, the share of adult residents who are unemployed, the share of residents
+
+living at or below the federal poverty line, the share of residents receiving government-based
+
+financial assistance, the share of residents without a high school degree, median household income,
+
+and median housing price. The study also controls for neighborhood racial composition; however,
+
+to address collinearity with regard to a key predictor variable—share of neighborhood residents who
+
+are Black—this study controls for the share of Black and White residents, respectively, while
+
+controlling for whether the share of Latinx residents exceeded the national average (see Dormann et
+
+al., 2013). In addition, to capture trends in gentrification prior to baseline, pre-2000 neighborhood
+
+controls were also included that measure the observed difference in each neighborhood
+
+characteristic between the 1990 and 2000 U.S. Census. Neighborhood controls were also included
+
+for the number of schools at baseline located within 1-mile of the neighborhood. A control was also
+
+included for whether a neighborhood was located in the principal city of a metropolitan statistical
+
+area. Baseline district controls were measured in the year 2000 and include total district enrollment,
+
+per-pupil expenditures, between-school segregation, the share students in the district who are non-
+
+white, and the percent of district schools that were charter and magnets, respectively. Additionally,
+
+to account for the fact that a relation between school closures and gentrification could be observed
+
+because school choice may contribute to each (see Pearman & Swain, 2017), this study controls for
+
+whether a district experienced growth in the share of charter or magnet schools during the
+
+observation period.
+
+
+
+                                                  11
+School Closures and Gentrification
+
+
+Descriptive Statistics for Analytic Sample
+
+        Table 1 presents baseline descriptive statistics for all neighborhoods located in metropolitan
+
+statistical areas. As shown in the bottom row, of the 66,624 neighborhoods located in metropolitan
+
+statistical areas, 22,594 were located in gentrifiable neighborhoods at baseline—that is,
+
+neighborhoods with median incomes and shares of recently constructed housing below the 50th
+
+percentile of their respective cities. Of these gentrifiable neighborhoods, 6,842 experienced during
+
+the observation period an increase in real housing prices and an influx of White college-educated
+
+residents that exceeded the growth of White college-educated residents in the city overall,
+
+corresponding to a rate of gentrification of roughly 30% across the analytic sample.
+
+        Overall, disinvested neighborhoods at baseline were generally worse off, socioeconomically,
+
+than metro neighborhoods. For example, poverty rates in disinvested neighborhoods were 8
+
+percentage points higher, shares of adults who did not complete high school were 9 percentage
+
+points higher, and unemployment rates were 3 percentage points higher. Gentrifiable neighborhoods
+
+also had substantially more Black residents than the average metropolitan neighborhood nationwide.
+
+When comparing gentrifiable neighborhoods to those neighborhoods that subsequently underwent
+
+gentrification, several differences were apparent. First, neighborhoods that gentrified were generally
+
+more socioeconomically advantaged than disinvested neighborhoods more generally. For instance,
+
+relative to gentrifiable neighborhoods, neighborhoods that gentrified had at baseline higher housing
+
+prices, higher median incomes, fewer shares of single-parent households, more college-educated
+
+residents, and fewer Black residents. With respect to the key independent variable, note although
+
+31% of metro neighborhoods during the observation period experienced a school closure nearby,
+
+substantially more neighborhoods in disinvested areas did. In particular, 47% of gentrifiable
+
+neighborhoods experienced a school closure nearby, a figure that was similar for the subset of these
+
+neighborhoods that went on to experience gentrification.
+
+
+
+                                                  12
+School Closures and Gentrification
+
+
+Analytic Strategy
+
+        To assess whether school closures moderate the relation between neighborhood racial
+
+composition and gentrification, this study estimates a linear probability model that takes the
+
+following form:
+
+ 𝑦!" = 𝛽# + 𝛽$ 𝑆𝑐ℎ𝑜𝑜𝑙𝐶𝑙𝑜𝑠𝑢𝑟𝑒! + 𝛽% 𝑃𝑒𝑟𝑐𝑒𝑛𝑡𝐵𝑙𝑎𝑐𝑘! + 𝛽& (𝑆𝑐ℎ𝑜𝑜𝑙𝐶𝑙𝑜𝑠𝑢𝑟𝑒! × 𝑃𝑒𝑟𝑐𝑒𝑛𝑡𝐵𝑙𝑎𝑐𝑘! ) + 𝜂𝑍
+
+                  + 𝜃𝑍"'$ + 𝜆 + 𝜀
+
+where 𝑦!" represents a binary indicator of whether neighborhood n at time t underwent
+
+gentrification. 𝑆𝑐ℎ𝑜𝑜𝑙𝐶𝑙𝑜𝑠𝑢𝑟𝑒! takes the value of 1 if neighborhood n experienced between 2000
+
+and 2012 a school closure within 1-mile and is 0 otherwise. 𝑃𝑒𝑟𝑐𝑒𝑛𝑡𝐵𝑙𝑎𝑐𝑘! is a measure of the
+
+share of neighborhood residents who are Black. 𝑍 is a vector of neighborhood and district
+
+characteristics measured at baseline. As noted in the previous section, to ensure that the moderating
+
+role of school closure is not confounded by growth in school choice options more generally, 𝑍 also
+
+includes interactions between charter and magnet school growth, respectively, and baseline shares of
+
+Black residents. 𝑍"#$ is a vector of neighborhood characteristics that capture pre-baseline trends in
+
+neighborhood conditions between 1990 and 2000 for each baseline neighborhood characteristic. 𝜆 is
+
+a vector of city fixed effects to account for any unobserved city-level variation in housing or urban
+
+redevelopment policies. Finally, 𝜀 is a heteroskedastic robust error term clustered at the city level.
+
+        To test whether the weak or strong version of place stratification theory best explains the
+
+relation between gentrification, school closures, and neighborhood racial composition, the relation
+
+between school closures and gentrification is allowed to vary by the share of neighborhood residents
+
+who are Black. This is accomplished by estimating a two-way interaction between school closure and
+
+the share of neighborhood residents who are Black. A significant, positive interaction term would
+
+provide evidence in favor of weak version of place stratification theory in that the adverse effect of
+
+neighborhood racial composition on the likelihood that neighborhoods experience gentrification
+
+
+                                                   13
+School Closures and Gentrification
+
+
+becomes less negative when the neighborhood experiences a school closure. A non-significant
+
+interaction term would provide evidence in favor of strong place stratification theory in that the
+
+adverse effect of neighborhood racial composition on the likelihood that a neighborhood
+
+experiences gentrification is invariant to whether the neighborhood experiences a school closure in
+
+the intervening years.
+
+Results
+
+        Table 2 presents results from OLS estimates predicting the likelihood of gentrification across
+
+neighborhood racial composition. Column 1 presents unadjusted estimates. Column 2 adds controls
+
+for baseline neighborhood characteristics. Columns 3 adds controls for baseline district
+
+characteristics. Columns 4 adds controls for pre-baseline trends in neighborhood conditions.
+
+Column 5 adds city fixed effects. Overall, this study finds that school closures increase the likelihood
+
+that Black neighborhoods experience gentrification.
+
+        Consider first the coefficient for the share of Black residents in the unadjusted model, which
+
+equaled -0.263 (p < .001). This means that the likelihood of gentrification in neighborhoods where
+
+nearby schools remained open was 26 percentage points lower in neighborhoods in which all
+
+residents were Black compared to neighborhoods in which no resident was Black (p < .001). This
+
+negative association between shares of Black residents and the likelihood of gentrification in the
+
+absence of a local school closure was observed across all model specifications. This pattern aligns
+
+with prior literature and theoretical predictions that Black neighborhoods are less likely than
+
+neighborhoods with few Black residents to experience gentrification. Of prime interest in this study,
+
+however, was whether school closures changed the likelihood that Black neighborhoods experienced
+
+gentrification.
+
+        The coefficient for the interaction term in Columns 1 through 5 indicates that the negative
+
+relation between gentrification and shares of Black residents diminished when a nearby school
+
+
+
+                                                  14
+School Closures and Gentrification
+
+
+closed. For instance, the unadjusted model indicates that the negative relation between shares of
+
+Black residents and gentrification diminished by 9.3 percentage points when a local school closed.
+
+The magnitude of this moderated effect was generally stable across model specifications, even after
+
+accounting for a robust set of potential confounding factors, including baseline differences in
+
+neighborhood characteristics, pre-baseline trends, and unobserved time-invariant differences across
+
+cities.
+
+          To illustrate these findings graphically and to provide some intuition for what the significant
+
+interaction term means in practice, Figure 1 plots the probability of gentrification (based on the fully
+
+adjusted model) across shares of Black residents for neighborhoods that did and did not experience
+
+a school closure during the observation period. The solid line corresponds to the probability of
+
+gentrification for neighborhoods that did not experience a school closure nearby. The dotted line
+
+corresponds to the probability of gentrification for neighborhoods that did experience a school
+
+closure nearby. A flat horizontal line would indicate no relation between neighborhood racial
+
+composition and gentrification.
+
+          As illustrated in Figure 1, the slope of the dotted line, relative to the solid line, attenuates
+
+toward zero, which indicates a shift to a more race-neutral gentrification process in which White
+
+gentrifiers’ aversion for Black neighborhoods was less pronounced when a local school closed.
+
+When local schools remained open, the probability of gentrification in the most racially segregated
+
+Black neighborhoods—those in which all residents were Black—was around 18%. In contrast, when
+
+a local school closed, these same neighborhoods experienced gentrification 27% of the time, an
+
+increase of 50%. This increase was significant at the p<.001 level. Conversely, as suggested by the
+
+overlap between the dotted and solid lines toward the left side of the figure, no evidence is found
+
+that school closures affected the likelihood that neighborhoods containing few Black residents
+
+
+
+
+                                                      15
+School Closures and Gentrification
+
+
+experienced gentrification. In other words, the unique role that school closures played in the
+
+gentrification process was distinct to predominately Black urban neighborhoods.
+
+        Moreover, the nature of gentrification that school closures brought about in disinvested
+
+Black neighborhoods was also associated with the displacement of Black residents. Table 3 reports
+
+results from unadjusted and adjusted regressions of changes in the number of Black residents
+
+between 2000 and 2012 on school closures, shares of Black residents at baseline, and the interaction
+
+between them. Black neighborhoods in general experienced decreases in the number of Black
+
+residents during the observation period, suggesting a general outmigration of Black residents from
+
+urban neighborhoods between 2000 and 2012; however, this decline was strongest for urban
+
+neighborhoods that experienced a school closure nearby. In particular, the most racially segregated
+
+Black neighborhoods that experienced a school closure nearby saw an additional 213 Black residents
+
+(p < .001) leave the neighborhood during the observation period, beyond the general decline in the
+
+number of Black residents observed between 2000 and 2012.
+
+Sensitivity Checks
+
+        Figure 2 reports results from a series robustness checks. The point estimates in Models 1
+
+through 8 refer to the coefficient for the interaction term between school closure and shares of
+
+Black residents. The whiskers refer to 95% confidence intervals. For comparison, Model 1 reports
+
+results from the primary analysis. Models 2 and 3 show that substantive conclusions about the
+
+moderating effects of school closures on neighborhood racial composition remain the same if the
+
+definition of school closures is expanded beyond traditional neighborhood schools to include
+
+charter and magnet schools. Model 4 shows that the estimated effect of school closures on the
+
+likelihood that Black neighborhoods experience gentrification is restricted to a White-racialized
+
+version of gentrification. In particular, when measuring gentrification in SES- rather than racial
+
+terms—as an increase in college-educated households of any color—there is no evidence that school
+
+
+
+                                                  16
+School Closures and Gentrification
+
+
+closures moderate the relation between gentrification and shares of Black residents. In other words,
+
+affluent White households are the ones for whom school closures in Black neighborhoods signal a
+
+green light for gentrification.
+
+        Model 5 shows that substantive conclusions were similar if the analysis was restricted to
+
+neighborhoods in the 150 largest metro areas in the United States. Column 6 shows that substantive
+
+conclusions were consistent if standard errors were clustered at the metro level as opposed to the
+
+school district level. Notably, Column 7 provides no evidence that school closures affect the
+
+likelihood of gentrification in predominately Black neighborhoods when using a more stringent
+
+threshold of baseline neighborhood disinvestment based on falling below the 40th as opposed to the
+
+50th percentile of their respective city in terms of median incomes and shares of recently
+
+constructed housing at baseline. This suggests that school closures have little bearing on the
+
+gentrification of the most disadvantaged Black neighborhoods.
+
+        Model 8 reports results from a falsification test that assesses the likelihood of reverse
+
+causality (i.e., that gentrification causes school closures rather than school closures causing
+
+gentrification). In particular, Model 8 reports results from a model that changes the dependent
+
+variable from an indicator of whether gentrification occurred between 2000 and 2012 to an indicator
+
+of whether gentrification occurred between 1990 and 2000, the ten years prior to baseline. A
+
+significant, positive interaction between school closures and shares of Black neighborhood residents
+
+in this model would indicate that school closures in majority Black neighborhoods were more likely
+
+to occur if the neighborhood had already experienced initial waves gentrification prior to baseline.
+
+As indicated by Model 8, however, the falsification test provides no evidence of reverse causality. In
+
+fact, the negative coefficient for the interaction term suggests that predominately Black
+
+neighborhoods were actually less likely to experience a school closure if the neighborhood
+
+
+
+
+                                                   17
+School Closures and Gentrification
+
+
+experienced earlier waves of gentrification, further minimizing concerns about the causal
+
+directionality assumed in this study.
+
+        Finally, Table A.1 in the Appendix shows that substantive conclusions remain the same if
+
+probit or logit regression is used in the place of a linear probability model, and Table A.2, which
+
+varies the buffer zone used to determine whether a school closure was “nearby” a disinvested
+
+neighborhood (the primary analysis used a 1-mile buffer zone), shows that school closures
+
+moderated the relation between racial stratification and gentrification so long as the closure occurred
+
+within 2 miles of a neighborhood, beyond which the estimated effect becomes unstable and fails to
+
+reach conventional significance thresholds.
+
+Discussion
+
+        School closures remain one of the most controversial and politically fraught issues in urban
+
+school reform today. Part of the reason for this controversy stems from the reality that little is
+
+actually known about the impacts of school closure. The few quantitative studies to date that have
+
+examined school closures have focused on student-level impacts and have arrived at mixed
+
+conclusions (Brummet, 2014; Carlson & Lavertu, 2016; Kirshner, Gaertner, & Pozzoboni, 2010;
+
+Steinberg & MacDonald, 2019). However, there is far less quantitative evidence on the effects of
+
+school closures on nearby communities, even though qualitative scholars and popular media outlets
+
+alike have long raised concerns about the potential destabilizing effects of school closures on nearby
+
+neighborhoods (Deeds & Pattillo, 2015; Ewing, 2018).
+
+        The current study sheds light on the impacts of school closures on communities by
+
+examining whether prevailing patterns of residential stratification in U.S. cities depend on whether
+
+local schools are closed. In particular, this study set out to examine whether school closures increase
+
+the likelihood that White gentrifiers move into disinvested Black urban neighborhoods. Overall, this
+
+study found evidence that school closures do indeed impact residential stratification: the negative
+
+
+
+                                                   18
+School Closures and Gentrification
+
+
+relation between gentrification and the share of neighborhood residents who are Black depended on
+
+whether a local school closed. In particular, school closures increased the likelihood that the most
+
+segregated Black neighborhoods experienced gentrification by nine percentage points—more than a
+
+50% increase over their baseline rate of gentrification. This finding provides support for a weak
+
+version of place stratification theory that holds that prevailing patterns of residential sorting in urban
+
+areas are governed by a racial hierarchy that attenuates somewhat after a local school is closed.
+
+        This study also found evidence that the nature of gentrification that school closures brought
+
+about in Black neighborhoods was also associated with a decline of roughly 200 Black residents.
+
+Although prior literature on the extent to which gentrification causes displacement is mixed—owing,
+
+in large part, to the fact that neighborhoods are more dynamic and residential instability is far more
+
+common than is typically assumed—the most rigorous evidence to date indicates that gentrification
+
+increases residential instability and that this increased instability is felt most strongly by renters,
+
+economically-disadvantaged residents, and households of color (Zuk, Bierbaum, Chapple, Gorska, &
+
+Loukaitou-Sideris, 2018). The findings from the current study align with this literature, documenting
+
+that the residential stability of Black households is highly sensitive to school closures and the
+
+socioeconomic changes school closures bring about in nearby communities.
+
+        While there is a lack of agreement about the full-range of benefits and challenges associated
+
+with school closures, scholars do appear to agree that the students most likely to have their schools
+
+closed are those who are low-income and Black (Billger, 2010; Brummet, 2014; Ewing, 2018;
+
+Lipman & Haines, 2007; Sunderman, Coghlan, & Mintrop, 2017; Tieken & Auldridge-Reveles,
+
+2019). In an age where school districts are writing statements and promising policy in “defense of
+
+Black lives,” consideration must be made as to how educational policies are contributing to the
+
+further perpetuation of the disintegration of Black communities (Shange, 2019). This study suggests
+
+that a closed school equates to a greater number of lost neighbors, and lost and new neighbors can
+
+
+
+                                                     19
+School Closures and Gentrification
+
+
+lead to the dispersal of friends and families, as well as the fragmentation of important
+
+interdependent social groups (Gibbons, Barton, & Reling, 2020). If it takes a village to raise a child,
+
+educational policymakers, stakeholders, and officials should question what responsibility they bear if
+
+the decisions they make render that village no more.
+
+         As calls for accountability in the face of “failing” schools continue, districts would do well to
+
+consider from where those appeals emerge and whether those appeals are top-down, not just
+
+administratively, but with respect to existing power structures that be (e.g., racial, political, social,
+
+economic). Importantly, Deeds and Pattillo (2015) noted that failure is “an interpretative process”
+
+that may not be identically framed or understood by all involved parties. Simply put, a school closure
+
+may make a neighborhood more appealing to affluent White households by improving perceptions
+
+of school quality but be received by Black community members as “punishment, erased local
+
+histories, and disrupt[ion of] their valued connection to the school” (p. 497). Indeed, a number of
+
+qualitative researchers have raised concerns about the impacts of school closure on the well-being of
+
+students and, notably, the impacts of school closures on the vitality of urban communities (see,
+
+Briscoe & Khalifa, 2015; Deeds & Pattillo, 2015; Green, 2017). Stakeholders who attempt to
+
+dismantle structural barriers to educational opportunities in urban areas through the apparatus of
+
+school closure by supplanting the desires of those indigenous to the local community may be at risk
+
+of doing more harm than good, specifically to urban Black neighborhoods and their expressed needs
+
+for the preservation of their communities and, most specifically, their children (see McKittrick,
+
+2014).
+
+Limitations
+
+         Despite providing the first quantitative evidence of the impact of school closures on patterns
+
+of gentrification, this study is not without several limitations. First, this study focused on population-
+
+average effects. Therefore, it remains possible that the observed effects of school closures on
+
+
+
+                                                     20
+School Closures and Gentrification
+
+
+patterns of gentrification were more pronounced in some cities and less pronounced in others.
+
+Second, this study was unable to distinguish between types of school closures. Therefore, it is
+
+possible that the effects of school closure on gentrification may differ depending on whether the
+
+closure occurred for performance reasons, fiscal considerations, or competitive pressures. Future
+
+research with more refined data about the source of school closures will be needed to parse out this
+
+issue. Third, the temporal scale of this study pertained to roughly the first decade in the twenty-first
+
+century. Although this time frame aligns with much empirical research on gentrification and urban
+
+schooling at present, future research will need to examine whether the observed effects noted in this
+
+study pertain to earlier or more recent periods.
+
+Conclusion
+
+        Despite these limitations, this study advances research on urban inequality by providing
+
+estimates of the effects of school closures on patterns of gentrification. Based on national data, this
+
+study finds that school closures in urban areas cause nearby Black neighborhoods to gentrify and
+
+that this gentrification is associated with declines in the number of Black residents in these
+
+neighborhoods. Ultimately, these findings indicate that school closures do not simply change the
+
+educational landscape. School closures also have consequences for the future of urban Black
+
+neighborhoods. Consequently, researchers should continue to explore how educational policies –
+
+particularly school dissolution – embolden community change that is predicated on the further
+
+dispossession of Black communities. Indeed, these findings suggest that school closures, as an
+
+educational reform strategy, are emblematic of a larger spatial and racial reimagining of U.S. cities
+
+(see Addie & Fraser, 2019), fueled through gentrification and related shifts in local governance, that
+
+dispossess and displaces Black neighborhoods.
+
+
+
+
+                                                   21
+School Closures and Gentrification
+
+
+                                               References
+
+Addie, J. D., & Fraser, J. C. (2019). After Gentrification: Social Mix, Settler Colonialism, and Cruel
+
+     Optimism in the Transformation of Neighbourhood Space. Antipode, 51(5), 1369–1394.
+
+     https://doi.org/10.1111/anti.12572
+
+Alba, R. D., & Logan, J. R. (1993). Minority proximity to whites in suburbs: an individual-level
+
+     analysis of segregation. American Journal of Sociology, 98(6), 1388–1427.
+
+     https://doi.org/10.1086/230193
+
+Alexander, M., & Massaro, V. A. (2020). School deserts: Visualizing the death of the neighborhood
+
+     school. Policy Futures in Education, 18(6), 787–805. https://doi.org/10.1177/1478210320951063
+
+Bader, M. D. M. (2011). Reassessing residential preferences for redevelopment. City and Community.
+
+     https://doi.org/10.1111/j.1540-6040.2011.01368.x
+
+Bierbaum, A. H. (2018). School Closures and the Contested Unmaking of Philadelphia’s
+
+     Neighborhoods. Journal of Planning Education and Research, 0739456X1878501.
+
+     https://doi.org/10.1177/0739456X18785018
+
+Billger, S. (2010). Demographics, Fiscal Health, and School Quality: Shedding Light on School
+
+     Closure Decisions. IZA Discussion Paper, (4739).
+
+Black, S. E. (1999). Do better schools matter? Parental valuation of elementary education. Quarterly
+
+     Journal of Economics. https://doi.org/10.1162/003355399556070
+
+Brazil, N. (2020). Effects of Public School Closures on Crime: The Case of the 2013 Chicago Mass
+
+     School Closure. Sociological Science, 7, 128–151.
+
+Briscoe, F. M., & Khalifa, M. A. (2015). ‘That racism thing’: a critical race discourse analysis of a
+
+     conflict over the proposed closure of a black high school. Race Ethnicity and Education, 18(6),
+
+     739–763. https://doi.org/10.1080/13613324.2013.792798
+
+Brummet, Q. (2014a). The effect of school closings on student achievement. Journal of Public
+
+
+
+                                                    22
+School Closures and Gentrification
+
+
+     Economics, 119, 108–124. https://doi.org/10.1016/j.jpubeco.2014.06.010
+
+Brummet, Q. (2014b). The effect of school closings on student achievement. Journal of Public
+
+     Economics, 119, 108–124. https://doi.org/10.1016/j.jpubeco.2014.06.010
+
+Brunner, E. J., Cho, S. W., & Reback, R. (2012). Mobility, housing markets, and schools: Estimating
+
+     the effects of inter-district choice programs. Journal of Public Economics.
+
+     https://doi.org/10.1016/j.jpubeco.2012.04.002
+
+Burdick-Will, J., Keels, M., & Schuble, T. (2013). Closing and Opening Schools: The Association
+
+     between Neighborhood Characteristics and the Location of New Educational Opportunities in
+
+     a Large Urban District. Journal of Urban Affairs, 35(1), 59–80.
+
+     https://doi.org/10.1111/juaf.12004
+
+Carlson, D., & Lavertu, S. (2016). Charter school closure and student achievement: Evidence from
+
+     Ohio. Journal of Urban Economics, 95, 31–48. https://doi.org/10.1016/j.jue.2016.07.001
+
+Caven, M. (2019). Quantification, Inequality, and the Contestation of School Closures in
+
+     Philadelphia. Sociology of Education, 92(1), 21–40. https://doi.org/10.1177/0038040718815167
+
+Clapp, J. M., Nanda, A., & Ross, S. L. (2008). Which school attributes matter? The influence of
+
+     school district performance and demographic composition on property values. Journal of Urban
+
+     Economics. https://doi.org/10.1016/j.jue.2007.03.004
+
+Clotfelter, C. T., Ladd, H. F., & Vigdor, J. (2005). Who teaches whom? Race and the distribution of
+
+     novice teachers. Economics of Education Review, 24(4), 377–392.
+
+     https://doi.org/10.1016/j.econedurev.2004.06.008
+
+Clotfelter, C. T., Ladd, H. F., & Vigdor, J. L. (2006). Teacher-Student Matching and the Assessment
+
+     of Teacher Effectiveness. Journal of Human Resources, 41(April 2005), 778–820.
+
+     https://doi.org/10.2307/40057291
+
+Couture, V., & Handbury, J. (2016). Urban Revival in America, 2000 to 2010. Philadelphia, PA.
+
+
+
+                                                    23
+School Closures and Gentrification
+
+
+Cucchiara, M. (2013). Marketing schools, marketing cities: Who wins and who loses when schools become urban
+
+     amenities. Chicago: University of Chicago Press.
+
+Cucchiara, M. B., & Horvat, E. M. (2009). Perils and promises: Middle-class parental involvement in
+
+     urban schools. American Educational Research Journal, 46(4), 974–1004.
+
+     https://doi.org/10.3102/0002831209345791
+
+Deeds, V., & Pattillo, M. (2015). Organizational “Failure” and Institutional Pluralism: A Case Study
+
+     of an Urban School Closure. Urban Education, 50(4), 474–504.
+
+     https://doi.org/10.1177/0042085913519337
+
+Dhar, P., & Ross, S. L. (2012). School district quality and property values: Examining differences
+
+     along school district boundaries. Journal of Urban Economics.
+
+     https://doi.org/10.1016/j.jue.2011.08.003
+
+Digest of Education Statistics, 2018. (2019).
+
+Dormann, C. F., Elith, J., Bacher, S., Buchmann, C., Carl, G., Carré, G., … Lautenbach, S. (2013).
+
+     Collinearity: a review of methods to deal with it and a simulation study evaluating their
+
+     performance. Ecography, 36(1), 27–46. https://doi.org/10.1111/j.1600-0587.2012.07348.x
+
+Ellen, I. G., Mertens Horn, K., & Reed, D. (2017). Has Falling Crime Invited Gentrification?
+
+     https://doi.org/10.2139/ssrn.2930242
+
+Ewing, E. (2018). Ghosts in the schoolyard: Racism and school closing on Chicago’s South Side. Chicago:
+
+     University of Chicago Press.
+
+Ewing, E. L. (2018). Ghosts in the Schoolyard: Racism and School Closings on Chicago’s South Side. Chicago,
+
+     Illinois: The University of Chicago Press.
+
+Freeman, L., & Braconi, F. (2004). Gentrification and Displacement. Journal of the American Planning
+
+     Association, 70(1), 39–52. https://doi.org/10.1080/01944360408976337
+
+Gibbons, J., Barton, M. S., & Reling, T. T. (2020). Do gentrifying neighbourhoods have less
+
+
+
+                                                      24
+School Closures and Gentrification
+
+
+     community? Evidence from Philadelphia. Urban Studies, 57(6), 1143–1163.
+
+     https://doi.org/10.1177/0042098019829331
+
+Green, T. (2017). “We felt they took the heart out of the community”: Examining a community-
+
+     based response to urban school closure. Education Policy Analysis Archives, 25(21), 1–30.
+
+     https://doi.org/10.14507/epaa.25.2549
+
+Han, C., Raymond, M., Woodworth, J., Negassi, Y., Richardson, W., & Snow, W. (2017). Lights off:
+
+     Practice and impact of closing low-performing schools. Stanford, CA.
+
+Hwang, J., & Sampson, R. J. (2014). Divergent Pathways of Gentrification: Racial Inequality and the
+
+     Social Order of Renewal in Chicago Neighborhoods. American Sociological Review, 79(4), 726–
+
+     751. https://doi.org/10.1177/0003122414535774
+
+Kirshner, B., Gaertner, M., & Pozzoboni, K. (2010). Tracing transitions: The effect of high school
+
+     closure on displaced students. Educational Evaluation and Policy Analysis, 32(3), 407–429.
+
+     https://doi.org/10.3102/0162373710376823
+
+Krysan, M., Couper, M. P., Farley, R., & Forman, T. A. (2009). Does race matter in neighborhood
+
+     preferences? Results from a video experiment. American Journal of Sociology.
+
+     https://doi.org/10.1086/599248
+
+Lewis, V. A., Emerson, M. O., & Klineberg, S. L. (2011). Who we’ll live with:Neighborhood racial
+
+     composition preferences of whites, blacks and latinos. Social Forces.
+
+     https://doi.org/10.1093/sf/89.4.1385
+
+Ley, D. (1996). Gentrification and the middle class. Oxford: Oxford University Press.
+
+Lipman, P., & Haines, N. (2007). From accountability to privatization and African American
+
+     exclusion: Chicago’s “Renaissance 2010.” Educational Policy, 21(3), 471–502.
+
+     https://doi.org/10.1177/0895904806297734
+
+Lloyd, R. (2010). Neo-bohemia: Art and commerce in the postindustrial city. Routledge.
+
+
+
+                                                       25
+School Closures and Gentrification
+
+
+McElroy, E., & Werth, A. (2019). Deracinated Dispossessions: On the Foreclosures of
+
+     “Gentrification” in Oakland, <scp>CA</scp>. Antipode, 51(3), 878–898.
+
+     https://doi.org/10.1111/anti.12528
+
+McFarland, J., Hussar, B., De Brey, C., Snyder, T., Wang, X., Wilkinson, S., … Ossolinski, M.
+
+     (2017). The Condition of Education 2017. NCES 2017-144.
+
+McKittrick, K. (2014). Mathematics Black Life. Black Scholar, 44(2), 16–28.
+
+     https://doi.org/10.1080/00064246.2014.11413684
+
+Nerenberg, K. M. (2020). Decoupled or doubled? Evaluating geospatial dispersion of student-
+
+     resident displacement by school closure. Social Science Research, 102519.
+
+     https://doi.org/10.1016/j.ssresearch.2020.102519
+
+Newman, K., & Wyly, E. K. (2006). The Right to Stay Put, Revisited: Gentrification and Resistance
+
+     to Displacement in New York City. Urban Studies, 43(1), 23–57.
+
+     https://doi.org/10.1080/00420980500388710
+
+Orfield, G. (2013). Housing segregation produces unequal schools. In P. Carter & K. Welner (Eds.),
+
+     Closing the opportunity gap: What America must do to give every child an even chance. New York, NY:
+
+     Oxford University Press.
+
+Pearman, F.A., & Swain, W. A. (2017). School Choice, Gentrification, and the Variable Significance
+
+     of Racial Stratification in Urban Neighborhoods. Sociology of Education, 90(3).
+
+     https://doi.org/10.1177/0038040717710494
+
+Pearman, Francis A. (2020). Gentrification, Geography, and the Declining Enrollment of
+
+     Neighborhood Schools. Urban Education, 55(2), 183–215.
+
+     https://doi.org/10.1177/0042085919884342
+
+Posey-Maddox, Linn, Kimelberg, S. M., & Cucchiara, M. (2014). Middle-Class Parents and Urban
+
+     Public Schools: Current Research and Future Directions. Sociology Compass, 8(4), 446–456.
+
+
+
+                                                     26
+School Closures and Gentrification
+
+
+     https://doi.org/10.1111/soc4.12148
+
+Posey-Maddox, Lynn. (2014). When middle-class parents choose urban schools: Class, race, and the challenge of
+
+     equity in public education. Chicago: University of Chicago Press.
+
+Prince, S. (2016). African Americans and Gentrification in Washington, D.C.: Race, Class and Social Justice in
+
+     the Nation’s Capital. New York, NY: Routledge.
+
+Rugh, J. S., Albright, L., & Massey, D. S. (2015). Race, Space, and Cumulative Disadvantage: A Case
+
+     Study of the Subprime Lending Collapse. Social Problems, 62(2), 186–218.
+
+     https://doi.org/10.1093/socpro/spv002
+
+Rugh, J. S., & Massey, D. S. (2010). Racial Segregation and the American Foreclosure Crisis.
+
+     American Sociological Review, 75(5), 629–651. https://doi.org/10.1177/0003122410380868
+
+Sampson, R. (2012). Great American city: Chicago and the enduring neighborhood effect. University of
+
+     Chicago Press.
+
+Shange, S. (2019). Progressive Dystopia: Abolition, Antiblackness, and Schooling in San Francisco. Durham,
+
+     NC: Duke University Press.
+
+Sharkey, P. (2013). Stuck in place: Urban neighborhoods and the end of progress toward racial equality. Chicago,
+
+     IL: University of Chicago Press.
+
+Shertzer, A., Twinam, T., & Walsh, R. P. (2016). Race, ethnicity, and discriminatory zoning. American
+
+     Economic Journal: Applied Economics, 8(3), 217–246. https://doi.org/10.1257/app.20140430
+
+Smith, J. J., & Stovall, D. (2008). ‘Coming home’ to new homes and new schools: critical race theory
+
+     and the new politics of containment. Journal of Education Policy, 23(2), 135–152.
+
+     https://doi.org/10.1080/02680930701853062
+
+Smith, N. (1996). The new urban frontier: Gentrification and the revanchist city. Psychology Press.
+
+Smith, Neil. (1982). Gentrification and Uneven Development. Economic Geography, 58, 139–155.
+
+     https://doi.org/10.2307/143793
+
+
+
+                                                       27
+School Closures and Gentrification
+
+
+Steinberg, M. P., & MacDonald, J. M. (2019). The effects of closing urban schools on students’
+
+      academic and behavioral outcomes: Evidence from Philadelphia. Economics of Education Review,
+
+      69, 25–60. https://doi.org/10.1016/j.econedurev.2018.12.005
+
+Stillman, J. (2012). Gentrification and schools: The process of integration when whites reverse flight. Springer.
+
+Stullich, S. (2011). The potential impact of revising the Title I comparability requirement to focus on school-level
+
+      expenditures. Washington, D.C. Retrieved from www2.ed.gov/rschstat/eval/title-
+
+      i/comparability-requirement/comparability-policy-brief.pdf
+
+Summers, B. T. (2021). Reclaiming the chocolate city: Soundscapes of gentrification and resistance
+
+      in Washington, DC. Environment and Planning D: Society and Space, 39(1), 30–46.
+
+      https://doi.org/10.1177/0263775820978242
+
+Sunderman, G. L., Coghlan, E., & Mintrop, R. (2017). School Closure as a Strategy to Remedy Low
+
+      Performance. Boulder, CO.
+
+Sutton, S. (2020). Gentrification and the Increasing Significance of Racial Transition in New York
+
+      City 1970–2010. Urban Affairs Review, 56(1), 65–95.
+
+      https://doi.org/10.1177/1078087418771224
+
+Tieken, M. C., & Auldridge-Reveles, T. R. (2019). Rethinking the School Closure Research: School
+
+      Closure as Spatial Injustice. Review of Educational Research, 89(6), 917–953.
+
+      https://doi.org/10.3102/0034654319877151
+
+Timberlake, J. M., & Johns-Wolfe, E. (2017). Neighborhood Ethnoracial Composition and
+
+      Gentrification in Chicago and New York, 1980 to 2010. Urban Affairs Review, 53(2), 236–272.
+
+      https://doi.org/10.1177/1078087416636483
+
+Wilson, Wi. J. (2012). The Truly Disadvantaged: The Inner City, the Underclass, and Public Policy. Chicago
+
+      and London: University of Chicago Press.
+
+Zuk, M., Bierbaum, A. H., Chapple, K., Gorska, K., & Loukaitou-Sideris, A. (2018). Gentrification,
+
+
+
+                                                           28
+School Closures and Gentrification
+
+
+    Displacement, and the Role of Public Investment. Journal of Planning Literature.
+
+    https://doi.org/10.1177/0885412217716439
+
+
+
+
+                                                 29
+School Closures and Gentrification
+
+   TABLE 1: MEANS AND STANDARD DEVIATIONS OF SELECT VARIABLES, METROPOLITAN STATISTICAL
+                                          AREAS
+                                                        All Metro          Disinvested        Gentrifying
+                                                      Neighborhoods       Neighborhoods      Neighborhoods
+
+   Baseline Neighborhood Characteristics (2000)
+   Total Residents                                           3,894             3,726               3,629
+                                                            (1,935)           (1,514)             (1,529)
+   Median Income                                             11.08             10.76               10.80
+                                                             (0.42)            (0.30)              (0.30)
+   Poverty Rate                                               0.12              0.20                0.19
+                                                             (0.11)            (0.11)              (0.11)
+   % Residents w/Gov'nt Aid                                   0.08              0.13                0.11
+                                                             (0.07)            (0.08)              (0.07)
+   % White Bachelor's Degree                                  0.21              0.11                0.13
+                                                             (0.16)            (0.09)              (0.10)
+   % Adult Residents w/o H.S. Deg.                            0.20              0.29                0.28
+                                                             (0.14)            (0.14)              (0.14)
+   Unemployment Rate                                          0.06              0.09                0.08
+                                                             (0.05)            (0.06)              (0.05)
+   % Female-headed HH                                         0.24              0.34                0.31
+                                                             (0.15)            (0.16)              (0.15)
+   % Black Residents                                          0.14              0.24                0.18
+                                                             (0.23)            (0.31)              (0.25)
+   % White Residents                                          0.69              0.55                0.58
+                                                             (0.30)            (0.33)              (0.32)
+   % Latinx Nhood                                             0.20              0.30                0.34
+                                                             (0.40)            (0.46)              (0.47)
+   log(Housing Price)                                        11.97             11.61               11.73
+                                                             (0.61)            (0.54)              (0.57)
+   District Characteristics (2000)
+   % Non-White Students                                       9.77              9.95               10.01
+                                                             (1.77)            (1.91)              (2.02)
+   Per-Pupil Expenditures                                   10,865            10,852              10,952
+                                                            (2,824)           (2,663)             (2,981)
+   Between-School Segregation                                 0.12              0.15                0.15
+                                                             (0.17)            (0.19)              (0.20)
+   Charter Expansion, 2000-12                                 0.27              0.30                0.33
+                                                             (0.45)            (0.46)              (0.47)
+   Magnet Expansion, 2000-12                                  0.25              0.29                0.28
+                                                             (0.43)            (0.45)              (0.45)
+   Nearby Schools
+   School Closure                                            0.30              0.46                0.43
+                                                            (0.46)            (0.50)              (0.49)
+   n=                                                       66,624            22,594              6,603
+
+  Note: The first column refers to neighborhood located in metropolitan statistical areas. The second column
+  refers to disinvested urban neighborhoods, defined as neighborhoods that had, at in the year 2000, a household
+  median income and a share of recently constructed housing that was below the 50th percentile of their
+  respective city. The third column refers to neighborhoods that met criteria for disinvestment at baseline but
+  subsequently underwent, between 2000 and 2012, an increase in real property values, and an increase in the
+  share of college-educated White households that exceeded the growth in college-educated households in the
+  city overall. Estimates based on first imputed dataset. Standard deviations are in parenthesis.
+
+
+
+
+                                                       30
+School Closures and Gentrification
+
+               TABLE 2: OLS REGRESSIONS OF NEIGHBORHOOD GENTRIFICATION ON LOCAL SCHOOL CLOSURES
+                                                               (1)+Nhood           (2)+District      (3)+Pre-Baseline       (4)+City
+                                           Unadjusted            Controls            Controls            Trends               FEs
+                                               (1)                  (2)                 (3)                 (4)                (5)
+  School Closures                           -0.030               -0.034*              -0.036*            -0.031*             -0.013
+                                            (0.018)              (0.016)              (0.016)            (0.016)             (0.016)
+  % Black Residents                         -0.263***            -0.168***            -0.217***          -0.189***           -0.159**
+                                            (0.032)              (0.046)              (0.056)            (0.050)             (0.052)
+  Closure x % Black                          0.093*               0.101*               0.080*             0.068*              0.089*
+                                            (0.047)              (0.042)              (0.035)            (0.033)             (0.036)
+  % White Residents                                              -0.076                0.013              0.032               0.163*
+                                                                 (0.065)              (0.079)            (0.069)             (0.068)
+  Latinx Nhood                                                    0.018                0.018              0.035               0.041*
+                                                                 (0.022)              (0.022)            (0.020)             (0.017)
+  % Owner Occupied                                                0.049                0.048             -0.036               0.006
+                                                                 (0.045)              (0.048)            (0.047)             (0.047)
+  Proportion of Children <18                                     -0.316**             -0.312**           -0.065              -0.153
+                                                                 (0.112)              (0.101)            (0.111)             (0.124)
+  % Female-headed HH                                             -0.019               -0.016             -0.063               0.070
+                                                                 (0.053)              (0.046)            (0.058)             (0.055)
+  Unemployment Rate                                              -0.266**             -0.319**           -0.888***           -0.479***
+                                                                 (0.098)              (0.097)            (0.150)             (0.136)
+  Poverty Rate                                                    0.088                0.093              0.231*              0.089
+                                                                 (0.099)              (0.097)            (0.106)             (0.106)
+  % Govn't Assistance                                            -0.169               -0.183             -0.312*             -0.294**
+                                                                 (0.121)              (0.114)            (0.151)             (0.114)
+  # Nhood Residents                                              -0.000***            -0.000***          -0.000***           -0.000***
+                                                                 (0.000)              (0.000)            (0.000)             (0.000)
+  % W/O H.S. Degree                                               0.466***             0.457***           0.353***            0.419***
+                                                                 (0.079)              (0.077)            (0.085)             (0.101)
+  Log(Median Income)                                              0.045                0.017             -0.093              -0.045
+                                                                 (0.048)              (0.043)            (0.062)             (0.051)
+  Log(Housing Price)                                              0.066***             0.065**            0.120***            0.093***
+                                                                 (0.019)              (0.021)            (0.025)             (0.026)
+  Log(Median Rent)                                               -0.057*              -0.059*            -0.054              -0.087*
+                                                                 (0.029)              (0.028)            (0.039)             (0.034)
+  % White Bachelor's Degree                                       0.797***             0.739***           0.570***            0.358***
+                                                                 (0.109)              (0.108)            (0.100)             (0.097)
+  Principal City                                                  0.008                0.008              0.017               0.030*
+                                                                 (0.013)              (0.013)            (0.012)             (0.012)
+  # of Nearby Schools                                             0.002                0.002              0.002               0.001
+                                                                 (0.001)              (0.002)            (0.002)             (0.001)
+  Crime Rates Per 10,000 Residents                                0.000                0.000              0.000              -0.000
+                                                                 (0.000)              (0.000)            (0.000)             (0.000)
+  District Characteristics                                                            X                   X                   X
+  Pre-Baseline Trends                                                                                     X                   X
+  City fixed effects                                                                                                          X
+  Observations                              20,423             20,423               20,423              20,423              20,423
+
+Note: Sample is restricted to neighborhoods classified as disinvested at baseline (i.e., those neighborhoods that had, at baseline, median
+household incomes and shares of recently constructed housing that were below the 50th percentile of its respective city). Neighborhoods
+were classified as gentrified if they experienced during the observation period a percentage increase in white college-educated residents
+that exceeded the growth of white college-education persons in the city overall, and an increase in real housing prices. Pre-baseline
+trends in neighborhood characteristics were measured as the difference in each neighborhood characteristic measured at baseline at its
+corresponding value during the 1990 Census. School district controls were measured in 2000 and include total number of students, total
+number of schools, annual expenditures per student, percentage of children receiving free-and-reduced-price lunch, the proportion of
+district students who were non-white, between-school racial segregation, the share of district schools that were charters and magnets,
+respectively, whether the district experienced growth during the observation period in its concentration of charter and magnet schools,
+respectively, and an interaction between charter and magnet growth, respectively, and the share of neighborhood residents who were
+Black. Estimates are based on 25 multiply imputed datasets, combined based on Rubin’s Rules for MI inference Standard errors are in
+parenthesis and are clustered at the school district level. *p<.05, **p<.01, ***p<.001 for two-tailed tests of significance.
+
+
+
+
+                                                                   31
+School Closures and Gentrification
+
+                   TABLE 3: ESTIMATED EFFECT OF SCHOOL CLOSURES ON
+                     CHANGES IN THE NUMBER OF BLACK RESIDENTS
+                                                            Δ Black Residents
+                                                        Unadjusted     Adjusted
+                                                           (1)            (2)
+                  School Closures                          23.1*           46.9***
+                                                          (11.7)           (9.9)
+                  % Black Residents                      -374.5***       -610.7***
+                                                          (49.2)          (78.5)
+                  Closure * % Black                      -333.4***       -213.0***
+                                                          (68.3)          (47.5)
+
+                  Nhood Characteristics                                         X
+                  District Characteristics                                      X
+                  Pre-Baseline Trends                                           X
+                  City fixed effects                                            X
+
+                  Observations                            20,423            20,423
+
+              Note: Estimates based on ordinary least squares regressions in which the
+              dependent variable is the change in the number of Black or White residents,
+              respectively. Sample is restricted to neighborhoods classified as disinvested
+              at baseline (i.e., those neighborhoods that had, at baseline, median
+              household incomes and shares of recently constructed housing that were
+              below the 50th percentile of its respective city). Neighborhoods were
+              classified as gentrified if they experienced during the observation period a
+              percentage increase in white college-educated residents that exceeded the
+              growth of white college-education persons in the city overall, and an
+              increase in real housing prices. Estimates are based on 25 multiply imputed
+              datasets, combined based on Rubin’s Rules for MI inference Standard errors
+              are in parenthesis and are clustered at the school district level. *p<.05,
+              **p<.01, ***p<.001 for two-tailed tests of significance.
+
+
+
+
+                                                   32
+School Closures and Gentrification
+
+           FIGURE 1: LIKELIHOOD OF GENTRIFICATION ACROSS SHARES OF BLACK
+          RESIDENTS FOR NEIGHBORHOODS THAT DID AND DID NOT EXPERIENCE A
+                              SCHOOL CLOSURE NEARBY
+
+
+
+
+                                       33
+School Closures and Gentrification
+
+             FIGURE 2: ROBUSTNESS CHECKS ON THE ESTIMATED EFFECT OF SCHOOL CLOSURES
+                                       ON GENTRIFICATION
+
+
+                    (1) Reported Estimates
+
+
+
+              (2) Including Magnet Schools
+
+
+
+           (3) Including Charter & Magnets
+
+
+
+              (4) SES-Based Gentrification
+
+
+
+                    (5) 150 Largest Metros
+
+
+
+                  (6) SEs Clustered Metros
+
+
+
+              (7) 40th Percentile Threshold
+
+
+
+                      (8) Falsification Test
+
+                                               -.1    -.05           0             .05            .1         .15
+                                                      Coefficient for School Closure x % Black Interaction
+
+
+            Note: Model 1 reports results from the primary analysis in which school closures were restricted
+            to those happening to traditional neighborhood schools and gentrification was defined as
+            disinvested neighborhoods that experienced a percentage increase in white college-educated
+            residents that exceeded the growth of white college-education persons in the city overall, and
+            an increase in real housing prices. Model 2 includes in the sample of school closures magnet
+            schools. Model 3 includes in the sample of school closures magnet and charter schools. Model
+            4 changes the operationalization of gentrification from racialized gentrification, where
+            gentrifiers are affluent and White, to an SES-based measure of gentrification, where gentrifiers
+            are affluent households of any color. In particular, the stipulation in the definition of
+            gentrification referring to an increase in college-educated White households was replaced with
+            a stipulation referring to an increase in college-educated households of any color. Model 5
+            restricts the analysis to the 150 largest MSAs. Model 6 clusters standard errors at the MSA level
+            as opposed to the school district level. Model 7 reports results in which the threshold used to
+            determine whether a neighborhood was disinvested at baseline in terms of its median income
+            level and share of recently constructed housing was “raised” from the 50th to the 40th
+            percentile. Model 8 reports results from a falsification test that assesses the likelihood of reverse
+            causality by changing the dependent variable from an indicator of whether gentrification
+            occurred between 2000 and 2012 (the observation period) to an indicator of whether
+            gentrification occurred between 1990 and 2000 (the pre-baseline period). All models are fully
+            adjusted. Estimates are based on 25 multiply imputed datasets, combined based on Rubin’s
+            Rules for MI inference. Standard errors are clustered at the school district level unless otherwise
+            noted. Whiskers refer to 95% confidence intervals for two-tailed tests of significance.
+
+
+
+
+                                                             34
+School Closures and Gentrification
+
+                                               APPENDIX
+
+                      TABLE A.1: PROBIT AND LOGISTIC REGRESSION OF
+                        GENTRIFICATION ON SCHOOL CLOSURES AND
+                          NEIGHBORHOOD RACIAL COMPOSITION
+                                                      Probit             Logistic
+                                                    Regression          Regression
+                                                        (1)                (2)
+                    School Closures                    -0.031              0.951
+                                                       (0.050)            (0.081)
+                    % Black Residents                  -0.723***           0.267***
+                                                       (0.182)            (0.085)
+                    Closure x %Black                    0.303*             1.691*
+                                                       (0.135)            (0.396)
+
+                    Nhood Characteristics               X                  X
+                    District Characteristics            X                  X
+                    Pre-Baseline Trends                 X                  X
+                    City fixed effects                  X                  X
+
+                 Note: Sample is restricted to neighborhoods classified as disinvested
+                 at baseline (i.e., those neighborhoods that had, at baseline, median
+                 household incomes and shares of recently constructed housing that
+                 were below the 50th percentile of its respective city). Neighborhoods
+                 were classified as gentrified if they experienced during the observation
+                 period a percentage increase in white college-educated residents that
+                 exceeded the growth of white college-education persons in the city
+                 overall, and an increase in real housing prices. Logistic regression
+                 results are reported as odds ratios. Estimates are based on 25 multiply
+                 imputed datasets, combined based on Rubin’s Rules for MI inference.
+                 Standard errors are in parenthesis and are clustered at the school
+                 district level. *p<.05, **p<.01, ***p<.001 for two-tailed tests of
+                 significance.
+
+
+
+
+                                                   35
+School Closures and Gentrification
+
+                TABLE A.2: ESTIMATED EFFECT OF SCHOOL CLOSURES ON NEIGHBORHOOD
+                  GENTRIFICATION ACROSS VARYING PROXIMITIES TO SCHOOL CLOSURE
+                                          < 1 mile         < 1.5 miles   < 2 miles     < 2.5 miles
+
+           School Closures                  -0.01             -0.00          0.00           0.00
+                                            (0.02)            (0.02)        (0.01)         (0.01)
+           % Black Residents                -0.16**           -0.15**       -0.13*         -0.11
+                                            (0.05)            (0.05)        (0.06)         (0.06)
+           Closure x %Black                  0.09*             0.06*         0.03           0.00
+                                            (0.04)            (0.03)        (0.03)         (0.03)
+
+           Nhood Characteristics            X                 X              X              X
+           District Characteristics         X                 X              X              X
+           Pre-Baseline Trends              X                 X              X              X
+           City fixed effects               X                 X              X              X
+           Observations                  20,423            20,423        20,423         20,423
+
+         Note: Estimates based on ordinary least squares regressions in which the dependent
+         variable is the change in the number of Black or White residents, respectively. Sample is
+         restricted to neighborhoods classified as disinvested at baseline (i.e., those neighborhoods
+         that had, at baseline, median household incomes and shares of recently constructed
+         housing that were below the 50th percentile of its respective city). Neighborhoods were
+         classified as gentrified if they experienced during the observation period a percentage
+         increase in white college-educated residents that exceeded the growth of white college-
+         education persons in the city overall, and an increase in real housing prices. Estimates are
+         based on 25 multiply imputed datasets, combined based on Rubin’s Rules for MI inference
+         Standard errors are in parenthesis and are clustered at the school district level. *p<.05,
+         **p<.01, ***p<.001 for two-tailed tests of significance.
+
+
+
+
+                                                      36
+

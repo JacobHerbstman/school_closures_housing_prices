@@ -1,0 +1,2076 @@
+Permanent Public School Closures, Housing
+Markets, and Neighborhood Change: A Source-
+Verified Literature Review
+Executive summary
+The empirical literature does not support a single, universal sign for the effect of permanent public-school
+closure on nearby housing demand. Instead, the best available evidence is consistent with a conditional
+capitalization model:
+
+
+       Closing a school tends to reduce nearby housing values when households lose a valued
+       assignment right, convenient school access, or a neighborhood public good; closing can
+       increase values when the school itself is perceived as weak, stigmatized, undesirable, or
+       otherwise a local disamenity.
+
+
+The strongest direct evidence for the first mechanism comes from the sudden 2012 closure of a well-
+performing public laboratory school in Cedar Falls, Iowa. Rosburg, Isakson, Ecker, and Strauss estimate that
+houses carrying the option to attend the school lost about 6.8%–7.2% of value, roughly $9,000 at the
+sample mean, after an externally budget-driven closure. Because the school performed about as well as
+nearby alternatives, their interpretation is that the capitalization reflected the option value of access plus
+non-test-score school and neighborhood amenities, not simply measured academic quality. 1
+
+
+The most direct evidence for the opposite mechanism is Schwartz and Voicu's New York City analysis. They
+distinguish zoned from choice schools and find that a zoned-school closing was associated with an
+immediate 2.6% decline in nearby prices, whereas a choice-school closing was associated with an
+approximately 3.6% increase. The closing schools were, on average, lower-performing than schools that
+remained open, and the positive effect of closing a choice school dissipated over time. Their interpretation
+explicitly allows a weak school to constitute a local disamenity or negative signal. The design is unusually
+informative conceptually but is less compelling causally than a sudden-closure quasi-experiment because
+school openings and closings were endogenous urban events rather than randomly assigned shocks. 2
+
+
+That contrast should not be read as establishing that closing low-performing urban neighborhood schools
+generally raises prices. The urban evidence base is too thin for that conclusion. In particular, I did not locate
+a modern transaction-level causal study that cleanly estimates the effect of a mass closure of low-
+enrollment, low-performing zoned schools in weak-market, predominantly Black urban
+neighborhoods while simultaneously examining both prices and housing-market quantities. National
+Census-based studies instead suggest that closure is associated with lower neighborhood housing values
+and, in highly segregated Black neighborhoods, with a greater probability and intensity of gentrification.
+Pearman and Greene's national analysis reports an approximately 8-percentage-point increase in
+gentrification probability in the most segregated Black neighborhoods exposed to closure; their
+manuscript also finds a substantial relative loss of Black residents. These results do not prove that closure
+
+
+
+
+                                                        1
+itself caused every component of neighborhood change, but they make clear why a price increase cannot
+automatically be interpreted as a resident welfare improvement. 3
+
+
+The literature is also strongly price-centric. I located comparatively little credible closure-specific evidence
+on the market's quantity margin. There is no comparably developed U.S. urban literature estimating effects
+on listings, time on market, arm's-length sales volume, sale hazards, turnover, vacancy, tax
+delinquency, foreclosure, rents, permitting, or redevelopment in a unified causal framework. This is an
+important omission because a hedonic price regression conditions on a property actually being sold. If
+closure causes families with children to stop listing, induces distressed owners to sell, changes the
+composition of properties transacting, or freezes a weak market, the price effect among observed sales can
+be quite different from the total housing-market effect.
+
+
+The neighborhood-demographic evidence is more consequential than the number of studies might
+suggest. Pearman and Greene find racialized gentrification effects concentrated in highly segregated Black
+neighborhoods, while Arkansas rural-consolidation research reports population losses and lower assessed
+property values after consolidation. In rural New York, other consolidation studies find heterogeneous and
+even eventually positive capitalization, particularly for small or initially lower-income districts. Those rural
+effects likely bundle school accessibility with tax savings, scale economies, district identity, travel
+distance, and fiscal reorganization, and should not be transported mechanically to Chicago, Detroit,
+Philadelphia, or other large-city closure contexts. 4
+
+
+Building disposition deserves separate treatment. A closed school can become a vacant and stigmatized
+structure, be demolished, reopen for community uses, host another school, or become market-rate
+housing. Those pathways can radically alter subsequent capitalization. Yet reuse is itself selected:
+developers acquire and convert buildings where market fundamentals, political support, financing, zoning,
+and expected rents are favorable. A naïve comparison of reused versus vacant schools therefore confuses
+the causal effect of reuse with the characteristics that made reuse feasible. Chicago research documents
+both residential conversion of former school buildings and very uneven reuse trajectories; research on
+Chicago crime also finds materially different post-closure patterns depending on whether a building
+remained vacant, was repurposed, or merged with another school. 5
+
+
+The Chicago finding is therefore especially striking. After targeted searches of combinations of “Chicago
+2013 school closures” with housing prices, property values, transactions, real estate, Cook County, assessor,
+recorder, Zillow, CoreLogic, repeat sales, vacancy, foreclosure, tax delinquency, gentrification, population, and
+redevelopment, I located studies of student outcomes, crime, demographic change, vacant buildings, and
+adaptive reuse, as well as Chicago research showing that school information can capitalize into housing
+transactions. I did not locate, through August 27, 2026, a published paper, working paper, or
+dissertation that directly estimates the causal effect of the 2013 CPS mass closures on parcel-level
+housing transaction prices or sales activity. This is a documented search conclusion, not a claim that
+such a study cannot exist in an unindexed archive. 6
+
+
+A useful way to read the literature is therefore:
+
+
+
+
+                                                         2
+  Question                         Best-supported conclusion
+
+  Does closing a valued            Yes, plausibly and sometimes substantially. The cleanest sudden-
+  neighborhood school lower        closure evidence is about −7%; NYC zoned-school evidence points in the
+  prices?                          same direction. 7
+
+  Can closing a weak or
+                                   Yes, it can, with NYC choice-school closures the clearest direct
+  stigmatized school raise
+                                   evidence, but causal evidence is substantially thinner. 8
+  prices?
+
+  Do we know the effect of         Not well. National neighborhood studies identify troubling value and
+  mass urban low-enrollment        racial-change patterns, but modern transaction-level identification
+  closures?                        remains sparse. 9
+
+                                   Not necessarily. They can coexist with incumbent displacement, racial
+  Are price increases welfare
+                                   turnover, loss of renters or children, and redevelopment serving new
+  gains?
+                                   residents. 10
+
+  What about quantities—
+  sales, listings, vacancies,      Major evidence gap, especially for U.S. cities.
+  rents?
+
+  Can rural consolidation          No. They are informative about mechanisms but combine educational
+  studies answer the urban         access with fiscal and district-scale changes that differ fundamentally
+  question?                        from city school closure. 4
+
+  Is Chicago 2013 already          Not in the literature located in this audit. Existing Chicago work is
+  answered with transaction        valuable but mostly addresses students, crime, reuse, or descriptive
+  data?                            demographic change rather than parcel-level market effects. 11
+
+A verification caution is important. I distinguish below among full text/manuscript verified, where I was
+able to inspect the original paper; original publisher record verified, where the publisher's original record
+and abstract were available but the complete manuscript was not; and repository-abstract only, which I
+list for completeness but do not use as core causal evidence. In particular, I do not manufacture coefficients
+or methodological details that were absent from the accessible original materials.
+
+
+Study-level evidence table
+The table uses [TXN] for individual housing transactions, [ASSESS] for parcel assessments,
+[CENSUS] for Census/tract housing measures, [AGG] for other aggregate values or rents, [SIM] for
+simulated closure effects rather than realized closure effects, and [NON-HOUSING] for studies useful
+mainly for a mechanism. Transaction studies should be given substantially greater weight than Census
+median-value or assessment studies when the question is capitalization into arm's-length prices.
+
+
+
+
+                                                      3
+                                                       Housing or
+                                                                        Exposure,         Identification
+                                    Setting, policy,   neighborhood                                         Main resu
+Study and verification                                                  treatment,        and causal
+                                    and school type    outcome and                                          timing
+                                                                        comparison        status
+                                                       data
+
+
+                                    Cedar Falls,
+                                    Iowa, 2009–
+                                    2013. Malcolm
+                                    Price
+                                    Laboratory
+                                    School, a well-
+                                    performing
+                                                                                          Hedonic
+                                    public K–12
+                                                                                          difference-in-
+                                    laboratory
+                                                                                          differences.
+                                    school. Closure                                                         Price effe
+Rosburg, Isakson, Ecker &                                                                 Strongest
+                                    announced                                                               approxim
+Strauss (2017), “Beyond                                                 Properties        direct quasi-
+                                    suddenly in                                                             −6.8% to
+Standardized Test Scores: The                                           inside MPLS       experimental
+                                    February 2012                                                           −7.2%, ar
+Impact of a Public School Closure                      [TXN]            attendance        closure study
+                                    because of                                                              $8,900–$
+on House Prices.” Journal of                           Residential      area versus       in this review,
+                                    university/                                                             in 2006 d
+Housing Research 26(2):119–135.                        sales prices,    properties in a   although it
+                                    funding                                                                 at the rel
+DOI: https://doi.org/                                  with housing     nearby Cedar      remains a
+                                    considerations;                                                         mean. Eff
+10.1080/10835547.2017.12092131.                        and locational   Falls             repeated
+                                    school closed at                                                        over and
+Original PDF: https://                                 controls.        comparison        cross-section
+                                    the end of that                                                         measure
+friendsoffontanaschool.org/wp-                                          area; pre/post    of transacting
+                                    year and                                                                score
+content/uploads/Rosberg2017.pdf.                                        sudden closure.   houses rather
+                                    building was                                                            differenc
+Full text verified.                                                                       than parcel-
+                                    demolished.                                                              1
+                                                                                          fixed-effect/
+                                    Residents of its
+                                                                                          repeat-sales
+                                    attendance
+                                                                                          identification.
+                                    area had a
+                                    house-linked
+                                    option to
+                                    attend MPLS or
+                                    the regular
+                                    Cedar Falls
+                                    school.
+
+
+
+
+                                                4
+                                                        Housing or
+                                                                           Exposure,         Identification
+                                     Setting, policy,   neighborhood                                          Main resu
+Study and verification                                                     treatment,        and causal
+                                     and school type    outcome and                                           timing
+                                                                           comparison        status
+                                                        data
+
+
+
+
+                                                                                             Rich hedonic
+                                                                                             panel/event      Zoned cl
+                                                                                             specification    −2.61%
+                                                                                             with school-     immedia
+                                                                                             zone fixed       associat
+                                     New York City,
+                                                                                             effects and      Choice-s
+Schwartz & Voicu (2007), “Which      roughly 1988–
+                                                        [TXN] 352,339      Price changes     district-by-     closure:
+Schools Matter? Disentangling        2003. 592
+                                                        NYC housing        associated with   quarter          +3.61%
+the Impact of Zoned Schools and      schools
+                                                        sales; property    opening/          controls.        immedia
+Choice Schools on House Prices       continuously
+                                                        characteristics,   closing of        Highly           associat
+in New York City.” Lincoln           open, 157
+                                                        school zones,      zoned versus      informative      with the
+Institute working paper. PDF:        openings, 79
+                                                        school             choice schools,   but not as-if-   fading by
+https://www.lincolninst.edu/app/     closings;
+                                                        attributes,        with school-      random           roughly 0
+uploads/                             among
+                                                        nearby             zone and time     closure          percenta
+2024/04/1303_schwartz_final_0.pdf.   closures, 23
+                                                        investment.        controls.         assignment;      point per
+Full text verified.                  zoned and 56
+                                                                                             site selection   Closing s
+                                     choice schools.
+                                                                                             and changing     were
+                                                                                             neighborhoods    academic
+                                                                                             remain           weaker o
+                                                                                             important        average.
+                                                                                             concerns.
+
+
+
+
+                                                 5
+                                                        Housing or
+                                                                        Exposure,        Identification
+                                     Setting, policy,   neighborhood                                       Main resu
+Study and verification                                                  treatment,       and causal
+                                     and school type    outcome and                                        timing
+                                                                        comparison       status
+                                                        data
+
+
+                                                                                                           The publ
+                                                                                                           study fin
+                                                                                                           negative
+                                                                                                           capitaliza
+                                                                                                           effect fro
+                                                                                                           of a
+                                                                                         Difference-       neighbor
+                                     Shaker Heights,                                     style housing     school. A
+Bogart & Cromwell (2000), “How
+                                     Ohio;                                               comparison        common
+Much Is a Neighborhood School                                           Areas losing a
+                                     elementary-                                         tied to school    reported
+Worth?” Journal of Urban Economics                                      neighborhood
+                                     school             [TXN]                            reorganization.   estimate
+47(2):280–305. Publisher record:                                        elementary
+                                     reorganization/    Residential                      Because full      appears
+https://doi.org/10.1006/juec.                                           school versus
+                                     redistricting      property                         text was not      literature
+1999.2142. Original publisher                                           otherwise
+                                     reduced the        values/sales.                    recovered         including
+record verified; full manuscript                                        comparable
+                                     number of                                           here, I do not    Rosburg
+not independently recovered in                                          areas.
+                                     neighborhood                                        independently     because
+this search session.
+                                     schools.                                            certify every     not extra
+                                                                                         design detail.    coefficien
+                                                                                                           the origin
+                                                                                                           text, I do
+                                                                                                           treat 9.9%
+                                                                                                           independ
+                                                                                                           re-verifie
+                                                                                                            12
+
+
+
+
+                                                 6
+                                                       Housing or
+                                                                        Exposure,        Identification
+                                    Setting, policy,   neighborhood                                        Main resu
+Study and verification                                                  treatment,       and causal
+                                    and school type    outcome and                                         timing
+                                                                        comparison       status
+                                                       data
+
+
+                                                                                                           Closure
+                                                                                                           exposure
+                                                                                                           associate
+                                                                                                           lower me
+                                                                                                           neighbo
+                                                       [CENSUS —                                           housing
+Brazil (2019), “The Effects of
+                                                       not                               Multivariate      values;
+Public Elementary School
+                                                       transactions]                     neighborhood      negative
+Closures on Neighborhood
+                                    U.S.               Neighborhood     Neighborhood     analysis, not a   associatio
+Housing Values in U.S.
+                                    metropolitan       median           closure          transaction-      larger as
+Metropolitan Areas, 2000–2010.”
+                                    areas,             housing          exposure/rate    level natural     Black sha
+In Shuttered Schools: Race,
+                                    elementary         values from      across           experiment.       rises, wh
+Community, and School Closures in
+                                    closures, 2000–    Census-based     metropolitan     Associational     openings
+American Cities, pp. 231–257.
+                                    2010.              data merged      neighborhoods.   rather than       associate
+Original publisher chapter
+                                                       with NCES                         cleanly           higher va
+record verified; full chapter not
+                                                       school closure                    causal.           The acce
+fully accessible in this audit.
+                                                       records.                                            publisher
+                                                                                                           material
+                                                                                                           not expo
+                                                                                                           coefficien
+                                                                                                           could saf
+                                                                                                           reproduc
+
+
+
+
+                                                7
+                                                          Housing or
+                                                                            Exposure,          Identification
+                                       Setting, policy,   neighborhood                                           Main resu
+Study and verification                                                      treatment,         and causal
+                                       and school type    outcome and                                            timing
+                                                                            comparison         status
+                                                          data
+
+
+                                                                                                                 Final pap
+                                                                                                                 reports a
+                                                                                                                 approxim
+                                                                                                                 8-percen
+                                                                                                                 point hig
+                                                                                                                 probabil
+                                                                                                                 gentrific
+                                                                                                                 and 0.21
+                                                                                                                 greater
+                                                                                                                 gentrific
+                                                                                               OLS/linear-
+                                                                                                                 intensity
+                                                                                               probability and
+                                                                                                                 most
+                                                                                               robustness/
+                                       All U.S.           [CENSUS —                                              segregat
+                                                                            A traditional      falsification
+                                       metropolitan       not                                                    Black
+                                                                            public-school      framework,
+Pearman & Greene (2022),               neighborhoods;     transactions]                                          neighbor
+                                                                            closure within     not a
+“School Closures and the               closures           Gentrification                                         exposed
+                                                                            roughly one        conventional
+Gentrification of the Black            identified from    status/                                                closure; n
+                                                                            mile during the    DiD natural
+Metropolis.” Sociology of Education    national NCES      intensity, real                                        compara
+                                                                            exposure           experiment.
+95(3):233–253. DOI: https://doi.org/   data, with         housing-price                                          effect in W
+                                                                            window, with       Extensive
+10.1177/00380407221095205.             neighborhood       component,                                             or Latinx
+                                                                            baseline           controls
+Original working manuscript:           change from        race,                                                  neighbor
+                                                                            neighborhood       improve
+https://files.eric.ed.gov/fulltext/    longitudinal       education,                                             The work
+                                                                            characteristics,   credibility but
+ED613162.pdf. Manuscript and           Census/            resident                                               manuscr
+                                                                            prior trends       cannot
+final publisher record verified.       Neighborhood       counts and                                             fully adju
+                                                                            and city fixed     guarantee
+                                       Change             neighborhood                                           estimate
+                                                                            effects.           removal of
+                                       Database data.     composition.                                           roughly 1
+                                                                                               endogenous
+                                                                                                                 versus 27
+                                                                                               closure
+                                                                                                                 gentrifica
+                                                                                               selection.
+                                                                                                                 and
+                                                                                                                 approxim
+                                                                                                                 213 addi
+                                                                                                                 Black
+                                                                                                                 resident
+                                                                                                                 in the mo
+                                                                                                                 segregat
+                                                                                                                 Black
+                                                                                                                 neighbor
+                                                                                                                  3
+
+
+
+
+                                                   8
+                                                        Housing or
+                                                                        Exposure,         Identification
+                                     Setting, policy,   neighborhood                                       Main resu
+Study and verification                                                  treatment,        and causal
+                                     and school type    outcome and                                        timing
+                                                                        comparison        status
+                                                        data
+
+
+                                                                                                           Reposito
+                                                                                                           abstract
+                                                                                                           reports a
+                                                                                                           approxim
+                                                                                                           13% decl
+                                                                                                           resident
+                                                                                                           property
+                                                                                                           values
+                                                                                                           associate
+Delpier (2021), The Community                           Repository      Closure/reuse
+                                                                                                           closure.
+Consequences of School Closure                          abstract        exposure; exact
+                                                                                                           Because
+and Reuse. PhD dissertation,                            reports         sample
+                                                                                                           manuscr
+Michigan State University.           Michigan           residential     construction
+                                                                                          Verification     could not
+Repository: https://d.lib.msu.edu/   school closures    property        and
+                                                                                          incomplete.      inspected
+etd/49756. Repository abstract       and reuse.         values and      comparator
+                                                                                                           this estim
+verified; full dissertation                             other           require full
+                                                                                                           should b
+extraction was unsuccessful, so                         community       dissertation
+                                                                                                           treated a
+not counted as core evidence.                           consequences.   verification.
+                                                                                                           candidat
+                                                                                                           result for
+                                                                                                           follow-up
+                                                                                                           verificatio
+                                                                                                           rather th
+                                                                                                           equivalen
+                                                                                                           the fully
+                                                                                                           audited s
+                                                                                                           above. 1
+
+
+
+
+                                                 9
+                                                           Housing or
+                                                                            Exposure,      Identification
+                                        Setting, policy,   neighborhood                                     Main resu
+Study and verification                                                      treatment,     and causal
+                                        and school type    outcome and                                      timing
+                                                                            comparison     status
+                                                           data
+
+
+                                                                                                            Populatio
+                                                                                                            roughly 6
+                                                                                                            resident
+                                                           [ASSESS]                                         dependin
+                                                           Parcel-level                                     specificat
+                                                                                           Matched DiD
+                                                           assessed                                         local scho
+Smith & Zimmer (2022), “The                                                                and event-
+                                                           property         Consolidated                    count fal
+Impacts of School District              Rural Arkansas                                     study-style
+                                                           values;          communities                     about 0.1
+Consolidation on Rural                  following Act                                      analysis;
+                                                           community        matched to                      0.25; par
+Communities: Evidence from              60, which                                          policy-
+                                                           population;      comparable                      assessed
+Arkansas Reform.”                       forced very                                        generated
+                                                           number of        non-                            fall
+EdWorkingPaper 22-530. DOI:             small districts                                    treatment
+                                                           local schools.   consolidated                    approxim
+https://doi.org/10.26300/ghex-          to reorganize/                                     improves
+                                                           Assessment       communities                     $1,300–$
+rp75. PDF: https://                     consolidate                                        leverage but
+                                                           panel comes      using                           in preferr
+edworkingpapers.com/sites/              based on                                           matching does
+                                                           from Zillow-     propensity                      fixed-effe
+default/files/ai22-530.pdf. Full text   enrollment.                                        not eliminate
+                                                           based            scores.                         specificat
+verified.                                                                                  unobservable
+                                                           assessor data                                    Event pat
+                                                                                           differences.
+                                                           used by the                                      suggests
+                                                           authors.                                         reform d
+                                                                                                            with som
+                                                                                                            attenuati
+                                                                                                            later. 15
+
+
+
+
+                                                   10
+                                                          Housing or
+                                                                           Exposure,          Identification
+                                       Setting, policy,   neighborhood                                           Main resu
+Study and verification                                                     treatment,         and causal
+                                       and school type    outcome and                                            timing
+                                                                           comparison         status
+                                                          data
+
+
+                                                                                              First-difference
+                                                                                                                 Publisher
+                                                                                              and
+                                                                                                                 abstract
+                                                                                              instrumental-
+                                                                                                                 reports r
+                                                                                              variable/2SLS
+                                                                                                                 25% incr
+                                                                                              approach to
+                                                                                                                 in house
+                                                                                              district
+                                                                                                                 values a
+                                                                                              heterogeneity
+Hu & Yinger (2008), “The Impact                                                                                  rents for
+                                                                                              and
+of School District Consolidation       New York State,                     Consolidating                         small dis
+                                                          [AGG — not                          endogenous
+on Housing Prices.” National Tax       1990–2000;                          versus non-                           declining
+                                                          transaction-                        consolidation.
+Journal 61(4):609–633. DOI: https://   district                            consolidating                         enrollme
+                                                          level] Housing                      Causal
+doi.org/10.17310/ntj.2008.4.03.        consolidation,                      districts, with                       becomin
+                                                          values and                          ambitions are
+Original publisher record              especially very                     size-dependent                        essential
+                                                          rents.                              stronger than
+verified; full text not                small districts.                    effects.                              above ab
+                                                                                              ordinary cross-
+independently inspected.                                                                                         1,700 pup
+                                                                                              sectional work,
+                                                                                                                 effects ar
+                                                                                              but exact first-
+                                                                                                                 smaller a
+                                                                                              stage details
+                                                                                                                 become
+                                                                                              were not
+                                                                                                                 negative
+                                                                                              independently
+                                                                                                                 highest-v
+                                                                                              re-audited
+                                                                                                                 tracts. 1
+                                                                                              here.
+
+                                                                                                                 Except fo
+                                                                                                                 relatively
+                                                                                                                 district, v
+                                                                                              Matching plus
+                                                                                                                 generally
+                                                                                              a double-
+                                                                                                                 the year
+                                                                                              sales/repeat-
+                                                                                                                 immedia
+Duncombe, Yinger & Zhang                                                                      sales
+                                                                                                                 following
+(2016), “How Does School District                                                             approach.
+                                                                           Consolidating                         consolid
+Consolidation Affect Property          Upstate New        [TXN] House                         Stronger than
+                                                                           districts versus                      then the
+Values? A Case Study of New            York district      sales,                              aggregate
+                                                                           propensity-                           losses fa
+York.” Public Finance Review 44(1):    consolidations;    including                           Census models
+                                                                           score-selected                        and even
+52–79. DOI: https://doi.org/           housing sales      repeat/double                       for
+                                                                           comparable                            reverse.
+10.1177/1091142114524617.              2000–2012.         sales.                              capitalization,
+                                                                           districts.                            run effec
+Original publisher article record                                                             although
+                                                                                                                 more fav
+verified.                                                                                     consolidation
+                                                                                                                 in initially
+                                                                                              remains
+                                                                                                                 income c
+                                                                                              selected and
+                                                                                                                 tracts an
+                                                                                              rural.
+                                                                                                                 unfavora
+                                                                                                                 higher-in
+                                                                                                                 tracts. 1
+
+
+
+
+                                                   11
+                                                        Housing or
+                                                                       Exposure,          Identification
+                                     Setting, policy,   neighborhood                                       Main resu
+Study and verification                                                 treatment,         and causal
+                                     and school type    outcome and                                        timing
+                                                                       comparison         status
+                                                        data
+
+
+                                                                                                           An extra
+                                                                                                           kilomete
+                                                                                                           a primary
+                                                                                                           school is
+                                                                                                           associate
+                                                                                                           roughly 7
+                                                                                                           lower pr
+                                                                                                           and an ex
+                                                                       Spatial distance
+Merrall, Higgins & Páez (2023),                                                                            kilomete
+                                     Hamilton,                         to primary and
+“What's a School Worth to a                                                                                a second
+                                     Ontario; school                   secondary
+Neighborhood? A Spatial                                                                   Spatial Durbin   school w
+                                     accommodation                     schools;
+Hedonic Analysis of Property                            [TXN-SIM]                         hedonic          about 1.4
+                                     reviews                           authors
+Prices in the Context of                                Geocoded                          model. Not a     lower pr
+                                     motivated by                      simulate the
+Accommodation Reviews in                                residential                       causal before/   Their sim
+                                     capacity                          accessibility
+Ontario.” Geographical Analysis.                        prices.                           after closure    Prince Ph
+                                     rationalization/                  consequences
+DOI: https://doi.org/10.1111/gean.                                                        estimate.        closure
+                                     declining                         of a particular
+12377. Full publisher text                                                                                 produces
+                                     enrollment.                       closure/
+verified.                                                                                                  predicted
+                                                                       consolidation.
+                                                                                                           parcel los
+                                                                                                           ranging
+                                                                                                           approxim
+                                                                                                           0.05%–9%
+                                                                                                           totaling a
+                                                                                                           $4.06 mil
+                                                                                                           the analy
+                                                                                                           sample.
+
+
+
+
+                                                12
+                                                               Housing or
+                                                                                  Exposure,           Identification
+                                            Setting, policy,   neighborhood                                             Main resu
+  Study and verification                                                          treatment,          and causal
+                                            and school type    outcome and                                              timing
+                                                                                  comparison          status
+                                                               data
+
+
+                                                                                                                        Vacant an
+                                                                                                                        nonschoo
+                                                                                                                        repurpos
+                                            Chicago's 2013
+                                                                                                                        sites wer
+                                            mass closure;
+                                                                                                                        associate
+  Brazil (2020), “Effects of Public         post-closure                                              Quasi-
+                                                                                  Closed sites                          crime
+  School Closures on Crime: The             buildings          [NON-                                  experimental/
+                                                                                  with different                        decrease
+  Case of the 2013 Chicago Mass             categorized as     HOUSING]                               spatial
+                                                                                  post-closure                          whereas
+  School Closure.” Sociological             vacant,            Crime around                           longitudinal
+                                                                                  statuses and                          merger w
+  Science 7:128–151. DOI: https://          repurposed for     closed-school                          crime analysis;
+                                                                                  surrounding                           existing s
+  doi.org/10.15195/v7.a6. Original          nonschool use,     sites.                                 not a housing-
+                                                                                  areas.                                was asso
+  journal record verified.                  or merged/co-                                             price study.
+                                                                                                                        with incre
+                                            located with
+                                                                                                                        in the stu
+                                            another school.
+                                                                                                                        reported
+                                                                                                                        specificat
+                                                                                                                         19
+
+
+
+
+Three features of this table are central.
+
+
+First, the actual transaction-price closure literature is remarkably small. Rosburg et al., Schwartz and
+Voicu, Bogart and Cromwell, and—if rural consolidation is included—Duncombe et al. are the clearest
+studies directly connecting an actual closure/reorganization to observed sales. Merrall et al. use
+transactions but simulate closure from a cross-sectional accessibility gradient rather than observing the
+causal market response. 20
+
+
+Second, the sign appears to depend on what the property owner is losing. In Rosburg, homeowners lose
+an unusually attractive house-tied schooling option; in NYC, losing a zoned school is negative but the
+closing of a weak choice school is positive. Rural consolidation adds fiscal economies and can therefore turn
+positive after an initially negative adjustment. 21
+
+
+Third, the national studies showing racialized neighborhood change use tract/neighborhood averages
+rather than sales. They are indispensable for studying population and sorting, but they cannot tell us
+whether an unchanged physical house would sell for a different price after closure in the same way a
+repeat-sales design can. 9
+
+
+What the closure literature says about mechanisms and outcomes
+A useful model is to treat a school closing as a vector of shocks rather than a single treatment. At least nine
+channels can operate at once, and different studies identify different combinations.
+
+
+
+
+                                                       13
+Loss of assigned-school access. This is the clearest reason to expect a negative capitalization effect. A
+home can confer a legally or administratively valuable schooling option even when the family does not
+currently use that school. The option has resale value because future buyers may have children, and it
+provides insurance against other schooling alternatives. Rosburg et al. are unusually informative because
+households in the relevant zone held an option to use MPLS or their ordinary Cedar Falls school. The
+approximately 7% loss after MPLS disappeared therefore has a natural interpretation as lost school-option
+and amenity value. Black's attendance-boundary research, discussed below, independently establishes that
+assignment to a more desirable school can capitalize into otherwise similar houses. 22
+
+
+Loss of a community anchor. School grounds can supply playgrounds, meeting space, recreation,
+pedestrian activity, informal social networks and neighborhood identity even to households that do not
+enroll a child. That makes physical proximity different from assignment rights. Merrall, Higgins and Páez
+emphasize precisely this point: observed price-distance gradients may capture a bundle of school
+accessibility, open space, neighborhood activity and related amenities rather than education alone. The
+Rosburg finding also survives adjustment for measured school performance, which is consistent with—
+although does not separately identify—these extra-educational benefits. 23
+
+
+Removal of a weak, unpopular or stigmatized school. This mechanism flips the expected sign. A school
+can convey information about neighborhood disadvantage, public disorder, peer composition or municipal
+neglect. It can also generate traffic and noise without delivering an educational option buyers value.
+Schwartz and Voicu provide the most direct empirical support for this possibility: NYC choice-school closings
+were followed by higher nearby prices, while zoned-school closings were followed by lower prices; the
+schools that closed were comparatively weak on measured academic indicators. Their results are consistent
+with removal of a disamenity, although endogenous school closure prevents one from treating the +3.6%
+coefficient as a clean universal causal effect of eliminating a “bad school.” 8
+
+
+This distinction also explains why “low performing” and “low demand” are not interchangeable. Low
+standardized test performance may make a school undesirable to affluent prospective homeowners, while
+current families may nevertheless value its accessibility, trusted teachers, special programs, cultural
+importance, after-school functions or stability. Conversely, a school can have respectable measured
+achievement yet be inconvenient or unpopular. A strong research design needs multiple baseline
+dimensions—test performance, enrollment demand, utilization, transfer applications, choice enrollment,
+parent survey measures, school climate and receiving-school quality—rather than a single performance
+label.
+
+
+Replacement-school quality and accessibility can dominate the direct effect of closure. A family that loses
+a school but is reassigned to a stronger school five blocks farther away experiences a different treatment
+from a family reassigned two miles away to a similarly low-performing institution. Rural consolidation
+makes this particularly obvious because larger travel distances arrive simultaneously with potential fiscal or
+curricular benefits. The heterogeneous New York consolidation results—short-run losses followed by
+recovery in many cases—are consistent with households gradually repricing that whole package rather than
+simply valuing an empty building. 24
+
+
+Closure as a signal of public disinvestment is especially difficult to separate from closure as a cause of
+decline. Districts usually do not choose closings at random. Enrollment contraction, vacant housing,
+foreclosures, population loss, falling birth cohorts and fiscal stress may precede the closure by years.
+Buyers may interpret a closure announcement as new information that the public sector expects continued
+
+
+
+
+                                                     14
+decline. In that case, a negative event-study coefficient can partly be an informational response to future
+neighborhood conditions rather than the mechanical value of the school itself. This is one reason national
+tract-level associations require caution: Brazil's housing-value analysis and Pearman and Greene's
+gentrification analysis deliberately control for observed neighborhood conditions, but unobserved
+trajectories can remain. 25
+
+
+The signaling mechanism also creates anticipation. The economically meaningful event may be the
+publication of a utilization report, placement on a closure-candidate list, the board recommendation, final
+board vote, last day of classes, reassignment of attendance boundaries, demolition, property sale, issuance
+of a redevelopment permit, or completion of reuse. Treating “2013” as a single post indicator can average
+over several distinct market-information events.
+
+
+Vacancy, blight, crime and informal guardianship are plausible but not mechanically negative. A
+shuttered school could reduce “eyes on the street,” leave a large building unmaintained and signal
+abandonment. But closure can also eliminate student fights, traffic, noise, trespass associated with an
+active campus, or crime concentrated around arrival and dismissal. Brazil's Chicago study is therefore
+important: its crime findings do not fit a simple assumption that vacant closed-school buildings necessarily
+raise nearby crime. 19
+
+
+Redevelopment and reuse can produce an entirely new capitalization regime. Former schools can become
+housing, offices, community centers or other schools. Chicago is a salient case: qualitative research has
+documented conversions of former educational facilities into residential real estate and the tensions
+between redevelopment, affordability, historic preservation and community goals. These examples
+demonstrate a credible positive land-value mechanism while simultaneously illustrating why market
+appreciation may benefit developers and incoming owners rather than families harmed by school
+withdrawal. The causal problem is that high-value sites are precisely the sites most likely to attract
+redevelopment.
+
+
+Family out-migration and the loss of households with children can affect both housing demand and
+neighborhood composition. Arkansas consolidation evidence finds local population reductions in treated
+communities along with lower assessed values. The Chicago descriptive evidence is also suggestive: one
+retrospective analysis using ACS data reported substantially larger population losses in majority-Black tracts
+containing 2013 closed schools than in otherwise majority-Black tracts without closures, while explicitly
+noting that this comparison cannot establish that closure caused the difference. 26
+
+
+This channel deserves much more attention in cities because household type should respond more strongly
+than total population. A closure may have little effect on young professionals, seniors or childless
+households while substantially reducing the neighborhood's attractiveness to families with elementary-age
+children. That could produce stable or even rising prices alongside a falling child population.
+
+
+Gentrification and racial sorting provide the clearest reason that capitalization and welfare must be kept
+separate. Pearman and Greene find the closure–gentrification relationship concentrated in the most
+segregated Black neighborhoods and show that the substantive change is particularly connected to White
+college-educated entry and Black population loss. Thus, a market response can plausibly look “positive” in a
+hedonic regression while representing dispossession from the perspective of existing Black residents. 10
+
+
+This produces at least four empirically distinct scenarios:
+
+
+
+
+                                                       15
+                                              Demographic
+ Price path                                                       Most plausible interpretation
+                                              path
+
+                                                                  Loss of school access/community anchor,
+ Prices fall; families with children and      Population/child
+                                                                  disinvestment signal, or weak
+ incumbent residents leave                    decline
+                                                                  replacement access
+
+                                                                  Genuine amenity improvement, removal
+ Prices rise; incumbent racial/income         Stable population
+                                                                  of a disamenity, or productive reuse
+ composition broadly stable                   and tenure
+                                                                  without substantial displacement
+
+ Prices rise; White/higher-income                                 Neighborhood demand is recovering, but
+                                              Gentrification/
+ buyers increase while Black, renter                              gains are not equivalent to welfare gains
+                                              displacement
+ or lower-income residents decline                                for incumbents
+
+ Prices initially fall and later rise after                       Initial loss/disinvestment followed by
+                                              Transitional
+ reuse or improved replacement                                    redevelopment, fiscal improvement or re-
+                                              sorting
+ access                                                           equilibration
+
+The third case is particularly important. A price increase answers “what are marginal buyers willing to
+pay?” It does not answer “are incumbent residents better off?” An owner who remains and values
+equity appreciation may benefit. A renter may face higher rent or displacement. A homeowner with low
+liquidity may face higher assessments or taxes. A family with children may value the school loss negatively
+even as childless buyers bid more for housing. A former school converted to luxury housing can increase
+nearby land values while simultaneously erasing a neighborhood institution.
+
+
+The evidence by closure type remains uneven. Abrupt closure is best represented by Rosburg; school
+opening/closing within an urban choice environment by Schwartz and Voicu; district merger/
+consolidation by Hu–Yinger, Duncombe–Yinger–Zhang and Smith–Zimmer; mass accountability/fiscal
+urban closure has much weaker housing evidence; and I did not locate a verified U.S. transaction study of a
+permanent disaster-driven K–12 closure that met the requested scope. 27
+
+
+The same is true for outcomes. The literature has some evidence on sale prices, Census housing values,
+assessments, population and racial change. It has far less on the probability that a property sells,
+listings, days on market, seller concessions, rental vacancy, rent growth, tax delinquency, foreclosure
+transitions, residential permits, demolition and redevelopment. Those are not side outcomes: they are
+necessary for distinguishing capitalization from market thinning and for understanding who bears the cost.
+
+
+School-quality capitalization benchmark and transaction-data
+methods
+The broader capitalization literature establishes the conceptual benchmark requested by the question, but
+it should not be mistaken for closure evidence. Different designs estimate very different school-related
+objects.
+
+
+
+
+                                                        16
+                                      What the design      Key result and           What it does not
+Benchmark study
+                                      identifies           relevance to closure     establish
+
+                                      Assignment
+                                      rights / school                               It does not
+                                                           A 5% increase in test
+                                      quality bundle.                               identify the value
+                                                           scores is associated
+                                      Compares houses                               of the physical
+                                                           with roughly a 2.5%
+Black (1999), “Do Better Schools      close to opposite                             school building or
+                                                           higher house price
+Matter? Parental Valuation of         sides of                                      what happens
+                                                           in the boundary
+Elementary Education.” Quarterly      elementary                                    after closure;
+                                                           design. This
+Journal of Economics 114(2):577–      attendance                                    score differences
+                                                           demonstrates that a
+599. DOI: https://doi.org/            boundaries,                                   can still bundle
+                                                           school assignment
+10.1162/003355399556070.              thereby reducing                              perceived peers,
+                                                           attached to an
+                                      confounding from                              reputation and
+                                                           address can be
+                                      broad                                         other school
+                                                           capitalized. 28
+                                      neighborhood                                  attributes.
+                                      amenities.
+
+                                                           Public school grades
+                                                           change house prices
+                                                                                    Not school
+                                                           and residential
+                                      Information/                                  closure, physical
+                                                           location decisions
+                                      reputation/                                   proximity or
+                                                           even conditional on
+Figlio & Lucas (2004), “What's in     accountability                                community-
+                                                           underlying
+a Grade? School Report Cards          signal. Florida                               anchor value.
+                                                           components,
+and the Housing Market.”              school grades                                 Especially
+                                                           demonstrating that
+American Economic Review 94(3):       create salient                                relevant to the
+                                                           labels and
+591–604. DOI: https://doi.org/        public information                            “stigmatized
+                                                           information
+10.1257/0002828041464489.             beyond the                                    school”
+                                                           themselves can
+                                      underlying test-                              mechanism
+                                                           capitalize. Effects
+                                      score components.                             rather than direct
+                                                           attenuate as buyers
+                                                                                    school access.
+                                                           learn that part of the
+                                                           grade is noisy. 29
+
+                                                           Changes in
+Ries & Somerville (2010), “School
+                                                           catchments alter
+Quality and Residential               Assignment
+                                                           capitalization,          Does not value
+Property Values: Evidence from        rights to a
+                                                           providing a cleaner      the presence of
+Vancouver Rezoning.” Review of        different school,
+                                                           demonstration that       the old school site
+Economics and Statistics 92(4):928–   exploiting
+                                                           the identity/quality     as a local public
+944. Publisher page: https://         catchment
+                                                           of the assigned          good and is not a
+direct.mit.edu/rest/article/          rezoning and
+                                                           school matters           closure shock.
+92/4/928/57862/School-Quality-        repeat sales.
+                                                           separately from
+and-Residential-Property-Values
+                                                           broad location. 30
+
+
+
+
+                                                  17
+                                      What the design       Key result and            What it does not
+Benchmark study
+                                      identifies            relevance to closure      establish
+
+                                                            Housing markets
+                                      School facilities/    capitalize school-
+Cellini, Ferreira & Rothstein
+                                      capital               facility investment,
+(2010), “The Value of School                                                          Does not isolate a
+                                      investment. Close     showing that the
+Facility Investments: Evidence                                                        particular
+                                      bond-election         physical educational
+from a Dynamic Regression                                                             neighborhood
+                                      outcomes              infrastructure itself
+Discontinuity Design.” Quarterly                                                      school's existence
+                                      generate quasi-       can have value. The
+Journal of Economics 125(1):215–                                                      from districtwide
+                                      random                dynamic RD is
+261. Publisher: https://                                                              spending, taxes
+                                      differences in        stronger than a
+academic.oup.com/qje/article/                                                         or school quality.
+                                      school capital        simple cross-
+125/1/215/1880328
+                                      spending.             sectional facilities
+                                                            hedonic. 31
+
+                                                            Demonstrates that
+                                                            the value of district
+                                                            residence changes
+                                      School-choice
+                                                            when households
+Reback (2005), “House Prices          option and
+                                                            can access preferred
+and the Provision of Local Public     reduced
+                                                            schools without           Does not identify
+Services: Capitalization under        importance of
+                                                            living in the district.   school proximity
+School Choice Programs.” Journal      residence-based
+                                                            This is essential for     or a closure
+of Urban Economics 57(2):275–301.     assignment.
+                                                            understanding why         effect.
+DOI: https://doi.org/10.1016/j.jue.   Exploits Minnesota
+                                                            closure of a choice
+2004.10.005.                          interdistrict open
+                                                            school may
+                                      enrollment.
+                                                            capitalize differently
+                                                            from loss of a zoned
+                                                            school. 32
+
+                                                                                      Observational
+Clapp, Nanda & Ross (2008),           Attempts to           Important for the
+                                                                                      sorting makes
+“Which School Attributes              distinguish           possibility that
+                                                                                      clean causal
+Matter? The Influence of School       measured              buyers capitalize
+                                                                                      separation of
+District Performance and              academic quality      peer composition or
+                                                                                      achievement,
+Demographic Composition on            from                  demographic
+                                                                                      peer composition
+Property Values.” Journal of          demographic/          reputation, not
+                                                                                      and
+Urban Economics. DOI: https://        peer composition      simply instructional
+                                                                                      neighborhood
+doi.org/10.1016/j.jue.2007.03.004.    in property values.   effectiveness.
+                                                                                      stigma difficult.
+
+
+
+
+                                                  18
+                                         What the design        Key result and           What it does not
+  Benchmark study
+                                         identifies             relevance to closure     establish
+
+                                                                Finds that publicly
+                                                                revealed school
+                                                                social-climate
+                                                                information is
+                                                                capitalized into
+                                         School-                housing and
+                                         information/           changes sorting by
+  Crespin (2025), “The Value of                                                          Not a closure
+                                         social-climate         homebuyer
+  School Social Climate                                                                  study; it cannot
+                                         signal, using          economic
+  Information: Evidence from                                                             tell us whether
+                                         Chicago housing        background. This is
+  Chicago Housing Transactions.”                                                         removal of a
+                                         transactions           especially relevant
+  EdWorkingPaper. DOI: https://                                                          school raises or
+                                         around disclosure      because it
+  doi.org/10.26300/yh8n-mp60.                                                            lowers demand.
+                                         of school climate      establishes a recent
+                                         information.           Chicago-specific
+                                                                transaction pathway
+                                                                from school
+                                                                information to
+                                                                housing demand.
+                                                                 33
+
+
+                                                                Greater distance to
+                                                                                         Cross-sectional
+                                                                primary and
+                                         Physical                                        distance does not
+                                                                secondary schools is
+  Merrall, Higgins & Páez (2023).        accessibility/                                  establish causal
+                                                                negatively
+                                         proximity bundle.                               closure
+                                                                associated with
+                                                                                         capitalization.
+                                                                prices. 18
+
+                                                                Zoned and choice
+                                         Separates zoned
+                                                                closings have
+                                         access from
+                                                                opposite signs,
+                                         choice-school                                   The opening/
+                                                                making it the bridge
+  Schwartz & Voicu (2007).               presence, and                                   closing process is
+                                                                between generic
+                                         uniquely also                                   not randomized.
+                                                                capitalization and
+                                         observes openings
+                                                                the actual closure
+                                         and closures.
+                                                                literature. 34
+
+Taken together, the benchmark literature says more than “good schools raise home prices.” It says at least
+four different objects are capitalized: an address-specific assignment right; information about school
+quality or reputation; the availability of choice; and school facilities/accessibility. Those distinctions
+matter because a closure changes each by a different amount.
+
+
+For transaction-data research specifically, the dependent variable should ordinarily be the log of a carefully
+screened arm's-length sale price, not an assessor value or Zillow-style estimated value. Local deed records
+should exclude family transfers, nominal-price transactions, quitclaims, sheriff's deeds, bulk portfolio
+transfers and other non-market conveyances. Where possible, the analyst should observe property
+
+
+
+
+                                                      19
+characteristics as of the transaction date rather than using today's assessor record for a sale a decade
+earlier.
+
+
+A basic hedonic model can be written conceptually as:
+
+
+                     ln Pit = α + β(Closure exposurei × Postt ) + Xit γ + μg + τt + ϵit ,
+
+where Pit is the sale price of property i, X contains property characteristics, μg is a fine spatial fixed effect
+and τt is time. The problem is that this estimates the effect conditional on sale. Closure may itself affect
+which houses sell.
+
+
+A stronger transaction analysis therefore needs a second market-quantity equation. Every parcel, not just
+sold parcels, can enter a monthly or quarterly panel with outcomes such as:
+
+
+           Saleit ∈ {0, 1},       Listingsit ,       DOMit ,        F oreclosureit ,       Vacancyit .
+
+The price and quantity results should be interpreted jointly. A 3% increase in the price of the small subset of
+homes that continue to transact is not evidence of stronger market demand if sales volume simultaneously
+collapses.
+
+
+Repeat-sales models compare the same property across transactions, thereby absorbing all time-invariant
+parcel and micro-location attributes. Duncombe, Yinger and Zhang's double-sales approach illustrates the
+attraction of this method in school reorganization research. 17 Yet repeat-sales samples create their own
+selection: houses that sell twice during the window may be systematically more liquid, more investor-owned
+or more likely to be renovated. Renovations occurring between sales also violate the assumption that the
+property is unchanged.
+
+
+Parcel fixed-effects models can be even more useful when repeated assessor outcomes are available
+because every parcel may be observed annually. Smith and Zimmer exploit this type of parcel panel for
+assessments in Arkansas. 35 The disadvantage is that assessed value is administratively constructed and
+can lag market conditions, be smoothed, or reflect assessment policy. In Cook County, this distinction is
+especially important because assessment cycles and appeals can create changes unrelated to market
+transactions.
+
+
+Transaction event studies are preferable to a single pre/post coefficient when anticipation is possible. For
+school closure, event time should be indexed separately to at least the credible announcement, final
+closure decision and physical closure. A well-designed study can then ask whether prices begin moving
+before students leave. A pre-announcement decline is evidence against interpreting a simple post-closure
+drop as causal.
+
+
+Boundary-based transaction designs are particularly promising because they can distinguish assignment
+from physical proximity. Suppose two houses are 400 meters from a closed school but only one was inside
+its attendance boundary. The first loses both assignment and a nearby institution; the second loses only the
+institution. A before/after comparison of the discontinuity can therefore identify much more about
+mechanism than a simple radial buffer.
+
+
+
+
+                                                       20
+Finally, buyer characteristics matter. Linking sales to HMDA mortgages, owner-occupancy exemptions or
+other legally accessible data can reveal whether the same price effect reflects changed willingness to pay
+among affluent borrowers, investor purchases, racial sorting or family demand. Crespin's Chicago work
+demonstrates the value of treating housing capitalization and household sorting as joint outcomes. 33
+
+
+Chicago mass-closure audit
+Chicago Public Schools' 2013 episode is almost tailor-made for this research question because the district
+simultaneously closed a large number of schools, overwhelmingly in Black and lower-income areas, while
+publishing extensive information about enrollment, utilization, performance, proposed closures and
+receiving schools. Yet the housing-market consequences remain much less studied than the student
+consequences. The Consortium on Chicago School Research, for example, has evaluated where roughly
+11,000 affected students subsequently enrolled and what happened academically, but those studies do not
+constitute a housing-market analysis. 36
+
+
+The targeted audit searched combinations of:
+
+
+"Chicago 2013 school closures" + housing prices / house prices / property values /
+transactions / real estate
+
+
+"Chicago 2013 school closures" + Cook County / assessor / recorder / deeds / repeat
+sales / Zillow / CoreLogic
+
+
+"Chicago school closures" + listings / sales volume / rents / vacancy /
+foreclosure / tax delinquency
+
+
+"Chicago school closures" + population / households with children / race /
+gentrification / displacement
+
+
+"Chicago school closures" + redevelopment / adaptive reuse / demolition / permits /
+vacant building
+
+
+"2013 Chicago mass school closure" + neighborhood change / housing / property / real
+estate
+
+
+The result of that audit is best stated narrowly: I did not locate a transaction-level causal study that
+estimates the effect of the 2013 CPS closures on nearby residential sale prices, sales probabilities,
+sales volume, repeat sales, listings or time on market. I also did not locate a closure-specific Chicago
+econometric paper centered on residential rents, tax delinquency or foreclosure. This is not proof of
+absence; it is the result of the literature and repository search conducted through August 27, 2026.
+
+
+What does exist is informative in pieces.
+
+
+Crime and building disposition. Noli Brazil's Sociological Science article explicitly studies crime after the
+2013 closures and differentiates vacant buildings, nonschool reuse and merger with an existing school. Its
+results reject a simple assumption that school vacancy must mechanically increase nearby crime: reported
+
+
+
+                                                      21
+crime moved differently across disposition categories, including decreases around vacant and nonschool-
+repurposed sites in the study's estimates. 19 This is an important mechanism study but not a property-
+market estimate.
+
+
+Vacant sites and uneven neighborhood distress. Investigative reporting several years after closure
+documented that many remaining vacant school properties were concentrated in Black communities and
+situated in already distressed neighborhood contexts. That evidence is useful for establishing disposition
+and market context but does not supply a counterfactual for what those neighborhoods would have
+experienced absent closure. 37
+
+
+Population. A later Chicago Sun-Times analysis using ACS data reported that majority-Black census tracts
+containing a closed school lost about 9.2% of residents between 2013 and 2018, compared with about
+3.2% in majority-Black tracts without a 2013 closing. The analysis itself notes the crucial causal caveat: the
+closed-school neighborhoods were systematically different and were often already losing population. That
+result is therefore descriptive evidence worth explaining, not a closure treatment effect. 38
+
+
+Redevelopment and residential reuse. Qualitative urban-geography and planning research has examined
+former Chicago school sites converted or proposed for conversion to housing, including conflicts between
+market-rate development, affordability, preservation and community goals. Keavy McFadden's work on
+“school-hosted urban development” conceptualizes school-property conversion as part of real-estate-led
+restructuring, while Ivis García examines a proposed teacher-housing/community-oriented reuse in a
+gentrifying Chicago neighborhood. These studies are highly relevant to mechanism and political economy
+but are not hedonic or DiD estimates of neighborhood prices.
+
+
+Housing data exist. The Institute for Housing Studies at DePaul has constructed transaction-based Cook
+County house-price measures and has separately analyzed Chicago's 2–4-unit stock using property,
+foreclosure and vacant-land information. Those resources demonstrate that the lack of a located closure
+study does not reflect an intrinsic absence of housing-market data. They also underscore a serious
+identification problem: 2013 occurred during a highly uneven recovery from the foreclosure crisis, so
+closure neighborhoods must not simply be compared with Chicago as a whole. 39
+
+
+Chicago schools demonstrably affect transaction markets through information. Crespin's recent study
+of school social-climate information uses Chicago housing transactions and finds capitalization and sorting
+responses to school information. This strengthens the prior that a major school-access shock such as
+closure could affect transactions while showing that a contemporary school–housing linkage is empirically
+measurable. It still does not supply the missing closure estimate. 33
+
+
+The Chicago evidence therefore currently forms a disconnected chain:
+
+
+closure → student reassignment is studied;      36
+
+closure → building status / crime is studied;    19
+
+closure neighborhoods → later population loss has been described;         38
+
+closed building → residential redevelopment has been documented qualitatively;
+school information → housing capitalization is demonstrably measurable in Chicago;          33
+
+but closure → parcel-level price and market liquidity → household sorting remains the key missing
+empirical link located by this review.
+
+
+
+
+                                                      22
+That gap matters precisely because Chicago is a difficult case for naïve methods. Closed schools were not
+randomly selected. Enrollment decline and housing-market contraction are themselves related. Many
+schools were geographically clustered, so nearby “control” neighborhoods can be exposed to another
+closing. Receiving schools changed simultaneously. Some school buildings remained vacant and others
+were reused. The broader South and West Side housing market was recovering from an extraordinary
+foreclosure shock. And the district's policy was racialized geographically enough that citywide demographic
+trends cannot substitute for a credible counterfactual. 40
+
+
+Methodological critique
+Hedonic transaction-price regressions are the natural starting point because they measure what buyers
+actually paid for a particular house. They can flexibly control for square footage, property type, age, lot size,
+condition, bedrooms, bathrooms and extremely fine spatial and temporal effects. Rosburg and Schwartz–
+Voicu illustrate how informative such models can be when combined with policy timing. 41 Their central
+weakness is twofold. First, the model is only as good as its closure counterfactual: a rich hedonic does not
+make a politically selected closure exogenous. Second, it conditions on transactions, creating selective-sale
+composition.
+
+
+Selective sales are not a minor nuisance. Suppose families with children who would have sold decide not to
+list after a closure, while investor-owned distressed properties continue to trade. Average observed price
+can fall because the transaction mix changed even with no change in the latent price of a fixed house.
+Conversely, rapid investor acquisition of cheap properties followed by renovation can produce apparent
+appreciation unrelated to school demand. A serious closure study should therefore report sale counts and
+sale probabilities alongside prices, estimate repeat-sale/parcel-fixed-effect specifications, and examine
+observable characteristics of transacting properties over event time.
+
+
+Repeat-sales and parcel fixed effects substantially improve control for fixed housing characteristics. They
+are especially attractive in heterogeneous older housing stocks such as Chicago's. Duncombe, Yinger and
+Zhang's use of repeated sales in New York consolidation research points in this direction. 17 The price of
+the improvement is external validity: repeat sellers are not random. Renovation, conversion from two-flat to
+single-family use, demolition/rebuild, foreclosure and investor flipping can all alter the supposedly fixed
+asset between sales.
+
+
+Difference-in-differences is attractive only if untreated properties provide a credible trajectory for what
+would have happened to treated properties. The central threat in school-closure research is almost tailor-
+made to violate that condition: districts tend to close schools in neighborhoods where children and
+population are already declining. A single “closed versus open” DiD will therefore tend to attribute pre-
+existing relative decline to closure. Event-study plots must show several pre-treatment years for both price
+and market liquidity, not simply a statistically insignificant pre-period coefficient in one outcome.
+
+
+The correct treatment date is also ambiguous. In mass closures the market can anticipate the event months
+or years before the building actually closes. Analysts should distinguish exploratory closure reports,
+candidate announcements, formal recommendations, board votes, final-day closure, boundary changes
+and site redevelopment. A finding that prices fall only on the candidate announcement and not again when
+the building closes would support an information/capitalization interpretation. A decline beginning after
+the physical vacancy would point more toward community-anchor, blight or activity mechanisms.
+
+
+
+
+                                                       23
+Distance rings and spatial buffers are intuitive but surprisingly fragile. A “within one-half mile” treatment
+compares properties just inside a researcher-chosen cutoff with properties just outside, even though both
+may use the same school and perceive the same closure. Larger buffers worsen contamination when urban
+schools are close together. In Chicago, a nominal control property may lie outside one closed school's 800-
+meter radius but inside another's catchment or receive students displaced by closure. The treatment should
+therefore be represented through several spatial dimensions simultaneously: old attendance assignment,
+walking-network distance to the closed site, distance to alternative schools and exposure to other closed
+sites.
+
+
+Boundary discontinuity designs offer a stronger way to separate school assignment from neighborhood
+location. Black's school-quality study demonstrates why: houses immediately across an attendance
+boundary can share very similar local amenities but carry different school rights. 42 For closure, the most
+useful design is not merely cross-sectional. It is a boundary-discontinuity difference-in-differences:
+compare the price discontinuity around the former catchment boundary before and after closure. Then add
+physical distance to the closed building. This can distinguish the lost assignment right from the loss of the
+physical school/community asset.
+
+
+Candidate-but-not-selected schools are probably the most valuable Chicago comparison group. In 2013
+CPS evaluated a much larger universe of schools before settling on the final closing set. A control school
+that was itself a credible closure candidate is more likely than an arbitrary open school to share low
+utilization, enrollment decline, low performance, neighborhood disadvantage and public expectations. The
+design is still not automatically causal: political mobilization, building condition, special programs, safety,
+receiving-school availability and aldermanic or district priorities can determine which candidate is ultimately
+selected. The analyst needs to reconstruct the selection process and demonstrate balance and pre-trends.
+
+
+Propensity-score weighting or matched DiD can improve this candidate design by enforcing overlap in
+baseline enrollment, utilization, racial composition, poverty, school performance, neighborhood
+foreclosure, pre-closure price appreciation and sales volume. Smith–Zimmer and Duncombe–Yinger–Zhang
+show how matching has been combined with longitudinal designs in consolidation research. 43 Matching,
+however, only addresses observed differences. It should be viewed as a preprocessing device, not a
+substitute for identification.
+
+
+Synthetic control or synthetic DiD is most useful for a smaller number of prominent individual sites,
+particularly unusual reuse events. For example, one could construct a synthetic neighborhood for a closed
+school subsequently converted to apartments using weighted combinations of similar school
+neighborhoods that track pre-closure prices, sales, vacancies and demographics. This is less attractive for
+the entire 2013 Chicago treatment because dozens of closures make donor contamination pervasive. It is
+also vulnerable when housing outcomes are noisy at very small geographies.
+
+
+Most importantly, reuse is post-treatment and endogenous. A study should not estimate
+
+
+                                  P rice = β1 Closed + β2 Reused + ⋯
+
+and interpret β2 as “the causal effect of redevelopment.” Sites that attract reuse may have stronger
+underlying markets, better architecture, transit access, zoning flexibility, more political support or lower
+remediation costs. The better strategy is to model separate events—closure, reuse announcement, property
+transfer, permit issuance, construction start, opening—and use credible matched or synthetic
+
+
+
+
+                                                      24
+counterfactuals for the reuse stage. Reuse should also be classified substantively: another school,
+community use, affordable housing, market-rate housing, mixed use, demolition/green space and
+continued vacancy are different treatments.
+
+
+A further concern is simultaneous policy change. School choice may expand at the same time as
+neighborhood schools close; receiving schools may obtain extra resources; transportation routes may
+change; policing may be redeployed; housing subsidies, foreclosure interventions or tax-increment
+financing may overlap; and a new development may be negotiated as part of site disposition. The treatment
+is therefore often a policy package. Mechanism variables should not simply be added as ordinary regression
+controls when they are themselves caused by closure, because that can introduce post-treatment bias.
+
+
+Finally, the unit of welfare analysis should extend beyond property owners. A complete study should
+estimate at least four classes of outcomes together:
+
+
+ Market                   Market liquidity/         Neighborhood
+                                                                                   Mechanisms
+ capitalization           distress                  composition
+
+                                                    Population, children,          Receiving-school
+ Arm's-length prices,     Sale probability, sales
+                                                    owner/renter tenure,           quality/distance, crime,
+ repeat-sale              counts, listings, DOM,
+                                                    race/ethnicity, income,        311 calls, site vacancy,
+ appreciation,            vacancy, foreclosure,
+                                                    buyer characteristics,         demolition, permits,
+ assessments, rents       tax delinquency
+                                                    moves                          reuse
+
+Only that joint design can tell whether a closing produced disamenity removal, public-good withdrawal,
+disinvestment, market paralysis, or gentrification with displacement.
+
+
+
+
+                                                     25
+Ranked research agenda
+
+
+
+
+                         26
+                    Did final
+                    closure reduce
+                    or raise
+                    nearby arm's-
+                    length prices
+                    and,
+                    separately, the
+                    probability/
+                    volume of
+                    sale? Use Cook
+                    County
+                    Recorder/deed      Treated parcels are
+                    transactions,                                                  Log sale
+                                       inside the former
+                    Cook County                                                    price; repeat-
+                                       catchment and/or
+                    Assessor                                                       sale
+                                       distance bands
+                    parcel                                                         appreciation;
+                                       around schools         Final closures                        Would fill the
+                    characteristics,                                               monthly
+                                       ultimately closed.     may differ from                       central
+                    CPS school                                                     parcel sale
+                                       Preferred controls     rejected                              empirical hole
+                    locations/                                                     hazard; sales
+                                       are parcels around     candidates in                         located in this
+                    attendance                                                     counts; if
+                                       credible candidate     unobserved                            review: a
+                    boundaries,                                                    possible
+                                       schools not            political support,                    transaction-
+    Chicago 2013    the complete                                                   listings/DOM.
+                                       ultimately             building                              level causal
+    candidate-      2012–13                                                        Interact
+                                       selected, matched/     condition, safety,                    analysis of the
+    school          candidate/                                                     treatment
+1                                      weighted on school     expected                              largest
+    transaction     final-closure                                                  with zoned
+                                       and neighborhood       enrollment or                         modern U.S.
+    and liquidity   process,                                                       status,
+                                       fundamentals.          market                                urban mass-
+    event study     receiving                                                      baseline
+                                       Estimate event         trajectory. The                       closure
+                    schools,                                                       demand/
+                                       studies around         2012–14                               episode, while
+                    school                                                         performance,
+                                       candidate              foreclosure                           directly testing
+                    utilization/                                                   receiving-
+                                       announcement,          recovery also                         whether price
+                    performance,                                                   school quality
+                                       final decision and     varied sharply                        and liquidity
+                    and Institute                                                  and distance.
+                                       closure; add repeat-   across Chicago.                       move together.
+                    for Housing                                                    Plot pre-
+                                       sales specifications
+                    Studies                                                        trends in
+                                       and
+                    market                                                         both prices
+                                       neighborhood×time
+                    indicators.                                                    and sales.
+                                       effects.
+                    Add MRED
+                    listing history
+                    if obtainable
+                    under
+                    research
+                    agreement.
+                    Existing Cook
+                    County
+                    transaction
+                    infrastructure
+                    makes this
+
+
+
+
+                                            27
+                                                                                 Outcomes
+                     Research         Treatment,              Primary
+       Research                                                                  and
+Rank                 question and     comparison and          identification                      Contribution
+       design                                                                    mechanism
+                     data             econometrics            threat
+                                                                                 tests
+
+                     empirically
+                     feasible. 39
+
+                                                                                 Prices and       Closest current
+                     What portion                                                sale rates       closure studies
+                     of the closure   Compare properties                         first; then      generally
+                     effect comes     just inside versus                         families/        estimate a
+                                                              Boundaries may
+                     from loss of     just outside the                           owner            bundle. This
+                                                              coincide with
+                     assignment       former attendance                          occupancy.       design would
+                                                              streets, housing
+                     rights, and      boundary, before/                          Test whether     directly
+                                                              types or racial
+       Former-       what portion     after closure, while                       the “inside-     decompose
+                                                              divides; later
+       attendance-   from losing      conditioning or                            boundary”        school-access
+                                                              boundary
+       boundary ×    the physical     stratifying on nearly                      effect varies    value from
+                                                              redraws and
+2      physical-     neighborhood     identical network                          with             community-
+                                                              endogenous
+       proximity     institution?     distance to the                            receiving-       anchor/site
+                                                              moving around
+       triple        Use the same     school building. A                         school           value,
+                                                              the
+       difference    parcel/deed      second contrast can                        academic         connecting the
+                                                              announcement
+                     data plus        compare properties                         quality while    closure
+                                                              can invalidate
+                     historically     inside the boundary                        the pure site-   literature to
+                                                              local
+                     accurate pre-    but differentially                         proximity        Black's
+                                                              comparability.
+                     closure CPS      close to the                               effect varies    assignment-
+                     attendance       physical site.                             with vacancy,    boundary
+                     boundaries.                                                 crime and        benchmark.
+                                                                                 reuse.            42
+
+
+
+
+                                            28
+                                                                                   Outcomes
+                     Research         Treatment,              Primary
+       Research                                                                    and
+Rank                 question and     comparison and          identification                        Contribution
+       design                                                                      mechanism
+                     data             econometrics            threat
+                                                                                   tests
+
+                     After a school
+                     has closed,
+                     how much
+                     does
+                     prolonged
+                     vacancy,
+                                                                                                    Extends
+                     demolition,                              Reuse selection      Price, volume,
+                                      Hold closure status                                           Chicago's
+                     another-                                 is endogenous        investor
+                                      fixed, then estimate                                          qualitative
+                     school reuse,                            to expected          purchases,
+                                      separate event                                                redevelopment
+                     community                                appreciation.        permits,
+                                      times for sale/reuse                                          and crime
+                     reuse or                                 Developer            vacant
+                                      announcement,                                                 literature into
+       Closed-site   housing                                  choice, financing,   parcels,
+                                      deed transfer,                                                a rigorous
+       disposition   conversion                               historic-building    crime/311.
+                                      permit,                                                       housing-
+       event study   change the                               quality, zoning      Compare
+                                      construction and                                              market
+3      with          surrounding                              and                  market-rate
+                                      completion. For                                               framework
+       matched/      housing                                  neighborhood         housing
+                                      prominent sites use                                           without
+       synthetic     trajectory?                              strength must be     conversion
+                                      synthetic DiD or                                              committing
+       controls      Combine CPS/                             treated as           with
+                                      matched site                                                  the common
+                     City                                     selection            community or
+                                      controls chosen on                                            error of
+                     disposition                              variables rather     school reuse
+                                      long pre-reuse                                                treating reuse
+                     records with                             than                 and
+                                      housing trends and                                            status as
+                     deeds,                                   consequences of      continued
+                                      site characteristics.                                         exogenous.
+                     assessor                                 reuse.               vacancy.
+                                                                                                     5
+                     records,
+                     zoning,
+                     demolition/
+                     building
+                     permits, 311
+                     and crime.
+
+
+
+
+                                            29
+                                                                                     Outcomes
+                      Research           Treatment,             Primary
+       Research                                                                      and
+Rank                  question and       comparison and         identification                        Contribution
+       design                                                                        mechanism
+                      data               econometrics           threat
+                                                                                     tests
+
+                      Can prices rise
+                      while children,
+                      Black
+                      residents,
+                      renters or
+                                                                                     Population,
+                      lower-income
+                                                                                     school-age
+                      households
+                                                                                     children,
+                      leave? Link
+                                         Use the candidate-     ACS small-area       buyer            Directly tests
+                      parcel sales
+                                         school matched         estimates are        income, race     the core
+                      and owner-
+                                         event-study            noisy; HMDA          where directly   welfare
+                      occupancy
+                                         framework but          covers financed      observed in      problem raised
+                      data to HMDA
+                                         make who enters        purchases rather     permissible      by Pearman
+                      mortgage-
+                                         and who exits the      than all buyers;     data, owner      and Greene:
+                      buyer
+       Residential                       primary outcome.       individual racial/   occupancy,       market
+                      characteristics,
+       sorting and                       Separate new           household            investor         appreciation
+                      ACS
+4      displacement                      buyers from            characteristics      purchases,       versus
+                      neighborhood
+       panel around                      incumbent owners;      cannot be            foreclosure,     racialized
+                      data, CPS
+       closure                           estimate               imputed              tax              displacement
+                      geocoded
+                                         heterogeneity by       responsibly from     delinquency,     rather than
+                      student
+                                         baseline Black         aggregate data.      rent burden      treating
+                      residence data
+                                         share, renter share,   School-record        and moves.       appreciation
+                      under an
+                                         market strength        access has           Jointly report   as an
+                      appropriate
+                                         and gentrification     privacy              price            unqualified
+                      agreement,
+                                         risk.                  constraints.         appreciation     benefit. 10
+                      and
+                                                                                     and
+                      foreclosure/
+                                                                                     compositional
+                      tax-
+                                                                                     change.
+                      delinquency/
+                      eviction
+                      measures
+                      where legally
+                      accessible.
+
+
+
+
+                                              30
+                                                                                             Outcomes
+                            Research           Treatment,              Primary
+          Research                                                                           and
+ Rank                       question and       comparison and          identification                         Contribution
+          design                                                                             mechanism
+                            data               econometrics            threat
+                                                                                             tests
+
+                            Why does the
+                            sign differ?
+                            Assemble
+                                                                                                              Would provide
+                            transaction        Stacked cohort-
+                                                                                                              the first direct
+                            data for           specific DiD using
+                                                                                                              large-sample
+                            several closure    city-specific
+                                                                       “Closure reason”                       test of the
+                            waves—             candidate schools
+                                                                       is itself             Prices, sale     hypothesis
+                            Chicago,           where available.
+                                                                       multidimensional      volume and       suggested by
+                            Philadelphia,      Interact closure
+                                                                       and may be            family sorting   Rosburg and
+          Multi-city        Detroit,           with reason:
+                                                                       politically coded;    as minimum       Schwartz–
+          comparison        Washington,        enrollment/fiscal
+                                                                       city housing          common           Voicu: public-
+          of low-           D.C., or           pressure,
+                                                                       cycles and            outcomes;        good
+ 5        demand            comparable         accountability/low
+                                                                       school-choice         replacement      withdrawal
+          versus low-       districts—with     performance,
+                                                                       institutions are      distance/        when valued
+          performing        NCES               merger/
+                                                                       heterogeneous.        quality, site    schools close
+          closures          locations,         reorganization;
+                                                                       Common                vacancy and      versus
+                            district closure   separately interact
+                                                                       treatment timing      reuse as         disamenity
+                            documents,         zoned versus
+                                                                       assumptions are       mechanisms.      removal when
+                            historic           choice status,
+                                                                       inappropriate.                         weak/non-
+                            catchments,        baseline demand
+                                                                                                              zoned schools
+                            reason codes,      and replacement
+                                                                                                              disappear.
+                            receiving          quality.
+                                                                                                               44
+                            schools and
+                            site
+                            disposition.
+
+The first design is the highest priority because it resolves both a substantive and methodological gap. A
+Chicago price-only study would already add value, but a price-plus-sale-hazard design is substantially
+better. The denominator for the sale outcome can be the full parcel universe, making it possible to detect
+market thinning that a transaction-only regression cannot observe.
+
+
+The second design is potentially the highest scientific payoff because it directly attacks mechanism. A
+closure inside a former boundary changes assignment rights; a closure at equal physical distance on the
+other side does not. Adding receiving-school quality then makes it possible to distinguish “I lost my local
+school” from “my new school is worse/farther away.”
+
+
+The third should follow the closure analysis, rather than being folded into it. Chicago's vacant and
+redeveloped schools are not separate randomly assigned treatments. First establish the closure effect; then
+treat the site's post-closure trajectory as a second event requiring its own counterfactual.
+
+
+The fourth is indispensable for welfare interpretation. Pearman and Greene's national evidence makes it
+entirely plausible that a closing can be followed by stronger housing demand while existing Black residents
+
+
+
+
+                                                     31
+decline. 10 A Chicago study that reports only a positive price coefficient without showing who remains and
+who buys would therefore leave the most important policy question unanswered.
+
+
+Verified bibliography and search appendix
+Closure, consolidation, neighborhood change and reuse literature
+
+
+Bogart, William T., and Brian A. Cromwell. 2000. “How Much Is a Neighborhood School Worth?” Journal of
+Urban Economics 47(2): 280–305. DOI: https://doi.org/10.1006/juec.1999.2142. Original publisher record
+verified; full text was not independently recovered for this audit. 45
+
+
+Brazil, Noli. 2019. “The Effects of Public Elementary School Closures on Neighborhood Housing Values in
+U.S. Metropolitan Areas, 2000–2010.” In Shuttered Schools: Race, Community, and School Closures in American
+Cities, 231–257. Original publisher chapter record verified. 13
+
+
+Brazil, Noli. 2020. “Effects of Public School Closures on Crime: The Case of the 2013 Chicago Mass School
+Closure.” Sociological Science 7:128–151. DOI: https://doi.org/10.15195/v7.a6. 19
+
+
+Delpier, Tanner Santiago. 2021. The Community Consequences of School Closure and Reuse. PhD dissertation,
+Michigan State University. Stable repository: https://d.lib.msu.edu/etd/49756. Repository record and
+abstract verified; full-manuscript verification incomplete in this audit. 14
+
+
+Duncombe, William D., John Yinger, and Pengju Zhang. 2016. “How Does School District Consolidation Affect
+Property Values? A Case Study of New York.” Public Finance Review 44(1):52–79. DOI: https://doi.org/
+10.1177/1091142114524617. 17
+
+
+García, Ivis. 2020. “Repurposing a Historic School Building as a Teacher's Village: Exploring the Connection
+Between School Closures, Housing Affordability, and Community Goals in a Gentrifying Neighborhood.”
+Journal of Urbanism: International Research on Placemaking and Urban Sustainability 13:153–169. Qualitative
+Chicago adaptive-reuse study; included for the redevelopment mechanism rather than a causal price
+estimate.
+
+
+Hu, Yue, and John Yinger. 2008. “The Impact of School District Consolidation on Housing Prices.” National Tax
+Journal 61(4):609–633. DOI: https://doi.org/10.17310/ntj.2008.4.03. Original publisher record verified. 16
+
+
+McFadden, Keavy. 2021. “School-hosted Urban Development: The Transformation of Education Facilities into
+Residential Real Estate in Chicago.” Urban Geography 44:128–148. Qualitative participant-observation/
+content-analysis study of Chicago school-property redevelopment; used as mechanism evidence rather than
+causal housing-market evidence.
+
+
+Merrall, John, Christopher D. Higgins, and Antonio Páez. 2023. “What's a School Worth to a Neighborhood?
+A Spatial Hedonic Analysis of Property Prices in the Context of Accommodation Reviews in Ontario.”
+Geographical Analysis. DOI: https://doi.org/10.1111/gean.12377. 18
+
+
+
+
+                                                     32
+Pearman, Francis A. II, and Danielle Marie Greene. 2022. “School Closures and the Gentrification of the Black
+Metropolis.” Sociology of Education 95(3):233–253. DOI: https://doi.org/10.1177/00380407221095205.
+Original manuscript: https://files.eric.ed.gov/fulltext/ED613162.pdf. 10
+
+
+Rosburg, Alicia, Hans Isakson, Mark Ecker, and Tim Strauss. 2017. “Beyond Standardized Test Scores: The
+Impact of a Public School Closure on House Prices.” Journal of Housing Research 26(2):119–135. DOI: https://
+doi.org/10.1080/10835547.2017.12092131. Original manuscript: https://friendsoffontanaschool.org/wp-
+content/uploads/Rosberg2017.pdf. 46
+
+
+Schwartz, Amy Ellen, and Ioan Voicu. 2007. “Which Schools Matter? Disentangling the Impact of Zoned
+Schools and Choice Schools on House Prices in New York City.” Lincoln Institute of Land Policy working
+paper. Stable PDF: https://www.lincolninst.edu/app/uploads/2024/04/1303_schwartz_final_0.pdf. 2
+
+
+Smith, Sarah Ausmus, and Ron Zimmer. 2022. “The Impacts of School District Consolidation on Rural
+Communities: Evidence from Arkansas Reform.” EdWorkingPaper 22-530. DOI: https://doi.org/10.26300/
+ghex-rp75. PDF: https://edworkingpapers.com/sites/default/files/ai22-530.pdf. 47
+
+
+School capitalization benchmark
+
+
+Black, Sandra E. 1999. “Do Better Schools Matter? Parental Valuation of Elementary Education.” Quarterly
+Journal of Economics 114(2):577–599. DOI: https://doi.org/10.1162/003355399556070. 28
+
+
+Cellini, Stephanie Riegg, Fernando Ferreira, and Jesse Rothstein. 2010. “The Value of School Facility
+Investments: Evidence from a Dynamic Regression Discontinuity Design.” Quarterly Journal of Economics
+125(1):215–261. Publisher: https://academic.oup.com/qje/article/125/1/215/1880328. 31
+
+
+Clapp, John M., Anupam Nanda, and Stephen L. Ross. 2008. “Which School Attributes Matter? The Influence
+of School District Performance and Demographic Composition on Property Values.” Journal of Urban
+Economics. DOI: https://doi.org/10.1016/j.jue.2007.03.004.
+
+
+Crespin, Rene A. 2025. “The Value of School Social Climate Information: Evidence from Chicago Housing
+Transactions.” EdWorkingPaper. DOI: https://doi.org/10.26300/yh8n-mp60. 33
+
+
+Figlio, David N., and Maurice E. Lucas. 2004. “What's in a Grade? School Report Cards and the Housing
+Market.” American Economic Review 94(3):591–604. DOI: https://doi.org/10.1257/0002828041464489. 29
+
+
+Reback, Randall. 2005. “House Prices and the Provision of Local Public Services: Capitalization under School
+Choice Programs.” Journal of Urban Economics 57(2):275–301. DOI: https://doi.org/10.1016/j.jue.2004.10.005.
+ 32
+
+
+
+
+Ries, John, and Tsur Somerville. 2010. “School Quality and Residential Property Values: Evidence from
+Vancouver Rezoning.” Review of Economics and Statistics 92(4):928–944. Publisher: https://direct.mit.edu/rest/
+article/92/4/928/57862/School-Quality-and-Residential-Property-Values. 30
+
+
+Search coverage. The review used broad scholarly web indexing, primary publisher pages and institution/
+author repositories, including materials surfaced from Wiley, SAGE, ScienceDirect/Elsevier, Oxford Academic,
+
+
+
+
+                                                     33
+MIT Press, AEA, University of Chicago/National Tax Journal, Lincoln Institute, ERIC and EdWorkingPapers.
+Searches were deliberately interdisciplinary, using combinations of school closure/closing/shuttering,
+consolidation/merger/phase-out, house price/property value/real estate/housing transaction/repeat sales, rent/
+vacancy/foreclosure/listing/time on market, population/gentrification/displacement/race, school reuse/adaptive
+reuse/demolition/redevelopment, and zoned/neighborhood/choice/charter. Rural consolidation was searched
+separately rather than folded into the urban search.
+
+
+Chicago searches explicitly combined "Chicago 2013 school closures" and
+"2013 Chicago mass school closure" with housing prices, house prices, property values,
+transactions, real estate, Cook County, assessor, recorder, deeds, Zillow, CoreLogic, repeat sales,
+listings, rents, vacancy, foreclosure, tax delinquency, population, households with children,
+gentrification, displacement, racial composition, redevelopment, reuse, permits, demolition, and
+vacant buildings. The audit also followed references from directly relevant studies and compared results
+against Chicago-specific sources on housing transactions, school information, crime and building reuse.
+Relevant Chicago materials located include the Consortium's student research, Brazil's crime paper,
+transaction-based market data from the Institute for Housing Studies, qualitative reuse scholarship and
+descriptive neighborhood-demographic analyses. 48
+
+
+Limits of coverage. This review should not be interpreted as a formal database-complete systematic review
+of every dissertation and unpublished manuscript in existence. Some publisher full texts were paywalled;
+the Delpier dissertation repository record was accessible while complete manuscript extraction was not;
+and proprietary housing databases such as CoreLogic, Zillow transaction files and MRED listings were not
+directly queryable. Accordingly, coefficients are reported only when they could be checked in an original
+manuscript or original publisher record, and studies whose complete manuscripts could not be read are
+explicitly marked rather than silently treated as fully verified.
+
+
+The resulting evidence hierarchy is therefore relatively clear. The most credible direct evidence says that
+losing a valued, address-linked neighborhood-school option can materially depress nearby house prices.
+  49 The best evidence for the opposite sign says that closure of a comparatively weak non-zoned/choice
+
+school can coincide with higher prices, but that result is more exposed to closure-selection bias. 50
+National neighborhood research warns that closures can participate in racialized gentrification and Black
+population loss even when neighborhood demand subsequently strengthens. 10 Rural consolidation
+research demonstrates that fiscal economies and longer-run re-equilibration can reverse short-run losses,
+but it is a different treatment from the withdrawal of a single school in a large urban choice system. 24
+
+
+For the substantive question—does closing a low-demand or low-performing neighborhood school
+remove a disamenity, withdraw a public good, signal disinvestment, or create a redevelopment
+opportunity?—the defensible conclusion as of August 2026 is that all four mechanisms are empirically
+plausible, their relative strength depends on institutional context, and the existing U.S. urban
+literature has not yet cleanly separated them. The most consequential unresolved case is precisely the
+one represented by Chicago: low-demand schools, many of them weak on conventional metrics, embedded
+in historically disinvested Black neighborhoods where school access, municipal withdrawal, foreclosure
+recovery, population loss and redevelopment were changing together. A transaction-level Chicago study
+that jointly estimates prices, liquidity and household sorting—and decomposes assignment loss from site
+effects—would therefore make a substantial contribution rather than merely replicate an already-settled
+literature.
+
+
+
+
+                                                       34
+ 1    7   20   21   22   27   41   44   46   49   https://friendsoffontanaschool.org/wp-content/uploads/
+Rosberg2017.pdf
+https://friendsoffontanaschool.org/wp-content/uploads/Rosberg2017.pdf
+
+ 2    8   34   50   https://www.lincolninst.edu/app/uploads/2024/04/1303_schwartz_final_0.pdf
+https://www.lincolninst.edu/app/uploads/2024/04/1303_schwartz_final_0.pdf
+
+ 3   10   https://journals.sagepub.com/doi/abs/10.1177/00380407221095205
+https://journals.sagepub.com/doi/abs/10.1177/00380407221095205
+
+ 4   15   26   35   43   47   https://edworkingpapers.com/sites/default/files/ai22-530.pdf
+https://edworkingpapers.com/sites/default/files/ai22-530.pdf
+
+ 5   11   19   https://sociologicalscience.com/articles-v7-6-128/
+https://sociologicalscience.com/articles-v7-6-128/
+
+ 6   39   40   48   https://www.housingstudies.org/releases/cook-county-house-price-index-fourth-
+quarter-2013/
+https://www.housingstudies.org/releases/cook-county-house-price-index-fourth-quarter-2013/
+
+ 9   13  https://www.emerald.com/books/edited-volume/20454/chapter/106314024/The-Effects-of-Public-
+          25
+
+Elementary-Schools-Closures
+https://www.emerald.com/books/edited-volume/20454/chapter/106314024/The-Effects-of-Public-Elementary-Schools-Closures
+
+12   45   https://www.sciencedirect.com/science/article/pii/S0094119099921423
+https://www.sciencedirect.com/science/article/pii/S0094119099921423
+
+14   https://d.lib.msu.edu/etd/49756
+https://d.lib.msu.edu/etd/49756
+
+16   24   https://www.journals.uchicago.edu/doi/abs/10.17310/ntj.2008.4.03
+https://www.journals.uchicago.edu/doi/abs/10.17310/ntj.2008.4.03
+
+17   https://journals.sagepub.com/doi/10.1177/1091142114524617
+https://journals.sagepub.com/doi/10.1177/1091142114524617
+
+18   23   https://onlinelibrary.wiley.com/doi/full/10.1111/gean.12377
+https://onlinelibrary.wiley.com/doi/full/10.1111/gean.12377
+
+28    https://econpapers.repec.org/
+     42
+
+RePEc%3Aoup%3Aqjecon%3Av%3A114%3Ay%3A1999%3Ai%3A2%3Ap%3A577-599.
+https://econpapers.repec.org/RePEc%3Aoup%3Aqjecon%3Av%3A114%3Ay%3A1999%3Ai%3A2%3Ap%3A577-599.
+
+29   https://www.aeaweb.org/articles?id=10.1257%2F0002828041464489
+https://www.aeaweb.org/articles?id=10.1257%2F0002828041464489
+
+30   https://direct.mit.edu/rest/article/92/4/928/57862/School-Quality-and-Residential-Property-Values
+https://direct.mit.edu/rest/article/92/4/928/57862/School-Quality-and-Residential-Property-Values
+
+31   https://academic.oup.com/qje/article/125/1/215/1880328
+https://academic.oup.com/qje/article/125/1/215/1880328
+
+32   https://www.columbia.edu/~rr2165/pdfs/capitalization.urban.revised.pdf
+https://www.columbia.edu/~rr2165/pdfs/capitalization.urban.revised.pdf
+
+
+
+
+                                                                  35
+ 33 https://ape.socialcatalystlab.org/papers/aej/the-value-of-school-social-climate-information-
+
+evi-2ecb04.pdf
+https://ape.socialcatalystlab.org/papers/aej/the-value-of-school-social-climate-information-evi-2ecb04.pdf
+
+36 https://consortium.uchicago.edu/publications/school-closings-chicago-understanding-families-choices-
+and-constraints-new-school
+https://consortium.uchicago.edu/publications/school-closings-chicago-understanding-families-choices-and-constraints-new-
+school
+
+37 https://www.chicagoreporter.com/interactive-map-closed-schools-still-burden-distressed-chicago-
+neighborhoods/
+https://www.chicagoreporter.com/interactive-map-closed-schools-still-burden-distressed-chicago-neighborhoods/
+
+38   https://graphics.suntimes.com/education/2023/chicagos-50-closed-schools/
+https://graphics.suntimes.com/education/2023/chicagos-50-closed-schools/
+
+
+
+
+                                                               36
+

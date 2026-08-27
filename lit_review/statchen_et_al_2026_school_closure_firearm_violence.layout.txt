@@ -1,0 +1,530 @@
+                                                                Social Science & Medicine 403 (2026) 119428
+
+
+                                                                  Contents lists available at ScienceDirect
+
+
+                                                             Social Science & Medicine
+                                                     journal homepage: www.elsevier.com/locate/socscimed
+
+
+
+
+The 2013 mass public school closure and firearm violence in Chicago: A
+quasi-experimental difference-in-differences analysis
+Thomas Statchen a,* , Michael Desjardins b , Elizabeth Wagner c , Odis Johnson Jr. c,d ,
+Elizabeth L. Tung e, Mudia Uzzi c
+a
+  Pritzker School of Medicine, University of Chicago, Chicago, IL, USA
+b
+  Department of Epidemiology, Johns Hopkins Bloomberg School of Public Health, Baltimore, MD, USA
+c
+  Department of Health Policy and Management, Johns Hopkins Bloomberg School of Public Health, Baltimore, MD, USA
+d
+  School of Education, Johns Hopkins University, Baltimore, MD, USA
+e
+  Section of General Internal Medicine, Department of Medicine, University of Chicago, Chicago, IL, USA
+
+
+
+
+A B S T R A C T
+
+School closure continues to be a contentious policy decision in cities around the United States, with opponents emphasizing negative effects of closure on urban
+neighborhoods. Little research has been done on the association of school closure with firearm violence, a major challenge affecting US cities. We sought to determine
+the impact of the 2013 Chicago mass public school closure on firearm violence in neighborhoods affected by building vacancy following closure. We used an inverse
+probability of treatment weighted design to balance treatment and control groups. The study period was from 2010 to 2019. The unit of analysis was an individual
+school, with the primary exposure being immediate building vacancy. The primary outcome was shootings with secondary outcomes of weapons violations and
+assaults/battery with a firearm, drawn from administrative data from the Chicago Police Department. School closure was associated with a 9.88% increase in
+shootings near the school location (95% CI: 3.59-16.99; p = 0.001). Long term building vacancy was associated with a 10.20% increase in shootings near the building
+location (95% CI, 2.73-18.84, p = 0.005). Secondary outcomes of assaults/battery with a firearm and weapons violations also demonstrated significant increases.
+These results demonstrate that school building vacancy following closure is associated with an increase in shootings in the surrounding neighborhood. In decisions
+around school closure, policymakers should consider the multifactorial impacts of closure on communities and potential community-driven productive re-use of
+space, particularly given closure frequently occurs in already-disinvested neighborhoods.
+
+
+
+
+1. Introduction                                                                              2017). Moreover, studies documented increased inequality of access to
+                                                                                             education as well as decreased short-term educational outcomes for
+   In 2013, Chicago Public Schools shuttered 49 elementary schools,                          displaced students (Lee and Lubienski, 2017; Pearman and Marie
+primarily in the city's South and West Sides (Tieken and                                     Greene, 2022). Beyond the loss of educational access, an important
+Auldridge-Reveles, 2019; Ewing, 2018). This event was the largest                            aspect of school closure that has received less attention is the potential
+mass public school closure in U.S. history, though mass closures                             impact of closure on the safety of neighborhoods and communities
+occurred around the same time in other U.S. cities like Philadelphia and                     surrounding the former schools (Good, 2022; Tieken and
+Detroit (Ewing, 2018; Brazil and Candipan, 2022; Royal, 2022; Royal                          Auldridge-Reveles, 2019).
+and Cothorne, 2021). Across cities, the stated goal of school districts                          In Chicago, the school closures have been highly contentious – both
+was to reduce budget deficits by closing under-enrolled schools (Ewing,                      historically and presently – due to additional community concerns about
+2018). The closures in Chicago generated 45 vacant elementary school                         increased crime and violence in surrounding neighborhoods (Good,
+buildings (and one additional vacant non-school building) in the im­                         2022; Brazil, 2020). Similar to school closures, firearm violence is
+mediate aftermath of the closures. The school district and city aimed to                     spatially concentrated in disadvantaged, racially minoritized neighbor­
+resell and redevelop vacant properties; but a 2023 analysis by the Chi­                      hoods (Polcari et al., 2023; Uzzi et al., 2023) . This is of particular
+cago Sun-Times demonstrated that 10 years later, 26 buildings affected                       importance in Chicago, where firearm violence is a primary driver of the
+by the closures remained vacant (Fitzpatrick et al., 2023). Research has                     life expectancy gap between White and Black residents (Bishop-Royse
+demonstrated that these school closures primarily affected poor students                     et al., 2024). Nationally, firearm violence is now the leading cause of
+of color, and particularly Black students (Ewing, 2018; Grant et al.,                        death amongst U.S. children (Goldstick et al., 2022; Villarreal et al.,
+
+
+    * Corresponding author. University of Chicago Pritzker School of Medicine Biological Sciences Division University of Chicago, USA.
+      E-mail address: thomas.statchen@uchicagomedicine.org (T. Statchen).
+
+https://doi.org/10.1016/j.socscimed.2026.119428
+Received 25 January 2026; Received in revised form 7 May 2026; Accepted 18 May 2026
+Available online 20 May 2026
+0277-9536/© 2026 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-
+nc-nd/4.0/).
+T. Statchen et al.                                                                                                    Social Science & Medicine 403 (2026) 119428
+
+
+2024), which has resulted in schools being a key vehicle for many                 rates of shootings, weapons violations, and aggravated assaults/batte­
+community violence intervention (CVI) strategies. Many community                  ries with firearms. We hypothesized a relative increase in firearm
+members thus argued that school closures could increase violence both             violence over the 10-year study period in neighborhoods surrounding
+through increased neighborhood blight, loss of valuable educational               closed schools compared with neighborhoods unaffected by school
+resources, and loss of community organizing hubs for CVI, among other             closure. We further hypothesized that prolonged vacancy, defined as
+mechanisms.                                                                       building vacancy 10 years following closure would be associated with
+     Prior research on the relationship between school closure and com­           larger effects.
+munity violence has been limited in scope. Brazil (2020) notably
+examined the 2013 Chicago mass closure by comparing census tract                  2. Methods
+crime rates for schools that closed (n = 49) to schools that were on the
+list for potential closure but remained open (n = 79). He found small             2.1. Data and variables
+short-term reductions in both violent and nonviolent crime lasting less
+than 1 and 2 years, respectively (Brazil, 2020). Studies in Philadelphia              We used administrative data from Chicago Public Schools (CPS) and
+and Scotland also demonstrated small, short-term reductions in crime              incident-level crime data from the Chicago Police Department (CPD) to
+following closure (Steinberg et al., 2019; Borbely et al., 2023). One             conduct a inverse probability of treatment weighted difference-in-
+possible mechanism for this is grounded in routine activities theory,             differences (DiD) analysis evaluating associations between the 2013
+which posits that increased crime will occur at the intersection of likely        mass school closures and firearm violence-related outcomes: shootings,
+offenders, suitable targets, and the absence of capable guardians or so­          weapons violations, and assaults/batteries with a firearm (Chicago Open
+cial control (Miró, 2014). Schools have previously been identified as            Data Portal, 2025; South et al., 2023). The study period (2010-2019)
+locations that generate all three of these necessary components,                  was selected due to the availability of comprehensive shooting data
+particularly when students are unsupervised by teachers or school ad­             beginning in 2010. The period ends in 2019 before the onset of the
+ministrators such as after school (Roman, 2002). Thus, closing a school           COVID-19 pandemic to avoid bias from non-parallel shocks. COVID-19
+might be expected to decrease crime in the surrounding area. However,             likely had highly heterogeneous impacts across neighborhoods on
+it is unclear whether this corresponds with the more specific category of         firearm violence and on school operations, including differing transi­
+firearm violence, which is distinct from other crimes like property               tions to remote learning (Sun et al., 2022). Because these effects could
+damage, vandalism, and theft.                                                     violate the parallel trends assumption, post-COVID years were excluded.
+     Other studies, however, have found increased crime following                 Sensitivity analyses were conducted on time periods from 2010 to 2017
+closure (Brinig and Garnett, 2009). Brinig and colleagues examined the            and from 2010 to 2023 to test sensitivity of results to different time
+closure of 130 Catholic elementary schools in Chicago between 1984                periods.
+and 2004, finding that closures were associated with higher crime and                 Publicly available data from the CPD identified all shooting incidents
+lower social cohesion. As such, researchers have theorized that schools           in Chicago (n = 59,637), weapons violations (n = 57,470), and assault/
+may function to increase neighborhood social cohesion—the degree of               battery incidents with a firearm (n = 57,676) between January 2010 and
+social connection, trust, and cooperation among residents—which has               December 2019, including the date, time, address, and geocoded loca­
+been recognized as a key protective factor against community violence             tion (Chicago Open Data Portal, 2025). We generated point-based and
+(Rich and Owens, 2023, Sampson et al., 1997). It is possible that school          area-based geographic metrics of these incidents. We used incident
+closures could erode neighborhood social cohesion over time, as social            geocoordinates to calculate annual kernel density estimates (KDEs) of
+bonds weaken without a shared community hub. Brazil also theorized                incidents per square mile, applying a 0.5 mile bandwidth to capture
+that crime “may emerge or become stronger the longer a building re­               neighborhood-level effects (Branas et al., 2011; Moyer et al., 2019).
+mains vacant,” consistent with theories that neighborhood blight can              Kernel density estimation is a widely-utilized method that allows for the
+increase risk of crime (Brazil, 2020). For example, substantial research          smoothing of individual incidents, by weighting incidents occurring
+has documented that greening a vacant lot has been associated with                closer to a given location more highly than those further from that
+reductions in firearm violence near the lot (Branas et al., 2011; Moyer           location (Moyer et al., 2019; Zewdie et al., 2025). The spatstat package
+et al., 2019; South et al., 2023). No studies to date have examined the           in R was used for KDE estimation (Baddeley et al., 2015). In sensitivity
+impacts of school closure on community firearm violence beyond the                analyses, the bandwidth of the kernel density estimate was varied from
+short-term window, particularly in the context of persistent vacancy 10           0.25 miles to 2 miles (Appendix Table 1).
+years after school buildings were vacated.
+     While existing theoretical mechanisms provide rationale for the link         2.2. Sample identification and balancing
+between school closures and crime overall, there are several that
+emphasize the relevance of firearm violence in particular. First, firearm             In the primary analysis, elementary school buildings that became
+violence is important and distinct from other forms of crime in that it is        vacant as a result of the 2013 closures (n = 45) were the treatment
+lethal, and can precipitate cyclical disadvantage in a neighborhood               group, while public elementary schools that remained open (n = 405)
+(Bancalari et al., 2022; Kravitz-Wirtz et al., 2022). For example, the loss       served as potential controls. This treatment definition was chosen in
+of life has direct and profound impacts on a neighborhood's social                order to eliminate the inclusion of schools that were publicized as
+environment, fracturing trust, reducing social cohesion, and limiting             closing but actually experienced merger with another school, meaning
+social capital (Smith, 2015; Kravitz-Wirtz et al., 2022). Similarly,              that the school building itself remained open. Only public, non-
+firearm violence has been linked to higher community-level trauma and             alternative schools were eligible for inclusion, as alternative school
+fear within the community (Gaylord-Harden et al., 2022; Sharpe et al.,            types like charter or magnet schools were largely unaffected by closure.
+2025). These responses can be associated with adverse coping behav­               This allows us to isolate the effect of complete loss of public school ac­
+iors (e.g., firearm carriage, isolation from neighbors) that subsequently         tivity and subsequent building vacancy on firearm violence and mini­
+perpetuate and amplify firearm violence (Motley et al., 2017;                     mize     treatment     heterogeneity.      Because     school     closures
+Richardson et al., 2020;Rich and Grey, 2005; Lee et al., 2025).                   disproportionately occurred in low-income Black neighborhoods, we
+     In this Chicago-based study, we examine the relationship between             implemented an energy-based inverse probability of treatment weight­
+the building vacancies generated by the 2013 public school closures and           ing procedure to ensure the parallel trends assumption was fulfilled
+firearm violence. Utilizing a inverse probability of treatment weighted           (Huling and Mak, 2024). Energy balanced weights were used because
+spatial difference-in-differences analysis (2010-2019), we examined               they remain well-behaved under the square-root transformation
+associations between school building vacancy and annual changes in                required for spatial panel estimation, preserving comparability in the
+
+                                                                              2
+T. Statchen et al.                                                                                                        Social Science & Medicine 403 (2026) 119428
+
+
+outcome scale between treated and control groups and supporting                      binary indicator of the post- and pre-intervention periods. The interac­
+interpretable effect estimates. Specifically, we weighted schools on                 tion term β3 Closurei × PrePostt provides the DiD effect of closure on
+characteristics of their associated census tracts: the social vulnerability          firearm violence. The term u is a residual term representing the spatial
+index, the percentage of the population that was Black, the percentage of            error term as u = ρWu + εit , where ρ is the spatial autoregressive
+the population that was Hispanic, the poverty rate, the percent of in­               parameter, W remains the spatial weights matrix, and εit is an additional
+dividuals 19 and younger, and the percent of parents in the labor force              residual. This model was estimated by maximum likelihood using the
+(Center for Disease Control and Prevention, 2013). All variables were                spml(.) function from the splm package (Millo and Piras, 2012).
+based on 2013 American Community Survey statistics, representing the
+end of the pre-treatment period.                                                     2.4. Stability analysis: alternative balancing procedure
+    In a second and third model, we classified treatment to specify if
+buildings affected by initial vacancy remained vacant through 2023                       As a stability analysis, an alternative procedure was used to generate
+(n = 26) or received re-use following closure (n = 19). This analysis was            a balanced dataset and fulfill the stable unit treatment value assumption.
+conducted to better determine the association of both potential states,              In this analysis, we implemented a matching procedure utilizing a pro­
+repurposed and vacant, with firearm violence. Due to the potential for               pensity score nearest matching algorithm with Mahalanobis distance
+systematic differences between the neighborhoods of vacant buildings                 calculation at a 3:1 ratio. To ensure the Stable Unit Treatment Values
+that remained vacant or received repurposing, reweighting of control                 Assumption was satisfied, matched schools could not be selected from
+schools against the selected treated schools was performed. Schools that             within 0.25 miles of a vacant school in the final dataset. This eliminated
+received the alternative treatment state were removed from the control               7 of 405 elementary schools. Equations, balance statistics and results of
+group for the weighting procedure and analysis in this model to avoid                this analysis are included in Appendix 1.
+contamination.
+                                                                                     3. Results
+
+2.3. Model specification and statistical analysis
+                                                                                     3.1. Descriptive statistics
+
+    We applied a two-way fixed-effects spatial panel regression model to
+                                                                                         Census tracts of vacant buildings (73.33%) had a higher percentage
+determine the relationship between the 2013 mass school closures and
+                                                                                     of Black residents than census tracts of open schools (43.38%). These
+selected measures of firearm violence. Spatial regression models were
+                                                                                     census tracts also had higher povery rates (Vacant - 33.89%, Open –
+used to correct for spatial error and spatial lag in the data given the
+                                                                                     25.88%), Social Vulnerability Indices (Vacant - 0.81, Open - 0.70), with
+proximity of schools in the dataset (Marca et al., 2026). This supports
+                                                                                     similar patterns observed for other variables. After weighting, balanced
+the underlying Stable Unit Treatment Values Assumption in
+                                                                                     demographics were achieved in both samples, with each standard mean
+difference-in-difference models. School-level fixed effects were used to
+                                                                                     difference for all variables less than 0.1, a cut-off indicating appropriate
+further control time-invariant differences between schools (Steinberg
+                                                                                     balance in the literature (See Fig. 2 for balance plots demonstrating
+et al., 2019). The year 2014 was used as the first year of treatment as
+                                                                                     standard mean differences prior to and following weighting procedures)
+closures took effect in the fall of 2013 and thus this was the first full year
+                                                                                     (see Fig. 3).
+affected by closure. The spatial structure of the school locations was
+                                                                                         Mean kernel density estimates of shootings at the beginning and end
+represented through a k-nearest-neighbor weights matrix including
+                                                                                     of the period (2010-2019) are also shown in Appendix Table 1,
+observations of the k = 5 nearest neighbors, employing functions from
+                                                                                     demonstrating an increase in shootings around vacant school buildings.
+the spdep package (Roger, 2022).
+                                                                                     The difference between the mean shootings per square mile of vacant
+    Our outcome variable, Yit, was the KDE of shootings associated with
+                                                                                     schools and open schools was 9.8 in 2010 prior to school closure and
+each school's surrounding area. The parallel trends assumption was
+                                                                                     13.31 in 2019 following school closure. In absolute terms, vacant
+tested first by plotting the trends in KDE across both groups during the
+                                                                                     buildings saw an increase in the shootings per square mile, while open
+pre-intervention period. Then, following a procedure described by South
+                                                                                     schools saw a small decrease in shootings.
+et al. (2023) we evaluated the interaction terms for the following
+regression model to determine if the interaction term, β2, differed
+                                                                                     3.2. Firearm violence related outcomes
+significantly from zero:
+Yit = λWYit + β1 t + β2 Closurei × t + δi + μt + εit                    Eq. 1            Consistent with the assumptions for DiD analyses, pre-intervention
+                                                                                     trends in firearm violence outcomes (assaults/batteries, shootings,
+    The term Closurei is an indicator for whether school i was vacant and t
+                                                                                     weapons violations) were not significantly different between treated and
+represents time in years. Fixed effects were included at the school (δi) in
+                                                                                     matched non-treated group based on visual inspection (Fig. 1) and
+order to capture time-invariant school-level differences that may bias
+                                                                                     formal testing utilizing Eq. (1).
+the estimate. μt represents year fixed effects. λ represents the spatial
+                                                                                         In the weighted DiD analysis (Table 1), initial building vacancy was
+coefficient capturing the degree of spatial dependence amongst units
+                                                                                     associated with a 9.88% increase in shootings near the school location
+and W is a spatial weights matrix of known constants, this term captures
+                                                                                     (Model 1 95% CI: 3.59-16.99; p = 0.001). Building vacancy was also
+spatial lag in the model. εit is a vector of spatially autocorrelated re­
+                                                                                     associated with increased assaults/batteries with a firearm (5.46%; 95%
+siduals. Models were further adjusted for spatial error. A non-zero value            CI: 1.14, 10.17; p = 0.012) and increased weapons violations (6.48%;
+of β3 indicates that treated and control schools exhibited different trends
+                                                                                     95% CI: 0.52, 13.18; p = 0.032).
+during the pre-intervention period. Although the parallel trends                         The sample was then separated to explore different post-treatment
+assumption cannot be directly tested, finding no significant pre-
+                                                                                     dynamics. Long-term building vacancy was associated with a 10.20%
+intervention difference in trends provides evidence consistent with the              increase in shootings (Model 2 95% CI: 2.73-18.84; p = 0.005), 5.76%
+assumption's plausibility.
+                                                                                     increase in assaults/batteries with a firearm (Model 2 95% CI: 0.53,
+    The effect of school closure was assessed using the following                    11.56; p = 0.030), and an 8.21% increase in weapons violations (Model
+regression model:
+                                                                                     2 95% CI: 1.08, 16.42; p = 0.022). Buildings that were re-used did not
+Yit = λWYit + β1 PrePostt + β3 Closurei × PrePostt + δi + μt + u        Eq. 2        experience statistically significant increases in shootings (p = 0.06),
+                                                                                     assault/battery with a firearm (p = 0.14), or weapons violations
+Where Yit is the KDE of shootings for each school i, Closurei is a binary            (p = 0.53).
+indicator for whether each school i was vacant or not, and PrePostt is a                 These results were found to be stable to an alternative balancing
+
+                                                                                 3
+T. Statchen et al.                                                                                                   Social Science & Medicine 403 (2026) 119428
+
+
+
+
+                                              Fig. 1. Locations of vacant and control schools for analysis.
+
+
+procedure utilizing matching and alternative modeling with a mixed-             viewed as a loss of community control (Brinig and Garnett, 2009; Rich
+effects ordinary least squares difference-in-difference model (Appendix         and Owens, 2023), with physical manifestations including a loss of
+1). Slightly larger estimates of the association between school building        parking guards and safety personnel that monitor youth transitions to
+closure and firearm violence were produced with this alternative pro­           and from schools. It can also represent a symbolic loss for a community,
+cedure. Additional sensitivity analyses were conducted on shootings to          with a school carrying the weight of community pride and a claim by a
+assess stability of results to changes in KDE bandwidth selection and           neighborhood to the future of a city (Ewing, 2018). Together, the loss of
+time period. In Appendix Table 3 results were found to be stable to             these community-level factors could plausibly reduce collective efficacy,
+variation in the bandwidth utilized to generate kernel density estimates        social cohesion, and ultimately, social control. Social characteristics like
+(0.25 miles to 2 miles). Increasing bandwidth tended to decrease the            collective efficacy have repeatedly been demonstrated to mediate re­
+magnitude of the observed association but decrease the uncertainty in           lationships between neighborhood disadvantage and community
+the estimate, likely owing to improved stability of estimates when              violence (Roman, 2002). Importantly, these dynamics do not exist in a
+smoothing individual events over larger areas. Results were also found          vacuum. In Ghosts of the Schoolyard, Ewing emphasizes the way in which
+to be consistent across alternative time periods in Appendix Table 4.           school closure represents an additional disruption to community sta­
+Two alternate time periods, from 2010 to 2017 and from 2010 to 2023             bility, undertaken primarily in racially minoritized communities that
+were included, with estimates produced within a one percentage point            have already experienced multiple similar disruptions, such as public
+difference from the primary analysis (2010-2019).                               housing privatization and mass incarceration (Ewing, 2018).
+                                                                                    Our findings also suggest that the physical abandonment of schools
+4. Discussion                                                                   leading to long-term vacancy is potentially a key factor contributing to
+                                                                                increased firearm violence. Past research has demonstrated the rela­
+    In this propensity-score weighted difference-in-differences analysis        tionship between a disorganized, deteriorated physical environment and
+of the 2013 mass public school closure in Chicago, closure was associ­          increased burden of firearm violence, with much of the literature
+ated with significant increases in firearm violence in the neighborhoods        focused on the impact of greening vacant lots and housing remediation
+surrounding vacant schools. This study is among the first to explicitly         (Branas et al., 2011; Moyer et al., 2019; South et al., 2023; Asa et al.,
+analyze firearm violence outcomes in the context of mass school closure         2026). In separate analyses, we observe a weaker association between
+over a 10-year study period. The relationship between school closures           buildings that were subsequently re-used and firearm violence. This
+and increased firearm violence was present among vacant school                  suggests that physical vacancy is particularly important in the rela­
+buildings, but was not demonstrated in the analysis of school buildings         tionship between school closure and firearm violence, and productive
+that were re-used. We theorize that these disparate findings highlight          re-use could minimize the observed finding.
+the importance of productive re-use after school closure, and corre­                Contrary to this study, some previous studies of mass school closure
+spondingly, the potentially deleterious effects of building vacancy and         have found short-term decreases in the rates of overall crime and violent
+disinvestment in affected communities.                                          crime. Our findings indicate that firearm shootings, assault/battery with
+    Prior research on mass public school closure has described how              a firearm, and weapons violations increased over a prolonged period
+public schools and their buildings are community spaces for social              around vacant schools. One factor that may contribute to this difference
+connection, supporting neighborhood organizations, and anchoring                is the spatial scale that was selected for analysis. Past studies of vacant
+economic institutions (Ewing, 2018; Good, 2022). Beyond educational             schools have focused primarily on the physical disorder that arises from
+activities, school closure causes a loss of public space within which           vacancy by assessing changes in crime within very small radii from the
+residents and students may come together for various activities (e.g.           site of the closed school, generally on the same block or part of a block.
+Parent Teacher Associations, sporting events, after-school activities,          In this analysis, we assessed vacancy across geographic areas by utilizing
+community meetings). Others have suggested that school closures can be          a kernel density estimate with a primary bandwidth of 0.5 miles (Good,
+
+
+                                                                            4
+T. Statchen et al.                                                                                                        Social Science & Medicine 403 (2026) 119428
+
+
+                                                                                    stability of the results over shorter and longer time periods. Firearm-
+                                                                                    related violence is of unique relevance to youth compared to other
+                                                                                    forms of crime or even violence (e.g., domestic violence). Youth are at
+                                                                                    particularly high risk of mortality via firearm shootings, which have
+                                                                                    now surpassed motor vehicle accidents as the single most frequent cause
+                                                                                    of death amongst U.S. children. Changes in neighborhood conditions
+                                                                                    and related social environment factors may effect youth, contributing to
+                                                                                    cycles of firearm violence in particular.
+                                                                                        It is important to consider the degree to which these results can be
+                                                                                    interpreted as causal effects. Because closures and subsequent vacancies
+                                                                                    were determined through a district-wide administrative process and
+                                                                                    were implemented simultaneously across schools, the design provides
+                                                                                    quasi-experimental inference for assessing the impact of closure. The
+                                                                                    observed increases in firearm violence are consistent with a causal effect
+                                                                                    of school closure designation, conditional on the assumption that, after
+                                                                                    matching and adjustment, vacant and comparison schools would have
+                                                                                    followed similar trends in violence in the absence of closure. A strength
+                                                                                    of this analysis is that while it is difficult to exclude the potential impact
+                                                                                    of unobserved differences between treatment and comparison groups,
+                                                                                    the inverse probability weighting procedure (and, in stability analysis,
+                                                                                    the nearest-neighbor matching procedure) generated well balanced
+                                                                                    comparison groups. Variables chosen for weighting demonstrated
+                                                                                    standard mean differences no greater than the accepted standard of
+                                                                                    0.10, with most being below 0.05.
+                                                                                        However there are key limitations in our ability to interpret these
+                                                                                    results as causal. Schools were selected for closure based in part on
+                                                                                    factors such as performance and enrollment that may reflect underlying
+                                                                                    neighborhood dynamics (De la Torre et al., 2015), and we cannot rule
+                                                                                    out the possibility that unobserved, time-varying factors influenced both
+                                                                                    closure decisions and subsequent trends in violence. In addition,
+                                                                                    building vacancy does not correspond to a uniform exposure at the
+                                                                                    building level: some vacant buildings were eventually repurposed.
+                                                                                    Secondary analyses explored this heterogeneity by distinguishing be­
+                                                                                    tween post-closure building trajectories, but this heterogeneity also
+                                                                                    limits the confidence with which causal conclusions can be made.
+                                                                                    Additionally, while we selected a longer time-scale in order to capture
+                                                                                    potentially slow-evolving social and environmental dynamics within
+                                                                                    neighborhoods, this also limits causal interpretation by increasing the
+                                                                                    potential for additional differential shocks. However, even given these
+                                                                                    inherent limitations in the appropriateness of identifying causal effects
+                                                                                    of school closure from this analysis, our results at minimum demonstrate
+                                                                                    significant association between spatial areas that experienced closure
+                                                                                    and increased firearm violence. This illustrates concomitant disinvest­
+                                                                                    ment through school closure in physical space, social structures, and
+                                                                                    public resources in communities that were likely at greatest need for
+                                                                                    investment given the heavy and increasing burden of violence they
+                                                                                    experienced in the years following closure.
+Fig. 2. Balance plots demonstrating pre- and post-balance of considered vari­           This quasi-experimental analysis of mass public school closure
+ables from the American Community Survey for A) Model 1: Vacant School              demonstrates the importance of public investment in neighborhoods and
+Buildings, B) Model 2: Long-Term Vacant Schools, C) Model 3: Repur­                 the important protective roles public schools may play in mitigating
+posed Schools.                                                                      firearm violence. Multiple U.S. cities are once again considering signif­
+                                                                                    icant school closures. While the decision to close a school is extremely
+2022; Grant et al., 2017; Pearman and Marie Greene, 2022; Rich and                  complex and politically-charged, this study indicates that there may be
+Owens, 2023). This allows for balance between capturing the                         broad consequences—including potential increases in firearm
+neighborhood-level effects of school closure, while minimizing the po­              violence—if schools are vacated without concomitant plans for com­
+tential for over-smoothing and loss of heterogeneity. We further                    munity investment and development. Our results particularly emphasize
+demonstrate stability of results with varying bandwidths from 0.25                  this given the null findings for repurposed school buildings. School
+miles to 2 miles, with diminishing effect sizes at larger bandwidths, as            districts have often argued for closure based on underutilization in a
+would be expected with diffusion of the effect of school vacancy over a             given building and a proposed ability to provide improved educational
+larger area.                                                                        access elsewhere. However, educational access for an individual student
+    Another key difference from existing literature is that we analyzed             may not account for broader neighborhood- and community-level im­
+data over a longer period of time, including data up to 6 years after               pacts that also meaningfully affect students’ ability to engage in edu­
+closure in the primary analysis. This time-scale was selected to allow for          cation (Lofton and Davis, 2015). If school closure is deemed necessary,
+examining the long-term effects of increasing physical disrepair and                then it should be undertaken carefully to prevent the multifactorial
+theorized changes in neighborhood dynamics secondary to closure.                    impacts of closure on a community including increased vacancy, loss of a
+Further, we have included sensitivity analyses demonstrating overall                symbolic marker of community, and loss of a space to support
+
+                                                                                5
+T. Statchen et al.                                                                                                      Social Science & Medicine 403 (2026) 119428
+
+
+
+
+          Fig. 3. Mean annual shooting density (shootings per square mile) around vacant and matched control schools over the study period in Chicago.
+
+
+community building. Recent efforts in Baltimore offer an innovative                of a community-led project that challenges racialized spatial stigma; a
+structural approach to address the issue of long-term vacant school                neighborhood-level social process associated with firearm violence
+building closures. The In All Ways Human campaign is a multi-level,                (Uzzi et al., 2024). To promote community safety, such an effort should
+multimodal, youth violence prevention project that disrupts dehuman­               be undertaken in conjunction with long-term reactivation and inten­
+izing racial narratives of Black male criminality through visual story­            tional investment in communities affected by school closures (Rajan
+telling and narrative change (Smith Lee et al., 2025). As part of the              et al., 2022).
+campaign, a large portrait mural was installed on the site of a long-term
+vacant elementary school. The mural contains portraits of Black boys               5. Conclusion
+and men, including graduates from the school spanning the
+1950s-2000s. The project provided community members an opportunity                     In this quasi-experimental study of school closures in Chicago, we
+to reclaim and transform the vacant school (a site of neighborhood                 found that school closure and subsequent building vacancy were asso­
+disinvestment) to a space that affirms the idea that Black boys, men, and          ciated with significant increases in firearm violence in affected neigh­
+families are deserving of safety, economic stability, and social                   borhoods, and that this association appeared to be partially mitigated by
+well-being. The In All Ways Human campaign is an emblematic example                subsequent school buildings re-use. Our findings highlight the important
+
+
+                                                                               6
+T. Statchen et al.                                                                                                                    Social Science & Medicine 403 (2026) 119428
+
+
+Table 1                                                                                  Appendix A. Supplementary data
+Percent change in density (kernel density estimate) of outcome variables in
+Difference-in-Difference analysis for vacant schools (Model 1) following closure            Supplementary data to this article can be found online at https://doi.
+compared to weighted non-vacant schools in Chicago. Models 2 and 3 delineate             org/10.1016/j.socscimed.2026.119428.
+results by post-treatment status of long-term vacant or re-used, respectively.
+  Characteristic                 Coefficient (95%       % Change             p-          Data availability
+                                 CI)                                         value
+
+  Model 1: Vacant School Builidngs                                                           The data is publicly available through the city of Chicago
+   Shootings Per Square           3.26 (1.26-5.27)      9.88 (3.59-16.99)    0.001
+   Mile
+                                                                                         References
+   Assault/Battery                2.38 (0.52, 4.25)     5.46 (1.14, 10.17)   0.012
+   Weapons Violations             2.80 (0.24, 5.36)     6.48 (0.52, 13.18)   0.032
+                                                                                         Asa, N., Zewdie, H.Y., Rowhani-Rahbar, A., Wagenaar, B.H., Mooney, S.J., 2026. The
+  Models 2, 3: Categorical Treatment
+                                                                                             association between vacant Lot redevelopment and violent/firearm violent crime: a
+  Model 2: Long-Term Vacant Schools
+                                                                                             difference-in-difference analysis from 2007 to 2023. Am. J. Publ. Health 116 (1),
+   Shootings Per Square           3.99 (1.14-6.83)      10.20 (2.73-18.84)   0.005           95–102.
+   Mile                                                                                  Baddeley, A., Rubak, E., Turner, R., 2015. Spatial Point Patterns: Methodology and
+   Assault/Battery                2.94 (0.28, 5.59)     5.76 (0.53, 11.56)   0.030           Applications with R. Chapman and Hall/CRC Press, London. ISBN 9781482210200.
+   Weapons Violations             4.25 (0.60, 7.91)     8.21 (1.08, 16.42)   0.022           https://www.routledge.com/Spatial-Point-Patterns-Methodology-and-Applicat
+  Model 3: Repurposed Schools                                                                ions-with-R/Baddeley-Rubak-Turner/p/book/9781482210200/.
+   Shootings Per Square           2.35 (− 0.15, 4.87)   9.53 (− 0.05,        0.06        Bancalari, P., Sommer, M., Rajan, S., 2022. Youth exposure to endemic community Gun
+   Mile                                                 21.91)                               violence: a systematic review. Adolescent Research Review 7 (3), 383–417.
+   Assault/Battery                1.76 (− 0.59, 4.12)   5.31 (− 1.66,        0.14        Bishop-Royse, J., Saiyed, N.S., Schober, D.J., Laflamme, E., Lange-Maia, B.S., Ferrera, M.,
+                                                        13.35)                               Benjamins, M.R., 2024. Cause-specific mortality and racial differentials in life
+    Weapons Violations           1.01 (− 2.18, 4.20)    3.32 (− 6.31,        0.53            expectancy, Chicago 2018–2019. J. Racial Ethn. Health Dispar. 11 (2), 846–852.
+                                                        14.91)                           Borbely, D., Gehrsitz, M., McIntyre, S., Rossi, G., 2023. Permanent school closures and
+                                                                                             crime: evidence from Scotland. The Sheffield Economic Research Paper Series
+                                                                                             (SERPS) 2023021 (2023021).
+                                                                                         Branas, C.C., Cheney, R.A., MacDonald, J.M., Tam, V.W., Jackson, T.D., Ten Have, T.R.,
+role that public schools may play in community safety, and we theorize                       2011. A difference-in-differences analysis of health, safety, and greening vacant
+that this association may be due to impacts on neighborhood social                           urban space. Am. J. Epidemiol. 174 (11), 1296–1306.
+characteristics like collective efficacy and social cohesion, in addition to             Brazil, N., 2020. Effects of public school closures on crime: the case of the 2013 Chicago
+                                                                                             mass school closure. Sociological Science 7, 128–151.
+neighborhood blight and a lack of productive re-use of public space.                     Brazil, N., Candipan, J., 2022. The neighborhood ethnoracial and socioeconomic context
+Future research should seek to analyze the effect of school closure on                       of public elementary school closures in US metropolitan areas. Soc. Sci. Res. 103,
+neighborhood social characteristics, as well as explore the role of still-                   102655.
+                                                                                         Brinig, M.F., Garnett, N.S., 2009. Catholic schools, urban neighborhoods, and education
+open schools in potentially mitigating the impacts of closure in nearby                      reform. Notre Dame Law Rev. 85, 887.
+communities. Policymakers should carefully consider decisions around                     Centers for Disease Control and Prevention/Agency for Toxic Substances and Disease
+school closure. Moreover, policymakers, community residents, and                             Registry/Geospatial Research, Analysis, and Services Program. CDC/ATSDR social
+                                                                                             vulnerability index 2010 database Illinois. https://www.atsdr.cdc.gov/placeandh
+community organizations should collaborate to co-create and co-                              ealth/svi/data_documentation_download.html, 2/24.
+implement strategies that mitigate potential harms of school closure                     Data Portal. City of Chicago open data portal. Accessed August 27, 2025. https://data.cit
+and prioritize the safety and social well-being of students and the                          yofchicago.org/.
+                                                                                         De la Torre, M., Gordon, M.F., Moore, P., Cowhy, J., 2015. School Closings in Chicago:
+communities they live in.                                                                    Understanding Families' Choices and Constraints for New School Enrollment.
+                                                                                             University of Chicago.
+Ethics declaration                                                                       Ewing, E.L., 2018. Ghosts in the Schoolyard: Racism and School Closings on Chicago's
+                                                                                             South Side. University of Chicago Press.
+                                                                                         Fitzpatrick, L., Issa, N., Karp, S., Loury, A., 2023. 10 Years Later, More than Half of
+   Only publicly available, non-identifiable data was used in the study.                     Chicago's Closed Schools Remain Unused. Chicago Sun-Times.
+For this reason, ethics approval through an institutional review board                   Gaylord-Harden, N.K., Alli, J., Davis-Stober, C.P., Henderson, H., 2022. A trauma-
+was not required.                                                                            informed approach to understanding firearm decision-making among Black
+                                                                                             adolescents: Implications for prevention. Prev. Med. 165, 107305.
+                                                                                         Goldstick, J.E., Cunningham, R.M., Carter, P.M., 2022. Current causes of death in
+Funding                                                                                      children and adolescents in the United States. N. Engl. J. Med. 386, 1955–1956.
+                                                                                         Good, R.M., 2022. Neighborhood schools and community development: revealing the
+                                                                                             intersections through the Philadelphia school closure debate. J. Plann. Educ. Res. 42
+    Mudia Uzzi was supported by the Bloomberg American Health                                (4), 598–610.
+Initiative and Robert Wood Johnson Foundation.                                           Grant, C.A., Arcello, A.F., Konrad, A.M., Swenson, M.C., 2017. Fighting for the ‘right to
+                                                                                             the city’: examining spatial injustice in Chicago public school closings. In:
+                                                                                             Neoliberalism and Education. Routledge, pp. 38–55.
+CRediT authorship contribution statement                                                 Huling, J.D., Mak, S., 2024. Energy balancing of covariate distributions. J. Causal
+                                                                                             Inference 12 (1), 20220029.
+    Thomas Statchen: Conceptualization, Data curation, Formal anal­                      Kravitz-Wirtz, A., Bruns, A., Aubel, AJ., Zhang, X., Buggs, S.A., 2022. Inequities in
+                                                                                             community exposure to deadly gun violence by race/ethnicity, poverty, and
+ysis, Methodology, Software, Visualization. Michael Desjardins:                              neighborhood disadvantage among youth in large US Cities. J. Urban Health 99 (4),
+Formal analysis, Methodology. Elizabeth Wagner: Methodology,                                 610–625.
+Writing – original draft, Writing – review & editing. Odis Johnson:                      Lee, D.B., Hans, Z., Aprill, S.L., Stallworth, P., Zimmerman, M.A., Walton, M.A.,
+                                                                                             Carter, P.M., 2025. Racialized economic segregation and youth firearm carriage:
+Methodology, Writing – original draft, Writing – review & editing.
+                                                                                             community violence as a mediator. J. Behav. Med. 48 (3), 513–522.
+Elizabeth L. Tung: Methodology, Writing – original draft, Writing –                      Lee, J., Lubienski, C., 2017. The impact of school closures on equity of access in Chicago.
+review & editing. Mudia Uzzi: Conceptualization, Methodology, Su­                            Educ. Urban Soc. 49 (1), 53–80.
+pervision, Writing – original draft, Writing – review & editing.                         Lofton, R., Davis, J.E., 2015. Toward a black habitus: African Americans navigating
+                                                                                             systemic inequalities within home, school, and community. J. Negro Educ. 84 (3),
+                                                                                             214–230.
+Acknowledgement                                                                          Marca, L., Braga, L.F.T.V., Fochezatto, A., Alvim, A.M., 2026. Economic, environmental,
+                                                                                             and spatial impacts of Brazil's Minha Casa Minha Vida program. Land Use Policy
+                                                                                             168, 108081.
+   We would like to thank Dr. Noli Brazil for his advice on study data                   Millo, G., Piras, G., 2012. Splm: spatial panel data models in R. J. Stat. Software 47,
+sources and Dr. Bijan Niknam for his data analysis advice.                                   1–38.
+                                                                                         Miró, F., 2014. Routine activity theory. The encyclopedia of theoretical criminology 1–7.
+
+
+
+
+                                                                                     7
+T. Statchen et al.                                                                                                                              Social Science & Medicine 403 (2026) 119428
+
+Motley, R., Sewell, W., Chen, Y.C., 2017. Community violence exposure and risk taking              Sharpe, T.L., Edwards, T., Mann, N., Lee, Y., Bonomo, A., et al., 2025. Exploring research
+    behaviors among black emerging adults: A systematic review. J. Commun. Health 42                    on the coping strategies of black survivors of homicide victims: A scoping review.
+    (5), 1069–1078.                                                                                     Homicide Stud. 29 (1), 6–44. https://doi.org/10.1177/1088767924127712.
+Moyer, R., MacDonald, J.M., Ridgeway, G., Branas, C.C., 2019. Effect of remediating                Smith, J.R., 2015. Unequal burdens of loss: examining the frequency and timing of
+    blighted vacant land on shootings: a citywide cluster randomized trial. Am. J. Publ.                homicide deaths experienced by young Black men across the life course. Am. J.
+    Health 109 (1), 140–144.                                                                            Public Health 105 (Suppl 3), S483–S490.
+Pearman, F.A., Marie Greene, D., 2022. School closures and the gentrification of the               Smith Lee, J.R., Walker, I.A., Tillery, D.M., Allette, Z., Lee, Z., 2025. Disrupting racial
+    Black metropolis. Sociol. Educ. 95 (3), 233–253.                                                    dehumanization as a root cause of youth violence through community engaged
+Polcari, A.M., Slidell, M.B., Hoefer, L.E., Henry, M.C., Zakrison, T.L., Rogers, S.O.,                  visual storytelling and narrative change. Prev. Sci. 1–15.
+    Benjamin, A.J., 2023. Social vulnerability and firearm violence: geospatial analysis           South, E.C., MacDonald, J.M., Tam, V.W., Ridgeway, G., Branas, C.C., 2023. Effect of
+    of 5 US cities. J. Am. Coll. Surg. 237 (6), 845–854.                                                abandoned housing interventions on gun violence, perceptions of safety, and
+Rajan, S., Reeping, P.M., Ladhani, Z., Vasudevan, L.M., Branas, C.C., 2022. Gun violence                substance use in black neighborhoods: a citywide cluster randomized trial. JAMA
+    in K-12 schools in the United States: Moving towards a preventive (versus reactive)                 Intern. Med. 183 (1), 31–39.
+    framework. Prevent. Med. 165.                                                                  Steinberg, M.P., Ukert, B., MacDonald, J.M., 2019. Schools as places of crime? Evidence
+Rich, J.A., Grey, C.M., 2005. Pathways to recurrent trauma among young black men:                       from closing chronically underperforming schools. Reg. Sci. Urban Econ. 77,
+    traumatic stress, substance use, and the "Code of the Street". Am. J. Publ. Health 95               125–140.
+    (5), 816–824.                                                                                  Sun, S., Cao, W., Ge, Y., Siegel, M., Wellenius, G.A., 2022. Analysis of firearm violence
+Rich, P., Owens, A., 2023. Neighborhood–school structures: a new approach to the joint                  during the COVID-19 pandemic in the US. JAMA Netw. Open 5 (4), e229393.
+    study of social contexts. Annu. Rev. Sociol. 49 (1), 297–317.                                  Tieken, M.C., Auldridge-Reveles, T.R., 2019. Rethinking the school closure research:
+Richardson Jr., J.B., Wical, W., Kottage, N., Bullock, C., 2020. Shook ones: understanding              school closure as spatial injustice. Rev. Educ. Res. 89 (6), 917–953.
+    the intersection of nonfatal violent firearm injury, incarceration, and traumatic stress       Uzzi, M., Aune, K.T., Marineau, L., Jones, F.K., Dean, L.T., Jackson, J.W., Latkin, C.A.,
+    among young black men. Am. J. Mens Health 14 (6).                                                   2023. An intersectional analysis of historical and contemporary structural racism on
+Roger, Bivand, 2022. R packages for analyzing spatial data: a comparative case study                    non-fatal shootings in Baltimore, Maryland. Inj. Prev. 29 (1), 85–90.
+    with areal data. Geogr. Anal. 54 (3), 488–518. https://doi.org/10.1111/gean.12319.             Uzzi, M., Whittaker, S., Esposito, M.H., Dean, L.T., Buggs, S.A., Porter, K.M.P., 2024.
+Roman, C.G., 2002. Schools as Generators of Crime: Routine Activities and the Sociology                 Racial capitalism and firearm violence: developing a theoretical framework for
+    of Place. American University.                                                                      firearm violence research examining structural racism. Soc. Sci. Med. 358, 117255.
+Royal, C., 2022. Not paved for us: Black educators and public school reform in                     Villarreal, S., Kim, R., Wagner, E., Somayaji, N., Davis, A., Crifasi, C.K., 2024. Gun
+    Philadelphia. Harvard Education Press.                                                              Violence in the United States 2022. Examining the Burden Among Children and
+Royal, C., Cothorne, A., 2021. School closures and urban education. Handbook of Urban                   Teens. Johns Hopkins Center for Gun Violence Solutions. Johns Hopkins Bloomberg
+    Education, pp. 483–493. https://doi.org/10.4324/9780429331435-36.                                   School of Public Health.
+Sampson, R.J., Raudenbush, S.W., Earls, F., 1997. Neighborhoods and violent crime: a               Zewdie, H.Y., Asa, N., Rowhani-Rahbar, A., Morrison, C.N., Mooney, S.J., 2025. Kernel
+    multilevel study of collective efficacy. Science 277 (5328), 918–924.                               density bandwidth specification in neighborhood violence prevention research.
+                                                                                                        J. Urban Health 102 (6), 1152–1162.
+
+
+
+
+                                                                                               8
+

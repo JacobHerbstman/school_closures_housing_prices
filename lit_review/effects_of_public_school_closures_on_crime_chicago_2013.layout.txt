@@ -1,0 +1,1198 @@
+                                     Effects of Public School Closures on Crime: The
+                                     Case of the 2013 Chicago Mass School Closure
+                                     Noli Brazil
+                                     University of California, Davis
+
+                                         Abstract: Public school closures are increasing in number and size in U.S. cities. In response, parents,
+                                         teachers, and public school advocates argue that closures carry negative consequences for multiple
+                                         institutions across a wide set of outcomes. One such institution is the local neighborhood, and a
+                                         negative consequence that is frequently raised is increased crime. I test this claim by using the
+                                         2013 Chicago mass school closure as a case study. Rather than conceiving of a school closure as a
+                                         binary event (closed or not closed) I break it out according to a school’s status after closure: vacant,
+                                         repurposed, and merged with an existing school. I find that vacancy and repurposing into a nonschool
+                                         are associated with decreased crime. In contrast, merging a closed school with an existing school is
+                                         associated with increased crime. The vacancy and repurposing effects are spatiotemporally localized,
+                                         concentrated in the 75-meter area surrounding the school and disappearing after a year, whereas the
+                                         student merger effect persisted over time across larger spatial scales. My results suggest that the
+                                         relationship between closure and neighborhood crime is not straightforward, varying by postclosure
+                                         land use status and spatiotemporal factors.
+                                         Keywords: school closures; crime; neighborhoods; schools
+
+
+                                          ARGE numbers of public schools have recently closed in cities across the United
+                                     L    States (Burdick-Will, Keels, and Schuble 2013; Weber, Farmer, and Donoghue
+                                     2020). From 2002 to 2011, the number of closures per 1,000 schools in the 100 largest
+                                     metropolitan areas nearly doubled, increasing from 5.5 to 10.6 during this period
+                                     (McFarland et al. 2017). The size of individual closure events is also substantial. For
+Citation: Brazil, Noli. 2020. “Ef-
+                                     example, Detroit closed 93 schools between 2009 and 2014, Philadelphia closed 30
+fects of Public School Closures      schools between 2012 and 2013, and Chicago experienced the largest mass school
+on Crime: The Case of the 2013       closure in U.S. history in 2013 when it closed 47 of its elementary schools. Urban
+Chicago Mass School Closure.”
+Sociological Science 7: 128-         closures have been met with fierce resistance, with teachers, families, and public
+151.                                 school advocates organizing protests, holding hunger strikes, and filing lawsuits to
+Received: January 9, 2020            save their schools. Despite the significant backlash, school district officials continue
+Accepted: February 22, 2020          to close schools at an alarming rate, justifying the strategy as an efficient means
+Published: April 28, 2020            for addressing fiscal constraints and increasing academic performance (Tieken and
+Editor(s): Jesper Sørensen, Olav
+                                     Auldridge-Reveles 2019).
+Sorenson
+DOI: 10.15195/v7.a6
+                                         Opponents of school closures counter claims of economic efficiency and aca-
+Copyright: c 2020 The Au-            demic accountability by arguing that school closures affect more institutions and
+thor(s). This open-access article    actors than displaced students alone (Tieken and Auldridge-Reveles 2019). There-
+has been published under a Cre-
+                                     fore, public officials are underestimating the broader societal costs of closing a
+ative Commons Attribution Li-
+cense, which allows unrestricted     school. One such institution is the neighborhood, which has important economic
+use, distribution and reproduc-      and social interdependencies with local schools (Brazil 2016; Good 2019). A nega-
+tion, in any form, as long as the
+original author and source have      tive consequence for neighborhoods that is consistently raised is increased crime
+been credited. c b                   (Black 2018; Ewing 2018; Hagedorn 2017). This claim is based primarily on two
+
+
+                                                                          128
+Brazil                                                                                        Public School Closures and Crime
+
+
+                                 mechanisms. First, according to broken windows theory, the disorder attached to
+                                 school building vacancy after closure will attract crime to the area (Wilson and
+                                 Kelling 1982). Second, displaced students are forced to cross rival gang territories to
+                                 attend other schools, thus elevating community conflict and violence (Ahmed-Ullah
+                                 2013).
+                                     The relationship between closures and crime, however, is not as straightforward
+                                 as it might appear. First, some theoretical perspectives view schools as generators
+                                 of crime and thus would predict a decrease in crime after closure. For example,
+                                 routine activity theory asserts that schools increase criminal opportunities in sur-
+                                 rounding neighborhoods by concentrating suitable targets in the absence of capable
+                                 guardianship (Cook 2017). Second, school closures are multicategorical phenom-
+                                 ena, where categories are based on a school building’s status after closure, either
+                                 vacant, repurposed, or merged with an existing school. These conditions may have
+                                 differential associations with neighborhood crime that are masked when examining
+                                 closure as a binary event: closed or not closed. Third, the effects of a school closure
+                                 may vary by status duration and distance to the closed school. Fourth, closures may
+                                 impact neighborhoods that are indirectly affected by the district’s closure policy.
+                                 In particular, districts typically reassign displaced students to a welcoming school,
+                                 which in turn may have consequences for that school’s surrounding neighborhood.
+                                 In cases where the receiving school remains in its existing location, vacancy occurs
+                                 in the closed school’s neighborhood, whereas student merger occurs in the receiv-
+                                 ing school’s neighborhood. The scenario is switched when the welcoming school
+                                 relocates to the closed school location. Depending on the nature of the relationship
+                                 between crime, vacancy, and student merger, crime levels may increase in one place
+                                 but decrease in another.
+                                     Examining the association between closures and neighborhood crime is further
+                                 complicated by the nonrandom selection of schools for closure (Brazil 2019; Caven
+                                 2019; Lee and Lubienski 2017). I aim to mitigate this challenge by leveraging the
+                                 2013 Chicago mass school closure to estimate the effects of closures on local crime.
+                                 In May 2013, Chicago Public Schools (CPS) voted to close 49 elementary schools. In
+                                 addition to representing an important case deserving study in and of itself given
+                                 its historic size, the Chicago mass school closure offers several methodological
+                                 advantages. These advantages include its significant magnitude and compressed
+                                 timeline, the formation of a valid comparison group based on the schools considered
+                                 but not selected for closure, the five-year moratorium on school closures, and
+                                 variation in postclosure status condition, specifically building vacancy, repurposing,
+                                 and student merger. Using a monthly panel of crime counts between 2008 and
+                                 2018, I test the differential impact of school vacancy, repurposing, and merger on
+                                 neighborhood crime as a consequence of Chicago’s mass closure. I test the effects
+                                 across varying spatial and temporal scales and differentiate between officially closed
+                                 schools and nonclosed schools that were assigned to receive displaced students.
+
+
+                                  How School Closures Affect Local Crime
+                                  Conceptualizing the ways in which schools are repurposed after closure is central
+                                  to understanding the theoretical pathways linking school closure to neighborhood
+
+
+sociological science | www.sociologicalscience.com           129                                        April 2020 | Volume 7
+Brazil                                                                                        Public School Closures and Crime
+
+
+                                 crime. After a school is closed, its building can either become vacant or repurposed
+                                 for another use. Because they are often large and located in residential neighbor-
+                                 hoods, school buildings are difficult to sell and thus can remain vacant for long
+                                 periods of time. If the district can find a buyer or renter, the building is often con-
+                                 verted into a nonschool (e.g., housing or recreation center) or a new school (Dowdall
+                                 and Warner 2013). Whether and how long a closed school building remains vacant
+                                 and how the building is repurposed may have differential consequences on local
+                                 crime.
+                                     Conceptualizing the indirect impact that closures may have on nonclosed
+                                 schools and their neighborhoods is central to understanding how a city’s school
+                                 closure plan can produce spillover externalities. The primary mechanism through
+                                 which closures impact other schools is through the reassignment of displaced
+                                 students. Many school districts establish student reassignment plans that send
+                                 displaced students to the nearest school or, in more limited cases, the nearest high-
+                                 performing school, offering transportation options to those with limited geographic
+                                 access. Here, the nonclosed school is the site of the merger and the closed school
+                                 becomes vacant or repurposed. However, the district may relocate a welcoming
+                                 school to the closed school’s building, leaving a vacant building in the welcoming
+                                 school’s old neighborhood and forcing the welcoming school’s students to travel
+                                 across potentially unsafe areas. In either scenario (a welcoming school staying
+                                 in place or relocating), school closures will have community-wide effects that go
+                                 beyond the neighborhoods surrounding the closed schools.
+                                     By overlaying various theoretical perspectives onto the status conditions that
+                                 schools enter after closure, I generate hypotheses regarding the effects of school
+                                 closures on neighborhood crime. In the following sections, I rely on these various
+                                 theoretical perspectives to explicate the pathways linking school closures to local
+                                 crime.
+
+
+                                  School Closures Increase Crime
+                                 There are two mechanisms that support the hypothesis that school closures increase
+                                 neighborhood crime. First, closures increase crime through school building va-
+                                 cancies. This pathway is supported by the broken windows theory, which posits
+                                 that visual cues of disorder, such as abandoned buildings, attract crime because
+                                 offenders assume from these cues that residents are indifferent to what goes on in
+                                 the neighborhood (Wilson and Kelling 1982). Several studies have found support
+                                 for this theory, estimating positive associations between property vacancies and
+                                 criminal activity (Cui and Walsh 2015; Raleigh and Galster 2015). For example,
+                                 Spelman (1993) found that crimes such as drug dealing and prostitution were found
+                                 to take place within the confines of more than 80 percent of abandoned buildings.
+                                 School buildings are more likely to remain vacant after closure because the typical
+                                 urban school for sale is old, large, and located in a residential area, limiting its
+                                 resaleability (Dowdall and Warner 2013). Furthermore, demolition is often more
+                                 expensive than keeping buildings up and not maintaining them (Dowdall and
+                                 Warner 2013). Abandoned buildings deteriorate, making them harder to resell,
+                                 and become magnets for illicit activities. As one public official explained after the
+
+
+
+sociological science | www.sociologicalscience.com           130                                        April 2020 | Volume 7
+Brazil                                                                                        Public School Closures and Crime
+
+
+                                 closure of several schools in Atlanta, "If you leave an old building sitting for so
+                                 long, the water is not running, the gas line isn’t working ... it makes it harder to
+                                 redevelop them, making them a place for crime" (Sarrio 2012).
+                                       The second mechanism explaining an increase in crime after closure is the merg-
+                                 ing of displaced students with students from a welcoming school. A typical school
+                                 district strategy for reenrolling displaced students is to send them to designated
+                                 welcoming schools, where welcoming is determined by a number of factors, in-
+                                 cluding enrollment, academic performance, and distance (Brummet 2014; Engberg
+                                 et al. 2012; Steinberg, Ukert, and MacDonald 2019). The merger can occur in either
+                                 the location of the welcoming school or the closed school. Public school advocates
+                                 argue that crime increases because students travelling to a new school location have
+                                 to cross rival gang boundaries (Hagedorn 2017).
+                                       In the case of Chicago, teachers and staff of welcoming schools substantiate
+                                 these concerns, observing that when students are walking to and from school,
+                                 they "have to be real careful because [they’re] in two different gang territories,
+                                 . . . so sometimes [they] get chased home because they stayed on one side versus
+                                 another around here" (Gordon et al. 2018:30). Students attending welcoming schools
+                                 are aware of these dangers, reporting lower levels of safety walking to and from
+                                 school compared to students enrolled in other schools (Gordon et al. 2018). Even
+                                 if students are not affiliated with a gang, they may still be targeted solely because
+                                 of where they live. As a Chicago alderman explained in reaction to the closing of
+                                 his neighborhood elementary school, "It’s not about if a kid is a gangbanger or not.
+                                 It’s about if they come from that community, that area. Then they’re considered
+                                 affiliated" (Konkol 2013). Urban gangs typically carve out turf at very small spatial
+                                 scales, sometimes down to the block-by-block level (Papachristos, Hureau, and
+                                 Braga 2013), thus forcing students to cross gang boundaries across relatively short
+                                 distances. CPS offered additional busing only when welcoming schools were greater
+                                 than 0.8 miles away. Even when students commute to school using busses, they
+                                 must walk to bus stops, which are not always close to their home locations (Lee
+                                 and Lubienski 2017). Whether walking to school or a bus stop, students living
+                                 in the neighborhoods affected by Chicago’s mass closure must traverse through
+                                 some of the city’s most violent areas. Fear of violence and direct exposure to
+                                 crime have serious consequences on student wellbeing outcomes, including rates of
+                                 absenteeism, which in turn may lead to other delinquent behaviors that may incite
+                                 further strife within the community (Burdick-Will, Stein, and Grigg 2019; DaViera
+                                 and Roy 2019; Sharkey et al. 2014).
+
+
+                                  School Closures Decrease Crime
+                                 An alternative hypothesis argues that school closures decrease crime. This predic-
+                                 tion is supported by routine activity and social disorganization theories, which
+                                 associate crime with patterns of land use and the spatial arrangement of facilities.
+                                 Routine activity theory posits that patterns of land use have the potential to either
+                                 facilitate or impede crime by structuring routine activities that create opportunities
+                                 for offending or encourage social control in public places (Felson 1987). One way
+                                 that schools might attract crime is by increasing the traffic density. Neighborhoods
+
+
+
+sociological science | www.sociologicalscience.com           131                                        April 2020 | Volume 7
+Brazil                                                                                        Public School Closures and Crime
+
+
+                                 with a school experience a high ratio of nonresidents to residents as a result of the
+                                 services provided by the school, which include noneducational services that are
+                                 offered outside of school hours. As a result, schools have a tendency to yield a high
+                                 volume of targets. Given that guardianship is mainly limited to school grounds
+                                 and schools are dismissed several hours before most working adults return home,
+                                 guardianship would be at a minimum within the community, allowing offend-
+                                 ers opportunities to engage in theft, assault, and other crime with little chance of
+                                 detection.
+                                     Criminologists have also used social disorganization theory to explain higher
+                                 rates of crime in neighborhoods with schools. The theory hypothesizes that struc-
+                                 tural disadvantages such as poverty and residential turnover induce crime because
+                                 of their ability to impede the development of social ties, mutual cohesion and trust,
+                                 organizational participation, and the supervision of teenage groups (Sampson and
+                                 Groves 1989). Wo and Park (2020) found support for this explanation in their study
+                                 of crime around Chicago public schools. They argue that higher rates of crime may
+                                 be attributed to the presence of schools inhibiting pro-social interaction between
+                                 people living in the neighborhood, school staff, students and parents, thus separat-
+                                 ing the local community into different social worlds and thereby undermining the
+                                 ability to informally monitor and regulate crime in public spaces around schools.
+                                 Because of these dividing lines, responsibility over the supervision of neighbor-
+                                 hood youth may be unclear, obstructing residents’ ability to detect criminal activity.
+                                 Although the presence of youth in the neighborhood may be due to nonschool
+                                 reasons, some of which might be criminal in nature, residents may assume it is due
+                                 to formal schooling obligations, thus shifting the responsibility out of their hands
+                                 (Willits, Broidy, and Denman 2013). If a neighborhood does not have a school, as is
+                                 the case when a school closes, "the activity patterns of residents and nonresidents
+                                 will more readily converge, thereby prosocial interaction is more likely to occur"
+                                 (Wo and Park 2020:4).
+                                     Studies have consistently demonstrated that the presence of schools influences
+                                 crime patterns in the surrounding community (Astor, Benbenishty, and Meyer
+                                 2004; Kautt and Roncek 2007; Roncek 2000; Wo and Park 2020). However, these
+                                 studies examine crime around active schools. In the case of school closures, the
+                                 association with crime will depend on what happens to the school building after
+                                 closure. For example, the decrease in crime caused by removing a criminogenic
+                                 facility from the area may be counteracted if the school building becomes vacant and
+                                 this vacancy leads to increased crime. The effects may also vary across temporal and
+                                 spatial scales. Han (2014) found that the impact of abandoned properties on nearby
+                                 property values declines as the distance from the abandoned property increases.
+                                 However, when abandoned properties sit unoccupied for longer periods of time,
+                                 their impact on nearby property values increases in magnitude and goes farther
+                                 in distance. These spatiotemporal differences may also apply to the closure-crime
+                                 relationship.
+                                     In the lone study examining the effects of traditional public school closures on
+                                 crime, Steinberg et al. (2019) found substantive declines in crime following high
+                                 school closure in Philadelphia. They argue that these findings are consistent with
+                                 theories that predict crime to be higher with the presence of more students in an area
+
+
+
+sociological science | www.sociologicalscience.com           132                                        April 2020 | Volume 7
+Brazil                                                                                        Public School Closures and Crime
+
+
+                                  by reducing the opportunity costs for crime and increasing the potential for criminal
+                                  socialization. The student-as-offender argument is weaker in the case of elementary
+                                  and middle school closures because the age group of primary school students has
+                                  low criminal offending rates. The authors also found evidence that violent crime
+                                  increases in neighborhoods where larger shares of enrolled students were displaced
+                                  due to school closures. The study is an important first step to understanding the
+                                  relationship between closures and crime, but it has yet to be replicated in another
+                                  urban area. The current study examines the closure-crime relationship in Chicago
+                                  and leverages several methodological advantages offered by the city’s 2013 mass
+                                  school closure.
+
+
+                                  Chicago’s 2013 Mass School Closure
+                                 Confronted with budget woes, substandard building conditions, poor academic
+                                 performance, declining populations, and a powerful education reform movement
+                                 backing school choice as the primary vehicle for school reform, Chicago initiated
+                                 several rounds of school closings during the 2000s, reaching its climax in the 2012–
+                                 2013 school year, when CPS voted to close 49 elementary schools (Ewing 2018).
+                                 As the largest mass school closure to date, generating significant public outcry,
+                                 including mass protests and major lawsuits, Chicago’s 2013 school closings merit
+                                 scholarly examination. Important for this study’s purposes, the evidence suggests
+                                 that the mass closure also has a number of methodologically attractive features.
+                                     First, the mass closure provides a valid comparison group to the closed schools.
+                                 In estimating the effects of school closures on neighborhood outcomes, the main
+                                 econometric challenge is that closed schools are not randomly selected. CPS cited
+                                 many different factors when selecting which schools to close; among them were
+                                 enrollment, performance measures, and the overall condition of the school buildings
+                                 (De la Torre et al. 2015). The selection of schools also incorporated unobserved
+                                 characteristics, including public and private feedback from various stakeholders.
+                                 Closed schools are not randomly scattered across the city, as most are concentrated
+                                 in disadvantaged neighborhoods in the south and west sides (see Figure 1). A naive
+                                 comparison of crime rates in neighborhoods that experienced a closure with the
+                                 crime rates in neighborhoods that did not experience a closure is likely to yield
+                                 biased estimates.
+                                     This article’s solution is to rely on the final CPS-announced list of schools
+                                 considered for closure. In December 2012, CPS identified 330 schools that were
+                                 underenrolled and at risk for closure. This initial list included elementary schools,
+                                 high schools, and charter schools, regardless of school performance. After a short
+                                 period of public discussion, a pared down list of 129 elementary schools that could
+                                 be closed was released in February 2013. Most of the schools slated for closure were
+                                 located in historically disinvested and primarily black communities. In May 2013,
+                                 the Chicago Board of Education voted to close 49 of the 129 elementary schools.1
+                                 The identifying assumption is that the schools in the February 2013 list that were not
+                                 selected for closure form a valid counterfactual for the schools that were selected
+                                 after conditioning on differences in preexisting trends.
+
+
+
+sociological science | www.sociologicalscience.com            133                                       April 2020 | Volume 7
+Brazil                                                                     Public School Closures and Crime
+
+
+
+
+Figure 1: Chicago public elementary school locations in 2013. Mi, miles.
+
+
+sociological science | www.sociologicalscience.com   134                             April 2020 | Volume 7
+Brazil                                                                                           Public School Closures and Crime
+
+
+                                     To examine how well my approach identifies similar treatment and control
+                                 areas, Table 1 compares school and census tract characteristics of the 49 schools that
+                                 were closed, the 413 schools that were not closed, and the 79 schools that were not
+                                 closed but appeared on the February 2013 list. The school data reflect the 2012–2013
+                                 school year and come from CPS. Neighborhoods are represented as census tracts
+                                 containing an elementary school. Tract data come from the 2009–2013 American
+                                 Community Survey. I ran a series of ordinary least squares regressions for each of
+                                 these variables on the closure indicator to determine whether differences between
+                                 the closed schools and the two sets of controls are statistically significant. I find that
+                                 closed schools have a significantly different demographic makeup and much lower
+                                 standardized test scores compared to all nonclosed schools. They are also located
+                                 in significantly poorer neighborhoods with a greater presence of black residents. In
+                                 contrast, the 79 schools on the February closure list that did not close have similar
+                                 school- and tract-level characteristics. These schools also exhibit similar premass
+                                 closure crime levels. Table 2 compares the mean pre-2013 violent and nonviolent
+                                 crime counts across the three groups by the circular distance in meters around
+                                 the school. The preclosure violent and nonviolent crime mean counts are lower
+                                 in the all nonclosed schools group across all radii. In contrast, mean crime counts
+                                 for areas surrounding non-closed schools on the February list are similar to the
+                                 areas surrounding closed schools. The results shown in Tables 1 and 2 suggest
+                                 that nonclosed schools that appeared on the February 2013 list constitute a better
+                                 comparison group than all nonclosed schools based on the similarity of preclosure
+                                 observable characteristics and crime levels.
+                                     A second important feature of the mass closure is the significant limitations in
+                                 the district’s planning and execution of the closure process (Ewing 2018). These
+                                 limitations are connected to the district’s aggressive closure timeline. Communities
+                                 had only three months to discuss and respond to the district’s February list. After
+                                 the Board of Education vote took place at the end of May, there was only one month
+                                 until the end of the school year and only two months thereafter to prepare for the
+                                 new school year. An Illinois state report issued by the Chicago Educational Facili-
+                                 ties Task Force (2014) outlined other deficiencies: input from broader community
+                                 stakeholders was missing in engagement sessions; district officials often rejected
+                                 the feedback and advice of independent hearing officers when they disagreed with
+                                 a proposed action; little planning surrounding the use of school buildings after
+                                 closure; and failure to properly assess and monitor the impact of the closures on
+                                 students, staff, and surrounding communities. Moreover, although CPS formulated
+                                 a strategy for reenrolling displaced students, it offered no after-closure plans for the
+                                 communities served by closed schools. The report concluded that the process lacked
+                                 long-range planning and adequate community engagement. The report’s findings
+                                 are supported by school staff interviews that suggested little guidance from the
+                                 district on how to prepare for large influxes of new staff and students coming from
+                                 different school and neighborhood communities (Gordon et al. 2018). These factors,
+                                 along with the significant size of the closures (the percentage of the district’s schools
+                                 and students impacted by the closure are 10.6 percent and 6.0 percent, respectively),
+                                 suggest that many communities were ill prepared for absorbing the wider effects of
+
+
+
+
+sociological science | www.sociologicalscience.com            135                                          April 2020 | Volume 7
+Brazil                                                                                         Public School Closures and Crime
+
+
+Table 1: Mean characteristics of Chicago public elementary schools and their tracts by 2013 closure status.
+                                                                                                       Nonclosed
+                                                      Closed             All nonclosed                 schools on
+               Variable                               schools            closed schools             February 2013 list
+School characteristics
+Average enrollment                                     297.6                   589.7†                            363.9†
+Average reading score                                   26.8                    41.7†                             26.0
+Average math score                                      31.3                    46.5†                             31.5
+% white                                                  0.9                    10.7∗                              1.1
+% black                                                 86.8                    34.3†                             87.9
+% Hispanic                                              10.2                    48.8†                              9.4
+Tract characteristics
+Average population                                   3, 043.8                3, 840.9†                        2, 952.2
+% <18 years old                                          26.1                    24.8∗                            25.9
+% not moving in past year                                80.7                    85.7∗                            83.7
+% female-headed households                               52.4                    34.0†                            54.1
+% bachelor’s degree                                      24.4                    28.1∗                            21.9
+% unemployed                                             21.4                    15.2†                            23.1
+% poverty                                                35.8                    23.9†                            33.7
+% white                                                  12.4                    25.6†                             9.5
+% black                                                  74.0                    37.7†                            78.8
+% Hispanic                                               10.1                    30.6†                             8.4
+N                                                         49                   413                            79
+ All neighborhood characteristics are measured for the 2009–2013 period at the tract level. Asterisks in
+columns 3 and 4 indicate whether mean values statistically differ from the mean values for the closed schools
+group. †p < 0.01, *p < 0.05.
+
+
+                                 the closures. In other words, a closure was arguably a significant and unexpected
+                                 shock to a community.
+                                     The third important feature of the mass closure is that CPS instituted a five-year
+                                 moratorium on school closings. Identification requires that there are no other con-
+                                 founding events that also affect crime. The moratorium means that I can observe the
+                                 five-year impact of the school closures without subsequent closures contaminating
+                                 the estimates. I can compare crime trends postclosure without the influence of
+                                 other closures occurring during the postclosure period that would likely affect the
+                                 remaining open schools and their neighborhoods.
+                                     The final important feature is the school district’s reenrollment plan for displaced
+                                 students. In order to accommodate the nearly 12,000 displaced students affected by
+                                 the mass closure, CPS designated specific welcoming schools for each of the closed
+                                 schools. A welcoming school had to be within one mile of the closed school, perform
+                                 better than the closed school, and have enough available seats to accommodate
+                                 students. The potential impact of the merger is significant, as, on average, the
+                                 welcoming schools each received approximately 150 displaced students, accounting
+                                 for about 32 percent of their student population in fall 2013 (Gordon et al. 2018). For
+                                 some of the welcoming schools, their enrollments almost doubled in size. Students
+                                 merged together were typically coming from neighborhoods with rival youth
+
+
+sociological science | www.sociologicalscience.com              136                                      April 2020 | Volume 7
+Brazil                                                                                      Public School Closures and Crime
+
+
+Table 2: Mean crime counts by school-buffer radius before June 2013.
+                                                                                                    Nonclosed
+                                                     Closed           All nonclosed                 schools on
+    Crime                       Radius               schools          closed schools             February 2013 list
+Violent                           75                  0.2                     0.1†                                0.2
+                                  150                 0.8                     0.5†                                0.7
+                                  300                 3.0                     1.9†                                2.8
+                                  450                 6.8                     4.3†                                6.2
+Nonviolent                        75                  2.1                     1.4†                                1.9
+                                  150                 8.0                     4.9†                                6.7
+                                  300                29.9                    19.1†                               25.5
+                                  450                65.1                    43.1†                               56.8
+N                                                      49                   413                             79
+ Asterisks in columns 4 and 5 indicate whether mean values statistically differ from the mean values for the
+closed schools group. †p < 0.01, *p < 0.05.
+
+
+                                 gangs, and the district’s Office of Safety and Security was largely unaware of these
+                                 boundaries (Ewing 2018). Moreover, some welcoming schools received displaced
+                                 students in their current locations, whereas CPS determined that the closed school
+                                 building will house the welcoming school, leaving their previous neighborhoods
+                                 with building vacancies to fill and forcing welcoming school staff and students
+                                 to commute. Students enrolled in welcoming schools reported feeling less safe
+                                 walking to and from school compared to students in other schools across the district
+                                 (Gordon et al. 2018). The concern regarding the crossing of gang boundaries was not
+                                 relegated to teachers and parents, as the CPS expanded its Safe Passage Program,
+                                 which places adult monitors along designated "safe passage" streets leading to
+                                 and from welcoming schools. Despite claims by the CPS that the program led to
+                                 a substantial decline in crime, evidence suggests much smaller declines only in
+                                 particular safe-passage street segments and no change in crime around safe-passage
+                                 schools (Curran 2019).
+
+
+                                  Empirical Approach
+                                  Data Sources
+                                 I collected data on the 464 elementary schools open in the 2012–2013 school year
+                                 from CPS. I then identified the 129 elementary schools initially considered for
+                                 closure in February 2013 and the 49 that were ultimately voted for closure in May
+                                 2013. I also identified the 48 welcoming schools (schools that were selected to
+                                 receive displaced students), linking them to the closed schools whose students they
+                                 were welcoming. I also identified whether welcoming schools relocated to another
+                                 building. I excluded from the sample a welcoming school that unofficially closed
+                                 during the five-year moratorium. The list of elementary schools considered for
+                                 closure in February 2013, school longitude and latitude coordinates, and welcoming
+                                 school information were obtained from CPS. The sales date and new ownership of
+
+
+sociological science | www.sociologicalscience.com             137                                    April 2020 | Volume 7
+Brazil                                                                                         Public School Closures and Crime
+
+
+                                 each abandoned school building were collected from CPS, newspaper articles, and
+                                 media documentation of school building sales.2 The study’s observation period is
+                                 July 2008 to July 2018, representing the five-year period before and after the mass
+                                 school closure.
+                                     Crime incident data were collected from Chicago’s online open data portal. The
+                                 data include the type of crime as classified under the Uniform Crime Reporting
+                                 Program, geographic location, and date of each crime from July 2008 to July 2018. A
+                                 total of 282,373 violent and 2,898,693 nonviolent crimes are included in the 10 years
+                                 covered by the data. Violent crimes include homicide, rape, aggravated assault
+                                 and battery, and robbery. Figure 2 shows yearly Chicago violent and nonviolent
+                                 crime rates per 10,000 population from 2008 to 2018. Violent crime rates steadily
+                                 decreased from 132.1 to 83.3 from 2008 to 2014, went back up to 103.9 in 2016, but
+                                 then dipped to 94.4 in 2018. Nonviolent crime rates show a steady decline from
+                                 2008 to 2015, dropping from 14,249.3 to 8709.6, but then flatten out the rest of the
+                                 study period. Crime rates generally went down, but Figure 3 shows that the spatial
+                                 distribution of crime did not significantly change from 2008 to 2018, as the most
+                                 and least dangerous neighborhoods remained so during the period (Papachristos,
+                                 Brazil, and Cheng 2018).
+
+
+                                  Estimation Strategy
+                                 I constructed a panel data set containing monthly crime for the neighborhoods
+                                 surrounding public elementary schools on the February 2013 list. My definition of
+                                 a neighborhood is a circular buffer of radius r surrounding each elementary school.
+                                 The more localized definition of neighborhood compared to larger traditional census
+                                 measures such as tracts controls for neighborhood characteristics that increasingly
+                                 become dissimilar as the geographic scale increases. A buffer also places the school
+                                 at the center of the neighborhood, whereas a census tract or block group measure
+                                 places some schools near the boundary, thus misestimating the effects if there are
+                                 spillover consequences. Moreover, a buffer allows for the testing of differential
+                                 effects by spatial scale.
+                                     Following prior work examining the impact of vacant properties on local crime
+                                 (Cui and Walsh 2015), I tested several radii r, specifically r = 75, 150, 300, and
+                                 450 meters. The different radii provide a balance between the noisier estimates of
+                                 smaller areas and the increased differences between those treated and controls as
+                                 the buffer zones increase. I then spatially joined crime data to each buffer. The
+                                 specification for the empirical analysis is presented in the following equation.
+
+
+                                         Crimeimy = α + β1 Dimy
+                                                            1
+                                                                + β2 Dimy
+                                                                      2
+                                                                          + β3 Dimy
+                                                                                3
+                                                                                    + β4 Dimy
+                                                                                          4
+                                                                                              + γi + ϑmy + eimy            (1)
+
+                                      where Crimeimy is the number of violent or nonviolent crimes within the circular
+                                  school buffer i in month m and year y, γi is a school buffer fixed effect and controls
+                                  for time-invariant area characteristics, and ϑmy is a month-by-year fixed effect con-
+                                  trolling for all month-by-year trends confounding the relationship between crime
+                                  and closure. Because the outcome variable is a nonnegative count, I ran negative bi-
+                                  nomial regression models using maximum likelihood methods to estimate equation
+
+
+sociological science | www.sociologicalscience.com            138                                        April 2020 | Volume 7
+Brazil                                                                                         Public School Closures and Crime
+
+
+
+
+                             (a) Violent crime                                 (b) Non-violent crime
+
+
+Figure 2: Violent and nonviolent crimes per 10,000 population in Chicago, 2008–2018.
+
+
+                                 1, with the number of buildings in 2013 within the circular buffer as the measure of
+                                 exposure. I clustered standard errors by school buffer.
+                                     The variable Dimy categorizes neighborhoods into the following five postclosure
+                                 status conditions (with the proportion of school buffer-by-month observations
+                                 in parentheses): the school experienced no change (reference; 75.3 percent); the
+                                 school merged (8.4 percent); the school is vacant (10.4 percent); the school was
+                                 repurposed into a nonschool (3.1 percent); and the school was repurposed into
+                                 a nonwelcoming school (2.9 percent). The last category contains existing schools
+                                 enrolling nonelementary school students that took over the vacant school buildings.
+                                 For example, The Chicago High School for the Arts took over Lafayette Elementary
+                                 School, and Kenwood Academy High School relocated into Canter Middle School.
+                                 No new schools opened in closed buildings during the study period, and the district
+                                 prohibited reoccupation by charters during the moratorium. Two schools were
+                                 selected for closure in May 2013 but did not officially close until a later date. I
+                                 designated the other 47 schools as closed in July 2013, with the last day of the
+                                 2012–2013 school year falling on June 17. The 2013–2014 school year officially
+                                 began on August 26, 2013. School locations experiencing a merger of students were
+                                 designated as such starting September 2013. School buildings leased or sold to a
+                                 new owner were designated as such in the month and year of their sale dates.
+
+
+                                  Results
+                                  The Effects of School Vacancy, Merger, and Repurposing
+                                 Table 3 presents the main coefficients of interest from the estimation of equation 1.
+                                 Each panel represents separate models based on violent and nonviolent crime as
+                                 the dependent variable. The columns represent separate models based on buffer
+                                 size. I present the coefficients as incidence rate ratios (IRRs). An IRR less than 1
+
+
+sociological science | www.sociologicalscience.com           139                                         April 2020 | Volume 7
+Brazil                                                                                    Public School Closures and Crime
+
+
+
+
+                                   (a) Violent 2008                  (b) Violent 2018
+
+
+
+
+                                 (c) Non-violent 2008              (d) Non-violent 2018
+
+
+Figure 3: Violent and nonviolent crime rates per 100 population by census tract, 2008 and 2018. Mi, miles.
+
+
+
+
+sociological science | www.sociologicalscience.com      140                                         April 2020 | Volume 7
+Brazil                                                                                         Public School Closures and Crime
+
+
+Table 3: Results from negative binomial regressions of violent and nonviolent crime counts on school closure
+condition by buffer radius.
+                                                     75              150                 300                     450
+Panel A: Violent Crime
+Merged                                                1.15              1.16               1.04                     1.04
+                                                     (0.15)            (0.09)             (0.07)                   (0.05)
+Vacant                                                0.78              0.92               0.92                     0.97
+                                                     (0.11)            (0.06)             (0.05)                   (0.04)
+Repurposed nonschool                                  1.22              1.07               1.01                     0.98
+                                                     (0.18)            (0.09)             (0.07)                   (0.05)
+Repurposed nonmerged school                           1.30              1.00               1.02                     1.06
+                                                     (0.30)            (0.09)             (0.07)                   (0.07)
+Panel B: Nonviolent Crime
+Merged                                                1.44†             1.23†              1.04∗                    1.01
+                                                     (0.12)            (0.07)             (0.05)                   (0.04)
+Vacant                                                0.65†             0.95               0.96                     0.98
+                                                     (0.07)            (0.05)             (0.03)                   (0.03)
+Repurposed nonschool                                  0.67†             0.96               0.96                     0.97
+                                                     (0.07)            (0.07)             (0.04)                   (0.04)
+Repurposed nonmerged school                           1.06              0.96               0.99                     1.08
+                                                     (0.09)            (0.09)             (0.05)                   (0.05)
+ All models include school buffer and month-by-year fixed effects. Sample represents 15,488 buffer-by-
+month-by-year observations representing 128 schools. Clustered standard errors are in parentheses. †p <
+0.01, *p < 0.05.
+
+
+                                 indicates a reduction in crime, whereas an IRR greater than 1 suggests an increase.
+                                 The reference group in all models includes neighborhoods with schools that did
+                                 not close and were not welcoming schools. The results shown in panel A reveal
+                                 no effects on violent crime across all status conditions and buffer sizes. In contrast,
+                                 I find several statistically significant and contrasting associations between school
+                                 status and nonviolent crime. First, I find that merged school locations experienced
+                                 an increase in nonviolent crime at the 75-meter scale. The regression coefficient
+                                 indicates that a neighborhood experienced a 44 percent increase in nonviolent crime
+                                 in the five years after a school merger. Second, I find that the increase, although
+                                 declining in magnitude, persists at the 150-meter (22 percent) and 300-meter (4
+                                 percent) scales. These findings support arguments offered by teachers, students,
+                                 parents, and public school advocates that closures increase local crime through the
+                                 merger of student populations. The persistence of the effect across larger distances
+                                 suggests explanatory mechanisms such as commuting across gang boundaries that
+                                 go beyond something about the area immediately surrounding the school.
+                                     Third, I find an opposite effect (decreased nonviolent crime) in the 75-meter
+                                 areas surrounding schools that are vacant. These neighborhoods experienced a 35
+                                 percent decrease in nonviolent crime. However, this effect is only significant at
+                                 the smallest spatial scale. Fourth, neighborhoods surrounding schools that were
+                                 repurposed into a nonschool experienced a 33 percent decrease in nonviolent crime.
+                                 Similar to the vacancy effect, the decrease disappears after the 75-meter radius.
+
+
+sociological science | www.sociologicalscience.com            141                                        April 2020 | Volume 7
+Brazil                                                                                         Public School Closures and Crime
+
+
+                                 These findings support routine activity and social disorganization theories, which
+                                 identify schools as criminogenic facilities. However, the results suggest that the
+                                 impact of land use conditions (vacancy and nonschool reoccupation) is limited
+                                 to the area immediately surrounding the school. In contrast, the effect of student
+                                 merger has broader geographic consequences.
+                                     I ran a set of additional models to test the robustness of the main results. First,
+                                 in order to test whether findings are sensitive to distributional assumptions, I
+                                 fitted Poisson models to go along with the negative binomial models presented in
+                                 the main analysis. Second, I included a buffer-area–specific linear time trend to
+                                 control for differential crime trends. Third, I explored the impact of extending the
+                                 starting month of vacancy status. The main models designated a school as vacant
+                                 one month after closure or relocation; therefore, schools that officially closed or
+                                 relocated in June 2013 are designated as vacant starting in July 2013. I tested models
+                                 that pushed vacancy status to one (August) and two (September) months after
+                                 closure/relocation. The results from these robustness tests, which are provided in
+                                 the online supplement, are similar to those presented in Table 3.
+
+
+                                  Duration of Vacancy and Merger
+                                 The models estimated in Table 3 do not take into account any varying effects
+                                 by duration spent in a specific condition. I next present results from models that
+                                 measure the effects of vacancy and merger duration on crime. In the case of building
+                                 vacancy, prior evidence has shown that the effects of property abandonment on
+                                 neighborhood outcomes such as crime vary by vacancy length (Cui and Walsh
+                                 2015; Han 2014). According to broken windows theory, the mechanism by which a
+                                 distressed property influences crime is largely visual. Then, it is plausible to assume
+                                 that the impact of a recently vacant school building may not be as strong as the
+                                 impact of a school building that has been siting unmaintained for a much longer
+                                 period. On the one hand, a smaller or no effect occurs in the earlier period but
+                                 increases or emerges the longer the building remains vacant. On the other hand, a
+                                 negative effect may occur in the earlier period due to the immediate displacement
+                                 of students as offenders and victims, but the effect either disappears as the local area
+                                 adjusts to the vacant property or becomes positive if the vacant property attracts
+                                 crime.
+                                     To examine the effect of vacancy length on crime, I estimated equation 1 using
+                                 the same treatment variable Dimy but expanded the vacancy status condition into
+                                 the following categories: school building is vacant less than 12 months, between
+                                 12 and 23 months, and greater than or equal to 24 months. Results are shown in
+                                 Table 4. I find that the results in Table 3 were masking a short-term effect on violent
+                                 crime. Here, there is a 34 percent decrease in violent crime in the first year at the
+                                 75-meter scale. This negative effect is significant but decreases in magnitude at
+                                 larger spatial scales. I also find a decrease in nonviolent crime but only at the 75-
+                                 meter scale. This effect persists after a year (36 percent decrease), becomes smaller
+                                 in the second year (28 percent), and disappears thereafter. These results expand the
+                                 main findings from Table 3 by showing that the effects of vacancy on crime are not
+                                 only spatially localized but short term. This finding may suggest that the negative
+
+
+
+sociological science | www.sociologicalscience.com            142                                        April 2020 | Volume 7
+Brazil                                                                                        Public School Closures and Crime
+
+
+Table 4: Results from negative binomial regressions of violent and nonviolent crime counts on school closure
+condition by buffer radius and vacancy duration.
+                                                     75              150                300                     450
+Panel A: Violent Crime
+Vacancy duration
+<12 months                                            0.66∗            0.82∗               0.87∗                   0.89†
+                                                     (0.13)           (0.08)              (0.05)                  (0.03)
+12–23 months                                          0.82             0.95                0.92                    0.93
+                                                     (0.15)           (0.09)              (0.05)                  (0.04)
+≥24 months                                            0.82             0.96                0.95                    1.02
+                                                     (0.13)           (0.07)              (0.06)                  (0.05)
+Merged                                                1.16             1.16                1.04                    1.04
+                                                     (0.15)           (0.09)              (0.07)                  (0.06)
+Repurposed nonschool                                  1.23             1.07                1.01                    0.98
+                                                     (0.18)           (0.10)              (0.07)                  (0.05)
+Repurposed nonmerged school                           1.30             1.00                1.02                    1.06
+                                                     (0.29)           (0.09)              (0.07)                  (0.07)
+Panel B: Nonviolent Crime
+Vacancy duration
+<12 months                                            0.64†            0.90                0.94                    0.97
+                                                     (0.07)           (0.05)              (0.04)                  (0.03)
+12–23 months                                          0.72†            0.98                0.99                    0.98
+                                                     (0.08)           (0.06)              (0.04)                  (0.03)
+≥24 months                                            0.91             0.97                0.97                    0.99
+                                                     (0.07)           (0.05)              (0.04)                  (0.04)
+Merged                                                1.44†            1.23†               1.04∗                   1.01
+                                                     (0.12)           (0.07)              (0.05)                  (0.04)
+Repurposed nonschool                                  0.67†            0.97                0.96                    0.97
+                                                     (0.07)           (0.07)              (0.04)                  (0.04)
+Repurposed nonmerged school                           1.06             0.96                0.99                    1.08
+                                                     (0.09)           (0.09)              (0.05)                  (0.05)
+ All models include school buffer and month-by-year fixed effects. Sample represents 15,488 buffer-by-
+month-by-year observations representing 128 schools. Clustered standard errors are in parentheses. †p <
+0.01, *p < 0.05.
+
+
+                                 consequences of vacancy as predicted by broken windows theory wash out the
+                                 positive benefits of removing a criminogenic facility as predicted by routine activity
+                                 and social disorganization theories if the building remains vacant long enough.
+                                     I next consider the length of time since school merger. On the one hand, given
+                                 the short period of time to prepare for the merger, we might see an increase in crime
+                                 in the short term but the effect disappearing in the long term as the surrounding
+                                 community adjusts. On the other hand, the effect might persist or unfold later as
+                                 new student rivalries and conflicts emerge after a transition period. Table 5 shows
+                                 results from models estimating the effects of time since merger. To be consistent
+                                 with the vacancy duration models, I categorized time since merger as less than 12
+                                 months, between 12 and 23 months, and greater than or equal to 24 months.
+
+
+
+sociological science | www.sociologicalscience.com            143                                       April 2020 | Volume 7
+Brazil                                                                                          Public School Closures and Crime
+
+
+Table 5: Results from negative binomial regressions of violent and nonviolent crime counts on school closure
+condition by buffer radius and merger duration.
+                                                     75               150                 300                     450
+Panel A: Violent Crime
+Merger duration
+<12 months                                            1.06              1.15                 1.02                    1.02
+                                                     (0.22)            (0.14)               (0.08)                  (0.06)
+12–23 months                                          1.04              1.05                 1.05                    1.09
+                                                     (0.23)            (0.14)               (0.08)                  (0.06)
+≥24 months                                            1.22              1.19                 1.05                    1.03
+                                                     (0.18)            (0.11)               (0.07)                  (0.06)
+Vacant                                                0.78              0.92                 0.92                    0.97
+                                                     (0.11)            (0.06)               (0.05)                  (0.04)
+Repurposed nonschool                                  1.24              1.07                 1.01                    0.98
+                                                     (0.18)            (0.10)               (0.07)                  (0.05)
+Repurposed nonmerged school                           1.30              1.00                 1.02                    1.06
+                                                     (0.30)            (0.09)               (0.07)                  (0.07)
+Panel B: Nonviolent Crime
+Merger duration
+<12 months                                            1.52†             1.32†                1.07∗                   1.05
+                                                     (0.14)            (0.09)               (0.05)                  (0.05)
+12–23 months                                          1.32∗             1.19∗                1.04∗                   1.02
+                                                     (0.17)            (0.11)               (0.05)                  (0.05)
+≥24 months                                            1.46†             1.21†                1.02                    1.00
+                                                     (0.13)            (0.07)               (0.06)                  (0.04)
+Vacant                                                0.65†             0.95                 0.96                    0.98
+                                                     (0.07)            (0.05)               (0.03)                  (0.03)
+Repurposed no-school                                  0.67†             0.96                 0.96                    0.97
+                                                     (0.07)            (0.07)               (0.04)                  (0.04)
+Repurposed nonmerged school                           1.06              0.96                 0.99                    1.08
+                                                     (0.09)            (0.09)               (0.05)                  (0.05)
+ All models include school buffer and month-by-year fixed effects. Sample represents 15,488 buffer-by-
+month-by-year observations representing 128 schools. Clustered standard errors are in parentheses. †p <
+0.01, *p < 0.05.
+
+
+                                     I find that neighborhoods with merged schools experienced no change in violent
+                                 crime across all time periods and buffer sizes. In contrast, I find a persistent increase
+                                 in nonviolent crime across time at the 75-, 150-, and 300-meter scales. Nonviolent
+                                 crime increased by 52 percent in the first year after merger at the 75-meter scale.
+                                 This increase diminished in the second year (32 percent) but increased thereafter (46
+                                 percent). At the 150-meter scale, neighborhoods with a merged school experienced
+                                 a 32 percent increase in nonviolent crime in the first year of merger. The increase
+                                 is 18 percent and 20 percent in the second year and thereafter, respectively. I
+                                 also find a persistent albeit smaller increase in nonviolent crime at the 300-meter
+                                 buffer. Neighborhoods within 300 meters of a merged school experienced a 7
+                                 percent and 4 percent increase in nonviolent crime in the first and second year after
+
+
+
+sociological science | www.sociologicalscience.com            144                                         April 2020 | Volume 7
+Brazil                                                                                        Public School Closures and Crime
+
+
+Table 6: Results from negative binomial regressions of violent and nonviolent crime counts on school closure
+condition by buffer radius and welcoming and closed school location.
+                                                     75              150                300                     450
+Panel A: Violent Crime
+Welcoming school location
+Merged                                                0.93             1.20               1.03                     1.03
+                                                     (0.22)           (0.20)             (0.10)                   (0.06)
+Vacant                                                0.63             0.91               0.87                     0.93
+                                                     (0.15)           (0.11)             (0.09)                   (0.07)
+Closed school location
+Merged                                                1.23             1.15               1.05                     1.04
+                                                     (0.17)           (0.10)             (0.08)                   (0.07)
+Vacant                                                0.81             0.93               0.94                     0.98
+                                                     (0.12)           (0.07)             (0.05)                   (0.04)
+Repurposed nonschool                                  1.22             1.08               1.01                     0.98
+                                                     (0.18)           (0.10)             (0.07)                   (0.05)
+Repurposed nonmerged school                           1.19             1.06               1.02                     1.04
+                                                     (0.25)           (0.09)             (0.07)                   (0.06)
+Panel B: Nonviolent Crime
+Welcoming school location
+Merged                                                1.20∗            1.13∗              1.04∗                    0.97
+                                                     (0.14)           (0.07)             (0.04)                   (0.04)
+Vacant                                                0.69∗            1.03               0.94                     0.97
+                                                     (0.12)           (0.08)             (0.07)                   (0.07)
+Closed school location
+Merged                                                1.55†            1.27†              1.07∗                    1.04
+                                                     (0.14)           (0.08)             (0.05)                   (0.06)
+Vacant                                                0.64†            0.93               0.97                     0.99
+                                                     (0.07)           (0.05)             (0.03)                   (0.03)
+Repurposed nonschool                                  0.67†            0.97               0.96                     0.97
+                                                     (0.07)           (0.07)             (0.04)                   (0.04)
+Repurposed nonmerged school                           1.09             1.01               1.01                     1.08
+                                                     (0.09)           (0.09)             (0.05)                   (0.04)
+ All models include school buffer and month-by-year fixed effects. Sample represents 15,488 buffer-by-month-
+by-year observations representing 128 schools. Clustered standard errors are in parentheses. Repurposed
+nonschool and nonmerged school conditions were not separated due to small sample sizes. †p < 0.01, *p <
+0.05.
+
+
+                                  merger, respectively. Based on results from Tables 3–5, school merger exhibits more
+                                  expansive spatiotemporal effects on nonviolent crime than building vacancy
+
+
+                                  Effects Across Closed School and Welcoming School Neighborhoods
+                                 The results presented thus far have combined neighborhoods containing schools
+                                 that officially closed with neighborhoods containing welcoming schools. Table 6
+                                 shows results from models separating merger and vacancy conditions by the two
+                                 neighborhood types. I find that violent crime does not change after vacancy or
+
+
+
+sociological science | www.sociologicalscience.com            145                                       April 2020 | Volume 7
+Brazil                                                                                         Public School Closures and Crime
+
+
+                                 merger for both neighborhood types across all buffer sizes. However, I find that
+                                 vacancy for both neighborhood types is associated with similar decreases in nonvi-
+                                 olent crime at the 75-meter scale and no association at larger scales. I also find that
+                                 merger for both neighborhood types is associated with an increase in nonviolent
+                                 crime at the 75-, 150- and 300- meter scales. In contrast to vacancy, the effect is
+                                 much larger for neighborhoods with a closed school, suggesting that merger effects
+                                 are more acute at the closed school’s location. For example, a merger occurring
+                                 in a closed school building is associated with a 55 percent increase in nonviolent
+                                 crime. In comparison, the increase associated with a merger in a welcoming school’s
+                                 building is less than half (20 percent). Nevertheless, these results show that school
+                                 closures have much broader implications for the city than what has been previously
+                                 suggested by prior closure discussions, which have largely focused on closed school
+                                 neighborhoods.
+
+
+                                  Conclusion
+                                 This article examines the consequences of public elementary school closures on
+                                 neighborhood crime. Exploiting the methodological features of the 2013 Chicago
+                                 mass closure, I compared crime rates in geographically small and homogenous areas
+                                 at different spatial and temporal stages, also accounting for the potential differential
+                                 associations based on school vacancy, repurposing, and merger. Several key findings
+                                 emerged. First, contrary to claims made by opponents of school closures, building
+                                 vacancy is associated with a decrease in local violent and nonviolent crime. I
+                                 also found that nonviolent crime decreases when a school building is repurposed
+                                 into a nonschool. The vacancy and repurposing effects are significant only in the
+                                 neighborhood surrounding the school. These spatially localized negative effects
+                                 corroborate Wo and Park’s (2020) study of open elementary schools in Chicago,
+                                 which found higher rates of crime only in a school’s focal block. They used routine
+                                 activity and social disorganization theories of crime to explain their results, which
+                                 can also be applied here. My results also corroborate findings from Steinberg et al’s
+                                 (2019) examination of school closures in Philadelphia, which showed a reduction in
+                                 crime in block groups containing closed high schools. My results expand on their
+                                 findings by showing that the effects also apply to primary schools, thus moving
+                                 beyond criminal opportunity theories positing students as criminal offenders.
+                                     Second, the negative effects of vacancy on both crime types are short term,
+                                 persisting for less than two years for nonviolent crime and less than a year for
+                                 violent crime. An explanation for this finding is that the decrease in crime due to
+                                 the removal of concentrated youth is temporary, and the increase in crime related to
+                                 vacancy as predicted by broken windows theory may emerge or become stronger
+                                 the longer a building remains vacant. Most school districts do not establish formal
+                                 plans for building repurposing after closure, leaving school buildings vacant for
+                                 long durations (Dowdall and Warner 2013). My results indicate that public officials
+                                 should be proactive in repurposing closed school buildings, ideally establishing a
+                                 plan well before schools officially close.
+                                     Third, I find that neighborhoods with schools that merged two or more student
+                                 communities experienced an increase in nonviolent crime. In contrast to the de-
+
+
+sociological science | www.sociologicalscience.com            146                                        April 2020 | Volume 7
+Brazil                                                                                        Public School Closures and Crime
+
+
+                                 crease in crime after vacancy, the increase related to school merger is long term and
+                                 spans larger spatial scales. This result suggests that the land use effects of school
+                                 closure are spatiotemporally localized, whereas the student merger component
+                                 has much broader community-wide consequences. Teachers and parents argue
+                                 that these community-wide effects are due to conflict stemming from students
+                                 being forced to cross gang boundaries when commuting to school. In deciding
+                                 which schools are consolidated, district officials may not be fully accounting for
+                                 these student and community safety considerations. This may be partly due to
+                                 the lack of engagement during the closure process with community members who
+                                 are aware of these factors. Furthermore, when a school is closed, districts may not
+                                 provide teachers and staff with the type of guidance and resources that are needed
+                                 to properly absorb large student populations coming from different communities.
+                                 Moreover, community members beyond those formally affiliated with the schools
+                                 also received little guidance and help in dealing with the potential community-wide
+                                 repercussions of school merger. The CPS expanded its Safe Passage Program after
+                                 the mass closure, but evidence suggests that its efficacy was limited (Curran 2019).
+                                 Overall, these findings suggest that policy makers need to think not only of the
+                                 unique needs of students attending schools that welcome students from closed
+                                 schools but also the unique needs of the communities that these students are coming
+                                 from and commuting to.
+                                     Fourth, I find that closures impact not just the neighborhoods surrounding the
+                                 schools that were officially closed but also the neighborhoods surrounding the
+                                 nonclosed schools that received displaced students. This is an important finding
+                                 considering that school closure debates often exclusively focus on the neighbor-
+                                 hoods of closed schools, ignoring the fact that a district’s closure policy indirectly
+                                 affects other neighborhoods through school relocation and student reassignment.
+                                 My findings suggest that the effects of closures are much wider than previously
+                                 conceived, and cost-benefit analyses of school closures should take these broader
+                                 factors into account.
+                                     Several limitations of this research warrant consideration. First, the results are
+                                 specific not only to Chicago but its mass school closure in 2013. The advantage
+                                 of my design is that it overcomes several of the challenges in isolating the effects
+                                 of school closures. As in any study, external validity is not guaranteed. Chicago,
+                                 however, is a major battleground in the school closure debate, and a critical mass
+                                 of school closure research focusing on Chicago already exists; thus my findings
+                                 add another layer to an important case in the larger closure policy and scholarly
+                                 discussion. However, future work should examine the impact of closures on local
+                                 crime and other neighborhood outcomes in other cities. Second, the analysis does
+                                 not examine high school closures due to the study design and does not examine
+                                 heterogeneity across school characteristics such as academic performance. Third, I
+                                 did not test the potential community-level mechanisms that may help explain my
+                                 findings. For example, my hypothesis that the merger of students coming from
+                                 communities with rival gangs explains the increase in crime after merger should be
+                                 formally tested. I also do not incorporate measures of neighborhood social capital
+                                 and collective efficacy to examine social disorganization predictions of changes in
+                                 crime levels after school vacancy.
+
+
+
+sociological science | www.sociologicalscience.com           147                                        April 2020 | Volume 7
+Brazil                                                                                               Public School Closures and Crime
+
+
+                                     These limitations notwithstanding, my findings suggest that a more complete
+                                 understanding of how closures impact neighborhoods requires a reconceptual-
+                                 ization of school closures as dichotomous events to multicategorical phenomena
+                                 whose potential effects span spatiotemporal dimensions. It is not merely whether a
+                                 school closes or not that matters but what happens to school facilities after closure,
+                                 the implications of the closure on the surrounding neighborhood, other institutions
+                                 outside of the closed school and its neighborhood that may be impacted, and how
+                                 the effects vary across duration and geographic proximity. By acknowledging these
+                                 broader effects, city and district officials can generate policies and make decisions
+                                 that not only are designed to better allocate public funding but also ensure that
+                                 existing social inequities are not exacerbated.
+
+
+                                  Notes
+                                     1 CPS voted to close 49 schools in May 2013: 47 in 2013 and 2 at a later date.
+                                     2 I coded a building as no longer vacant based on the sales date. In some cases, a building
+                                       is sold but is not occupied until a much later date. This means that my estimates may be
+                                       biased because these months are coded as not vacant when in fact they still are.
+
+
+                                  References
+                                  Ahmed-Ullah, Noreen. 2013. “Gang Expert Testifies School Closings Will Put Kids in Line
+                                    of Fire.” The Chicago Tribune, July 17. https://www.chicagotribune.com/news/ct-xpm-
+                                    2013-07-17-ct-met-cps-closings-hearings-20130717-story.html.
+
+                                  Astor, Ron Avi, Rami Benbenishty, and Heather Ann Meyer. 2004. “Monitoring and Mapping
+                                    Student Victimization in Schools.” Theory into Practice 43:39–49. https://doi.org/10.
+                                    1207/s15430421tip4301_6.
+
+                                  Black, Curtis. 2018. “Chicago School Policy Is a Driver of Neighborhood Violence,
+                                    Advocates Say.” The Chicago Reporter, January 18. https://www.chicagoreporter.
+                                    com/on- englewood- school- closing- proposals- district- still- not- listening-
+                                    to-residents/.
+
+                                  Brazil, Noli. 2016. “The Effects of Social Context on Youth Outcomes: Studying Neighbor-
+                                    hoods and Schools Simultaneously.” Teachers College Record 118:1–30.
+
+                                  Brazil, Noli. 2019. “The Effects of Public Elementary School Closures on Neighborhood
+                                    Housing Values in US Metropolitan Areas, 2000-2010.” Pp. 231–58 in Shuttered Schools: Race,
+                                    Community, and School Closures in American Cities, edited by E. Duncan-Shippy. Charlotte,
+                                    NC: Information Age Publishing.
+
+                                  Brummet, Quentin. 2014. “The Effect of School Closings on Student Achievement.” Journal of
+                                    Public Economics 119:108–24. https://doi.org/10.1016/j.jpubeco.2014.06.010.
+
+                                  Burdick-Will, Julia, Micere Keels, and Todd Schuble. 2013. “Closing and Opening Schools:
+                                    The Association between Neighborhood Characteristics and the Location of New Ed-
+                                    ucational Opportunities in a Large Urban District.” Journal of Urban Affairs 35:59–80.
+                                    https://doi.org/10.1111/juaf.12004.
+
+
+
+sociological science | www.sociologicalscience.com               148                                           April 2020 | Volume 7
+Brazil                                                                                             Public School Closures and Crime
+
+
+                                  Burdick-Will, Julia, Marc L. Stein, and Jeffrey Grigg. 2019. “Danger on the Way to School:
+                                    Exposure to Violent Crime, Public Transportation, and Absenteeism.” Sociological Science
+                                    6:118–42. https://doi.org/10.15195/v6.a5.
+
+                                  Caven, Meg. 2019. “Quantification, Inequality, and the Contestation of School Clo-
+                                    sures in Philadelphia.” Sociology of Education 92:21–40. https://doi.org/10.1177/
+                                    0038040718815167.
+
+                                  Chicago Educational Facilities Task Force. 2014. “The Report of the Illinois General Assem-
+                                    bly’s Chicago Educational Facilities Task Force 2012-2013.” Illinois General Assembly.
+                                    https://www.isbe.net/Documents/ceftf-annual-rpt12-13.pdf.
+
+                                  Cook, Philip J. 2017. “The Demand and Supply of Criminal Opportunities.” Pp. 127–53 in
+                                    Crime Opportunity Theories. Abingdon, United Kingdom: Routledge.
+
+                                  Cui, Lin, and Randall Walsh. 2015. “Foreclosure, Vacancy and Crime.” Journal of Urban
+                                    Economics 87:72–84. https://doi.org/10.1016/j.jue.2015.01.001.
+
+                                  Curran, F. Chris. 2019. “Does the Chicago Safe Passage Program Reduce Reported Crime
+                                    around Elementary Schools? Evidence from Longitudinal, Geocoded Crime Data.” Crimi-
+                                    nal Justice Policy Review 30:1385–407. https://doi.org/10.1177/0887403418812125.
+
+                                  DaViera, Andrea L., and Amanda L. Roy. 2019. “Chicago Youths’ Exposure to Community
+                                    Violence: Contextualizing Spatial Dynamics of Violence and the Relationship With Psycho-
+                                    logical Functioning.” American Journal of Community Psychology, first published December
+                                    2 as https://doi.org/10.1002/ajcp.12405.
+
+                                  De la Torre, Marisa, Molly Gordon, Paul Moore, and Jennifer Cowhy. 2015. School Closings in
+                                    Chicago. Chicago, IL: Consortium on Chicago School Research.
+
+                                  Dowdall, Emily, and Susan Warner. 2013. “Shuttered Public Schools: The Struggle to Bring
+                                    Old Buildings New Life.” Pew Charitable Trusts Philadelphia Research Initiative.
+
+                                  Engberg, John, Brian Gill, Gema Zamarro, and Ron Zimmer. 2012. “Closing Schools in a
+                                    Shrinking District: Do Student Outcomes Depend on Which Schools Are Closed?” Journal
+                                    of Urban Economics 71:189–203. https://doi.org/10.1016/j.jue.2011.10.001.
+
+                                  Ewing, Eve L. 2018. Ghosts in the Schoolyard: Racism and School Closings on Chicago’s South
+                                    Side. Chicago, IL: University of Chicago Press. https://doi.org/10.7208/chicago/
+                                    9780226526331.001.0001.
+
+                                  Felson, Marcus. 1987. “Routine Activities and Crime Prevention in the Developing Metropo-
+                                    lis.” Criminology 25:911–32.
+
+                                  Good, Ryan M. 2019. “Neighborhood Schools and Community Development: Reveal-
+                                    ing the Intersections through the Philadelphia School Closure Debate.” Journal of Plan-
+                                    ning Education and Research, first published April 2 as https://doi.org/10.1177/
+                                    0739456X19839769.
+
+                                  Gordon, Molly, Marisa de la Torre, Jennifer Cowhy, Paul Moore, Lauren Sartain, and David
+                                    Knight. 2018. “School Closings in Chicago: Staff and Student Experiences and Aca-
+                                    demic Outcomes.” University of Chicago Consortium. https://consortium.uchicago.
+                                    edu/sites/default/files/2018-10/School%20Closings%20in%20Chicago-May2018-
+                                    Consortium.pdf.
+
+
+
+
+sociological science | www.sociologicalscience.com              149                                          April 2020 | Volume 7
+Brazil                                                                                               Public School Closures and Crime
+
+
+                                  Hagedorn, John M. 2017. “Gangs, Schools, and Social Change: An Institutional Analysis.”
+                                   The Annals of the American Academy of Political and Social Science 673:190–208. https:
+                                   //doi.org/10.1177/0002716217726965.
+
+                                  Han, Hye-Sung. 2014. “The Impact of Abandoned Properties on Nearby Property Values.”
+                                   Housing Policy Debate 24:311–34. https://doi.org/10.1080/10511482.2013.832350.
+
+                                  Kautt, Paula M., and Dennis W. Roncek. 2007. “Schools as Criminal ‘Hot Spots’ Primary,
+                                    Secondary, and Beyond.” Criminal Justice Review 32:339–57. https://doi.org/10.1177/
+                                    0734016807311559.
+
+                                  Konkol, Mark. 2013. “Gang Curse a Reality for CPS Kids as Schools Close.” DNA Info, March
+                                    22. https://www.dnainfo.com/chicago/20130322/old-town/cps-school-closings-
+                                    put-focus-on-gang-territories-neighborhoods/.
+
+                                  Lee, Jin, and Christopher Lubienski. 2017. “The Impact of School Closures on Equity of
+                                    Access in Chicago.” Education and Urban Society 49:53–80. https://doi.org/10.1177/
+                                    0013124516630601.
+
+                                  McFarland, Joel, Bill Hussar, Cristobal De Brey, Tom Snyder, Xiaolei Wang, Sidney Wilkinson-
+                                   Flicker, Semhar Gebrekristos, Jijun Zhang, Amy Rathbun, Amy Barmer, Farrah Bul-
+                                   lock Mann, Serena Hinz, Thomas Nachazel, Wyatt Smith, and Mark Ossolinski. 2017.
+                                   “The Condition of Education 2017. NCES 2017-144.” National Center for Education Statis-
+                                   tics. https://nces.ed.gov/pubsearch/pubsinfo.asp?pubid=2017144.
+
+                                  Papachristos, Andrew V., Noli Brazil, and Tony Cheng. 2018. “Understanding the Crime
+                                    Gap: Violence and Inequality in an American City.” City & Community 17:1051–74. https:
+                                    //doi.org/10.1111/cico.12348.
+
+                                  Papachristos, Andrew V., David M. Hureau, and Anthony A. Braga. 2013. “The Corner and
+                                    the Crew: The Influence of Geography and Social Networks on Gang Violence.” American
+                                    Sociological Review 78:417–47. https://doi.org/10.1177/0003122413486800.
+
+                                  Raleigh, Erica, and George Galster. 2015. “Neighborhood Disinvestment, Abandonment, and
+                                    Crime Dynamics.” Journal of Urban Affairs 37:367–96. https://doi.org/10.1111/juaf.
+                                    12102.
+
+                                  Roncek, Dennis W. 2000. “Schools and Crime.” Pp. 153–65 in Analyzing Crime Patterns:
+                                    Frontiers of Practice, edited by V. Goldsmith, P. G. McGuire, J.H. Mollenkopf, and T.A. Ross.
+                                    Thousand Oaks, CA: Sage Publications.
+
+                                  Sampson, Robert J., and W. Byron Groves. 1989. “Community Structure and Crime: Testing
+                                    Social-Disorganization Theory.” American Journal of Sociology 94:774–802. https://doi.
+                                    org/10.1086/229068.
+
+                                  Sarrio, Jaime. 2012. “Parents Fear Impact of Empty Atlanta School Buildings.” The Atlanta
+                                    Journal-Constitution, April 5. https://www.ajc.com/news/local/parents-fear-impact-
+                                    empty-atlanta-school-buildings/mOMJRerM9mYqzXuiF6heVL/.
+
+                                  Sharkey, Patrick, Amy Ellen Schwartz, Ingrid Gould Ellen, and Johanna Lacoe. 2014. “High
+                                    Stakes in the Classroom, High Stakes on the Street: The Effects of Community Violence on
+                                    Student’s Standardized Test Performance.” Sociological Science 1:199. https://doi.org/
+                                    10.15195/v1.a14.
+
+                                  Spelman, William. 1993. “Abandoned Buildings: Magnets for Crime?” Journal of Criminal
+                                    Justice 21:481–95. https://doi.org/10.1016/0047-2352(93)90033-j.
+
+
+sociological science | www.sociologicalscience.com               150                                           April 2020 | Volume 7
+Brazil                                                                                              Public School Closures and Crime
+
+
+                                  Steinberg, Matthew P., Benjamin Ukert, and John M. MacDonald. 2019. “Schools as Places of
+                                     Crime? Evidence from Closing Chronically Underperforming Schools.” Regional Science
+                                     and Urban Economics 77:125–40. https://doi.org/10.1016/j.regsciurbeco.2019.04.
+                                     001.
+
+                                  Tieken, Mara Casey, and Trevor Ray Auldridge-Reveles. 2019. “Rethinking the School
+                                    Closure Research: School Closure as Spatial Injustice.” Review of Educational Research
+                                    89:917–53. https://doi.org/10.3102/0034654319877151.
+
+                                  Weber, Rachel, Stephanie Farmer, and Mary Donoghue. 2020. “Predicting School Closures
+                                   in an Era of Austerity: The Case of Chicago.” Urban Affairs Review 56:415–50. https:
+                                   //doi.org/10.1177/1078087418802359.
+
+                                  Willits, Dale, Lisa Broidy, and Kristine Denman. 2013. “Schools, Neighborhood Risk
+                                   Factors, and Crime.” Crime & Delinquency 59:292–315. https://doi.org/10.1177/
+                                   0011128712470991.
+
+                                  Wilson, James Q., and George L. Kelling. 1982. “Broken Windows.” Atlantic Monthly 249:29–
+                                    38.
+
+                                  Wo, James C., and Jihye Park. 2020. “An Examination of Schools, Social Ecological Factors,
+                                   and Neighbourhood Crime.” The British Journal of Criminology, first published February 3
+                                   as https://doi.org/10.1093/bjc/azaa002.
+
+
+                                     Acknowledgments: I thank Luis Guarnizo, Andrew Papachristos, and Jenna Stearns for
+                                     generously reading previous versions and providing invaluable feedback. I also thank
+                                     Enrica Jiang for data collection and research assistance. Any remaining errors are mine
+                                     alone.
+                                     Noli Brazil: Department of Human Ecology, University of California, Davis.
+                                     E-mail: nbrazil@ucdavis.edu.
+
+
+
+
+sociological science | www.sociologicalscience.com              151                                           April 2020 | Volume 7
+
