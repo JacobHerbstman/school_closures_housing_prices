@@ -121,7 +121,6 @@ school_1213_clean <- school_1213 |>
     y_coordinate_sy1213,
     latitude_sy1213,
     longitude_sy1213,
-    school_name_sy1213,
     attendance_boundary_match_sy1213,
     n_boundary_records_sy1213,
     boundarygr_sy1213,
@@ -177,8 +176,10 @@ stopifnot(nrow(school_info_garfield) == 1L)
 school_1213_clean <- school_1213_clean |>
   rows_update(school_info_garfield, by = "school_id")
 
-school_info_1314 <- report_1314 |>
-  distinct(school_id, .keep_all = TRUE) |>
+report_1314_school <- report_1314 |>
+  distinct(school_id, .keep_all = TRUE)
+
+school_info_1314 <- report_1314_school |>
   transmute(
     school_id,
     school_name_sy1314 = name_of_school,
@@ -194,8 +195,7 @@ school_1213_clean <- school_1213_clean |>
   mutate(report_card_match_sy1314 = school_id %in% school_info_1314$school_id) |>
   left_join(school_info_1314, by = "school_id")
 
-welcoming_info_1314 <- report_1314 |>
-  distinct(school_id, .keep_all = TRUE) |>
+welcoming_info_1314 <- report_1314_school |>
   select(
     school_id,
     name_of_school,
@@ -211,8 +211,6 @@ for (i in 1:3) {
   old_vars <- c(
     paste0("welcoming_school_nm", i),
     paste0("welcoming_school_add", i, "_sy1314"),
-    paste0("welcoming_school_name", i, "_sy1314"),
-    paste0("welcoming_school_street_address", i, "_sy1314"),
     paste0("welcoming_school_x_coordinate", i, "_sy1314"),
     paste0("welcoming_school_y_coordinate", i, "_sy1314"),
     paste0("welcoming_school_latitude", i, "_sy1314"),
@@ -270,9 +268,7 @@ school_closure_clean <- school_1213_clean |>
     welcoming_school_latitude3_sy1314,
     welcoming_school_longitude3_sy1314,
     .after = shape_area_sy1213
-  )
-
-school_closure_clean <- school_closure_clean |>
+  ) |>
   group_by(x_coordinate_sy1213, y_coordinate_sy1213) |>
   mutate(
     school_site_id = min(school_id),
@@ -281,19 +277,18 @@ school_closure_clean <- school_closure_clean |>
   ungroup() |>
   relocate(school_site_id, n_candidate_schools_at_site, .after = school_id)
 
+school_sites <- school_closure_clean |>
+  distinct(school_site_id, housing_treat_30, housing_control_49)
+
 stopifnot(
   nrow(school_closure_clean) == 129L,
   !anyDuplicated(school_closure_clean$school_id),
   n_distinct(school_closure_clean$school_site_id) == 127L,
-  nrow(
-    distinct(
-      school_closure_clean,
-      school_site_id,
-      housing_treat_30,
-      housing_control_49
-    )
-  ) == 127L,
-  n_distinct(school_closure_clean$school_site_id[school_closure_clean$housing_treat_30 == 1L]) == 29L
+  nrow(school_sites) == 127L,
+  sum(school_sites$housing_treat_30 == 1L) == 29L,
+  sum(school_sites$housing_control_49 == 1L) == 49L,
+  !any(school_sites$housing_treat_30 == 1L &
+         school_sites$housing_control_49 == 1L)
 )
 
 write_csv(

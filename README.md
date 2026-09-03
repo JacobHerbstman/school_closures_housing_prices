@@ -2,7 +2,12 @@
 
 This project studies how the 2013 Chicago public-school closures affected nearby home prices, housing-market activity, and neighborhood change.
 
-The starting identification strategy compares schools that appeared on CPS's February 2013 closure list and ultimately closed with schools on the same list that remained open. That comparison keeps the treated and primary comparison schools inside a common administrative selection screen. The first empirical design should distinguish the candidate-list announcement, the final closure decision, the end-of-year closure, and later site reuse or vacancy.
+The starting identification strategy compares schools that appeared on CPS's
+February 2013 closure list and ultimately closed with schools on the same list
+that remained open. That comparison keeps the treated and primary comparison
+schools inside a common administrative selection screen. The current first
+pass uses school-year closure status; exact board-vote and building-closure
+dates are outside the present data pipeline.
 
 ## Repository structure
 
@@ -68,10 +73,12 @@ trends, and coordinates. The final geocoding task also produces a broad
 of the selected price sample.
 
 The committed inputs in [raw school data](tasks/raw_school_data/) and the
-[school cleaner](tasks/clean_school_data/) exactly reproduce the coauthor's
-129-school, 122-variable file. This is intentionally a replication benchmark;
-known issues have not yet been corrected, and school-to-sale distances have not
-yet been constructed.
+[school cleaner](tasks/clean_school_data/) reproduce the coauthor's substantive
+transformations for 129 candidate schools. The cleaner corrects the Garfield
+Park coordinate orientation and identifies 127 physical candidate sites while
+retaining school-level records. Collapsed attendance-boundary strings are kept
+only as reference fields; school-to-sale distances have not yet been
+constructed.
 
 Condominium recovery, condo characteristics, and the earlier all-home sample
 are preserved under `tasks/audits/`; they are not dependencies of the main
