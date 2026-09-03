@@ -7,5 +7,7 @@ the Garfield Park/Faraday location substitution, and the use of SY2013–14
 records for focal and welcoming schools.
 
 The output has one row per school on the February 2013 closure-consideration
-list, keyed by `school_id`. This first version is a replication benchmark;
-known issues should be corrected in a subsequent, separately reviewable pass.
+list, keyed by `school_id`. Schools with identical pre-closure coordinates
+share `school_site_id`; `n_candidate_schools_at_site` records how many schools
+from the candidate list occupied that site. School performance remains at the
+school level rather than being averaged across co-located schools.

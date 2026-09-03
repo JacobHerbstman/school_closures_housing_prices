@@ -272,7 +272,29 @@ school_closure_clean <- school_1213_clean |>
     .after = shape_area_sy1213
   )
 
-stopifnot(nrow(school_closure_clean) == 129L, !anyDuplicated(school_closure_clean$school_id))
+school_closure_clean <- school_closure_clean |>
+  group_by(x_coordinate_sy1213, y_coordinate_sy1213) |>
+  mutate(
+    school_site_id = min(school_id),
+    n_candidate_schools_at_site = n()
+  ) |>
+  ungroup() |>
+  relocate(school_site_id, n_candidate_schools_at_site, .after = school_id)
+
+stopifnot(
+  nrow(school_closure_clean) == 129L,
+  !anyDuplicated(school_closure_clean$school_id),
+  n_distinct(school_closure_clean$school_site_id) == 127L,
+  nrow(
+    distinct(
+      school_closure_clean,
+      school_site_id,
+      housing_treat_30,
+      housing_control_49
+    )
+  ) == 127L,
+  n_distinct(school_closure_clean$school_site_id[school_closure_clean$housing_treat_30 == 1L]) == 29L
+)
 
 write_csv(
   school_closure_clean,
