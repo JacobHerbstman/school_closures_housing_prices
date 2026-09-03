@@ -77,10 +77,11 @@ The committed inputs in [raw school data](tasks/raw_school_data/) and the
 transformations for 129 candidate schools. The cleaner corrects the Garfield
 Park coordinate orientation and identifies 127 physical candidate sites while
 retaining school-level records. Collapsed attendance-boundary strings are kept
-only as reference fields; school-to-sale distances have not yet been
-constructed.
+only as reference fields. The [home-school distance task](tasks/calculate_home_school_distances/)
+calculates distances from the broad transaction master to all candidate sites
+and welcoming schools without imposing analytical distance bands.
 
 Condominium recovery, condo characteristics, and the earlier all-home sample
 are preserved under `tasks/audits/`; they are not dependencies of the main
-cleaning graph. School exposure and boundary construction remain outside the
-current production graph.
+cleaning graph. Distance-ring definitions, overlapping-exposure rules, and the
+analysis sample remain outside the current production graph.
