@@ -90,11 +90,7 @@ setcolorder(
   )
 )
 
-temporary_output <- paste0(output_file, ".tmp")
-fwrite(geocoded_sales, temporary_output, na = "NA")
-if (!file.rename(temporary_output, output_file)) {
-  stop("Could not move the completed geocoded sales file into place.", call. = FALSE)
-}
+fwrite(geocoded_sales, output_file, na = "NA")
 cat(sprintf(
   "Retained %s home sales with exact historical PIN-year coordinates.\n",
   format(nrow(geocoded_sales), big.mark = ",")

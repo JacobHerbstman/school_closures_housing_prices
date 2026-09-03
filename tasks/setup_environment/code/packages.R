@@ -1,4 +1,14 @@
-required_packages <- c("data.table", "curl", "jsonlite", "arrow", "digest")
+required_packages <- c(
+  "data.table",
+  "curl",
+  "jsonlite",
+  "arrow",
+  "digest",
+  "dplyr",
+  "janitor",
+  "readr",
+  "tidyr"
+)
 missing_packages <- required_packages[
   !vapply(required_packages, requireNamespace, logical(1), quietly = TRUE)
 ]
@@ -24,9 +34,5 @@ package_versions <- data.frame(
 )
 
 output_file <- "../output/R_packages.txt"
-temporary_output <- paste0(output_file, ".tmp")
-write.table(package_versions, temporary_output, sep = "\t", row.names = FALSE, quote = FALSE)
-if (!file.rename(temporary_output, output_file)) {
-  stop("Could not move the R package record into place.", call. = FALSE)
-}
+write.table(package_versions, output_file, sep = "\t", row.names = FALSE, quote = FALSE)
 cat(sprintf("Wrote R package versions to %s.\n", output_file))

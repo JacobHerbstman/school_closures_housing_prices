@@ -2,11 +2,11 @@
 set -euo pipefail
 
 output="../output/system_requirements.txt"
-temporary_output="${output}.tmp"
 
 required_commands=(
   git
   make
+  curl
   Rscript
   python3
   pdflatex
@@ -26,9 +26,7 @@ missing_commands=()
       missing_commands+=("${command_name}")
     fi
   done
-} > "${temporary_output}"
-
-mv "${temporary_output}" "${output}"
+} > "${output}"
 
 if ((${#missing_commands[@]} > 0)); then
   printf "Missing required command-line tools: %s\n" "${missing_commands[*]}" >&2

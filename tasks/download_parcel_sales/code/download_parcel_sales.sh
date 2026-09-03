@@ -74,7 +74,6 @@ if ! [[ "$expected_records" =~ ^[0-9]+$ ]] || ((expected_records == 0)); then
   exit 1
 fi
 
-temporary_output="$temporary_directory/parcel_sales.csv"
 offset=0
 batch_index=0
 expected_header=""
@@ -96,13 +95,13 @@ while ((offset < expected_records)); do
 
   if ((batch_index == 0)); then
     expected_header="$batch_header"
-    cp "$batch_file" "$temporary_output"
+    cp "$batch_file" "$output_file"
   else
     if [[ "$batch_header" != "$expected_header" ]]; then
       printf "CSV header changed at offset %s.\n" "$offset" >&2
       exit 1
     fi
-    tail -n +2 "$batch_file" >> "$temporary_output"
+    tail -n +2 "$batch_file" >> "$output_file"
   fi
 
   offset=$((offset + records_in_batch))
@@ -110,7 +109,7 @@ while ((offset < expected_records)); do
   printf "  %s of %s records downloaded.\n" "$offset" "$expected_records"
 done
 
-final_inspection=$(inspect_csv "$temporary_output")
+final_inspection=$(inspect_csv "$output_file")
 actual_records=$(printf "%s\n" "$final_inspection" | sed -n '1p')
 ending_records=$(read_source_count)
 
@@ -124,5 +123,4 @@ if ((ending_records != expected_records)); then
   exit 1
 fi
 
-mv "$temporary_output" "$output_file"
 printf "Wrote %s source records to %s.\n" "$actual_records" "$output_file"

@@ -22,13 +22,21 @@ make setup
 make
 ```
 
-`make setup` checks the command-line tools and R packages required by the current repository. `make` builds `paper/paper.pdf`.
+`make setup` checks required command-line tools, installs missing R packages,
+and records package versions. `make` builds `paper/paper.pdf`.
 
 Run a task from its `code/` directory. Building the final sales task also builds
 its upstream inputs:
 
 ```sh
 cd tasks/build_geocoded_home_sales/code
+make
+```
+
+The coauthor's school-data cleaner is reproduced separately:
+
+```sh
+cd tasks/clean_school_data/code
 make
 ```
 
@@ -57,10 +65,15 @@ The [housing-side finalization audit](tasks/audits/home_sales_finalization/)
 checks correction parity, class changes, sample attrition, price/composition
 trends, and coordinates. The final geocoding task also produces a broad
 2006--2025 geocoded master for future distances to every school, independent
-of the selected price sample. A school-linked analysis sample is still pending
-the coauthor's school data.
+of the selected price sample.
+
+The committed inputs in [raw school data](tasks/raw_school_data/) and the
+[school cleaner](tasks/clean_school_data/) exactly reproduce the coauthor's
+129-school, 122-variable file. This is intentionally a replication benchmark;
+known issues have not yet been corrected, and school-to-sale distances have not
+yet been constructed.
 
 Condominium recovery, condo characteristics, and the earlier all-home sample
 are preserved under `tasks/audits/`; they are not dependencies of the main
-cleaning graph. School exposure and boundary construction remain outside this
-initial graph.
+cleaning graph. School exposure and boundary construction remain outside the
+current production graph.

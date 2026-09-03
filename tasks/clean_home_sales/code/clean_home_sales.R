@@ -125,8 +125,5 @@ if (anyDuplicated(documented_sales[, .(sale_year, sale_document_num)]) > 0L) {
 
 setorder(home_sales, sale_date, row_id)
 output_file <- sprintf("../output/home_sales_%d_%d.csv", start_year, end_year)
-fwrite(home_sales, paste0(output_file, ".tmp"), na = "NA")
-if (!file.rename(paste0(output_file, ".tmp"), output_file)) {
-  stop("Could not move the completed home-sales file into place.", call. = FALSE)
-}
+fwrite(home_sales, output_file, na = "NA")
 cat(sprintf("Wrote %s clean home sales to %s.\n", format(nrow(home_sales), big.mark = ","), output_file))

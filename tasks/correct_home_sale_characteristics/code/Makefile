@@ -1,6 +1,6 @@
 all: ../output/corrected_home_sale_characteristics_2006_2025.csv
 
-../output/corrected_home_sale_characteristics_2006_2025.csv: correct_home_sale_characteristics.R ../input/home_sales_with_characteristics_2006_2025.csv ../input/hie_data.parquet ../input/ccao.zip ../input/legacy_improvement_metadata.json ../../setup_environment/output/R_packages.txt Makefile | ../output
+../output/corrected_home_sale_characteristics_2006_2025.csv: correct_home_sale_characteristics.R ../input/home_sales_with_characteristics_2006_2025.csv ../input/hie_data.parquet ../input/ccao.zip ../input/legacy_improvement_metadata.json Makefile | ../output
 	Rscript $<
 
 ../input/home_sales_with_characteristics_2006_2025.csv: ../../build_home_sale_characteristics/output/home_sales_with_characteristics_2006_2025.csv | ../input

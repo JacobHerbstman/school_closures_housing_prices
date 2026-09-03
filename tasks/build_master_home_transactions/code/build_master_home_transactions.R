@@ -137,8 +137,5 @@ output_file <- sprintf(
   start_year,
   end_year
 )
-fwrite(sales[, ..output_columns], paste0(output_file, ".tmp"))
-if (!file.rename(paste0(output_file, ".tmp"), output_file)) {
-  stop("Could not move the completed master transaction file into place.", call. = FALSE)
-}
+fwrite(sales[, ..output_columns], output_file)
 cat(sprintf("Wrote %s master transactions to %s.\n", nrow(sales), output_file))

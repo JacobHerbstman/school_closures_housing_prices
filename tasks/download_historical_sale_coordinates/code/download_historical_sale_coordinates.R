@@ -183,11 +183,7 @@ if (any(!coordinates[has_historical_coordinates == TRUE, longitude] %between% c(
 }
 
 setorder(coordinates, sale_year, pin)
-temporary_output <- paste0(output_file, ".tmp")
-fwrite(coordinates, temporary_output)
-if (!file.rename(temporary_output, output_file)) {
-  stop("Could not move the completed coordinate file into place.", call. = FALSE)
-}
+fwrite(coordinates, output_file)
 cat(sprintf(
   "Historical coordinates are complete for %s of %s PIN-years.\n",
   format(sum(coordinates$has_historical_coordinates), big.mark = ","),

@@ -95,8 +95,5 @@ output_file <- sprintf(
   start_year,
   end_year
 )
-fwrite(characterized_sales, paste0(output_file, ".tmp"))
-if (!file.rename(paste0(output_file, ".tmp"), output_file)) {
-  stop("Could not move the characterized transaction file into place.", call. = FALSE)
-}
+fwrite(characterized_sales, output_file)
 cat(sprintf("Wrote %s characterized transactions to %s.\n", nrow(characterized_sales), output_file))

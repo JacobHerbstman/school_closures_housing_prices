@@ -18,8 +18,8 @@ if (!requireNamespace("curl", quietly = TRUE) ||
   stop("The curl and jsonlite R packages are required.", call. = FALSE)
 }
 
-temporary_output <- sprintf(
-  "../output/residential_improvements_%d_%d.csv.tmp",
+output_file <- sprintf(
+  "../output/residential_improvements_%d_%d.csv",
   start_year,
   end_year
 )
@@ -28,7 +28,7 @@ stale_downloads <- list.files(
   pattern = "^improvements_.*\\.json$",
   full.names = TRUE
 )
-unlink(c(temporary_output, stale_downloads))
+unlink(stale_downloads)
 
 master_transactions <- fread(
   sprintf(
@@ -218,17 +218,7 @@ cat(sprintf(
 setorder(improvements, year, pin, card)
 setcolorder(improvements, source_columns)
 
-fwrite(improvements, temporary_output)
-if (!file.rename(
-  temporary_output,
-  sprintf(
-    "../output/residential_improvements_%d_%d.csv",
-    start_year,
-    end_year
-  )
-)) {
-  stop("Could not move the completed residential-improvement file into place.", call. = FALSE)
-}
+fwrite(improvements, output_file)
 cat(sprintf(
   "Wrote %s PIN-year-card records.\n",
   format(nrow(improvements), big.mark = ",")

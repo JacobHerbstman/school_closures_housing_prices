@@ -19,6 +19,12 @@ data_raw/*
 tasks/*/input/
 tasks/*/output/
 tasks/*/temp/
+!tasks/raw_school_data/output/
+!tasks/raw_school_data/output/All_Schools_Report_Card_SY1112_Chicago.csv
+!tasks/raw_school_data/output/Elementary_Attendance_SY1213_Chicago.csv
+!tasks/raw_school_data/output/Elementary_Closure_SY1213_Chicago.csv
+!tasks/raw_school_data/output/Elementary_Report_Card_SY1213_Chicago.csv
+!tasks/raw_school_data/output/Elementary_Report_Card_SY1314_Chicago.csv
 tasks/audits/*/input/
 tasks/audits/*/output/
 tasks/audits/*/temp/
