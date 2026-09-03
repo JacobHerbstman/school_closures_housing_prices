@@ -22,12 +22,13 @@ make setup
 make
 ```
 
-`make setup` checks the command-line tools required by the current repository. `make` runs that check and builds `paper/paper.pdf`.
+`make setup` checks the command-line tools and R packages required by the current repository. `make` builds `paper/paper.pdf`.
 
-Run an individual task from its `code/` directory. For example:
+Run a task from its `code/` directory. Building the final sales task also builds
+its upstream inputs:
 
 ```sh
-cd tasks/setup_environment/code
+cd tasks/build_geocoded_home_sales/code
 make
 ```
 
@@ -35,4 +36,31 @@ Makefiles are the dependency graph. Inputs passed between tasks should be relati
 
 ## Current status
 
-The literature base and a compileable paper entry point are in place. No analysis tasks have been invented before the source data are chosen. The first production task should be added when the raw Chicago school-list and closure records are obtained, followed by the housing-transactions source actually selected for the study.
+The literature base and a compileable paper entry point are in place. The first
+production graph builds a master 2006--2025 Chicago non-condominium transaction
+universe, attaches Assessor improvement characteristics, corrects historical
+home-improvement exemptions, and resolves property type before constructing
+the clean 2008--2018 housing-price sample. Exact historical parcel coordinates
+are acquired for the broad master independently of analytical selection.
+
+The primary sample contains market sales of single-card houses, townhouses, and
+class-211 two-to-six-unit apartment buildings. It excludes class 212 mixed-use,
+requires complete core hedonics and an observed apartment count for class 211,
+and does not impose percentile trimming or winsorization. Uncertain correction
+fields and contradictory property types remain missing in the broad master;
+only the required complete fields determine price-sample eligibility. The
+existing numerical integrity exclusions remain fewer rooms than bedrooms and
+recorded prices above $5,000 per building square foot. Low-price crash-era sales
+remain. Original characteristics and source classes are preserved.
+
+The [housing-side finalization audit](tasks/audits/home_sales_finalization/)
+checks correction parity, class changes, sample attrition, price/composition
+trends, and coordinates. The final geocoding task also produces a broad
+2006--2025 geocoded master for future distances to every school, independent
+of the selected price sample. A school-linked analysis sample is still pending
+the coauthor's school data.
+
+Condominium recovery, condo characteristics, and the earlier all-home sample
+are preserved under `tasks/audits/`; they are not dependencies of the main
+cleaning graph. School exposure and boundary construction remain outside this
+initial graph.
