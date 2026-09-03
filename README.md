@@ -64,7 +64,10 @@ fields and contradictory property types remain missing in the broad master;
 only the required complete fields determine price-sample eligibility. The
 existing numerical integrity exclusions remain fewer rooms than bedrooms and
 recorded prices above $5,000 per building square foot. Low-price crash-era sales
-remain. Original characteristics and source classes are preserved.
+remain. Original characteristics and source classes are preserved. Nominal
+prices are retained, and the final clean sample also reports sale price and
+price per building square foot in average 2022 dollars using monthly Chicago
+CPI-U.
 
 The [housing-side finalization audit](tasks/audits/home_sales_finalization/)
 checks correction parity, class changes, sample attrition, price/composition

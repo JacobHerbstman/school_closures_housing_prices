@@ -22,7 +22,8 @@ if (nrow(transactions) == 0L || anyDuplicated(transactions$row_id) > 0L) {
 }
 
 required_columns <- c(
-  "sale_year", "sale_price_nominal", "sale_type", "analysis_class", "property_type_conflict",
+  "sale_year", "sale_month", "sale_price_nominal", "sale_type",
+  "analysis_class", "property_type_conflict",
   "sale_filter_same_sale_within_365", "sale_filter_less_than_10k",
   "sale_filter_deed_type", "single_improvement_card", "res_char_yrblt",
   "res_char_bldg_sf", "res_char_land_sf", "res_char_beds",
@@ -121,6 +122,46 @@ if (any(!is.finite(home_sales$price_per_building_sqft)) ||
 documented_sales <- home_sales[nzchar(trimws(sale_document_num))]
 if (anyDuplicated(documented_sales[, .(sale_year, sale_document_num)]) > 0L) {
   stop("Clean home sales contain a duplicated document-year transaction.", call. = FALSE)
+}
+
+cpi <- fread("../input/chicago_cpi_all_items.csv")
+if (!all(c("observation_date", "chicago_cpi_all_items") %in% names(cpi))) {
+  stop("Chicago CPI input is missing required columns.", call. = FALSE)
+}
+cpi[, `:=`(
+  sale_year = as.integer(substr(observation_date, 1L, 4L)),
+  sale_month = as.integer(substr(observation_date, 6L, 7L))
+)]
+base_cpi_values <- cpi[sale_year == 2022L, chicago_cpi_all_items]
+base_cpi <- mean(base_cpi_values)
+cpi <- cpi[
+  sale_year %between% c(start_year, end_year),
+  .(sale_year, sale_month, chicago_cpi_all_items)
+]
+
+if (nrow(cpi) != 12L * (end_year - start_year + 1L) ||
+    anyDuplicated(cpi[, .(sale_year, sale_month)]) > 0L ||
+    any(!is.finite(cpi$chicago_cpi_all_items)) ||
+    length(base_cpi_values) != 12L ||
+    !is.finite(base_cpi) || base_cpi <= 0) {
+  stop("Chicago CPI does not cover the requested sample and base year.", call. = FALSE)
+}
+
+home_sales[cpi, on = .(sale_year, sale_month), `:=`(
+  sale_price_cpi_chicago_all_items = i.chicago_cpi_all_items,
+  sale_price_deflator_to_2022 = base_cpi / i.chicago_cpi_all_items
+)]
+home_sales[, `:=`(
+  sale_price_real_2022 = sale_price_nominal * sale_price_deflator_to_2022,
+  price_per_building_sqft_real_2022 =
+    sale_price_nominal * sale_price_deflator_to_2022 / res_char_bldg_sf
+)]
+
+if (any(!is.finite(home_sales$sale_price_real_2022)) ||
+    any(home_sales$sale_price_real_2022 <= 0) ||
+    any(!is.finite(home_sales$price_per_building_sqft_real_2022)) ||
+    any(home_sales$price_per_building_sqft_real_2022 <= 0)) {
+  stop("Clean home sales contain an invalid real price.", call. = FALSE)
 }
 
 setorder(home_sales, sale_date, row_id)

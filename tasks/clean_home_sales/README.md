@@ -21,7 +21,13 @@ winsorized or percentile-trimmed. Alongside required-field and property-type
 consistency checks, the existing numerical integrity exclusions remain fewer
 total rooms than bedrooms and recorded prices above $5,000 per building square
 foot. Low-price crash-era transactions remain. The output is
-not deflated, geocoded, or assigned to a school.
+not geocoded or assigned to a school.
+
+At the end of sample construction, nominal sale price is deflated with the
+monthly Chicago-Naperville-Elgin CPI-U all-items index. The output retains
+`sale_price_nominal` and adds the CPI, the deflator to average 2022 dollars,
+`sale_price_real_2022`, and `price_per_building_sqft_real_2022`. No CPI values
+are interpolated.
 
 Run `make` from `code/`. Before/after membership, counts, and price trends are
 documented in `tasks/audits/home_sales_finalization/`.
