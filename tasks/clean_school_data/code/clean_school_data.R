@@ -168,8 +168,8 @@ school_info_garfield <- report_1213 |>
     zip_sy1213 = zip,
     x_coordinate_sy1213 = x_coordinate,
     y_coordinate_sy1213 = y_coordinate,
-    latitude_sy1213 = latitude,
-    longitude_sy1213 = longitude
+    latitude_sy1213 = longitude,
+    longitude_sy1213 = latitude
   )
 
 stopifnot(nrow(school_info_garfield) == 1L)
