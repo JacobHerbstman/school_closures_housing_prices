@@ -1,5 +1,7 @@
 required_packages <- c(
+  "DBI",
   "data.table",
+  "duckdb",
   "curl",
   "jsonlite",
   "arrow",

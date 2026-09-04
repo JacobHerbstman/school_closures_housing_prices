@@ -82,7 +82,9 @@ Park coordinate orientation and identifies 127 physical candidate sites while
 retaining school-level records. Collapsed attendance-boundary strings are kept
 only as reference fields. The [home-school distance task](tasks/calculate_home_school_distances/)
 calculates distances from the broad transaction master to all candidate sites
-and welcoming schools without imposing analytical distance bands.
+and welcoming schools. The [home-school exposure task](tasks/build_home_school_exposure/)
+reduces those distances to one row per sale, retaining nearest locations and
+counts inside the initial quarter-mile ring.
 
 Condominium recovery, condo characteristics, and the earlier all-home sample
 are preserved under `tasks/audits/`; they are not dependencies of the main
