@@ -1,0 +1,62 @@
+SHA-256: 2c8f1786a00741cc86335bd341100a3b041e2efb99b9afa6bc67e667a1981a00
+
+Dataset: site_omission_models
+Rows: 624  Columns: 9
+Key: model, omitted_site_id
+Duplicate or missing keys: 0
+model | character | nonmissing: 624 | distinct nonmissing: 8
+[1] "did_dollars"           "did_hedonic_dollars"   "did_hedonic_log"
+[4] "did_log"               "event_dollars"         "event_hedonic_dollars"
+omitted_site_id | integer | nonmissing: 624 | distinct nonmissing: 78
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0  610012  610118  602287  610225  610521
+omitted_school | character | nonmissing: 624 | distinct nonmissing: 78
+[1] "Adam Clayton Powell Paideia Community Academy ES"
+[2] "Alexander Graham Elementary School"
+[3] "Alexander von Humboldt Elementary School / Ana Roque de Duprey Elementary School"
+[4] "Alfred David Kohn Elementary School"
+[5] "Amos Alonzo Stagg Elementary School"
+[6] "Anna R. Langford Community Academy"
+omitted_treated | integer | nonmissing: 616 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+ 0.0000  0.0000  0.0000  0.3766  1.0000  1.0000       8
+removed_sales | integer | nonmissing: 624 | distinct nonmissing: 67
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0      80     139     140     185     400
+observations | integer | nonmissing: 624 | distinct nonmissing: 137
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   9548    9786   10216   10283   10781   10921
+treated_sites | integer | nonmissing: 624 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  28.00   28.00   29.00   28.63   29.00   29.00
+control_sites | integer | nonmissing: 624 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  47.00   47.00   47.00   47.38   48.00   48.00
+pretrend_p | numeric | nonmissing: 312 | distinct nonmissing: 312
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+0.01391 0.09333 0.24051 0.30189 0.40881 0.83073     312
+First six records:
+         model omitted_site_id                            omitted_school
+        <char>           <int>                                    <char>
+1: did_dollars               0                               Full sample
+2: did_dollars          609797           Jacob Beidler Elementary School
+3: did_dollars          609809 Lorenz Brentano Math & Science Academy ES
+4: did_dollars          609812         William H Brown Elementary School
+5: did_dollars          609819            Edmond Burke Elementary School
+6: did_dollars          609848          Ira F Aldridge Elementary School
+   omitted_treated removed_sales observations treated_sites control_sites
+             <int>         <int>        <int>         <int>         <int>
+1:              NA             0         9912            29            48
+2:               0           128         9791            29            47
+3:               0           253         9690            29            47
+4:               0             6         9907            29            47
+5:               0            35         9880            29            47
+6:               0            24         9889            29            47
+   pretrend_p
+        <num>
+1:         NA
+2:         NA
+3:         NA
+4:         NA
+5:         NA
+6:         NA

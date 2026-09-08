@@ -1,0 +1,69 @@
+\section*{September 7, 2026: School definitions and raw housing trends}
+\textit{Codex draft; data review and descriptive presentation requested by Jacob.}
+
+The data review reproduces the existing 10,921-sale comparison: 3,287
+transactions near selected closed schools and 7,634 near controls. The new
+descriptive packet begins with the school roster and sample construction,
+then shows annual prices, sales counts, property composition, and neighborhood
+coverage. Each transaction receives equal weight. The school selection and
+price rules remain unchanged. This entry records the initial packet with
+complete characteristics; the later entry expands the descriptive sample.
+
+All 129 names in the supplied roster match the original CPS February list,
+recovered from a contemporaneous news archive. Appendix A of the Consortium's
+2015 \textit{School Closings in Chicago} matches all 47 closed programs and
+their 53 receiving-school assignments. Fifteen closed programs had receiving
+schools move into their buildings. CPS notices confirm that Fermi/South Shore
+and Garfield Park/Faraday already shared buildings. Excluding these 17 cases
+produces the 30 closed programs used for housing, at 29 physical sites.
+This selection reflects continued school use after the closure decision;
+it does not establish subsequent vacancy or measure all program closures.
+
+The 49 controls also require explanation. Of the 82 candidates that did not
+close in 2013, the roster excludes 18 receiving schools, five turnarounds,
+two delayed closures, four canceled closure proposals, three co-location
+cases, and Mason, whose high-school program ended. All 49 control IDs appear
+in the 2013--14 report card. The original notes govern the other exclusions;
+individual final board reports for every action have not all been reverified.
+In particular, whether to exclude the four canceled proposals remains a
+substantive comparison-group question for discussion, not a cleaning error.
+
+The housing checks independently reproduce every citywide price-sample ID,
+the monthly CPI adjustment, and distances and nearest-school assignments for
+all 239,254 study-period transactions. The separate finalization audit also
+rechecks corrected property fields against its independent exemption
+reconstruction. The price sample retains 87.7\% of market-screened sales near
+closed schools and 90.8\% near controls. These losses combine property-type,
+building-record, completeness, and price restrictions. Sales counts are reported
+before those restrictions as well; without housing-stock denominators, they
+are counts rather than turnover rates.
+
+{\small Verification: All 103 existing script/build files were read, including
+archived analyses. Runtime checks use the recorded housing sources; the
+finalization check retains its existing post-exemption follow-up extract.
+The school cleaner now rejects duplicate report-card IDs, and a new report
+describes its unchanged 129-row output. Exemption downloads now publish only
+completed transfers; disposable failure checks confirm that an interrupted
+transfer preserves any existing snapshot. A stale housing-report statement
+about school distances was corrected. Source hashes and the full school
+exclusion lists are in the data review.}
+
+\clearpage
+\begin{center}
+\includegraphics[width=\textwidth]{../input/overview_complete_prices.png}
+\end{center}
+
+From 2012 to 2018, mean transaction prices near closed schools rise from about
+\$239,000 to \$307,000 in 2022 dollars, while medians rise from \$164,000 to
+\$181,000. Near controls, means rise from \$149,000 to \$234,000 and medians
+from \$61,000 to \$143,000. The different movements of means and medians are
+already visible in the raw data. These changing sets of transactions combine
+price changes with changes in the properties and neighborhoods represented;
+the plotted differences do not establish a closure effect.
+
+{\small Reproduction: \texttt{make -C tasks/audits/home\_data\_overview/code}
+builds the ten-page \texttt{data\_overview.pdf}, individual figures,
+\texttt{data\_review.md}, and saved-summary reports. The packet includes price
+percentiles and within-property-type means alongside this figure. The review
+uses the September 7 working tree and the source hashes recorded in
+\texttt{data\_review.rds}; housing vintages and analytical choices are unchanged.}

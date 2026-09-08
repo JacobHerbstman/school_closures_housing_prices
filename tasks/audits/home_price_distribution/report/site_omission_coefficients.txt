@@ -1,0 +1,71 @@
+SHA-256: 9036c31f72d28e1a3366686b74b0d31c045bd6cf7f01082f4585a0ad35ef6324
+
+Dataset: site_omission_coefficients
+Rows: 3432  Columns: 13
+Key: model, omitted_site_id, term
+Duplicate or missing keys: 0
+term | character | nonmissing: 3432 | distinct nonmissing: 11
+[1] "sale_year::2008:treated" "sale_year::2009:treated"
+[3] "sale_year::2010:treated" "sale_year::2011:treated"
+[5] "sale_year::2013:treated" "sale_year::2014:treated"
+estimate | numeric | nonmissing: 3432 | distinct nonmissing: 3432
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+-36107.253     -0.019      0.060  18131.649  35895.545  94388.852
+std_error | numeric | nonmissing: 3432 | distinct nonmissing: 3432
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+    0.071     0.098  6851.901 13228.942 27043.160 44902.390
+t_statistic | numeric | nonmissing: 3432 | distinct nonmissing: 3432
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+-2.6123 -0.1829  0.4866  0.4715  1.3662  2.6983
+p_value | numeric | nonmissing: 3432 | distinct nonmissing: 3432
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+0.008605 0.121860 0.412584 0.446529 0.789442 0.999563
+conf_low | numeric | nonmissing: 3432 | distinct nonmissing: 3432
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+-66068.859 -15140.942     -0.285  -8221.683     -0.191  23626.749
+conf_high | numeric | nonmissing: 3432 | distinct nonmissing: 3432
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+ -6205.450      0.176      0.259  44484.981  91265.894 176655.458
+model | character | nonmissing: 3432 | distinct nonmissing: 8
+[1] "did_dollars"           "did_hedonic_dollars"   "did_hedonic_log"
+[4] "did_log"               "event_dollars"         "event_hedonic_dollars"
+omitted_site_id | integer | nonmissing: 3432 | distinct nonmissing: 78
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0  610012  610118  602287  610225  610521
+sale_year | integer | nonmissing: 3120 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+   2008    2010    2014    2013    2016    2018     312
+baseline_estimate | numeric | nonmissing: 3432 | distinct nonmissing: 44
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+-31917.294     -0.014      0.065  18142.452  36177.137  82478.081
+baseline_se | numeric | nonmissing: 3432 | distinct nonmissing: 44
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+    0.077     0.098  7357.606 13149.511 26798.816 42053.609
+change_from_full | numeric | nonmissing: 3432 | distinct nonmissing: 3432
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+-2.853e+04 -3.680e-02  0.000e+00 -1.080e+01  3.720e-02  1.280e+04
+First six records:
+           term estimate std_error t_statistic    p_value  conf_low conf_high
+         <char>    <num>     <num>       <num>      <num>     <num>     <num>
+1: treated_post 62879.68  31653.60    1.986494 0.05058371 -163.9246  125923.3
+2: treated_post 63660.68  31708.28    2.007699 0.04827765  494.5481  126826.8
+3: treated_post 69772.44  30926.42    2.256079 0.02698023 8163.8651  131381.0
+4: treated_post 63352.08  31653.49    2.001424 0.04896433  295.0839  126409.1
+5: treated_post 62880.75  31672.66    1.985332 0.05076381 -214.4246  125975.9
+6: treated_post 62824.29  31662.88    1.984162 0.05089683 -251.4059  125900.0
+         model omitted_site_id sale_year baseline_estimate baseline_se
+        <char>           <int>     <int>             <num>       <num>
+1: did_dollars               0        NA          62879.68     31653.6
+2: did_dollars          609797        NA          62879.68     31653.6
+3: did_dollars          609809        NA          62879.68     31653.6
+4: did_dollars          609812        NA          62879.68     31653.6
+5: did_dollars          609819        NA          62879.68     31653.6
+6: did_dollars          609848        NA          62879.68     31653.6
+   change_from_full
+              <num>
+1:     3.710738e-10
+2:     7.809970e+02
+3:     6.892761e+03
+4:     4.723960e+02
+5:     1.066140e+00
+6:    -5.538931e+01

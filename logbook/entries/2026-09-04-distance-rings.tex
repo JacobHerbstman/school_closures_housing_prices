@@ -1,0 +1,84 @@
+\section*{September 4, 2026: Changing distance also changes the neighborhoods compared}
+\textit{Agent-drafted research entry; these comparisons remain exploratory.}
+
+Jacob requested closer and farther rings with overlaps removed because the
+choice of control neighborhoods and school-site fixed effects remained
+unsettled. The new audit compares homes within one-eighth mile, between
+one-eighth and one-quarter mile, and between one-quarter and one-half mile.
+It also estimates cumulative quarter-mile and half-mile specifications.
+The supplied 30 closed/49 open school split and citywide cleaning remain fixed.
+
+For each band, a home must be within the specified distance of its nearest
+study site and outside the outer radius of every other study site, including
+sites with the same treatment status. Homes near welcoming or other candidate
+sites are also excluded at that radius. This is stricter than the preceding
+quarter-mile rule, which retained same-status overlaps. The stricter
+quarter-mile sample removes 42 treated and 147 control sales, leaving 10,732.
+
+The three distance bands contain, respectively, 1,239/2,168, 2,271/5,458, and
+2,094/8,668 treated/control sales. The farthest band retains only 21 treated
+sites, compared with 29 in each nearer band. Wider exclusions remove homes near
+additional schools and substantial
+portions of some neighborhoods. Consequently,
+differences across these estimates mix distance with a changing comparison
+sample; they are not a distance-decay estimate holding sites fixed.
+
+\begin{center}
+\scriptsize
+\input{../output/ring_table.tex}
+\end{center}
+{\footnotesize Annual DiDs with housing controls and school-site/year fixed
+effects, giving each observed site-year equal weight. Pre: 2008--2012;
+post: 2014--2018; 2013 omitted. Brackets are 95\% site-clustered intervals.
+Dollar prices use 2022 purchasing power. Log estimates and endpoints are
+converted using $100[\exp(\beta)-1]$.}
+
+All three site-weighted dollar estimates are positive but imprecise; all
+six dollar/log intervals include zero. The event studies do not show a
+clear effect that shrinks with distance. Pre-2013 movement remains visible,
+particularly in log prices. Neither a nonsignificant pretest nor a wide
+post-period interval establishes a valid counterfactual or a zero effect.
+
+School-site fixed effects remove persistent differences between local housing
+markets. They do not remove school-specific recovery paths. A diagnostic
+replaces them with a single treated/control group intercept, retaining the
+same housing controls, year effects, weights, and site-clustered inference.
+The results remain imprecise. This does not support removing site fixed
+effects as a solution to the comparison problem: doing so also exposes the
+estimates to changes in which school areas supply sales.
+
+The closest and farthest bands have some sites with no sales before or after
+2013. Sites with observed sales remain in the analysis; empty years receive
+no imputed prices. Equal site-year weighting therefore averages only sites
+with transactions that year. A useful next diagnostic would hold the site
+roster and exclusion radius fixed across bands before interpreting distance
+patterns. This is a recommendation, not an adopted design. The distance
+comparisons use housing characteristics as controls; amenity
+distances and Census demographics are omitted from these models.
+
+\clearpage
+\begin{center}
+\includegraphics[width=\textwidth,height=.93\textheight,keepaspectratio]{../input/ring_raw_equal_site_year.png}
+\end{center}
+\clearpage
+\begin{center}
+\includegraphics[width=\textwidth,height=.93\textheight,keepaspectratio]{../input/ring_event_hedonics.png}
+\end{center}
+\clearpage
+\begin{center}
+\includegraphics[width=\textwidth,height=.93\textheight,keepaspectratio]{../input/ring_event_fixed_effects.png}
+\end{center}
+\clearpage
+\begin{center}
+\includegraphics[width=\textwidth]{../input/ring_did_by_ring.png}
+\end{center}
+{\footnotesize Reproduction: run Make in the home-price-rings audit's code
+directory and then in the logbook code directory. Revision c200c31 plus
+working changes; existing cleaned 2008--2018 transactions, supplied school
+flags, and EPSG:3435 distances. All 120 model fits retain their specified
+transactions. Independent dummy-variable weighted least squares reproduces
+the controlled site- and group-FE DiDs for all three annuli within
+\$0.000001. Uncontrolled site-weighted event studies reproduce OLS on
+site-year means. Quarter-mile membership independently matches the upstream
+school-count exclusion. The audit records full coefficients, exclusion
+counts, and empty site-year cells.}

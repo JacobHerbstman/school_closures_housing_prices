@@ -1,0 +1,95 @@
+SHA-256: 236c6755719f055bdfdd4f0dd97b0caa010ce1d02d42e008c5502d2977b272f5
+
+Dataset: upper_tail_sites
+Rows: 154  Columns: 15
+Key: treated, period, school_site_id
+Duplicate or missing keys: 0
+treated | integer | nonmissing: 154 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  0.0000  0.0000  0.3766  1.0000  1.0000
+period | character | nonmissing: 154 | distinct nonmissing: 2
+[1] "2008-2012" "2014-2018"
+school_site_id | integer | nonmissing: 154 | distinct nonmissing: 77
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609797  610013  610119  610109  610225  610521
+school_names | character | nonmissing: 154 | distinct nonmissing: 77
+[1] "Adam Clayton Powell Paideia Community Academy ES"
+[2] "Alexander Graham Elementary School"
+[3] "Alexander von Humboldt Elementary School / Ana Roque de Duprey Elementary School"
+[4] "Alfred David Kohn Elementary School"
+[5] "Amos Alonzo Stagg Elementary School"
+[6] "Anna R. Langford Community Academy"
+sales | integer | nonmissing: 154 | distinct nonmissing: 97
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1.00   36.00   62.00   64.36   83.00  196.00
+mean_price | numeric | nonmissing: 154 | distinct nonmissing: 154
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  27234   90904  124294  217780  245138 1004824
+upper_sales | integer | nonmissing: 154 | distinct nonmissing: 49
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0     1.0     6.0    16.1    19.0   146.0
+upper_sale_value | numeric | nonmissing: 154 | distinct nonmissing: 119
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+        0    319429   1905799   8860720   7644038 107053603
+upper_mean_price | numeric | nonmissing: 118 | distinct nonmissing: 118
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+ 196909  318669  395941  445304  493196 1068429      36
+upper_apartment_share | numeric | nonmissing: 118 | distinct nonmissing: 63
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+ 0.0000  0.3794  0.7372  0.6327  0.9568  1.0000      36
+upper_mean_building_sqft | numeric | nonmissing: 118 | distinct nonmissing: 118
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+    876    2186    2553    3025    3522    8642      36
+upper_mean_age | numeric | nonmissing: 118 | distinct nonmissing: 114
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+   3.00   75.40   95.53   88.15  108.00  130.00      36
+upper_contribution_to_group_mean | numeric | nonmissing: 154 | distinct nonmissing: 119
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+    0.00    89.73   743.60  3790.66  2459.28 65677.06
+share_of_group_upper_value | numeric | nonmissing: 154 | distinct nonmissing: 119
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+0.000000 0.000689 0.005771 0.025974 0.021365 0.319354
+share_of_group_upper_sales | numeric | nonmissing: 154 | distinct nonmissing: 77
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+0.000000 0.001116 0.008067 0.025974 0.024410 0.283619
+First six records:
+   treated    period school_site_id                              school_names
+     <int>    <char>          <int>                                    <char>
+1:       0 2008-2012         609797           Jacob Beidler Elementary School
+2:       0 2008-2012         609809 Lorenz Brentano Math & Science Academy ES
+3:       0 2008-2012         609812         William H Brown Elementary School
+4:       0 2008-2012         609819            Edmond Burke Elementary School
+5:       0 2008-2012         609848          Ira F Aldridge Elementary School
+6:       0 2008-2012         609864             John W Cook Elementary School
+   sales mean_price upper_sales upper_sale_value upper_mean_price
+   <int>      <num>       <int>            <num>            <num>
+1:    66   96904.77           8        2899912.1         362489.0
+2:    75  436478.75          65       31287902.8         481352.4
+3:     2  275509.79           1         364989.7         364989.7
+4:    16  237673.95           4        1703536.7         425884.2
+5:    10   27234.09           0              0.0               NA
+6:    98  119663.76          22        5348945.8         243133.9
+   upper_apartment_share upper_mean_building_sqft upper_mean_age
+                   <num>                    <num>          <num>
+1:             0.6250000                 2727.625      103.50000
+2:             0.4769231                 2180.631       91.75385
+3:             1.0000000                 2718.000      130.00000
+4:             0.7500000                 7140.500      111.75000
+5:                    NA                       NA             NA
+6:             0.2727273                 1849.455       84.72727
+   upper_contribution_to_group_mean share_of_group_upper_value
+                              <num>                      <num>
+1:                         918.5658                0.008459448
+2:                        9910.6439                0.091271172
+3:                         115.6128                0.001064726
+4:                         539.6062                0.004969454
+5:                           0.0000                0.000000000
+6:                        1694.3129                0.015603620
+   share_of_group_upper_sales
+                        <num>
+1:                0.010139417
+2:                0.082382763
+3:                0.001267427
+4:                0.005069708
+5:                0.000000000
+6:                0.027883397

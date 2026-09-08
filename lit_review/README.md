@@ -4,8 +4,8 @@ This folder contains the materials shared in the Noah Liu Slack conversation tha
 
 ## File guide
 
-- `effects_of_public_school_closures_on_crime_chicago_2013.pdf` — Noli Brazil (2020), the paper associated with the attached Chicago map and the clean candidate-list comparison.
-- `statchen_et_al_2026_school_closure_firearm_violence.pdf` — a new open-access paper linked in Slack. It studies firearm violence after the same closure wave but uses a different control strategy.
+- `effects_of_public_school_closures_on_crime_chicago_2013.pdf` — Noli Brazil (2020), the source of the Chicago map and the comparison among schools considered for closure.
+- `statchen_et_al_2026_school_closure_firearm_violence.pdf` — an open-access paper shared by Noah Liu. It studies firearm violence after the same closure wave but uses a different control strategy.
 - `pearman_greene_2022_school_closures_gentrification_black_metropolis.pdf` — the main neighborhood-change paper cited in the shared review; added from the public ERIC manuscript.
 - `equilibrium_effects_of_neighborhood_schools.pdf` — Han and Idoux (2025), on Seattle's return to neighborhood-based assignment and the resulting capitalization and sorting effects.
 - `permanent_school_closures_housing_markets_neighborhood_change_literature_review.pdf` — the source-verified review shared in Slack. Its PDF metadata identifies it as a ChatGPT Deep Research report, so it is best treated as a research map rather than a citable empirical study.
@@ -13,7 +13,8 @@ This folder contains the materials shared in the Noah Liu Slack conversation tha
 
 ## The Chicago candidate-list design
 
-Brazil (2020) provides the cleanest version of the design we discussed.
+Brazil (2020) compares schools that closed with schools considered for closure
+that remained open.
 
 - In December 2012, CPS identified 330 under-enrolled schools as potentially at risk.
 - In February 2013, CPS released a shorter list of 129 elementary schools that could close.
@@ -46,7 +47,9 @@ The cleanest starting design is a parcel-level event study centered on the Febru
 6. Plot pre-trends for prices, sales, foreclosure, vacancy, and neighborhood composition. Weighting or matching on candidate-school and neighborhood fundamentals can improve comparability, but it does not make the final CPS vote random.
 7. Plan explicitly for interference. Welcoming schools and neighborhoods may be treated through student reassignment, and nearby school buffers can overlap.
 
-The key research gap identified by the shared review appears real within the materials inspected: none of these papers estimates the effect of Chicago's 2013 mass closures on parcel-level sale prices and housing-market liquidity using the February candidate list. That is precisely the contribution available to this project.
+None of the papers summarized here estimates effects on Chicago sale prices
+and sales activity using the February candidate list. This observation is
+limited to these papers; it is not an exhaustive literature search.
 
 ## Core citations
 

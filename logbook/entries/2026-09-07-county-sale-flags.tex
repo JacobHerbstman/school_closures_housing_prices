@@ -1,0 +1,45 @@
+\section*{September 7, 2026: What the county sale flags remove}
+\textit{Drafted by Codex from the saved county extract and published county SQL.}
+
+Most records excluded by the county sale flags have very low recorded prices.
+Within the fixed school comparison, the flags remove 1,795 of 5,551 records
+near closed schools and 3,666 of 12,102 near schools that stayed open.
+Prices at or below \$10,000 account for 90.5\% and 89.1\% of these losses.
+Of those low-price records, 1,169 near closed schools and 2,473 near controls
+record exactly \$0 or \$1. These recorded amounts need not represent the
+market value of the property.
+
+\begin{center}
+\input{../input/sale_flags_table.tex}
+\end{center}
+
+The table allocates overlapping exclusions to low price first, then deed
+type, then repeat records. The allocation changes no sample membership.
+The remaining deed exclusions concern quitclaim and executor instruments in
+this extract. Such transfers can include genuine transactions, so their
+exclusion is a substantive restriction rather than proof of recording error.
+
+The code applies all three flags in the correct direction. Every flag in
+the 428,582-record master matches the saved county source by transaction ID,
+and every corrected record preserves those flags. None is missing.
+The recorded-price rule matches the county flag for every master record.
+Two descriptions needed correction: the low-price rule includes exactly
+\$10,000, and the repeat rule concerns the same parcel \emph{at the same price}
+within 365 days. It does not exclude every property resold within a year.
+
+The county computes repeats before removing some duplicate records and
+substituting MyDec dates. The released export cannot independently reconstruct
+all those source histories. Blank exported deed types also conceal the
+source distinction between an empty string and SQL NULL. The audit verifies
+faithful use of the published flags without claiming to validate every
+underlying deed. Jacob confirmed retaining these deed exclusions and the current cleaning as the working version. No filter changed; the descriptive sample remains 11,600 sales.
+
+\small
+Reproduction: run \texttt{make} in
+\texttt{tasks/audits/home\_sale\_quality\_flags/code}.
+The saved RDS contains flag overlaps, annual counts, price and deed categories,
+and source hashes; the standard report describes those tables. The audit
+reconciles the packet's counts before and after the flags. It uses the existing
+parcel-sales snapshot and county SQL pinned to June 4, 2026, commit
+\texttt{1a64383a9a4b}; project working tree based on \texttt{c200c31}.
+\normalsize

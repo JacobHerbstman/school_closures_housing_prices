@@ -1,0 +1,185 @@
+baseline_demographics first verified baseline; ACS 2008–2012 and TIGER 2012
+Rows: 5312
+One point to exactly one tract and one block group; no nearest-geography fallback.
+                     column nonmissing distinct_nonmissing      type
+                     <char>      <int>               <int>    <char>
+ 1:                   geoid       5312                5312 character
+ 2:                logrecno       5312                5312 character
+ 3:               geography       5312                   2 character
+ 4:                    name       5312                5312 character
+ 5:             B03002_001E       5312                2666   integer
+ 6:             B03002_003E       5312                2016   integer
+ 7:             B03002_004E       5312                1450   integer
+ 8:             B03002_012E       5312                1441   integer
+ 9:             B03002_001M       5312                 679   integer
+10:             B03002_003M       5312                 539   integer
+11:             B03002_004M       5312                 637   integer
+12:             B03002_012M       5312                 709   integer
+13:             B15003_001E       5312                2187   integer
+14:             B15003_022E       5312                 996   integer
+15:             B15003_023E       5312                 622   integer
+16:             B15003_024E       5312                 335   integer
+17:             B15003_025E       5312                 206   integer
+18:             B15003_001M       5312                 446   integer
+19:             B15003_022M       5312                 336   integer
+20:             B15003_023M       5312                 248   integer
+21:             B15003_024M       5312                 183   integer
+22:             B15003_025M       5312                 138   integer
+23:             C17002_001E       5312                2644   integer
+24:             C17002_002E       5312                 684   integer
+25:             C17002_003E       5312                 762   integer
+26:             C17002_001M       5312                 674   integer
+27:             C17002_002M       5312                 490   integer
+28:             C17002_003M       5312                 537   integer
+29:             B19013_001E       5295                4505   integer
+30:             B19013_001M       5287                4733   integer
+31:             B23025_003E       5312                1998   integer
+32:             B23025_005E       5312                 517   integer
+33:             B23025_003M       5312                 445   integer
+34:             B23025_005M       5312                 245   integer
+35:             B25002_001E       5312                1682   integer
+36:             B25002_003E       5312                 468   integer
+37:             B25002_001M       5312                 230   integer
+38:             B25002_003M       5312                 210   integer
+39:             B25003_001E       5312                1591   integer
+40:             B25003_003E       5312                1042   integer
+41:             B25003_001M       5312                 229   integer
+42:             B25003_003M       5312                 247   integer
+43:               white_pct       5298                4683   numeric
+44:               black_pct       5298                3823   numeric
+45:            hispanic_pct       5298                4430   numeric
+46:             college_pct       5298                4992   numeric
+47:             poverty_pct       5297                4839   numeric
+48:        unemployment_pct       5294                4743   numeric
+49:              renter_pct       5297                4718   numeric
+50:             vacancy_pct       5298                4087   numeric
+51:         income_censored       5312                   2   logical
+52: median_household_income       5293                4504   integer
+53:               land_sq_m       5312                5114   integer
+54:  population_per_sq_mile       5310                5138   numeric
+                     column nonmissing distinct_nonmissing      type
+    geoid             logrecno          geography             name
+ Length:5312        Length:5312        Length:5312        Length:5312
+ Class :character   Class :character   Class :character   Class :character
+ Mode  :character   Mode  :character   Mode  :character   Mode  :character
+
+
+
+
+  B03002_001E     B03002_003E      B03002_004E      B03002_012E
+ Min.   :    0   Min.   :   0.0   Min.   :   0.0   Min.   :   0.0
+ 1st Qu.:  985   1st Qu.: 106.0   1st Qu.:   7.0   1st Qu.:  34.0
+ Median : 1398   Median : 562.0   Median :  96.0   Median : 164.0
+ Mean   : 1957   Mean   : 857.4   Mean   : 477.3   Mean   : 468.9
+ 3rd Qu.: 2257   3rd Qu.:1115.2   3rd Qu.: 639.0   3rd Qu.: 565.2
+ Max.   :15740   Max.   :8492.0   Max.   :7764.0   Max.   :6939.0
+
+  B03002_001M      B03002_003M     B03002_004M      B03002_012M
+ Min.   :   9.0   Min.   :  2.0   Min.   :   2.0   Min.   :   2.0
+ 1st Qu.: 253.0   1st Qu.: 81.0   1st Qu.:  13.0   1st Qu.:  44.0
+ Median : 333.0   Median :182.0   Median :  94.0   Median : 138.0
+ Mean   : 354.1   Mean   :186.2   Mean   : 156.3   Mean   : 192.1
+ 3rd Qu.: 431.0   3rd Qu.:264.0   3rd Qu.: 260.0   3rd Qu.: 301.0
+ Max.   :1115.0   Max.   :944.0   Max.   :1002.0   Max.   :1028.0
+
+  B15003_001E       B15003_022E      B15003_023E      B15003_024E
+ Min.   :    0.0   Min.   :   0.0   Min.   :   0.0   Min.   :   0.00
+ 1st Qu.:  643.8   1st Qu.:  75.0   1st Qu.:  22.0   1st Qu.:   0.00
+ Median :  917.0   Median : 166.0   Median :  69.0   Median :  10.00
+ Mean   : 1301.5   Mean   : 269.3   Mean   : 123.1   Mean   :  36.55
+ 3rd Qu.: 1494.5   3rd Qu.: 332.0   3rd Qu.: 158.0   3rd Qu.:  41.00
+ Max.   :12955.0   Max.   :4110.0   Max.   :2581.0   Max.   :1328.00
+
+  B15003_025E      B15003_001M     B15003_022M      B15003_023M
+ Min.   :  0.00   Min.   :  9.0   Min.   :  5.00   Min.   :  2.00
+ 1st Qu.:  0.00   1st Qu.:160.0   1st Qu.: 55.00   1st Qu.: 26.00
+ Median :  0.00   Median :207.0   Median : 87.00   Median : 51.00
+ Mean   : 16.95   Mean   :220.3   Mean   : 99.32   Mean   : 60.76
+ 3rd Qu.: 19.00   3rd Qu.:264.0   3rd Qu.:129.00   3rd Qu.: 83.00
+ Max.   :786.00   Max.   :912.0   Max.   :542.00   Max.   :447.00
+
+  B15003_024M      B15003_025M      C17002_001E     C17002_002E
+ Min.   :  2.00   Min.   :  2.00   Min.   :    0   Min.   :   0.0
+ 1st Qu.: 11.00   1st Qu.: 11.00   1st Qu.:  973   1st Qu.:  21.0
+ Median : 16.00   Median : 11.00   Median : 1377   Median :  78.0
+ Mean   : 30.32   Mean   : 21.81   Mean   : 1928   Mean   : 143.6
+ 3rd Qu.: 39.00   3rd Qu.: 26.00   3rd Qu.: 2214   3rd Qu.: 194.0
+ Max.   :452.00   Max.   :333.00   Max.   :15556   Max.   :1933.0
+
+  C17002_003E      C17002_001M      C17002_002M   C17002_003M
+ Min.   :   0.0   Min.   :   9.0   Min.   :  2   Min.   :  2.0
+ 1st Qu.:  26.0   1st Qu.: 250.0   1st Qu.: 28   1st Qu.: 33.0
+ Median :  95.5   Median : 329.0   Median : 77   Median : 92.0
+ Mean   : 172.6   Mean   : 350.8   Mean   :113   Mean   :130.6
+ 3rd Qu.: 241.0   3rd Qu.: 428.0   3rd Qu.:167   3rd Qu.:194.0
+ Max.   :1944.0   Max.   :1114.0   Max.   :817   Max.   :967.0
+
+  B19013_001E      B19013_001M      B23025_003E     B23025_005E
+ Min.   :  2499   Min.   :   889   Min.   :    0   Min.   :  0
+ 1st Qu.: 37586   1st Qu.:  9183   1st Qu.:  499   1st Qu.: 44
+ Median : 53056   Median : 14921   Median :  727   Median : 84
+ Mean   : 58777   Mean   : 19010   Mean   : 1032   Mean   :119
+ 3rd Qu.: 73450   3rd Qu.: 23703   3rd Qu.: 1203   3rd Qu.:154
+ Max.   :250001   Max.   :223890   Max.   :11310   Max.   :933
+ NA's   :17       NA's   :25
+  B23025_003M     B23025_005M      B25002_001E       B25002_003E
+ Min.   : 11.0   Min.   :  2.00   Min.   :    0.0   Min.   :   0.00
+ 1st Qu.:152.0   1st Qu.: 40.00   1st Qu.:  398.0   1st Qu.:  25.00
+ Median :200.0   Median : 64.00   Median :  578.0   Median :  60.00
+ Mean   :213.4   Mean   : 72.82   Mean   :  820.3   Mean   :  92.27
+ 3rd Qu.:258.0   3rd Qu.: 96.00   3rd Qu.:  962.0   3rd Qu.: 124.00
+ Max.   :908.0   Max.   :356.00   Max.   :10906.0   Max.   :1726.00
+
+  B25002_001M      B25002_003M      B25003_001E    B25003_003E
+ Min.   :  9.00   Min.   :  5.00   Min.   :   0   Min.   :   0.0
+ 1st Qu.: 67.00   1st Qu.: 34.00   1st Qu.: 350   1st Qu.:  82.0
+ Median : 88.00   Median : 58.00   Median : 507   Median : 204.0
+ Mean   : 91.06   Mean   : 60.41   Mean   : 728   Mean   : 298.8
+ 3rd Qu.:111.00   3rd Qu.: 80.00   3rd Qu.: 860   3rd Qu.: 393.0
+ Max.   :455.00   Max.   :456.00   Max.   :9180   Max.   :4859.0
+
+  B25003_001M      B25003_003M       white_pct         black_pct
+ Min.   :  9.00   Min.   :  6.00   Min.   :  0.000   Min.   :  0.0000
+ 1st Qu.: 75.00   1st Qu.: 56.00   1st Qu.:  7.047   1st Qu.:  0.3955
+ Median : 93.00   Median : 81.00   Median : 42.743   Median :  5.1847
+ Mean   : 99.39   Mean   : 84.89   Mean   : 42.730   Mean   : 27.8486
+ 3rd Qu.:118.00   3rd Qu.:109.00   3rd Qu.: 74.550   3rd Qu.: 55.0617
+ Max.   :476.00   Max.   :512.00   Max.   :100.000   Max.   :100.0000
+                                   NA's   :14        NA's   :14
+  hispanic_pct      college_pct     poverty_pct      unemployment_pct
+ Min.   :  0.000   Min.   : 0.00   Min.   :  0.000   Min.   : 0.000
+ 1st Qu.:  2.645   1st Qu.:13.12   1st Qu.:  5.361   1st Qu.: 6.128
+ Median : 10.136   Median :26.15   Median : 12.999   Median :10.664
+ Mean   : 22.227   Mean   :32.62   Mean   : 17.235   Mean   :12.857
+ 3rd Qu.: 31.931   3rd Qu.:48.11   3rd Qu.: 25.374   3rd Qu.:17.193
+ Max.   :100.000   Max.   :97.28   Max.   :100.000   Max.   :67.500
+ NA's   :14        NA's   :14      NA's   :15        NA's   :18
+   renter_pct      vacancy_pct      income_censored median_household_income
+ Min.   :  0.00   Min.   :  0.000   Mode :logical   Min.   :  6776
+ 1st Qu.: 16.96   1st Qu.:  4.304   FALSE:5310      1st Qu.: 37625
+ Median : 40.74   Median :  9.432   TRUE :2         Median : 53081
+ Mean   : 40.77   Mean   : 11.435                   Mean   : 58798
+ 3rd Qu.: 62.04   3rd Qu.: 16.304                   3rd Qu.: 73462
+ Max.   :100.00   Max.   :100.000                   Max.   :250001
+ NA's   :15       NA's   :14                        NA's   :19
+   land_sq_m        population_per_sq_mile
+ Min.   :       0   Min.   :     0
+ 1st Qu.:  168017   1st Qu.:  5313
+ Median :  344670   Median : 10126
+ Mean   :  921768   Mean   : 14618
+ 3rd Qu.:  826725   3rd Qu.: 18919
+ Max.   :76731202   Max.   :600194
+                    NA's   :2
+CSV SHA256: e8569aeb32b20914b5457bf82fe8b85d20e0f05b648bb89d3d3ae0eb9086bcae
+ACS sequence 0005 SHA256: 0b0ee4a7880f97a0c1c73bf5edf40cc8816916f665c247e49ce0f19afc1241f4
+ACS sequence 0043 SHA256: d779a3d5653108feda44c89b49469cebe23a6986220b2014b90c06927b68c275
+ACS sequence 0049 SHA256: 525bedd01923380a45d34c209074acdb5625ec436d563d695da0fc3c9aa87d8f
+ACS sequence 0058 SHA256: 4086522156ca12c1c3f6f7be64519f4befda928d35b30ebb316f5dfda11f1e22
+ACS sequence 0078 SHA256: e1c993544a51fb2efb0b6c0ac33fca9d0389c5a92d022ff1610639c1af4bf911
+ACS sequence 0102 SHA256: 24a27459f7ebe48c25e0b7bac7801cd861eb7ea67062fb9c19f8ce53ac0937ab
+Income censor codes: 2,499 means 2,500 or less; 200,001 means 200,000 or more.
+Source MOEs are 90% margins for cells, not derived shares or balance differences.
+Geographic header SHA256: 96a046ec476d35790474117f685362daf8dea7c7692608c3cd3ef118c74f8cff
+Sequence lookup SHA256: d0de6a05326ba1997434fd499707ec123041673dc26845f482be61d6d847fcfd
+TIGER tract SHA256: 0926b034bf856ab77449e267e2501fbfb50311c787370268b52ca5762d957810
+TIGER block group SHA256: 5d288ba951f3a430b52f51fc22e2dac5146898dab549c550f5d88d5177bb2ea3

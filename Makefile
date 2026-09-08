@@ -1,4 +1,5 @@
-SHELL := bash
+include tasks/shared/code/shell_functions.make
+
 .DEFAULT_GOAL := paper
 
 .PHONY: all paper setup
@@ -10,8 +11,8 @@ paper: tasks/setup_environment/output/system_requirements.txt
 
 setup: tasks/setup_environment/output/system_requirements.txt tasks/setup_environment/output/R_packages.txt
 
-tasks/setup_environment/output/system_requirements.txt: tasks/setup_environment/code/system_requirements.sh tasks/setup_environment/code/Makefile tasks/generic.make
+tasks/setup_environment/output/system_requirements.txt: tasks/setup_environment/code/system_requirements.sh tasks/setup_environment/code/Makefile tasks/shared/code/generic.make tasks/shared/code/shell_functions.make
 	$(MAKE) -C tasks/setup_environment/code ../output/system_requirements.txt
 
-tasks/setup_environment/output/R_packages.txt: tasks/setup_environment/code/packages.R tasks/setup_environment/code/Makefile tasks/generic.make
+tasks/setup_environment/output/R_packages.txt: tasks/setup_environment/code/packages.R tasks/setup_environment/code/Makefile tasks/shared/code/generic.make tasks/shared/code/shell_functions.make
 	$(MAKE) -C tasks/setup_environment/code ../output/R_packages.txt

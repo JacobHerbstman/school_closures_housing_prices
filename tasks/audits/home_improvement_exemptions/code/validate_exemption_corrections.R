@@ -134,7 +134,7 @@ withheld_by_field <- updates[grepl("^withheld", status), .(field_records = .N), 
 setorder(withheld_by_field, baseline_column, status)
 report <- c(
   "# Legacy exemption correction validation", "",
-  "Steps 1--5 only. Production files and sample restrictions are unchanged.", "",
+  "This report checks the Assessor's exemption-correction calculations against independent arithmetic. The modified correction rules and their effects on sample selection are documented in the home-sales finalization audit.", "",
   sprintf("%s transactions have at least one proposed change; %s have at least one withheld field. These groups can overlap.",
           format(sum(transactions$hie_any_characteristic_changed), big.mark = ","),
           format(sum(transactions$hie_any_withheld_update), big.mark = ",")), "",
@@ -166,7 +166,7 @@ report <- c(
   "- Unknown replacement codes and winning-timestamp conflicts are withheld, not guessed. Earlier conflicts superseded by a later unambiguous replacement do not block that replacement.",
   "- Sale-record property_class is preserved separately from the proposed assessor hie_res_class.",
   "- No inference is made that the extract contains every historical renovation or that unchanged observations are error-free.",
-  "- Sample attrition, eligibility changes, and adoption into production are step 6 and have not been performed.", "",
+  "- See tasks/audits/home_sales_finalization for the comparison with production corrections and changes in the selected sales sample.", "",
   "## Reproduction environment", "",
   paste0("R ", getRversion()), "",
   vapply(required_packages, function(package) paste0("- ", package, " ", packageVersion(package)), character(1))

@@ -20,6 +20,7 @@ tasks/*/input/
 tasks/*/output/
 tasks/*/temp/
 !tasks/raw_school_data/output/
+tasks/raw_school_data/output/*
 !tasks/raw_school_data/output/All_Schools_Report_Card_SY1112_Chicago.csv
 !tasks/raw_school_data/output/Elementary_Attendance_SY1213_Chicago.csv
 !tasks/raw_school_data/output/Elementary_Closure_SY1213_Chicago.csv
@@ -42,6 +43,11 @@ paper/*.out
 paper/*.pdf
 paper/*.synctex.gz
 
+logbook/input/
+logbook/output/
+
 tmp/
 Rplots.pdf
 **/code/Rplots.pdf
+
+# Standard data reports are tracked; raw inputs and generated datasets stay ignored.

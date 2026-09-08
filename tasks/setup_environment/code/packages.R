@@ -1,7 +1,11 @@
+# setwd("/Users/jacobherbstman/Desktop/school_closures_house_prices/tasks/setup_environment/code")
+
 required_packages <- c(
   "DBI",
   "data.table",
   "duckdb",
+  "fixest",
+  "sf",
   "curl",
   "jsonlite",
   "arrow",
@@ -9,7 +13,10 @@ required_packages <- c(
   "dplyr",
   "janitor",
   "readr",
-  "tidyr"
+  "tidyr",
+  "ggplot2",
+  "patchwork",
+  "scales"
 )
 missing_packages <- required_packages[
   !vapply(required_packages, requireNamespace, logical(1), quietly = TRUE)

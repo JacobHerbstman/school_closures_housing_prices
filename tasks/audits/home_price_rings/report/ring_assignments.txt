@@ -1,0 +1,86 @@
+Ring assignments: first verified baseline
+Key: ring, row_id; one transaction per specification.
+Same 30/49 school flags; exclude any second focal site plus welcoming/other candidates within the outer radius.
+Rows: 48153
+           column      type nonmissing distinct
+           <char>    <char>      <int>    <int>
+1:           ring character      48153        5
+2:         row_id character      48153    21898
+3: school_site_id   integer      48153       78
+4:        treated   integer      48153        2
+5:  distance_feet   numeric      48153    18115
+     ring              row_id          school_site_id      treated
+ Length:48153       Length:48153       Min.   :609797   Min.   :0.0000
+ Class :character   Class :character   1st Qu.:610015   1st Qu.:0.0000
+ Mode  :character   Mode  :character   Median :610106   Median :0.0000
+                                       Mean   :610102   Mean   :0.2427
+                                       3rd Qu.:610225   3rd Qu.:0.0000
+                                       Max.   :610521   Max.   :1.0000
+ distance_feet
+ Min.   :  85.13
+ 1st Qu.: 839.87
+ Median :1242.28
+ Mean   :1381.29
+ 3rd Qu.:1983.59
+ Max.   :2639.94
+                ring inner_miles outer_miles treated before_exclusions
+              <char>       <num>       <num>   <int>             <int>
+ 1:      within_0125       0.000       0.125       0              2168
+ 2:      within_0125       0.000       0.125       1              1270
+ 3: annulus_0125_025       0.125       0.250       0              5883
+ 4: annulus_0125_025       0.125       0.250       1              3195
+ 5:   annulus_025_05       0.250       0.500       0             15142
+ 6:   annulus_025_05       0.250       0.500       1              7648
+ 7:       within_025       0.000       0.250       0              8051
+ 8:       within_025       0.000       0.250       1              4465
+ 9:        within_05       0.000       0.500       0             23193
+10:        within_05       0.000       0.500       1             12113
+    opposite_overlap same_status_only_overlap welcoming_other_after_overlap
+               <int>                    <int>                         <int>
+ 1:                0                        0                             0
+ 2:                3                        0                            28
+ 3:              107                      114                           204
+ 4:               69                       33                           822
+ 5:             1118                     1476                          3880
+ 6:             1039                      788                          3727
+ 7:              201                      159                           204
+ 8:              136                       42                          1042
+ 9:             2314                     2856                          5339
+10:             1965                     1779                          5530
+    sales parcels sites sites_without_pre sites_without_post pre_sales
+    <int>   <int> <int>             <int>              <int>     <int>
+ 1:  2168    1564    47                 1                  1       872
+ 2:  1239     882    29                 0                  1       529
+ 3:  5458    3909    48                 0                  0      2296
+ 4:  2271    1662    29                 0                  0       949
+ 5:  8668    6272    41                 1                  2      3392
+ 6:  2094    1552    21                 0                  0       802
+ 7:  7487    5372    48                 0                  0      3092
+ 8:  3245    2363    29                 0                  0      1358
+ 9: 12684    9194    43                 1                  2      5003
+10:  2839    2106    21                 0                  0      1079
+    transition_sales post_sales pre_mean_price pre_median_price pre_mean_sqft
+               <int>      <int>          <num>            <num>         <num>
+ 1:              192       1104       153646.1         64772.03      2017.755
+ 2:              105        605       194672.2        102893.58      2354.745
+ 3:              532       2630       163571.2         70607.43      2042.936
+ 4:              193       1129       213968.0        116634.88      2341.948
+ 5:              813       4463       213347.5         99543.38      1856.593
+ 6:              215       1077       281437.3        159017.34      2175.296
+ 7:              714       3681       161689.8         69398.77      2022.044
+ 8:              281       1606       215299.0        123820.94      2332.494
+ 9:             1204       6477       201421.2         91764.40      1851.136
+10:              294       1466       288145.3        177960.19      2116.256
+    pre_class_211_pct
+                <num>
+ 1:          47.82110
+ 2:          61.43667
+ 3:          47.25610
+ 4:          56.79663
+ 5:          35.28892
+ 6:          49.37656
+ 7:          46.73351
+ 8:          56.62739
+ 9:          35.97841
+10:          47.17331
+Parquet SHA256: 9e4c8c3ce711dc87444318eb7a88c704d5fdfde45251a3b932b06cb5e135e3e3

@@ -36,8 +36,8 @@ stopifnot(length(description) == 1L,
           !anyNA(exemptions[, c("pin", "year", "hie_last_year_active", "qu_upload_date",
                                setdiff(field_map$source, "qu_class")), with = FALSE]))
 
-# The published inclusive expiry was independently checked against chars_288_active.
-# Raw row number remains the stable identifier within this pinned source file.
+# Exemptions apply through the published last active year, including that year.
+# Raw row numbers identify exemptions within the checksum-verified source file.
 exemptions[, `:=`(exemption_id = .I, start_year = as.integer(year),
                   last_active_year = as.integer(hie_last_year_active))]
 stopifnot(all(exemptions$start_year <= exemptions$last_active_year))

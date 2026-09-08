@@ -1,0 +1,70 @@
+\section*{September 4, 2026: Baseline demographics and transaction weighting}
+\textit{Agent-drafted research entry; interpretations remain open for discussion.}
+
+Jacob requested neighborhood demographics for the comparison of 30 closed
+and 49 still-open schools on the February 2013 candidate list. All 10,921
+eligible transactions match
+exactly one 2012 Census tract and one block group using their home locations.
+The pre-closure sales span 181 distinct tracts and 316 distinct block groups.
+The audit attaches 2008--2012 American Community Survey (ACS) five-year
+estimates to each home's Census area. These describe neighborhood conditions
+before closure and remain fixed across sale years.
+
+\begin{center}
+\small
+\input{../output/demographic_table.tex}
+\end{center}
+{\footnotesize Each 2008--2012 eligible transaction receives its tract's ACS
+characteristic. The columns average those values over transactions. Income
+is a mean of tract medians, not the median income of pooled residents.}
+
+Treated sales occur in neighborhoods with more college graduates, lower
+unemployment, and greater population density. Baseline vacancy is nearly
+identical across groups. Block groups yield similar directional differences
+for education, unemployment, and racial composition. Many differences shrink
+when every school site receives equal weight, after averaging its nearby
+sales. This supports examining the contribution of sales across sites; it
+does not establish parallel trends under either weighting scheme.
+
+Codex recommends equal transaction weights for the baseline. Weighting by
+sale value would use the outcome as a weight and amplify expensive sales;
+weighting by square footage would change the target toward larger properties.
+A fixed pre-2013 sales-count weight for each site is a possible sensitivity,
+not an adopted specification. Equal site weighting in this audit first
+averages baseline characteristics across each site's pre-closure sales and
+then gives every site equal weight within its treatment group.
+
+At Jacob's request, the balance plot adds 95\% percentile bootstrap intervals
+using 1,999 draws of school sites within treatment status. Each draw retains
+the sampled site's sales and recomputes the standardized difference. These
+intervals hold Census estimates fixed and assume independence across sites;
+they exclude ACS survey error and dependence across nearby sites. They are
+not tests of causal identification. The median reported income margin of
+error across observed geographies is \$8,385 for tracts and \$13,592.50 for
+block groups, supporting tracts as a less noisy first adjustment.
+
+The demographic variables are available for future baseline-by-time controls;
+they were not added to the regressions in this audit. Baseline vacancy and
+poverty describe initial conditions. Their post-closure changes could be
+outcomes or mechanisms and should not automatically become controls.
+
+
+\clearpage
+\begin{center}
+\includegraphics[width=\textwidth]{../input/demographic_balance.png}
+\end{center}
+{\footnotesize Standardized differences divide the treated-minus-control mean
+by the root mean of the two group variances. Variances are computed across
+transactions for equal transaction weights and across site means for equal
+site weights. The denominator is recomputed in each bootstrap draw.}
+
+{\footnotesize Reproduction: run Make in the home-baseline-demographics audit's
+code directory, then in the logbook code directory. Inputs are the unchanged
+clean sales and exposure files plus the Census acquisition audit's official
+ACS bulk sequences and 2012 TIGER files, downloaded September 4. C17002 supplies
+poverty because B17001 is unavailable at block-group level in this vintage.
+All ten covariates are observed for every pre-closure sale at both levels.
+Source cell margins of error and standard dataset reports are retained.
+An authenticated API check matched all 2,628 available tract income
+estimate/MOE cells to the bulk files. Revision c200c31
+plus working changes; the bootstrap seed is 20260904.}

@@ -1,0 +1,41 @@
+SHA-256: 30613e68fec485a62d0a6c32cd72c0938679d0c1d8e82a8ddcbccfcafcb5ff0a
+
+Dataset: initial_price_models
+Rows: 16  Columns: 6
+Key: model, initial_price_adjusted
+Duplicate or missing keys: 0
+model | character | nonmissing: 16 | distinct nonmissing: 8
+[1] "did_dollars"           "did_hedonic_dollars"   "did_hedonic_log"
+[4] "did_log"               "event_dollars"         "event_hedonic_dollars"
+initial_price_adjusted | integer | nonmissing: 16 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0     0.0     0.5     0.5     1.0     1.0
+observations | integer | nonmissing: 16 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   9912    9912   10416   10416   10921   10921
+treated_sites | integer | nonmissing: 16 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+     29      29      29      29      29      29
+control_sites | integer | nonmissing: 16 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+     48      48      48      48      48      48
+pretrend_p | numeric | nonmissing: 8 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+0.02784 0.19377 0.29318 0.37865 0.62686 0.80405       8
+First six records:
+                 model initial_price_adjusted observations treated_sites
+                <char>                  <int>        <int>         <int>
+1:         did_dollars                      0         9912            29
+2:         did_dollars                      1         9912            29
+3: did_hedonic_dollars                      0         9912            29
+4: did_hedonic_dollars                      1         9912            29
+5:     did_hedonic_log                      0         9912            29
+6:     did_hedonic_log                      1         9912            29
+   control_sites pretrend_p
+           <int>      <num>
+1:            48         NA
+2:            48         NA
+3:            48         NA
+4:            48         NA
+5:            48         NA
+6:            48         NA

@@ -1,0 +1,51 @@
+SHA-256: 140d0ab02982d8d9ec37abfb110574faa89b70996dbe163b996e9889b72ae28c
+
+Dataset: initial_price_sites
+Rows: 77  Columns: 8
+Key: school_site_id
+Duplicate or missing keys: 0
+school_site_id | integer | nonmissing: 77 | distinct nonmissing: 77
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609797  610013  610119  610109  610225  610521
+treated | integer | nonmissing: 77 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  0.0000  0.0000  0.3766  1.0000  1.0000
+school_names | character | nonmissing: 77 | distinct nonmissing: 77
+[1] "Adam Clayton Powell Paideia Community Academy ES"
+[2] "Alexander Graham Elementary School"
+[3] "Alexander von Humboldt Elementary School / Ana Roque de Duprey Elementary School"
+[4] "Alfred David Kohn Elementary School"
+[5] "Amos Alonzo Stagg Elementary School"
+[6] "Anna R. Langford Community Academy"
+pre_sales | integer | nonmissing: 77 | distinct nonmissing: 62
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1.00   35.00   58.00   58.84   80.00  170.00
+pre_parcels | integer | nonmissing: 77 | distinct nonmissing: 59
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1.00   29.00   51.00   48.44   63.00  140.00
+pre_years | integer | nonmissing: 77 | distinct nonmissing: 5
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  1.000   5.000   5.000   4.805   5.000   5.000
+initial_price | numeric | nonmissing: 77 | distinct nonmissing: 77
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  27234   96905  123999  193148  237674  767770
+pre_price_sd | numeric | nonmissing: 76 | distinct nonmissing: 76
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+  14511   98432  132689  143476  172021  489702       1
+First six records:
+   school_site_id treated                              school_names pre_sales
+            <int>   <int>                                    <char>     <int>
+1:         609797       0           Jacob Beidler Elementary School        66
+2:         609809       0 Lorenz Brentano Math & Science Academy ES        75
+3:         609812       0         William H Brown Elementary School         2
+4:         609819       0            Edmond Burke Elementary School        16
+5:         609848       0          Ira F Aldridge Elementary School        10
+6:         609864       0             John W Cook Elementary School        98
+   pre_parcels pre_years initial_price pre_price_sd
+         <int>     <int>         <num>        <num>
+1:          55         5      96904.77    112957.38
+2:          69         5     436478.75    226927.91
+3:           2         2     275509.79    126543.77
+4:          10         5     237673.95    145972.73
+5:          10         4      27234.09     14510.59
+6:          72         5     119663.76     99143.35

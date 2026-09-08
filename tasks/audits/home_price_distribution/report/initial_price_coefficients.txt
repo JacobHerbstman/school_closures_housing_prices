@@ -1,0 +1,64 @@
+SHA-256: 433c6e4a47794a2b8feb47c84b9b5a842a16b6368e26d30c383cb43f38711d83
+
+Dataset: initial_price_coefficients
+Rows: 164  Columns: 11
+Key: model, initial_price_adjusted, term
+Duplicate or missing keys: 0
+term | character | nonmissing: 164 | distinct nonmissing: 21
+[1] "sale_year::2008:initial_price_100k" "sale_year::2008:treated"
+[3] "sale_year::2009:initial_price_100k" "sale_year::2009:treated"
+[5] "sale_year::2010:initial_price_100k" "sale_year::2010:treated"
+estimate | numeric | nonmissing: 164 | distinct nonmissing: 164
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+-31917.294     -0.026      0.015  12004.438  21615.137  82478.081
+std_error | numeric | nonmissing: 164 | distinct nonmissing: 164
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+    0.016     0.078  1748.600  8036.182 14999.029 42053.609
+t_statistic | numeric | nonmissing: 164 | distinct nonmissing: 164
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+-6.5476 -0.5754  0.3962  0.4968  1.4587  6.3882
+p_value | numeric | nonmissing: 164 | distinct nonmissing: 164
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+1.000e-08 4.931e-02 3.420e-01 3.784e-01 6.401e-01 9.980e-01
+conf_low | numeric | nonmissing: 164 | distinct nonmissing: 164
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+-63092.719  -8740.394     -0.189  -4001.005     -0.049  30107.853
+conf_high | numeric | nonmissing: 164 | distinct nonmissing: 164
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+ -1498.118      0.055      0.255  28009.881  46528.726 164620.390
+model | character | nonmissing: 164 | distinct nonmissing: 8
+[1] "did_dollars"           "did_hedonic_dollars"   "did_hedonic_log"
+[4] "did_log"               "event_dollars"         "event_hedonic_dollars"
+initial_price_adjusted | integer | nonmissing: 164 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  0.0000  1.0000  0.7317  1.0000  1.0000
+component | character | nonmissing: 164 | distinct nonmissing: 2
+[1] "initial_price_year" "treatment"
+sale_year | integer | nonmissing: 156 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+   2008    2010    2014    2013    2016    2018       8
+First six records:
+                                 term  estimate std_error t_statistic
+                               <char>     <num>     <num>       <num>
+1:                       treated_post 62879.683 31653.600   1.9864939
+2: sale_year::2008:initial_price_100k 19440.918  5855.163   3.3203036
+3: sale_year::2009:initial_price_100k  2763.292  5370.315   0.5145492
+4: sale_year::2010:initial_price_100k -9016.886  6175.011  -1.4602218
+5: sale_year::2011:initial_price_100k -4140.868  6225.990  -0.6650940
+6: sale_year::2014:initial_price_100k 21368.904  7963.158   2.6834710
+       p_value    conf_low  conf_high       model initial_price_adjusted
+         <num>       <num>      <num>      <char>                  <int>
+1: 0.050583710   -163.9246 125923.290 did_dollars                      0
+2: 0.001383343   7779.3507  31102.486 did_dollars                      1
+3: 0.608361221  -7932.6186  13459.202 did_dollars                      1
+4: 0.148350775 -21315.4863   3281.715 did_dollars                      1
+5: 0.508003691 -16541.0018   8259.265 did_dollars                      1
+6: 0.008937761   5508.9001  37228.907 did_dollars                      1
+            component sale_year
+               <char>     <int>
+1:          treatment        NA
+2: initial_price_year      2008
+3: initial_price_year      2009
+4: initial_price_year      2010
+5: initial_price_year      2011
+6: initial_price_year      2014

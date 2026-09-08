@@ -1,0 +1,81 @@
+SHA-256: 0e0c21068e1ad4406523d2cf6fa40edabfab4bd0752976b61867d3df394436cb
+
+Dataset: tail_contributions
+Rows: 66  Columns: 14
+Key: treated, sale_year, tail_fraction
+Duplicate or missing keys: 0
+treated | integer | nonmissing: 66 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0     0.0     0.5     0.5     1.0     1.0
+sale_year | integer | nonmissing: 66 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+tail_fraction | numeric | nonmissing: 66 | distinct nonmissing: 3
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.01000 0.01000 0.05000 0.05333 0.10000 0.10000
+cutoff | numeric | nonmissing: 66 | distinct nonmissing: 66
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 404113  551965  742600  789205 1023712 1612601
+sales | integer | nonmissing: 66 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  240.0   283.0   453.0   496.4   659.0   915.0
+tail_sales | integer | nonmissing: 66 | distinct nonmissing: 37
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   3.00    7.25   22.00   26.88   37.00   92.00
+actual_tail_fraction | numeric | nonmissing: 66 | distinct nonmissing: 59
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.01000 0.01141 0.05100 0.05430 0.10000 0.10247
+value_share | numeric | nonmissing: 66 | distinct nonmissing: 66
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.05245 0.07298 0.22853 0.22122 0.34076 0.42623
+tail_contribution_to_mean | numeric | nonmissing: 66 | distinct nonmissing: 66
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   8680   15933   47412   48103   69955  120704
+rest_contribution_to_mean | numeric | nonmissing: 66 | distinct nonmissing: 66
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  84707  125009  160931  173917  213822  331735
+tail_mean_price | numeric | nonmissing: 66 | distinct nonmissing: 66
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 553706  790518  954254 1017238 1242479 1860859
+rest_mean_price | numeric | nonmissing: 66 | distinct nonmissing: 66
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  94132  135365  170457  183082  222848  335548
+tail_apartment_share | numeric | nonmissing: 66 | distinct nonmissing: 46
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  0.3333  0.5000  0.4766  0.5855  1.0000
+tail_mean_building_sqft | numeric | nonmissing: 66 | distinct nonmissing: 66
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2361    2813    3236    3514    3804    7350
+First six records:
+   treated sale_year tail_fraction    cutoff sales tail_sales
+     <int>     <int>         <num>     <num> <int>      <int>
+1:       0      2008          0.01 1049928.7   650          7
+2:       0      2009          0.01  753263.3   769          8
+3:       0      2010          0.01  713645.4   651          7
+4:       0      2011          0.01  873250.0   519          6
+5:       0      2012          0.01  867676.9   568          6
+6:       0      2013          0.01  966189.3   726          8
+   actual_tail_fraction value_share tail_contribution_to_mean
+                  <num>       <num>                     <num>
+1:           0.01076923  0.06990482                 15557.107
+2:           0.01040312  0.06292044                  8818.268
+3:           0.01075269  0.06049421                  8679.852
+4:           0.01156069  0.08842129                 13285.107
+5:           0.01056338  0.07911171                 11821.383
+6:           0.01101928  0.08393960                 13911.016
+   rest_contribution_to_mean tail_mean_price rest_mean_price
+                       <num>           <num>           <num>
+1:                  206989.9       1444588.5        209243.3
+2:                  131331.2        847656.0        132711.8
+3:                  134802.5        807226.2        136267.8
+4:                  136962.7       1149161.7        138564.6
+5:                  137605.1       1119090.9        139074.2
+6:                  151815.5       1262424.7        153507.0
+   tail_apartment_share tail_mean_building_sqft
+                  <num>                   <num>
+1:            0.1428571                2749.143
+2:            0.1250000                2361.000
+3:            0.2857143                2773.429
+4:            0.1666667                3497.500
+5:            0.0000000                2522.333
+6:            0.7500000                5785.000

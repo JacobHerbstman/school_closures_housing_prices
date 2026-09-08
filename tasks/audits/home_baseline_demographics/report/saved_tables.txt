@@ -1,0 +1,101 @@
+CSV SHA-256: 7df4ba0352337206d4a9b9d9c486c3ffdbd4e7e334cae4f5eaba55b000eb184a
+
+Dataset: demographic_balance
+Rows: 40  Columns: 17
+Key: geography, weighting, variable
+Duplicate or missing keys: 0
+geography | character | nonmissing: 40 | distinct nonmissing: 2
+[1] "block_group" "tract"
+weighting | character | nonmissing: 40 | distinct nonmissing: 2
+[1] "equal_site"        "equal_transaction"
+variable | character | nonmissing: 40 | distinct nonmissing: 10
+[1] "black_pct"               "college_pct"
+[3] "hispanic_pct"            "median_household_income"
+[5] "population_per_sq_mile"  "poverty_pct"
+label | character | nonmissing: 40 | distinct nonmissing: 10
+[1] "Bachelor's degree or more, age 25+ (%)"
+[2] "Below poverty threshold (%)"
+[3] "Hispanic, any race (%)"
+[4] "Median household income (2012 dollars)"
+[5] "Non-Hispanic Black (%)"
+[6] "Non-Hispanic White (%)"
+control_mean | numeric | nonmissing: 40 | distinct nonmissing: 40
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+    8.873    19.202    28.302  4913.485    76.285 35421.968
+treated_mean | numeric | nonmissing: 40 | distinct nonmissing: 40
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+   10.59    19.73    27.54  5298.51    69.69 37869.77
+difference | numeric | nonmissing: 40 | distinct nonmissing: 40
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+-2043.7367    -0.3061     0.6261   385.0220     6.0975  3831.5263
+standardized_difference | numeric | nonmissing: 40 | distinct nonmissing: 40
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+-0.35930 -0.02969  0.04192  0.08354  0.28803  0.48034
+ci_lower | numeric | nonmissing: 40 | distinct nonmissing: 40
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+-0.851996 -0.504335 -0.389879 -0.387600 -0.210716  0.002594
+ci_upper | numeric | nonmissing: 40 | distinct nonmissing: 40
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.1162  0.4386  0.4941  0.5530  0.7051  0.9267
+bootstrap_repetitions | integer | nonmissing: 40 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1999    1999    1999    1999    1999    1999
+control_units | integer | nonmissing: 40 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+     48      48    1602    1602    3157    3157
+treated_units | integer | nonmissing: 40 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   29.0    29.0   701.5   701.5  1374.0  1374.0
+control_missing_sales | integer | nonmissing: 40 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0       0       0       0       0       0
+treated_missing_sales | integer | nonmissing: 40 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0       0       0       0       0       0
+control_geographies | integer | nonmissing: 40 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    121     121     165     165     209     209
+treated_geographies | integer | nonmissing: 40 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   76.0    76.0   101.5   101.5   127.0   127.0
+First six records:
+   geography         weighting                variable
+      <char>            <char>                  <char>
+1:     tract equal_transaction median_household_income
+2:     tract        equal_site median_household_income
+3:     tract equal_transaction             poverty_pct
+4:     tract        equal_site             poverty_pct
+5:     tract equal_transaction             college_pct
+6:     tract        equal_site             college_pct
+                                    label control_mean treated_mean
+                                   <char>        <num>        <num>
+1: Median household income (2012 dollars)  34495.59804  37418.80932
+2: Median household income (2012 dollars)  35249.71165  33570.19200
+3:            Below poverty threshold (%)     34.26006     32.43704
+4:            Below poverty threshold (%)     33.43403     34.85499
+5: Bachelor's degree or more, age 25+ (%)     17.08335     23.70197
+6: Bachelor's degree or more, age 25+ (%)     20.42524     19.86005
+      difference standardized_difference   ci_lower  ci_upper
+           <num>                   <num>      <num>     <num>
+1:  2923.2112798              0.18303671 -0.3026978 0.6376737
+2: -1679.5196538             -0.11442186 -0.5931099 0.3333286
+3:    -1.8230276             -0.13251831 -0.5881784 0.3511698
+4:     1.4209598              0.11997661 -0.3269875 0.6082647
+5:     6.6186185              0.38973941 -0.1732830 0.9266574
+6:    -0.5651904             -0.03426809 -0.5174938 0.4350549
+   bootstrap_repetitions control_units treated_units control_missing_sales
+                   <int>         <int>         <int>                 <int>
+1:                  1999          3157          1374                     0
+2:                  1999            48            29                     0
+3:                  1999          3157          1374                     0
+4:                  1999            48            29                     0
+5:                  1999          3157          1374                     0
+6:                  1999            48            29                     0
+   treated_missing_sales control_geographies treated_geographies
+                   <int>               <int>               <int>
+1:                     0                 121                  76
+2:                     0                 121                  76
+3:                     0                 121                  76
+4:                     0                 121                  76
+5:                     0                 121                  76
+6:                     0                 121                  76

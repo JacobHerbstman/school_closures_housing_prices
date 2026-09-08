@@ -124,6 +124,20 @@ if (anyDuplicated(documented_sales[, .(sale_year, sale_document_num)]) > 0L) {
   stop("Clean home sales contain a duplicated document-year transaction.", call. = FALSE)
 }
 
+# Trim the upper price-per-square-foot tail after the existing sample screens.
+# Each sale year uses one citywide nominal cutoff, independent of school exposure.
+# Values equal to the cutoff remain; no lower-tail trimming or winsorization.
+home_sales[, price_per_sqft_p999 := quantile(price_per_building_sqft, 0.999, type = 7),
+           by = sale_year]
+cat("Within-year 99.9th-percentile price-per-square-foot trim:\n")
+print(home_sales[, .(
+  cutoff_nominal = first(price_per_sqft_p999),
+  sales_before = .N,
+  sales_removed = sum(price_per_building_sqft > price_per_sqft_p999)
+), by = sale_year][order(sale_year)])
+home_sales <- home_sales[price_per_building_sqft <= price_per_sqft_p999]
+home_sales[, price_per_sqft_p999 := NULL]
+
 cpi <- fread("../input/chicago_cpi_all_items.csv")
 if (!all(c("observation_date", "chicago_cpi_all_items") %in% names(cpi))) {
   stop("Chicago CPI input is missing required columns.", call. = FALSE)

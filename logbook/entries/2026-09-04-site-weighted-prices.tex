@@ -1,0 +1,83 @@
+\section*{September 4, 2026: Equal site weights reduce the price estimate}
+\textit{Agent-drafted research entry; interpretation remains open for discussion.}
+
+Jacob requested raw trends, DiD estimates, and event studies that give school
+sites equal weight, alongside the existing transaction-weighted results.
+The comparison uses the selected 30 closed and 49 still-open schools and
+10,921 eligible sales within a quarter mile, at 29 treated and 48 control
+physical sites. With annual time effects and housing
+controls, the dollar DiD falls from about \$57,000 to \$11,500. The corresponding
+log estimate moves from a 5.7\% increase to a 4.7\% decrease. Both site-weighted
+intervals include zero.
+
+\begin{center}
+\scriptsize
+\input{../output/site_weight_table.tex}
+\end{center}
+{\footnotesize Pooled DiDs compare 2008--2012 with 2014--2018, omitting 2013.
+Brackets contain pointwise 95\% intervals clustered by school site. Dollar
+outcomes use 2022 purchasing power. Log coefficients and their endpoints are
+converted using $100[\exp(\beta)-1]$. The amenity specification also includes
+hedonics and home distance measures interacted with each half-year.}
+
+Each sale receives weight one divided by the number of eligible sales at its
+school site in the same year or half-year. The weights sum to one within
+an observed site-period. The raw curves consequently average prices within
+each site-period and then across sites. This differs from the earlier
+cross-sectional comparison, which pooled all pre-2013 sales within each site
+before averaging sites. Weights are not based on prices or square footage.
+
+The raw curves show substantially smaller treated/control gaps under equal
+site weights, especially in logs. The event studies also lose much of the
+persistent positive dollar difference in later years. The estimates therefore
+depend strongly on how much weight high-volume
+school neighborhoods receive. Neither weighting rule by itself establishes
+that the comparison identifies the effect of closure. The
+semiannual hedonic dollar DiD falls from about \$57,800 to \$18,300. With
+amenity-by-half-year controls it falls from \$58,500 to \$30,800, also with an
+interval that includes zero. Census demographic controls have not been added.
+
+Equal weights do not uniformly improve the pre-period evidence. The annual
+uncontrolled dollar pretest p-value increases from 0.028 to 0.373, while the
+annual hedonic log pretest changes from 0.700 to 0.359. Both weighted outcomes
+retain some pre-closure movement. Differences around 2010 and the recovery
+before 2013 remain relevant; failure to reject a joint test does not establish
+parallel trends.
+
+There are 26 empty site-years out of 847 possible cells and 109 empty
+site-half-years out of 1,694. No price is imputed, and the full sales sample
+remains intact. Equal weights apply to sites with sales in a given period;
+the contributing roster varies. Low-volume sites have greater influence, and
+weights cannot remove within-site selection into selling or changes in the
+kinds of homes sold. Annual results provide the less sparse first comparison.
+
+{\footnotesize Reproduction: run Make in the home-prices-TWFE audit's code
+directory, then in the logbook code directory. The audit owns the raw group
+curves, full site-period support grid, 36 model summaries, and treatment
+coefficients. Source data and cleaning are unchanged from the preceding
+September 4 entries (revision c200c31 plus working changes). Original
+transaction-weighted coefficients reproduce exactly. Uncontrolled weighted
+event studies reproduce OLS on site-period means; weighted controlled DiDs
+reproduce independent dummy-variable weighted least squares within
+\$0.000001. }
+
+\clearpage
+\begin{center}
+\includegraphics[width=\textwidth]{../input/raw_prices_annual.png}
+\end{center}
+\clearpage
+\begin{center}
+\includegraphics[width=\textwidth]{../input/event_studies_weights_annual.png}
+\end{center}
+\clearpage
+\begin{center}
+\includegraphics[width=\textwidth]{../input/raw_prices_semiannual.png}
+\end{center}
+\clearpage
+\begin{center}
+\includegraphics[width=\textwidth]{../input/event_studies_weights_semiannual.png}
+\end{center}
+\clearpage
+\begin{center}
+\includegraphics[width=\textwidth]{../input/event_studies_weights_amenities.png}
+\end{center}

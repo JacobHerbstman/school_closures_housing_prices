@@ -1,0 +1,108 @@
+\section*{September 4, 2026: Housing controls leave the log--dollar difference largely intact}
+\textit{Agent-drafted research entry; not yet reviewed by Jacob.}
+
+Adding housing characteristics reduces the pre-closure fluctuations but leaves
+the central pattern intact: post-closure dollar prices rise relative to the
+comparison group, while log prices remain near their 2012 relative level.
+This comparison uses sales within a quarter mile of the selected 30 closed
+and 49 still-open schools on the February 2013 candidate list. It excludes
+homes near both groups, near schools designated to receive displaced
+students (welcoming schools), or near other schools on the candidate list. All
+specifications use the
+same transactions and school-site and sale-year fixed effects. Jacob requested
+this comparison; both specifications remain exploratory audit results.
+
+The controls account for building and lot size, age, bedrooms, rooms, full
+bathrooms, apartment count, property class, residence type, construction
+quality, and repair condition. Log building size, log lot size, and age enter
+with squared terms. The remaining counts enter linearly and the categories
+enter as indicators. These are the corrected Assessor characteristics attached
+to each sale year. There are no neighborhood or amenity controls.
+
+\begin{center}
+\small
+\input{../output/twfe_table.tex}
+\end{center}
+{\footnotesize Log estimates are reported as $100[\exp(\hat\beta)-1]$, not as
+percentage changes in arithmetic mean prices. Dollar estimates use 2022
+purchasing power. Pooled DiD compares 2008--2012 with 2014--2018 and excludes
+2013. The pre-period test comes from the annual event study relative to 2012.}
+
+The event studies contain 10,921 sales across 29 treated and 48 control sites;
+the pooled DiD contains 9,912 sales. Controls do not remove any observations.
+The 2010 dip shrinks from $-0.191$ to $-0.120$ log points and from approximately
+$-\$31,900$ to $-\$17,700$. The joint pre-period tests no longer reject for
+either outcome at conventional levels. This is evidence that observed housing
+composition accounts for some of the earlier fluctuation; failure to reject
+alone does not establish parallel trends.
+
+The controlled log estimate remains imprecise, with its pooled confidence
+interval spanning roughly $-11\%$ to $+25\%$. The pooled dollar interval also
+includes zero. The dollar increase survives adjustment for observed housing
+quality, so those controls do not explain the difference between outcome
+scales. Dollar and log regressions measure different features of the price
+distribution: large dollar changes have more influence in the level outcome.
+These results do not establish which transactions or parts of the distribution
+account for the remaining difference.
+
+\textit{Interpretation.} The controlled estimates are a useful comparison of
+prices holding observed housing quality fixed. Condition and improvements may
+respond to closure, so this is not automatically the preferred estimate of
+the total effect. My recommendation is to retain both specifications while
+investigating the remaining distributional and transaction-composition
+questions. The evidence does not justify choosing an outcome simply because
+its plotted pre-period coefficients look flatter.
+
+\clearpage
+\begin{center}
+\includegraphics[width=\textwidth]{../input/event_studies.png}
+\end{center}
+{\footnotesize Top panels omit hedonics; bottom panels include them. Vertical
+axes are common across specifications of each outcome. The 2012 coefficient
+is normalized to zero; shaded 2013 combines pre- and post-announcement sales.
+Intervals are pointwise 95\% confidence intervals clustered by school site.}
+
+\textit{Reproduction.} Run \texttt{make} in
+\texttt{tasks/audits/home\_prices\_twfe/code}; build this entry with
+\texttt{make} in \texttt{logbook/code}. Tables and the figure link to that
+audit's generated outputs through Make. Code revision: \texttt{c200c31} plus
+the current uncommitted changes. The local sale and improvement source files
+are dated September 3, 2026; the final price sample was rebuilt
+September 4 with the approved within-year upper-0.1\% price-per-square-foot
+trim. This run did not refresh the raw APIs. The estimator is
+\texttt{fixest} 0.12.1 with equal transaction weights and site-clustered
+standard errors. Joint pre-period tests use $F(4,76)$. Split-level residence
+is redundant with property class 234 and its indicator is dropped.
+Independent dummy-variable OLS reproduces all four controlled models'
+treatment coefficients within 0.000001, and the uncontrolled estimates match
+the prior run.
+
+\clearpage
+\section*{Same-day extension: Semiannual event studies}
+At Jacob's request, the event studies now split each year into January--June
+and July--December. They retain all 10,921 transactions, replace sale-year
+with calendar-half-year fixed effects, and use 2012 H2 as the reference.
+The annual estimates are unchanged. The difference between outcomes persists:
+with hedonics, log estimates fluctuate around zero after closure, while dollar
+estimates become more positive in 2016--2018. The joint pre-period tests give
+$p=0.967$ for logs and $p=0.572$ for dollars, using $F(9,76)$. Wide intervals
+limit what these tests establish. This extension does not explain the
+remaining difference between dollar and log outcomes.
+
+\textit{Interpretation clarification.} A flat post-closure log series can still represent an increase from
+the years before closure. Equal-weighted half-year averages of the controlled coefficients,
+including the normalized reference and excluding 2013, move from $-0.057$ to
+$0.001$ in logs and from approximately $-\$5,600$ to $\$50,600$ in dollars.
+These are descriptive averages of event coefficients, not new pooled DiD
+estimates. Zero denotes the 2012 H2 reference comparison; it does not mean
+no change relative to the entire pre-period.
+
+\begin{center}
+\includegraphics[width=0.91\textwidth]{../input/event_studies_semiannual.png}
+\end{center}
+{\footnotesize H1 is January--June; H2 is July--December. Both halves of 2013
+are shown: H1 mixes sales before and after the announcement and vote, while
+H2 follows the end-of-school-year closure. The nine pre-period coefficients
+cover 2008 H1--2012 H1. All other controls, clustering, and sample restrictions
+match the annual models. The same audit Make task produces this figure and
+exports the semiannual coefficients and model summaries.}

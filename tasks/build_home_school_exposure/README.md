@@ -1,8 +1,10 @@
 # Build home-school exposure
 
 This task reduces the complete home-school distance matrix to one row per home
-sale, keyed by `row_id`. It records the nearest treated, control, other
-candidate, and welcoming locations and their distances in feet.
+sale, keyed by `row_id`. It records the nearest location in each of four
+groups: the 30 treated schools, the 49 control schools, other schools on the
+February closure-consideration list, and schools designated to receive
+displaced students (welcoming schools). Distances are in feet.
 
 The task also counts how many locations of each type fall within 0.25 miles
 (1,320 feet). `focal_exposure_025` distinguishes treated-only, control-only,

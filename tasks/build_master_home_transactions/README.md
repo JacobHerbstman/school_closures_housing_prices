@@ -11,13 +11,15 @@ The master file does not apply Cook County's sale-quality flags, the $10,000
 minimum, or the non-land restriction. Those analytical restrictions belong to
 the downstream `clean_home_sales` task and remain observable here.
 
-The task retains only single-PIN, non-multisale transactions. Multi-PIN sales
+A PIN is a parcel identification number. The task retains only single-PIN,
+non-multisale transactions. Multi-PIN sales
 cannot be assigned to one physical residential property without additional
 judgment. The earlier condo-and-parking recovery pipeline is preserved under
 `tasks/audits/build_all_home_sales_with_condos` and does not enter the main
 cleaning graph.
 
-Buyer and seller names are not used to define the universe. `is_mydec_date` is
-retained because unrefined `sale_date` records should not be used for day-level
-treatment timing. The output is one row per transaction, keyed by the source
+Buyer and seller names are not used to define the sample. `is_mydec_date`
+identifies dates refined using Illinois transfer declarations. Other recorded
+sale dates are not precise enough to classify transactions relative to an
+announcement on a particular day. The output is one row per transaction, keyed by the source
 `row_id`.

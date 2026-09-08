@@ -1,0 +1,72 @@
+SHA-256: 4563a374bbfb97cdc85054520efecc2e0902c822348dbedb6bad734d93bc07aa
+
+Dataset: property_composition
+Rows: 44  Columns: 14
+Key: treated, sale_year, property_type
+Duplicate or missing keys: 0
+treated | integer | nonmissing: 44 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0     0.0     0.5     0.5     1.0     1.0
+property_type | character | nonmissing: 44 | distinct nonmissing: 2
+[1] "Apartments (2-6 units)" "Houses/townhouses"
+sale_year | integer | nonmissing: 44 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+sales | integer | nonmissing: 44 | distinct nonmissing: 42
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   98.0   156.8   222.5   248.2   342.2   515.0
+mean_price | numeric | nonmissing: 44 | distinct nonmissing: 44
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 129119  169017  200015  220441  252179  403205
+median_price | numeric | nonmissing: 44 | distinct nonmissing: 44
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  48580   73370  104826  126563  144511  384354
+mean_building_sqft | numeric | nonmissing: 44 | distinct nonmissing: 44
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1278    1399    2171    2215    3007    3343
+top5_sales | integer | nonmissing: 44 | distinct nonmissing: 21
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   3.00    8.00   10.00   12.66   18.00   29.00
+top5_sale_value | numeric | nonmissing: 44 | distinct nonmissing: 44
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+ 3127226  6474621  9958942 11850693 15776046 27919921
+sales_share | numeric | nonmissing: 44 | distinct nonmissing: 42
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.3839  0.4372  0.5000  0.5000  0.5628  0.6161
+top5_sales_share | numeric | nonmissing: 44 | distinct nonmissing: 37
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.1515  0.3718  0.5000  0.5000  0.6282  0.8485
+top5_value_share | numeric | nonmissing: 44 | distinct nonmissing: 44
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.1457  0.3588  0.5000  0.5000  0.6412  0.8543
+pre_sales | integer | nonmissing: 44 | distinct nonmissing: 4
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    591     735    1140    1133    1538    1659
+pre_sales_share | numeric | nonmissing: 44 | distinct nonmissing: 4
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.4301  0.4634  0.5000  0.5000  0.5366  0.5699
+First six records:
+   treated          property_type sale_year sales mean_price median_price
+     <int>                 <char>     <int> <int>      <num>        <num>
+1:       0 Apartments (2-6 units)      2008   257   242511.4    184287.57
+2:       0      Houses/townhouses      2008   393   209491.4    102703.59
+3:       0 Apartments (2-6 units)      2009   423   129118.8     52597.30
+4:       0      Houses/townhouses      2009   346   153635.0     60275.40
+5:       0 Apartments (2-6 units)      2010   322   129251.9     51318.57
+6:       0      Houses/townhouses      2010   329   157410.1     75364.68
+   mean_building_sqft top5_sales top5_sale_value sales_share top5_sales_share
+                <num>      <int>           <num>       <num>            <num>
+1:           2773.377          5         4463358   0.3953846        0.1515152
+2:           1308.382         28        26176246   0.6046154        0.8484848
+3:           2730.615         10         6192979   0.5500650        0.2564103
+4:           1288.809         29        19380454   0.4499350        0.7435897
+5:           2754.764         10         6564786   0.4946237        0.3030303
+6:           1362.188         23        15436063   0.5053763        0.6969697
+   top5_value_share pre_sales pre_sales_share
+              <num>     <int>           <num>
+1:        0.1456728      1498       0.4745011
+2:        0.8543272      1659       0.5254989
+3:        0.2421645      1498       0.4745011
+4:        0.7578355      1659       0.5254989
+5:        0.2983878      1498       0.4745011
+6:        0.7016122      1659       0.5254989

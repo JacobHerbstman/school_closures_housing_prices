@@ -1,9 +1,13 @@
+# setwd("/Users/jacobherbstman/Desktop/school_closures_house_prices/tasks/build_home_school_exposure/code")
+
 suppressPackageStartupMessages({
   library(DBI)
   library(duckdb)
 })
 
 connection <- dbConnect(duckdb(), dbdir = ":memory:")
+# Keep Parquet row-group construction deterministic across identical rebuilds.
+dbExecute(connection, "SET threads = 1")
 
 rows_written <- dbExecute(connection, "
   COPY (

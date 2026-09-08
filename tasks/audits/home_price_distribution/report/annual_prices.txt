@@ -1,0 +1,65 @@
+SHA-256: 8570485e3316e1e5e707dbcf9938e91f59d6279f2b56c8352105d79abdf77e9d
+
+Dataset: annual_prices
+Rows: 22  Columns: 14
+Key: treated, sale_year
+Duplicate or missing keys: 0
+treated | integer | nonmissing: 22 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0     0.0     0.5     0.5     1.0     1.0
+sale_year | integer | nonmissing: 22 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+sales | integer | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  240.0   287.2   453.0   496.4   657.0   915.0
+sites | integer | nonmissing: 22 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  26.00   28.25   37.00   37.32   46.75   48.00
+mean_price | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 140149  169285  205198  222021  261026  351113
+geometric_mean | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  73893   89872  115402  118881  139427  179432
+median_price | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  54970   78060  118066  124196  163535  215509
+p10 | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  16960   20340   23296   24700   29525   34696
+p25 | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  27896   33590   44732   45132   53313   65969
+p75 | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 184330  203727  275679  314665  410680  541045
+p90 | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 404113  445986  509874  560753  617819  871454
+p95 | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 483595  598039  674714  728594  768662 1111404
+p99 | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 713645  931334 1045368 1078270 1138172 1612601
+fixed_type_share_mean | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 142002  170689  205336  223325  259933  353911
+First six records:
+   treated sale_year sales sites mean_price geometric_mean median_price
+     <int>     <int> <int> <int>      <num>          <num>        <num>
+1:       0      2008   650    48   222547.0      128361.91    132325.37
+2:       0      2009   769    45   140149.5       73892.90     54969.99
+3:       0      2010   651    47   143482.4       75437.96     60331.60
+4:       0      2011   519    46   150247.8       79647.62     63985.50
+5:       0      2012   568    46   149426.5       78306.29     60511.90
+6:       0      2013   726    48   165726.5       86015.88     73038.78
+        p10      p25      p75      p90      p95       p99 fixed_type_share_mean
+      <num>    <num>    <num>    <num>    <num>     <num>                 <num>
+1: 29823.23 53284.55 327361.6 515119.4 672771.9 1049928.7              225159.4
+2: 19749.64 28928.52 184330.0 414969.0 483594.8  753263.3              142002.0
+3: 19219.84 28422.05 192543.6 422836.5 543507.1  713645.4              144049.0
+4: 20453.43 32650.59 187783.2 415740.2 540741.8  873250.0              149877.9
+5: 19978.56 31934.03 188396.8 404112.6 547371.8  867676.9              148894.9
+6: 21263.14 33210.62 188478.1 456042.8 629665.7  966189.3              166065.9

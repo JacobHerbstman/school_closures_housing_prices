@@ -1,0 +1,42 @@
+\section*{September 7, 2026: Return to the 30/49 comparison}
+\textit{Codex draft recording Jacob's decision.}
+
+Jacob chose to resume the original comparison of 30 treated and 49 control
+schools selected from the February 2013 closure-consideration list.
+Comparisons of homes at different distances remain separate diagnostics.
+Their stricter exclusions had changed which school neighborhoods contributed
+sales; those smaller samples will not define the main comparison.
+
+The working sample includes sales within one-quarter mile of a treated or
+control school. It excludes homes near both groups and homes within the same
+radius of a school designated to receive displaced students (a welcoming
+school) or another candidate school outside the selected groups. Homes near several
+schools of the same status remain in the sample once, assigned to the nearest
+site of that status. The citywide housing-price cleaning remains unchanged,
+including the within-year upper price-per-square-foot trim.
+
+School counts differ from the number of buildings and from the number of
+school areas with eligible sales.
+The 30 treated schools occupy 29 physical sites; the 49 control schools occupy
+49 sites. The saved event-study sample contains 10,921 sales across 29 treated
+and 48 control sites. Pooled comparisons omit 2013 and use 9,912 sales. The
+return preserves both transaction and equal-site-period weights, school-site
+and calendar-time fixed effects, and the existing housing-control comparisons.
+It does not require sales in every distance band or adopt a new weighting rule.
+
+The distance comparisons remain useful evidence about how exclusions change
+the neighborhoods represented. The central research question remains whether
+prices near the still-open schools show what would have happened near the
+closed schools without closure. Differences in pre-closure trends and in the
+mix of properties sold still require investigation. The annual raw trends and
+weighting comparisons in the September 4 entry remain the starting exhibits.
+
+\smallskip
+{\small Reproduction: run \texttt{make -C tasks/audits/home\_prices\_twfe/code}.
+Counts were checked against the saved school cleaner and model summary on
+September 7. Make verified that the existing inputs and outputs were current;
+no estimates were regenerated for this decision. The local working tree is
+based on revision \texttt{c200c31}, with the earlier September 4 analysis
+changes still uncommitted. Source vintages and substantive methods are
+unchanged. The alternative distance analyses remain in
+\texttt{tasks/audits/home\_price\_rings}.}

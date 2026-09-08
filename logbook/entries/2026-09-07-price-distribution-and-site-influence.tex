@@ -1,0 +1,92 @@
+\section*{September 7, 2026: Price distributions, property types, and school-site influence}
+\textit{Codex draft; diagnostics requested by Jacob.}
+
+The difference between dollar and log estimates survives all 77 single-site
+omissions. The descriptive evidence points to differences across more of the
+upper half of the price distribution than just the most expensive sales.
+Changes in the share of houses versus apartment buildings explain little of
+the annual mean-price paths. These findings narrow the explanation; they do
+not establish that closure caused the price changes.
+
+The analysis keeps equal weight per transaction and the quarter-mile comparison
+of 30 closed and 49 still-open schools. The 10,921 sales cover 29 treated and
+48 control sites during 2008--2018. Each omission removes the transactions
+assigned to one physical school site without reassigning them. The eight
+annual models combine dollars or logs, pooled DiD or event study, and the
+presence or absence of property controls. The full-sample estimates and
+clustered standard errors reproduce the baseline before any sites are omitted.
+No additional prices are trimmed.
+
+\textbf{Means and percentiles.} As an illustrative interval, between 2012 and
+2016 the treated mean rose from \$238,759 to \$351,113, while the control mean
+rose from \$149,427 to \$198,729. This widens the mean gap by \$63,051.
+Median prices rose by almost the same dollar amount: \$45,199 near closed
+schools and \$47,177 near controls. The treated 75th percentile rose by
+\$185,888 versus \$48,879 in controls. These are unadjusted distributional
+comparisons, not estimates of causal effects at individual quantiles.
+The plots also show differences in the groups' recovery before 2013.
+
+\textbf{Expensive sales.} The annual top 5\% account for 18.0--23.4\% of
+sale value near treated schools and 21.2--26.5\% near controls. Between 2012
+and 2016 their contribution to the widening mean gap is \$11,258 of
+\$63,051; the remaining contribution comes from sales below that annual
+cutoff. Thus a few extreme transactions alone do not explain that descriptive
+change. Of the 170 treated and 387 control sales above their group-year
+95th percentile, 54.7\% and 34.9\%, respectively, are two-to-six-unit
+apartment buildings. The saved transaction list includes class codes,
+building sizes, apartment counts, and school assignments for inspection.
+
+\textbf{School-site influence.} With property controls, the pooled dollar
+DiD is \$56,983. Omitting Humboldt/Duprey lowers it to \$39,555;
+omitting Lafayette gives \$44,435, Peabody \$45,379, and Trumbull \$49,078.
+Across all omissions it ranges from \$39,555 to \$64,552. The corresponding
+log estimate ranges from 0.0167 to 0.0856, compared with 0.0552 in the full
+sample. Estimates remain imprecise: the full-sample dollar interval and those
+omitting each of the four sites above include zero. Positive point estimates
+under every single-site omission do not rule out concentration across several
+sites together. The event-study figure shows that the contrasting annual
+log and dollar paths also persist.
+
+\textbf{Property mix.} Apartment buildings comprise 57.0\% of treated sales
+before closure (2008--2012) and 53.9\% afterward (2014--2018), versus 47.5\%
+and 43.5\% for controls. Holding each group's two property-type shares at
+its pre-closure shares leaves its annual means nearly unchanged, except for
+a \$13,496 upward adjustment to the treated mean in 2018. Property size,
+quality, location, and selection into sale can still change within each type.
+
+{\small Reproduction: run Make in
+\texttt{tasks/audits/home\_price\_distribution/code}. Seven saved datasets have
+automatic reports; five figures follow. The audit uses the existing local
+source vintage. Sample counts and mean prices match the baseline in every
+site-year. Independent dummy-variable OLS checks reproduce pooled coefficients
+for the full sample and the Humboldt/Duprey omission.}
+
+\clearpage
+\begin{center}\includegraphics[width=\textwidth]{../input/annual_price_distribution.png}\end{center}
+The same dollar scales apply to treated and control panels within each row.
+The median and lower percentiles have different paths from the upper
+percentiles; annual means need not summarize a common shift in all prices.
+
+\clearpage
+\begin{center}\includegraphics[width=\textwidth]{../input/expensive_sales_contribution.png}\end{center}
+The two shaded contributions sum to each annual mean. Both use the total
+number of sales as denominator. Upper-tail membership is defined separately
+within each treatment group and year, so these are changing sets of properties.
+
+\clearpage
+\begin{center}\includegraphics[width=.95\textwidth,height=.85\textheight,keepaspectratio]{../input/property_composition.png}\end{center}
+The fixed-share comparison adjusts only the house/apartment distinction.
+It does not hold the mix of locations or characteristics within each type fixed.
+
+\clearpage
+\begin{center}\includegraphics[width=\textwidth]{../input/site_omission_did.png}\end{center}
+Each panel displays its eight most influential omissions, selected by the
+absolute change in the point estimate. The data files contain all 77 omissions.
+Humboldt and Duprey share a site and are omitted together. Intervals use
+standard errors clustered by the remaining school sites.
+
+\clearpage
+\begin{center}\includegraphics[width=\textwidth]{../input/site_omission_events.png}\end{center}
+The shaded range describes sensitivity of point estimates to single-site
+omissions. It is not a confidence band. Vertical intervals apply to the
+full-sample estimates, and 2012 is the omitted reference year.

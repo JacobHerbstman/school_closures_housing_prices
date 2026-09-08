@@ -1,15 +1,16 @@
 # Correct home-sale characteristics
 
-Run `make` from `code/`. The output retains every row of the 2006–2025
-characterized master, keyed by `row_id`. No study-period, market-sale,
-mixed-use, completeness, or price restriction is applied here. The upstream
-master still defines the single-PIN non-condominium residential universe.
+This task updates the recorded characteristics of properties with historical
+home-improvement exemptions (HIEs). It retains every transaction in the
+2006–2025 non-condominium master, keyed by `row_id`, and supplies corrected
+characteristics and property types to the sales cleaner. Run `make` from `code/`.
 
 ## Historical exemption correction
 
-The task uses the Assessor's pinned field map and dictionaries. Its 27
-supported fields reproduce the careful HIE audit without depending on audit
-code, outputs, or the valuation package. The rule is:
+The task uses a recorded version of the Assessor's field map and categorical
+dictionaries to update 27 characteristics. The
+[home-improvement audit](../audits/home_improvement_exemptions/) checks these
+calculations against the Assessor's implementation. The correction rules are:
 
 1. Link only exemptions whose inclusive start–expiry interval contains the
    sale year. Correct only single-card sales before 2021; the newer source
@@ -35,8 +36,9 @@ unchanged provenance, not analysis classifications. `hie_exemption_ids` and
 `hie_counted_exemption_ids` refer to row numbers in the pinned raw file.
 They describe active source membership; `hie_correction_eligible` states
 whether those records were actually eligible for use. `hie_unresolved_fields`
-lists fields left unknown. `hie_start_year_timing_uncertain` identifies the
-annual timing limitation, not a sample exclusion.
+lists fields left unknown. `hie_start_year_timing_uncertain` marks sales in the year an exemption began.
+The annual records do not establish whether the improvement preceded the sale;
+these sales remain eligible for correction.
 
 ## Consistent property type
 
@@ -61,3 +63,6 @@ Later records are only audit evidence. They cannot establish conversion dates
 or be copied backward. See `tasks/audits/home_sales_finalization/` for full
 production/reference parity, class follow-up, sample reconciliation, and
 coordinate checks; see the original HIE audit for source-method validation.
+
+The normal build also writes a standard data report in `report/`, including
+the saved CSV checksum, transaction key checks, missingness, and distributions.

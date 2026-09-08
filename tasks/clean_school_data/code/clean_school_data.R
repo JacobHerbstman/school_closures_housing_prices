@@ -36,7 +36,9 @@ report_1314 <- read_csv(
 stopifnot(
   nrow(closure_1213) == 129L,
   n_distinct(closure_1213$school_id) == 129L,
-  !anyDuplicated(report_1213$school_id)
+  !anyDuplicated(report_1213$school_id),
+  !anyNA(report_1314$school_id),
+  !anyDuplicated(report_1314$school_id)
 )
 
 collapse_boundary <- function(x) {
@@ -176,8 +178,7 @@ stopifnot(nrow(school_info_garfield) == 1L)
 school_1213_clean <- school_1213_clean |>
   rows_update(school_info_garfield, by = "school_id")
 
-report_1314_school <- report_1314 |>
-  distinct(school_id, .keep_all = TRUE)
+report_1314_school <- report_1314
 
 school_info_1314 <- report_1314_school |>
   transmute(

@@ -1,0 +1,57 @@
+\section*{September 7, 2026: What is in the treated price distribution's upper tail?}
+\textit{Codex draft; follow-up to the price-distribution diagnostics.}
+
+Four school sites account for 82.7\% of the sale value in the treated group's
+upper price quarter after closure: Trumbull, Peabody, Humboldt/Duprey, and
+Lafayette. These are descriptive concentrations, not estimated closure effects.
+
+Here ``upper quarter'' means sales above the 75th percentile within each
+treatment group and year. Pre-closure statistics pool 2008--2012; post-closure
+statistics pool 2014--2018. All prices are in 2022
+dollars, and each sale has equal weight. Both the percentile thresholds and
+the properties above them can change over time.
+
+\begin{center}
+{\small\input{../output/upper_tail_table.tex}}
+\end{center}
+
+The largest contribution to the widening raw mean gap comes from the
+75th--95th percentile band, not the most extreme 5\%. Of the \$58,552 widening
+between the pooled pre- and post-closure periods, the 75th--95th band accounts
+for \$34,970 (59.7\%), and the top 5\% for \$9,750 (16.7\%). The 50th--75th
+band contributes \$12,779 and the bottom half \$1,053. These contributions
+sum to the raw mean difference; they do not decompose the controlled regression.
+
+In treated areas, the mean price in the 75th--95th band rises from \$458,987
+to \$699,241. Apartment buildings comprise 71.8\% of this band before closure
+and 71.7\% afterward, while average building area rises only from 2,816 to
+2,887 square feet. The price increase therefore is not accompanied by a broad
+shift into apartment buildings or a comparably large increase in building size.
+These summaries do not hold every characteristic or location fixed.
+
+The existing property controls include property class (including apartment
+buildings), apartment count, building and land area, age, bedrooms, rooms,
+full bathrooms, residential type, construction quality, and repair condition.
+They reduce the pooled dollar coefficient from \$62,880 to \$56,983, about
+9\%. Thus the broad house/apartment distinction is already represented in
+the model and does not explain most of its dollar estimate. The controls allow
+for observed differences according to the specified formula; they cannot
+guarantee constant quality. They also impose common coefficients across years
+and sites. Unrecorded renovation, differences within a school area, or changing
+market premiums can remain. School-site fixed effects absorb persistent price
+levels, not different neighborhood appreciation paths.
+
+Mean--median divergence is useful evidence about the raw distribution,
+but a regression of log price estimates average log prices, not the median.
+Consequently the raw quantiles alone do not explain the controlled log--dollar
+difference. The evidence now locates much of the high-price activity in a
+small group of school areas and in a broad upper-price segment. Identifying
+the economic cause requires examining their within-area price and property
+changes; neighborhood appreciation and unmeasured quality changes remain
+hypotheses, not established mechanisms.
+
+{\small Reproduction: Make in the \texttt{home\_price\_distribution} audit
+now produces price-band and school-site summaries, each with an automatic
+report. The existing source vintage, sample, and regressions are unchanged.
+The two new datasets contain 16 band-period rows and 154 site-period rows;
+assertions reconstruct group means and upper-quarter contributions. The code is in the current working tree.}

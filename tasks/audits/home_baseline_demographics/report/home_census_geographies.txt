@@ -1,0 +1,26 @@
+home_census_geographies first verified baseline; ACS 2008–2012 and TIGER 2012
+Rows: 10921
+One point to exactly one tract and one block group; no nearest-geography fallback.
+              column nonmissing distinct_nonmissing      type
+              <char>      <int>               <int>    <char>
+1:            row_id      10921               10921 character
+2:         sale_year      10921                  11   integer
+3:           treated      10921                   2   integer
+4:    school_site_id      10921                  77 character
+5:       tract_geoid      10921                 191 character
+6: block_group_geoid      10921                 334 character
+    row_id            sale_year       treated      school_site_id
+ Length:10921       Min.   :2008   Min.   :0.000   Length:10921
+ Class :character   1st Qu.:2010   1st Qu.:0.000   Class :character
+ Mode  :character   Median :2013   Median :0.000   Mode  :character
+                    Mean   :2013   Mean   :0.301
+                    3rd Qu.:2016   3rd Qu.:1.000
+                    Max.   :2018   Max.   :1.000
+ tract_geoid        block_group_geoid
+ Length:10921       Length:10921
+ Class :character   Class :character
+ Mode  :character   Mode  :character
+
+
+
+CSV SHA256: 208393c50e707eaa7b764d0e51e2095a12669443dd548b57ec3bba0db3256a44

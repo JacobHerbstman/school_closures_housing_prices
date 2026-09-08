@@ -30,6 +30,6 @@ plot(neighborhoods$sales_old, neighborhoods$share_change_pct, pch = 16, cex = .5
      main = "Selection change by assessor neighborhood")
 abline(h = 0, col = "#BBBBBB", lty = 3)
 mtext("Housing sample reconciliation | Chicago, 2008–2018", outer = TRUE, side = 3, cex = 1.1, font = 2)
-mtext("Same source transactions and existing price rules. Dashed teal overlays gray where series agree. No inflation adjustment or new trimming.",
+mtext("Final series adds within-year top-0.1% price-per-square-foot trimming. Nominal prices; dashed teal overlays gray where series agree.",
       outer = TRUE, side = 1, cex = .75)
 dev.off()

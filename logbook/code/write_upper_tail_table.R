@@ -1,0 +1,16 @@
+# setwd("/Users/jacobherbstman/Desktop/school_closures_house_prices/logbook/code")
+library(data.table)
+sites <- fread("../input/upper_tail_sites.csv")
+stopifnot(!anyDuplicated(sites[,.(treated,period,school_site_id)]))
+post <- sites[treated==1 & period=="2014-2018"][order(-upper_sale_value)][1:4]
+pre <- sites[treated==1 & period=="2008-2012",.(school_site_id,pre_mean=upper_mean_price)]
+d <- merge(post,pre,by="school_site_id",all.x=TRUE)
+stopifnot(nrow(d)==4,!anyNA(d$pre_mean))
+setorder(d,-share_of_group_upper_value)
+labels <- gsub(" Elementary School","",d$school_names,fixed=TRUE)
+labels <- gsub("Alexander von Humboldt / Ana Roque de Duprey","Humboldt / Duprey",labels,fixed=TRUE)
+sink("../output/upper_tail_table.tex")
+cat("\\begin{tabular}{lrrr}\n\\hline\nSchool site & Share of upper & \\multicolumn{2}{c}{Upper-quarter mean price} \\\\\n & sale value, post & 2008--2012 & 2014--2018 \\\\\n\\hline\n")
+for(i in seq_len(nrow(d))) cat(sprintf("%s & %.1f\\%% & \\$%s & \\$%s \\\\\n",labels[i],100*d$share_of_group_upper_value[i],format(round(d$pre_mean[i]),big.mark=","),format(round(d$upper_mean_price[i]),big.mark=",")))
+cat("\\hline\n\\end{tabular}\n")
+sink()

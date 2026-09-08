@@ -1,0 +1,30 @@
+\section*{September 7, 2026: Retaining incomplete records in raw price trends}
+\textit{Codex draft; descriptive-sample change requested by Jacob.}
+
+Descriptive price trends now retain transactions with missing property
+characteristics. The sample grows from 10,921 to 11,600 sales: 3,517 near
+selected closed schools and 8,083 near controls. All previously selected sales
+remain. Of the 679 added sales, 673 have blank apartment-unit counts; six
+additional sales lack other required characteristics. Property classification
+still uses the assessor's recorded category.
+
+The 30/49 school roster, quarter-mile geography, transaction weights, and
+property-eligibility rules remain fixed. Room consistency checks apply where
+both counts are observed. Price-per-square-foot screens retain the existing
+annual cutoffs and apply where positive floor area is observed. Five control
+sales without usable floor area enter dollar-price summaries but not average
+building size. Existing regressions retain their complete-characteristics sample.
+
+\begin{center}
+\includegraphics[width=\textwidth]{../input/overview_price_trends.png}
+\end{center}
+
+Including these sales lowers 2018 mean prices near closed schools from about
+\$307,000 to \$294,000 and medians from \$181,000 to \$172,000, in 2022 dollars.
+Control means fall from \$234,000 to \$230,000 and medians from \$143,000 to
+\$139,000. The plotted prices describe the broader set of transactions sold.
+
+{\small Reproduction: Make in \texttt{tasks/audits/home\_data\_overview/code}.
+The saved summaries report old and new counts, added sales, and coverage of
+building area. The earlier complete-characteristics figure is preserved for
+its dated entry. Housing-source hashes and the regression sample are unchanged.}

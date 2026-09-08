@@ -1,0 +1,79 @@
+Common ring assignments: first verified baseline
+Key: ring, row_id.
+Fixed 2,640-foot exclusion of other sites; identical included site-years across bands.
+Sites need at least one common year before 2013 and one after; annual roster may change.
+Assignment rows: 28191
+           column      type nonmissing distinct
+           <char>    <char>      <int>    <int>
+1:           ring character      28191        5
+2:         row_id character      28191    12038
+3: school_site_id   integer      28191       32
+4:        treated   integer      28191        2
+5:  distance_feet   numeric      28191    10035
+     ring              row_id          school_site_id      treated
+ Length:28191       Length:28191       Min.   :609809   Min.   :0.0000
+ Class :character   Class :character   1st Qu.:609986   1st Qu.:0.0000
+ Mode  :character   Mode  :character   Median :610062   Median :0.0000
+                                       Mean   :610086   Mean   :0.1226
+                                       3rd Qu.:610225   3rd Qu.:0.0000
+                                       Max.   :610521   Max.   :1.0000
+ distance_feet
+ Min.   :  85.13
+ 1st Qu.: 927.23
+ Median :1487.52
+ Mean   :1495.99
+ 3rd Qu.:2106.52
+ Max.   :2639.94
+Support key: school_site_id, ring, sale_year. Empty cells explicitly recorded.
+Support rows: 2112
+Classes ‘data.table’ and 'data.frame':	2112 obs. of  8 variables:
+ $ school_site_id: int  609797 609797 609797 609797 609797 609797 609797 609797 609797 609797 ...
+ $ ring          : chr  "annulus_0125_025" "annulus_0125_025" "annulus_0125_025" "annulus_0125_025" ...
+ $ sale_year     : int  2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 ...
+ $ treated       : int  0 0 0 0 0 0 0 0 0 0 ...
+ $ sales         : int  0 0 0 0 0 0 1 0 1 0 ...
+ $ common_year   : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
+ $ common_site   : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
+ $ included      : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
+ - attr(*, ".internal.selfref")=<externalptr>
+ school_site_id       ring             sale_year       treated
+ Min.   :609797   Length:2112        Min.   :2008   Min.   :0.0000
+ 1st Qu.:610006   Class :character   1st Qu.:2010   1st Qu.:0.0000
+ Median :610096   Mode  :character   Median :2013   Median :0.0000
+ Mean   :610092                      Mean   :2013   Mean   :0.3281
+ 3rd Qu.:610219                      3rd Qu.:2016   3rd Qu.:1.0000
+ Max.   :610521                      Max.   :2018   Max.   :1.0000
+     sales        common_year     common_site      included
+ Min.   :  0.00   Mode :logical   Mode :logical   Mode :logical
+ 1st Qu.:  0.00   FALSE:1182      FALSE:1056      FALSE:1200
+ Median :  3.00   TRUE :930       TRUE :1056      TRUE :912
+ Mean   :  7.35
+ 3rd Qu.:  8.00
+ Max.   :106.00
+Key: <ring, treated>
+               ring treated sales_halfmile_exclusion sites_halfmile_exclusion
+             <char>   <int>                    <int>                    <int>
+1: annulus_0125_025       0                     2871                       38
+2: annulus_0125_025       1                      531                       14
+3:   annulus_025_05       0                     8668                       41
+4:   annulus_025_05       1                     2094                       21
+5:      within_0125       0                     1145                       33
+6:      within_0125       1                      214                        7
+   sales_common_roster sales sites pre_sales transition_sales post_sales
+                 <int> <int> <int>     <int>            <int>      <int>
+1:                2604  2427    26       984              245       1198
+2:                 428   398     6       153               37        208
+3:                7591  7108    26      2722              660       3726
+4:                1011   815     6       271               69        475
+5:                1109  1079    26       404               97        578
+6:                 212   211     6        80               25        106
+   site_years
+        <int>
+1:        252
+2:         52
+3:        252
+4:         52
+5:        252
+6:         52
+Assignments SHA256: 87f5b0f53bdedface8e9d5f414c7430450526f95e6b56d92e43ad62c5d9d896d
+Support SHA256: 36307b23a2bfc895c320783d32d9f093c7fcb3a7445946622f5e48ac6e5a3bdb

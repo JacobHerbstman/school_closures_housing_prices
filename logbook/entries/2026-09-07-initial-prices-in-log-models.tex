@@ -1,0 +1,42 @@
+\section*{September 7, 2026: Initial-price adjustment in the log models}
+\textit{Codex draft; sensitivity check requested by Jacob.}
+
+Adding the same initial-price-by-year interactions to the log models lowers
+the pooled coefficient with property controls from 0.0552 to 0.0320.
+Exponentiating gives 5.7\% and 3.2\%, respectively; the adjusted 95\%
+interval is --12.0\% to 21.1\%. These percentages describe the conditional
+geometric-mean contrast, not a percentage change in arithmetic mean prices.
+
+\begin{center}
+\begin{tabular}{lrr}
+\hline
+Pooled log coefficient & Existing model & Initial price $\times$ year added \\
+\hline
+Site and year fixed effects & 0.0744 & 0.0547 \\
+With property controls & 0.0552 & 0.0320 \\
+\hline
+\end{tabular}
+\end{center}
+
+Only the outcome changes to log price. The initial-price covariate remains
+the site's pooled 2008--2012 arithmetic mean price in dollars, divided by
+\$100,000, interacted with calendar year. It is not itself logged. The sample,
+transaction weights, property controls, and school-site clustering are
+unchanged. The annual models use 2012 as reference; pooled models omit 2013.
+
+The annual log estimates remain close to zero and do not develop the sustained
+post-closure rise seen in the dollar specifications. With property controls,
+the adjusted 2016, 2017, and 2018 coefficients are --0.0243, 0.0330, and
+0.0419; all pointwise 95\% intervals include zero. Initial-price adjustment
+therefore does not resolve the difference between the two outcome scales.
+This remains an exploratory comparison, with the same noisy initial means and
+conditional inference described in the preceding dollar adjustment.
+
+\begin{center}\includegraphics[width=\textwidth]{../input/initial_price_log_events.png}\end{center}
+
+{\small Reproduction: Make in the \texttt{home\_price\_distribution} audit.
+The coefficient report expands from 82 to 164 rows and the model report from
+eight to 16; all dollar coefficients and the 77 initial-price records remain
+unchanged. The log refits reproduce the baseline, and independent OLS checks
+reproduce the adjusted pooled and annual coefficients with property controls.
+The source vintage and sample remain unchanged; code is in the current working tree.}

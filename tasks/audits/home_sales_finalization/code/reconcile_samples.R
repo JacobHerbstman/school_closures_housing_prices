@@ -68,6 +68,21 @@ old <- evaluate_sample(baseline, "property_class")
 physical_only <- evaluate_sample(corrected, "property_class")
 updated_class <- evaluate_sample(corrected, "res_class")
 final <- evaluate_sample(corrected, "analysis_class")
+# The current price sample adds a year-specific upper-tail trim after all
+# prior screens. Keep the historical comparison samples unchanged.
+price_candidates <- corrected[final$included, .(
+  row_id, sale_year, price_per_sqft = sale_price_nominal / res_char_bldg_sf
+)]
+price_candidates[, cutoff := quantile(price_per_sqft, 0.999, type = 7), by = sale_year]
+price_tail <- price_candidates[price_per_sqft > cutoff, row_id]
+final$included[corrected$row_id %in% price_tail] <- FALSE
+final$reason[corrected$row_id %in% price_tail] <- "within_year_ppsf_p999"
+final$funnel <- rbind(final$funnel, data.table(step = "within_year_ppsf_p999", retained = sum(final$included)))
+old$funnel <- rbind(old$funnel, data.table(step = "within_year_ppsf_p999", retained = sum(old$included)))
+price_tail_summary <- price_candidates[, .(
+  cutoff_nominal = first(cutoff), sales_before = .N,
+  sales_removed = sum(price_per_sqft > cutoff)
+), by = sale_year][order(sale_year)]
 stopifnot(sum(old$included) == 167977L,
           setequal(corrected$row_id[final$included], clean$row_id))
 variants <- data.table(
@@ -198,6 +213,7 @@ hashes <- data.table(
                   function(path) digest::digest(file = path, algo = "sha256"), character(1))
 )
 saveRDS(list(variants = variants, funnel = funnel, changes = changes, change_reasons = change_reasons,
+             price_tail_summary = price_tail_summary,
              class_transitions = class_transitions, conversions = conversions, class_review = class_review,
              class_validation = class_validation, monthly = monthly, annual = annual,
              neighborhoods = neighborhood_changes, distribution = distribution, trend_checks = trend_checks,

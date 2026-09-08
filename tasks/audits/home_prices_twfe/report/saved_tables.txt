@@ -1,0 +1,305 @@
+CSV SHA-256: 2eaac804d06df113ac5f67290021caeb034a3b54966d9407deb93c580770c50d
+
+Dataset: coefficients
+Rows: 348  Columns: 10
+Key: model, term
+Duplicate or missing keys: 0
+term | character | nonmissing: 348 | distinct nonmissing: 32
+[1] "sale_halfyear::2008:treated"   "sale_halfyear::2008.5:treated"
+[3] "sale_halfyear::2009:treated"   "sale_halfyear::2009.5:treated"
+[5] "sale_halfyear::2010:treated"   "sale_halfyear::2010.5:treated"
+estimate | numeric | nonmissing: 348 | distinct nonmissing: 348
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+-53907.528     -0.165     -0.019   5299.974   5769.350  92256.562
+std_error | numeric | nonmissing: 348 | distinct nonmissing: 348
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+    0.073     0.126  7357.654 14025.353 26674.499 45466.408
+t_statistic | numeric | nonmissing: 348 | distinct nonmissing: 348
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+-2.45415 -0.65406 -0.11107 -0.04013  0.57214  2.24679
+p_value | numeric | nonmissing: 348 | distinct nonmissing: 348
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.01641 0.30598 0.53182 0.53593 0.81394 0.99939
+conf_low | numeric | nonmissing: 348 | distinct nonmissing: 348
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+-1.089e+05 -4.427e+04 -5.140e-01 -2.263e+04 -2.760e-01  9.877e+03
+conf_high | numeric | nonmissing: 348 | distinct nonmissing: 348
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+ -8135.778      0.209      0.372  33233.886  55045.874 181009.715
+model | character | nonmissing: 348 | distinct nonmissing: 36
+[1] "did_dollars"                    "did_hedonic_dollars"
+[3] "did_hedonic_log"                "did_log"
+[5] "did_semiannual_amenity_dollars" "did_semiannual_amenity_log"
+sale_year | integer | nonmissing: 332 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+   2008    2010    2013    2013    2016    2018      16
+sale_halfyear | numeric | nonmissing: 252 | distinct nonmissing: 21
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+   2008    2010    2014    2013    2016    2018      96
+First six records:
+                      term      estimate    std_error t_statistic    p_value
+                    <char>         <num>        <num>       <num>      <num>
+1:            treated_post  7.438575e-02 8.847644e-02   0.8407408 0.40313053
+2:            treated_post  6.287968e+04 3.165360e+04   1.9864939 0.05058371
+3: sale_year::2008:treated -7.091437e-02 1.033930e-01  -0.6858720 0.49488085
+4: sale_year::2009:treated  2.308205e-03 1.053527e-01   0.0219093 0.98257773
+5: sale_year::2010:treated -1.908604e-01 9.076062e-02  -2.1028988 0.03878503
+6: sale_year::2011:treated -7.650551e-02 1.038352e-01  -0.7367972 0.46351412
+       conf_low     conf_high       model sale_year sale_halfyear
+          <num>         <num>      <char>     <int>         <num>
+1:   -0.1018303  2.506018e-01     did_log        NA            NA
+2: -163.9246178  1.259233e+05 did_dollars        NA            NA
+3:   -0.2768394  1.350107e-01   event_log      2008            NA
+4:   -0.2075200  2.121364e-01   event_log      2009            NA
+5:   -0.3716259 -1.009496e-02   event_log      2010            NA
+6:   -0.2833113  1.303003e-01   event_log      2011            NA
+CSV SHA-256: ae0cbd18a1175b3e0d61416eb84b2a8e5f3f8a98f46e62a7caedaf0bc0d2d71d
+
+Dataset: model_summary
+Rows: 36  Columns: 20
+Key: model
+Duplicate or missing keys: 0
+model | character | nonmissing: 36 | distinct nonmissing: 36
+[1] "did_dollars"                    "did_hedonic_dollars"
+[3] "did_hedonic_log"                "did_log"
+[5] "did_semiannual_amenity_dollars" "did_semiannual_amenity_log"
+outcome | character | nonmissing: 36 | distinct nonmissing: 2
+[1] "log_real_price"          "real_price_2022_dollars"
+weighting | character | nonmissing: 36 | distinct nonmissing: 2
+[1] "equal_site_period" "equal_transaction"
+empty_site_periods | integer | nonmissing: 36 | distinct nonmissing: 3
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  26.00   26.00  102.00   70.56  109.00  109.00
+frequency | character | nonmissing: 36 | distinct nonmissing: 2
+[1] "annual"     "semiannual"
+hedonics | logical | nonmissing: 36 | distinct nonmissing: 2
+[1] FALSE  TRUE
+amenity_by_halfyear | logical | nonmissing: 36 | distinct nonmissing: 2
+[1] FALSE  TRUE
+dropped_collinear_terms | character | nonmissing: 36 | distinct nonmissing: 2
+[1] ""
+[2] "factor(res_char_type_resd)Split Level"
+observations | integer | nonmissing: 36 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   9912    9912   10921   10473   10921   10921
+school_sites | integer | nonmissing: 36 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+     77      77      77      77      77      77
+treated_sites | integer | nonmissing: 36 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+     29      29      29      29      29      29
+control_sites | integer | nonmissing: 36 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+     48      48      48      48      48      48
+reference_year | integer | nonmissing: 20 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+   2012    2012    2012    2012    2012    2012      16
+reference_halfyear | numeric | nonmissing: 12 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+   2012    2012    2012    2012    2012    2012      24
+includes_transition_year | logical | nonmissing: 36 | distinct nonmissing: 2
+[1] FALSE  TRUE
+pretrend_f | numeric | nonmissing: 20 | distinct nonmissing: 20
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+ 0.3165  0.5296  0.9823  1.0150  1.2854  2.8870      16
+pretrend_p | numeric | nonmissing: 20 | distinct nonmissing: 20
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+0.02784 0.26759 0.45750 0.51368 0.74757 0.96724      16
+pretrend_df1 | integer | nonmissing: 20 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+      4       4       9       7       9       9      16
+pretrend_df2 | integer | nonmissing: 20 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+     76      76      76      76      76      76      16
+fixest_version | character | nonmissing: 36 | distinct nonmissing: 1
+[1] "0.12.1"
+First six records:
+                 model                 outcome         weighting
+                <char>                  <char>            <char>
+1:             did_log          log_real_price equal_transaction
+2:         did_dollars real_price_2022_dollars equal_transaction
+3:           event_log          log_real_price equal_transaction
+4:       event_dollars real_price_2022_dollars equal_transaction
+5:     did_hedonic_log          log_real_price equal_transaction
+6: did_hedonic_dollars real_price_2022_dollars equal_transaction
+   empty_site_periods frequency hedonics amenity_by_halfyear
+                <int>    <char>   <lgcl>              <lgcl>
+1:                 26    annual    FALSE               FALSE
+2:                 26    annual    FALSE               FALSE
+3:                 26    annual    FALSE               FALSE
+4:                 26    annual    FALSE               FALSE
+5:                 26    annual     TRUE               FALSE
+6:                 26    annual     TRUE               FALSE
+                 dropped_collinear_terms observations school_sites
+                                  <char>        <int>        <int>
+1:                                               9912           77
+2:                                               9912           77
+3:                                              10921           77
+4:                                              10921           77
+5: factor(res_char_type_resd)Split Level         9912           77
+6: factor(res_char_type_resd)Split Level         9912           77
+   treated_sites control_sites reference_year reference_halfyear
+           <int>         <int>          <int>              <num>
+1:            29            48             NA                 NA
+2:            29            48             NA                 NA
+3:            29            48           2012                 NA
+4:            29            48           2012                 NA
+5:            29            48             NA                 NA
+6:            29            48             NA                 NA
+   includes_transition_year pretrend_f pretrend_p pretrend_df1 pretrend_df2
+                     <lgcl>      <num>      <num>        <int>        <int>
+1:                    FALSE         NA         NA           NA           NA
+2:                    FALSE         NA         NA           NA           NA
+3:                     TRUE   1.406661 0.23984962            4           76
+4:                     TRUE   2.886971 0.02783719            4           76
+5:                    FALSE         NA         NA           NA           NA
+6:                    FALSE         NA         NA           NA           NA
+   fixest_version
+           <char>
+1:         0.12.1
+2:         0.12.1
+3:         0.12.1
+4:         0.12.1
+5:         0.12.1
+6:         0.12.1
+CSV SHA-256: 09b7594298369ec99ada688955bc16e7a91f9888fc7027a78e09277342ba703c
+
+Dataset: site_year_support
+Rows: 821  Columns: 7
+Key: school_site_id, sale_year
+Duplicate or missing keys: 0
+school_site_id | integer | nonmissing: 821 | distinct nonmissing: 77
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609797  610013  610119  610109  610225  610521
+treated | integer | nonmissing: 821 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  0.0000  0.0000  0.3752  1.0000  1.0000
+sale_year | integer | nonmissing: 821 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+sales | integer | nonmissing: 821 | distinct nonmissing: 45
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    1.0     7.0    12.0    13.3    18.0    49.0
+parcels | integer | nonmissing: 821 | distinct nonmissing: 43
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    1.0     7.0    11.0    12.7    18.0    48.0
+mean_real_price | numeric | nonmissing: 821 | distinct nonmissing: 821
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  15348   73845  115950  203425  246434 1404744
+mean_log_real_price | numeric | nonmissing: 821 | distinct nonmissing: 821
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  9.639  10.855  11.314  11.546  12.133  14.155
+First six records:
+   school_site_id treated sale_year sales parcels mean_real_price
+            <int>   <int>     <int> <int>   <int>           <num>
+1:         609797       0      2008     7       7       125239.28
+2:         609797       0      2009    26      23       116597.27
+3:         609797       0      2010    15      14        79384.08
+4:         609797       0      2011    12      12        77968.77
+5:         609797       0      2012     6       6        60187.38
+6:         609797       0      2013     7       7       122832.89
+   mean_log_real_price
+                 <num>
+1:            11.44213
+2:            11.19092
+3:            10.97013
+4:            10.86998
+5:            10.72976
+6:            11.35479
+CSV SHA-256: 9a2cefa2ebf17c2518e784cd631ae6b0bb5de9da6aa54f93c3bedbdfe06c7c5c
+
+Dataset: raw_price_trends
+Rows: 132  Columns: 10
+Key: frequency, weighting, treated, period
+Duplicate or missing keys: 0
+treated | integer | nonmissing: 132 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0     0.0     0.5     0.5     1.0     1.0
+period | numeric | nonmissing: 132 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+mean_real_price | numeric | nonmissing: 132 | distinct nonmissing: 132
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 134204  165721  198663  213469  251982  368183
+mean_log_real_price | numeric | nonmissing: 132 | distinct nonmissing: 132
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  11.15   11.35   11.54   11.60   11.81   12.27
+contributing_sites | integer | nonmissing: 132 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  24.00   27.00   36.00   36.45   46.00   48.00
+sales | integer | nonmissing: 132 | distinct nonmissing: 60
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  110.0   174.0   288.0   330.9   388.0   915.0
+min_sales_per_site | integer | nonmissing: 132 | distinct nonmissing: 3
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  1.000   1.000   1.000   1.182   1.000   3.000
+median_sales_per_site | numeric | nonmissing: 132 | distinct nonmissing: 20
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  3.000   5.000   7.000   7.621   9.000  19.500
+frequency | character | nonmissing: 132 | distinct nonmissing: 2
+[1] "annual"     "semiannual"
+weighting | character | nonmissing: 132 | distinct nonmissing: 2
+[1] "equal_site_period" "equal_transaction"
+First six records:
+   treated period mean_real_price mean_log_real_price contributing_sites sales
+     <int>  <num>           <num>               <num>              <int> <int>
+1:       0   2008        252068.6            11.90080                 48   650
+2:       0   2009        167883.7            11.39277                 45   769
+3:       0   2010        169118.6            11.37660                 47   651
+4:       0   2011        153989.3            11.31912                 46   519
+5:       0   2012        149141.9            11.23663                 46   568
+6:       0   2013        164445.3            11.33654                 48   726
+   min_sales_per_site median_sales_per_site frequency         weighting
+                <int>                 <num>    <char>            <char>
+1:                  1                    12    annual equal_site_period
+2:                  3                    16    annual equal_site_period
+3:                  1                    13    annual equal_site_period
+4:                  1                    11    annual equal_site_period
+5:                  2                    12    annual equal_site_period
+6:                  1                    15    annual equal_site_period
+CSV SHA-256: ecd4ba9d60f8134796538c896af2e0ecd60f3e91071dd13ceaf4b2b4499f8d00
+
+Dataset: site_period_support
+Rows: 2541  Columns: 8
+Key: frequency, school_site_id, period
+Duplicate or missing keys: 0
+school_site_id | integer | nonmissing: 2541 | distinct nonmissing: 77
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609797  610013  610119  610109  610225  610521
+treated | integer | nonmissing: 2541 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  0.0000  0.0000  0.3766  1.0000  1.0000
+period | numeric | nonmissing: 2541 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+sales | integer | nonmissing: 2541 | distinct nonmissing: 46
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  0.000   3.000   7.000   8.596  12.000  49.000
+parcels | integer | nonmissing: 2541 | distinct nonmissing: 44
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  0.000   3.000   7.000   8.325  12.000  48.000
+mean_real_price | numeric | nonmissing: 2406 | distinct nonmissing: 2349
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+  13096   69707  114835  202714  247247 1404744     135
+mean_log_real_price | numeric | nonmissing: 2406 | distinct nonmissing: 2349
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+   9.48   10.84   11.35   11.55   12.19   14.16     135
+frequency | character | nonmissing: 2541 | distinct nonmissing: 2
+[1] "annual"     "semiannual"
+First six records:
+   school_site_id treated period sales parcels mean_real_price
+            <int>   <int>  <num> <int>   <int>           <num>
+1:         609797       0   2008     7       7       125239.28
+2:         609797       0   2009    26      23       116597.27
+3:         609797       0   2010    15      14        79384.08
+4:         609797       0   2011    12      12        77968.77
+5:         609797       0   2012     6       6        60187.38
+6:         609797       0   2013     7       7       122832.89
+   mean_log_real_price frequency
+                 <num>    <char>
+1:            11.44213    annual
+2:            11.19092    annual
+3:            10.97013    annual
+4:            10.86998    annual
+5:            10.72976    annual
+6:            11.35479    annual

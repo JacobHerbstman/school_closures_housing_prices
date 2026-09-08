@@ -1,0 +1,24 @@
+Home amenity distances: first verified baseline
+Key: row_id; one row per clean price transaction
+Rows: 167468
+Distance units: miles (5,280 EPSG:3435 US survey feet)
+Source features: 583 park polygons, 145 CTA stations, one Lake Michigan polygon
+Geometry repair: st_make_valid on park 218 (Douglas), one ring self-intersection
+       column      type nonmissing distinct_nonmissing
+       <char>    <char>      <int>               <int>
+1:     row_id character     167468              167468
+2: lake_miles   numeric     167467              142229
+3: park_miles   numeric     167467              142229
+4:  cta_miles   numeric     167467              142229
+   lake_miles          park_miles       cta_miles
+ Min.   : 0.006294   Min.   :0.0000   Min.   :0.01292
+ 1st Qu.: 2.524412   1st Qu.:0.1168   1st Qu.:0.50938
+ Median : 4.807357   Median :0.2079   Median :1.00306
+ Mean   : 4.691773   Mean   :0.2342   Mean   :1.36251
+ 3rd Qu.: 6.610068   3rd Qu.:0.3234   3rd Qu.:1.94227
+ Max.   :10.903925   Max.   :1.3047   Max.   :6.86512
+ NA's   :1           NA's   :1        NA's   :1
+CSV SHA256: 4e0c6da5761e5ba24d42a9afd52fdf2627ecae083056ee1fbb5ccd55534f6c09
+Parks ZIP SHA256: 61cee23f2c6b063e0f850c78c7856ba471cf4ddf83decca67d389182878b823f
+CTA GeoJSON SHA256: 7e6724449dc3fc1ec81e39959a8ebd2a4bd8e1a4d02ed0c169f0138ecc6f9bd4
+Hydro GeoJSON SHA256: 455653cc9a170c417d7d3b56d9bf4918e1bfac46b92b7f17b92a131c77b0cee3

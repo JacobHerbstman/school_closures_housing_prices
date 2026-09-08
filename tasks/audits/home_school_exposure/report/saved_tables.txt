@@ -1,0 +1,583 @@
+CSV SHA-256: 717db043cdb61b22c6d4b1e9299fbb5b65752399d9e80d73aab4ed6c7d37b127
+
+Dataset: exposure_summary
+Rows: 5  Columns: 7
+Key: focal_exposure_025
+Duplicate or missing keys: 0
+focal_exposure_025 | character | nonmissing: 5 | distinct nonmissing: 5
+[1] "control_only"            "missing_coordinates"
+[3] "outside_focal_rings"     "treated_control_overlap"
+[5] "treated_only"
+sales | integer | nonmissing: 5 | distinct nonmissing: 5
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      1     337    4329   33494    7850  154951
+parcels | integer | nonmissing: 5 | distinct nonmissing: 5
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      1     232    3141   25234    5627  117167
+sales_percent | numeric | nonmissing: 5 | distinct nonmissing: 5
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  0.001   0.201   2.585  20.000   4.687  92.526
+sales_2008_2012 | integer | nonmissing: 5 | distinct nonmissing: 5
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      1     161    1835   12858    3258   59035
+sales_2013 | integer | nonmissing: 5 | distinct nonmissing: 5
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0      26     371    3406     749   15886
+sales_2014_2018 | integer | nonmissing: 5 | distinct nonmissing: 5
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0     150    2123   17229    3843   80030
+First six records:
+        focal_exposure_025  sales parcels sales_percent sales_2008_2012
+                    <char>  <int>   <int>         <num>           <int>
+1:            treated_only   4329    3141         2.585            1835
+2:            control_only   7850    5627         4.687            3258
+3: treated_control_overlap    337     232         0.201             161
+4:     outside_focal_rings 154951  117167        92.526           59035
+5:     missing_coordinates      1       1         0.001               1
+   sales_2013 sales_2014_2018
+        <int>           <int>
+1:        371            2123
+2:        749            3843
+3:         26             150
+4:      15886           80030
+5:          0               0
+CSV SHA-256: 50268a79e061704fa9df4c04578c5522d5ab9c4ae1aed20296ff6991a9e4fb0f
+
+Dataset: treatment_control_summary
+Rows: 8  Columns: 24
+Key: sample_definition, summary_period, exposure_group
+Duplicate or missing keys: 0
+sample_definition | character | nonmissing: 8 | distinct nonmissing: 2
+[1] "no_welcoming_or_other_candidate" "unambiguous_focal_ring"
+summary_period | character | nonmissing: 8 | distinct nonmissing: 2
+[1] "2008_2012_preclosure" "2008_2018"
+exposure_group | character | nonmissing: 8 | distinct nonmissing: 2
+[1] "control" "treated"
+sales | integer | nonmissing: 8 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1374    2826    3272    4090    5155    7850
+parcels | integer | nonmissing: 8 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1127    2172    2647    3070    3724    5627
+nearest_school_sites | integer | nonmissing: 8 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   29.0    29.0    38.5    38.5    48.0    48.0
+sales_2008_2012 | integer | nonmissing: 8 | distinct nonmissing: 4
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1374    1720    2496    2406    3182    3258
+sales_2013 | integer | nonmissing: 8 | distinct nonmissing: 5
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0     0.0   141.5   266.1   459.8   749.0
+sales_2014_2018 | integer | nonmissing: 8 | distinct nonmissing: 5
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0       0     815    1418    2530    3843
+mean_sale_price_real_2022 | numeric | nonmissing: 8 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 161131  177561  194268  204701  227419  270119
+median_sale_price_real_2022 | numeric | nonmissing: 8 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  69184   86180   99872  107309  131202  157864
+mean_price_per_sqft_real_2022 | numeric | nonmissing: 8 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  87.28   93.34   95.75   99.97  106.10  121.39
+median_price_per_sqft_real_2022 | numeric | nonmissing: 8 | distinct nonmissing: 7
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  42.94   48.81   52.93   55.68   62.47   75.17
+mean_building_sqft | numeric | nonmissing: 8 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2039    2063    2210    2220    2378    2413
+median_building_sqft | integer | nonmissing: 8 | distinct nonmissing: 7
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1796    1820    1963    1985    2134    2210
+mean_land_sqft | numeric | nonmissing: 8 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   3518    3542    3557    3564    3581    3622
+mean_age_at_sale | numeric | nonmissing: 8 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  89.88   91.25   93.83   93.80   96.57   97.53
+mean_bedrooms | numeric | nonmissing: 8 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  4.230   4.272   4.550   4.555   4.845   4.880
+mean_rooms | numeric | nonmissing: 8 | distinct nonmissing: 7
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  8.620   8.700   9.320   9.305   9.905   9.960
+mean_full_bathrooms | numeric | nonmissing: 8 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  1.920   1.948   2.070   2.084   2.225   2.260
+class_211_percent | numeric | nonmissing: 8 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  45.22   46.94   51.61   52.10   57.28   60.38
+idor_refined_date_percent | numeric | nonmissing: 8 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  1.380   1.887  29.160  29.140  56.453  56.880
+multiple_treated_sites | integer | nonmissing: 8 | distinct nonmissing: 3
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0     0.0     8.0    14.5    22.5    42.0
+multiple_control_sites | integer | nonmissing: 8 | distinct nonmissing: 5
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   0.00    0.00   32.50   54.62   86.25  159.00
+First six records:
+                 sample_definition       summary_period exposure_group sales
+                            <char>               <char>         <char> <int>
+1: no_welcoming_or_other_candidate 2008_2012_preclosure        control  3157
+2: no_welcoming_or_other_candidate 2008_2012_preclosure        treated  1374
+3: no_welcoming_or_other_candidate            2008_2018        control  7634
+4: no_welcoming_or_other_candidate            2008_2018        treated  3287
+5:          unambiguous_focal_ring 2008_2012_preclosure        control  3258
+6:          unambiguous_focal_ring 2008_2012_preclosure        treated  1835
+   parcels nearest_school_sites sales_2008_2012 sales_2013 sales_2014_2018
+     <int>                <int>           <int>      <int>           <int>
+1:    2603                   48            3157          0               0
+2:    1127                   29            1374          0               0
+3:    5473                   48            3157        726            3751
+4:    2393                   29            1374        283            1630
+5:    2691                   48            3258          0               0
+6:    1509                   29            1835          0               0
+   mean_sale_price_real_2022 median_sale_price_real_2022
+                       <num>                       <num>
+1:                  161130.9                    69183.64
+2:                  218206.0                   127432.45
+3:                  182844.0                    91493.47
+4:                  270119.3                   157864.27
+5:                  161711.2                    70238.93
+6:                  205293.3                   107506.07
+   mean_price_per_sqft_real_2022 median_price_per_sqft_real_2022
+                           <num>                           <num>
+1:                         87.65                           42.99
+2:                        103.87                           61.08
+3:                         95.69                           52.93
+4:                        121.39                           75.17
+5:                         87.28                           42.94
+6:                         95.81                           50.75
+   mean_building_sqft median_building_sqft mean_land_sqft mean_age_at_sale
+                <num>                <int>          <num>            <num>
+1:            2039.37                 1820        3531.76            89.88
+2:            2342.25                 2088        3552.54            95.78
+3:            2066.01                 1796        3560.62            91.67
+4:            2373.98                 2114        3614.45            97.53
+5:            2054.00                 1838        3517.91            89.97
+6:            2390.75                 2192        3569.29            96.31
+   mean_bedrooms mean_rooms mean_full_bathrooms class_211_percent
+           <num>      <num>               <num>             <num>
+1:          4.23       8.62                1.92             47.45
+2:          4.80       9.89                2.18             56.99
+3:          4.28       8.71                1.95             45.22
+4:          4.84       9.89                2.24             55.55
+5:          4.25       8.67                1.94             47.67
+6:          4.86       9.95                2.22             60.38
+   idor_refined_date_percent multiple_treated_sites multiple_control_sites
+                       <num>                  <int>                  <int>
+1:                      1.43                      0                     65
+2:                      2.04                     16                      0
+3:                     56.88                      0                    147
+4:                     56.37                     42                      0
+5:                      1.38                      0                     66
+6:                      2.23                     16                      0
+CSV SHA-256: 2370c96487df8c09dfd047f45244f5ad092b70960d632f13afe1a44249559bff
+
+Dataset: annual_real_price_summary
+Rows: 22  Columns: 6
+Key: sale_year, exposure_group
+Duplicate or missing keys: 0
+sale_year | integer | nonmissing: 22 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+exposure_group | character | nonmissing: 22 | distinct nonmissing: 2
+[1] "control" "treated"
+sales | integer | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  240.0   287.2   453.0   496.4   657.0   915.0
+parcels | integer | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  228.0   278.8   435.5   473.9   634.8   868.0
+mean_sale_price_real_2022 | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 140149  169285  205198  222021  261026  351113
+median_sale_price_real_2022 | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  54970   78060  118066  124196  163535  215509
+First six records:
+   sale_year exposure_group sales parcels mean_sale_price_real_2022
+       <int>         <char> <int>   <int>                     <num>
+1:      2008        control   650     607                  222547.0
+2:      2008        treated   328     300                  282717.1
+3:      2009        control   769     722                  140149.5
+4:      2009        treated   300     284                  192095.5
+5:      2010        control   651     625                  143482.4
+6:      2010        treated   264     247                  179959.6
+   median_sale_price_real_2022
+                         <num>
+1:                   132325.37
+2:                   215509.19
+3:                    54969.99
+4:                    80327.62
+5:                    60331.60
+6:                    93441.83
+CSV SHA-256: 742017cc57a3d4a7868aeb193ce89327687477ba01c98c8b2e681f3d739a207c
+
+Dataset: annual_residualized_real_price_summary
+Rows: 22  Columns: 8
+Key: sale_year, exposure_group
+Duplicate or missing keys: 0
+sale_year | integer | nonmissing: 22 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+exposure_group | character | nonmissing: 22 | distinct nonmissing: 2
+[1] "control" "treated"
+sales | integer | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  240.0   287.2   453.0   496.4   657.0   915.0
+parcels | integer | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  228.0   278.8   435.5   473.9   634.8   868.0
+mean_sale_price_real_2022 | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 140149  169285  205198  222021  261026  351113
+median_sale_price_real_2022 | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  54970   78060  118066  124196  163535  215509
+mean_residualized_sale_price_real_2022 | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 102495  120817  139202  145452  158788  239528
+median_residualized_sale_price_real_2022 | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  72214   77730   99940  103534  130259  155439
+First six records:
+   sale_year exposure_group sales parcels mean_sale_price_real_2022
+       <int>         <char> <int>   <int>                     <num>
+1:      2008        control   650     607                  222547.0
+2:      2008        treated   328     300                  282717.1
+3:      2009        control   769     722                  140149.5
+4:      2009        treated   300     284                  192095.5
+5:      2010        control   651     625                  143482.4
+6:      2010        treated   264     247                  179959.6
+   median_sale_price_real_2022 mean_residualized_sale_price_real_2022
+                         <num>                                  <num>
+1:                   132325.37                               239527.9
+2:                   215509.19                               231619.1
+3:                    54969.99                               151142.7
+4:                    80327.62                               141079.5
+5:                    60331.60                               142024.7
+6:                    93441.83                               120221.7
+   median_residualized_sale_price_real_2022
+                                      <num>
+1:                                145867.94
+2:                                132780.98
+3:                                 73087.76
+4:                                 81089.82
+5:                                 78998.38
+6:                                 73428.48
+CSV SHA-256: 623b4e327328f46cf1d18c6dac6ca4efb1731216ffb1cb9e2890336c22852771
+
+Dataset: subannual_residualized_real_price_summary
+Rows: 96  Columns: 11
+Key: frequency, period, exposure_group
+Duplicate or missing keys: 0
+frequency | character | nonmissing: 96 | distinct nonmissing: 2
+[1] "quarterly"  "semiannual"
+period | character | nonmissing: 96 | distinct nonmissing: 48
+[1] "2010 H1" "2010 H2" "2010 Q1" "2010 Q2" "2010 Q3" "2010 Q4"
+period_index | numeric | nonmissing: 96 | distinct nonmissing: 48
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2010    2012    2014    2014    2016    2018
+sale_year | integer | nonmissing: 96 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2010    2012    2014    2014    2015    2017
+sale_half | integer | nonmissing: 32 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+    1.0     1.0     1.5     1.5     2.0     2.0      64
+sale_quarter | integer | nonmissing: 64 | distinct nonmissing: 4
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+   1.00    1.75    2.50    2.50    3.25    4.00      32
+exposure_group | character | nonmissing: 96 | distinct nonmissing: 2
+[1] "control" "treated"
+sales | integer | nonmissing: 96 | distinct nonmissing: 76
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  48.00   77.75  135.50  157.75  188.50  429.00
+parcels | integer | nonmissing: 96 | distinct nonmissing: 77
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  48.00   77.75  135.00  156.31  185.75  422.00
+mean_residualized_sale_price_real_2022 | numeric | nonmissing: 96 | distinct nonmissing: 96
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  92579  113310  126492  128876  142034  184047
+median_residualized_sale_price_real_2022 | numeric | nonmissing: 96 | distinct nonmissing: 96
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  63756   76497   89578   95930  113243  159662
+First six records:
+   frequency  period period_index sale_year sale_half sale_quarter
+      <char>  <char>        <num>     <int>     <int>        <int>
+1: quarterly 2010 Q1     2010.125      2010        NA            1
+2: quarterly 2010 Q1     2010.125      2010        NA            1
+3: quarterly 2010 Q2     2010.375      2010        NA            2
+4: quarterly 2010 Q2     2010.375      2010        NA            2
+5: quarterly 2010 Q3     2010.625      2010        NA            3
+6: quarterly 2010 Q3     2010.625      2010        NA            3
+   exposure_group sales parcels mean_residualized_sale_price_real_2022
+           <char> <int>   <int>                                  <num>
+1:        control   176     173                               150953.4
+2:        treated    59      59                               122160.1
+3:        control   190     188                               139520.9
+4:        treated    95      93                               128727.5
+5:        control   157     156                               142106.2
+6:        treated    62      62                               110886.1
+   median_residualized_sale_price_real_2022
+                                      <num>
+1:                                 74241.08
+2:                                 65364.23
+3:                                 81669.92
+4:                                 80039.02
+5:                                 80546.11
+6:                                 70252.07
+CSV SHA-256: 49f37218490535cff5a264282de17f3e511e6473bf8add6fecf80aba126cb9f1
+
+Dataset: school_site_support
+Rows: 78  Columns: 15
+Key: school_location_id
+Duplicate or missing keys: 0
+school_location_id | integer | nonmissing: 78 | distinct nonmissing: 78
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609797  610012  610118  610105  610225  610521
+school_names | character | nonmissing: 78 | distinct nonmissing: 78
+[1] "Adam Clayton Powell Paideia Community Academy ES"
+[2] "Alexander Graham Elementary School"
+[3] "Alexander von Humboldt Elementary School / Ana Roque de Duprey Elementary School"
+[4] "Alfred David Kohn Elementary School"
+[5] "Amos Alonzo Stagg Elementary School"
+[6] "Anna R. Langford Community Academy"
+exposure_group | character | nonmissing: 78 | distinct nonmissing: 2
+[1] "control" "treated"
+latitude | numeric | nonmissing: 78 | distinct nonmissing: 78
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  41.65   41.76   41.80   41.81   41.87   41.98
+longitude | numeric | nonmissing: 78 | distinct nonmissing: 78
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ -87.77  -87.69  -87.65  -87.66  -87.62  -87.54
+sales_in_ring | integer | nonmissing: 78 | distinct nonmissing: 70
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0   120.2   172.0   168.3   213.8   400.0
+parcels_in_ring | integer | nonmissing: 78 | distinct nonmissing: 64
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0    93.0   123.5   120.7   149.5   291.0
+sales_2008_2012 | integer | nonmissing: 78 | distinct nonmissing: 62
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   0.00   44.50   71.50   70.94   95.25  170.00
+sales_2013 | integer | nonmissing: 78 | distinct nonmissing: 32
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   0.00   10.00   15.00   15.26   21.00   39.00
+sales_2014_2018 | integer | nonmissing: 78 | distinct nonmissing: 57
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   0.00   58.25   80.50   82.08  104.25  198.00
+treated_control_overlap_sales | integer | nonmissing: 78 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  0.000   0.000   0.000   9.551   0.000 126.000
+welcoming_exposure_sales | integer | nonmissing: 78 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   0.00    0.00    0.00   14.77    9.00  223.00
+other_candidate_exposure_sales | integer | nonmissing: 78 | distinct nonmissing: 20
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  0.000   0.000   0.000   7.962   1.750 154.000
+nearest_unambiguous_sales | integer | nonmissing: 78 | distinct nonmissing: 68
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0    99.0   159.5   156.1   198.2   400.0
+nearest_uncontaminated_sales | integer | nonmissing: 78 | distinct nonmissing: 67
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   0.00   80.25  139.00  140.01  184.00  400.00
+First six records:
+   school_location_id                                     school_names
+                <int>                                           <char>
+1:             610281 Adam Clayton Powell Paideia Community Academy ES
+2:             609947               Alexander Graham Elementary School
+3:             610339              Amos Alonzo Stagg Elementary School
+4:             609869               Anna R. Langford Community Academy
+5:             610037                 Arthur A Libby Elementary School
+6:             610268                  Arthur R Ashe Elementary School
+   exposure_group latitude longitude sales_in_ring parcels_in_ring
+           <char>    <num>     <num>         <int>           <int>
+1:        control 41.76032 -87.55674            81              63
+2:        control 41.81329 -87.64338           194             153
+3:        control 41.75893 -87.64925           252             180
+4:        control 41.78466 -87.65721           181             128
+5:        control 41.79765 -87.65997           181             117
+6:        control 41.74015 -87.60114           137             100
+   sales_2008_2012 sales_2013 sales_2014_2018 treated_control_overlap_sales
+             <int>      <int>           <int>                         <int>
+1:              32          8              41                             0
+2:              63         21             110                             0
+3:             114         12             126                             0
+4:              98         15              68                           121
+5:              99         13              69                             0
+6:              50         15              72                             0
+   welcoming_exposure_sales other_candidate_exposure_sales
+                      <int>                          <int>
+1:                        0                              0
+2:                        0                              0
+3:                        0                              0
+4:                        0                              0
+5:                        0                              0
+6:                        0                              0
+   nearest_unambiguous_sales nearest_uncontaminated_sales
+                       <int>                        <int>
+1:                        81                           81
+2:                       194                          194
+3:                       252                          252
+4:                        60                           60
+5:                       181                          181
+6:                       137                          137
+CSV SHA-256: 72269e3c9adaf9a59e9f803355d2e19ab6d95f1f312db37db312d1962f8b92ee
+
+Dataset: treated_control_overlap_pairs
+Rows: 7  Columns: 10
+Key: nearest_treated_site_id, nearest_control_site_id
+Duplicate or missing keys: 0
+nearest_treated_site_id | integer | nonmissing: 7 | distinct nonmissing: 5
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 610161  610197  610240  610228  610256  610285
+treated_school_names | character | nonmissing: 7 | distinct nonmissing: 5
+[1] "Arna Wendell Bontemps Elementary School"
+[2] "Elihu Yale Elementary School"
+[3] "Granville T Woods Math & Science Academy ES"
+[4] "Ignance Paderewski Elementary Learning Academy"
+[5] "Matthew A Henson Elementary School"
+nearest_control_site_id | integer | nonmissing: 7 | distinct nonmissing: 6
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609869  609871  609991  610003  610060  610299
+control_school_names | character | nonmissing: 7 | distinct nonmissing: 6
+[1] "Anna R. Langford Community Academy"
+[2] "Crown Community Academy of Fine Arts Center ES"
+[3] "Oliver Wendell Holmes Elementary School"
+[4] "Theodore Herzl Elementary School"
+[5] "William A Hinton Elementary School"
+[6] "William Penn Elementary School"
+school_distance_feet | numeric | nonmissing: 7 | distinct nonmissing: 7
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1024    1442    1446    1772    2221    2604
+sales | integer | nonmissing: 7 | distinct nonmissing: 6
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1.00   23.00   52.00   48.14   75.00   88.00
+parcels | integer | nonmissing: 7 | distinct nonmissing: 6
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1.00   14.50   32.00   33.14   53.50   63.00
+sales_2008_2012 | integer | nonmissing: 7 | distinct nonmissing: 7
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0     9.0    29.0    23.0    33.5    47.0
+sales_2013 | integer | nonmissing: 7 | distinct nonmissing: 5
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  0.000   1.000   5.000   3.714   6.000   7.000
+sales_2014_2018 | integer | nonmissing: 7 | distinct nonmissing: 7
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   0.00    9.50   22.00   21.43   29.50   50.00
+First six records:
+   nearest_treated_site_id                           treated_school_names
+                     <int>                                         <char>
+1:                  610273 Ignance Paderewski Elementary Learning Academy
+2:                  610240             Matthew A Henson Elementary School
+3:                  610285    Granville T Woods Math & Science Academy ES
+4:                  610161        Arna Wendell Bontemps Elementary School
+5:                  610240             Matthew A Henson Elementary School
+6:                  610161        Arna Wendell Bontemps Elementary School
+   nearest_control_site_id                           control_school_names
+                     <int>                                         <char>
+1:                  609873 Crown Community Academy of Fine Arts Center ES
+2:                  609991               Theodore Herzl Elementary School
+3:                  609869             Anna R. Langford Community Academy
+4:                  609869             Anna R. Langford Community Academy
+5:                  610123                 William Penn Elementary School
+6:                  609997        Oliver Wendell Holmes Elementary School
+   school_distance_feet sales parcels sales_2008_2012 sales_2013
+                  <num> <int>   <int>           <int>      <int>
+1:               1439.2    88      63              31          7
+2:               1023.6    81      57              47          2
+3:               1445.7    69      50              36          6
+4:               1446.3    52      32              29          5
+5:               1892.7    45      28              17          6
+6:               2604.0     1       1               0          0
+   sales_2014_2018
+             <int>
+1:              50
+2:              32
+3:              27
+4:              18
+5:              22
+6:               1
+CSV SHA-256: abf011876ea36cfbf3b32acea1fcbfc4e8358141b4442cbd69804a094a45d063
+
+Dataset: competing_exposure
+Rows: 15  Columns: 5
+Key: focal_exposure_025, competing_exposure
+Duplicate or missing keys: 0
+focal_exposure_025 | character | nonmissing: 15 | distinct nonmissing: 5
+[1] "control_only"            "missing_coordinates"
+[3] "outside_focal_rings"     "treated_control_overlap"
+[5] "treated_only"
+competing_exposure | character | nonmissing: 15 | distinct nonmissing: 4
+[1] "none"                          "other_candidate_only"
+[3] "welcoming_and_other_candidate" "welcoming_only"
+sales | integer | nonmissing: 15 | distinct nonmissing: 15
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      1      83     308   11165    3035  146211
+parcels | integer | nonmissing: 15 | distinct nonmissing: 15
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+     1.0     58.5    217.0   8411.2   2221.5 110828.0
+category_percent | numeric | nonmissing: 15 | distinct nonmissing: 15
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   0.64    1.78    7.11   33.33   82.18  100.00
+First six records:
+    focal_exposure_025            competing_exposure  sales parcels
+                <char>                        <char>  <int>   <int>
+1:        control_only                          none   7634    5473
+2:        control_only welcoming_and_other_candidate    105      74
+3:        control_only          other_candidate_only     61      43
+4:        control_only                welcoming_only     50      37
+5: missing_coordinates                          none      1       1
+6: outside_focal_rings                          none 146211  110828
+   category_percent
+              <num>
+1:            97.25
+2:             1.34
+3:             0.78
+4:             0.64
+5:           100.00
+6:            94.36
+CSV SHA-256: 7a82b969c3fff303dc7fbcc22026edbf2664f194d9b13e010bb81beca7525126
+
+Dataset: radius_sensitivity
+Rows: 3  Columns: 7
+Key: radius_miles
+Duplicate or missing keys: 0
+radius_miles | numeric | nonmissing: 3 | distinct nonmissing: 3
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.1250  0.1875  0.2500  0.2917  0.3750  0.5000
+radius_feet | integer | nonmissing: 3 | distinct nonmissing: 3
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    660     990    1320    1540    1980    2640
+treated_only_sales | integer | nonmissing: 3 | distinct nonmissing: 3
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1267    2798    4329    5248    7238   10148
+control_only_sales | integer | nonmissing: 3 | distinct nonmissing: 3
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2168    5009    7850   10299   14364   20879
+treated_control_overlap_sales | integer | nonmissing: 3 | distinct nonmissing: 3
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      3     170     337    1540    2308    4279
+outside_focal_rings_sales | integer | nonmissing: 3 | distinct nonmissing: 3
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 132161  143556  154951  150380  159490  164029
+overlap_among_focal_exposed_percent | numeric | nonmissing: 3 | distinct nonmissing: 3
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  0.090   1.390   2.690   4.967   7.405  12.120
+First six records:
+   radius_miles radius_feet treated_only_sales control_only_sales
+          <num>       <int>              <int>              <int>
+1:        0.125         660               1267               2168
+2:        0.250        1320               4329               7850
+3:        0.500        2640              10148              20879
+   treated_control_overlap_sales outside_focal_rings_sales
+                           <int>                     <int>
+1:                             3                    164029
+2:                           337                    154951
+3:                          4279                    132161
+   overlap_among_focal_exposed_percent
+                                 <num>
+1:                                0.09
+2:                                2.69
+3:                               12.12

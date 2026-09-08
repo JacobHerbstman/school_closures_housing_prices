@@ -14,10 +14,9 @@ and baths from listings and other sources in 2021. Missing historical PIN-years
 are reported during the build and remain in the immutable parcel-sales source;
 they cannot qualify for the verified condo-and-parking rule.
 
-Cook County's condo AVM trains on livable single-PIN condo sales and selected
+Cook County's automated valuation model (AVM) trains on livable single-PIN condo sales and selected
 two-PIN unit-and-garage bundles. For the latter, it keeps the unit when exactly
 one PIN is a garage and the unit ownership share is at least three times the
 garage share, then allocates the recorded bundle price by relative ownership.
-This repository applies that transaction rule in `build_master_home_transactions`.
-It does not copy the AVM's sale-derived rolling-price features into this source
-task.
+The [condo-inclusive audit](../build_all_home_sales_with_condos/) applies that
+transaction rule in its `build_master_home_transactions.R` script.

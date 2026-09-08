@@ -1,11 +1,12 @@
+include ../../shared/code/shell_functions.make
+
 all: ../output/system_requirements.txt ../output/R_packages.txt
 
 ../output/system_requirements.txt: system_requirements.sh Makefile | ../output
 	bash $<
 
-../output/R_packages.txt: packages.R Makefile | ../output
-	Rscript $<
+../output/R_packages.txt: packages.R Makefile ../../shared/code/shell_functions.make | ../output
+	$(RSCRIPT) $<
 
-link-inputs:
 
-include ../../generic.make
+include ../../shared/code/generic.make

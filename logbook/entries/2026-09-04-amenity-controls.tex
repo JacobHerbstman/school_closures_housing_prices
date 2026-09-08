@@ -1,0 +1,73 @@
+\section*{September 4, 2026: Amenity controls leave the price estimates largely unchanged}
+\textit{Agent-drafted research entry; not yet reviewed by Jacob.}
+
+Allowing prices to vary with proximity to the lake, parks, and rail stations
+in each half-year leaves the dollar estimate near \$58,000 and modestly
+reduces the log estimate. The comparison uses sales within a quarter mile of
+the selected 30 closed and 49 still-open schools. Both models account for
+housing characteristics and persistent price differences across school areas;
+only the amenity controls differ.
+
+Each transaction receives distances to the Lake Michigan shoreline, the
+nearest park in the August 2012 inventory, and the nearest station in an
+archived 2012 CTA network. Each distance enters linearly in miles with a
+separate coefficient in every calendar half-year. These relationships are
+common across treated and control homes. The event study therefore estimates
+66 amenity slopes; the pooled DiD, which excludes both halves of 2013,
+estimates 60. This lets, for example, proximity to the lake predict a different rate of
+price growth over time.
+
+\begin{center}
+\small
+\input{../output/amenity_table.tex}
+\end{center}
+{\footnotesize Both specifications include housing characteristics and
+school-site and calendar-half-year fixed effects. The pooled DiD compares
+2008--2012 with 2014--2018. Log estimates use
+$100[\exp(\hat\beta)-1]$; dollar estimates use 2022 purchasing power.
+Pre-period tests come from semiannual event studies normalized to 2012 H2.}
+
+The pooled comparison uses 9,912 sales, and the event studies use 10,921,
+across 29 treated and 48 control sites. Adding amenities removes no
+transactions. The dollar interval is narrower and now excludes zero at the
+5\% level, but the estimate itself barely changes. The log estimate remains
+imprecise. This particular adjustment does not explain the difference
+between dollar and log estimates or establish parallel trends.
+
+The park boundaries describe August 2012. The CTA layer is
+an Esri-hosted preservation of City of Chicago data whose metadata identifies
+a March 2013 download of a 2012 network; it contains 145 stations. This
+vintage relies on the preservation metadata, not an independently recovered
+historical transit feed. The lake feature carries a 2005 edit date. Baseline
+amenity locations stay fixed across sale years, including 2008--2011; the
+measures are not annual inventories or measures of service quality.
+
+The distance task preserves all 167,468 clean transactions. One lacks a
+centroid and retains missing distances; it is outside the preferred
+estimation sample. The distance-data report records missing values and distance
+distributions. One self-intersecting park
+polygon, Douglas (Stephen), is repaired in memory without dropping it.
+The 2013 Red Line South reconstruction is not separately modeled, and the
+specification includes neither bus nor Metra access.
+
+\clearpage
+\begin{center}
+\includegraphics[width=\textwidth]{../input/event_studies_amenities.png}
+\end{center}
+{\footnotesize Top panels include housing characteristics; bottom panels add
+amenity distances interacted with half-year. Vertical axes match within each
+outcome. The hollow point is the normalized 2012 H2 reference, shaded 2013
+is the transition year, and intervals are pointwise 95\% intervals clustered
+by school site. A post-period log coefficient near zero can still represent
+an increase from the earlier negative pre-period coefficients.}
+
+\textit{Reproduction.} Run \texttt{make} in the
+\texttt{tasks/audits/home\_prices\_twfe/code} directory; upstream Make rules
+build the new amenity inputs. Build this entry with \texttt{make} in
+\texttt{logbook/code}. Source URLs and geographic-vintage qualifications are
+in the \texttt{download\_baseline\_amenities} audit README. The
+\texttt{home\_amenity\_distances} audit owns the transaction-distance CSV
+and its data report. Code revision: \texttt{c200c31} plus current uncommitted
+changes; geography downloaded September 4, 2026. Housing inputs are the
+previously inspected September 4 sample. Independent dummy-variable OLS
+checks and direct distance comparisons accompany verification of this run.

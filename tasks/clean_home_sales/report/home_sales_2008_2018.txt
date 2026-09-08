@@ -1,0 +1,554 @@
+CSV SHA-256: f0327ac6b5346a21e18e6e529e0c5fca3e2d3bb5f00aaad8e78fa1da1fb770c4
+
+Dataset: home_sales_2008_2018
+Rows: 167468  Columns: 110
+Key: row_id
+Duplicate or missing keys: 0
+pin | character | nonmissing: 167468 | distinct nonmissing: 126168
+[1] "09253030290000" "09253030330000" "09253040250000" "09253040280000"
+[5] "09253040400000" "09253040410000"
+sale_year | integer | nonmissing: 167468 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2011    2014    2013    2016    2018
+row_id | character | nonmissing: 167468 | distinct nonmissing: 167468
+[1] "7097073" "7103029" "7105285" "7116773" "7131359" "7147011"
+sale_document_num | character | nonmissing: 167468 | distinct nonmissing: 167468
+[1] "1000412217" "1000412218" "1000412222" "1000412228" "1000412235"
+[6] "1000412236"
+sale_date | IDate/Date | nonmissing: 167468 | distinct nonmissing: 2227
+[1] "2008-01-01" "2008-02-01" "2008-03-01" "2008-04-01" "2008-05-01"
+[6] "2008-06-01"
+sale_month | integer | nonmissing: 167468 | distinct nonmissing: 12
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  1.000   4.000   7.000   6.673   9.000  12.000
+sale_quarter | integer | nonmissing: 167468 | distinct nonmissing: 4
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1.00    2.00    3.00    2.55    3.00    4.00
+is_mydec_date | logical | nonmissing: 167468 | distinct nonmissing: 2
+[1] FALSE  TRUE
+sale_date_precision | character | nonmissing: 167468 | distinct nonmissing: 2
+[1] "idor_refined_day" "recording_month"
+sale_price_nominal | numeric | nonmissing: 167468 | distinct nonmissing: 11502
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  10001   80000  180000  270804  330000 6800000
+property_class | integer | nonmissing: 167468 | distinct nonmissing: 14
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  202.0   203.0   205.0   213.2   211.0   295.0
+property_type | character | nonmissing: 167468 | distinct nonmissing: 2
+[1] "house_or_small_residential"  "mixed_use_small_residential"
+township_code | integer | nonmissing: 167468 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  70.00   71.00   72.00   72.48   73.00   77.00
+neighborhood_code | integer | nonmissing: 167468 | distinct nonmissing: 189
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  70010   71150   72110   72629   73070   77170
+sale_deed_type | character | nonmissing: 167468 | distinct nonmissing: 3
+[1] "Other"    "Trustee"  "Warranty"
+mydec_deed_type | character | nonmissing: 167468 | distinct nonmissing: 22
+[1] ""                            "Administrator's Deed"
+[3] "Beneficial interest"         "Corrective Deed"
+[5] "Court Officer's Deed"        "Deed in lieu of Foreclosure"
+sale_type | character | nonmissing: 167468 | distinct nonmissing: 2
+[1] ""                  "LAND AND BUILDING"
+is_multisale | logical | nonmissing: 167468 | distinct nonmissing: 1
+[1] FALSE
+num_parcels_sale | integer | nonmissing: 167468 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      1       1       1       1       1       1
+sale_filter_same_sale_within_365 | logical | nonmissing: 167468 | distinct nonmissing: 1
+[1] FALSE
+sale_filter_less_than_10k | logical | nonmissing: 167468 | distinct nonmissing: 1
+[1] FALSE
+sale_filter_deed_type | logical | nonmissing: 167468 | distinct nonmissing: 1
+[1] FALSE
+improvement_card_count | integer | nonmissing: 167468 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      1       1       1       1       1       1
+res_card | integer | nonmissing: 167468 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      1       1       1       1       1       1
+res_class | integer | nonmissing: 167468 | distinct nonmissing: 13
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  202.0   203.0   205.0   213.3   211.0   295.0
+res_township_code | integer | nonmissing: 167468 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  70.00   71.00   72.00   72.48   73.00   77.00
+res_tieback_key_pin | integer64 | nonmissing: 297 | distinct nonmissing: 245
+integer64
+          Min.        1st Qu.         Median           Mean        3rd Qu.
+         21310 16012010180000 19131100390000 18508461782159 20311070390000
+          Max.           NA's
+26173240090000         167171
+res_tieback_proration_rate | numeric | nonmissing: 167468 | distinct nonmissing: 32
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  1.0000  1.0000  0.9991  1.0000  1.0000
+res_card_proration_rate | numeric | nonmissing: 167468 | distinct nonmissing: 31
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+0.0000000 0.0000000 0.0000000 0.0009181 0.0000000 0.9500000
+res_cdu | character | nonmissing: 167468 | distinct nonmissing: 5
+[1] "AV" "FR" "GD" "PR" "VG"
+res_pin_is_multicard | logical | nonmissing: 167468 | distinct nonmissing: 1
+[1] FALSE
+res_pin_num_cards | integer | nonmissing: 167468 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      1       1       1       1       1       1
+res_pin_is_multiland | logical | nonmissing: 167468 | distinct nonmissing: 2
+[1] FALSE  TRUE
+res_pin_num_landlines | integer | nonmissing: 167468 | distinct nonmissing: 4
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  1.000   1.000   1.000   1.009   1.000   4.000
+res_char_yrblt | integer | nonmissing: 167468 | distinct nonmissing: 167
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1826    1908    1925    1933    1954    2017
+res_char_bldg_sf | integer | nonmissing: 167468 | distinct nonmissing: 5915
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    400    1088    1497    1838    2252   30778
+res_char_land_sf | integer | nonmissing: 167468 | distinct nonmissing: 6967
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    245    3125    3750    3880    4347   77292
+res_char_beds | integer | nonmissing: 167468 | distinct nonmissing: 26
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  1.000   3.000   3.000   3.767   4.000  26.000
+res_char_rooms | integer | nonmissing: 167468 | distinct nonmissing: 47
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  2.000   5.000   6.000   7.593   8.000  50.000
+res_char_fbath | integer | nonmissing: 167468 | distinct nonmissing: 12
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  1.000   1.000   2.000   1.767   2.000  13.000
+res_char_hbath | integer | nonmissing: 167468 | distinct nonmissing: 9
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  0.0000  0.0000  0.2905  1.0000  8.0000
+res_char_frpl | integer | nonmissing: 167468 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  0.000   0.000   0.000   0.178   0.000   9.000
+res_char_type_resd | character | nonmissing: 167468 | distinct nonmissing: 5
+[1] "1 Story"     "1.5 Story"   "2 Story"     "3 Story +"   "Split Level"
+res_char_cnst_qlty | character | nonmissing: 167468 | distinct nonmissing: 3
+[1] "Average" "Deluxe"  "Poor"
+res_char_apts | character | nonmissing: 167468 | distinct nonmissing: 6
+[1] "Five"  "Four"  "None"  "Six"   "Three" "Two"
+res_char_attic_fnsh | character | nonmissing: 167468 | distinct nonmissing: 3
+[1] "Living Area" "None"        "Partial"
+res_char_gar1_att | character | nonmissing: 167468 | distinct nonmissing: 2
+[1] "No"  "Yes"
+res_char_gar1_area | character | nonmissing: 167468 | distinct nonmissing: 2
+[1] "No"  "Yes"
+res_char_gar1_size | character | nonmissing: 167467 | distinct nonmissing: 8
+[1] "0 cars"   "1 cars"   "1.5 cars" "2 cars"   "2.5 cars" "3 cars"
+res_char_gar1_cnst | character | nonmissing: 167468 | distinct nonmissing: 5
+[1] ""                "Frame"           "Frame + Masonry" "Masonry"
+[5] "Stucco"
+res_char_attic_type | character | nonmissing: 167468 | distinct nonmissing: 3
+[1] "Full"    "None"    "Partial"
+res_char_bsmt | character | nonmissing: 167468 | distinct nonmissing: 4
+[1] "Crawl"   "Full"    "Partial" "Slab"
+res_char_ext_wall | character | nonmissing: 167468 | distinct nonmissing: 4
+[1] "Frame"           "Frame + Masonry" "Masonry"         "Stucco"
+res_char_heat | character | nonmissing: 167468 | distinct nonmissing: 4
+[1] "Electric Heater"  "Hot Water Steam"  "None"             "Warm Air Furnace"
+res_char_repair_cnd | character | nonmissing: 167468 | distinct nonmissing: 3
+[1] "Above Average" "Average"       "Below Average"
+res_char_bsmt_fin | character | nonmissing: 167468 | distinct nonmissing: 3
+[1] "Apartment"       "Formal Rec Room" "Unfinished"
+res_char_roof_cnst | character | nonmissing: 167468 | distinct nonmissing: 6
+[1] "Other"             "Shake"             "Shingle + Asphalt"
+[4] "Slate"             "Tar + Gravel"      "Tile"
+res_char_use | character | nonmissing: 167468 | distinct nonmissing: 2
+[1] "Multi-Family"  "Single-Family"
+res_char_site | character | nonmissing: 167468 | distinct nonmissing: 3
+[1] "Beneficial To Value"   "Detracts From Value"   "Not Relevant To Value"
+res_char_ncu | integer | nonmissing: 167468 | distinct nonmissing: 2
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+0.000e+00 0.000e+00 0.000e+00 1.194e-05 0.000e+00 1.000e+00
+res_char_renovation | character | nonmissing: 167468 | distinct nonmissing: 2
+[1] ""    "Yes"
+res_char_porch | character | nonmissing: 167468 | distinct nonmissing: 3
+[1] "Frame Enclosed"   "Masonry Enclosed" "None"
+res_char_air | character | nonmissing: 167468 | distinct nonmissing: 2
+[1] "Central A/C"    "No Central A/C"
+res_char_tp_plan | character | nonmissing: 167468 | distinct nonmissing: 3
+[1] "Architect"  "None"       "Stock Plan"
+improvement_characteristics_match | logical | nonmissing: 167468 | distinct nonmissing: 1
+[1] TRUE
+single_improvement_card | logical | nonmissing: 167468 | distinct nonmissing: 1
+[1] TRUE
+hie_source_active | logical | nonmissing: 167468 | distinct nonmissing: 2
+[1] FALSE  TRUE
+hie_correction_eligible | logical | nonmissing: 167468 | distinct nonmissing: 2
+[1] FALSE  TRUE
+hie_exemption_ids | character | nonmissing: 4780 | distinct nonmissing: 4431
+[1] "100001" "100002" "100024" "100051" "100066" "100082"
+hie_counted_exemption_ids | character | nonmissing: 4780 | distinct nonmissing: 4431
+[1] "100001" "100002" "100024" "100051" "100066" "100082"
+hie_repeated_exemption_records | integer | nonmissing: 4780 | distinct nonmissing: 3
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+  0.000   0.000   0.000   0.014   0.000   2.000  162688
+hie_start_year_timing_uncertain | logical | nonmissing: 167468 | distinct nonmissing: 2
+[1] FALSE  TRUE
+hie_status | character | nonmissing: 167468 | distinct nonmissing: 2
+[1] "eligible_pre2021_single_card" "no_active_legacy_exemption"
+original_res_char_rooms | integer | nonmissing: 167468 | distinct nonmissing: 47
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  2.000   5.000   6.000   7.571   8.000  50.000
+original_res_char_beds | integer | nonmissing: 167468 | distinct nonmissing: 26
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  1.000   3.000   3.000   3.755   4.000  26.000
+original_res_char_fbath | integer | nonmissing: 167468 | distinct nonmissing: 12
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  1.000   1.000   1.000   1.754   2.000  13.000
+original_res_char_hbath | integer | nonmissing: 167468 | distinct nonmissing: 9
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  0.0000  0.0000  0.2878  1.0000  8.0000
+original_res_char_bldg_sf | integer | nonmissing: 167468 | distinct nonmissing: 5899
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    400    1082    1480    1829    2243   30778
+original_res_char_land_sf | integer | nonmissing: 167468 | distinct nonmissing: 6967
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    245    3125    3750    3880    4347   77292
+original_res_char_ncu | integer | nonmissing: 167468 | distinct nonmissing: 2
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+0.00e+00 0.00e+00 0.00e+00 5.97e-06 0.00e+00 1.00e+00
+original_res_char_type_resd | character | nonmissing: 167468 | distinct nonmissing: 5
+[1] "1 Story"     "1.5 Story"   "2 Story"     "3 Story +"   "Split Level"
+original_res_char_use | character | nonmissing: 167468 | distinct nonmissing: 2
+[1] "Multi-Family"  "Single-Family"
+original_res_char_ext_wall | character | nonmissing: 167468 | distinct nonmissing: 4
+[1] "Frame"           "Frame + Masonry" "Masonry"         "Stucco"
+original_res_char_roof_cnst | character | nonmissing: 167468 | distinct nonmissing: 6
+[1] "Other"             "Shake"             "Shingle + Asphalt"
+[4] "Slate"             "Tar + Gravel"      "Tile"
+original_res_char_bsmt | character | nonmissing: 167468 | distinct nonmissing: 4
+[1] "Crawl"   "Full"    "Partial" "Slab"
+original_res_char_bsmt_fin | character | nonmissing: 167468 | distinct nonmissing: 3
+[1] "Apartment"       "Formal Rec Room" "Unfinished"
+original_res_char_heat | character | nonmissing: 167468 | distinct nonmissing: 4
+[1] "Electric Heater"  "Hot Water Steam"  "None"             "Warm Air Furnace"
+original_res_char_air | character | nonmissing: 167468 | distinct nonmissing: 2
+[1] "Central A/C"    "No Central A/C"
+original_res_char_frpl | integer | nonmissing: 167468 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  0.000   0.000   0.000   0.177   0.000   9.000
+original_res_char_attic_type | character | nonmissing: 167468 | distinct nonmissing: 3
+[1] "Full"    "None"    "Partial"
+original_res_char_attic_fnsh | character | nonmissing: 167468 | distinct nonmissing: 3
+[1] "Living Area" "None"        "Partial"
+original_res_char_tp_plan | character | nonmissing: 167468 | distinct nonmissing: 3
+[1] "Architect"  "None"       "Stock Plan"
+original_res_char_cnst_qlty | character | nonmissing: 167468 | distinct nonmissing: 3
+[1] "Average" "Deluxe"  "Poor"
+original_res_char_gar1_cnst | character | nonmissing: 167468 | distinct nonmissing: 5
+[1] ""                "Frame"           "Frame + Masonry" "Masonry"
+[5] "Stucco"
+original_res_char_gar1_att | character | nonmissing: 167468 | distinct nonmissing: 2
+[1] "No"  "Yes"
+original_res_char_gar1_area | character | nonmissing: 167468 | distinct nonmissing: 2
+[1] "No"  "Yes"
+original_res_char_porch | character | nonmissing: 167468 | distinct nonmissing: 3
+[1] "Frame Enclosed"   "Masonry Enclosed" "None"
+original_res_char_gar1_size | character | nonmissing: 167468 | distinct nonmissing: 8
+[1] "0 cars"   "1 cars"   "1.5 cars" "2 cars"   "2.5 cars" "3 cars"
+original_res_char_apts | character | nonmissing: 167468 | distinct nonmissing: 7
+[1] ""      "Five"  "Four"  "None"  "Six"   "Three"
+original_res_class | integer | nonmissing: 167468 | distinct nonmissing: 14
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  202.0   203.0   205.0   213.2   211.0   295.0
+hie_unresolved_fields | character | nonmissing: 1 | distinct nonmissing: 1
+[1] "res_char_gar1_size"
+property_type_conflict | logical | nonmissing: 167468 | distinct nonmissing: 1
+[1] FALSE
+analysis_class | integer | nonmissing: 167468 | distinct nonmissing: 13
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  202.0   203.0   205.0   213.3   211.0   295.0
+analysis_property_type | character | nonmissing: 167468 | distinct nonmissing: 2
+[1] "single_family"    "two_to_six_units"
+apartment_count | integer | nonmissing: 48381 | distinct nonmissing: 5
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+  2.000   2.000   2.000   2.558   3.000   6.000  119087
+price_per_building_sqft | numeric | nonmissing: 167468 | distinct nonmissing: 112193
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1.49   52.52  124.30  149.57  209.85 1013.44
+sale_price_cpi_chicago_all_items | numeric | nonmissing: 167468 | distinct nonmissing: 132
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  206.0   218.2   225.9   224.8   230.5   239.0
+sale_price_deflator_to_2022 | numeric | nonmissing: 167468 | distinct nonmissing: 132
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  1.144   1.186   1.210   1.218   1.253   1.327
+sale_price_real_2022 | numeric | nonmissing: 167468 | distinct nonmissing: 80765
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  11631   96905  217860  328101  399220 8749206
+price_per_building_sqft_real_2022 | numeric | nonmissing: 167468 | distinct nonmissing: 164619
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+   1.705   64.079  151.328  181.320  254.066 1282.716
+First six records:
+              pin sale_year   row_id sale_document_num  sale_date sale_month
+           <char>     <int>   <char>            <char>     <IDat>      <int>
+1: 17063070380000      2008 96115097         801441304 2008-01-01          1
+2: 17054120100000      2008 96115107         801642007 2008-01-01          1
+3: 13214020760000      2008 96115115         801805037 2008-01-01          1
+4: 20213190220000      2008 96115152         803133148 2008-01-01          1
+5: 19152170250000      2008 96115154         804240018 2008-01-01          1
+6: 16092210050000      2008 96115158         802911144 2008-01-01          1
+   sale_quarter is_mydec_date sale_date_precision sale_price_nominal
+          <int>        <lgcl>              <char>              <num>
+1:            1         FALSE     recording_month            2500000
+2:            1         FALSE     recording_month            1200000
+3:            1         FALSE     recording_month             350000
+4:            1         FALSE     recording_month             379000
+5:            1         FALSE     recording_month             210000
+6:            1         FALSE     recording_month             111000
+   property_class              property_type township_code neighborhood_code
+            <int>                     <char>         <int>             <int>
+1:            278 house_or_small_residential            77             77052
+2:            278 house_or_small_residential            77             77120
+3:            203 house_or_small_residential            71             71171
+4:            211 house_or_small_residential            72             72092
+5:            202 house_or_small_residential            72             72030
+6:            211 house_or_small_residential            77             77013
+   sale_deed_type mydec_deed_type         sale_type is_multisale
+           <char>          <char>            <char>       <lgcl>
+1:       Warranty                 LAND AND BUILDING        FALSE
+2:       Warranty                 LAND AND BUILDING        FALSE
+3:        Trustee                 LAND AND BUILDING        FALSE
+4:       Warranty                 LAND AND BUILDING        FALSE
+5:       Warranty                 LAND AND BUILDING        FALSE
+6:       Warranty                 LAND AND BUILDING        FALSE
+   num_parcels_sale sale_filter_same_sale_within_365 sale_filter_less_than_10k
+              <int>                           <lgcl>                    <lgcl>
+1:                1                            FALSE                     FALSE
+2:                1                            FALSE                     FALSE
+3:                1                            FALSE                     FALSE
+4:                1                            FALSE                     FALSE
+5:                1                            FALSE                     FALSE
+6:                1                            FALSE                     FALSE
+   sale_filter_deed_type improvement_card_count res_card res_class
+                  <lgcl>                  <int>    <int>     <int>
+1:                 FALSE                      1        1       278
+2:                 FALSE                      1        1       278
+3:                 FALSE                      1        1       203
+4:                 FALSE                      1        1       211
+5:                 FALSE                      1        1       202
+6:                 FALSE                      1        1       211
+   res_township_code res_tieback_key_pin res_tieback_proration_rate
+               <int>               <i64>                      <num>
+1:                77                <NA>                          1
+2:                77                <NA>                          1
+3:                71                <NA>                          1
+4:                72                <NA>                          1
+5:                72                <NA>                          1
+6:                77                <NA>                          1
+   res_card_proration_rate res_cdu res_pin_is_multicard res_pin_num_cards
+                     <num>  <char>               <lgcl>             <int>
+1:                       0      AV                FALSE                 1
+2:                       0      AV                FALSE                 1
+3:                       0      AV                FALSE                 1
+4:                       0      AV                FALSE                 1
+5:                       0      AV                FALSE                 1
+6:                       0      AV                FALSE                 1
+   res_pin_is_multiland res_pin_num_landlines res_char_yrblt res_char_bldg_sf
+                 <lgcl>                 <int>          <int>            <int>
+1:                FALSE                     1           2005             3124
+2:                FALSE                     1           2006             2999
+3:                FALSE                     1           1950             1206
+4:                FALSE                     1           1889             3376
+5:                FALSE                     1           1953              895
+6:                FALSE                     1           1878             2180
+   res_char_land_sf res_char_beds res_char_rooms res_char_fbath res_char_hbath
+              <int>         <int>          <int>          <int>          <int>
+1:             2904             4              8              2              1
+2:             2500             4              8              4              1
+3:             7182             4              7              2              1
+4:             4166             8             16              4              0
+5:             3780             2              4              1              0
+6:             4687             7             15              3              0
+   res_char_frpl res_char_type_resd res_char_cnst_qlty res_char_apts
+           <int>             <char>             <char>        <char>
+1:             2            2 Story            Average          None
+2:             1          3 Story +            Average          None
+3:             0            1 Story            Average          None
+4:             0            2 Story            Average           Two
+5:             0            1 Story            Average          None
+6:             0            2 Story            Average         Three
+   res_char_attic_fnsh res_char_gar1_att res_char_gar1_area res_char_gar1_size
+                <char>            <char>             <char>             <char>
+1:                None                No                 No             2 cars
+2:                None               Yes                Yes             2 cars
+3:                None                No                 No             1 cars
+4:                None                No                 No             0 cars
+5:                None                No                 No             2 cars
+6:                None                No                 No             2 cars
+   res_char_gar1_cnst res_char_attic_type res_char_bsmt res_char_ext_wall
+               <char>              <char>        <char>            <char>
+1:            Masonry                None          Full           Masonry
+2:            Masonry                None          Full           Masonry
+3:              Frame                None          Slab           Masonry
+4:                                   None          Full           Masonry
+5:              Frame                Full          Full           Masonry
+6:              Frame             Partial          Full             Frame
+      res_char_heat res_char_repair_cnd res_char_bsmt_fin res_char_roof_cnst
+             <char>              <char>            <char>             <char>
+1: Warm Air Furnace             Average        Unfinished  Shingle + Asphalt
+2: Warm Air Furnace             Average        Unfinished       Tar + Gravel
+3:  Hot Water Steam             Average        Unfinished       Tar + Gravel
+4:  Hot Water Steam             Average        Unfinished       Tar + Gravel
+5: Warm Air Furnace             Average        Unfinished  Shingle + Asphalt
+6: Warm Air Furnace             Average   Formal Rec Room  Shingle + Asphalt
+    res_char_use         res_char_site res_char_ncu res_char_renovation
+          <char>                <char>        <int>              <char>
+1: Single-Family Not Relevant To Value            0
+2: Single-Family Not Relevant To Value            0
+3: Single-Family Not Relevant To Value            0
+4:  Multi-Family Not Relevant To Value            0
+5: Single-Family Not Relevant To Value            0
+6:  Multi-Family Not Relevant To Value            0
+     res_char_porch   res_char_air res_char_tp_plan
+             <char>         <char>           <char>
+1:             None    Central A/C       Stock Plan
+2:             None    Central A/C       Stock Plan
+3:             None No Central A/C             None
+4: Masonry Enclosed No Central A/C       Stock Plan
+5:             None No Central A/C             None
+6:   Frame Enclosed No Central A/C       Stock Plan
+   improvement_characteristics_match single_improvement_card hie_source_active
+                              <lgcl>                  <lgcl>            <lgcl>
+1:                              TRUE                    TRUE             FALSE
+2:                              TRUE                    TRUE             FALSE
+3:                              TRUE                    TRUE             FALSE
+4:                              TRUE                    TRUE             FALSE
+5:                              TRUE                    TRUE             FALSE
+6:                              TRUE                    TRUE             FALSE
+   hie_correction_eligible hie_exemption_ids hie_counted_exemption_ids
+                    <lgcl>            <char>                    <char>
+1:                   FALSE              <NA>                      <NA>
+2:                   FALSE              <NA>                      <NA>
+3:                   FALSE              <NA>                      <NA>
+4:                   FALSE              <NA>                      <NA>
+5:                   FALSE              <NA>                      <NA>
+6:                   FALSE              <NA>                      <NA>
+   hie_repeated_exemption_records hie_start_year_timing_uncertain
+                            <int>                          <lgcl>
+1:                             NA                           FALSE
+2:                             NA                           FALSE
+3:                             NA                           FALSE
+4:                             NA                           FALSE
+5:                             NA                           FALSE
+6:                             NA                           FALSE
+                   hie_status original_res_char_rooms original_res_char_beds
+                       <char>                   <int>                  <int>
+1: no_active_legacy_exemption                       8                      4
+2: no_active_legacy_exemption                       8                      4
+3: no_active_legacy_exemption                       7                      4
+4: no_active_legacy_exemption                      16                      8
+5: no_active_legacy_exemption                       4                      2
+6: no_active_legacy_exemption                      15                      7
+   original_res_char_fbath original_res_char_hbath original_res_char_bldg_sf
+                     <int>                   <int>                     <int>
+1:                       2                       1                      3124
+2:                       4                       1                      2999
+3:                       2                       1                      1206
+4:                       4                       0                      3376
+5:                       1                       0                       895
+6:                       3                       0                      2180
+   original_res_char_land_sf original_res_char_ncu original_res_char_type_resd
+                       <int>                 <int>                      <char>
+1:                      2904                     0                     2 Story
+2:                      2500                     0                   3 Story +
+3:                      7182                     0                     1 Story
+4:                      4166                     0                     2 Story
+5:                      3780                     0                     1 Story
+6:                      4687                     0                     2 Story
+   original_res_char_use original_res_char_ext_wall original_res_char_roof_cnst
+                  <char>                     <char>                      <char>
+1:         Single-Family                    Masonry           Shingle + Asphalt
+2:         Single-Family                    Masonry                Tar + Gravel
+3:         Single-Family                    Masonry                Tar + Gravel
+4:          Multi-Family                    Masonry                Tar + Gravel
+5:         Single-Family                    Masonry           Shingle + Asphalt
+6:          Multi-Family                      Frame           Shingle + Asphalt
+   original_res_char_bsmt original_res_char_bsmt_fin original_res_char_heat
+                   <char>                     <char>                 <char>
+1:                   Full                 Unfinished       Warm Air Furnace
+2:                   Full                 Unfinished       Warm Air Furnace
+3:                   Slab                 Unfinished        Hot Water Steam
+4:                   Full                 Unfinished        Hot Water Steam
+5:                   Full                 Unfinished       Warm Air Furnace
+6:                   Full            Formal Rec Room       Warm Air Furnace
+   original_res_char_air original_res_char_frpl original_res_char_attic_type
+                  <char>                  <int>                       <char>
+1:           Central A/C                      2                         None
+2:           Central A/C                      1                         None
+3:        No Central A/C                      0                         None
+4:        No Central A/C                      0                         None
+5:        No Central A/C                      0                         Full
+6:        No Central A/C                      0                      Partial
+   original_res_char_attic_fnsh original_res_char_tp_plan
+                         <char>                    <char>
+1:                         None                Stock Plan
+2:                         None                Stock Plan
+3:                         None                      None
+4:                         None                Stock Plan
+5:                         None                      None
+6:                         None                Stock Plan
+   original_res_char_cnst_qlty original_res_char_gar1_cnst
+                        <char>                      <char>
+1:                     Average                     Masonry
+2:                     Average                     Masonry
+3:                     Average                       Frame
+4:                     Average
+5:                     Average                       Frame
+6:                     Average                       Frame
+   original_res_char_gar1_att original_res_char_gar1_area
+                       <char>                      <char>
+1:                         No                          No
+2:                        Yes                         Yes
+3:                         No                          No
+4:                         No                          No
+5:                         No                          No
+6:                         No                          No
+   original_res_char_porch original_res_char_gar1_size original_res_char_apts
+                    <char>                      <char>                 <char>
+1:                    None                      2 cars                   None
+2:                    None                      2 cars                   None
+3:                    None                      1 cars                   None
+4:        Masonry Enclosed                      0 cars                    Two
+5:                    None                      2 cars                   None
+6:          Frame Enclosed                      2 cars                  Three
+   original_res_class hie_unresolved_fields property_type_conflict
+                <int>                <char>                 <lgcl>
+1:                278                  <NA>                  FALSE
+2:                278                  <NA>                  FALSE
+3:                203                  <NA>                  FALSE
+4:                211                  <NA>                  FALSE
+5:                202                  <NA>                  FALSE
+6:                211                  <NA>                  FALSE
+   analysis_class analysis_property_type apartment_count
+            <int>                 <char>           <int>
+1:            278          single_family              NA
+2:            278          single_family              NA
+3:            203          single_family              NA
+4:            211       two_to_six_units               2
+5:            202          single_family              NA
+6:            211       two_to_six_units               3
+   price_per_building_sqft sale_price_cpi_chicago_all_items
+                     <num>                            <num>
+1:               800.25608                          208.757
+2:               400.13338                          208.757
+3:               290.21559                          208.757
+4:               112.26303                          208.757
+5:               234.63687                          208.757
+6:                50.91743                          208.757
+   sale_price_deflator_to_2022 sale_price_real_2022
+                         <num>                <num>
+1:                    1.309446            3273615.8
+2:                    1.309446            1571335.6
+3:                    1.309446             458306.2
+4:                    1.309446             496280.2
+5:                    1.309446             274983.7
+6:                    1.309446             145348.5
+   price_per_building_sqft_real_2022
+                               <num>
+1:                        1047.89237
+2:                         523.95318
+3:                         380.02173
+4:                         147.00241
+5:                         307.24439
+6:                          66.67364

@@ -1,0 +1,52 @@
+\section*{September 7, 2026: Transaction weights and the choice of price scale}
+\textit{Codex draft; weighting decision confirmed by Jacob, proposed diagnostics below.}
+
+Jacob chose equal weight per transaction for the working quarter-mile
+comparison of 30 closed and 49 still-open schools. Giving each school area
+equal weight within a year can give a few sales in a sparse area as much
+influence as many sales elsewhere. Equal-site results remain a sensitivity
+check. The existing transaction-weighted estimates already implement this
+choice; the sample and model formulas do not change. Standard errors remain
+clustered by school site, since sales near the same school are not independent.
+
+The difference between dollar and log estimates needs an economic explanation.
+A dollar model assumes that, without closure, the groups would have experienced
+parallel changes in average dollar prices, conditional on the included
+controls. A log model makes that assumption for average log prices.
+Roth and Sant'Anna (2023) show that validity across outcome transformations
+requires stronger restrictions than parallel trends for one chosen outcome.
+Roth (2022) also cautions against selecting a specification because its
+pre-treatment test fails to reject.
+
+An illustrative example makes the distinction concrete. Suppose treated
+homes initially cost \$200,000 and control homes \$100,000, and every home
+appreciates by 10 percent without any treatment effect. The dollar difference
+in differences is then positive \$10,000, while the log difference in
+differences is zero. This is an illustration, not an explanation established
+for these Chicago data. Differences in the upper tail or in which homes sell
+could also separate average dollar prices from average log prices.
+
+Codex recommends keeping transaction weights fixed while examining price
+percentiles, expensive sales' contribution to annual means, and estimates
+omitting one school site at a time. Property-type composition should be
+inspected alongside prices. These checks would help distinguish a broadly
+shared price change from concentration in a few sales or neighborhoods.
+They do not authorize new price exclusions or choose logs over dollars.
+A log-link model for mean dollar prices could provide a further comparison,
+but it would require its own assumptions about the untreated price trend.
+
+{\small Sources reviewed September 7, 2026: Roth and Sant'Anna,
+``When Is Parallel Trends Sensitive to Functional Form?,''
+\textit{Econometrica} 91 (2023), 737--747,
+DOI: 10.3982/ECTA19402; Roth, ``Pretest with Caution,''
+\textit{AER: Insights} 4 (2022), 305--322, DOI: 10.1257/aeri.20210236;
+Solon, Haider, and Wooldridge, ``What Are We Weighting For?,''
+\textit{Journal of Human Resources} 50 (2015), 301--316.
+The weighting paper distinguishes population targets, precision, and sampling
+as different reasons to weight observations.}
+
+{\small Reproduction: the existing transaction-weighted figures are
+\texttt{event\_studies.png} and \texttt{event\_studies\_semiannual.png} in
+the \texttt{home\_prices\_twfe} audit's output directory. Its Makefile reproduces
+the estimates. This entry records a weighting choice and literature review;
+it introduces no new estimates or data vintage.}

@@ -1,0 +1,78 @@
+\section*{September 7, 2026: Allowing price changes to depend on initial prices}
+\textit{Codex draft; sensitivity check requested by Jacob.}
+
+Allowing annual price changes to depend on each school area's initial price
+level reduces the pooled dollar estimate with property controls from
+\$56,983 to \$35,023, a 38.5\% reduction. The estimate remains positive,
+but its 95\% interval runs from --\$8,439 to \$78,485. Initial price levels
+therefore matter for the estimated contrast. This check does not establish
+that the remaining increase is caused by closure or that the adjustment
+removes a known amount of bias.
+
+Initial price is each physical school site's mean sale price during
+2008--2012, expressed in 2022 dollars and calculated from the same eligible
+transactions used in the price analysis. The regression interacts this fixed
+initial mean with every calendar year, omitting 2012. These interactions let
+the dollar-price path vary linearly with initial price, with a separate common
+slope in each year. They do not give every school site its own trend.
+School-site fixed effects already absorb the initial-price main effect.
+
+The sample, transaction weights, property controls, and clustering are
+unchanged. The annual event studies use 10,921 sales at 29 treated and
+48 control sites, with 2012 as reference. The pooled difference-in-differences
+models use 9,912 sales because they exclude the closure year, 2013.
+The comparison without property controls changes similarly:
+\$62,880 becomes \$41,559, with an adjusted 95\% interval of
+--\$5,955 to \$89,074.
+
+\begin{center}
+\begin{tabular}{lrr}
+\hline
+Pooled dollar estimate & Existing model & Initial price $\times$ year added \\
+\hline
+Site and year fixed effects & \$62,880 & \$41,559 \\
+With property controls & \$56,983 & \$35,023 \\
+\hline
+\end{tabular}
+\end{center}
+
+The annual estimates also shrink while retaining an upward post-closure
+pattern. With property controls, the 2016 estimate falls from \$77,474 to
+\$41,905, the 2017 estimate from \$82,478 to \$51,596, and the 2018 estimate
+from \$57,561 to \$31,979. Every adjusted annual treatment coefficient's
+pointwise 95\% interval includes zero. The joint test of the four pre-closure
+event coefficients has a p-value of 0.60 after adjustment, versus 0.23 before;
+this is not evidence that the identifying assumption is established.
+
+The initial-price covariate is estimated with uneven support. Median
+pre-closure transaction counts are 40 per treated site and 65.5 per control
+site. Four sites have fewer than ten pre-closure sales: Brown (2), Smyth (1),
+Stewart (7), and Goldblatt (5). The initial means range from \$46,579 to
+\$767,770 for treated sites and \$27,234 to \$721,859 for controls. Broad
+range overlap does not guarantee that every treated site has a comparable
+control. No sites are dropped in this check.
+
+The adjustment is exploratory. Initial means partly reflect which properties
+sold and which pre-closure years have more transactions. Because they are
+constructed from pre-closure outcomes, measurement error and regression to
+the mean are concerns. Reported standard errors condition on the constructed
+initial-price variable. The relationship between initial prices and annual
+changes is learned jointly from treated and control observations; it is a
+modeling restriction, not an independently observed counterfactual. The
+existing baseline remains available alongside this sensitivity specification.
+
+{\small Reproduction: Make in the \texttt{home\_price\_distribution} audit
+produces three new datasets (77 site rows, 82 coefficient rows, and eight model
+rows), their standard reports, and the figure below. Existing source data and
+sample definitions are unchanged; code is in the current working tree.
+Unadjusted estimates and standard errors reproduce the baseline. Independent
+OLS regressions with explicit site, year, and interaction indicators reproduce
+the adjusted pooled and annual coefficients with property controls.}
+
+\clearpage
+\begin{center}\includegraphics[width=\textwidth]{../input/initial_price_events.png}\end{center}
+Blue shows the existing dollar specification; red adds initial-price-by-year
+interactions. Both panels use the same transactions. Intervals are pointwise,
+clustered by school site, and conditional on the estimated initial-price
+covariate. The vertical line marks 2013, and all event coefficients are relative
+to 2012.

@@ -1,7 +1,9 @@
 # Historical home-improvement exemptions
 
-Audit only: the original reference implementation and a subsequent rule-based
-correction trial. This task never writes production files or selects a sample.
+This audit compares two ways to update property characteristics using
+home-improvement exemption records: the Assessor's implementation and a
+modified version that counts repeated updates once and leaves conflicting
+characteristics missing.
 The tested method is now independently implemented in production under
 `correct_home_sale_characteristics`; `home_sales_finalization` verifies full
 parity and documents selection changes. Run `make`
@@ -163,8 +165,9 @@ affect agreement. It never changes a correction or sample membership.
 - The export has no renovation-indicator, site-desirability, or condition
   updates. The baseline has no design-type field. The field map records these
   unavailable pairs; they are not inferred or silently filled.
-- Changes are audit candidates, not confirmed truth. We have not evaluated
-  sample eligibility, changed cleaning rules, or adopted the corrections.
+- These reference calculations preserve the Assessor's rules for comparison.
+  The production correction task uses the modified rules described above;
+  the finalization audit checks their effect on sample eligibility.
 
 The subsequent [consistency review](consistency_review.md) documents legacy
 residence codes, all 15 new room/bedroom contradictions, repeated source

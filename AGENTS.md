@@ -13,7 +13,7 @@ Clarity and traceability are part of correctness. A result should be easy to loc
 - `tasks/<task>/input/`: symlinks to raw data or upstream task outputs.
 - `tasks/<task>/code/`: the task Makefile and the shortest clear scripts needed for the task.
 - `tasks/<task>/output/`: the task's owned products.
-- `tasks/_lib/`: helpers used by more than one production task.
+- `tasks/shared/code/`: helpers used by more than one production task.
 - `tasks/audits/`: diagnostics, validation, and robustness work that should not enter the production graph by accident.
 - `paper/`: the final paper and the root build target.
 
@@ -30,11 +30,11 @@ Each task must:
 3. read fixed paths below `../input/`;
 4. write fixed paths below `../output/`;
 5. expose analytical choices as command-line arguments only when they are genuinely varied; and
-6. include `../../generic.make` after its task-specific rules.
+6. include `../../shared/code/shell_functions.make` first and `../../shared/code/generic.make` last.
 
 Run tasks from their `code/` directories. Use relative paths in Makefiles and scripts so the repository can move without edits.
 
-Do not add wrapper runners, stamp files, generic smoke targets, or speculative pipeline stages. Do not put audit-only files in production output directories. A helper belongs in `_lib` only after at least two production tasks use it.
+Do not add wrapper runners, stamp files, generic smoke targets, or speculative pipeline stages. Do not put audit-only files in production output directories. A helper belongs in `tasks/shared/code/` only after at least two production tasks use it.
 
 ## Makefiles
 
@@ -46,21 +46,24 @@ Do not add wrapper runners, stamp files, generic smoke targets, or speculative p
 - Preserve incrementality: a second `make` should do no substantive work.
 - Do not hide missing inputs behind fallbacks or silently skip work because an output happens to exist.
 - Avoid a `clean` target unless it has a narrow, recoverable purpose.
+- Never use `test -s` or existence-only recipes as substitutes for output producers. Every output must have a rule that can recreate it. For scripts producing several files under GNU Make 3.81, list those files in one producer rule and use `.NOTPARALLEL:` in that task to prevent duplicate simultaneous runs.
 
 A normal task Makefile should look like this:
 
 ```make
+include ../../shared/code/shell_functions.make
+
 all: ../output/result.parquet
 
 ../output/result.parquet: build_result.R ../input/source.parquet Makefile | ../output
-	Rscript $<
+	$(RSCRIPT) $<
 
 ../input/source.parquet: ../../upstream_task/output/source.parquet | ../input
 	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
 
 link-inputs: ../input/source.parquet
 
-include ../../generic.make
+include ../../shared/code/generic.make
 ```
 
 ## Code style

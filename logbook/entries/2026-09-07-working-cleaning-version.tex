@@ -1,0 +1,41 @@
+\section*{September 7, 2026: Retain the reviewed cleaning definition}
+\textit{Drafted by Codex; records Jacob's confirmed sample decision.}
+
+The working descriptive sample retains 11,600 sales near the selected
+30 closed and 49 still-open schools. It keeps transactions with missing
+property characteristics and applies Cook County's three legacy sale filters,
+including the deed-type exclusions. Each sale receives equal weight. Existing
+regressions retain their 10,921-sale complete-characteristics comparison;
+the broader descriptive sample does not silently replace their inputs.
+
+The cleaning definition is fixed for the next examination of the raw trends.
+Changes to sale eligibility, school selection, geographic exclusions, or source
+data should be identified and compared with this version. The recorded school
+and housing checks support using these data; they do not establish that changes
+in observed sale prices are effects of school closure.
+
+The code review removed unused inputs and duplicated report code, added reports
+for saved cleaning and analysis tables, and made those reports part of version
+control. Shared Make rules and execution commands now live together under
+\texttt{tasks/shared/code/}; the logbook uses the same upstream checks as the
+tasks. The master, corrected transactions, and complete-characteristics price
+file reproduce their previous bytes. The descriptive counts and price summaries
+also remain unchanged.
+
+\small
+Reproduction: build the data packet with \texttt{make -C}
+\texttt{tasks/audits/home\_data\_overview/code}, and compile this logbook with
+\texttt{make -C logbook/code}. Dataset reports record saved-file checksums and
+key checks. During the Make migration, existing external-source caches were
+verified against their saved checksums and their build timestamps were advanced
+after confirming unchanged query inputs. Source contents were not refreshed.
+This preserved the recorded vintage while testing the new build paths.
+School-exposure writing now uses one DuckDB thread: all 428,582 rows match the
+previous file, and repeat writes have identical checksums. The resulting source-hash
+changes in the two audit RDS files do not change their summary tables.
+The February-list transcription also uses consistent line endings, with
+unchanged cell values.
+The public county APIs are mutable; a future source refresh requires a new
+comparison with these reports. GNU Make 3.81 checks cover upstream propagation,
+unchanged builds, parallel invocation, and recovery of a missing secondary output.
+\normalsize

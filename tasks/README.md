@@ -9,6 +9,6 @@ tasks/<task>/
 └── output/   # files owned by this task
 ```
 
-Only `code/` is normally tracked. A task README is useful when the task's unit of observation, identifying choices, outputs, or runtime are not obvious from its Makefile.
+Code, task documentation, manual decision tables, and shareable standard data reports in `report/` are tracked. Generated datasets and input symlinks remain ignored. A task README is useful when the task's unit of observation, identifying choices, outputs, or runtime are not obvious from its Makefile.
 
-Run a task from its `code/` directory. Declare upstream files directly, create relative input symlinks in Make, and include `../../generic.make` after the task-specific rules. Put diagnostic-only work below `tasks/audits/`.
+Run a task from its `code/` directory. Declare upstream files directly, create relative input symlinks in Make, and include `../../shared/code/shell_functions.make` first and `../../shared/code/generic.make` last. Shared rules check upstream tasks for stale outputs. Put diagnostic-only work below `tasks/audits/`.

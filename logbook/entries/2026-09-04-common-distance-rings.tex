@@ -1,0 +1,87 @@
+\section*{September 4, 2026: A common distance comparison retains only six treated sites}
+\textit{Agent-drafted follow-up to the distance-ring diagnostic.}
+
+Jacob requested a comparison holding the school roster and overlap-exclusion
+radius fixed across distances. The half-mile exclusion is now applied in
+every band: each home must be more than half a mile from any second study
+site, welcoming site, or other candidate site. The comparison starts with the
+selected 30 closed and 49 still-open schools
+and the 2008--2018 housing-price sample. Within those eligible homes, the
+three bands are 0--0.125, 0.125--0.25, and 0.25--0.5 miles from the nearest
+study site.
+
+To prevent empty inner rings from changing the annual comparison, a
+site-year enters only when it has at least one sale in every band. A site
+must have at least one such year before 2013 and one after 2013. This gives
+the same six treated and 26 control sites in all bands, with the same
+contributing sites across bands within each year. The yearly roster still
+varies: three to six treated sites and 21 to 25 control sites contribute.
+There are 52 treated and 252 control site-years in each band. No missing
+prices are imputed. Requiring complete coverage in every year would leave
+only three treated sites; that additional restriction is not imposed.
+
+The retained treated/control transaction counts are 211/1,079 in the closest
+band, 398/2,427 in the middle band, and 815/7,108 in the outer band. The strict
+half-mile overlap rule alone leaves only seven treated sites with any sales
+in the closest band. Most of the loss therefore precedes the requirement
+for common annual coverage. This diagnostic describes a small subset of the
+original closure comparison, not the effect for all 30 closed schools.
+
+\begin{center}
+\scriptsize
+\input{../output/common_ring_table.tex}
+\end{center}
+{\footnotesize Annual DiDs with housing controls and site/year fixed effects;
+equal observed site-year weights. Pre: 2008--2012; post: 2014--2018; 2013
+omitted. Brackets are 95\% site-clustered intervals. Prices use 2022 dollars;
+log coefficients and endpoints are converted using $100[\exp(\beta)-1]$.}
+
+The point estimates do not reveal a clear effect concentrated closest to
+the schools. Dollar effects are about \$31,000, \$38,000, and \$23,000;
+log effects imply approximately 6\%, 8\%, and 16\%. Every interval includes
+zero and economically large effects. The raw treated means jump in 2015
+across all three bands, but only three treated sites contribute that year.
+Matching the annual roster across bands does not eliminate changes in that
+roster over time or changes in the homes sold within each site.
+
+Replacing site intercepts with a treated/control group intercept remains
+consequential. In the middle band, the site-weighted dollar estimate changes
+from about \$38,000 to minus \$4,000. Both intervals are wide. School-site
+fixed effects address persistent differences among the retained sites;
+they do not resolve differential neighborhood trends or selection into sale.
+The small number of treated sites makes the conventional clustered
+intervals and pretrend tests weak evidence for choosing a specification.
+
+This exercise removes across-band changes in the site roster and exclusion
+rule. Differences across bands cannot be read as how the causal effect varies
+with distance: schools qualify partly on the basis of sales after closure,
+different schools contribute in different years, and prices are observed
+only for homes that sell. Codex's assessment is to retain this as an audit,
+rather than adopt the severely restricted sample as the main design.
+
+\clearpage
+\begin{center}
+\includegraphics[width=\textwidth,height=.93\textheight,keepaspectratio]{../input/ring_common_raw_equal_site_year.png}
+\end{center}
+\clearpage
+\begin{center}
+\includegraphics[width=\textwidth,height=.93\textheight,keepaspectratio]{../input/ring_common_event_hedonics.png}
+\end{center}
+\clearpage
+\begin{center}
+\includegraphics[width=\textwidth,height=.93\textheight,keepaspectratio]{../input/ring_common_event_fixed_effects.png}
+\end{center}
+\clearpage
+\begin{center}
+\includegraphics[width=\textwidth]{../input/ring_common_did_by_ring.png}
+\end{center}
+{\footnotesize Reproduction: Make in the home-price-rings audit code directory,
+then the logbook code directory. The common-design outputs retain the same
+120-model family as the earlier audit; cumulative buffers combine the same
+eligible site-years. Revision c200c31 plus working changes; existing cleaned
+2008--2018 sales and school distances. Independent cell tables reproduce all
+five sample memberships. Dummy-variable weighted least squares reproduces
+controlled DiDs within \$0.000001; unadjusted site-weighted event studies
+match regressions on site-year means. Earlier ring CSV outputs remain
+byte-for-byte unchanged. The saved support grid records every excluded or
+empty site-band-year cell.}

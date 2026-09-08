@@ -1,0 +1,663 @@
+CSV SHA-256: 87b4e3fa6daff06a545095beab3eec8589903aa1d6fab867ba0396db7d4af04b
+
+Dataset: coefficients
+Rows: 660  Columns: 13
+Key: ring, weighting, specification, outcome, estimator, term
+Duplicate or missing keys: 0
+term | character | nonmissing: 660 | distinct nonmissing: 11
+[1] "sale_year::2008:treated" "sale_year::2009:treated"
+[3] "sale_year::2010:treated" "sale_year::2011:treated"
+[5] "sale_year::2013:treated" "sale_year::2014:treated"
+estimate | numeric | nonmissing: 660 | distinct nonmissing: 660
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+-66160.952     -0.173      0.015   6930.305  13129.507  80650.817
+std_error | numeric | nonmissing: 660 | distinct nonmissing: 660
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+    0.061     0.127  7075.332 15184.033 30176.312 54042.536
+t_statistic | numeric | nonmissing: 660 | distinct nonmissing: 660
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+-3.04133 -0.73156  0.06152  0.04657  0.91368  2.74816
+p_value | numeric | nonmissing: 660 | distinct nonmissing: 660
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+0.003469 0.180295 0.416641 0.442873 0.673159 0.997595
+conf_low | numeric | nonmissing: 660 | distinct nonmissing: 660
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+-1.588e+05 -4.441e+04 -5.920e-01 -2.336e+04 -2.760e-01  1.936e+04
+conf_high | numeric | nonmissing: 660 | distinct nonmissing: 660
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+-12354.618      0.186      0.678  37221.084  70427.457 173983.691
+ring | character | nonmissing: 660 | distinct nonmissing: 5
+[1] "annulus_0125_025" "annulus_025_05"   "within_0125"      "within_025"
+[5] "within_05"
+weighting | character | nonmissing: 660 | distinct nonmissing: 2
+[1] "equal_site_year"   "equal_transaction"
+specification | character | nonmissing: 660 | distinct nonmissing: 3
+[1] "group_hedonics"  "site_hedonics"   "site_unadjusted"
+outcome | character | nonmissing: 660 | distinct nonmissing: 2
+[1] "dollars" "log"
+estimator | character | nonmissing: 660 | distinct nonmissing: 2
+[1] "did"   "event"
+sale_year | integer | nonmissing: 600 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+   2008    2010    2014    2013    2016    2018      60
+First six records:
+                      term  estimate std_error t_statistic    p_value
+                    <char>     <num>     <num>       <num>      <num>
+1:            treated_post  57235.23  32668.77   1.7519858 0.08380995
+2: sale_year::2008:treated  13724.42  19935.18   0.6884521 0.49326430
+3: sale_year::2009:treated  22816.85  23333.19   0.9778710 0.33124063
+4: sale_year::2010:treated -39718.70  18523.05  -2.1442846 0.03520700
+5: sale_year::2011:treated -13220.83  20073.89  -0.6586082 0.51213780
+6: sale_year::2013:treated  12452.96  21911.60   0.5683273 0.57148820
+     conf_low  conf_high             ring         weighting   specification
+        <num>      <num>           <char>            <char>          <char>
+1:  -7830.276 122300.733 annulus_0125_025 equal_transaction site_unadjusted
+2: -25979.938  53428.775 annulus_0125_025 equal_transaction site_unadjusted
+3: -23655.229  69288.936 annulus_0125_025 equal_transaction site_unadjusted
+4: -76610.560  -2826.841 annulus_0125_025 equal_transaction site_unadjusted
+5: -53201.440  26759.787 annulus_0125_025 equal_transaction site_unadjusted
+6: -31187.767  56093.683 annulus_0125_025 equal_transaction site_unadjusted
+   outcome estimator sale_year
+    <char>    <char>     <int>
+1: dollars       did        NA
+2: dollars     event      2008
+3: dollars     event      2009
+4: dollars     event      2010
+5: dollars     event      2011
+6: dollars     event      2013
+CSV SHA-256: a292a8fdb9b5d67d6504119b6decaffcc6d1ab215a7c41e99b9acc02e36e7e57
+
+Dataset: model_summary
+Rows: 120  Columns: 14
+Key: ring, weighting, specification, outcome, estimator
+Duplicate or missing keys: 0
+ring | character | nonmissing: 120 | distinct nonmissing: 5
+[1] "annulus_0125_025" "annulus_025_05"   "within_0125"      "within_025"
+[5] "within_05"
+weighting | character | nonmissing: 120 | distinct nonmissing: 2
+[1] "equal_site_year"   "equal_transaction"
+specification | character | nonmissing: 120 | distinct nonmissing: 3
+[1] "group_hedonics"  "site_hedonics"   "site_unadjusted"
+outcome | character | nonmissing: 120 | distinct nonmissing: 2
+[1] "dollars" "log"
+estimator | character | nonmissing: 120 | distinct nonmissing: 2
+[1] "did"   "event"
+observations | integer | nonmissing: 120 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   3110    7004    9736    9176   10762   15523
+treated_sites | integer | nonmissing: 120 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   21.0    21.0    29.0    25.8    29.0    29.0
+control_sites | integer | nonmissing: 120 | distinct nonmissing: 7
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   40.0    42.0    46.5    45.1    48.0    48.0
+pretrend_f | numeric | nonmissing: 60 | distinct nonmissing: 60
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+ 0.1922  0.9315  1.4464  1.5243  2.1055  3.9054      60
+pretrend_p | numeric | nonmissing: 60 | distinct nonmissing: 60
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.     NA's
+0.006769 0.088906 0.227271 0.300781 0.453407 0.941752       60
+pretrend_df1 | integer | nonmissing: 60 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+      4       4       4       4       4       4      60
+pretrend_df2 | integer | nonmissing: 60 | distinct nonmissing: 4
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+   61.0    63.0    75.0    70.2    76.0    76.0      60
+collinear_terms | character | nonmissing: 120 | distinct nonmissing: 2
+[1] ""
+[2] "factor(res_char_type_resd)Split Level"
+fixest_version | character | nonmissing: 120 | distinct nonmissing: 1
+[1] "0.12.1"
+First six records:
+               ring         weighting   specification outcome estimator
+             <char>            <char>          <char>  <char>    <char>
+1: annulus_0125_025 equal_transaction site_unadjusted dollars       did
+2: annulus_0125_025 equal_transaction site_unadjusted dollars     event
+3: annulus_0125_025 equal_transaction site_unadjusted     log       did
+4: annulus_0125_025 equal_transaction site_unadjusted     log     event
+5: annulus_0125_025 equal_transaction   site_hedonics dollars       did
+6: annulus_0125_025 equal_transaction   site_hedonics dollars     event
+   observations treated_sites control_sites pretrend_f pretrend_p pretrend_df1
+          <int>         <int>         <int>      <num>      <num>        <int>
+1:         7004            29            48         NA         NA           NA
+2:         7729            29            48   2.300629 0.06632228            4
+3:         7004            29            48         NA         NA           NA
+4:         7729            29            48   1.370723 0.25204216            4
+5:         7004            29            48         NA         NA           NA
+6:         7729            29            48   1.429741 0.23230248            4
+   pretrend_df2                       collinear_terms fixest_version
+          <int>                                <char>         <char>
+1:           NA                                               0.12.1
+2:           76                                               0.12.1
+3:           NA                                               0.12.1
+4:           76                                               0.12.1
+5:           NA factor(res_char_type_resd)Split Level         0.12.1
+6:           76 factor(res_char_type_resd)Split Level         0.12.1
+CSV SHA-256: 1f86990ca328a5d88a08dd171853470a9b4a850e3238bfd9803a265d6f63a804
+
+Dataset: site_year_support
+Rows: 3916  Columns: 7
+Key: ring, school_site_id, sale_year
+Duplicate or missing keys: 0
+school_site_id | integer | nonmissing: 3916 | distinct nonmissing: 78
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609797  610012  610115  610103  610224  610521
+treated | integer | nonmissing: 3916 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  0.0000  0.0000  0.3624  1.0000  1.0000
+sale_year | integer | nonmissing: 3916 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+sales | integer | nonmissing: 3916 | distinct nonmissing: 106
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0     3.0     7.0    12.3    15.0   144.0
+mean_real_price | numeric | nonmissing: 3611 | distinct nonmissing: 3330
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+  13657   72636  116612  222212  261360 2891628     305
+mean_log_real_price | numeric | nonmissing: 3611 | distinct nonmissing: 3331
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+  9.522  10.871  11.360  11.596  12.279  14.658     305
+ring | character | nonmissing: 3916 | distinct nonmissing: 5
+[1] "annulus_0125_025" "annulus_025_05"   "within_0125"      "within_025"
+[5] "within_05"
+First six records:
+   school_site_id treated sale_year sales mean_real_price mean_log_real_price
+            <int>   <int>     <int> <int>           <num>               <num>
+1:         609797       0      2008     4        83277.20            11.31759
+2:         609797       0      2009    15       108832.40            11.25966
+3:         609797       0      2010     8        71218.24            10.75824
+4:         609797       0      2011     9        60340.81            10.72996
+5:         609797       0      2012     3        86721.62            11.04409
+6:         609797       0      2013     3       141960.01            11.46164
+               ring
+             <char>
+1: annulus_0125_025
+2: annulus_0125_025
+3: annulus_0125_025
+4: annulus_0125_025
+5: annulus_0125_025
+6: annulus_0125_025
+CSV SHA-256: 5c43fe397681f3a9002bd57a30711560161ce96925b1f6e847cdd7604dd531ac
+
+Dataset: raw_trends
+Rows: 220  Columns: 8
+Key: ring, weighting, treated, sale_year
+Duplicate or missing keys: 0
+treated | integer | nonmissing: 220 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0     0.0     0.5     0.5     1.0     1.0
+sale_year | integer | nonmissing: 220 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+mean_real_price | numeric | nonmissing: 220 | distinct nonmissing: 220
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 115409  180071  220668  236132  282817  463808
+mean_log_real_price | numeric | nonmissing: 220 | distinct nonmissing: 220
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  10.98   11.41   11.63   11.67   11.93   12.44
+sites | integer | nonmissing: 220 | distinct nonmissing: 25
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  17.00   25.00   32.50   32.83   42.00   48.00
+sales | integer | nonmissing: 220 | distinct nonmissing: 102
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   89.0   192.0   274.5   437.8   642.0  1516.0
+ring | character | nonmissing: 220 | distinct nonmissing: 5
+[1] "annulus_0125_025" "annulus_025_05"   "within_0125"      "within_025"
+[5] "within_05"
+weighting | character | nonmissing: 220 | distinct nonmissing: 2
+[1] "equal_site_year"   "equal_transaction"
+First six records:
+   treated sale_year mean_real_price mean_log_real_price sites sales
+     <int>     <int>           <num>               <num> <int> <int>
+1:       0      2018        227563.9            11.83266    47   651
+2:       0      2016        204756.0            11.63633    47   543
+3:       0      2011        163087.0            11.36149    45   375
+4:       1      2016        335599.6            12.03238    28   240
+5:       1      2017        307050.2            11.95599    28   252
+6:       1      2018        304252.5            12.03871    28   278
+               ring         weighting
+             <char>            <char>
+1: annulus_0125_025 equal_transaction
+2: annulus_0125_025 equal_transaction
+3: annulus_0125_025 equal_transaction
+4: annulus_0125_025 equal_transaction
+5: annulus_0125_025 equal_transaction
+6: annulus_0125_025 equal_transaction
+CSV SHA-256: 411c643bd9a2801dec84076b96827a1db07056c70f93edfb357d619584ed6a5d
+
+Dataset: sample_summary
+Rows: 10  Columns: 20
+Key: ring, treated
+Duplicate or missing keys: 0
+ring | character | nonmissing: 10 | distinct nonmissing: 5
+[1] "annulus_0125_025" "annulus_025_05"   "within_0125"      "within_025"
+[5] "within_05"
+inner_miles | numeric | nonmissing: 10 | distinct nonmissing: 3
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  0.000   0.000   0.000   0.075   0.125   0.250
+outer_miles | numeric | nonmissing: 10 | distinct nonmissing: 3
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  0.125   0.250   0.250   0.325   0.500   0.500
+treated | integer | nonmissing: 10 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0     0.0     0.5     0.5     1.0     1.0
+before_exclusions | integer | nonmissing: 10 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1270    3512    6766    8313   11098   23193
+opposite_overlap | integer | nonmissing: 10 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0    78.5   168.5   695.2  1098.2  2314.0
+same_status_only_overlap | integer | nonmissing: 10 | distinct nonmissing: 9
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   0.00   35.25  136.50  724.70 1304.00 2856.00
+welcoming_other_after_overlap | integer | nonmissing: 10 | distinct nonmissing: 9
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0     204     932    2078    3842    5530
+sales | integer | nonmissing: 10 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1239    2194    3042    4815    6980   12684
+parcels | integer | nonmissing: 10 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    882    1588    2234    3488    5006    9194
+sites | integer | nonmissing: 10 | distinct nonmissing: 6
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   21.0    29.0    35.0    35.6    46.0    48.0
+sites_without_pre | integer | nonmissing: 10 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   0.00    0.00    0.00    0.30    0.75    1.00
+sites_without_post | integer | nonmissing: 10 | distinct nonmissing: 3
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0     0.0     0.0     0.6     1.0     2.0
+pre_sales | integer | nonmissing: 10 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  529.0   891.2  1218.5  1937.2  2893.0  5003.0
+transition_sales | integer | nonmissing: 10 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  105.0   198.5   287.5   454.3   668.5  1204.0
+post_sales | integer | nonmissing: 10 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    605    1110    1536    2424    3418    6477
+pre_mean_price | numeric | nonmissing: 10 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 153646  171346  207384  208720  214966  288145
+pre_median_price | numeric | nonmissing: 10 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  64772   75897  101218  107641  122024  177960
+pre_mean_sqft | numeric | nonmissing: 10 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1851    2019    2080    2111    2293    2355
+pre_class_211_pct | numeric | nonmissing: 10 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  35.29   46.84   47.54   48.45   54.81   61.44
+First six records:
+               ring inner_miles outer_miles treated before_exclusions
+             <char>       <num>       <num>   <int>             <int>
+1:      within_0125       0.000       0.125       0              2168
+2:      within_0125       0.000       0.125       1              1270
+3: annulus_0125_025       0.125       0.250       0              5883
+4: annulus_0125_025       0.125       0.250       1              3195
+5:   annulus_025_05       0.250       0.500       0             15142
+6:   annulus_025_05       0.250       0.500       1              7648
+   opposite_overlap same_status_only_overlap welcoming_other_after_overlap
+              <int>                    <int>                         <int>
+1:                0                        0                             0
+2:                3                        0                            28
+3:              107                      114                           204
+4:               69                       33                           822
+5:             1118                     1476                          3880
+6:             1039                      788                          3727
+   sales parcels sites sites_without_pre sites_without_post pre_sales
+   <int>   <int> <int>             <int>              <int>     <int>
+1:  2168    1564    47                 1                  1       872
+2:  1239     882    29                 0                  1       529
+3:  5458    3909    48                 0                  0      2296
+4:  2271    1662    29                 0                  0       949
+5:  8668    6272    41                 1                  2      3392
+6:  2094    1552    21                 0                  0       802
+   transition_sales post_sales pre_mean_price pre_median_price pre_mean_sqft
+              <int>      <int>          <num>            <num>         <num>
+1:              192       1104       153646.1         64772.03      2017.755
+2:              105        605       194672.2        102893.58      2354.745
+3:              532       2630       163571.2         70607.43      2042.936
+4:              193       1129       213968.0        116634.88      2341.948
+5:              813       4463       213347.5         99543.38      1856.593
+6:              215       1077       281437.3        159017.34      2175.296
+   pre_class_211_pct
+               <num>
+1:          47.82110
+2:          61.43667
+3:          47.25610
+4:          56.79663
+5:          35.28892
+6:          49.37656
+CSV SHA-256: 23c4537fcf2a1b07bca8f3b50537d2c400e34aa057a8d498e8e91c83f55113fc
+
+Dataset: common_coefficients
+Rows: 660  Columns: 13
+Key: ring, weighting, specification, outcome, estimator, term
+Duplicate or missing keys: 0
+term | character | nonmissing: 660 | distinct nonmissing: 11
+[1] "sale_year::2008:treated" "sale_year::2009:treated"
+[3] "sale_year::2010:treated" "sale_year::2011:treated"
+[5] "sale_year::2013:treated" "sale_year::2014:treated"
+estimate | numeric | nonmissing: 660 | distinct nonmissing: 660
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+-1.459e+05 -2.450e-01  1.700e-02  7.585e+03  1.848e+04  1.556e+05
+std_error | numeric | nonmissing: 660 | distinct nonmissing: 660
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+8.100e-02 1.830e-01 7.454e+03 2.464e+04 4.664e+04 1.072e+05
+t_statistic | numeric | nonmissing: 660 | distinct nonmissing: 660
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+-3.0592438 -0.7412859  0.0834638 -0.0006824  0.7691149  2.9124599
+p_value | numeric | nonmissing: 660 | distinct nonmissing: 660
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+0.004549 0.225466 0.453886 0.473889 0.706785 0.999128
+conf_low | numeric | nonmissing: 660 | distinct nonmissing: 660
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+-3.019e+05 -7.272e+04 -1.358e+00 -4.266e+04 -3.950e-01  8.438e+03
+conf_high | numeric | nonmissing: 660 | distinct nonmissing: 660
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+-35671.39      0.32      1.19  57833.62 109601.21 346565.34
+ring | character | nonmissing: 660 | distinct nonmissing: 5
+[1] "annulus_0125_025" "annulus_025_05"   "within_0125"      "within_025"
+[5] "within_05"
+weighting | character | nonmissing: 660 | distinct nonmissing: 2
+[1] "equal_site_year"   "equal_transaction"
+specification | character | nonmissing: 660 | distinct nonmissing: 3
+[1] "group_hedonics"  "site_hedonics"   "site_unadjusted"
+outcome | character | nonmissing: 660 | distinct nonmissing: 2
+[1] "dollars" "log"
+estimator | character | nonmissing: 660 | distinct nonmissing: 2
+[1] "did"   "event"
+sale_year | integer | nonmissing: 600 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+   2008    2010    2014    2013    2016    2018      60
+First six records:
+                      term    estimate std_error t_statistic    p_value
+                    <char>       <num>     <num>       <num>      <num>
+1:            treated_post  98344.9143  66206.52  1.48542652 0.14753023
+2: sale_year::2008:treated  51627.0203  24220.91  2.13150650 0.04108096
+3: sale_year::2009:treated 100134.7336  49088.53  2.03988030 0.04996129
+4: sale_year::2010:treated -35338.5531  22523.88 -1.56893699 0.12681488
+5: sale_year::2011:treated    430.5934  22053.28  0.01952514 0.98454731
+6: sale_year::2013:treated 101407.4121  62418.09  1.62464769 0.11436340
+       conf_low conf_high             ring         weighting   specification
+          <num>     <num>           <char>            <char>          <char>
+1: -36684.16521 233373.99 annulus_0125_025 equal_transaction site_unadjusted
+2:   2228.15508 101025.89 annulus_0125_025 equal_transaction site_unadjusted
+3:     18.00813 200251.46 annulus_0125_025 equal_transaction site_unadjusted
+4: -81276.31538  10599.21 annulus_0125_025 equal_transaction site_unadjusted
+5: -44547.36525  45408.55 annulus_0125_025 equal_transaction site_unadjusted
+6: -25895.12941 228709.95 annulus_0125_025 equal_transaction site_unadjusted
+   outcome estimator sale_year
+    <char>    <char>     <int>
+1: dollars       did        NA
+2: dollars     event      2008
+3: dollars     event      2009
+4: dollars     event      2010
+5: dollars     event      2011
+6: dollars     event      2013
+CSV SHA-256: b8b1323048f4a95850fb320f2f4c33d981b601b020afdadd360e1551c48d128b
+
+Dataset: common_model_summary
+Rows: 120  Columns: 14
+Key: ring, weighting, specification, outcome, estimator
+Duplicate or missing keys: 0
+ring | character | nonmissing: 120 | distinct nonmissing: 5
+[1] "annulus_0125_025" "annulus_025_05"   "within_0125"      "within_025"
+[5] "within_05"
+weighting | character | nonmissing: 120 | distinct nonmissing: 2
+[1] "equal_site_year"   "equal_transaction"
+specification | character | nonmissing: 120 | distinct nonmissing: 3
+[1] "group_hedonics"  "site_hedonics"   "site_unadjusted"
+outcome | character | nonmissing: 120 | distinct nonmissing: 2
+[1] "dollars" "log"
+estimator | character | nonmissing: 120 | distinct nonmissing: 2
+[1] "did"   "event"
+observations | integer | nonmissing: 120 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1168    2543    3913    5371    7923   12038
+treated_sites | integer | nonmissing: 120 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      6       6       6       6       6       6
+control_sites | integer | nonmissing: 120 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+     26      26      26      26      26      26
+pretrend_f | numeric | nonmissing: 60 | distinct nonmissing: 60
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+0.09498 0.62766 1.04480 1.27678 1.76811 3.42257      60
+pretrend_p | numeric | nonmissing: 60 | distinct nonmissing: 60
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+0.01983 0.16050 0.40031 0.42528 0.64642 0.98332      60
+pretrend_df1 | integer | nonmissing: 60 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+      4       4       4       4       4       4      60
+pretrend_df2 | integer | nonmissing: 60 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+     31      31      31      31      31      31      60
+collinear_terms | character | nonmissing: 120 | distinct nonmissing: 2
+[1] ""
+[2] "factor(res_char_type_resd)Split Level"
+fixest_version | character | nonmissing: 120 | distinct nonmissing: 1
+[1] "0.12.1"
+First six records:
+               ring         weighting   specification outcome estimator
+             <char>            <char>          <char>  <char>    <char>
+1: annulus_0125_025 equal_transaction site_unadjusted dollars       did
+2: annulus_0125_025 equal_transaction site_unadjusted dollars     event
+3: annulus_0125_025 equal_transaction site_unadjusted     log       did
+4: annulus_0125_025 equal_transaction site_unadjusted     log     event
+5: annulus_0125_025 equal_transaction   site_hedonics dollars       did
+6: annulus_0125_025 equal_transaction   site_hedonics dollars     event
+   observations treated_sites control_sites pretrend_f pretrend_p pretrend_df1
+          <int>         <int>         <int>      <num>      <num>        <int>
+1:         2543             6            26         NA         NA           NA
+2:         2825             6            26   2.356798 0.07529818            4
+3:         2543             6            26         NA         NA           NA
+4:         2825             6            26   0.198875 0.93705478            4
+5:         2543             6            26         NA         NA           NA
+6:         2825             6            26   0.689818 0.60456200            4
+   pretrend_df2                       collinear_terms fixest_version
+          <int>                                <char>         <char>
+1:           NA                                               0.12.1
+2:           31                                               0.12.1
+3:           NA                                               0.12.1
+4:           31                                               0.12.1
+5:           NA factor(res_char_type_resd)Split Level         0.12.1
+6:           31 factor(res_char_type_resd)Split Level         0.12.1
+CSV SHA-256: 9773fa1b80948f8c0d94f93ba50bac63e4b3553b70b7fa518656fe2382e69dbb
+
+Dataset: common_site_year_support
+Rows: 1760  Columns: 7
+Key: ring, school_site_id, sale_year
+Duplicate or missing keys: 0
+school_site_id | integer | nonmissing: 1760 | distinct nonmissing: 32
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609809  610021  610122  610120  610227  610521
+treated | integer | nonmissing: 1760 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  0.0000  0.0000  0.1875  0.0000  1.0000
+sale_year | integer | nonmissing: 1760 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+sales | integer | nonmissing: 1760 | distinct nonmissing: 106
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   0.00    3.00    9.00   16.02   21.00  144.00
+mean_real_price | numeric | nonmissing: 1520 | distinct nonmissing: 1520
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+  12784   78508  117514  223231  261845 1811000     240
+mean_log_real_price | numeric | nonmissing: 1520 | distinct nonmissing: 1520
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+  9.456  10.949  11.393  11.648  12.312  14.301     240
+ring | character | nonmissing: 1760 | distinct nonmissing: 5
+[1] "annulus_0125_025" "annulus_025_05"   "within_0125"      "within_025"
+[5] "within_05"
+First six records:
+   school_site_id treated sale_year sales mean_real_price mean_log_real_price
+            <int>   <int>     <int> <int>           <num>               <num>
+1:         609809       0      2008     8        626686.7            13.26711
+2:         609809       0      2009    12        374132.5            12.73590
+3:         609809       0      2010    12        426307.6            12.81426
+4:         609809       0      2011    10        463707.2            12.95477
+5:         609809       0      2012    11        397901.2            12.73360
+6:         609809       0      2013    25        529235.9            13.05686
+               ring
+             <char>
+1: annulus_0125_025
+2: annulus_0125_025
+3: annulus_0125_025
+4: annulus_0125_025
+5: annulus_0125_025
+6: annulus_0125_025
+CSV SHA-256: 1728b5215048540cf7f34bb156436e548f53988d43d5369d62016ad9a1105fc5
+
+Dataset: common_raw_trends
+Rows: 220  Columns: 8
+Key: ring, weighting, treated, sale_year
+Duplicate or missing keys: 0
+treated | integer | nonmissing: 220 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0     0.0     0.5     0.5     1.0     1.0
+sale_year | integer | nonmissing: 220 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+mean_real_price | numeric | nonmissing: 220 | distinct nonmissing: 220
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 131528  189928  255180  282710  344738  605910
+mean_log_real_price | numeric | nonmissing: 220 | distinct nonmissing: 220
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  11.19   11.53   11.86   11.89   12.23   12.86
+sites | integer | nonmissing: 220 | distinct nonmissing: 9
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   3.00    5.00   13.50   13.82   23.00   25.00
+sales | integer | nonmissing: 220 | distinct nonmissing: 98
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   12.0    51.0   112.0   256.3   336.0  1266.0
+ring | character | nonmissing: 220 | distinct nonmissing: 5
+[1] "annulus_0125_025" "annulus_025_05"   "within_0125"      "within_025"
+[5] "within_05"
+weighting | character | nonmissing: 220 | distinct nonmissing: 2
+[1] "equal_site_year"   "equal_transaction"
+First six records:
+   treated sale_year mean_real_price mean_log_real_price sites sales
+     <int>     <int>           <num>               <num> <int> <int>
+1:       0      2018        246053.0            11.95600    22   296
+2:       0      2016        239668.3            11.78158    21   245
+3:       1      2018        456175.6            12.43747     5    50
+4:       1      2015        497146.1            12.64041     3    30
+5:       0      2008        238739.5            11.77645    22   187
+6:       0      2015        231973.4            11.78537    23   180
+               ring         weighting
+             <char>            <char>
+1: annulus_0125_025 equal_transaction
+2: annulus_0125_025 equal_transaction
+3: annulus_0125_025 equal_transaction
+4: annulus_0125_025 equal_transaction
+5: annulus_0125_025 equal_transaction
+6: annulus_0125_025 equal_transaction
+CSV SHA-256: 9eb89c5dc05592780e4eac538c567ee77f3ab36084ba75697539618430e8f61f
+
+Dataset: common_sample_summary
+Rows: 6  Columns: 11
+Key: ring, treated
+Duplicate or missing keys: 0
+ring | character | nonmissing: 6 | distinct nonmissing: 3
+[1] "annulus_0125_025" "annulus_025_05"   "within_0125"
+treated | integer | nonmissing: 6 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0     0.0     0.5     0.5     1.0     1.0
+sales_halfmile_exclusion | integer | nonmissing: 6 | distinct nonmissing: 6
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  214.0   684.5  1619.5  2587.2  2676.8  8668.0
+sites_halfmile_exclusion | integer | nonmissing: 6 | distinct nonmissing: 6
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   7.00   15.75   27.00   25.67   36.75   41.00
+sales_common_roster | integer | nonmissing: 6 | distinct nonmissing: 6
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  212.0   573.8  1060.0  2159.2  2230.2  7591.0
+sales | integer | nonmissing: 6 | distinct nonmissing: 6
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  211.0   502.2   947.0  2006.3  2090.0  7108.0
+sites | integer | nonmissing: 6 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      6       6      16      16      26      26
+pre_sales | integer | nonmissing: 6 | distinct nonmissing: 6
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   80.0   182.5   337.5   769.0   839.0  2722.0
+transition_sales | integer | nonmissing: 6 | distinct nonmissing: 6
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   25.0    45.0    83.0   188.8   208.0   660.0
+post_sales | integer | nonmissing: 6 | distinct nonmissing: 6
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  106.0   274.8   526.5  1048.5  1043.0  3726.0
+site_years | integer | nonmissing: 6 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+     52      52     152     152     252     252
+First six records:
+               ring treated sales_halfmile_exclusion sites_halfmile_exclusion
+             <char>   <int>                    <int>                    <int>
+1: annulus_0125_025       0                     2871                       38
+2: annulus_0125_025       1                      531                       14
+3:   annulus_025_05       0                     8668                       41
+4:   annulus_025_05       1                     2094                       21
+5:      within_0125       0                     1145                       33
+6:      within_0125       1                      214                        7
+   sales_common_roster sales sites pre_sales transition_sales post_sales
+                 <int> <int> <int>     <int>            <int>      <int>
+1:                2604  2427    26       984              245       1198
+2:                 428   398     6       153               37        208
+3:                7591  7108    26      2722              660       3726
+4:                1011   815     6       271               69        475
+5:                1109  1079    26       404               97        578
+6:                 212   211     6        80               25        106
+   site_years
+        <int>
+1:        252
+2:         52
+3:        252
+4:         52
+5:        252
+6:         52
+CSV SHA-256: 36307b23a2bfc895c320783d32d9f093c7fcb3a7445946622f5e48ac6e5a3bdb
+
+Dataset: common_support
+Rows: 2112  Columns: 8
+Key: school_site_id, ring, sale_year
+Duplicate or missing keys: 0
+school_site_id | integer | nonmissing: 2112 | distinct nonmissing: 64
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609797  610006  610096  610092  610219  610521
+ring | character | nonmissing: 2112 | distinct nonmissing: 3
+[1] "annulus_0125_025" "annulus_025_05"   "within_0125"
+sale_year | integer | nonmissing: 2112 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+treated | integer | nonmissing: 2112 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  0.0000  0.0000  0.3281  1.0000  1.0000
+sales | integer | nonmissing: 2112 | distinct nonmissing: 77
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   0.00    0.00    3.00    7.35    8.00  106.00
+common_year | logical | nonmissing: 2112 | distinct nonmissing: 2
+[1] FALSE  TRUE
+common_site | logical | nonmissing: 2112 | distinct nonmissing: 2
+[1] FALSE  TRUE
+included | logical | nonmissing: 2112 | distinct nonmissing: 2
+[1] FALSE  TRUE
+First six records:
+   school_site_id             ring sale_year treated sales common_year
+            <int>           <char>     <int>   <int> <int>      <lgcl>
+1:         609797 annulus_0125_025      2008       0     0       FALSE
+2:         609797 annulus_0125_025      2009       0     0       FALSE
+3:         609797 annulus_0125_025      2010       0     0       FALSE
+4:         609797 annulus_0125_025      2011       0     0       FALSE
+5:         609797 annulus_0125_025      2012       0     0       FALSE
+6:         609797 annulus_0125_025      2013       0     0       FALSE
+   common_site included
+        <lgcl>   <lgcl>
+1:       FALSE    FALSE
+2:       FALSE    FALSE
+3:       FALSE    FALSE
+4:       FALSE    FALSE
+5:       FALSE    FALSE
+6:       FALSE    FALSE

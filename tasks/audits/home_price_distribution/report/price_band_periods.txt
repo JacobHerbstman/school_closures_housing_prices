@@ -1,0 +1,54 @@
+SHA-256: b8dd40bb06480918e31a2d6c2b7e8932e5aa3f9c0d071a798dee13a544214291
+
+Dataset: price_band_periods
+Rows: 16  Columns: 11
+Key: treated, period, price_band
+Duplicate or missing keys: 0
+treated | integer | nonmissing: 16 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0     0.0     0.5     0.5     1.0     1.0
+period | character | nonmissing: 16 | distinct nonmissing: 2
+[1] "2008-2012" "2014-2018"
+price_band | character | nonmissing: 16 | distinct nonmissing: 4
+[1] "0-50"   "50-75"  "75-95"  "95-100"
+sales | integer | nonmissing: 16 | distinct nonmissing: 16
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   71.0   252.2   516.5   619.5   794.5  1878.0
+sale_value | numeric | nonmissing: 16 | distinct nonmissing: 16
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+ 36212239  72605315 114027141 131064065 170706999 314331579
+mean_price | numeric | nonmissing: 16 | distinct nonmissing: 16
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  37515  119401  335696  430295  712068 1285315
+apartment_share | numeric | nonmissing: 16 | distinct nonmissing: 16
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.2562  0.4384  0.4923  0.5093  0.5802  0.7179
+mean_building_sqft | numeric | nonmissing: 16 | distinct nonmissing: 16
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1741    2048    2487    2525    2834    3921
+mean_age | numeric | nonmissing: 16 | distinct nonmissing: 16
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  46.50   86.86   94.76   88.41   97.10  100.79
+sale_share | numeric | nonmissing: 16 | distinct nonmissing: 16
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.05065 0.16194 0.22363 0.25000 0.31223 0.50123
+contribution_to_mean | numeric | nonmissing: 16 | distinct nonmissing: 16
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  18787   35256   47263   56489   72571  139419
+First six records:
+   treated    period price_band sales sale_value mean_price apartment_share
+     <int>    <char>     <char> <int>      <num>      <num>           <num>
+1:       0 2008-2012       0-50  1581   59310460   37514.52       0.4851360
+2:       0 2008-2012      50-75   787  106578326  135423.54       0.4421855
+3:       0 2008-2012      75-95   629  222713805  354076.00       0.5437202
+4:       0 2008-2012     95-100   160  120087783  750548.64       0.2562500
+5:       0 2014-2018       0-50  1878  101778415   54195.11       0.3998935
+6:       0 2014-2018      50-75   935  166057265  177601.35       0.4737968
+   mean_building_sqft mean_age sale_share contribution_to_mean
+                <num>    <num>      <num>                <num>
+1:           1803.746 94.81404 0.50079189             18786.97
+2:           2069.624 89.82592 0.24928730             33759.37
+3:           2424.383 88.58665 0.19923978             70546.03
+4:           2705.156 46.50000 0.05068103             38038.58
+5:           1740.824 96.60703 0.50066649             27133.68
+6:           2103.512 94.70267 0.24926686             44270.13

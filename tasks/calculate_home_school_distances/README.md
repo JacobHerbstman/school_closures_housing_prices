@@ -7,8 +7,9 @@ StatePlane East coordinates (EPSG:3435).
 
 Candidate schools sharing pre-closure coordinates are represented by one
 `candidate_site` location. This leaves 127 candidate sites: 29 treated, 49
-controls, and 49 neither. The 48 distinct welcoming schools are represented
-separately at their SY2013--14 locations because a school can have different
+controls, and 49 outside those study groups. The 48 schools designated to
+receive displaced students (welcoming schools) are represented separately at
+their 2013–14 locations because a school can have different
 pre-closure and welcoming-school locations.
 
 The Parquet output has one row per transaction and role-specific school
