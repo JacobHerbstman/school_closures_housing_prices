@@ -16,7 +16,7 @@ The outcome is log real price (2022 dollars). Every model has school-site and
 sale-year fixed effects, equal weight per transaction, and standard errors
 clustered by site. The event study uses 2012 as the reference year and shows
 2013 as a transition year; the pooled estimate compares 2014--2018 with
-2008--2012 and omits 2013. Two control sets: fixed effects only, and hedonics
+2008--2012 and omits 2013. Two control sets: fixed effects only, and fixed effects plus hedonics
 (log building and lot area and age, each with its square; beds, rooms, full
 baths; residence type, construction quality, repair condition; REO and
 quick-resale indicators; a two-to-six-unit indicator). A unit-count factor with
@@ -29,8 +29,13 @@ Baseline price tiers split the comparison: each study site's 2008--2012 median
 real price among all clean sales within a quarter mile, cut at the median of
 site medians across both groups (14 closed / 25 stayed-open lower-price sites,
 15 / 23 higher-price). Tier models are estimated separately within each tier for
-all clean sales and without REO resales. The tiers are saved in `twfe.rds` for
-the sales-volume audit.
+all clean sales and without REO resales. Quartiles of the same site medians
+(common cutoffs; 6--8 closed sites each) are estimated the same way. A
+continuous version interacts the closure effect with the site's log baseline
+price (centered at the median site) and also lets year effects vary with
+baseline price for all sites, so the gradient compares closed and stayed-open
+sites at similar price levels; it is estimated pooled and year by year. The
+tiers are saved in `twfe.rds` for the sales-volume audit.
 
 Property-class dummies are not used: classes 205/207 and 210/295 change at age
 62. `output/twfe.rds` holds

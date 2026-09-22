@@ -10,7 +10,7 @@ events <- all_events[tier == "All sites"]
 did <- all_did[tier == "All sites"]
 models <- all_models[tier == "All sites"]
 leave_one_out <- estimates$leave_one_out
-control_levels <- c("Site and year effects", "Hedonics")
+control_levels <- c("Fixed effects only", "Fixed effects + hedonics")
 variant_levels <- c("All clean sales", "Drop REO resales", "Drop resales within 365 days",
                     "Drop 1st-99th price tails", "Drop all flagged sales")
 colors <- setNames(c("#2a78d6", "#eb6834"), control_levels)
@@ -117,7 +117,7 @@ tier_note <- paste0("Tiers: each site's 2008-2012 median real price, split at th
   tier_counts[price_tier == tier_levels[1] & treated == 0L, sites], " stayed-open sites; higher-price: ",
   tier_counts[price_tier == tier_levels[2] & treated == 1L, sites], " closed / ",
   tier_counts[price_tier == tier_levels[2] & treated == 0L, sites], " stayed-open sites.")
-tier_events <- all_events[tier != "All sites" & variant == "All clean sales" & normalization == "2012"]
+tier_events <- all_events[tier %in% tier_levels & variant == "All clean sales" & normalization == "2012"]
 tier_events <- rbind(tier_events, unique(tier_events[, .(sample, tier, variant, controls, weighting, normalization)])[
   , `:=`(sale_year = 2012L, estimate = 0, std_error = 0, ci_low = 0, ci_high = 0)])
 tier_events[, `:=`(tier = factor(tier, levels = tier_levels), controls = factor(controls, levels = control_levels))]
@@ -133,7 +133,7 @@ tier_event_page <- ggplot(tier_events, aes(sale_year, estimate, color = controls
        subtitle = "Closed vs stayed-open sites within the same tier; 2012 = 0; each sale has equal weight",
        x = NULL, y = "Log points", caption = paste(tier_note, sample_note, sep = "\n"))
 
-tier_pooled <- merge(all_did[tier != "All sites"], all_models[design == "event" & tier != "All sites",
+tier_pooled <- merge(all_did[tier %in% tier_levels], all_models[design == "event" & tier %in% tier_levels,
                      .(sample, tier, variant, controls, weighting, pre_trend_p_value)],
                      by = c("sample", "tier", "variant", "controls", "weighting"))
 tier_pooled[, row := factor(paste(tier, variant, sep = ": "),
@@ -152,13 +152,85 @@ tier_did_page <- ggplot(tier_pooled, aes(estimate, row, color = controls, shape 
        x = "Closed minus stayed-open change in log real price", y = NULL,
        caption = paste(tier_note, "95% intervals clustered by school site.", sep = "\n"))
 
+# Quartiles and the continuous gradient in baseline price.
+quartile_levels <- paste("Price quartile", 1:4)
+quartile_counts <- estimates$site_tiers[, .(closed = sum(treated == 1L), open = sum(treated == 0L),
+                                            median_baseline = median(pre_median_real_price)), by = .(tier = price_quartile)]
+quartile_events <- all_events[tier %in% quartile_levels & variant == "All clean sales" & normalization == "2012"]
+quartile_events <- rbind(quartile_events, unique(quartile_events[, .(sample, tier, variant, controls, weighting, normalization)])[
+  , `:=`(sale_year = 2012L, estimate = 0, std_error = 0, ci_low = 0, ci_high = 0)])
+quartile_events <- merge(quartile_events, quartile_counts, by = "tier")
+quartile_events[, `:=`(panel = factor(sprintf("%s: %d closed / %d open, median $%sk", tier, closed, open, round(median_baseline / 1e3)),
+                                      levels = unique(sprintf("%s: %d closed / %d open, median $%sk", tier, closed, open,
+                                                              round(median_baseline / 1e3))[order(tier)])),
+                       controls = factor(controls, levels = control_levels))]
+quartile_event_page <- ggplot(quartile_events, aes(sale_year, estimate, color = controls, shape = controls)) +
+  shade + zero +
+  geom_errorbar(aes(ymin = ci_low, ymax = ci_high), width = 0, linewidth = 0.4, position = tier_dodge) +
+  geom_point(size = 1.5, position = tier_dodge) +
+  facet_grid(sample ~ panel, labeller = label_wrap_gen(width = 22)) +
+  scale_color_manual(values = colors) + scale_shape_manual(values = shapes) +
+  scale_x_continuous(breaks = seq(2008, 2018, 2)) +
+  labs(title = "Event studies by baseline price quartile, log real sale price, all clean sales",
+       subtitle = "Closed vs stayed-open sites within the same quartile of 2008-2012 site median price; 2012 = 0",
+       x = NULL, y = "Log points", caption = sample_note)
+
+quartile_points <- merge(all_did[tier %in% quartile_levels & variant %in% c("All clean sales", "Drop REO resales")],
+                         quartile_counts, by = "tier")
+curve <- copy(estimates$gradient_curve)[, controls := factor(controls, levels = control_levels)]
+quartile_points[, controls := factor(controls, levels = control_levels)]
+gradient_terms <- dcast(estimates$gradient, sample + variant + controls ~ term, value.var = c("estimate", "ci_low", "ci_high"))
+gradient_labels <- gradient_terms[, .(sample, variant, controls, label = sprintf("%s slope: %.2f [%.2f, %.2f]",
+  fifelse(controls == "Fixed effects only", "FE only", "FE + hedonics"),
+  `estimate_Slope per log point of baseline price`, `ci_low_Slope per log point of baseline price`,
+  `ci_high_Slope per log point of baseline price`))]
+gradient_labels[, `:=`(controls = factor(controls, levels = control_levels),
+                       y = fifelse(controls == "Fixed effects only", 0.62, 0.52))]
+gradient_page <- ggplot(curve, aes(baseline_price, estimate, color = controls, fill = controls)) +
+  geom_hline(yintercept = 0, color = "#52514e", linewidth = 0.4) +
+  geom_ribbon(aes(ymin = ci_low, ymax = ci_high), alpha = 0.12, color = NA) +
+  geom_line(linewidth = 0.9) +
+  geom_pointrange(data = quartile_points, aes(x = median_baseline, y = estimate, ymin = ci_low, ymax = ci_high, shape = controls),
+                  position = position_dodge(width = 0.08), size = 0.35, linewidth = 0.5) +
+  geom_text(data = gradient_labels, aes(x = min(curve$baseline_price), y = y, label = label), hjust = 0, size = 3,
+            show.legend = FALSE) +
+  facet_grid(sample ~ variant) +
+  scale_x_log10(labels = scales::label_dollar(scale = 1e-3, suffix = "k", accuracy = 1)) +
+  scale_color_manual(values = colors) + scale_fill_manual(values = colors, guide = "none") +
+  scale_shape_manual(values = shapes) +
+  coord_cartesian(ylim = c(-0.8, 0.7)) +
+  labs(title = "Closure effect on log price by the site's baseline price level",
+       subtitle = "Lines: continuous interaction with 95% bands; points: separate estimates within each baseline-price quartile",
+       x = "Site median sale price, 2008-2012 (2022 dollars, log scale)", y = "Closed minus stayed-open change, 2014-2018 vs 2008-2012",
+       caption = paste("The continuous model adds year effects that vary with baseline price for all sites. Slope: change in the",
+                       "closure effect per log point of baseline price (about 2.7 times higher). 95% intervals clustered by school site.", sep = "\n"))
+
+slope_events <- rbind(estimates$gradient_events[variant == "All clean sales"],
+                      unique(estimates$gradient_events[variant == "All clean sales", .(sample, variant, controls)])[
+                        , `:=`(sale_year = 2012L, estimate = 0, std_error = 0, ci_low = 0, ci_high = 0)])
+slope_events[, controls := factor(controls, levels = control_levels)]
+slope_page <- ggplot(slope_events, aes(sale_year, estimate, color = controls, shape = controls)) +
+  shade + zero +
+  geom_errorbar(aes(ymin = ci_low, ymax = ci_high), width = 0, linewidth = 0.5, position = average_dodge) +
+  geom_point(size = 1.9, position = average_dodge) +
+  facet_wrap(~sample) +
+  scale_color_manual(values = colors) + scale_shape_manual(values = shapes) +
+  scale_x_continuous(breaks = 2008:2018) +
+  labs(title = "Year-by-year gradient: how the closure effect varies with baseline price",
+       subtitle = "Coefficient on closed x log baseline price in each year, relative to 2012; all clean sales",
+       x = NULL, y = "Log points per log point of baseline price",
+       caption = "The model also includes year effects varying with baseline price for all sites. 95% intervals clustered by school site.")
+
 pdf("../output/event_studies.pdf", width = 11, height = 8.5, onefile = TRUE, useDingbats = FALSE)
-print(variant_page("Hedonics"))
-print(variant_page("Site and year effects"))
+print(variant_page("Fixed effects + hedonics"))
+print(variant_page("Fixed effects only"))
 print(did_page)
 print(average_page)
 print(loo_2010_page)
 print(spaghetti_page)
 print(tier_event_page)
 print(tier_did_page)
+print(quartile_event_page)
+print(gradient_page)
+print(slope_page)
 invisible(dev.off())

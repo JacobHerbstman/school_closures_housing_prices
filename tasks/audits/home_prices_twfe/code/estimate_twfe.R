@@ -55,8 +55,8 @@ hedonics <- paste(
 # A unit-count factor with an unknown level changed no estimate by more than
 # 0.003 log points (September 22), so the 2-6-unit indicator stands in for it.
 control_sets <- c(
-  "Site and year effects" = "",
-  "Hedonics" = paste("+", hedonics, "+ two_to_six_units")
+  "Fixed effects only" = "",
+  "Fixed effects + hedonics" = paste("+", hedonics, "+ two_to_six_units")
 )
 # Robustness to the flagged sales: each variant removes one kind of flagged sale.
 samples[, `:=`(
@@ -86,9 +86,19 @@ site_tiers <- samples[sample == "All property" & sale_year <= 2012L,
                       by = .(school_site_id, treated)]
 tier_cutoff <- median(site_tiers$pre_median_real_price)
 site_tiers[, price_tier := fifelse(pre_median_real_price <= tier_cutoff, "Lower-price sites", "Higher-price sites")]
+# Quartiles use the same site medians and common cutoffs; the continuous measure
+# is the log site median, centered at the median of site medians.
+quartile_cutoffs <- quantile(site_tiers$pre_median_real_price, c(0.25, 0.5, 0.75), type = 7)
+site_tiers[, `:=`(
+  price_quartile = paste("Price quartile", findInterval(pre_median_real_price, quartile_cutoffs, left.open = TRUE) + 1L),
+  log_baseline_price = log(pre_median_real_price) - log(tier_cutoff)
+)]
 stopifnot(!anyDuplicated(site_tiers$school_site_id), all(samples$school_site_id %in% site_tiers$school_site_id))
-samples[site_tiers, on = "school_site_id", price_tier := i.price_tier]
+samples[site_tiers, on = "school_site_id", `:=`(price_tier = i.price_tier, price_quartile = i.price_quartile,
+                                                log_baseline_price = i.log_baseline_price)]
 print(site_tiers[, .(sites = .N, median_of_site_medians = round(median(pre_median_real_price))), by = .(price_tier, treated)])
+print(site_tiers[order(price_quartile), .(sites = .N, min = round(min(pre_median_real_price)), max = round(max(pre_median_real_price))),
+                 by = .(price_quartile, treated)])
 
 # Log real price; site-clustered errors. The pooled difference-in-differences
 # compares 2014-2018 with 2008-2012. Used by the main grid and the
@@ -115,7 +125,8 @@ event_table <- function(fit) {
 
 # One row per model. Site-year weighting is estimated on all clean sales only;
 # the baseline price tiers on all clean sales and without REO resales.
-specifications <- CJ(sample = unique(samples$sample), tier = c("All sites", "Lower-price sites", "Higher-price sites"),
+tiers <- c("All sites", "Lower-price sites", "Higher-price sites", paste("Price quartile", 1:4))
+specifications <- CJ(sample = unique(samples$sample), tier = tiers,
                      variant = names(variants), controls = names(control_sets), design = names(designs),
                      weighting = c("Transactions", "Site-years"), sorted = FALSE)
 specifications <- specifications[(weighting == "Transactions" | variant == "All clean sales") &
@@ -126,7 +137,7 @@ models <- list()
 for (k in seq_len(nrow(specifications))) {
   spec <- specifications[k]
   data <- samples[sample == spec$sample & get(variants[[spec$variant]]) == TRUE &
-                    (spec$tier == "All sites" | price_tier == spec$tier)]
+                    (spec$tier == "All sites" | price_tier == spec$tier | price_quartile == spec$tier)]
   fit <- fit_model(data, spec$controls, spec$design, spec$weighting)
   if (spec$design == "event") events[[k]] <- cbind(spec, event_table(fit)) else
     did[[k]] <- cbind(spec, data.table(estimate = coef(fit)[["treated_post"]], std_error = se(fit)[["treated_post"]]))
@@ -146,6 +157,53 @@ stopifnot(all(is.finite(events$estimate)), all(is.finite(did$estimate)), all(did
           !anyDuplicated(did[, .(sample, tier, variant, controls, weighting)]), nrow(models) == nrow(specifications))
 events[, `:=`(ci_low = estimate - 1.96 * std_error, ci_high = estimate + 1.96 * std_error)]
 did[, `:=`(ci_low = estimate - 1.96 * std_error, ci_high = estimate + 1.96 * std_error)]
+
+# Continuous gradient: the closure effect varies linearly with the site's log
+# baseline price (0 = median site). Year effects are also allowed to vary with
+# baseline price, so the gradient is not a citywide divergence between cheaper
+# and more expensive areas. Pooled: effect at the median site and the slope per
+# log point of baseline price. Event: the slope in each year relative to 2012.
+samples[, `:=`(treated_post_baseline = treated_post * log_baseline_price,
+               treated_baseline = treated * log_baseline_price)]
+gradient_designs <- c(
+  did = "treated_post + treated_post_baseline + i(sale_year, log_baseline_price, ref = 2012)",
+  event = "i(sale_year, treated, ref = 2012) + i(sale_year, treated_baseline, ref = 2012) + i(sale_year, log_baseline_price, ref = 2012)")
+baseline_grid <- seq(min(site_tiers$log_baseline_price), max(site_tiers$log_baseline_price), length.out = 60)
+gradient <- list()
+gradient_curve <- list()
+gradient_events <- list()
+for (sample_name in unique(samples$sample)) {
+  for (variant in c("All clean sales", "Drop REO resales")) {
+    for (control_name in names(control_sets)) {
+      data <- samples[sample == sample_name & get(variants[[variant]]) == TRUE]
+      did_fit <- feols(as.formula(paste("log_price ~", gradient_designs[["did"]], control_sets[[control_name]],
+                                        "| school_site_id + sale_year")), data = data[sale_year != 2013L], vcov = ~school_site_id)
+      terms <- c("treated_post", "treated_post_baseline")
+      b <- coef(did_fit)[terms]
+      V <- vcov(did_fit)[terms, terms]
+      gradient[[length(gradient) + 1L]] <- data.table(sample = sample_name, variant = variant, controls = control_name,
+        term = c("Effect at median baseline price", "Slope per log point of baseline price"),
+        estimate = unname(b), std_error = sqrt(diag(V)))
+      grid <- cbind(1, baseline_grid)
+      gradient_curve[[length(gradient_curve) + 1L]] <- data.table(sample = sample_name, variant = variant, controls = control_name,
+        log_baseline_price = baseline_grid, baseline_price = tier_cutoff * exp(baseline_grid),
+        estimate = as.vector(grid %*% b), std_error = sqrt(rowSums((grid %*% V) * grid)))
+      event_fit <- feols(as.formula(paste("log_price ~", gradient_designs[["event"]], control_sets[[control_name]],
+                                          "| school_site_id + sale_year")), data = data, vcov = ~school_site_id)
+      slope <- as.data.table(coeftable(event_fit), keep.rownames = "term")[grepl(":treated_baseline$", term)]
+      gradient_events[[length(gradient_events) + 1L]] <- slope[, .(sample = sample_name, variant = variant, controls = control_name,
+        sale_year = as.integer(sub("sale_year::([0-9]+):treated_baseline", "\\1", term)),
+        estimate = Estimate, std_error = `Std. Error`)]
+    }
+  }
+}
+gradient <- rbindlist(gradient)
+gradient_curve <- rbindlist(gradient_curve)
+gradient_events <- rbindlist(gradient_events)
+gradient[, `:=`(ci_low = estimate - 1.96 * std_error, ci_high = estimate + 1.96 * std_error)]
+gradient_curve[, `:=`(ci_low = estimate - 1.96 * std_error, ci_high = estimate + 1.96 * std_error)]
+gradient_events[, `:=`(ci_low = estimate - 1.96 * std_error, ci_high = estimate + 1.96 * std_error)]
+stopifnot(all(is.finite(gradient$estimate)), nrow(gradient_events) == nrow(gradient) / 2 * 10)
 
 # Leave one closed site out: all clean sales, transaction weights, event study.
 leave_one_out <- list()
@@ -176,16 +234,19 @@ setorder(site_tiers, school_site_id)
 setorder(leave_one_out, sample, controls, dropped_site, normalization, sale_year)
 setorder(support, sample, treated, sale_year)
 saveRDS(list(events = events, did = did, models = models, leave_one_out = leave_one_out, support = support,
-             site_tiers = site_tiers),
+             site_tiers = site_tiers, gradient = gradient, gradient_curve = gradient_curve, gradient_events = gradient_events),
         "../output/twfe.rds")
 report <- capture.output({
   report_data(events, "events", c("sample", "tier", "variant", "controls", "weighting", "normalization", "sale_year"))
   report_data(did, "did", c("sample", "tier", "variant", "controls", "weighting"))
   report_data(models, "models", c("sample", "tier", "variant", "controls", "design", "weighting"))
   report_data(site_tiers, "site_tiers", "school_site_id")
+  report_data(gradient, "gradient", c("sample", "variant", "controls", "term"))
+  report_data(gradient_events, "gradient_events", c("sample", "variant", "controls", "sale_year"))
   report_data(leave_one_out, "leave_one_out", c("sample", "controls", "dropped_site", "normalization", "sale_year"))
   report_data(support, "support", c("sample", "treated", "sale_year"))
 })
 writeLines(trimws(report, which = "right"), "../report/twfe.txt")
+print(gradient[, .(sample, variant, controls, term, estimate = round(estimate, 3), ci_low = round(ci_low, 3), ci_high = round(ci_high, 3))])
 print(did[, .(sample, tier, variant, controls, weighting, estimate = round(estimate, 3),
               ci_low = round(ci_low, 3), ci_high = round(ci_high, 3))])
