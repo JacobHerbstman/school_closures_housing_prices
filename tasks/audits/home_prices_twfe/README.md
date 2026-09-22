@@ -2,7 +2,9 @@
 
 Event studies and pooled difference-in-differences comparing home prices near
 the 30 closed programs (29 sites) with the 49 schools on the February 2013 list
-that stayed open. Run `make` from `code/`; start with `output/event_studies.pdf`.
+that stayed open. Run `make` from `code/`. Start with `output/main_spec.pdf`, the
+main specification only (fixed effects plus hedonics, all clean sales);
+`output/event_studies.pdf` holds every variant, control set, and diagnostic.
 
 The observation is a transaction in the production 2008--2018 clean sample.
 Two samples, all property and single-family, within a quarter mile (1,320

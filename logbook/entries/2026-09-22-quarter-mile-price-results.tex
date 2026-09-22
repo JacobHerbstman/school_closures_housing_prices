@@ -1,0 +1,88 @@
+\section*{September 22, 2026: Quarter-mile results on the new sample: no average effect, a gradient in baseline price}
+\textit{Drafted by Claude. Jacob chose the quarter-mile focus, log price as the outcome, and fixed effects plus hedonics as the main specification.}
+
+On the September 22 clean sample, closures have no detectable average effect on
+sale prices or sales volume within a quarter mile. The average hides a gradient.
+Relative to stayed-open schools, homes near closed schools did better after 2013
+the more expensive their neighborhood was before the closures. Part of that gradient
+lines up with gentrification already under way before 2013, and part does not.
+
+The comparison is the September 22 clean sample within 1,320 feet of the 29
+closed-program sites and 48 stayed-open sites. It excludes sales near both groups, near welcoming
+schools, near other February candidates, and near buildings vacated by
+relocating welcoming schools. The outcome is log real price. The main
+specification has site and year fixed effects plus hedonics: size, lot, age,
+rooms, beds, baths, residence type, quality, condition, REO and quick-resale
+indicators, and a two-to-six-unit indicator. It has no property-class dummies.
+All clean sales enter, with equal weight per sale, and errors are clustered by site. The pooled
+estimate compares 2014--2018 with 2008--2012 and omits 2013. It is 0.050
+[$-0.12$, 0.23] for all property (11,042 sales) and $-0.030$ [$-0.16$, 0.10] for
+single-family homes (5,384). Neither rejects a flat pre-period (pre-trend
+$p = 0.90$ and 0.74). The estimates are similar after dropping REO resales, quick
+resales, price tails, or all flagged sales. The largest is 0.112 [$-0.13$, 0.36], for all
+property without REO resales. Equal site-year weights give $-0.010$ and $-0.076$.
+A unit-count factor with an unknown level moved no estimate by more than 0.003.
+
+The single-family 2010 dip seen without controls is not a pre-trend. Relative to
+the 2008--2012 average rather than to 2012 alone, the hedonic single-family series
+alternates between years (2010 is $+0.06$). Without controls, 2012--2014 are high
+years, not 2010 a low one. Dropping each closed site in turn moves the hedonic
+2010 coefficient only between $-0.04$ and 0.07.
+
+Sales volume shows no effect either. Poisson site-year models count all market sales,
+clean sales, clean sales without REO, and REO resales. They give pooled estimates between $-0.13$ and
+0.01, none distinguishable from zero. Closed-school areas are thinner markets throughout;
+there is no parcel-count denominator, so these are sales, not turnover rates.
+
+\begin{center}
+\includegraphics[page=1,width=0.9\textwidth]{../input/main_spec_2026-09-22.pdf}
+\end{center}
+
+Splitting sites at the median of their 2008--2012 median sale prices gives
+opposite signs. The estimate is 0.153 [$-0.02$, 0.32] in higher-price areas (15 closed, 23
+stayed-open sites) and $-0.120$ [$-0.38$, 0.14] in lower-price areas (14, 25).
+Quartiles give $-0.06$, $-0.19$, 0.02 and 0.20 [$-0.00$, 0.41], for all property.
+A continuous interaction with the log site median price also lets year effects
+vary with baseline price for every site. It gives a slope of 0.159 [0.01, 0.31] per log
+point for all property and 0.117 [$-0.00$, 0.24] for single-family homes. The
+quartile estimates lie on that line. Year by year, the all-property slope is about zero
+in 2008--2011 and $+0.06$ to $+0.17$ from 2013 on. Volume shows no comparable
+split: in higher-price areas it is $-0.08$ [$-0.20$, 0.04]. The lower-price
+volume comparison fails its pre-trend test.
+
+\begin{center}
+\includegraphics[page=4,width=0.9\textwidth]{../input/main_spec_2026-09-22.pdf}
+
+\includegraphics[page=5,width=0.9\textwidth]{../input/main_spec_2026-09-22.pdf}
+\end{center}
+
+Pre-2013 gentrification explains part, but not all, of the pattern. The new
+\texttt{tract\_demographic\_change} audit measures each sale's 2010 tract change
+from the 2000 Census to the 2008--2012 ACS. The measures are the bachelor's degree
+share, non-Hispanic white and Black shares, and log real mean household income. In the top price quartile, closed-school areas had
+gained more college graduates (21.0 against 18.9 percentage points) and
+more white residents (14.7 against 10.3). They lost fewer Black
+residents ($+2.0$ against $-10.4$). Year effects that vary with these four changes
+leave the slope almost unchanged: 0.139 [$-0.01$, 0.28] for all property and 0.114
+[$-0.02$, 0.25] for single-family. They halve the top-quartile effect, to 0.102 [$-0.07$,
+0.27], and remove it for single-family homes ($-0.014$). No single
+neighborhood drives the gradient. Dropping each of the seven top-quartile closed
+sites (Stewart, Trumbull, Peabody, Near North, Lafayette, King, Duprey/Humboldt)
+leaves the hedonic slope between 0.133 and 0.227. Dropping Trumbull raises it.
+
+The defensible statement is therefore limited. After 2013, closed-school neighborhoods did
+relatively better the more expensive they were beforehand. Part of that coincides
+with gentrification measured before the closures. The remaining gradient could reflect the closures, including quick reuse of
+vacated buildings in hot markets, or gentrification that the four tract measures
+miss. These data cannot yet separate the two. Coding each closed building's disposition and timing is the
+next step for that question. The intervals are wide throughout; the absence of
+an average effect is not a precise zero.
+
+\small
+Reproduction: \texttt{make} in \texttt{tasks/audits/home\_prices\_twfe/code}
+(models and the robustness packet \texttt{event\_studies.pdf}; figures here from
+\texttt{main\_spec.pdf}, frozen in \texttt{logbook/exhibits/home\_prices\_twfe\_2026-09-22/}),
+\texttt{tasks/audits/home\_sales\_volume/code}, and
+\texttt{tasks/audits/tract\_demographic\_change/code}. Census vintages: 2000 SF3
+and 2008--2012 ACS via the Census API, retrieved September 22, 2026.
+\normalsize

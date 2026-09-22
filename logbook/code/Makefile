@@ -6,6 +6,11 @@ all: ../output/logbook.pdf
 
 ../output/logbook.pdf: ../entries/2026-09-22-sale-dates-and-split-buildings.tex
 
+../output/logbook.pdf: ../entries/2026-09-22-quarter-mile-price-results.tex ../input/main_spec_2026-09-22.pdf
+
+../input/main_spec_2026-09-22.pdf: ../exhibits/home_prices_twfe_2026-09-22/main_spec.pdf | ../input
+	ln -sf $< $@
+
 ../output/logbook.pdf: ../entries/2026-09-22-source-refresh.tex
 
 ../output/logbook.pdf: ../entries/2026-09-22-vacated-welcoming-buildings.tex
@@ -23,7 +28,7 @@ all: ../output/logbook.pdf
 ../input/recession_median_spike.png: ../exhibits/home_recession_composition/median_spike.png | ../input
 	ln -sf $< $@
 
-link-inputs: ../input/recession_median_spike.png
+link-inputs: ../input/recession_median_spike.png ../input/main_spec_2026-09-22.pdf
 
 ../output/logbook.pdf: ../entries/2026-09-21-initial-assessed-values.tex
 
