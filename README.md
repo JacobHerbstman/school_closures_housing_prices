@@ -33,9 +33,10 @@ Regression audits have not yet been rerun on it. The sample retains Cook
 County's three legacy sale filters, including the deed-type exclusions. The [county-flag audit](tasks/audits/home_sale_quality_flags/)
 verifies their implementation and records the exclusions.
 
-Exploratory regressions remain in the [price-analysis audit](tasks/audits/home_prices_twfe/).
-The [price-distribution audit](tasks/audits/home_price_distribution/) examines
-expensive sales and neighborhood influence. The [distance-band audit](tasks/audits/home_price_rings/)
+Exploratory regressions are in the [price-analysis audit](tasks/audits/home_prices_twfe/):
+quarter-mile event studies and pooled difference-in-differences, with variants
+that drop each kind of flagged sale. The [sample summary](tasks/audits/home_sample_summary/)
+shows the descriptive trends. The [distance-band audit](tasks/audits/home_price_rings/)
 retains alternative closer/farther comparisons. The [logbook](logbook/) records
 findings and research decisions.
 

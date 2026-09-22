@@ -1,41 +1,43 @@
 
 Dataset: coefficients
-Rows: 132  Columns: 11
-Key: sample, controls, design, term
+Rows: 220  Columns: 12
+Key: sample, variant, controls, design, term
 Duplicate or missing keys: 0
-term | character | nonmissing: 132 | distinct nonmissing: 11
+term | character | nonmissing: 220 | distinct nonmissing: 11
 [1] "sale_year::2008:treated" "sale_year::2009:treated"
 [3] "sale_year::2010:treated" "sale_year::2011:treated"
 [5] "sale_year::2013:treated" "sale_year::2014:treated"
-estimate | numeric | nonmissing: 132 | distinct nonmissing: 110
-     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
--0.277998 -0.086402  0.003687 -0.016789  0.052006  0.121852
-std_error | numeric | nonmissing: 132 | distinct nonmissing: 110
+estimate | numeric | nonmissing: 220 | distinct nonmissing: 220
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+-0.36700 -0.11404 -0.02079 -0.03161  0.05563  0.17861
+std_error | numeric | nonmissing: 220 | distinct nonmissing: 220
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-0.05363 0.07558 0.08910 0.09319 0.10531 0.17436
-t_value | numeric | nonmissing: 132 | distinct nonmissing: 110
-    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
--3.80665 -0.68204  0.04228 -0.12248  0.69175  1.53887
-p_value | numeric | nonmissing: 132 | distinct nonmissing: 110
-    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
-0.000311 0.255997 0.492674 0.494050 0.743858 0.984169
-sample | character | nonmissing: 132 | distinct nonmissing: 4
-[1] "All property, 0.25 mile"  "All property, 0.5 mile"
-[3] "Single-family, 0.25 mile" "Single-family, 0.5 mile"
-controls | character | nonmissing: 132 | distinct nonmissing: 3
-[1] "Hedonics"                "Hedonics and unit count"
-[3] "Site and year effects"
-design | character | nonmissing: 132 | distinct nonmissing: 2
+0.06437 0.09727 0.11322 0.11881 0.13883 0.19870
+t_value | numeric | nonmissing: 220 | distinct nonmissing: 220
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+-2.2158 -0.8626 -0.2232 -0.1546  0.5697  1.8701
+p_value | numeric | nonmissing: 220 | distinct nonmissing: 220
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.02978 0.27356 0.45934 0.48214 0.69446 0.97384
+sample | character | nonmissing: 220 | distinct nonmissing: 2
+[1] "All property"  "Single-family"
+variant | character | nonmissing: 220 | distinct nonmissing: 5
+[1] "All clean sales"              "Drop 1st-99th price tails"
+[3] "Drop all flagged sales"       "Drop REO resales"
+[5] "Drop resales within 365 days"
+controls | character | nonmissing: 220 | distinct nonmissing: 2
+[1] "Hedonics"              "Site and year effects"
+design | character | nonmissing: 220 | distinct nonmissing: 2
 [1] "did"   "event"
-sale_year | integer | nonmissing: 120 | distinct nonmissing: 10
+sale_year | integer | nonmissing: 200 | distinct nonmissing: 10
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
-   2008    2010    2014    2013    2016    2018      12
-ci_low | numeric | nonmissing: 132 | distinct nonmissing: 110
+   2008    2010    2014    2013    2016    2018      20
+ci_low | numeric | nonmissing: 220 | distinct nonmissing: 220
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+-0.691627 -0.387420 -0.236927 -0.264482 -0.133942 -0.008586
+ci_high | numeric | nonmissing: 220 | distinct nonmissing: 220
     Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
--0.52962 -0.27104 -0.17930 -0.19944 -0.10798 -0.02849
-ci_high | numeric | nonmissing: 132 | distinct nonmissing: 110
-   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
--0.1349  0.1128  0.1736  0.1659  0.2284  0.3290
+-0.04236  0.13231  0.20722  0.20126  0.26215  0.41554
 First six records:
                       term   estimate  std_error   t_value   p_value
                     <char>      <num>      <num>     <num>     <num>
@@ -45,89 +47,99 @@ First six records:
 4: sale_year::2010:treated 0.06490631 0.08249872 0.7867554 0.4338716
 5: sale_year::2011:treated 0.04818950 0.10288149 0.4683982 0.6408405
 6: sale_year::2013:treated 0.08798452 0.07223685 1.2180006 0.2269916
-                    sample controls design sale_year      ci_low   ci_high
-                    <char>   <char> <char>     <int>       <num>     <num>
-1: All property, 0.25 mile Hedonics    did        NA -0.12492309 0.2257488
-2: All property, 0.25 mile Hedonics  event      2008 -0.17199063 0.2369360
-3: All property, 0.25 mile Hedonics  event      2009 -0.08307033 0.2308347
-4: All property, 0.25 mile Hedonics  event      2010 -0.09679119 0.2266038
-5: All property, 0.25 mile Hedonics  event      2011 -0.15345822 0.2498372
-6: All property, 0.25 mile Hedonics  event      2013 -0.05359969 0.2295687
+         sample         variant controls design sale_year      ci_low   ci_high
+         <char>          <char>   <char> <char>     <int>       <num>     <num>
+1: All property All clean sales Hedonics    did        NA -0.12492309 0.2257488
+2: All property All clean sales Hedonics  event      2008 -0.17199063 0.2369360
+3: All property All clean sales Hedonics  event      2009 -0.08307033 0.2308347
+4: All property All clean sales Hedonics  event      2010 -0.09679119 0.2266038
+5: All property All clean sales Hedonics  event      2011 -0.15345822 0.2498372
+6: All property All clean sales Hedonics  event      2013 -0.05359969 0.2295687
 
 Dataset: models
-Rows: 24  Columns: 8
-Key: sample, controls, design
+Rows: 40  Columns: 9
+Key: sample, variant, controls, design
 Duplicate or missing keys: 0
-sample | character | nonmissing: 24 | distinct nonmissing: 4
-[1] "All property, 0.25 mile"  "All property, 0.5 mile"
-[3] "Single-family, 0.25 mile" "Single-family, 0.5 mile"
-controls | character | nonmissing: 24 | distinct nonmissing: 3
-[1] "Hedonics"                "Hedonics and unit count"
-[3] "Site and year effects"
-design | character | nonmissing: 24 | distinct nonmissing: 2
+sample | character | nonmissing: 40 | distinct nonmissing: 2
+[1] "All property"  "Single-family"
+variant | character | nonmissing: 40 | distinct nonmissing: 5
+[1] "All clean sales"              "Drop 1st-99th price tails"
+[3] "Drop all flagged sales"       "Drop REO resales"
+[5] "Drop resales within 365 days"
+controls | character | nonmissing: 40 | distinct nonmissing: 2
+[1] "Hedonics"              "Site and year effects"
+design | character | nonmissing: 40 | distinct nonmissing: 2
 [1] "did"   "event"
-observations | integer | nonmissing: 24 | distinct nonmissing: 8
+observations | integer | nonmissing: 40 | distinct nonmissing: 20
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   4890    8494   10278   10597   12246   17516
-treated_sites | integer | nonmissing: 24 | distinct nonmissing: 4
+   2729    4628    5521    6424    9215   11042
+treated_sites | integer | nonmissing: 40 | distinct nonmissing: 2
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  21.00   21.75   25.00   25.00   28.25   29.00
-control_sites | integer | nonmissing: 24 | distinct nonmissing: 3
+   28.0    28.0    28.5    28.5    29.0    29.0
+control_sites | integer | nonmissing: 40 | distinct nonmissing: 2
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  46.00   46.75   47.50   47.25   48.00   48.00
-pre_trend_p_value | numeric | nonmissing: 12 | distinct nonmissing: 10
-     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.      NA's
-0.0008191 0.1422506 0.3895036 0.4323375 0.7351493 0.9067660        12
-dropped_terms | character | nonmissing: 24 | distinct nonmissing: 3
+   47.0    47.0    47.5    47.5    48.0    48.0
+pre_trend_p_value | numeric | nonmissing: 20 | distinct nonmissing: 20
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+ 0.1973  0.3750  0.7391  0.6322  0.8737  0.9764      20
+dropped_terms | character | nonmissing: 40 | distinct nonmissing: 8
 [1] ""
-[2] "i(factor_var = unit_count, ref = \"house or townhouse\")"
-[3] "two_to_six_units"
+[2] "reo_saleTRUE"
+[3] "reo_saleTRUE; resale_within_365TRUE"
+[4] "reo_saleTRUE; resale_within_365TRUE; two_to_six_units"
+[5] "reo_saleTRUE; two_to_six_units"
+[6] "resale_within_365TRUE"
 First six records:
-                    sample                controls design observations
-                    <char>                  <char> <char>        <int>
-1: All property, 0.25 mile   Site and year effects  event        11042
-2: All property, 0.25 mile   Site and year effects    did        10046
-3: All property, 0.25 mile                Hedonics  event        11042
-4: All property, 0.25 mile                Hedonics    did        10046
-5: All property, 0.25 mile Hedonics and unit count  event        11042
-6: All property, 0.25 mile Hedonics and unit count    did        10046
+         sample          variant              controls design observations
+         <char>           <char>                <char> <char>        <int>
+1: All property  All clean sales Site and year effects  event        11042
+2: All property  All clean sales Site and year effects    did        10046
+3: All property  All clean sales              Hedonics  event        11042
+4: All property  All clean sales              Hedonics    did        10046
+5: All property Drop REO resales Site and year effects  event         7363
+6: All property Drop REO resales Site and year effects    did         6728
    treated_sites control_sites pre_trend_p_value dropped_terms
            <int>         <int>             <num>        <char>
 1:            29            48         0.4349576
 2:            29            48                NA
 3:            29            48         0.9037449
 4:            29            48                NA
-5:            29            48         0.9067660
+5:            29            48         0.8048604
 6:            29            48                NA
 
 Dataset: support
-Rows: 88  Columns: 6
+Rows: 44  Columns: 8
 Key: sample, treated, sale_year
 Duplicate or missing keys: 0
-sample | character | nonmissing: 88 | distinct nonmissing: 4
-[1] "All property, 0.25 mile"  "All property, 0.5 mile"
-[3] "Single-family, 0.25 mile" "Single-family, 0.5 mile"
-treated | integer | nonmissing: 88 | distinct nonmissing: 2
+sample | character | nonmissing: 44 | distinct nonmissing: 2
+[1] "All property"  "Single-family"
+treated | integer | nonmissing: 44 | distinct nonmissing: 2
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
     0.0     0.0     0.5     0.5     1.0     1.0
-sale_year | integer | nonmissing: 88 | distinct nonmissing: 11
+sale_year | integer | nonmissing: 44 | distinct nonmissing: 11
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
    2008    2010    2013    2013    2016    2018
-sales | integer | nonmissing: 88 | distinct nonmissing: 86
+sales | integer | nonmissing: 44 | distinct nonmissing: 44
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   95.0   211.2   337.5   505.1   740.5  1676.0
-sites | integer | nonmissing: 88 | distinct nonmissing: 25
+   95.0   227.0   335.5   373.3   501.8   905.0
+sites | integer | nonmissing: 44 | distinct nonmissing: 15
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  16.00   21.75   32.50   32.61   43.00   48.00
-unknown_unit_count | integer | nonmissing: 88 | distinct nonmissing: 34
+  22.00   26.00   34.50   35.36   45.00   48.00
+reo | integer | nonmissing: 44 | distinct nonmissing: 38
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-    0.0     0.0     1.5    16.1    24.0    97.0
+  26.00   61.25   94.50  124.55  161.25  491.00
+resale_365 | integer | nonmissing: 44 | distinct nonmissing: 30
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   5.00   17.75   32.50   38.02   46.25  101.00
+price_tail | integer | nonmissing: 44 | distinct nonmissing: 20
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1.00    7.00   10.00   11.02   15.00   25.00
 First six records:
-                    sample treated sale_year sales sites unknown_unit_count
-                    <char>   <int>     <int> <int> <int>              <int>
-1: All property, 0.25 mile       0      2008   718    48                 82
-2: All property, 0.25 mile       0      2009   800    45                 60
-3: All property, 0.25 mile       0      2010   671    47                 45
-4: All property, 0.25 mile       0      2011   540    46                 40
-5: All property, 0.25 mile       0      2012   579    46                 39
-6: All property, 0.25 mile       0      2013   713    48                 20
+         sample treated sale_year sales sites   reo resale_365 price_tail
+         <char>   <int>     <int> <int> <int> <int>      <int>      <int>
+1: All property       0      2008   718    48   321         99         15
+2: All property       0      2009   800    45   491         97         14
+3: All property       0      2010   671    47   322         81         24
+4: All property       0      2011   540    46   202         52          9
+5: All property       0      2012   579    46   222         33         17
+6: All property       0      2013   713    48   270         70         20

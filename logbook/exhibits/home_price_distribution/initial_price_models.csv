@@ -1,0 +1,17 @@
+model,initial_price_adjusted,observations,treated_sites,control_sites,pretrend_p
+did_dollars,0,9912,29,48,
+did_dollars,1,9912,29,48,
+did_hedonic_dollars,0,9912,29,48,
+did_hedonic_dollars,1,9912,29,48,
+did_hedonic_log,0,9912,29,48,
+did_hedonic_log,1,9912,29,48,
+did_log,0,9912,29,48,
+did_log,1,9912,29,48,
+event_dollars,0,10921,29,48,0.0278371885045616
+event_dollars,1,10921,29,48,0.075100968903811
+event_hedonic_dollars,0,10921,29,48,0.233324679609681
+event_hedonic_dollars,1,10921,29,48,0.602442829300749
+event_hedonic_log,0,10921,29,48,0.700097382855262
+event_hedonic_log,1,10921,29,48,0.804047578103181
+event_log,0,10921,29,48,0.23984962375855
+event_log,1,10921,29,48,0.346503151113958
