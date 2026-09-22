@@ -196,6 +196,11 @@ gradient_designs <- c(
   did = "treated_post + treated_post_baseline + i(sale_year, log_baseline_price, ref = 2012)",
   event = "i(sale_year, treated, ref = 2012) + i(sale_year, treated_baseline, ref = 2012) + i(sale_year, log_baseline_price, ref = 2012)")
 baseline_grid <- seq(min(site_tiers$log_baseline_price), max(site_tiers$log_baseline_price), length.out = 60)
+# Pooled gradient fit, used by the main gradient models and the leave-one-out.
+fit_gradient <- function(data, control_name) {
+  feols(as.formula(paste("log_price ~", gradient_designs[["did"]], control_sets[[control_name]],
+                         "| school_site_id + sale_year")), data = data[sale_year != 2013L], vcov = ~school_site_id)
+}
 gradient <- list()
 gradient_curve <- list()
 gradient_events <- list()
@@ -203,8 +208,7 @@ for (sample_name in unique(samples$sample)) {
   for (variant in c("All clean sales", "Drop REO resales")) {
     for (control_name in names(control_sets)) {
       data <- samples[sample == sample_name & get(variants[[variant]]) == TRUE]
-      did_fit <- feols(as.formula(paste("log_price ~", gradient_designs[["did"]], control_sets[[control_name]],
-                                        "| school_site_id + sale_year")), data = data[sale_year != 2013L], vcov = ~school_site_id)
+      did_fit <- fit_gradient(data, control_name)
       terms <- c("treated_post", "treated_post_baseline")
       b <- coef(did_fit)[terms]
       V <- vcov(did_fit)[terms, terms]
@@ -232,6 +236,30 @@ gradient_curve[, `:=`(ci_low = estimate - 1.96 * std_error, ci_high = estimate +
 gradient_events[, `:=`(ci_low = estimate - 1.96 * std_error, ci_high = estimate + 1.96 * std_error)]
 stopifnot(all(is.finite(gradient$estimate)), nrow(gradient_events) == nrow(gradient) / 2 * 10)
 
+# Leave one top-quartile closed site out: the top-quartile pooled estimate and
+# the gradient slope without that site, all clean sales.
+top_sites <- site_tiers[treated == 1L & price_quartile == "Price quartile 4", school_site_id]
+top_quartile_leave_one_out <- list()
+for (sample_name in unique(samples$sample)) {
+  for (control_name in names(control_sets)) {
+    for (site in top_sites) {
+      data <- samples[sample == sample_name & school_site_id != site]
+      quartile_fit <- fit_model(data[price_quartile == "Price quartile 4"], control_name, "did", "Transactions")
+      slope_fit <- fit_gradient(data, control_name)
+      top_quartile_leave_one_out[[length(top_quartile_leave_one_out) + 1L]] <- data.table(
+        sample = sample_name, controls = control_name, dropped_site = site,
+        dropped_site_sales = samples[sample == sample_name & school_site_id == site, .N],
+        estimand = c("Top-quartile pooled effect", "Gradient slope"),
+        estimate = c(coef(quartile_fit)[["treated_post"]], coef(slope_fit)[["treated_post_baseline"]]),
+        std_error = c(se(quartile_fit)[["treated_post"]], se(slope_fit)[["treated_post_baseline"]]))
+    }
+  }
+}
+top_quartile_leave_one_out <- rbindlist(top_quartile_leave_one_out)
+top_quartile_leave_one_out[, `:=`(ci_low = estimate - 1.96 * std_error, ci_high = estimate + 1.96 * std_error)]
+stopifnot(nrow(top_quartile_leave_one_out) == 2L * uniqueN(samples$sample) * length(control_sets) * length(top_sites),
+          all(is.finite(top_quartile_leave_one_out$estimate)))
+
 # Leave one closed site out: all clean sales, transaction weights, event study.
 leave_one_out <- list()
 for (sample_name in unique(samples$sample)) {
@@ -250,6 +278,7 @@ site_names <- fread("../input/schools.csv")[, .(site_name = paste(unique(trimws(
                                             by = school_site_id]
 stopifnot(!anyDuplicated(site_names$school_site_id), all(leave_one_out$dropped_site %in% site_names$school_site_id))
 leave_one_out <- merge(leave_one_out, site_names, by.x = "dropped_site", by.y = "school_site_id", all.x = TRUE)
+top_quartile_leave_one_out <- merge(top_quartile_leave_one_out, site_names, by.x = "dropped_site", by.y = "school_site_id", all.x = TRUE)
 leave_one_out[, `:=`(ci_low = estimate - 1.96 * std_error, ci_high = estimate + 1.96 * std_error)]
 
 support <- samples[, .(sales = .N, sites = uniqueN(school_site_id), reo = sum(reo_sale),
@@ -262,7 +291,7 @@ setorder(leave_one_out, sample, controls, dropped_site, normalization, sale_year
 setorder(support, sample, treated, sale_year)
 saveRDS(list(events = events, did = did, models = models, leave_one_out = leave_one_out, support = support,
              site_tiers = site_tiers, site_trends = site_trends, gradient = gradient, gradient_curve = gradient_curve,
-             gradient_events = gradient_events),
+             gradient_events = gradient_events, top_quartile_leave_one_out = top_quartile_leave_one_out),
         "../output/twfe.rds")
 report <- capture.output({
   report_data(events, "events", c("sample", "tier", "variant", "controls", "weighting", "normalization", "sale_year"))
@@ -272,10 +301,13 @@ report <- capture.output({
   report_data(site_trends, "site_trends", "school_site_id")
   report_data(gradient, "gradient", c("sample", "variant", "controls", "term"))
   report_data(gradient_events, "gradient_events", c("sample", "variant", "controls", "sale_year"))
+  report_data(top_quartile_leave_one_out, "top_quartile_leave_one_out", c("sample", "controls", "dropped_site", "estimand"))
   report_data(leave_one_out, "leave_one_out", c("sample", "controls", "dropped_site", "normalization", "sale_year"))
   report_data(support, "support", c("sample", "treated", "sale_year"))
 })
 writeLines(trimws(report, which = "right"), "../report/twfe.txt")
+print(top_quartile_leave_one_out[, .(sample, controls, site = substr(site_name, 1, 30), sales = dropped_site_sales, estimand,
+                                    estimate = round(estimate, 3), ci_low = round(ci_low, 3), ci_high = round(ci_high, 3))])
 print(gradient[, .(sample, variant, controls, term, estimate = round(estimate, 3), ci_low = round(ci_low, 3), ci_high = round(ci_high, 3))])
 print(did[, .(sample, tier, variant, controls, weighting, estimate = round(estimate, 3),
               ci_low = round(ci_low, 3), ci_high = round(ci_high, 3))])

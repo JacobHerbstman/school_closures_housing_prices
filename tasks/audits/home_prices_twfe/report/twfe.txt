@@ -371,6 +371,70 @@ First six records:
 5: 0.06958070 -0.04719358 0.22556278
 6: 0.08260794 -0.12147639 0.20234674
 
+Dataset: top_quartile_leave_one_out
+Rows: 84  Columns: 10
+Key: sample, controls, dropped_site, estimand
+Duplicate or missing keys: 0
+dropped_site | integer | nonmissing: 84 | distinct nonmissing: 7
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 610023  610031  610119  610123  610205  610210
+sample | character | nonmissing: 84 | distinct nonmissing: 2
+[1] "All property"  "Single-family"
+controls | character | nonmissing: 84 | distinct nonmissing: 3
+[1] "Fixed effects + hedonics"
+[2] "Fixed effects + hedonics + neighborhood trends"
+[3] "Fixed effects only"
+dropped_site_sales | integer | nonmissing: 84 | distinct nonmissing: 14
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    2.0    37.0    89.0   109.9   181.0   236.0
+estimand | character | nonmissing: 84 | distinct nonmissing: 2
+[1] "Gradient slope"             "Top-quartile pooled effect"
+estimate | numeric | nonmissing: 84 | distinct nonmissing: 84
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+-0.03621  0.11336  0.13804  0.15165  0.19967  0.34883
+std_error | numeric | nonmissing: 84 | distinct nonmissing: 84
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.05147 0.07029 0.08695 0.08738 0.10124 0.13579
+ci_low | numeric | nonmissing: 84 | distinct nonmissing: 84
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+-0.210931 -0.042100 -0.011099 -0.019614  0.007204  0.149657
+ci_high | numeric | nonmissing: 84 | distinct nonmissing: 84
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.1341  0.2487  0.3002  0.3229  0.3851  0.5505
+site_name | character | nonmissing: 84 | distinct nonmissing: 7
+[1] "Ana Roque de Duprey Elementary School / Alexander von Humboldt Elementary School"
+[2] "Elizabeth Peabody Elementary School"
+[3] "Graeme Stewart Elementary School"
+[4] "Jean D Lafayette Elementary School"
+[5] "Lyman Trumbull Elementary School"
+[6] "Near North Elementary School"
+First six records:
+Key: <dropped_site>
+   dropped_site       sample                                       controls
+          <int>       <char>                                         <char>
+1:       610023 All property                             Fixed effects only
+2:       610023 All property                             Fixed effects only
+3:       610023 All property                       Fixed effects + hedonics
+4:       610023 All property                       Fixed effects + hedonics
+5:       610023 All property Fixed effects + hedonics + neighborhood trends
+6:       610023 All property Fixed effects + hedonics + neighborhood trends
+   dropped_site_sales                   estimand  estimate  std_error
+                <int>                     <char>     <num>      <num>
+1:                181 Top-quartile pooled effect 0.2772436 0.13032801
+2:                181             Gradient slope 0.1496170 0.08849810
+3:                181 Top-quartile pooled effect 0.2290382 0.11549146
+4:                181             Gradient slope 0.1629822 0.07925922
+5:                181 Top-quartile pooled effect 0.1142324 0.09386403
+6:                181             Gradient slope 0.1439308 0.07412854
+         ci_low   ci_high                        site_name
+          <num>     <num>                           <char>
+1:  0.021800663 0.5326865 William H King Elementary School
+2: -0.023839227 0.3230733 William H King Elementary School
+3:  0.002674897 0.4554014 William H King Elementary School
+4:  0.007634142 0.3183303 William H King Elementary School
+5: -0.069741138 0.2982058 William H King Elementary School
+6: -0.001361158 0.2892227 William H King Elementary School
+
 Dataset: leave_one_out
 Rows: 3591  Columns: 11
 Key: sample, controls, dropped_site, normalization, sale_year

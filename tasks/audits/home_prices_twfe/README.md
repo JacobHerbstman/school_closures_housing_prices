@@ -38,7 +38,9 @@ all clean sales and without REO resales. Quartiles of the same site medians
 continuous version interacts the closure effect with the site's log baseline
 price (centered at the median site) and also lets year effects vary with
 baseline price for all sites, so the gradient compares closed and stayed-open
-sites at similar price levels; it is estimated pooled and year by year. The
+sites at similar price levels; it is estimated pooled and year by year. The top-quartile pooled estimate and
+the gradient slope are re-estimated dropping each top-quartile closed site in
+turn. The
 tiers are saved in `twfe.rds` for the sales-volume audit.
 
 Property-class dummies are not used: classes 205/207 and 210/295 change at age

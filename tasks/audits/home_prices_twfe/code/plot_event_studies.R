@@ -242,6 +242,30 @@ balance_page <- ggplot(site_trends, aes(value, price_quartile, color = group)) +
        caption = paste("Tracts from 2010 boundaries; 2000 Census SF3 allocated to 2010 tracts by population share. Income in 2012 dollars.",
                        "Quartiles of each site's 2008-2012 median sale price.", sep = "\n"))
 
+# Leave one top-quartile closed site out.
+top_loo <- copy(estimates$top_quartile_leave_one_out)
+top_loo[, `:=`(site_label = sprintf("%s (%d sales)", substr(site_name, 1, 34), dropped_site_sales),
+               controls = factor(controls, levels = control_levels))]
+top_loo[, site_label := factor(site_label, levels = unique(site_label[order(-dropped_site_sales)]))]
+top_full <- rbind(
+  all_did[tier == "Price quartile 4" & variant == "All clean sales" & weighting == "Transactions",
+          .(sample, controls, estimand = "Top-quartile pooled effect", estimate)],
+  estimates$gradient[variant == "All clean sales" & term == "Slope per log point of baseline price",
+                     .(sample, controls, estimand = "Gradient slope", estimate)])
+top_full[, controls := factor(controls, levels = control_levels)]
+loo_dodge <- position_dodge(width = 0.6)
+top_loo_page <- ggplot(top_loo, aes(estimate, site_label, color = controls, shape = controls)) +
+  geom_vline(xintercept = 0, color = "#52514e", linewidth = 0.4) +
+  geom_vline(data = top_full, aes(xintercept = estimate, color = controls), linetype = "dashed", linewidth = 0.4) +
+  geom_errorbarh(aes(xmin = ci_low, xmax = ci_high), height = 0, linewidth = 0.4, position = loo_dodge) +
+  geom_point(size = 1.8, position = loo_dodge) +
+  facet_grid(sample ~ estimand, scales = "free") +
+  scale_color_manual(values = colors) + scale_shape_manual(values = shapes) +
+  labs(title = "Dropping each top-quartile closed site in turn",
+       subtitle = "Top-quartile pooled log-price effect (2014-2018 vs 2008-2012) and the continuous gradient slope; dashed: all sites",
+       x = "Estimate", y = "Dropped closed site",
+       caption = "All clean sales. Sites ordered by their number of sales. 95% intervals clustered by school site.")
+
 pdf("../output/event_studies.pdf", width = 11, height = 8.5, onefile = TRUE, useDingbats = FALSE)
 print(variant_page("Fixed effects + hedonics"))
 print(variant_page("Fixed effects only"))
@@ -255,4 +279,5 @@ print(quartile_event_page)
 print(gradient_page)
 print(slope_page)
 print(balance_page)
+print(top_loo_page)
 invisible(dev.off())
