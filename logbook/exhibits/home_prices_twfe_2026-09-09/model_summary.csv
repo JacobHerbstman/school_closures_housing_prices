@@ -1,0 +1,37 @@
+model,outcome,weighting,empty_site_periods,frequency,hedonics,amenity_by_halfyear,dropped_collinear_terms,observations,school_sites,treated_sites,control_sites,reference_year,reference_halfyear,includes_transition_year,pretrend_f,pretrend_p,pretrend_df1,pretrend_df2,fixest_version
+did_log,log_real_price,equal_transaction,26,annual,FALSE,FALSE,"",9912,77,29,48,,,FALSE,,,,,0.12.1
+did_dollars,real_price_2022_dollars,equal_transaction,26,annual,FALSE,FALSE,"",9912,77,29,48,,,FALSE,,,,,0.12.1
+event_log,log_real_price,equal_transaction,26,annual,FALSE,FALSE,"",10921,77,29,48,2012,,TRUE,1.4066605849684,0.239849623758547,4,76,0.12.1
+event_dollars,real_price_2022_dollars,equal_transaction,26,annual,FALSE,FALSE,"",10921,77,29,48,2012,,TRUE,2.88697051071395,0.0278371885045608,4,76,0.12.1
+did_hedonic_log,log_real_price,equal_transaction,26,annual,TRUE,FALSE,factor(res_char_type_resd)Split Level,9912,77,29,48,,,FALSE,,,,,0.12.1
+did_hedonic_dollars,real_price_2022_dollars,equal_transaction,26,annual,TRUE,FALSE,factor(res_char_type_resd)Split Level,9912,77,29,48,,,FALSE,,,,,0.12.1
+event_hedonic_log,log_real_price,equal_transaction,26,annual,TRUE,FALSE,factor(res_char_type_resd)Split Level,10921,77,29,48,2012,,TRUE,0.549269737636602,0.700097382855344,4,76,0.12.1
+event_hedonic_dollars,real_price_2022_dollars,equal_transaction,26,annual,TRUE,FALSE,factor(res_char_type_resd)Split Level,10921,77,29,48,2012,,TRUE,1.42657570001022,0.233324679609524,4,76,0.12.1
+event_semiannual_log,log_real_price,equal_transaction,109,semiannual,FALSE,FALSE,"",10921,77,29,48,2012,2012.5,TRUE,0.780234165178598,0.635052223019261,9,76,0.12.1
+event_semiannual_dollars,real_price_2022_dollars,equal_transaction,109,semiannual,FALSE,FALSE,"",10921,77,29,48,2012,2012.5,TRUE,1.47150762737986,0.173934889683576,9,76,0.12.1
+event_semiannual_hedonic_log,log_real_price,equal_transaction,109,semiannual,TRUE,FALSE,factor(res_char_type_resd)Split Level,10921,77,29,48,2012,2012.5,TRUE,0.316542877709111,0.967242982227051,9,76,0.12.1
+event_semiannual_hedonic_dollars,real_price_2022_dollars,equal_transaction,109,semiannual,TRUE,FALSE,factor(res_char_type_resd)Split Level,10921,77,29,48,2012,2012.5,TRUE,0.851178105842445,0.572004215447471,9,76,0.12.1
+did_semiannual_hedonic_log,log_real_price,equal_transaction,102,semiannual,TRUE,FALSE,factor(res_char_type_resd)Split Level,9912,77,29,48,,,FALSE,,,,,0.12.1
+did_semiannual_hedonic_dollars,real_price_2022_dollars,equal_transaction,102,semiannual,TRUE,FALSE,factor(res_char_type_resd)Split Level,9912,77,29,48,,,FALSE,,,,,0.12.1
+did_semiannual_amenity_log,log_real_price,equal_transaction,102,semiannual,TRUE,TRUE,factor(res_char_type_resd)Split Level,9912,77,29,48,,,FALSE,,,,,0.12.1
+did_semiannual_amenity_dollars,real_price_2022_dollars,equal_transaction,102,semiannual,TRUE,TRUE,factor(res_char_type_resd)Split Level,9912,77,29,48,,,FALSE,,,,,0.12.1
+event_semiannual_amenity_log,log_real_price,equal_transaction,109,semiannual,TRUE,TRUE,factor(res_char_type_resd)Split Level,10921,77,29,48,2012,2012.5,TRUE,0.445527720215084,0.905752651386996,9,76,0.12.1
+event_semiannual_amenity_dollars,real_price_2022_dollars,equal_transaction,109,semiannual,TRUE,TRUE,factor(res_char_type_resd)Split Level,10921,77,29,48,2012,2012.5,TRUE,1.15860517016265,0.333639386172589,9,76,0.12.1
+did_site_log,log_real_price,equal_site_period,26,annual,FALSE,FALSE,"",9912,77,29,48,,,FALSE,,,,,0.12.1
+did_site_dollars,real_price_2022_dollars,equal_site_period,26,annual,FALSE,FALSE,"",9912,77,29,48,,,FALSE,,,,,0.12.1
+event_site_log,log_real_price,equal_site_period,26,annual,FALSE,FALSE,"",10921,77,29,48,2012,,TRUE,1.34845217898783,0.259874202433862,4,76,0.12.1
+event_site_dollars,real_price_2022_dollars,equal_site_period,26,annual,FALSE,FALSE,"",10921,77,29,48,2012,,TRUE,1.07927783846471,0.372773074186067,4,76,0.12.1
+did_site_hedonic_log,log_real_price,equal_site_period,26,annual,TRUE,FALSE,factor(res_char_type_resd)Split Level,9912,77,29,48,,,FALSE,,,,,0.12.1
+did_site_hedonic_dollars,real_price_2022_dollars,equal_site_period,26,annual,TRUE,FALSE,factor(res_char_type_resd)Split Level,9912,77,29,48,,,FALSE,,,,,0.12.1
+event_site_hedonic_log,log_real_price,equal_site_period,26,annual,TRUE,FALSE,factor(res_char_type_resd)Split Level,10921,77,29,48,2012,,TRUE,1.10800137910231,0.359024451732443,4,76,0.12.1
+event_site_hedonic_dollars,real_price_2022_dollars,equal_site_period,26,annual,TRUE,FALSE,factor(res_char_type_resd)Split Level,10921,77,29,48,2012,,TRUE,1.22437690060765,0.307582624466924,4,76,0.12.1
+event_site_semiannual_log,log_real_price,equal_site_period,109,semiannual,FALSE,FALSE,"",10921,77,29,48,2012,2012.5,TRUE,0.432971930124975,0.913219997099824,9,76,0.12.1
+event_site_semiannual_dollars,real_price_2022_dollars,equal_site_period,109,semiannual,FALSE,FALSE,"",10921,77,29,48,2012,2012.5,TRUE,0.885396029229286,0.542232873113172,9,76,0.12.1
+event_site_semiannual_hedonic_log,log_real_price,equal_site_period,109,semiannual,TRUE,FALSE,factor(res_char_type_resd)Split Level,10921,77,29,48,2012,2012.5,TRUE,0.470544541081982,0.890007255588634,9,76,0.12.1
+event_site_semiannual_hedonic_dollars,real_price_2022_dollars,equal_site_period,109,semiannual,TRUE,FALSE,factor(res_char_type_resd)Split Level,10921,77,29,48,2012,2012.5,TRUE,0.74536638106447,0.666335367729781,9,76,0.12.1
+did_site_semiannual_hedonic_log,log_real_price,equal_site_period,102,semiannual,TRUE,FALSE,factor(res_char_type_resd)Split Level,9912,77,29,48,,,FALSE,,,,,0.12.1
+did_site_semiannual_hedonic_dollars,real_price_2022_dollars,equal_site_period,102,semiannual,TRUE,FALSE,factor(res_char_type_resd)Split Level,9912,77,29,48,,,FALSE,,,,,0.12.1
+did_site_semiannual_amenity_log,log_real_price,equal_site_period,102,semiannual,TRUE,TRUE,factor(res_char_type_resd)Split Level,9912,77,29,48,,,FALSE,,,,,0.12.1
+did_site_semiannual_amenity_dollars,real_price_2022_dollars,equal_site_period,102,semiannual,TRUE,TRUE,factor(res_char_type_resd)Split Level,9912,77,29,48,,,FALSE,,,,,0.12.1
+event_site_semiannual_amenity_log,log_real_price,equal_site_period,109,semiannual,TRUE,TRUE,factor(res_char_type_resd)Split Level,10921,77,29,48,2012,2012.5,TRUE,0.448936636862046,0.90367412298553,9,76,0.12.1
+event_site_semiannual_amenity_dollars,real_price_2022_dollars,equal_site_period,109,semiannual,TRUE,TRUE,factor(res_char_type_resd)Split Level,10921,77,29,48,2012,2012.5,TRUE,1.26444409245962,0.270159436168785,9,76,0.12.1

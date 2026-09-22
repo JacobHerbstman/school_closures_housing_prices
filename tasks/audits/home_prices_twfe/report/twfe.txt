@@ -1,0 +1,133 @@
+
+Dataset: coefficients
+Rows: 132  Columns: 11
+Key: sample, controls, design, term
+Duplicate or missing keys: 0
+term | character | nonmissing: 132 | distinct nonmissing: 11
+[1] "sale_year::2008:treated" "sale_year::2009:treated"
+[3] "sale_year::2010:treated" "sale_year::2011:treated"
+[5] "sale_year::2013:treated" "sale_year::2014:treated"
+estimate | numeric | nonmissing: 132 | distinct nonmissing: 110
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+-0.277998 -0.086402  0.003687 -0.016789  0.052006  0.121852
+std_error | numeric | nonmissing: 132 | distinct nonmissing: 110
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.05363 0.07558 0.08910 0.09319 0.10531 0.17436
+t_value | numeric | nonmissing: 132 | distinct nonmissing: 110
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+-3.80665 -0.68204  0.04228 -0.12248  0.69175  1.53887
+p_value | numeric | nonmissing: 132 | distinct nonmissing: 110
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+0.000311 0.255997 0.492674 0.494050 0.743858 0.984169
+sample | character | nonmissing: 132 | distinct nonmissing: 4
+[1] "All property, 0.25 mile"  "All property, 0.5 mile"
+[3] "Single-family, 0.25 mile" "Single-family, 0.5 mile"
+controls | character | nonmissing: 132 | distinct nonmissing: 3
+[1] "Hedonics"                "Hedonics and unit count"
+[3] "Site and year effects"
+design | character | nonmissing: 132 | distinct nonmissing: 2
+[1] "did"   "event"
+sale_year | integer | nonmissing: 120 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+   2008    2010    2014    2013    2016    2018      12
+ci_low | numeric | nonmissing: 132 | distinct nonmissing: 110
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+-0.52962 -0.27104 -0.17930 -0.19944 -0.10798 -0.02849
+ci_high | numeric | nonmissing: 132 | distinct nonmissing: 110
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+-0.1349  0.1128  0.1736  0.1659  0.2284  0.3290
+First six records:
+                      term   estimate  std_error   t_value   p_value
+                    <char>      <num>      <num>     <num>     <num>
+1:            treated_post 0.05041283 0.08945710 0.5635420 0.5747249
+2: sale_year::2008:treated 0.03247270 0.10431802 0.3112856 0.7564357
+3: sale_year::2009:treated 0.07388221 0.08007782 0.9226300 0.3591199
+4: sale_year::2010:treated 0.06490631 0.08249872 0.7867554 0.4338716
+5: sale_year::2011:treated 0.04818950 0.10288149 0.4683982 0.6408405
+6: sale_year::2013:treated 0.08798452 0.07223685 1.2180006 0.2269916
+                    sample controls design sale_year      ci_low   ci_high
+                    <char>   <char> <char>     <int>       <num>     <num>
+1: All property, 0.25 mile Hedonics    did        NA -0.12492309 0.2257488
+2: All property, 0.25 mile Hedonics  event      2008 -0.17199063 0.2369360
+3: All property, 0.25 mile Hedonics  event      2009 -0.08307033 0.2308347
+4: All property, 0.25 mile Hedonics  event      2010 -0.09679119 0.2266038
+5: All property, 0.25 mile Hedonics  event      2011 -0.15345822 0.2498372
+6: All property, 0.25 mile Hedonics  event      2013 -0.05359969 0.2295687
+
+Dataset: models
+Rows: 24  Columns: 8
+Key: sample, controls, design
+Duplicate or missing keys: 0
+sample | character | nonmissing: 24 | distinct nonmissing: 4
+[1] "All property, 0.25 mile"  "All property, 0.5 mile"
+[3] "Single-family, 0.25 mile" "Single-family, 0.5 mile"
+controls | character | nonmissing: 24 | distinct nonmissing: 3
+[1] "Hedonics"                "Hedonics and unit count"
+[3] "Site and year effects"
+design | character | nonmissing: 24 | distinct nonmissing: 2
+[1] "did"   "event"
+observations | integer | nonmissing: 24 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   4890    8494   10278   10597   12246   17516
+treated_sites | integer | nonmissing: 24 | distinct nonmissing: 4
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  21.00   21.75   25.00   25.00   28.25   29.00
+control_sites | integer | nonmissing: 24 | distinct nonmissing: 3
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  46.00   46.75   47.50   47.25   48.00   48.00
+pre_trend_p_value | numeric | nonmissing: 12 | distinct nonmissing: 10
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.      NA's
+0.0008191 0.1422506 0.3895036 0.4323375 0.7351493 0.9067660        12
+dropped_terms | character | nonmissing: 24 | distinct nonmissing: 3
+[1] ""
+[2] "i(factor_var = unit_count, ref = \"house or townhouse\")"
+[3] "two_to_six_units"
+First six records:
+                    sample                controls design observations
+                    <char>                  <char> <char>        <int>
+1: All property, 0.25 mile   Site and year effects  event        11042
+2: All property, 0.25 mile   Site and year effects    did        10046
+3: All property, 0.25 mile                Hedonics  event        11042
+4: All property, 0.25 mile                Hedonics    did        10046
+5: All property, 0.25 mile Hedonics and unit count  event        11042
+6: All property, 0.25 mile Hedonics and unit count    did        10046
+   treated_sites control_sites pre_trend_p_value dropped_terms
+           <int>         <int>             <num>        <char>
+1:            29            48         0.4349576
+2:            29            48                NA
+3:            29            48         0.9037449
+4:            29            48                NA
+5:            29            48         0.9067660
+6:            29            48                NA
+
+Dataset: support
+Rows: 88  Columns: 6
+Key: sample, treated, sale_year
+Duplicate or missing keys: 0
+sample | character | nonmissing: 88 | distinct nonmissing: 4
+[1] "All property, 0.25 mile"  "All property, 0.5 mile"
+[3] "Single-family, 0.25 mile" "Single-family, 0.5 mile"
+treated | integer | nonmissing: 88 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0     0.0     0.5     0.5     1.0     1.0
+sale_year | integer | nonmissing: 88 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+sales | integer | nonmissing: 88 | distinct nonmissing: 86
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   95.0   211.2   337.5   505.1   740.5  1676.0
+sites | integer | nonmissing: 88 | distinct nonmissing: 25
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  16.00   21.75   32.50   32.61   43.00   48.00
+unknown_unit_count | integer | nonmissing: 88 | distinct nonmissing: 34
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0     0.0     1.5    16.1    24.0    97.0
+First six records:
+                    sample treated sale_year sales sites unknown_unit_count
+                    <char>   <int>     <int> <int> <int>              <int>
+1: All property, 0.25 mile       0      2008   718    48                 82
+2: All property, 0.25 mile       0      2009   800    45                 60
+3: All property, 0.25 mile       0      2010   671    47                 45
+4: All property, 0.25 mile       0      2011   540    46                 40
+5: All property, 0.25 mile       0      2012   579    46                 39
+6: All property, 0.25 mile       0      2013   713    48                 20

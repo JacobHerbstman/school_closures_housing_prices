@@ -103,24 +103,24 @@ link-inputs: ../input/distress_seller_proxies.png
 ../output/upper_tail_table.tex: write_upper_tail_table.R ../input/upper_tail_sites.csv Makefile ../../tasks/shared/code/shell_functions.make | ../output
 	$(RSCRIPT) $<
 
-../input/coefficients.csv: ../../tasks/audits/home_prices_twfe/output/coefficients.csv | ../input
+../input/coefficients.csv: ../exhibits/home_prices_twfe_2026-09-09/coefficients.csv | ../input
 	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
 
-../input/model_summary.csv: ../../tasks/audits/home_prices_twfe/output/model_summary.csv | ../input
+../input/model_summary.csv: ../exhibits/home_prices_twfe_2026-09-09/model_summary.csv | ../input
 	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
 
-../input/event_studies.png: ../../tasks/audits/home_prices_twfe/output/event_studies.png | ../input
+../input/event_studies.png: ../exhibits/home_prices_twfe_2026-09-09/event_studies.png | ../input
 	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
 
-../input/event_studies_semiannual.png: ../../tasks/audits/home_prices_twfe/output/event_studies_semiannual.png \
+../input/event_studies_semiannual.png: ../exhibits/home_prices_twfe_2026-09-09/event_studies_semiannual.png \
 	| ../input
 	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
 
-../input/event_studies_amenities.png: ../../tasks/audits/home_prices_twfe/output/event_studies_amenities.png | \
+../input/event_studies_amenities.png: ../exhibits/home_prices_twfe_2026-09-09/event_studies_amenities.png | \
 	../input
 	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
 
-../input/site_year_support.csv: ../../tasks/audits/home_prices_twfe/output/site_year_support.csv | ../input
+../input/site_year_support.csv: ../exhibits/home_prices_twfe_2026-09-09/site_year_support.csv | ../input
 	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
 
 ../input/demographic_balance.csv: ../../tasks/audits/home_baseline_demographics/output/demographic_balance.csv \
@@ -131,22 +131,22 @@ link-inputs: ../input/distress_seller_proxies.png
 	| ../input
 	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
 
-../input/raw_prices_annual.png: ../../tasks/audits/home_prices_twfe/output/raw_prices_annual.png | ../input
+../input/raw_prices_annual.png: ../exhibits/home_prices_twfe_2026-09-09/raw_prices_annual.png | ../input
 	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
 
 ../input/event_studies_weights_annual.png: \
-	../../tasks/audits/home_prices_twfe/output/event_studies_weights_annual.png | ../input
+	../exhibits/home_prices_twfe_2026-09-09/event_studies_weights_annual.png | ../input
 	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
 
-../input/raw_prices_semiannual.png: ../../tasks/audits/home_prices_twfe/output/raw_prices_semiannual.png | ../input
+../input/raw_prices_semiannual.png: ../exhibits/home_prices_twfe_2026-09-09/raw_prices_semiannual.png | ../input
 	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
 
 ../input/event_studies_weights_semiannual.png: \
-	../../tasks/audits/home_prices_twfe/output/event_studies_weights_semiannual.png | ../input
+	../exhibits/home_prices_twfe_2026-09-09/event_studies_weights_semiannual.png | ../input
 	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
 
 ../input/event_studies_weights_amenities.png: \
-	../../tasks/audits/home_prices_twfe/output/event_studies_weights_amenities.png | ../input
+	../exhibits/home_prices_twfe_2026-09-09/event_studies_weights_amenities.png | ../input
 	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
 
 ../input/ring_raw_equal_site_year.png: ../../tasks/audits/home_price_rings/output/raw_equal_site_year.png | \
@@ -266,16 +266,16 @@ link-inputs: ../input/distress_seller_proxies.png
 ../input/overview_prices_through_2023.png: ../../tasks/audits/home_data_overview/output/price_trends_through_2023.png | ../input
 	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
 
-../input/event_studies_through_2023.png: ../../tasks/audits/home_prices_twfe/output/event_studies_through_2023.png | ../input
+../input/event_studies_through_2023.png: ../exhibits/home_prices_twfe_2026-09-09/event_studies_through_2023.png | ../input
 	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
 
 ../input/single_family_price_trends.png: ../../tasks/audits/home_data_overview/output/price_trends_single_family.png | ../input
 	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
 
-../input/single_family_event_studies.png: ../../tasks/audits/home_prices_twfe/output/event_studies_single_family.png | ../input
+../input/single_family_event_studies.png: ../exhibits/home_prices_twfe_2026-09-09/event_studies_single_family.png | ../input
 	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
 
-../input/half_mile_single_family_events.png: ../../tasks/audits/home_prices_twfe/output/event_studies_single_family_0.5.png | ../input
+../input/half_mile_single_family_events.png: ../exhibits/home_prices_twfe_2026-09-09/event_studies_single_family_0.5.png | ../input
 	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
 
 ../input/price_scale_ppml.png: ../../tasks/audits/home_price_scale_checks/output/ppml_events.png | ../input

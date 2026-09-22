@@ -1,79 +1,55 @@
 # setwd("/Users/jacobherbstman/Desktop/school_closures_house_prices/tasks/audits/home_prices_twfe/code")
+suppressPackageStartupMessages({library(data.table); library(ggplot2)})
 
-suppressPackageStartupMessages(library(data.table))
-coefficients <- fread("../output/coefficients.csv")
-summaries <- fread("../output/model_summary.csv")
-stopifnot(!anyDuplicated(coefficients[, .(model, term)]), !anyDuplicated(summaries$model))
+estimates <- readRDS("../output/twfe.rds")
+coefficients <- estimates$coefficients
+models <- estimates$models
+control_levels <- c("Site and year effects", "Hedonics", "Hedonics and unit count")
+colors <- setNames(c("#2a78d6", "#eb6834", "#1baf7a"), control_levels)
+shapes <- setNames(c(16, 17, 15), control_levels)
+theme_set(theme_minimal(base_size = 12) + theme(
+  panel.grid.minor = element_blank(), panel.grid.major = element_line(color = "#E6E8E9", linewidth = 0.3),
+  legend.position = "top", legend.title = element_blank(), strip.text = element_text(face = "bold"),
+  plot.title = element_text(face = "bold"), plot.caption = element_text(color = "#52514e", hjust = 0)))
 
-for (plot_frequency in c("annual", "semiannual", "amenities")) {
-  is_semiannual <- plot_frequency != "annual"
-  is_amenity_comparison <- plot_frequency == "amenities"
-  reference <- if (is_semiannual) 2012.5 else 2012
-  periods <- if (is_semiannual) seq(2008, 2018.5, 0.5) else 2008:2018
-  model_names <- if (is_amenity_comparison)
-    c("event_semiannual_hedonic_log", "event_semiannual_hedonic_dollars",
-      "event_semiannual_amenity_log", "event_semiannual_amenity_dollars") else if (is_semiannual)
-    c("event_semiannual_log", "event_semiannual_dollars",
-      "event_semiannual_hedonic_log", "event_semiannual_hedonic_dollars") else
-    c("event_log", "event_dollars", "event_hedonic_log", "event_hedonic_dollars")
-  if (is_amenity_comparison) {
-    png("../output/event_studies_amenities.png", width = 2400, height = 2000, res = 200)
-  } else if (is_semiannual) {
-    png("../output/event_studies_semiannual.png", width = 2400, height = 2000, res = 200)
-  } else {
-    png("../output/event_studies.png", width = 2200, height = 1900, res = 200)
-  }
-  par(mfrow = c(2, 2), mar = c(if (is_semiannual) 6 else 5, 5, 3.5, 1), oma = c(5, 0, 3, 0))
-  for (model_name in model_names) {
-    is_log <- endsWith(model_name, "log")
-    has_hedonics <- grepl("_(hedonic|amenity)_", model_name)
-    has_amenities <- grepl("_amenity_", model_name)
-    estimates <- coefficients[model == model_name]
-    estimates[, period := if (is_semiannual) sale_halfyear else sale_year]
-    model_summary <- summaries[model == model_name]
-    stopifnot(nrow(estimates) == length(periods) - 1L, nrow(model_summary) == 1L,
-              setequal(estimates$period, setdiff(periods, reference)))
-    scale <- if (is_log) 1 else 1000
-    plot_values <- rbind(estimates[, .(period, estimate, conf_low, conf_high)],
-                    data.table(period = reference, estimate = 0, conf_low = 0, conf_high = 0))
-    setorder(plot_values, period)
-    # Hold the vertical scale fixed across controls within each outcome/frequency.
-    comparison <- coefficients[model %in% model_names & endsWith(model, if (is_log) "log" else "dollars")]
-    limits <- range(c(0, comparison$conf_low, comparison$conf_high)) / scale
-    plot(plot_values$period, plot_values$estimate / scale, type = "n", ylim = limits,
-         xaxt = "n", xlab = "",
-         ylab = if (is_log) "Effect on log real sale price" else "Effect on real sale price ($1,000s, 2022 dollars)",
-         main = paste(if (is_log) "Log prices" else "Dollar prices",
-                      if (has_amenities) "| Hedonics + amenities" else if (has_hedonics) "| With hedonics" else "| No hedonics"))
-    rect(if (is_semiannual) 2012.75 else 2012.5, par("usr")[3],
-         if (is_semiannual) 2013.75 else 2013.5, par("usr")[4], col = "grey94", border = NA)
-    abline(h = 0, col = "grey55", lty = 2)
-    axis(1, at = periods, labels = if (is_semiannual)
-      paste(floor(periods), ifelse(periods %% 1 == 0, "H1", "H2")) else periods,
-      las = 2, cex.axis = if (is_semiannual) .72 else 1)
-    mtext(if (is_semiannual) "Sale half-year" else "Sale year", side = 1,
-          line = if (is_semiannual) 4.5 else 3.5)
-    lines(plot_values$period, plot_values$estimate / scale, col = "#176B87", lwd = 1.5)
-    arrows(estimates$period, estimates$conf_low / scale,
-           estimates$period, estimates$conf_high / scale,
-           angle = 90, code = 3, length = .03, col = "#176B87", lwd = 1.3)
-    points(plot_values$period, plot_values$estimate / scale,
-           pch = ifelse(plot_values$period == reference, 1, 16), col = "#176B87", cex = 1)
-    mtext(sprintf("Joint pre-period test (%s): p = %.3f",
-                  if (is_semiannual) "2008 H1-2012 H1" else "2008-2011", model_summary$pretrend_p),
-          side = 3, line = .4, cex = .8)
-  }
-  mtext(if (is_amenity_comparison) "Chicago school closures | amenities interacted with half-year" else
-          paste("Chicago school closures |", plot_frequency, "event studies"),
-        side = 3, outer = TRUE, line = 1, font = 2, cex = 1.2)
-  mtext(if (is_amenity_comparison) "Same transactions, hedonics, school-site and sale-half-year fixed effects throughout." else
-        paste("Same transactions and school-site fixed effects throughout;",
-              if (is_semiannual) "sale-half-year" else "sale-year", "fixed effects. No amenity controls."),
-        side = 1, outer = TRUE, line = 1.4, cex = .8)
-  mtext(paste(if (is_semiannual) "2012 H2" else "2012",
-              "is the reference; shaded 2013 is the transition year. Pointwise 95% CIs cluster by school site."),
-        side = 1, outer = TRUE, line = 2.7, cex = .8)
-  mtext("Quarter-mile treated/control sample; excludes welcoming/other-candidate exposure. Annual top-0.1% PPSF trim; equal transaction weights.",
-        side = 1, outer = TRUE, line = 4, cex = .72)
-  dev.off()
-}
+# The 2012 reference year is zero by construction and is drawn as such.
+events <- rbind(coefficients[design == "event", .(sample, controls, sale_year, estimate, ci_low, ci_high)],
+                unique(coefficients[design == "event", .(sample, controls)])[, `:=`(sale_year = 2012L, estimate = 0, ci_low = 0, ci_high = 0)])
+events[, controls := factor(controls, levels = control_levels)]
+dodge <- position_dodge(width = 0.55)
+event_page <- ggplot(events, aes(sale_year, estimate, color = controls, shape = controls)) +
+  annotate("rect", xmin = 2012.5, xmax = 2013.5, ymin = -Inf, ymax = Inf, fill = "#EEF0F1") +
+  geom_hline(yintercept = 0, color = "#52514e", linewidth = 0.4) +
+  geom_errorbar(aes(ymin = ci_low, ymax = ci_high), width = 0, linewidth = 0.5, position = dodge) +
+  geom_point(size = 1.9, position = dodge) +
+  facet_wrap(~sample) +
+  scale_color_manual(values = colors) + scale_shape_manual(values = shapes) +
+  scale_x_continuous(breaks = 2008:2018) +
+  labs(title = "Event studies: log real sale price, closed relative to stayed-open sites",
+       x = NULL, y = "Difference relative to 2012 (log points)",
+       caption = paste("Site and year fixed effects; 95% intervals clustered by school site; each sale has equal weight.",
+                       "Hedonics: size, lot, age, rooms, beds, baths, residence type, quality, condition, REO and quick-resale indicators,",
+                       "and a 2-6-unit indicator, replaced by a unit-count factor with an unknown level in the last set. No property-class dummies.",
+                       "Shaded: 2013 (proposal March 21, closures end of June).", sep = "\n"))
+
+did <- merge(coefficients[design == "did", .(sample, controls, estimate, ci_low, ci_high)],
+             models[design == "event", .(sample, controls, pre_trend_p_value)], by = c("sample", "controls"))
+did[, `:=`(controls = factor(controls, levels = control_levels),
+           sample = factor(sample, levels = rev(sort(unique(sample)))))]
+did_page <- ggplot(did, aes(estimate, sample, color = controls, shape = controls)) +
+  geom_vline(xintercept = 0, color = "#52514e", linewidth = 0.4) +
+  geom_errorbarh(aes(xmin = ci_low, xmax = ci_high), height = 0, linewidth = 0.5,
+                 position = position_dodge(width = 0.5)) +
+  geom_point(size = 2.2, position = position_dodge(width = 0.5)) +
+  geom_text(aes(x = max(did$ci_high) + 0.02, label = sprintf("pre-trend p = %.2f", pre_trend_p_value)),
+            position = position_dodge(width = 0.5), hjust = 0, size = 3, color = "#52514e", show.legend = FALSE) +
+  scale_color_manual(values = colors) + scale_shape_manual(values = shapes) +
+  scale_x_continuous(expand = expansion(mult = c(0.05, 0.35))) +
+  labs(title = "Pooled difference-in-differences: 2014-2018 vs 2008-2012 (2013 omitted)",
+       x = "Closed minus stayed-open change in log real price", y = NULL,
+       caption = "95% intervals clustered by school site. Pre-trend p: joint test that the 2008-2011 event coefficients are zero.")
+
+pdf("../output/event_studies.pdf", width = 11, height = 8.5, onefile = TRUE, useDingbats = FALSE)
+print(event_page)
+print(did_page)
+invisible(dev.off())
