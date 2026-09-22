@@ -15,6 +15,9 @@ $10,000, including foreclosure auctions); the clean price sample; the clean
 sample without REO resales; and REO resales. Each is counted for all property
 and for single-family homes.
 
+Each measure is also estimated within the baseline price tiers defined in the
+price analysis (read from `home_prices_twfe/output/twfe.rds`).
+
 Models are Poisson pseudo-likelihood with site and year fixed effects and
 site-clustered standard errors: an annual event study with 2012 as the
 reference year and a pooled comparison of 2014--2018 with 2008--2012 (2013

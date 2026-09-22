@@ -1,126 +1,132 @@
 
 Dataset: events
-Rows: 504  Columns: 10
-Key: sample, variant, controls, weighting, normalization, sale_year
+Rows: 840  Columns: 11
+Key: sample, tier, variant, controls, weighting, normalization, sale_year
 Duplicate or missing keys: 0
-sample | character | nonmissing: 504 | distinct nonmissing: 2
+sample | character | nonmissing: 840 | distinct nonmissing: 2
 [1] "All property"  "Single-family"
-variant | character | nonmissing: 504 | distinct nonmissing: 5
+tier | character | nonmissing: 840 | distinct nonmissing: 3
+[1] "All sites"          "Higher-price sites" "Lower-price sites"
+variant | character | nonmissing: 840 | distinct nonmissing: 5
 [1] "All clean sales"              "Drop 1st-99th price tails"
 [3] "Drop all flagged sales"       "Drop REO resales"
 [5] "Drop resales within 365 days"
-controls | character | nonmissing: 504 | distinct nonmissing: 2
+controls | character | nonmissing: 840 | distinct nonmissing: 2
 [1] "Hedonics"              "Site and year effects"
-weighting | character | nonmissing: 504 | distinct nonmissing: 2
+weighting | character | nonmissing: 840 | distinct nonmissing: 2
 [1] "Site-years"   "Transactions"
-normalization | character | nonmissing: 504 | distinct nonmissing: 2
+normalization | character | nonmissing: 840 | distinct nonmissing: 2
 [1] "2008-2012 average" "2012"
-sale_year | integer | nonmissing: 504 | distinct nonmissing: 11
+sale_year | integer | nonmissing: 840 | distinct nonmissing: 11
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
    2008    2010    2013    2013    2016    2018
-estimate | numeric | nonmissing: 504 | distinct nonmissing: 504
+estimate | numeric | nonmissing: 840 | distinct nonmissing: 840
      Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
--0.583327 -0.078248  0.004174 -0.015950  0.058166  0.339500
-std_error | numeric | nonmissing: 504 | distinct nonmissing: 504
+-0.644461 -0.093333  0.008783 -0.019308  0.071837  0.394134
+std_error | numeric | nonmissing: 840 | distinct nonmissing: 840
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-0.04457 0.08916 0.10591 0.11126 0.12833 0.23211
-ci_low | numeric | nonmissing: 504 | distinct nonmissing: 504
-    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
--1.01673 -0.30986 -0.19480 -0.23401 -0.12684  0.07458
-ci_high | numeric | nonmissing: 504 | distinct nonmissing: 504
+0.04457 0.09583 0.11592 0.13371 0.15145 0.49064
+ci_low | numeric | nonmissing: 840 | distinct nonmissing: 840
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
--0.1499  0.1299  0.2011  0.2021  0.2693  0.6309
+-1.4788 -0.3679 -0.2106 -0.2814 -0.1264  0.1324
+ci_high | numeric | nonmissing: 840 | distinct nonmissing: 840
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+-0.1499  0.1553  0.2329  0.2428  0.3236  0.8868
 First six records:
-         sample         variant controls  weighting     normalization sale_year
-         <char>          <char>   <char>     <char>            <char>     <int>
-1: All property All clean sales Hedonics Site-years 2008-2012 average      2008
-2: All property All clean sales Hedonics Site-years 2008-2012 average      2009
-3: All property All clean sales Hedonics Site-years 2008-2012 average      2010
-4: All property All clean sales Hedonics Site-years 2008-2012 average      2011
-5: All property All clean sales Hedonics Site-years 2008-2012 average      2012
-6: All property All clean sales Hedonics Site-years 2008-2012 average      2013
-       estimate  std_error      ci_low    ci_high
-          <num>      <num>       <num>      <num>
-1:  0.127867692 0.06811647 -0.00564058 0.26137596
-2: -0.022291146 0.05127358 -0.12278736 0.07820506
-3:  0.003743748 0.06765721 -0.12886439 0.13635188
-4: -0.077193485 0.08020989 -0.23440487 0.08001790
-5: -0.032126808 0.07126984 -0.17181569 0.10756207
-6: -0.041659717 0.09446647 -0.22681400 0.14349456
+         sample      tier         variant controls  weighting     normalization
+         <char>    <char>          <char>   <char>     <char>            <char>
+1: All property All sites All clean sales Hedonics Site-years 2008-2012 average
+2: All property All sites All clean sales Hedonics Site-years 2008-2012 average
+3: All property All sites All clean sales Hedonics Site-years 2008-2012 average
+4: All property All sites All clean sales Hedonics Site-years 2008-2012 average
+5: All property All sites All clean sales Hedonics Site-years 2008-2012 average
+6: All property All sites All clean sales Hedonics Site-years 2008-2012 average
+   sale_year     estimate  std_error      ci_low    ci_high
+       <int>        <num>      <num>       <num>      <num>
+1:      2008  0.127867692 0.06811647 -0.00564058 0.26137596
+2:      2009 -0.022291146 0.05127358 -0.12278736 0.07820506
+3:      2010  0.003743748 0.06765721 -0.12886439 0.13635188
+4:      2011 -0.077193485 0.08020989 -0.23440487 0.08001790
+5:      2012 -0.032126808 0.07126984 -0.17181569 0.10756207
+6:      2013 -0.041659717 0.09446647 -0.22681400 0.14349456
 
 Dataset: did
-Rows: 24  Columns: 8
-Key: sample, variant, controls, weighting
+Rows: 40  Columns: 9
+Key: sample, tier, variant, controls, weighting
 Duplicate or missing keys: 0
-sample | character | nonmissing: 24 | distinct nonmissing: 2
+sample | character | nonmissing: 40 | distinct nonmissing: 2
 [1] "All property"  "Single-family"
-variant | character | nonmissing: 24 | distinct nonmissing: 5
+tier | character | nonmissing: 40 | distinct nonmissing: 3
+[1] "All sites"          "Higher-price sites" "Lower-price sites"
+variant | character | nonmissing: 40 | distinct nonmissing: 5
 [1] "All clean sales"              "Drop 1st-99th price tails"
 [3] "Drop all flagged sales"       "Drop REO resales"
 [5] "Drop resales within 365 days"
-controls | character | nonmissing: 24 | distinct nonmissing: 2
+controls | character | nonmissing: 40 | distinct nonmissing: 2
 [1] "Hedonics"              "Site and year effects"
-weighting | character | nonmissing: 24 | distinct nonmissing: 2
+weighting | character | nonmissing: 40 | distinct nonmissing: 2
 [1] "Site-years"   "Transactions"
-estimate | numeric | nonmissing: 24 | distinct nonmissing: 24
-     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
--0.076397 -0.001692  0.045849  0.037873  0.070618  0.132557
-std_error | numeric | nonmissing: 24 | distinct nonmissing: 24
-   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-0.06482 0.07716 0.08644 0.08982 0.09979 0.12559
-ci_low | numeric | nonmissing: 24 | distinct nonmissing: 24
+estimate | numeric | nonmissing: 40 | distinct nonmissing: 40
     Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
--0.22263 -0.15935 -0.13476 -0.13817 -0.11458 -0.08934
-ci_high | numeric | nonmissing: 24 | distinct nonmissing: 24
+-0.18323 -0.03057  0.04585  0.02867  0.09663  0.21242
+std_error | numeric | nonmissing: 40 | distinct nonmissing: 40
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-0.06984 0.16450 0.21468 0.21391 0.25921 0.37871
+0.06482 0.08370 0.09739 0.10463 0.11605 0.21621
+ci_low | numeric | nonmissing: 40 | distinct nonmissing: 40
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+-0.56006 -0.16905 -0.13476 -0.17640 -0.10092  0.01624
+ci_high | numeric | nonmissing: 40 | distinct nonmissing: 40
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.06984 0.17137 0.22674 0.23375 0.30699 0.40908
 First six records:
-         sample                   variant              controls    weighting
-         <char>                    <char>                <char>       <char>
-1: All property           All clean sales              Hedonics   Site-years
-2: All property           All clean sales              Hedonics Transactions
-3: All property           All clean sales Site and year effects   Site-years
-4: All property           All clean sales Site and year effects Transactions
-5: All property Drop 1st-99th price tails              Hedonics Transactions
-6: All property Drop 1st-99th price tails Site and year effects Transactions
-       estimate  std_error     ci_low   ci_high
-          <num>      <num>      <num>     <num>
-1: -0.009646074 0.07462571 -0.1559125 0.1366203
-2:  0.050412831 0.08945710 -0.1249231 0.2257488
-3: -0.002825254 0.07957876 -0.1587996 0.1531491
-4:  0.055306502 0.10029755 -0.1412767 0.2518897
-5:  0.063367546 0.08381933 -0.1009183 0.2276534
-6:  0.074739796 0.09321742 -0.1079663 0.2574459
+         sample      tier                   variant              controls
+         <char>    <char>                    <char>                <char>
+1: All property All sites           All clean sales              Hedonics
+2: All property All sites           All clean sales              Hedonics
+3: All property All sites           All clean sales Site and year effects
+4: All property All sites           All clean sales Site and year effects
+5: All property All sites Drop 1st-99th price tails              Hedonics
+6: All property All sites Drop 1st-99th price tails Site and year effects
+      weighting     estimate  std_error     ci_low   ci_high
+         <char>        <num>      <num>      <num>     <num>
+1:   Site-years -0.009646074 0.07462571 -0.1559125 0.1366203
+2: Transactions  0.050412831 0.08945710 -0.1249231 0.2257488
+3:   Site-years -0.002825254 0.07957876 -0.1587996 0.1531491
+4: Transactions  0.055306502 0.10029755 -0.1412767 0.2518897
+5: Transactions  0.063367546 0.08381933 -0.1009183 0.2276534
+6: Transactions  0.074739796 0.09321742 -0.1079663 0.2574459
 
 Dataset: models
-Rows: 48  Columns: 10
-Key: sample, variant, controls, design, weighting
+Rows: 80  Columns: 11
+Key: sample, tier, variant, controls, design, weighting
 Duplicate or missing keys: 0
-sample | character | nonmissing: 48 | distinct nonmissing: 2
+sample | character | nonmissing: 80 | distinct nonmissing: 2
 [1] "All property"  "Single-family"
-variant | character | nonmissing: 48 | distinct nonmissing: 5
+tier | character | nonmissing: 80 | distinct nonmissing: 3
+[1] "All sites"          "Higher-price sites" "Lower-price sites"
+variant | character | nonmissing: 80 | distinct nonmissing: 5
 [1] "All clean sales"              "Drop 1st-99th price tails"
 [3] "Drop all flagged sales"       "Drop REO resales"
 [5] "Drop resales within 365 days"
-controls | character | nonmissing: 48 | distinct nonmissing: 2
+controls | character | nonmissing: 80 | distinct nonmissing: 2
 [1] "Hedonics"              "Site and year effects"
-design | character | nonmissing: 48 | distinct nonmissing: 2
+design | character | nonmissing: 80 | distinct nonmissing: 2
 [1] "did"   "event"
-weighting | character | nonmissing: 48 | distinct nonmissing: 2
+weighting | character | nonmissing: 80 | distinct nonmissing: 2
 [1] "Site-years"   "Transactions"
-observations | integer | nonmissing: 48 | distinct nonmissing: 20
+observations | integer | nonmissing: 80 | distinct nonmissing: 36
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   2729    4792    5521    6660    9817   11042
-treated_sites | integer | nonmissing: 48 | distinct nonmissing: 2
+   1392    3140    4854    5304    6334   11042
+treated_sites | integer | nonmissing: 80 | distinct nonmissing: 5
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   28.0    28.0    28.5    28.5    29.0    29.0
-control_sites | integer | nonmissing: 48 | distinct nonmissing: 2
+   13.0    15.0    28.0    22.8    29.0    29.0
+control_sites | integer | nonmissing: 80 | distinct nonmissing: 5
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   47.0    47.0    47.5    47.5    48.0    48.0
-pre_trend_p_value | numeric | nonmissing: 24 | distinct nonmissing: 24
+     22      25      47      38      48      48
+pre_trend_p_value | numeric | nonmissing: 40 | distinct nonmissing: 40
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
-0.09291 0.29721 0.51048 0.56395 0.82571 0.97638      24
-dropped_terms | character | nonmissing: 48 | distinct nonmissing: 8
+0.02479 0.29787 0.55364 0.58973 0.88769 0.99823      40
+dropped_terms | character | nonmissing: 80 | distinct nonmissing: 8
 [1] ""
 [2] "reo_saleTRUE"
 [3] "reo_saleTRUE; resale_within_365TRUE"
@@ -128,22 +134,58 @@ dropped_terms | character | nonmissing: 48 | distinct nonmissing: 8
 [5] "reo_saleTRUE; two_to_six_units"
 [6] "resale_within_365TRUE"
 First six records:
-         sample         variant              controls design    weighting
-         <char>          <char>                <char> <char>       <char>
-1: All property All clean sales Site and year effects  event Transactions
-2: All property All clean sales Site and year effects  event   Site-years
-3: All property All clean sales Site and year effects    did Transactions
-4: All property All clean sales Site and year effects    did   Site-years
-5: All property All clean sales              Hedonics  event Transactions
-6: All property All clean sales              Hedonics  event   Site-years
-   observations treated_sites control_sites pre_trend_p_value dropped_terms
-          <int>         <int>         <int>             <num>        <char>
-1:        11042            29            48         0.4349576
-2:        11042            29            48         0.2624612
-3:        10046            29            48                NA
-4:        10046            29            48                NA
-5:        11042            29            48         0.9037449
-6:        11042            29            48         0.4036849
+         sample      tier         variant              controls design
+         <char>    <char>          <char>                <char> <char>
+1: All property All sites All clean sales Site and year effects  event
+2: All property All sites All clean sales Site and year effects  event
+3: All property All sites All clean sales Site and year effects    did
+4: All property All sites All clean sales Site and year effects    did
+5: All property All sites All clean sales              Hedonics  event
+6: All property All sites All clean sales              Hedonics  event
+      weighting observations treated_sites control_sites pre_trend_p_value
+         <char>        <int>         <int>         <int>             <num>
+1: Transactions        11042            29            48         0.4349576
+2:   Site-years        11042            29            48         0.2624612
+3: Transactions        10046            29            48                NA
+4:   Site-years        10046            29            48                NA
+5: Transactions        11042            29            48         0.9037449
+6:   Site-years        11042            29            48         0.4036849
+   dropped_terms
+          <char>
+1:
+2:
+3:
+4:
+5:
+6:
+
+Dataset: site_tiers
+Rows: 77  Columns: 5
+Key: school_site_id
+Duplicate or missing keys: 0
+school_site_id | integer | nonmissing: 77 | distinct nonmissing: 77
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609797  610013  610119  610109  610225  610521
+treated | integer | nonmissing: 77 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  0.0000  0.0000  0.3766  1.0000  1.0000
+pre_median_real_price | numeric | nonmissing: 77 | distinct nonmissing: 77
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  21719   45752   64734  146307  173472  654723
+pre_sales | integer | nonmissing: 77 | distinct nonmissing: 57
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    1.0    35.0    60.0    61.3    86.0   177.0
+price_tier | character | nonmissing: 77 | distinct nonmissing: 2
+[1] "Higher-price sites" "Lower-price sites"
+First six records:
+   school_site_id treated pre_median_real_price pre_sales         price_tier
+            <int>   <int>                 <num>     <int>             <char>
+1:         609797       0              54409.53        67  Lower-price sites
+2:         609809       0             401936.64        74 Higher-price sites
+3:         609812       0             275509.79         2 Higher-price sites
+4:         609819       0             265798.54        15 Higher-price sites
+5:         609848       0              21718.62        10  Lower-price sites
+6:         609864       0              83732.86       101 Higher-price sites
 
 Dataset: leave_one_out
 Rows: 2394  Columns: 11

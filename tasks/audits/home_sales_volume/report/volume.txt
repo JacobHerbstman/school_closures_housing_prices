@@ -1,6 +1,6 @@
 
 Dataset: panel
-Rows: 6864  Columns: 7
+Rows: 6864  Columns: 8
 Key: property, measure, school_site_id, sale_year
 Duplicate or missing keys: 0
 school_site_id | integer | nonmissing: 6864 | distinct nonmissing: 78
@@ -23,6 +23,8 @@ treated | integer | nonmissing: 6864 | distinct nonmissing: 2
 treated_post | integer | nonmissing: 6864 | distinct nonmissing: 2
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
   0.000   0.000   0.000   0.169   0.000   1.000
+price_tier | character | nonmissing: 6776 | distinct nonmissing: 2
+[1] "Higher-price sites" "Lower-price sites"
 First six records:
    school_site_id     property          measure sale_year sales treated
             <int>       <char>           <char>     <int> <int>   <int>
@@ -32,49 +34,51 @@ First six records:
 4:         609797 All property All market sales      2011    13       0
 5:         609797 All property All market sales      2012     6       0
 6:         609797 All property All market sales      2013     7       0
-   treated_post
-          <int>
-1:            0
-2:            0
-3:            0
-4:            0
-5:            0
-6:            0
+   treated_post        price_tier
+          <int>            <char>
+1:            0 Lower-price sites
+2:            0 Lower-price sites
+3:            0 Lower-price sites
+4:            0 Lower-price sites
+5:            0 Lower-price sites
+6:            0 Lower-price sites
 
 Dataset: events
-Rows: 80  Columns: 10
-Key: property, measure, sale_year
+Rows: 240  Columns: 11
+Key: property, tier, measure, sale_year
 Duplicate or missing keys: 0
-term | character | nonmissing: 80 | distinct nonmissing: 10
+term | character | nonmissing: 240 | distinct nonmissing: 10
 [1] "sale_year::2008:treated" "sale_year::2009:treated"
 [3] "sale_year::2010:treated" "sale_year::2011:treated"
 [5] "sale_year::2013:treated" "sale_year::2014:treated"
-estimate | numeric | nonmissing: 80 | distinct nonmissing: 80
-     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
--0.352538 -0.067611  0.007879  0.046367  0.128079  0.558127
-std_error | numeric | nonmissing: 80 | distinct nonmissing: 80
-   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-0.09951 0.15500 0.18707 0.19767 0.22190 0.38636
-z_value | numeric | nonmissing: 80 | distinct nonmissing: 80
+estimate | numeric | nonmissing: 240 | distinct nonmissing: 240
     Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
--1.60551 -0.35366  0.03654  0.15798  0.79435  1.96513
-p_value | numeric | nonmissing: 80 | distinct nonmissing: 80
+-1.09861 -0.07907  0.03505  0.11002  0.28465  1.47480
+std_error | numeric | nonmissing: 240 | distinct nonmissing: 240
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 0.0494  0.3221  0.6120  0.5720  0.8484  0.9896
-property | character | nonmissing: 80 | distinct nonmissing: 2
+0.09951 0.16840 0.21016 0.23576 0.27514 0.63300
+z_value | numeric | nonmissing: 240 | distinct nonmissing: 240
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+-2.8391 -0.4645  0.2012  0.4043  1.2193  4.6501
+p_value | numeric | nonmissing: 240 | distinct nonmissing: 240
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+3.320e-06 1.403e-01 3.657e-01 4.398e-01 7.273e-01 9.994e-01
+property | character | nonmissing: 240 | distinct nonmissing: 2
 [1] "All property"  "Single-family"
-measure | character | nonmissing: 80 | distinct nonmissing: 4
+tier | character | nonmissing: 240 | distinct nonmissing: 3
+[1] "All sites"          "Higher-price sites" "Lower-price sites"
+measure | character | nonmissing: 240 | distinct nonmissing: 4
 [1] "All market sales"          "Clean price-sample sales"
 [3] "Clean sales excluding REO" "REO resales"
-sale_year | integer | nonmissing: 80 | distinct nonmissing: 10
+sale_year | integer | nonmissing: 240 | distinct nonmissing: 10
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
    2008    2010    2014    2013    2016    2018
-ci_low | numeric | nonmissing: 80 | distinct nonmissing: 80
-    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
--0.83050 -0.43918 -0.31429 -0.34106 -0.23439  0.00118
-ci_high | numeric | nonmissing: 80 | distinct nonmissing: 80
+ci_low | numeric | nonmissing: 240 | distinct nonmissing: 240
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-0.06849 0.25947 0.35767 0.43379 0.55463 1.22921
+-2.0376 -0.5107 -0.3447 -0.3521 -0.1636  0.8532
+ci_high | numeric | nonmissing: 240 | distinct nonmissing: 240
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+-0.1614  0.2741  0.4750  0.5721  0.7652  2.3174
 First six records:
                       term     estimate std_error     z_value   p_value
                     <char>        <num>     <num>       <num>     <num>
@@ -84,70 +88,72 @@ First six records:
 4: sale_year::2011:treated  0.055018824 0.1572322  0.34992074 0.7263982
 5: sale_year::2013:treated -0.020801149 0.1180974 -0.17613558 0.8601874
 6: sale_year::2014:treated -0.004233070 0.1260487 -0.03358281 0.9732098
-       property          measure sale_year      ci_low   ci_high
-         <char>           <char>     <int>       <num>     <num>
-1: All property All market sales      2008 -0.06555432 0.5192032
-2: All property All market sales      2009 -0.45303882 0.2702133
-3: All property All market sales      2010 -0.31561393 0.2987385
-4: All property All market sales      2011 -0.25315638 0.3631940
-5: All property All market sales      2013 -0.25227200 0.2106697
-6: All property All market sales      2014 -0.25128857 0.2428224
+       property      tier          measure sale_year      ci_low   ci_high
+         <char>    <char>           <char>     <int>       <num>     <num>
+1: All property All sites All market sales      2008 -0.06555432 0.5192032
+2: All property All sites All market sales      2009 -0.45303882 0.2702133
+3: All property All sites All market sales      2010 -0.31561393 0.2987385
+4: All property All sites All market sales      2011 -0.25315638 0.3631940
+5: All property All sites All market sales      2013 -0.25227200 0.2106697
+6: All property All sites All market sales      2014 -0.25128857 0.2428224
 
 Dataset: did
-Rows: 8  Columns: 10
-Key: property, measure
+Rows: 24  Columns: 11
+Key: property, tier, measure
 Duplicate or missing keys: 0
-property | character | nonmissing: 8 | distinct nonmissing: 2
+property | character | nonmissing: 24 | distinct nonmissing: 2
 [1] "All property"  "Single-family"
-measure | character | nonmissing: 8 | distinct nonmissing: 4
+tier | character | nonmissing: 24 | distinct nonmissing: 3
+[1] "All sites"          "Higher-price sites" "Lower-price sites"
+measure | character | nonmissing: 24 | distinct nonmissing: 4
 [1] "All market sales"          "Clean price-sample sales"
 [3] "Clean sales excluding REO" "REO resales"
-estimate | numeric | nonmissing: 8 | distinct nonmissing: 8
-      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
--0.1264325 -0.0386891 -0.0317349 -0.0332942 -0.0005615  0.0057777
-std_error | numeric | nonmissing: 8 | distinct nonmissing: 8
+estimate | numeric | nonmissing: 24 | distinct nonmissing: 24
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+-0.180022 -0.101287 -0.049480 -0.050651 -0.006831  0.187372
+std_error | numeric | nonmissing: 24 | distinct nonmissing: 24
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-0.06898 0.07324 0.07585 0.08723 0.09223 0.13368
-pre_trend_p_value | numeric | nonmissing: 8 | distinct nonmissing: 8
+0.05974 0.07439 0.10375 0.10705 0.12470 0.19932
+pre_trend_p_value | numeric | nonmissing: 24 | distinct nonmissing: 24
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+5.099e-05 3.538e-02 3.285e-01 3.501e-01 6.890e-01 8.904e-01
+sites_used | integer | nonmissing: 24 | distinct nonmissing: 7
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  34.00   38.00   38.50   50.42   75.00   77.00
+pre_sales_treated | integer | nonmissing: 24 | distinct nonmissing: 23
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  101.0   252.0   348.5   509.8   671.5  1556.0
+pre_sales_control | integer | nonmissing: 24 | distinct nonmissing: 24
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  203.0   696.5   956.0  1254.2  1624.2  3545.0
+ci_low | numeric | nonmissing: 24 | distinct nonmissing: 24
     Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
-0.008816 0.279444 0.378520 0.411538 0.522977 0.827505
-sites_used | integer | nonmissing: 8 | distinct nonmissing: 3
-   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  72.00   75.00   76.00   75.62   77.00   77.00
-pre_sales_treated | integer | nonmissing: 8 | distinct nonmissing: 7
-   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  254.0   508.5   594.0   764.8   966.5  1556.0
-pre_sales_control | integer | nonmissing: 8 | distinct nonmissing: 8
-   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-    697    1396    1642    1881    2140    3545
-ci_low | numeric | nonmissing: 8 | distinct nonmissing: 8
-   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
--0.3884 -0.2088 -0.1711 -0.2043 -0.1576 -0.1474
-ci_high | numeric | nonmissing: 8 | distinct nonmissing: 8
-   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-0.09772 0.10262 0.13965 0.13767 0.15914 0.19406
+-0.55168 -0.29881 -0.25167 -0.26046 -0.18839 -0.05954
+ci_high | numeric | nonmissing: 24 | distinct nonmissing: 24
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+0.008347 0.098814 0.146742 0.159162 0.201058 0.434282
 First six records:
-        property                   measure     estimate  std_error
-          <char>                    <char>        <num>      <num>
-1:  All property          All market sales -0.001856511 0.07427264
-2:  All property  Clean price-sample sales  0.003323406 0.07726152
-3:  All property Clean sales excluding REO -0.048165520 0.07443221
-4:  All property               REO resales -0.029560583 0.11408992
-5: Single-family          All market sales -0.035530332 0.06898384
-6: Single-family  Clean price-sample sales -0.033909203 0.07015803
-   pre_trend_p_value sites_used pre_sales_treated pre_sales_control     ci_low
-               <num>      <int>             <int>             <int>      <num>
-1:       0.125562389         77              1556              3545 -0.1474309
-2:       0.369353347         77              1412              3308 -0.1481092
-3:       0.387687163         77               818              1750 -0.1940526
-4:       0.008816329         77               594              1558 -0.2531768
-5:       0.827505337         75               594              1676 -0.1707387
-6:       0.818003297         75               572              1607 -0.1714189
-      ci_high
-        <num>
-1: 0.14371787
-2: 0.15475598
-3: 0.09772161
-4: 0.19405567
-5: 0.09967800
-6: 0.10360053
+       property               tier                   measure     estimate
+         <char>             <char>                    <char>        <num>
+1: All property          All sites          All market sales -0.001856511
+2: All property          All sites  Clean price-sample sales  0.003323406
+3: All property          All sites Clean sales excluding REO -0.048165520
+4: All property          All sites               REO resales -0.029560583
+5: All property Higher-price sites          All market sales -0.079800714
+6: All property Higher-price sites  Clean price-sample sales -0.076302278
+    std_error pre_trend_p_value sites_used pre_sales_treated pre_sales_control
+        <num>             <num>      <int>             <int>             <int>
+1: 0.07427264       0.125562389         77              1556              3545
+2: 0.07726152       0.369353347         77              1412              3308
+3: 0.07443221       0.387687163         77               818              1750
+4: 0.11408992       0.008816329         77               594              1558
+5: 0.05973749       0.054855388         38               847              1262
+6: 0.06710249       0.354566136         38               753              1147
+       ci_low    ci_high
+        <num>      <num>
+1: -0.1474309 0.14371787
+2: -0.1481092 0.15475598
+3: -0.1940526 0.09772161
+4: -0.2531768 0.19405567
+5: -0.1968862 0.03728477
+6: -0.2078232 0.05521859

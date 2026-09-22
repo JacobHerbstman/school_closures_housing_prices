@@ -67,6 +67,12 @@ panel <- merge(panel, counts, by = c("property", "measure", "school_site_id", "s
 panel[is.na(sales), sales := 0L]
 panel <- merge(panel, sites[, .(school_site_id, treated)], by = "school_site_id")
 panel[, treated_post := treated * as.integer(sale_year >= 2014L)]
+# Baseline price tiers come from the price analysis (2008-2012 site median real
+# price, split at the median of site medians). A site with no clean sale in
+# 2008-2012 has no tier and enters only the all-sites models.
+site_tiers <- readRDS("../input/twfe.rds")$site_tiers
+stopifnot(!anyDuplicated(site_tiers$school_site_id), all(site_tiers$school_site_id %in% sites$school_site_id))
+panel[site_tiers, on = "school_site_id", price_tier := i.price_tier]
 stopifnot(nrow(panel) == uniqueN(counts$property) * uniqueN(counts$measure) * nrow(sites) * 11L)
 
 # Poisson pseudo-likelihood with site and year effects, clustered by site.
@@ -75,8 +81,10 @@ stopifnot(nrow(panel) == uniqueN(counts$property) * uniqueN(counts$measure) * nr
 events <- list()
 did <- list()
 for (property_name in unique(panel$property)) {
+ for (tier_name in c("All sites", "Lower-price sites", "Higher-price sites")) {
   for (measure_name in unique(panel$measure)) {
-    data <- panel[property == property_name & measure == measure_name]
+    data <- panel[property == property_name & measure == measure_name &
+                    (tier_name == "All sites" | price_tier %in% tier_name)]
     event_fit <- fepois(sales ~ i(sale_year, treated, ref = 2012) | school_site_id + sale_year,
                         data = data, vcov = ~school_site_id)
     did_fit <- fepois(sales ~ treated_post | school_site_id + sale_year,
@@ -85,15 +93,16 @@ for (property_name in unique(panel$property)) {
     setnames(event_terms, c("term", "estimate", "std_error", "z_value", "p_value"))
     pre_test <- wald(event_fit, keep = "sale_year::20(08|09|10|11):treated", print = FALSE)
     events[[length(events) + 1L]] <- event_terms[, `:=`(
-      property = property_name, measure = measure_name,
+      property = property_name, tier = tier_name, measure = measure_name,
       sale_year = as.integer(sub("sale_year::([0-9]+):treated", "\\1", term)))]
     did[[length(did) + 1L]] <- data.table(
-      property = property_name, measure = measure_name, estimate = coef(did_fit)[["treated_post"]],
+      property = property_name, tier = tier_name, measure = measure_name, estimate = coef(did_fit)[["treated_post"]],
       std_error = se(did_fit)[["treated_post"]], pre_trend_p_value = pre_test$p,
       sites_used = data[, sum(sales), by = school_site_id][V1 > 0, .N],
       pre_sales_treated = data[treated == 1L & sale_year <= 2012L, sum(sales)],
       pre_sales_control = data[treated == 0L & sale_year <= 2012L, sum(sales)])
   }
+ }
 }
 events <- rbindlist(events)
 did <- rbindlist(did)
@@ -101,17 +110,20 @@ events[, `:=`(ci_low = estimate - 1.96 * std_error, ci_high = estimate + 1.96 * 
 did[, `:=`(ci_low = estimate - 1.96 * std_error, ci_high = estimate + 1.96 * std_error)]
 stopifnot(all(is.finite(events$estimate)), all(is.finite(did$estimate)))
 
-annual <- panel[, .(mean_sales_per_site = mean(sales), total_sales = sum(sales)), by = .(property, measure, treated, sale_year)]
-setorder(events, property, measure, sale_year)
-setorder(did, property, measure)
-setorder(annual, property, measure, treated, sale_year)
+annual <- rbind(
+  panel[, .(tier = "All sites", mean_sales_per_site = mean(sales), total_sales = sum(sales)), by = .(property, measure, treated, sale_year)],
+  panel[!is.na(price_tier), .(mean_sales_per_site = mean(sales), total_sales = sum(sales)),
+        by = .(property, measure, tier = price_tier, treated, sale_year)], use.names = TRUE)
+setorder(events, property, tier, measure, sale_year)
+setorder(did, property, tier, measure)
+setorder(annual, property, tier, measure, treated, sale_year)
 setorder(panel, property, measure, school_site_id, sale_year)
 saveRDS(list(panel = panel, annual = annual, events = events, did = did), "../output/volume.rds")
 report <- capture.output({
   report_data(panel, "panel", c("property", "measure", "school_site_id", "sale_year"))
-  report_data(events, "events", c("property", "measure", "sale_year"))
-  report_data(did, "did", c("property", "measure"))
+  report_data(events, "events", c("property", "tier", "measure", "sale_year"))
+  report_data(did, "did", c("property", "tier", "measure"))
 })
 writeLines(trimws(report, which = "right"), "../report/volume.txt")
-print(did[, .(property, measure, estimate = round(estimate, 3), ci_low = round(ci_low, 3), ci_high = round(ci_high, 3),
+print(did[, .(property, tier, measure, estimate = round(estimate, 3), ci_low = round(ci_low, 3), ci_high = round(ci_high, 3),
               pre_p = round(pre_trend_p_value, 3), pre_sales_treated, pre_sales_control)])

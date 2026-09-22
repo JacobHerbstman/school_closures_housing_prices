@@ -78,6 +78,18 @@ designs <- c(event = "i(sale_year, treated, ref = 2012)", did = "treated_post")
 # Site-year weights give each school site equal total weight in every year.
 samples[, site_year_weight := 1 / .N, by = .(sample, school_site_id, sale_year)]
 
+# Baseline price tiers: each study site's 2008-2012 median real price among all
+# clean sales within a quarter mile, split at the median of site medians across
+# both groups. Tiers are fixed before 2013 and apply to both property samples.
+site_tiers <- samples[sample == "All property" & sale_year <= 2012L,
+                      .(pre_median_real_price = median(sale_price_real_2022), pre_sales = .N),
+                      by = .(school_site_id, treated)]
+tier_cutoff <- median(site_tiers$pre_median_real_price)
+site_tiers[, price_tier := fifelse(pre_median_real_price <= tier_cutoff, "Lower-price sites", "Higher-price sites")]
+stopifnot(!anyDuplicated(site_tiers$school_site_id), all(samples$school_site_id %in% site_tiers$school_site_id))
+samples[site_tiers, on = "school_site_id", price_tier := i.price_tier]
+print(site_tiers[, .(sites = .N, median_of_site_medians = round(median(pre_median_real_price))), by = .(price_tier, treated)])
+
 # Log real price; site-clustered errors. The pooled difference-in-differences
 # compares 2014-2018 with 2008-2012. Used by the main grid and the
 # leave-one-site-out estimates.
@@ -101,16 +113,20 @@ event_table <- function(fit) {
                    std_error = sqrt(pmax(diag(contrast %*% V %*% t(contrast)), 0))))
 }
 
-# One row per model; site-year weighting is estimated on all clean sales only.
-specifications <- CJ(sample = unique(samples$sample), variant = names(variants), controls = names(control_sets),
-                     design = names(designs), weighting = c("Transactions", "Site-years"), sorted = FALSE)
-specifications <- specifications[weighting == "Transactions" | variant == "All clean sales"]
+# One row per model. Site-year weighting is estimated on all clean sales only;
+# the baseline price tiers on all clean sales and without REO resales.
+specifications <- CJ(sample = unique(samples$sample), tier = c("All sites", "Lower-price sites", "Higher-price sites"),
+                     variant = names(variants), controls = names(control_sets), design = names(designs),
+                     weighting = c("Transactions", "Site-years"), sorted = FALSE)
+specifications <- specifications[(weighting == "Transactions" | variant == "All clean sales") &
+  (tier == "All sites" | (weighting == "Transactions" & variant %in% c("All clean sales", "Drop REO resales")))]
 events <- list()
 did <- list()
 models <- list()
 for (k in seq_len(nrow(specifications))) {
   spec <- specifications[k]
-  data <- samples[sample == spec$sample & get(variants[[spec$variant]]) == TRUE]
+  data <- samples[sample == spec$sample & get(variants[[spec$variant]]) == TRUE &
+                    (spec$tier == "All sites" | price_tier == spec$tier)]
   fit <- fit_model(data, spec$controls, spec$design, spec$weighting)
   if (spec$design == "event") events[[k]] <- cbind(spec, event_table(fit)) else
     did[[k]] <- cbind(spec, data.table(estimate = coef(fit)[["treated_post"]], std_error = se(fit)[["treated_post"]]))
@@ -126,8 +142,8 @@ events <- rbindlist(events)[, design := NULL]
 did <- rbindlist(did)[, design := NULL]
 models <- rbindlist(models)
 stopifnot(all(is.finite(events$estimate)), all(is.finite(did$estimate)), all(did$std_error > 0),
-          !anyDuplicated(events[, .(sample, variant, controls, weighting, normalization, sale_year)]),
-          !anyDuplicated(did[, .(sample, variant, controls, weighting)]), nrow(models) == nrow(specifications))
+          !anyDuplicated(events[, .(sample, tier, variant, controls, weighting, normalization, sale_year)]),
+          !anyDuplicated(did[, .(sample, tier, variant, controls, weighting)]), nrow(models) == nrow(specifications))
 events[, `:=`(ci_low = estimate - 1.96 * std_error, ci_high = estimate + 1.96 * std_error)]
 did[, `:=`(ci_low = estimate - 1.96 * std_error, ci_high = estimate + 1.96 * std_error)]
 
@@ -154,19 +170,22 @@ leave_one_out[, `:=`(ci_low = estimate - 1.96 * std_error, ci_high = estimate + 
 support <- samples[, .(sales = .N, sites = uniqueN(school_site_id), reo = sum(reo_sale),
                        resale_365 = sum(resale_within_365), price_tail = sum(price_outside_p01_p99)),
                    by = .(sample, treated, sale_year)]
-setorder(events, sample, variant, controls, weighting, normalization, sale_year)
-setorder(did, sample, variant, controls, weighting)
+setorder(events, sample, tier, variant, controls, weighting, normalization, sale_year)
+setorder(did, sample, tier, variant, controls, weighting)
+setorder(site_tiers, school_site_id)
 setorder(leave_one_out, sample, controls, dropped_site, normalization, sale_year)
 setorder(support, sample, treated, sale_year)
-saveRDS(list(events = events, did = did, models = models, leave_one_out = leave_one_out, support = support),
+saveRDS(list(events = events, did = did, models = models, leave_one_out = leave_one_out, support = support,
+             site_tiers = site_tiers),
         "../output/twfe.rds")
 report <- capture.output({
-  report_data(events, "events", c("sample", "variant", "controls", "weighting", "normalization", "sale_year"))
-  report_data(did, "did", c("sample", "variant", "controls", "weighting"))
-  report_data(models, "models", c("sample", "variant", "controls", "design", "weighting"))
+  report_data(events, "events", c("sample", "tier", "variant", "controls", "weighting", "normalization", "sale_year"))
+  report_data(did, "did", c("sample", "tier", "variant", "controls", "weighting"))
+  report_data(models, "models", c("sample", "tier", "variant", "controls", "design", "weighting"))
+  report_data(site_tiers, "site_tiers", "school_site_id")
   report_data(leave_one_out, "leave_one_out", c("sample", "controls", "dropped_site", "normalization", "sale_year"))
   report_data(support, "support", c("sample", "treated", "sale_year"))
 })
 writeLines(trimws(report, which = "right"), "../report/twfe.txt")
-print(did[, .(sample, variant, controls, weighting, estimate = round(estimate, 3),
+print(did[, .(sample, tier, variant, controls, weighting, estimate = round(estimate, 3),
               ci_low = round(ci_low, 3), ci_high = round(ci_high, 3))])
