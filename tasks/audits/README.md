@@ -13,7 +13,3 @@ and equal-site-period weights as a sensitivity check. [`home_school_exposure`](h
 support diagnostics. [`home_price_rings`](home_price_rings/) retains all closer/farther
 annuli, strict any-site overlap exclusions, and common-site comparisons as
 alternative specifications. Ring results are not inputs to the working baseline.
-
-[`home_price_distribution`](home_price_distribution/) examines annual price
-percentiles, expensive sales, changes in property types sold, and estimates
-omitting each school site in turn on the same transaction-weighted sample.
