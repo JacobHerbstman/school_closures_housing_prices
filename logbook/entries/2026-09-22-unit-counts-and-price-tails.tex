@@ -1,0 +1,32 @@
+\section*{September 22, 2026: Keeping apartment buildings with blank unit counts; flagging price tails}
+\textit{Drafted by Claude; Jacob raised the unit-count concern and asked for the tail check.}
+
+The price sample had required an observed unit count for every two-to-six-unit
+building (class 211). This requirement removed 3,052 sales in 2008--2018,
+8.2\% of eligible class-211 sales, but only 20 of 90,129 single-family sales
+were lost to missing characteristics. The blanks are not random. Lake township
+holds 43\% of them but only 16\% of other class-211 sales. The assessor's blank
+share among class-211 records falls from 18\% in 2008 to 7\% in 2018. Blank-count
+buildings sold for a median of \$135,000, against \$256,000 for other
+class-211 sales. Their other records look like ordinary two- and three-flats.
+Only 556 of 2,660 parcels report a count in any other year, and later records
+are not copied backward. These sales now remain, with an unknown unit count.
+The citywide sample rises from 124,396 to 127,446. The quarter-mile comparison
+gains 135 treated and 239 control sales. Regressions that control for unit
+count need an explicit unknown category.
+
+After the foreclosure rule, little extreme low tail remains. The within-year 1st
+percentile of nominal price is \$14,500--20,000. The lowest-priced sales mix
+lenders missed by the name rule, such as Liquidation Properties and Household
+Finance, with investor purchases of run-down buildings. Nearly a quarter of
+these are resold within a year at a median of five times the price. Rather
+than trimming, \texttt{price\_outside\_p01\_p99} flags sales outside the
+within-year citywide 1st--99th price percentiles for the conventional
+robustness check (2,444 sales). A price cutoff flags houses and apartment
+buildings in proportion (0.9\% each). A per-square-foot cutoff would flag
+2.8\% of apartment buildings but 0.3\% of houses. No regression has been rerun.
+
+\small
+Reproduction: run \texttt{make} in \texttt{tasks/clean\_home\_sales/code}; the
+build prints unknown-unit and flagged counts.
+\normalsize

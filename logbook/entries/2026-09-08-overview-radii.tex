@@ -1,0 +1,46 @@
+\section*{September 8, 2026: Housing trends at three distances}
+\textit{Drafted by Codex.}
+
+The descriptive comparison retains Noah's 30 treated and 49 control school
+programs. The overview now uses three cumulative distances from school
+buildings: one-eighth, one-quarter, and one-half mile. Each packet contains
+the same ten pages, with transaction weights, price screens, and school
+classifications held fixed. Missing property characteristics remain allowed.
+
+Treatment-control overlap is small at a quarter mile but appreciable at a
+half mile. The denominator below contains sales passing the descriptive price
+rules within the stated distance of either group, before geographic exclusions.
+Each transaction counts once, including transactions near both groups.
+
+\begin{center}
+\begin{tabular}{lrrrrr}
+Radius & Near either & Near both & Overlap & Retained treated & Retained control\\
+\hline
+1/8 mile & 3,663 & 3 & 0.08\% & 1,329 & 2,293\\
+1/4 mile & 13,343 & 365 & 2.74\% & 3,517 & 8,083\\
+1/2 mile & 37,432 & 4,699 & 12.55\% & 3,237 & 15,387\\
+\end{tabular}
+\end{center}
+
+All nearby-school exclusions expand with the selected radius. Sales near both
+groups are excluded, as are sales near receiving schools or February
+candidates outside the 30/49 comparison. Same-group overlaps enter once at the
+nearest school site. Consequently, these retained samples need not be nested:
+the half-mile sample has fewer treated-area sales than the quarter-mile sample,
+despite covering a larger area. Differences between the packets combine a
+change in distance with a change in the mix of neighborhoods represented.
+
+The quarter-mile packet reproduces the prior 11,600 transaction IDs and
+annual price summaries exactly. The alternatives contain 3,622 and 18,624
+sales. These are descriptive sensitivity checks; they do not replace the
+working quarter-mile comparison or change any regression specification.
+
+\small
+Reproduction: run \texttt{make} in
+\texttt{tasks/audits/home\_data\_overview/code}.
+Unsuffixed outputs use one-quarter mile; suffixes \texttt{\_0.125} and
+\texttt{\_0.5} identify the alternatives. The three saved
+\texttt{data\_review} files contain the overlap counts and summaries behind
+the packets. Source snapshots are unchanged from revision \texttt{e76f4dd};
+this entry records the September 8 working-tree extension.
+\normalsize

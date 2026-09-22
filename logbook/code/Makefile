@@ -4,7 +4,54 @@ include ../../tasks/shared/code/shell_functions.make
 
 all: ../output/logbook.pdf
 
-../output/logbook.pdf: logbook.tex ../entries/2026-09-07-working-cleaning-version.tex ../entries/2026-09-07-county-sale-flags.tex ../input/sale_flags_table.tex \
+../output/logbook.pdf: ../entries/2026-09-22-sale-dates-and-split-buildings.tex
+
+../output/logbook.pdf: ../entries/2026-09-22-source-refresh.tex
+
+../output/logbook.pdf: ../entries/2026-09-22-vacated-welcoming-buildings.tex
+
+../output/logbook.pdf: ../entries/2026-09-22-flags-instead-of-trims.tex
+
+../output/logbook.pdf: ../entries/2026-09-22-unit-counts-and-price-tails.tex
+
+../output/logbook.pdf: ../entries/2026-09-22-quick-resales.tex
+
+../output/logbook.pdf: ../entries/2026-09-22-foreclosure-related-sales.tex
+
+../output/logbook.pdf: ../entries/2026-09-21-recession-and-composition.tex ../input/recession_median_spike.png
+
+../input/recession_median_spike.png: ../../tasks/audits/home_recession_composition/output/median_spike.png | ../input
+	ln -sf $< $@
+
+link-inputs: ../input/recession_median_spike.png
+
+../output/logbook.pdf: ../entries/2026-09-21-initial-assessed-values.tex
+
+../output/logbook.pdf: ../entries/2026-09-21-changing-premiums-and-repeat-sales.tex
+
+../output/logbook.pdf: ../entries/2026-09-21-han-housing-data-review.tex
+
+../output/logbook.pdf: ../entries/2026-09-15-quarterly-timing-and-site-weights.tex ../input/quarterly_annual_weights.png ../input/quarterly_price_events.png
+
+../input/quarterly_annual_weights.png: ../../tasks/audits/home_quarterly_weights/output/annual_weights.png | ../input
+	ln -sf $< $@
+
+../input/quarterly_price_events.png: ../../tasks/audits/home_quarterly_weights/output/quarterly_events.png | ../input
+	ln -sf $< $@
+
+link-inputs: ../input/quarterly_annual_weights.png ../input/quarterly_price_events.png
+
+../output/logbook.pdf: ../entries/2026-09-15-foreclosure-related-sellers.tex ../input/distress_seller_proxies.png
+
+../input/distress_seller_proxies.png: ../../tasks/audits/home_sale_distress/output/seller_proxies.png | ../input
+	ln -sf $< $@
+
+link-inputs: ../input/distress_seller_proxies.png
+
+../output/logbook.pdf: logbook.tex ../entries/2026-09-15-ppml-and-log-predictions.tex ../input/price_scale_ppml.png ../input/price_scale_predictions.png ../entries/2026-09-09-half-mile-single-family.tex ../input/half_mile_single_family_events.png ../entries/2026-09-09-single-family.tex ../input/single_family_price_trends.png ../input/single_family_event_studies.png ../entries/2026-09-08-long-event-studies.tex ../input/event_studies_through_2023.png ../entries/2026-09-08-overview-through-2023.tex \
+	../input/overview_prices_through_2023.png ../input/sales_by_pre_price.pdf ../entries/2026-09-08-late-price-decline.tex ../input/late_decline.pdf ../entries/2026-09-08-overview-radii.tex \
+	../input/overview_data_review_0.125.rds ../input/overview_data_review_0.5.rds ../entries/2026-09-07-closure-signals-before-2013.tex \
+	../entries/2026-09-07-working-cleaning-version.tex ../entries/2026-09-07-county-sale-flags.tex ../input/sale_flags_table.tex \
 	../entries/2026-09-07-trends-without-complete-characteristics.tex ../input/overview_complete_prices.png \
 	../entries/2026-09-07-data-review-and-raw-trends.tex ../input/overview_price_trends.png \
 	../input/overview_data_review.rds ../entries/2026-09-07-initial-prices-in-log-models.tex \
@@ -204,7 +251,41 @@ all: ../output/logbook.pdf
 ../input/sale_flags_table.tex: ../../tasks/audits/home_sale_quality_flags/output/sale_flags_table.tex | ../input
 	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
 
-link-inputs: ../input/sale_flags_table.tex ../input/overview_complete_prices.png \
+../input/overview_data_review_0.125.rds: ../../tasks/audits/home_data_overview/output/data_review_0.125.rds | ../input
+	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
+
+../input/overview_data_review_0.5.rds: ../../tasks/audits/home_data_overview/output/data_review_0.5.rds | ../input
+	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
+
+../input/late_decline.pdf: ../../tasks/audits/home_data_overview/output/late_decline.pdf | ../input
+	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
+
+../input/sales_by_pre_price.pdf: ../../tasks/audits/home_data_overview/output/sales_by_pre_price.pdf | ../input
+	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
+
+../input/overview_prices_through_2023.png: ../../tasks/audits/home_data_overview/output/price_trends_through_2023.png | ../input
+	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
+
+../input/event_studies_through_2023.png: ../../tasks/audits/home_prices_twfe/output/event_studies_through_2023.png | ../input
+	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
+
+../input/single_family_price_trends.png: ../../tasks/audits/home_data_overview/output/price_trends_single_family.png | ../input
+	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
+
+../input/single_family_event_studies.png: ../../tasks/audits/home_prices_twfe/output/event_studies_single_family.png | ../input
+	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
+
+../input/half_mile_single_family_events.png: ../../tasks/audits/home_prices_twfe/output/event_studies_single_family_0.5.png | ../input
+	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
+
+../input/price_scale_ppml.png: ../../tasks/audits/home_price_scale_checks/output/ppml_events.png | ../input
+	ln -sf $< $@
+
+../input/price_scale_predictions.png: ../../tasks/audits/home_price_scale_checks/output/predicted_levels_events.png | ../input
+	ln -sf $< $@
+
+link-inputs: ../input/price_scale_ppml.png ../input/price_scale_predictions.png ../input/half_mile_single_family_events.png ../input/single_family_price_trends.png ../input/single_family_event_studies.png ../input/event_studies_through_2023.png ../input/overview_prices_through_2023.png ../input/sales_by_pre_price.pdf ../input/late_decline.pdf ../input/overview_data_review_0.125.rds ../input/overview_data_review_0.5.rds \
+	 ../input/sale_flags_table.tex ../input/overview_complete_prices.png \
 	../input/overview_price_trends.png ../input/overview_data_review.rds ../input/initial_price_log_events.png \
 	../input/initial_price_events.png ../input/initial_price_coefficients.csv ../input/initial_price_sites.csv \
 	../input/initial_price_models.csv ../input/upper_tail_sites.csv ../input/price_band_periods.csv \

@@ -1,0 +1,52 @@
+\section*{September 9, 2026: Single-family homes, 2008--2018}
+\textit{Drafted by Codex.}
+
+At Jacob's request, the quarter-mile descriptive packet and annual event studies
+now have a single-family version. Corrected assessor classes 202--210, 234,
+278, and 295 retain houses and townhouses; class-211 apartment buildings are
+excluded. Noah's 30/49 school definitions, spatial exclusions, transaction
+weighting, and 2022-dollar adjustment remain fixed. The original citywide
+price-per-square-foot cutoffs are retained, so this change isolates property
+selection. These sales are an exact subset of the earlier packet.
+
+The descriptive sample contains 5,645 transactions: 1,461 treated and 4,184
+control. Missing characteristics remain allowed. The treated mean falls from
+\$288,603 in 2016 to \$247,263 in 2018, while the control mean rises from
+\$191,686 to \$218,465. The treated decline therefore persists after excluding
+apartment buildings. It does not establish falling prices for fixed homes:
+which homes and neighborhoods supply sales can still change.
+
+\includegraphics[width=0.95\textwidth]{../input/single_family_price_trends.png}
+
+\small The ten-page packet is \texttt{data\_overview\_single\_family.pdf} in
+\texttt{tasks/audits/home\_data\_overview/output}. Its composition page shows
+building size and age. Its count stages begin with corrected single-family
+classes, already restricted to records with one building card.
+\normalsize
+\clearpage
+
+\subsection*{Annual event studies on the single-family sample}
+All four models use 5,643 sales with complete characteristics at 75 sites.
+They retain school-site and year fixed effects, 2012 as the reference year,
+and school-site clustered 95\% intervals. Apartment count is omitted because
+it is constant zero. Annual sample counts and mean prices match the packet's
+complete-characteristics summaries.
+
+The 2018 estimate with property controls is \$14,513 (95\% interval:
+$-\$54,328$ to \$83,355), versus \$57,561 in the earlier sample including
+apartment buildings. The single-family log estimate is $-0.161$ (interval:
+$-0.431$ to $0.108$), versus $0.005$ in the earlier sample. Both single-family
+intervals include zero. These changes reflect both the restriction in property
+type and its consequences for neighborhood sales weights; they do not isolate
+a causal role for apartment composition. Pre-trend and anticipation concerns
+remain.
+
+\includegraphics[width=0.95\textwidth]{../input/single_family_event_studies.png}
+
+\small Reproduction: run \texttt{make ../output/data\_overview\_single\_family.pdf}
+in \texttt{tasks/audits/home\_data\_overview/code}, and
+\texttt{make ../output/event\_studies\_single\_family.pdf} in
+\texttt{tasks/audits/home\_prices\_twfe/code}. Saved summary datasets have
+standard reports. This is a September 9 working-tree analysis; the broader
+property samples remain available.
+\normalsize

@@ -1,0 +1,60 @@
+\section*{September 15, 2026: PPML and dollar predictions from log prices}
+\textit{Drafted by Codex.}
+
+The two requested price-scale checks use the existing half-mile single-family
+sample for 2008--2018. Annual regressions retain 11,202 sales at 68 sites;
+pooled DiDs omit 2013 and retain 10,159. School-site and year fixed effects,
+transaction weighting, property controls, and site-clustered intervals match
+the preceding comparisons. All four original OLS event series are reproduced.
+
+With property controls, the pooled PPML estimate is 2.06\% (95\% interval:
+$-7.61\%$ to 12.74\%). The OLS-log coefficient transforms to 2.98\%
+($-12.20\%$ to 20.77\%); dollar OLS estimates \$34,851
+($-\$18,377$ to \$88,079). PPML does not reveal a strong positive effect
+missing from logs. Its outcome is dollar price with an exponential conditional
+mean; using PPML does not require integer prices or a Poisson outcome
+distribution. Price is scaled to thousands for numerical stability.
+
+\includegraphics[width=0.95\textwidth]{../input/price_scale_ppml.png}
+
+\small PPML follows \href{https://personal.lse.ac.uk/tenreyro/lgw.html}{Santos Silva and Tenreyro (2006)}.
+A difference between PPML and OLS logs would not alone identify a right-tail
+composition mechanism. The estimators impose different conditional-mean
+specifications and parallel-trend restrictions.
+\normalsize
+\clearpage
+
+\subsection*{The log model can generate positive additive dollar estimates}
+Dollar predictions multiply exponentiated fitted log prices by the pooled
+mean of exponentiated log residuals (\href{https://doi.org/10.1080/01621459.1983.10478017}{Duan smearing}).
+This assumes a common retransformation factor; heteroskedasticity can invalidate
+that assumption. A sensitivity holds separate treated/control factors from
+pre-2013 residuals fixed over time. No group-year factor is fitted to match
+observed dollar means. All predictions are in-sample, with no uncertainty bands.
+
+Regressing these predictions on the original levels specification yields a
+2018 estimate of \$38,724 with property controls, compared with the observed
+\$33,344. Fixed pre-period group smearing yields \$40,443. The main
+reconstruction reduces squared error relative to zero event coefficients by
+65\% over 2014--2018, but misses some annual moves. This is a descriptive
+reconstruction metric, not the share of a causal effect explained. The raw
+2018 mean gap is \$76,475 versus a predicted \$99,140.
+
+Removing the log treatment-year terms while retaining all other fitted terms
+produces an even larger 2018 dollar projection (\$104,145). The direct
+contrast from keeping those terms is negative (about $-\$58,067$ among treated
+sales in 2018). The positive additive projection therefore should not be read
+as a positive treatment effect implied by the log model. Common proportional
+movements can create different dollar movements from different baseline
+prices. Observed sale mix and functional form also enter this reconstruction.
+The pre-trend, anticipation, and selection concerns remain unresolved.
+
+\includegraphics[width=0.92\textwidth]{../input/price_scale_predictions.png}
+
+\small Reproduction: run \texttt{make} in
+\texttt{tasks/audits/home\_price\_scale\_checks/code}. The three-page
+\texttt{scale\_checks.pdf} includes raw gaps as well as these figures;
+\texttt{scale\_checks.rds} and its standard data report retain the calculations.
+Source snapshots are unchanged from the preceding packet; code is revision
+\texttt{e76f4dd} plus the September 15 working-tree changes.
+\normalsize

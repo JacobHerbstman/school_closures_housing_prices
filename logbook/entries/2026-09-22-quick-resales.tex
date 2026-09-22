@@ -1,0 +1,25 @@
+\section*{September 22, 2026: Flagging quick resales}
+\textit{Drafted by Claude; Jacob decided to flag these sales for robustness rather than drop them.}
+
+About one clean sale in eight comes within a year of the same parcel's
+previous recorded sale: 14,831 of 124,396 in 2008--2018. The median resale price is 2.4 times
+the earlier price, and the median gap is 213 days. Many of these are flips.
+The assessor's characteristics do not record renovation between the sales, so
+property controls cannot absorb it. The county's repeat flag removes only
+resales at the same price. For 59\% of flagged sales, the previous sale is not
+in the price sample, mostly because it was foreclosure-related. These resales
+could also reflect closure-driven neighborhood change, so they remain in the
+main sample. \texttt{resale\_within\_365} marks them, and the gap columns allow
+other windows, since published studies use windows from 3 days to a year.
+
+The flagged share peaks at 16.5\% in 2010 and falls to about 10\% after 2014.
+In the half-mile single-family packet, 14.9\% of treated and 18.9\% of control
+sales are flagged in 2008--2012. The shares are 10.7\% and 14.2\% in
+2014--2018. The flagged share falls by similar amounts in both groups.
+Most pre-2013 dates are known only to the month, so those gaps are approximate. No
+regression has been rerun.
+
+\small
+Reproduction: run \texttt{make} in \texttt{tasks/clean\_home\_sales/code}; the
+build prints the flagged count. Working tree based on \texttt{e76f4dd}.
+\normalsize

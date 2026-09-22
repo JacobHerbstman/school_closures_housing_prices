@@ -1,0 +1,67 @@
+\section*{September 21, 2026: Initial assessed values do not remove the pre-closure dip}
+\textit{Drafted by Codex; check requested by Jacob.}
+
+Conditioning on each property's 2006 assessed value does not remove the
+relative log-price decline before closure. On identical transactions,
+allowing initially different values to predict different annual price paths
+reduces the pooled dollar estimate from \$27,769 to \$11,301. The log
+estimate changes from 2.7\% to 1.3\%. These results leave the differential
+recession/recovery concern unresolved; the adjustment does not identify
+the cause of the divergence.
+
+The source is Cook County's Assessor--Assessed Values dataset,
+\texttt{uzyt-m557}, extracted September 21, 2026. The control is the log of
+\texttt{mailed\_tot} for tax year 2006, joined by the unique 14-digit parcel
+PIN. Mailed values precede assessment appeals. They remain assessed dollars,
+without conversion to market values. A fixed 2006 value precedes every
+sale outcome and the recession. The contemporary historical extract can
+include subsequent administrative corrections.
+
+The starting sample remains the 11,202 half-mile single-family and townhouse
+sales in 2008--2018. A usable initial house value requires positive total and
+building assessments and a single-family property class in 2006. This leaves
+1,541 of 1,686 treated sales and 8,911 of 9,516 control sales: 10,452 transactions
+at 22 treated and 45 control sites. Of the 750 exclusions, 211 lack a historical
+record, 43 lack a positive total and 496 have another historical property class,
+including 226 land-class and 218 apartment-building cases. No later value is
+substituted. Cleaning, prices, treatment definitions and site assignments in
+the working pipeline are unchanged.
+
+\begin{center}
+\begin{tabular}{lrrr}
+ & Dollar OLS & Log OLS & PPML \\
+Full sample, existing model & \$34,851 & 3.0\% & 2.1\% \\
+Matched sample, existing model & \$27,769 & 2.7\% & 1.1\% \\
+Add initial value, fixed coefficient & \$28,737 & 3.4\% & 1.3\% \\
+Add initial value, yearly coefficients & \$11,301 & 1.3\% & 0.02\% \\
+All premiums vary by year & \$6,372 & $-1.6\%$ & $-1.2\%$ \\
+\end{tabular}
+\end{center}
+
+Pooled models compare 2014--2018 with 2008--2012, omitting 2013. All four
+matched specifications use exactly 9,462 transactions. Every pooled 95\%
+interval includes zero. With yearly initial-value coefficients the dollar
+interval is $[-\$18{,}700,\$41{,}302]$ and the log interval is
+$[-14.2\%,19.6\%]$. A constant initial-value coefficient adjusts levels;
+yearly coefficients additionally allow recovery to vary with initial value.
+All models retain site and year effects, transaction weights and site clustering.
+The last row also varies every existing characteristic coefficient by year.
+
+The 2010 matched log coefficient changes from $-0.237$ to $-0.220$ after
+the yearly assessment adjustment: $-21.1\%$ to $-19.7\%$ relative to 2012,
+with an adjusted interval of $[-31.5\%,-6.0\%]$. Allowing all premiums to
+vary leaves a $-19.6\%$ gap. The joint log pre-test changes from p=0.025 to
+p=0.086; this does not establish parallel trends. The full-premium dollar
+model rejects its pre-test (p=0.026). Among treated sales the median fixed
+2006 assessment is \$26,345 in the 2012 reference year versus \$17,958 in
+2010, showing a change in the homes sold. This adjustment nevertheless
+leaves the log dip. Assessments do not measure foreclosure exposure or
+subsequent neighborhood shocks.
+
+{\small Reproduction: run Make in
+\texttt{tasks/audits/home\_initial\_assessment/code} (working tree based on
+\texttt{e76f4dd}). Original source responses, metadata and queries are frozen
+in an archive; ordinary builds reuse it. The six-page packet separates
+coverage and control changes. Six baseline models replicate, independent OLS
+reproduces the new pooled dollar/log and annual log coefficients, and PPML
+convergence and score checks pass. Standard reports accompany the saved data.}

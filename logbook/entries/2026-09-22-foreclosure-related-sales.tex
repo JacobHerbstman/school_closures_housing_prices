@@ -1,0 +1,73 @@
+\section*{September 22, 2026: Removing foreclosure-related sales from the price sample}
+\textit{Update, later September 22: REO resales are now flagged rather than removed; see ``Flagging REO resales and price tails instead of removing them.''}
+
+\textit{Drafted by Claude; Jacob decided to drop these sales and chose the deed-type fallback.}
+
+The clean price sample previously retained foreclosure auctions and resales by
+lenders and government agencies. These are not market sales on comparable
+terms, and published hedonic studies usually exclude them. In 2008--2013 they
+were a large share of Chicago transactions: 29--45\% of sales that pass the
+county flags each year, falling to 14\% by 2018. They sold for a median of
+\$63,000 nominal, against \$230,000 for other sales. The citywide 2008--2018
+sample falls from 167,468 to 124,396 sales. The median real price rises most
+in the crash years. In 2009 it moves from \$181,000 to \$283,000, so the fall
+from 2008 shrinks from 32\% to 18\%.
+
+The rule reads buyer and seller names, which are reported in every year, so it
+treats the pre- and post-2013 periods alike. It removes three kinds of sale.
+The first is a foreclosure auction: a judicial-sale company, sheriff or selling
+officer is the seller. The second is a resale by a lender, servicer,
+securitization trustee, Fannie Mae, Freddie Mac, HUD, the VA or the Cook County
+Land Bank. The third is a transfer to one of these. Banks acting as Chicago
+land trustees are kept. Their sales have a median price near \$180,000 and
+are ordinary transactions. Detailed MyDec deed types begin only in 2013, so
+they cannot define the rule. Among post-2012 sales with a known seller,
+though, they validate it. The names flag 98\% of judicial-sale deeds and 80\%
+of special warranty deeds, the usual REO instrument. They flag under 1\% of
+ordinary warranty deeds and 3\% of trustee deeds, the usual land-trust
+instrument.
+
+Seller names are missing for 46\% of 2015 sales. Using names alone, the rule
+removed only 2.7\% of 2015 sales. When the seller name is missing, the rule
+now falls back on the MyDec deed type. Judicial and court-officer deeds, deeds
+in lieu of foreclosure and special warranty deeds count as
+foreclosure-related. The 2015 removal share becomes 20.9\%, between 2014
+(24.6\%) and 2016 (19.4\%). Names are almost never missing before 2014, so the
+fallback does not change how the rule treats the pre-period.
+
+In the half-mile single-family packet, the rule keeps 63\% of treated and 60\%
+of control sales in 2008--2012. It keeps 78\% and 74\% in 2014--2018. Removal
+is thus similar across groups but heavier before 2013. Removing these cheap
+sales also raises the within-year 99.9th-percentile price-per-square-foot
+cutoffs, so 26 previously trimmed sales at \$850--960 per square foot remain. The rule misses
+foreclosure-related sales whose parties are named individuals, such as
+selling officers, and unrecognized servicers. It also misses short sales,
+which the public export does not identify. Later investor resales of
+foreclosed homes remain; they are the next cleaning question.
+
+Later the same day, a review of the lowest-priced remaining sales found REO
+sellers with consumer-finance names, such as Household Finance, Accredited
+Home Lenders, Residential Funding and Liquidation Properties. Adding these
+names removes 948 more sales, with a median price of \$50,000. Broader tokens
+such as FINANCE or FUNDING were rejected because they matched surnames,
+relocation companies, and investor-financing firms. After this addition and
+the unit-count change recorded separately, the citywide 2008--2018 sample is
+126,498 sales.
+
+Jacob also retired the September 7 descriptive sample that kept sales with
+incomplete characteristics. The data-overview packets had rebuilt the cleaning
+rules independently, so every cleaning change had to be made twice. They now
+use the production clean file directly. \texttt{clean\_home\_sales} also writes a
+2008--2023 file for the longer packet; its 2008--2018 rows equal the 2018 file.
+The half-mile single-family packet falls from 11,206 to 7,611 sales (1,211
+treated, 6,400 control); the quarter-mile all-property packet falls from
+11,600 to 7,190. At a half mile, only 4 of the 11,206 earlier sales lacked
+complete characteristics, so almost all of that fall is the foreclosure rule.
+Regression audits have not been rerun.
+
+\small
+Reproduction: run \texttt{make} in \texttt{tasks/clean\_home\_sales/code}.
+The patterns are literal in \texttt{clean\_home\_sales.R}; the build prints
+annual removal counts. Existing parcel-sales snapshot; working tree based on
+\texttt{e76f4dd}.
+\normalsize

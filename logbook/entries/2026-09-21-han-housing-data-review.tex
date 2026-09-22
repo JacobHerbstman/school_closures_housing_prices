@@ -1,0 +1,45 @@
+\section*{September 21, 2026: What the Seattle housing paper suggests checking next}
+\textit{Drafted by Codex; recommendations, not adopted specification changes.}
+
+The current Chicago results do not establish a precise zero. With transaction
+weights and property controls, the pooled half-mile single-family log estimate
+is 3.0\%, with a 95\% interval of $[-12.2\%,20.8\%]$. Equal site-year weights
+and removing the busiest three treated sites increase the estimates. These
+differences leave uncertainty about which neighborhoods drive the comparison;
+pre-period price movements remain a separate identification concern.
+
+Reading Han and Idoux's November 12, 2025 Seattle paper identifies two useful
+differences from our models: a fixed pre-reform assessment for each property
+and property-characteristic coefficients that vary by period (pp. 12--13).
+Our earlier initial-price adjustment instead used school-area pre-period sale
+means, on the older quarter-mile all-home sample. Current half-mile models
+hold the characteristic coefficients fixed over time. The paper's composition
+tests also treat characteristics of sold houses as outcomes (Table A.1).
+
+The paper does not provide a complete transaction-cleaning recipe. Bishop et
+al.'s cited best-practices review emphasizes documenting restrictions and their
+consequences, without prescribing a universal outlier cutoff (2020, p. 266).
+Our county flags, property restrictions, price checks, and upper-tail trim are
+explicit, but do not identify every related-party, foreclosure, or investor
+sale. The existing seller-name audit remains a proxy analysis. Requiring
+complete characteristics removes only four of the current packet's 11,206
+sales, all controls; it is not a substantial source of current sample loss.
+
+The recommended next checks are changes in the single-family sale mix,
+characteristic-by-year price controls on the unchanged sample, and repeat sales
+of the same parcels. For repeat sales, compare both the current model and
+parcel fixed effects on the same restricted sample; report pre/post support
+and recorded improvements. This separates sample selection from adjustment
+for fixed property quality. Historical parcel assessments and a true parcel
+stock denominator merit a separate feasibility check. The existing coordinate
+extract contains sold PIN-years, so it cannot yet supply turnover denominators.
+None of these checks, even if estimates stabilize, repairs closure selection
+or anticipatory price changes by itself.
+
+{\small Reading record: \href{https://raymondwhan.github.io/JMP_Han.pdf}{Han and Idoux}
+and \href{https://www.kellycbishop.com/REEP2020.pdf}{Bishop et al.} were read from
+text conversions; the Seattle control list and composition table were visually
+checked. The linked Seattle PDF's extracted text matches the repository copy.
+Detailed page references, file comparisons, and hashes are in
+\texttt{lit\_review/han\_idoux\_housing\_data\_notes.md}. This review changes no
+data or estimates.}

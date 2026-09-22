@@ -8,6 +8,7 @@ This folder contains the materials shared in the Noah Liu Slack conversation tha
 - `statchen_et_al_2026_school_closure_firearm_violence.pdf` — an open-access paper shared by Noah Liu. It studies firearm violence after the same closure wave but uses a different control strategy.
 - `pearman_greene_2022_school_closures_gentrification_black_metropolis.pdf` — the main neighborhood-change paper cited in the shared review; added from the public ERIC manuscript.
 - `equilibrium_effects_of_neighborhood_schools.pdf` — Han and Idoux (2025), on Seattle's return to neighborhood-based assignment and the resulting capitalization and sorting effects.
+- [Housing-data comparison with Han and Idoux](han_idoux_housing_data_notes.md) — documented sample and control choices, comparison with the current Chicago code, and proposed checks for sale composition and fixed property quality.
 - `permanent_school_closures_housing_markets_neighborhood_change_literature_review.pdf` — the source-verified review shared in Slack. Its PDF metadata identifies it as a ChatGPT Deep Research report, so it is best treated as a research map rather than a citable empirical study.
 - `closure_list_map.png` — the attached map. Gray schools were not on the February closure list; red schools were listed but remained open; black schools were listed and closed.
 

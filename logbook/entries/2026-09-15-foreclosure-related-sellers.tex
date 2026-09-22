@@ -1,0 +1,39 @@
+\section*{September 15, 2026: Foreclosure-related sellers and the 2010 price dip}
+\textit{Drafted by Codex.}
+
+The half-mile single-family sample does not show a higher share of
+foreclosure-related sellers near treated schools in 2010. Among 116 treated
+sales, 5 (4.3\%) name judicial-sale intermediaries, Fannie Mae, Freddie Mac or
+HUD as sellers, compared with 106 of 749 control sales (14.2\%). Adding bank
+and mortgage-company names gives 31.0\% versus 40.2\%. All 2010 seller names
+are reported. Before price and county-quality screens, the same geographic
+and single-family comparison gives 4.8\% versus 14.4\% under the narrow
+rule and 35.4\% versus 41.8\% under the broader rule.
+
+\includegraphics[width=\textwidth]{../input/distress_seller_proxies.png}
+
+These are seller-name proxies, not verified distress classifications.
+The broader rule can include banks acting as land trustees, while either
+rule can miss short sales and subsequent private resales. The treated broad
+share is higher than control in 2011; crisis exposure is not uniformly
+balanced. The 2010 comparison does not support the specific explanation
+that a larger treated distressed-sale share generated that year's price
+dip, but cannot rule out uneven foreclosure recovery or effects on unsold
+properties. No price sample or regression has changed.
+
+The public county export has no separate REO or short-sale flag. Detailed
+MyDec deeds are reported for zero treated sales and only one control sale
+in 2010. They therefore cannot supply the missing crisis classification.
+Seller names are missing or UNKNOWN for 37.0\% of treated and 46.6\% of
+control sales in 2015; the plotted name proxies omit that year. Other plotted
+shares divide matches by sales with usable seller names. The accompanying
+three-page audit shows coverage and reported deed shares separately.
+
+\small Reproduction: run \texttt{make} in
+\texttt{tasks/audits/home\_sale\_distress/code}.
+The audit reuses the saved sales and packet snapshots, preserves literal
+matching rules in \texttt{seller\_patterns.csv}, and records source hashes.
+The public metadata snapshot was retrieved September 15, 2026;
+institutional-role sources are linked in the task README.
+Code: \texttt{e76f4dd} plus September 15 working-tree changes.
+\normalsize

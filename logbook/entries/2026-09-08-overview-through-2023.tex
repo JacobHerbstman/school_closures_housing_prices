@@ -1,0 +1,35 @@
+\section*{September 8, 2026: Extending the overview through 2023}
+\textit{Drafted by Codex.}
+
+The housing inputs support extending the descriptive quarter-mile packet
+through 2023. The 2018 endpoint was an analysis window, not the end of available
+sales. The extended packet contains 18,145 transactions: 5,592 near treated
+schools and 12,553 near controls. It adds 6,545 sales in 2019--2023 and retains
+all 11,600 earlier transactions. The 2008--2018 annual price summaries match
+the earlier packet. Each added year contains sales in all twelve months.
+
+School definitions, school locations, distance exclusions, eligible property
+types, and county sale-quality rules remain fixed. Missing characteristics
+are still allowed in descriptive trends. For each added year, the same annual
+99.9th-percentile price-per-square-foot cutoff is calculated from citywide
+sales with complete characteristics and then applied where floor area is
+observed. Existing earlier-year cutoffs do not change. Dollar prices remain
+in 2022 purchasing power. Recorded characteristics are available throughout,
+although the legacy home-improvement correction applies only before 2021.
+Later reuse of school buildings does not change treatment assignment.
+
+The longer series shows that the treated mean's 2016--2018 decline is followed
+by a rebound: from \$293,567 in 2018 to \$393,817 in 2021, then \$324,669 in
+2023. The control mean is \$229,863, \$299,990, and \$273,899 in those years.
+These transaction means combine price movements with changes in properties
+and neighborhoods supplying sales. The previous composition findings remain
+specific to 2016--2018 and have not been extended to explain the later changes.
+
+\includegraphics[width=0.9\textwidth]{../input/overview_prices_through_2023.png}
+
+\small Reproduction: run \texttt{make ../output/data\_overview\_through\_2023.pdf}
+in \texttt{tasks/audits/home\_data\_overview/code}. The new saved summaries,
+review, and report use the same \texttt{\_through\_2023} suffix. Source snapshots
+remain unchanged from \texttt{e76f4dd}; this is the September 8 working-tree
+extension. The original packets and regressions retain their 2018 endpoint.
+\normalsize

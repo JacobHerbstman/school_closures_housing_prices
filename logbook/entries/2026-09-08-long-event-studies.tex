@@ -1,0 +1,22 @@
+\section*{September 8, 2026: Annual event studies through 2023}
+\textit{Drafted by Codex.}
+
+The extended quarter-mile event studies use 17,212 sales at 77 school sites
+in 2008--2023. Each transaction receives equal weight. The regressions retain
+the existing complete-characteristics requirement, school-site and year
+fixed effects, 2012 reference year, and school-site clustered intervals.
+The complete-characteristics sample matches the extended overview; refitting
+on 2008--2018 reproduces all original annual event coefficients.
+
+Dollar estimates remain mostly positive after 2013, while log estimates are
+near zero or negative. With property controls, the 2023 estimate is
+\$44,990 (95\% interval: $-\$17,058$ to \$107,037); the log estimate is
+$-0.106$ (interval: $-0.339$ to $0.127$). These estimates do not resolve
+the earlier concerns about anticipation, pre-trends, or changing sale composition.
+
+\includegraphics[width=0.93\textwidth]{../input/event_studies_through_2023.png}
+
+\small Reproduction: run \texttt{make ../output/event\_studies\_through\_2023.pdf}
+in \texttt{tasks/audits/home\_prices\_twfe/code}. The extension is recorded in
+\texttt{estimate\_long\_events.R}; the original 2018 outputs remain available.
+\normalsize

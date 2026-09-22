@@ -1,0 +1,104 @@
+\section*{September 21, 2026: Neighborhood sales mix explains the assessment-median spike}
+\textit{Drafted by Codex; investigation requested by Jacob.}
+
+More sales near expensive sites explain the spike in treated sales' median
+2006 assessment. Holding neighborhood shares fixed nearly removes it, while
+the adjusted log-price gap between 2010 and 2012 remains. Independent data
+show higher average foreclosure-filing rates at control locations.
+
+Among transactions with usable initial assessments, the treated median
+rises from \$16,072 in 2011 to \$26,345 in 2012. These are fixed historical
+values of the homes sold, not changes in assessments. Sales near Trumbull,
+King, Peabody, Duprey/Humboldt and Near North increase from 28 of 99 to
+66 of 134. Exactly half the 2012 sales have assessments above \$25,000;
+the middle two observations are \$24,040 and \$28,650. The median is their
+average. Five parcels sell twice, with distinct deeds, dates and prices.
+Counting each parcel once lowers the 2012 median to \$20,880: repeated
+transactions amplify the underlying shift in which homes sell.
+
+For the 14 treated sites with sales in every year from 2008 through 2013,
+the observed median rises from \$16,417 to \$29,043. On those exact same
+transactions, holding each site's share at its pooled 2008--2011 share changes
+the medians to \$16,121 and \$16,371. A symmetric decomposition attributes
+\$6,010 (75.5\%) of the \$7,959 increase in the mean assessment to changing
+site shares, with the rest coming from different homes sold within sites.
+The working transaction weights remain unchanged; this is a composition check.
+
+DePaul IHS publishes community-area foreclosure filings per 100 residential
+parcels, constructed from court and assessor records. We preserve its
+September 21, 2026 table and Chicago's community boundaries, assign each
+sale point to exactly one area, and average rates using fixed 2008--2011
+sale-location shares. The resulting rates are 3.85 treated versus 4.76 control
+in 2008, and 3.44 versus 4.01 in 2010. Both groups exceed the citywide
+2010 rate of 3.0. These are broad area exposures covering all residential
+property types, not filing rates inside our circles or on the sold homes.
+Filings are not completed foreclosures.
+
+The sales indicators tell a similar, qualified story. Broad bank/lender-related
+seller names account for 31.0\% of treated versus 40.3\% of control sales
+in 2010; narrow judicial/GSE/HUD names account for 4.3\% versus 14.2\%.
+Neither is a verified distress classification. Treated sales below \$50,000
+in 2022 dollars fall from 39.3\% to 24.8\% between 2011 and 2012, while
+control shares rise from 37.1\% to 40.4\%. Treated building size and townhouse
+shares also increase. An explicit corporate-suffix buyer proxy shows no
+persistent treated excess over 2010--2012; it does not classify investors.
+
+Changing the log model's reference year barely changes the 2010 point:
+$-19.9\%$ relative to 2012 versus $-18.8\%$ relative to 2008. With 2008 as the
+reference, the relative decline to 2010 has a 95\% interval of
+$[-34.9\%,1.3\%]$. The 2010--2012 relative rebound is 24.9\%, with an
+interval of $[8.2\%,44.0\%]$. Rebasing leaves fitted values and the joint
+pre-test unchanged. Actually removing 2012 leaves a similar 18.7\% decline;
+the remaining pre-test has p=0.187, which does not establish parallel trends.
+Seller-category-by-year controls and removal of bank-related sellers leave
+substantial movement. On the identical 4,919-sale common-site sample for
+2008--2013, the adjusted 2010--2012 rebound remains about 26\% with either
+observed or fixed site shares. Omitting each of the 68 sites individually
+leaves the 2010-versus-2012 point estimate negative. Slower recovery among
+more distressed controls remains plausible, but unproven.
+
+The follow-up on sales volume finds a quiet 2011 followed by a broader
+increase: the five selected areas have 39 assessment-matched sales in 2010,
+28 in 2011, 66 in 2012 and 65 in 2013. Trumbull alone goes from 21 to 11
+to 21 to 15. Removing the assessment requirement leaves a 32-to-68 increase
+between 2011 and 2012; before price and county-quality screens the counts
+are 34 and 78. Those earlier records still satisfy the geography, property
+class, single-parcel and single-card restrictions. These are sample counts,
+not turnover rates for the full housing stock.
+
+The 66 sales in 2012 involve 63 parcels and 65 distinct recorded buyer names.
+No normalized buyer or seller name appears more than twice. Sales increase
+in every quarter relative to 2011. Bank-related seller matches rise from
+four to seven, while other known sellers rise from 24 to 59. King accounts
+for five of the seven 2012 bank-related matches. Townhouse sales increase
+from four to sixteen; near Duprey/Humboldt, the median building age changes
+from 121 to 13 years and median size from 968 to 2,082 square feet. These
+are changes in which homes sell. Only one of the 66 homes has a recorded
+construction year after 2006, and that year is 2007. The names and building
+dates do not establish beneficial ownership, investor intent, distress or
+renovation histories.
+
+The Illinois Association of REALTORS' January 22, 2013 release reports a
+22.4\% increase in Chicago home sales in 2012. Its MLS series includes
+condominiums. A broader recovery is consistent with our increase but does
+not explain why these particular areas rose so much: assessment-matched
+sales at other treated sites decline from 71 to 68. The five sites were
+selected after observing their contribution to the assessment shift.
+Neither the selection nor the sales records identify owners' reasons for
+selling. Source: \href{https://www.prnewswire.com/news-releases/illinois-sees-home-sales-increases-in-december-2012-notches-229-percent-sales-gain-over-2011-187867161.html}{Illinois Association of REALTORS, 2012 year-end release}.
+
+{\small Reproduction: Make in
+\texttt{tasks/audits/home\_recession\_composition/code}, working tree based
+on \texttt{e76f4dd}. The seven-page packet and saved reports contain source
+rates, joins, site contributions, all specification checks and omissions.
+Independent OLS and weighted-median calculations reproduce the results.
+The separate \texttt{site\_sales} figure and dataset preserve annual sample
+counts, quarterly sales, name concentration and property characteristics.
+Source: \href{https://www.housingstudies.org/data-portal/browse/?indicator=foreclosures-100-residential-parcel}{DePaul IHS foreclosure series}.}
+
+\clearpage
+\begin{center}
+\includegraphics[width=\textwidth]{../input/recession_median_spike.png}
+
+{\small Holding neighborhood shares fixed nearly removes the treated median-assessment spike.}
+\end{center}

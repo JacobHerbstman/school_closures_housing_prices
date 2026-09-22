@@ -1,0 +1,38 @@
+\section*{September 22, 2026: What the sale dates measure; split buildings}
+\textit{Drafted by Claude; checked at Jacob's request before regressions.}
+
+Earlier entries described pre-2013 sale dates as recording months. That is
+wrong. The recorder document number encodes the recording date: year, day of
+year, and a sequence number. Among sales without a refined MyDec date, the
+recording month equals the \texttt{sale\_date} month for 29\% of sales. It is
+one month later for 51\% and two months later for 12\%. Refined MyDec dates
+precede recording by a median of 15 days, and 90\% fall within 63 days. The
+pre-2013 date is therefore the deed month with its day set to 1, as the
+Assessor's metadata describe for its older ingest process. The date measures
+the same event, the deed or closing, in both periods. Only its precision
+changes, from month to day. Annual, half-year and quarterly assignment is
+exact in both periods. The master now labels these dates \texttt{sale\_month}
+rather than \texttt{recording\_month}. The label is the only change to the
+master data.
+
+A separate timing caveat remains. Neither date records when the price was
+agreed, usually a month or two before closing. Sales closing in April or May
+2013 were often under contract before the March 21 proposal. Timing analyses
+should allow for this lag rather than treat the closing date as the date of
+price formation.
+
+The clean sample also now excludes 283 sales, 0.2\% of the sample, whose parcel
+holds only part of a building (a tieback proration below 1, usually one half).
+Their assessor characteristics describe the whole building, a median of 2,080
+square feet, while the sale covers one parcel. Their price per square foot is
+correspondingly low: a median of \$85, against \$124 for other sales. The
+rule parallels the single-building-card requirement. The citywide 2008--2018
+sample is now 167,029 sales. After the master rebuild, the county downloads
+re-ran and again matched the September 7 checksums. One coordinate request
+failed transiently on the first attempt; the previous file was kept, and the
+retry succeeded.
+
+\small
+Reproduction: \texttt{make} in \texttt{tasks/clean\_home\_sales/code} and
+\texttt{tasks/build\_home\_school\_exposure/code}.
+\normalsize

@@ -1,0 +1,24 @@
+\section*{September 22, 2026: Refreshing the county and CPI downloads}
+\textit{Drafted by Claude; Jacob requested the refresh.}
+
+All four acquisitions were downloaded again on September 22 after their
+scripts were revised. The revised scripts use literal years and publish only
+a complete, checked extract, so a failed transfer keeps the previous file. The
+three county extracts are byte-identical to the September 7 versions: parcel
+sales (1,021,374 records), residential improvements (406,795 records), and
+historical parcel coordinates (399,882 PIN-years). The Chicago CPI series
+gained one observation, August 2026, and no earlier value changed. Every
+derived production file is therefore unchanged, including the master
+transactions, both clean-sales files and the exposure file.
+
+The September 7 snapshots are preserved byte-for-byte, with checksums, in
+\texttt{data\_raw/county\_snapshots\_2026-09-07/}. Each acquisition README now
+records the retrieval date and SHA-256 of its current file. A later refresh
+may change the county data: the Assessor revises sales and characteristics,
+and 2025 sales were still being recorded. Such a refresh should be compared
+against these checksums before any estimate is updated.
+
+\small
+Reproduction: \texttt{make} in \texttt{tasks/clean\_home\_sales/code} and
+\texttt{tasks/build\_home\_school\_exposure/code} reach every acquisition.
+\normalsize

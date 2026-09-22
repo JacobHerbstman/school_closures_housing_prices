@@ -1,0 +1,28 @@
+\section*{September 22, 2026: Flagging REO resales and price tails instead of removing them}
+\textit{Drafted by Claude; Jacob decided to flag REO resales and keep a single tail rule.}
+
+The cleaner now removes only sales whose recorded price is not a market price.
+These are foreclosure auctions and transfers to a lender or land bank: about
+200 to 830 a year in 2008--2018. Resales by lenders, servicers, Fannie Mae,
+Freddie Mac, HUD or the land bank are real sales of distressed homes, and
+foreclosure incidence may itself respond to closures. They are therefore kept
+and flagged \texttt{reo\_sale}. REO resales are 35\% of 2008--2012 sales and
+18\% afterwards. Dropping them shapes the pre-period sample, so estimates
+should be shown with and without them. The earlier entry's name rules still
+define these sales; only the treatment of REO resales changed.
+
+The within-year 99.9th-percentile price-per-square-foot trim was removed, which
+restores 133 sales. The hard error screens (fewer rooms than bedrooms, over
+\$5,000 per square foot) remain. The single tail rule is now the flag for the
+within-year citywide 1st--99th price percentiles, computed on the sample that
+includes REO resales. A new flag, \texttt{same\_party\_names}, marks 107 sales
+whose normalized buyer and seller names are identical, excluding land trustees.
+This matches the related-party rule in the aldermanic-privilege project. Surname
+matching was rejected as unreliable. The citywide 2008--2018 sample is 167,312 sales. It
+equals the previous 126,498 plus the 40,681 REO resales and the 133 formerly
+trimmed sales. No regression has been rerun.
+
+\small
+Reproduction: run \texttt{make} in \texttt{tasks/clean\_home\_sales/code}; the
+build prints annual removal and flag counts.
+\normalsize

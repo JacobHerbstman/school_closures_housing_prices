@@ -1,0 +1,80 @@
+\section*{September 8, 2026: Why the treated mean falls after 2016}
+\textit{Drafted by Codex.}
+
+Within the fixed quarter-mile sample, the treated mean falls from
+\$338,890 in 2016 to \$319,898 in 2017 and \$293,567 in 2018, a 13.4 percent
+2016--18 decline. The control mean rises from \$193,910 to \$229,863.
+These are transaction prices in 2022 dollars; they do not follow fixed homes.
+
+Changing neighborhood shares explains the direction of the treated decline.
+Holding each of the 29 treated sites at its 2016 share of sales yields a 2018
+mean of \$391,580, 15.5 percent above 2016. All 29 sites have observations in
+each of 2016--18, so this exercise drops no treated sites. It holds geography
+weights fixed, not property quality or the mix of homes sold within each site.
+The actual sample and its transaction weights remain unchanged.
+
+Peabody provides the clearest example: qualifying sales fall from 28 to eight,
+while their average price rises from \$728,787 to \$1,011,699. Near North sales
+fall from 17 to 11, Lafayette from 33 to 25, and King from 24 to 15.
+Meanwhile West Pullman sales rise from seven to 31; its 2018 mean is only
+\$50,528. Omitting Peabody alone reduces the aggregate dollar decline from
+\$45,324 to \$27,494 but does not eliminate it. No single-site omission
+eliminates the 2016--18 decline.
+
+The upper tail changes mainly in its frequency. Sales above \$500,000 fall
+from 103 of 369 transactions to 83 of 413. The mean among sales below that
+fixed threshold is almost unchanged (\$151,276 versus \$151,345), and the
+number above \$1 million is 24 versus 25. The 75th percentile falls from
+\$530,216 to \$402,096; the 95th falls much less, from \$1,070,043 to
+\$1,028,779. Broad property types alone do not settle the issue: both house
+and apartment-building means fall, but their neighborhood composition can
+change within each type.
+
+The decline in Peabody activity precedes price cleaning: recorded transactions
+in the same geography fall from 54 to 25; market-screened sales fall from 39
+to 12, and the final sample from 28 to eight. Cleaning therefore reinforces
+but does not originate this site's loss of weight. Both treatment groups
+have transactions in all twelve months of 2016, 2017, and 2018. These checks
+do not establish complete coverage of all actual market transactions.
+
+Contemporaneous market evidence does not suggest a comparable citywide annual
+price collapse. Illinois REALTORS reports that Chicago's 2018 sales fell
+4.4 percent while its annual nominal median rose 1.8 percent. This covers
+single-family homes and condos, a different universe from our sample.\footnote{\href{https://www.illinoisrealtors.org/blog/illinois-home-sales-lower-in-december-market-closes-out-a-largely-stable-2018/}{Illinois REALTORS, January 22, 2019.}}
+A local event worth recording is Rowe's September 2017 expansion at the former
+Peabody annex, following plans announced in 2015. The evidence does not link
+that expansion to the drop in nearby sales.\footnote{\href{https://www.dnainfo.com/chicago/20170915/west-town/charter-school-once-packed-gills-shows-off-new-2nd-floor/}{DNAinfo, September 15, 2017, contemporaneous reporting recovered in indexed text.}}
+The demonstrated explanation is changing sales composition; why activity
+shifted across these particular neighborhoods remains unresolved.
+
+\small Reproduction: \texttt{make ../output/late\_decline.pdf} in
+\texttt{tasks/audits/home\_data\_overview/code}. The saved
+\texttt{late\_decline.rds} matches all 11,600 packet transactions and annual
+means. Source snapshots are unchanged from \texttt{e76f4dd}; scripts are the
+September 8 working-tree extension. \normalsize
+\clearpage
+\includegraphics[page=1,width=\textwidth]{../input/late_decline.pdf}
+
+\clearpage
+\subsection*{Sales by pre-closure neighborhood price}
+Each school site is classified using its median transaction price over
+2008--2012 in 2022 dollars. The common cutoff is the median of those site
+medians across both treatment groups, \$65,050. Sites at or below the cutoff
+form the lower-price category. Classification stays fixed; the sale price of
+an individual transaction never determines its category. The 77 sites with
+sales all have pre-period observations, so all 11,600 transactions are retained.
+The lower category contains 14 treated and 25 control sites; the higher
+category contains 15 treated and 23 controls.
+
+Between 2016 and 2018, treated sales rise from 116 to 182 in the lower category
+and fall from 253 to 231 in the higher category. Control sales rise from 433
+to 550 and from 349 to 403, respectively. The initially cheaper neighborhoods
+therefore account for a growing share of treated sales. These are counts,
+not turnover rates; the numbers of sites and housing stocks differ across groups.
+
+\includegraphics[width=\textwidth]{../input/sales_by_pre_price.pdf}
+
+\small Reproduction: \texttt{make ../output/sales\_by\_pre\_price.pdf} in
+\texttt{tasks/audits/home\_data\_overview/code}. The classification and annual
+counts are saved with the late-decline summaries and included in their standard
+report. \normalsize

@@ -1,0 +1,31 @@
+\section*{September 22, 2026: Buildings vacated by relocating welcoming schools}
+\textit{Drafted by Claude; found in the September 22 code review and confirmed from the school records.}
+
+Fourteen welcoming schools moved into a closed school's building for 2013--14.
+The design already treats this correctly for the closed school: its building
+stayed in use, so it is not one of the 30 treated programs. But each move
+vacated the welcoming school's own 2012--13 building. For nearby homes, that
+building emptied just as a treated building did. The distance task placed
+welcoming schools only at their 2013--14 locations, so the old buildings were
+missing. Nine of the old buildings are candidate sites, because those
+welcoming schools were themselves on the February list, and nearby sales were
+already excluded. The other five were invisible: Wentworth, Leland, Burnham,
+Pershing East and Courtenay.
+
+These buildings are now a separate location role, and the exposure file
+records the nearest one, its distance, and the number within a quarter mile.
+At a quarter mile, 82 treated sales near Armstrong are also near Leland's old
+building, and 9 control sales near Hinton are near Wentworth's. At a half
+mile, 380 control sales and 8 treated sales are near a vacated building. For
+the half-mile comparison this matters most, because those control homes
+experienced the event that defines treatment. Excluding them, like sales near
+welcoming schools and other candidates, is a regression-stage choice not yet
+made. The school cleaner now also fails if an assigned welcoming school lacks
+either location; Montefiore's 2012--13 location comes from the documented
+2011--12 special-education patch. Whether each vacated building stayed empty
+later is not recorded.
+
+\small
+Reproduction: run \texttt{make} in \texttt{tasks/build\_home\_school\_exposure/code}.
+Treatment and control exposure counts are unchanged.
+\normalsize

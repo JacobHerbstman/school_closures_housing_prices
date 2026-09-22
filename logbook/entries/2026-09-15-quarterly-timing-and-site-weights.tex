@@ -1,0 +1,73 @@
+\section*{September 15, 2026: Quarterly timing and school-site influence}
+\textit{Drafted by Codex.}
+
+The positive dollar comparison survives equal site weights and removal of the
+three busiest treated sites. The half-mile single-family sample, property
+controls, school definitions, CPI adjustment and site clustering are unchanged.
+The annual pooled comparison remains 2014--2018 versus 2008--2012, omitting
+2013; all event studies retain 2013. With property controls:
+
+\begin{center}
+\begin{tabular}{lrrr}
+ & Transaction weights & Equal site-year weights & Drop top three \\
+Dollar OLS & \$34,851 & \$49,499 & \$58,005 \\
+95\% interval & [$-\$18,377$, \$88,079] & [\$7,889, \$91,108] & [\$2,060, \$113,950] \\
+OLS logs, $100(e^{\beta}-1)$ & 3.0\% & 23.2\% & 9.6\% \\
+PPML, $100(e^{\beta}-1)$ & 2.1\% & 14.0\% & 10.8\% \\
+\end{tabular}
+\end{center}
+
+The excluded sites are Buckingham (369 sales), Trumbull (227), and Key (173):
+45.6\% of treated transactions. They are also the three busiest sites before
+2013. This removes both expensive and inexpensive neighborhoods, rather than
+only the highest-priced sites. The event sample falls from 11,202 sales at 68
+sites to 10,433 at 65 sites; the pooled sample falls from 10,159 to 9,452.
+
+\includegraphics[width=0.95\textwidth]{../input/quarterly_annual_weights.png}
+
+Equal weights mean total weight one for each observed site-period. The observed
+roster can change when a site has no sales. Equal site-quarter weights give a
+smaller pooled dollar estimate, \$39,129 (95\% interval $-\$4,404$ to
+\$82,661), because they redistribute influence differently from annual weights.
+Positive pooled estimates do not resolve the pre-period movements or closure
+selection. The original controlled annual log pre-test rejects (p=0.031).
+
+\clearpage
+\subsection*{Quarterly estimates do not locate a distinct announcement or closure effect}
+
+Quarterly models use the full 2008--2018 sample with site and calendar-quarter
+fixed effects, normalizing 2012 Q3 to zero. This displays 2012 Q4, containing
+the December utilization list. The February candidate list and March proposals
+share 2013 Q1; the May vote and June school-year end share Q2. Q3 is the first
+full quarter after June. This frequency cannot separate the events within
+either Q1 or Q2.
+
+\includegraphics[width=0.97\textwidth]{../input/quarterly_price_events.png}
+
+For transaction-weighted dollar OLS with controls, changes into 2013 Q1, Q2,
+and Q3 are approximately \$34,258, $-\$25,026$, and $-\$22,426$.
+Their intervals all include zero. This also holds for these three adjacent
+changes in logs and PPML under all three comparisons. A Q4 rebound appears,
+but quarterly sales and their composition do not identify its mechanism.
+Treated sales number 30--45 per quarter in 2013, falling to 18--28 after the
+site exclusions. Across the full period, 405 of 968 treated site-quarters
+have no sales, and 217 of the 563 nonempty cells have one sale.
+
+Joint tests for 2008 Q1--2012 Q2 relative to 2012 Q3 reject flatness in all
+nine controlled quarterly event models (all p-values below 0.01). These are
+diagnostics with many restrictions and limited clusters, not a remedy for
+nonparallel trends. The imprecise 2013 changes also do not establish small
+effects. Most early dates are recording months (correction, September 22: they are deed months; see ``What the sale dates measure''); from 2013 most are refined
+instrument dates. Neither records when the transaction price was agreed.
+Thus date coverage, transaction lags and thin samples limit timing claims.
+
+\small Reproduction: run \texttt{make} in
+\texttt{tasks/audits/home\_quarterly\_weights/code}.
+The eight-page PDF includes raw prices and date/site support. The audit reuses
+the saved price-scale sample, reproduces its 12 annual baseline models, and
+records source hashes. The sourced chronology is in \texttt{timeline.csv},
+using the \href{https://files.eric.ed.gov/fulltext/ED589712.pdf}{Consortium's 2018 timeline},
+\href{https://www.chicagomag.com/city-life/march-2013/heres-the-list-of-chicago-public-schools-that-could-close/}{March 21 reporting},
+and \href{https://www.cpsboe.org/meetings/board-actions/13}{May 22 board actions}.
+Code: \texttt{e76f4dd} plus September 15 working-tree changes.
+\normalsize

@@ -1,0 +1,32 @@
+\section*{September 9, 2026: Half-mile single-family comparison}
+\textit{Drafted by Codex.}
+
+At Jacob's request, the single-family packet and annual event studies now
+also use a half-mile radius for 2008--2018. The same radius applies to
+receiving-school, other-candidate, and treatment-control overlap exclusions.
+School definitions, property classes, price-per-square-foot cutoffs,
+inflation adjustment, and transaction weights remain fixed.
+
+The descriptive sample grows from 5,645 to 11,206 sales. Most of the gain is
+in controls: treated sales rise from 1,461 to 1,686 and control sales from
+4,184 to 9,520. The wider geography adds 7,621 sales and excludes 2,060 that
+entered at a quarter mile. Ten of the 78 school sites have no retained sales,
+compared with three previously. Treatment-control overlap is 1,485 of 19,153
+otherwise eligible sales near either group (7.75\%). More transactions do not
+mean more school neighborhoods are represented.
+
+The event studies use 11,202 complete-record sales at 68 sites. With property
+controls, the 2018 dollar estimate is \$33,344 (95\% interval: $-\$38,675$
+to \$105,362) and the log estimate is $-0.130$ (interval: $-0.340$ to $0.080$).
+The joint pre-period test rejects zero coefficients in the hedonic log model
+($p=0.031$). The larger sample does not resolve identification concerns.
+
+\includegraphics[width=0.88\textwidth]{../input/half_mile_single_family_events.png}
+
+\small Reproduction: build \texttt{data\_overview\_0.5\_single\_family.pdf}
+in \texttt{tasks/audits/home\_data\_overview/code} and
+\texttt{event\_studies\_single\_family\_0.5.pdf} in
+\texttt{tasks/audits/home\_prices\_twfe/code}, each with
+\texttt{make ../output/}\textit{filename}. Saved summaries and standard
+reports accompany both. This is a September 9 working-tree extension.
+\normalsize
