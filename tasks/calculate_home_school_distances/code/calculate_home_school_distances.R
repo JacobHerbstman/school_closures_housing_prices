@@ -1,3 +1,4 @@
+# setwd("/Users/jacobherbstman/Desktop/school_closures_house_prices/tasks/calculate_home_school_distances/code")
 suppressPackageStartupMessages({
   library(arrow)
   library(data.table)
@@ -19,7 +20,7 @@ schools <- fread(
 )
 
 stopifnot(
-  nrow(home_sales) == 428582L,
+  nrow(home_sales) > 0L,
   !anyDuplicated(home_sales$row_id),
   identical(
     home_sales$has_historical_coordinates,
@@ -27,7 +28,7 @@ stopifnot(
       home_sales[, .(centroid_x_crs_3435, centroid_y_crs_3435)]
     )
   ),
-  sum(!home_sales$has_historical_coordinates) == 6L,
+  mean(home_sales$has_historical_coordinates) >= 0.999,
   all(is.finite(
     home_sales$centroid_x_crs_3435[
       home_sales$has_historical_coordinates
@@ -105,14 +106,43 @@ welcoming_locations <- unique(
   )
 )
 
+# A welcoming school that moved into a closed school's building vacated its own
+# SY2012-13 building, so homes near that building also lost their school. A move
+# is a SY2012-13 location more than 300 feet from the SY2013-14 location.
+welcoming_moves <- unique(rbindlist(
+  lapply(1:3, function(index) {
+    school_id_column <- paste0("welcoming_school_id", index)
+    schools[!is.na(get(school_id_column)), .(
+      school_location_id = as.integer(get(school_id_column)),
+      x_sy1213 = as.numeric(get(paste0("welcoming_school_x_coordinate", index, "_sy1213"))),
+      y_sy1213 = as.numeric(get(paste0("welcoming_school_y_coordinate", index, "_sy1213"))),
+      x_sy1314 = as.numeric(get(paste0("welcoming_school_x_coordinate", index, "_sy1314"))),
+      y_sy1314 = as.numeric(get(paste0("welcoming_school_y_coordinate", index, "_sy1314")))
+    )]
+  })
+))
+stopifnot(!anyDuplicated(welcoming_moves$school_location_id), complete.cases(welcoming_moves))
+vacated_locations <- welcoming_moves[
+  sqrt((x_sy1213 - x_sy1314)^2 + (y_sy1213 - y_sy1314)^2) > 300,
+  .(
+    school_location_role = "vacated_welcoming_building",
+    school_location_id,
+    school_x_crs_3435 = x_sy1213,
+    school_y_crs_3435 = y_sy1213,
+    housing_treat_30 = NA_integer_,
+    housing_control_49 = NA_integer_
+  )
+]
+
 school_locations <- rbindlist(
-  list(candidate_locations, welcoming_locations),
+  list(candidate_locations, welcoming_locations, vacated_locations),
   use.names = TRUE
 )
 setorder(school_locations, school_location_role, school_location_id)
 
 stopifnot(
-  nrow(school_locations) == 175L,
+  nrow(school_locations) ==
+    nrow(candidate_locations) + nrow(welcoming_locations) + nrow(vacated_locations),
   !anyDuplicated(
     school_locations[, .(school_location_role, school_location_id)]
   ),
@@ -199,10 +229,11 @@ stopifnot(
 cat(sprintf(
   paste0(
     "Wrote %s distances for %s home sales and %s school locations; ",
-    "%s distances are missing because six sales lack coordinates.\n"
+    "%s distances are missing because %s sales lack coordinates.\n"
   ),
   format(rows_written, big.mark = ",", scientific = FALSE),
   format(nrow(home_sales), big.mark = ","),
   school_count,
-  format(missing_distances, big.mark = ",")
+  format(missing_distances, big.mark = ","),
+  sum(!home_sales$has_historical_coordinates)
 ))

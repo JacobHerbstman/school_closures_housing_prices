@@ -1,18 +1,14 @@
 include ../../shared/code/shell_functions.make
 
-all: ../output/Elementary_Closure_SY1213_Chicago_Clean.csv ../report/schools.txt
+all: ../output/Elementary_Closure_SY1213_Chicago_Clean.csv
 
-../output/Elementary_Closure_SY1213_Chicago_Clean.csv: clean_school_data.R \
+../output/Elementary_Closure_SY1213_Chicago_Clean.csv: clean_school_data.R ../../shared/code/report_data.R \
 	../input/Elementary_Closure_SY1213_Chicago.csv \
 	../input/Elementary_Attendance_SY1213_Chicago.csv \
 	../input/Elementary_Report_Card_SY1213_Chicago.csv \
 	../input/All_Schools_Report_Card_SY1112_Chicago.csv \
 	../input/Elementary_Report_Card_SY1314_Chicago.csv \
-	Makefile ../../shared/code/shell_functions.make | ../output
-	$(RSCRIPT) $<
-
-../report/schools.txt: report_schools.R ../../shared/code/report_data.R \
-	../output/Elementary_Closure_SY1213_Chicago_Clean.csv ../../shared/code/shell_functions.make | ../report
+	Makefile ../../shared/code/shell_functions.make | ../output ../report
 	$(RSCRIPT) $<
 
 ../input/Elementary_Closure_SY1213_Chicago.csv: \

@@ -12,10 +12,21 @@ receive displaced students (welcoming schools) are represented separately at
 their 2013–14 locations because a school can have different
 pre-closure and welcoming-school locations.
 
+Fourteen welcoming schools moved into a closed school's building for 2013–14.
+Each left its own 2012–13 building, so homes near that building also lost a
+school building. These old buildings are a third role,
+`vacated_welcoming_building`, keyed by the welcoming school's `school_id` at
+its 2012–13 location. A move is a 2012–13 location more than 300 feet from the
+2013–14 location. Nine of these buildings coincide with candidate sites
+because the welcoming school was itself on the February list. The other five
+(Wentworth, Leland, Burnham, Pershing East, and Courtenay) appear only in this
+role. Whether a building stayed empty afterwards is not recorded.
+
 The Parquet output has one row per transaction and role-specific school
 location. Its key is `row_id`, `school_location_role`, and
 `school_location_id`. The location identifier is `school_site_id` for a
-candidate site and `school_id` for a welcoming school. Treatment and control
+candidate site and `school_id` for a welcoming school or vacated welcoming
+building. Treatment and control
 flags apply only to candidate sites. Six transactions without historical
 coordinates are retained with missing distance rather than being silently
 dropped.

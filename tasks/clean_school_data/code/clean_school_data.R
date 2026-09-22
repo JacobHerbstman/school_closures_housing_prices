@@ -1,3 +1,4 @@
+# setwd("/Users/jacobherbstman/Desktop/school_closures_house_prices/tasks/clean_school_data/code")
 library(dplyr)
 library(janitor)
 library(readr)
@@ -196,6 +197,17 @@ school_1213_clean <- school_1213_clean |>
   mutate(report_card_match_sy1314 = school_id %in% school_info_1314$school_id) |>
   left_join(school_info_1314, by = "school_id")
 
+# A welcoming school that moved into a closed school's building left its own
+# SY2012-13 building; keep that earlier location as well. The three special
+# education schools absent from the SY2012-13 elementary report card use the
+# SY2011-12 locations patched above (Montefiore is a welcoming school).
+welcoming_info_1213 <- bind_rows(
+  report_1213 |> select(school_id, x_coordinate, y_coordinate),
+  school_info_1112 |>
+    transmute(school_id, x_coordinate = x_coordinate_sy1213, y_coordinate = y_coordinate_sy1213)
+)
+stopifnot(!anyDuplicated(welcoming_info_1213$school_id))
+
 welcoming_info_1314 <- report_1314_school |>
   select(
     school_id,
@@ -229,9 +241,24 @@ for (i in 1:3) {
       !!paste0("welcoming_school_longitude", i, "_sy1314") := longitude
     )
 
+  welcoming_origin_i <- welcoming_info_1213 |>
+    transmute(
+      !!id_var := school_id,
+      !!paste0("welcoming_school_x_coordinate", i, "_sy1213") := x_coordinate,
+      !!paste0("welcoming_school_y_coordinate", i, "_sy1213") := y_coordinate
+    )
+
   school_1213_clean <- school_1213_clean |>
     select(-any_of(old_vars)) |>
-    left_join(welcoming_info_i, by = id_var)
+    left_join(welcoming_info_i, by = id_var) |>
+    left_join(welcoming_origin_i, by = id_var)
+
+  # Every assigned welcoming school must appear in both report cards.
+  assigned <- !is.na(school_1213_clean[[id_var]])
+  stopifnot(
+    !anyNA(school_1213_clean[[paste0("welcoming_school_x_coordinate", i, "_sy1314")]][assigned]),
+    !anyNA(school_1213_clean[[paste0("welcoming_school_x_coordinate", i, "_sy1213")]][assigned])
+  )
 }
 
 school_closure_clean <- school_1213_clean |>
@@ -254,6 +281,8 @@ school_closure_clean <- school_1213_clean |>
     welcoming_school_y_coordinate1_sy1314,
     welcoming_school_latitude1_sy1314,
     welcoming_school_longitude1_sy1314,
+    welcoming_school_x_coordinate1_sy1213,
+    welcoming_school_y_coordinate1_sy1213,
     welcoming_school_id2,
     welcoming_school_name2_sy1314,
     welcoming_school_street_address2_sy1314,
@@ -261,6 +290,8 @@ school_closure_clean <- school_1213_clean |>
     welcoming_school_y_coordinate2_sy1314,
     welcoming_school_latitude2_sy1314,
     welcoming_school_longitude2_sy1314,
+    welcoming_school_x_coordinate2_sy1213,
+    welcoming_school_y_coordinate2_sy1213,
     welcoming_school_id3,
     welcoming_school_name3_sy1314,
     welcoming_school_street_address3_sy1314,
@@ -268,6 +299,8 @@ school_closure_clean <- school_1213_clean |>
     welcoming_school_y_coordinate3_sy1314,
     welcoming_school_latitude3_sy1314,
     welcoming_school_longitude3_sy1314,
+    welcoming_school_x_coordinate3_sy1213,
+    welcoming_school_y_coordinate3_sy1213,
     .after = shape_area_sy1213
   ) |>
   group_by(x_coordinate_sy1213, y_coordinate_sy1213) |>
@@ -296,3 +329,11 @@ write_csv(
   school_closure_clean,
   "../output/Elementary_Closure_SY1213_Chicago_Clean.csv"
 )
+
+source("../../shared/code/report_data.R")
+report <- capture.output({
+  cat("SHA-256:", digest::digest("../output/Elementary_Closure_SY1213_Chicago_Clean.csv",
+      file = TRUE, algo = "sha256"), "\n")
+  report_data(school_closure_clean, "Clean candidate-school roster", "school_id")
+})
+writeLines(trimws(report, which = "right"), "../report/schools.txt")

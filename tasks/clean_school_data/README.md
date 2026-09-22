@@ -5,7 +5,13 @@ This task cleans the school records supplied by Noah Liu for the February
 in the 2012–13 data and substitutes Faraday's location for Garfield Park
 because the two schools occupied the same facility. It also attaches 2013–14
 records for candidate schools and schools designated to receive displaced
-students (welcoming schools).
+students (welcoming schools). Each welcoming school also carries its 2012–13
+location (`welcoming_school_x_coordinate{i}_sy1213` and `_y_`), which
+identifies the building it left if it moved into a closed school's building.
+Those locations come from the 2012–13 elementary report card, except for the
+three special-education schools patched from 2011–12 records; one of these,
+Montefiore, is a welcoming school. The cleaner fails if an assigned welcoming
+school is missing from either report card.
 
 The output has one row per school on the February 2013 closure-consideration
 list, keyed by `school_id`. Schools with identical pre-closure coordinates

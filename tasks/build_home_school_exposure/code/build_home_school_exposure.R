@@ -62,6 +62,16 @@ rows_written <- dbExecute(connection, "
         min(distance_feet) FILTER (
           WHERE school_location_role = 'welcoming_school'
         ) AS nearest_welcoming_school_distance_feet,
+        arg_min(
+          school_location_id,
+          (distance_feet, school_location_id)
+        ) FILTER (
+          WHERE school_location_role = 'vacated_welcoming_building'
+            AND distance_feet IS NOT NULL
+        ) AS nearest_vacated_welcoming_building_id,
+        min(distance_feet) FILTER (
+          WHERE school_location_role = 'vacated_welcoming_building'
+        ) AS nearest_vacated_welcoming_building_distance_feet,
         count(*) FILTER (
           WHERE school_location_role = 'candidate_site'
             AND housing_treat_30 = 1
@@ -81,7 +91,11 @@ rows_written <- dbExecute(connection, "
         count(*) FILTER (
           WHERE school_location_role = 'welcoming_school'
             AND distance_feet <= 1320
-        ) AS n_welcoming_schools_025
+        ) AS n_welcoming_schools_025,
+        count(*) FILTER (
+          WHERE school_location_role = 'vacated_welcoming_building'
+            AND distance_feet <= 1320
+        ) AS n_vacated_welcoming_buildings_025
       FROM read_parquet(
         '../input/home_school_distances_2006_2025.parquet'
       )
@@ -100,6 +114,8 @@ rows_written <- dbExecute(connection, "
         nearest_other_candidate_site_distance_feet,
         nearest_welcoming_school_id,
         nearest_welcoming_school_distance_feet,
+        nearest_vacated_welcoming_building_id,
+        nearest_vacated_welcoming_building_distance_feet,
         CASE WHEN nearest_treated_site_distance_feet IS NULL
           THEN NULL
           ELSE CAST(n_treated_sites_025 AS INTEGER)
@@ -115,7 +131,11 @@ rows_written <- dbExecute(connection, "
         CASE WHEN nearest_treated_site_distance_feet IS NULL
           THEN NULL
           ELSE CAST(n_welcoming_schools_025 AS INTEGER)
-        END AS n_welcoming_schools_025
+        END AS n_welcoming_schools_025,
+        CASE WHEN nearest_treated_site_distance_feet IS NULL
+          THEN NULL
+          ELSE CAST(n_vacated_welcoming_buildings_025 AS INTEGER)
+        END AS n_vacated_welcoming_buildings_025
       FROM nearest_locations
     )
     SELECT
@@ -134,6 +154,15 @@ rows_written <- dbExecute(connection, "
     ORDER BY row_id
   ) TO '../output/home_school_exposure_2006_2025.parquet'
   (FORMAT PARQUET, COMPRESSION ZSTD, OVERWRITE_OR_IGNORE TRUE)
+")
+
+# One exposure row per sale in the distance input; sales without coordinates
+# have missing distances to every school.
+input_sales <- dbGetQuery(connection, "
+  SELECT
+    count(DISTINCT row_id) AS row_ids,
+    count(DISTINCT row_id) FILTER (WHERE distance_feet IS NULL) AS missing_coordinates
+  FROM read_parquet('../input/home_school_distances_2006_2025.parquet')
 ")
 
 checks <- dbGetQuery(connection, "
@@ -156,10 +185,13 @@ checks <- dbGetQuery(connection, "
           OR nearest_control_site_distance_feet < 0
           OR nearest_other_candidate_site_distance_feet < 0
           OR nearest_welcoming_school_distance_feet < 0
+          OR nearest_vacated_welcoming_building_id IS NULL
+          OR nearest_vacated_welcoming_building_distance_feet < 0
           OR n_treated_sites_025 IS NULL
           OR n_control_sites_025 IS NULL
           OR n_other_candidate_sites_025 IS NULL
           OR n_welcoming_schools_025 IS NULL
+          OR n_vacated_welcoming_buildings_025 IS NULL
         )
     ) AS invalid_complete_rows,
     count(*) FILTER (
@@ -177,6 +209,8 @@ checks <- dbGetQuery(connection, "
           OR n_control_sites_025 IS NOT NULL
           OR n_other_candidate_sites_025 IS NOT NULL
           OR n_welcoming_schools_025 IS NOT NULL
+          OR nearest_vacated_welcoming_building_id IS NOT NULL
+          OR n_vacated_welcoming_buildings_025 IS NOT NULL
         )
     ) AS invalid_missing_rows
   FROM read_parquet(
@@ -185,10 +219,10 @@ checks <- dbGetQuery(connection, "
 ")
 
 stopifnot(
-  rows_written == 428582,
-  checks$rows == 428582,
-  checks$row_ids == 428582,
-  checks$missing_coordinates == 6,
+  rows_written == input_sales$row_ids,
+  checks$rows == input_sales$row_ids,
+  checks$row_ids == input_sales$row_ids,
+  checks$missing_coordinates == input_sales$missing_coordinates,
   checks$invalid_complete_rows == 0,
   checks$invalid_missing_rows == 0
 )
@@ -203,7 +237,7 @@ exposure_counts <- dbGetQuery(connection, "
 ")
 
 stopifnot(
-  sum(exposure_counts$sales) == 428582,
+  sum(exposure_counts$sales) == input_sales$row_ids,
   setequal(
     exposure_counts$focal_exposure_025,
     c(

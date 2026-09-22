@@ -1,13 +1,13 @@
-SHA-256: 27e6c7b56ddf941e1128b58f0e68848f81ec369a65bb42dec38ae8b48172a728
+SHA-256: 8c254c097235d0695b4facf549e5e9ee9f4ace469afddd93bf7764a1f40386a6
 
 Dataset: Clean candidate-school roster
-Rows: 129  Columns: 124
+Rows: 129  Columns: 130
 Key: school_id
 Duplicate or missing keys: 0
-school_id | integer | nonmissing: 129 | distinct nonmissing: 129
+school_id | numeric | nonmissing: 129 | distinct nonmissing: 129
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
  400095  609989  610110  608474  610232  610521
-school_site_id | integer | nonmissing: 129 | distinct nonmissing: 127
+school_site_id | numeric | nonmissing: 129 | distinct nonmissing: 127
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
  400095  609989  610110  608472  610225  610521
 n_candidate_schools_at_site | integer | nonmissing: 129 | distinct nonmissing: 2
@@ -20,28 +20,28 @@ school_name_sy1213 | character | nonmissing: 129 | distinct nonmissing: 129
 [4] "Alfred David Kohn Elementary School"
 [5] "Amos Alonzo Stagg Elementary School"
 [6] "Ana Roque de Duprey Elementary School"
-feb2013_candidate_129 | integer | nonmissing: 129 | distinct nonmissing: 1
+feb2013_candidate_129 | numeric | nonmissing: 129 | distinct nonmissing: 1
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
       1       1       1       1       1       1
-mar2013_candidate_54 | integer | nonmissing: 129 | distinct nonmissing: 2
+mar2013_candidate_54 | numeric | nonmissing: 129 | distinct nonmissing: 2
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
  0.0000  0.0000  0.0000  0.4186  1.0000  1.0000
-may2013_closed_47 | integer | nonmissing: 129 | distinct nonmissing: 2
+may2013_closed_47 | numeric | nonmissing: 129 | distinct nonmissing: 2
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
  0.0000  0.0000  0.0000  0.3643  1.0000  1.0000
-may2013_welcoming_18 | integer | nonmissing: 129 | distinct nonmissing: 2
+may2013_welcoming_18 | numeric | nonmissing: 129 | distinct nonmissing: 2
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
  0.0000  0.0000  0.0000  0.1395  0.0000  1.0000
-consortium_treat_47 | integer | nonmissing: 129 | distinct nonmissing: 2
+consortium_treat_47 | numeric | nonmissing: 129 | distinct nonmissing: 2
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
  0.0000  0.0000  0.0000  0.3643  1.0000  1.0000
-consortium_control_49 | integer | nonmissing: 129 | distinct nonmissing: 2
+consortium_control_49 | numeric | nonmissing: 129 | distinct nonmissing: 2
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
  0.0000  0.0000  0.0000  0.3798  1.0000  1.0000
-housing_treat_30 | integer | nonmissing: 129 | distinct nonmissing: 2
+housing_treat_30 | numeric | nonmissing: 129 | distinct nonmissing: 2
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
  0.0000  0.0000  0.0000  0.2326  0.0000  1.0000
-housing_control_49 | integer | nonmissing: 129 | distinct nonmissing: 2
+housing_control_49 | numeric | nonmissing: 129 | distinct nonmissing: 2
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
  0.0000  0.0000  0.0000  0.3798  1.0000  1.0000
 notes | character | nonmissing: 80 | distinct nonmissing: 14
@@ -54,7 +54,7 @@ notes | character | nonmissing: 80 | distinct nonmissing: 14
 street_address_sy1213 | character | nonmissing: 129 | distinct nonmissing: 127
 [1] "1000 W 52nd St"    "10041 S Union Ave" "1010 E 72nd St"
 [4] "10309 S Morgan St" "1040 N Keeler Ave" "10414 S State St"
-zip_sy1213 | integer | nonmissing: 129 | distinct nonmissing: 26
+zip_sy1213 | numeric | nonmissing: 129 | distinct nonmissing: 26
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
   60608   60617   60624   60630   60637   60827
 x_coordinate_sy1213 | numeric | nonmissing: 129 | distinct nonmissing: 127
@@ -81,7 +81,7 @@ school_name_sy1314 | character | nonmissing: 81 | distinct nonmissing: 81
 street_address_sy1314 | character | nonmissing: 81 | distinct nonmissing: 81
 [1] "1000 W 52nd St"    "10041 S Union Ave" "1010 E 72nd St"
 [4] "10309 S Morgan St" "1040 N Keeler Ave" "1059 W 13th St"
-zip_sy1314 | integer | nonmissing: 81 | distinct nonmissing: 24
+zip_sy1314 | numeric | nonmissing: 81 | distinct nonmissing: 24
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
   60608   60615   60623   60632   60637   60827      48
 x_coordinate_sy1314 | numeric | nonmissing: 81 | distinct nonmissing: 81
@@ -121,7 +121,7 @@ shape_leng_sy1213 | character | nonmissing: 115 | distinct nonmissing: 115
 shape_area_sy1213 | character | nonmissing: 115 | distinct nonmissing: 115
 [1] "10087741.7562" "10120558.9759" "10205800.1726" "10233461.3627"
 [5] "10284831.9864" "10427407.4741"
-welcoming_school_id1 | integer | nonmissing: 47 | distinct nonmissing: 43
+welcoming_school_id1 | numeric | nonmissing: 47 | distinct nonmissing: 43
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
  609791  609931  610126  610106  610267  610530      82
 welcoming_school_name1_sy1314 | character | nonmissing: 47 | distinct nonmissing: 43
@@ -146,7 +146,13 @@ welcoming_school_latitude1_sy1314 | numeric | nonmissing: 47 | distinct nonmissi
 welcoming_school_longitude1_sy1314 | numeric | nonmissing: 47 | distinct nonmissing: 43
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
  -87.77  -87.71  -87.67  -87.67  -87.63  -87.57      82
-welcoming_school_id2 | integer | nonmissing: 4 | distinct nonmissing: 4
+welcoming_school_x_coordinate1_sy1213 | numeric | nonmissing: 47 | distinct nonmissing: 43
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+1138585 1155213 1165893 1165387 1177775 1190566      82
+welcoming_school_y_coordinate1_sy1213 | numeric | nonmissing: 47 | distinct nonmissing: 43
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+1823353 1862880 1892327 1882187 1899986 1934467      82
+welcoming_school_id2 | numeric | nonmissing: 4 | distinct nonmissing: 4
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
  609826  609884  609987  610042  610144  610368     125
 welcoming_school_name2_sy1314 | character | nonmissing: 4 | distinct nonmissing: 4
@@ -169,7 +175,13 @@ welcoming_school_latitude2_sy1314 | numeric | nonmissing: 4 | distinct nonmissin
 welcoming_school_longitude2_sy1314 | numeric | nonmissing: 4 | distinct nonmissing: 4
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
  -87.77  -87.73  -87.70  -87.70  -87.66  -87.63     125
-welcoming_school_id3 | integer | nonmissing: 2 | distinct nonmissing: 2
+welcoming_school_x_coordinate2_sy1213 | numeric | nonmissing: 4 | distinct nonmissing: 4
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+1138585 1149199 1157830 1157648 1166279 1176346     125
+welcoming_school_y_coordinate2_sy1213 | numeric | nonmissing: 4 | distinct nonmissing: 4
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+1836013 1874160 1894127 1888956 1908923 1931559     125
+welcoming_school_id3 | numeric | nonmissing: 2 | distinct nonmissing: 2
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
  610004  610070  610136  610136  610203  610269     127
 welcoming_school_name3_sy1314 | character | nonmissing: 2 | distinct nonmissing: 2
@@ -188,6 +200,12 @@ welcoming_school_latitude3_sy1314 | numeric | nonmissing: 2 | distinct nonmissin
 welcoming_school_longitude3_sy1314 | numeric | nonmissing: 2 | distinct nonmissing: 2
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
  -87.65  -87.64  -87.63  -87.63  -87.62  -87.61     127
+welcoming_school_x_coordinate3_sy1213 | numeric | nonmissing: 2 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+1168790 1171950 1175110 1175110 1178271 1181431     127
+welcoming_school_y_coordinate3_sy1213 | numeric | nonmissing: 2 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+1834230 1858857 1883484 1883484 1908111 1932738     127
 report_card_match_sy1213 | logical | nonmissing: 129 | distinct nonmissing: 2
 [1] FALSE  TRUE
 phone_number_sy1213 | character | nonmissing: 125 | distinct nonmissing: 125
@@ -217,7 +235,7 @@ overall_rating_sy1213 | character | nonmissing: 125 | distinct nonmissing: 2
 [1] "Level 2" "Level 3"
 on_probation_sy1213 | character | nonmissing: 125 | distinct nonmissing: 2
 [1] "No"  "Yes"
-years_on_probation_sy1213 | integer | nonmissing: 125 | distinct nonmissing: 14
+years_on_probation_sy1213 | numeric | nonmissing: 125 | distinct nonmissing: 14
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
   0.000   1.000   5.000   4.608   6.000  17.000       4
 nwea_or_scantron_sy1213 | character | nonmissing: 125 | distinct nonmissing: 2
@@ -355,7 +373,7 @@ healthy_school_certified_sy1213 | character | nonmissing: 125 | distinct nonmiss
 [1] "No"      "Pending" "Yes"
 First six records:
    school_id school_site_id n_candidate_schools_at_site
-       <int>          <int>                       <int>
+       <num>          <num>                       <int>
 1:    609848         609848                           1
 2:    609775         609775                           1
 3:    610156         610156                           1
@@ -363,7 +381,7 @@ First six records:
 5:    609781         609781                           1
 6:    610265         610265                           1
                                  school_name_sy1213 feb2013_candidate_129
-                                             <char>                 <int>
+                                             <char>                 <num>
 1:                 Ira F Aldridge Elementary School                     1
 2:                 John P Altgeld Elementary School                     1
 3: Louis Armstrong Math & Science Elementary School                     1
@@ -371,7 +389,7 @@ First six records:
 5:                Crispus Attucks Elementary School                     1
 6:              Benjamin Banneker Elementary School                     1
    mar2013_candidate_54 may2013_closed_47 may2013_welcoming_18
-                  <int>             <int>                <int>
+                  <num>             <num>                <num>
 1:                    0                 0                    0
 2:                    1                 1                    0
 3:                    1                 1                    0
@@ -379,7 +397,7 @@ First six records:
 5:                    1                 0                    0
 6:                    1                 1                    0
    consortium_treat_47 consortium_control_49 housing_treat_30
-                 <int>                 <int>            <int>
+                 <num>                 <num>            <num>
 1:                   0                     1                0
 2:                   1                     0                0
 3:                   1                     0                1
@@ -387,7 +405,7 @@ First six records:
 5:                   0                     0                0
 6:                   1                     0                0
    housing_control_49
-                <int>
+                <num>
 1:                  1
 2:                  0
 3:                  0
@@ -403,7 +421,7 @@ First six records:
 5:                                                                                                Approved for phase-out; closure effective June 30, 2015
 6: Closed; designated welcoming school relocated into the building for SY2013-14. Site remained in active school use; exclude from main housing treatment
    street_address_sy1213 zip_sy1213 x_coordinate_sy1213 y_coordinate_sy1213
-                  <char>      <int>               <num>               <num>
+                  <char>      <num>               <num>               <num>
 1:        630 E 131st St      60827             1182870             1818598
 2:        1340 W 71st St      60636             1168430             1857717
 3:  5345 W Congress Pkwy      60644             1140614             1897119
@@ -419,7 +437,7 @@ First six records:
 5:        41.80214        -87.62575                     TRUE
 6:        41.77275        -87.63729                    FALSE
                   school_name_sy1314 street_address_sy1314 zip_sy1314
-                              <char>                <char>      <int>
+                              <char>                <char>      <num>
 1:  Ira F Aldridge Elementary School        630 E 131st St      60827
 2:                              <NA>                  <NA>         NA
 3:                              <NA>                  <NA>         NA
@@ -467,7 +485,7 @@ First six records:
 5:                  18476.5769154                  7957840.88634
 6: 15027.2524668 || 7164.78432779 7412515.07008 || 1775550.37711
    welcoming_school_id1        welcoming_school_name1_sy1314
-                  <int>                               <char>
+                  <num>                               <char>
 1:                   NA                                 <NA>
 2:               610223 Daniel S Wentworth Elementary School
 3:               610305      George Leland Elementary School
@@ -498,8 +516,16 @@ First six records:
 4:                                NA                                 NA
 5:                                NA                                 NA
 6:                          41.77275                          -87.63729
+   welcoming_school_x_coordinate1_sy1213 welcoming_school_y_coordinate1_sy1213
+                                   <num>                                 <num>
+1:                                    NA                                    NA
+2:                               1171140                               1858533
+3:                               1141563                               1897141
+4:                                    NA                                    NA
+5:                                    NA                                    NA
+6:                               1171706                               1860461
    welcoming_school_id2 welcoming_school_name2_sy1314
-                  <int>                        <char>
+                  <num>                        <char>
 1:                   NA                          <NA>
 2:                   NA                          <NA>
 3:                   NA                          <NA>
@@ -530,8 +556,16 @@ First six records:
 4:                                NA                                 NA
 5:                                NA                                 NA
 6:                                NA                                 NA
+   welcoming_school_x_coordinate2_sy1213 welcoming_school_y_coordinate2_sy1213
+                                   <num>                                 <num>
+1:                                    NA                                    NA
+2:                                    NA                                    NA
+3:                                    NA                                    NA
+4:                                    NA                                    NA
+5:                                    NA                                    NA
+6:                                    NA                                    NA
    welcoming_school_id3 welcoming_school_name3_sy1314
-                  <int>                        <char>
+                  <num>                        <char>
 1:                   NA                          <NA>
 2:                   NA                          <NA>
 3:                   NA                          <NA>
@@ -562,6 +596,14 @@ First six records:
 4:                                NA                                 NA
 5:                                NA                                 NA
 6:                                NA                                 NA
+   welcoming_school_x_coordinate3_sy1213 welcoming_school_y_coordinate3_sy1213
+                                   <num>                                 <num>
+1:                                    NA                                    NA
+2:                                    NA                                    NA
+3:                                    NA                                    NA
+4:                                    NA                                    NA
+5:                                    NA                                    NA
+6:                                    NA                                    NA
    report_card_match_sy1213 phone_number_sy1213
                      <lgcl>              <char>
 1:                     TRUE      (773) 535-5614
@@ -587,7 +629,7 @@ First six records:
 5:          Burnham Park Elementary Network            Standard
 6:     Englewood-Gresham Elementary Network             Track E
    overall_rating_sy1213 on_probation_sy1213 years_on_probation_sy1213
-                  <char>              <char>                     <int>
+                  <char>              <char>                     <num>
 1:               Level 3                 Yes                         6
 2:               Level 3                 Yes                         3
 3:               Level 2                 Yes                         6
