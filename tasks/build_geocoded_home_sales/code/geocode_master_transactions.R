@@ -1,3 +1,4 @@
+# setwd("/Users/jacobherbstman/Desktop/school_closures_house_prices/tasks/build_geocoded_home_sales/code")
 suppressPackageStartupMessages(library(data.table))
 
 transactions <- fread("../input/master_home_transactions_2006_2025.csv",

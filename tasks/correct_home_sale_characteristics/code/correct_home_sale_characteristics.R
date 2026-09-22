@@ -1,4 +1,6 @@
+# setwd("/Users/jacobherbstman/Desktop/school_closures_house_prices/tasks/correct_home_sale_characteristics/code")
 suppressPackageStartupMessages(library(data.table))
+source("../../shared/code/report_data.R")
 
 transactions <- fread("../input/home_sales_with_characteristics_2006_2025.csv",
                       colClasses = list(character = c("row_id", "pin", "sale_document_num")))
@@ -176,6 +178,12 @@ transactions[, analysis_property_type := fcase(
 )]
 stopifnot(!anyDuplicated(transactions$row_id), !anyNA(transactions$property_type_conflict))
 fwrite(transactions, "../output/corrected_home_sale_characteristics_2006_2025.csv", na = "NA")
+report <- capture.output({
+  cat("CSV SHA-256:", digest::digest("../output/corrected_home_sale_characteristics_2006_2025.csv",
+      file = TRUE, algo = "sha256"), "\n")
+  report_data(transactions, "corrected_home_sale_characteristics_2006_2025", "row_id")
+})
+writeLines(trimws(report, which = "right"), "../report/corrected_home_sale_characteristics_2006_2025.txt")
 cat(sprintf("Preserved %s transactions; corrected %s eligible sales; %s have unresolved HIE fields.\n",
             nrow(transactions), length(eligible), nrow(unresolved)))
 print(transactions[, .N, by = hie_status])

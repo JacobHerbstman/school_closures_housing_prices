@@ -1,22 +1,12 @@
+# setwd("/Users/jacobherbstman/Desktop/school_closures_house_prices/tasks/build_home_sale_characteristics/code")
 suppressPackageStartupMessages(library(data.table))
 
-arguments <- commandArgs(trailingOnly = TRUE)
-if (length(arguments) != 2L) {
-  stop("Usage: Rscript build_home_sale_characteristics.R START_YEAR END_YEAR", call. = FALSE)
-}
-
-start_year <- suppressWarnings(as.integer(arguments[1]))
-end_year <- suppressWarnings(as.integer(arguments[2]))
-if (!is.finite(start_year) || !is.finite(end_year) || start_year > end_year) {
-  stop("START_YEAR and END_YEAR must define a valid year range.", call. = FALSE)
-}
-
 transactions <- fread(
-  sprintf("../input/master_home_transactions_%d_%d.csv", start_year, end_year),
+  "../input/master_home_transactions_2006_2025.csv",
   colClasses = list(character = c("row_id", "sale_document_num", "pin"))
 )
 improvements <- fread(
-  sprintf("../input/residential_improvements_%d_%d.csv", start_year, end_year),
+  "../input/residential_improvements_2006_2025.csv",
   colClasses = list(character = c("pin", "tieback_key_pin", "cdu"))
 )
 
@@ -90,10 +80,6 @@ cat(sprintf(
 ))
 
 setorder(characterized_sales, sale_date, row_id)
-output_file <- sprintf(
-  "../output/home_sales_with_characteristics_%d_%d.csv",
-  start_year,
-  end_year
-)
+output_file <- "../output/home_sales_with_characteristics_2006_2025.csv"
 fwrite(characterized_sales, output_file)
 cat(sprintf("Wrote %s characterized transactions to %s.\n", nrow(characterized_sales), output_file))

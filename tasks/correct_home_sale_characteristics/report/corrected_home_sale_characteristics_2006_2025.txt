@@ -1,4 +1,4 @@
-CSV SHA-256: cec4cc41c883cb7a89b5891cb94809cca277900b0531d1b8edcaf80a03149f68
+CSV SHA-256: bbf3a096ea9ea2f8c2f56c8bd9dd48dc4141766ee9037fc581146afa574dd18c
 
 Dataset: corrected_home_sale_characteristics_2006_2025
 Rows: 428582  Columns: 104
@@ -27,7 +27,7 @@ sale_quarter | integer | nonmissing: 428582 | distinct nonmissing: 4
 is_mydec_date | logical | nonmissing: 428582 | distinct nonmissing: 2
 [1] FALSE  TRUE
 sale_date_precision | character | nonmissing: 428582 | distinct nonmissing: 2
-[1] "idor_refined_day" "recording_month"
+[1] "idor_refined_day" "sale_month"
 sale_price_nominal | numeric | nonmissing: 428582 | distinct nonmissing: 19347
      Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
         0     49998    185000    277257    350000 225000001
@@ -285,12 +285,12 @@ First six records:
 6: 19123110160000      2006 96126954         606102400 2006-01-01          1
    sale_quarter is_mydec_date sale_date_precision sale_price_nominal
           <int>        <lgcl>              <char>              <num>
-1:            1         FALSE     recording_month             189000
-2:            1         FALSE     recording_month             105000
-3:            1         FALSE     recording_month             950000
-4:            1         FALSE     recording_month             246500
-5:            1         FALSE     recording_month             127547
-6:            1         FALSE     recording_month             245000
+1:            1         FALSE          sale_month             189000
+2:            1         FALSE          sale_month             105000
+3:            1         FALSE          sale_month             950000
+4:            1         FALSE          sale_month             246500
+5:            1         FALSE          sale_month             127547
+6:            1         FALSE          sale_month             245000
    property_class              property_type township_code neighborhood_code
             <int>                     <char>         <int>             <int>
 1:            203 house_or_small_residential            72             72282
