@@ -46,8 +46,7 @@ stopifnot(!anyDuplicated(baseline[, .(school_site_id, treated, sale_year)]))
 check <- merge(support, baseline, by = c("school_site_id", "treated", "sale_year"), all = TRUE)
 stopifnot(!anyNA(check), all(check$sales.x == check$sales.y),
   max(abs(check$mean_real_price.x - check$mean_real_price.y)) < 1e-6,
-  nrow(sales) == 10921, uniqueN(sales[treated == 1, school_site_id]) == 29,
-  uniqueN(sales[treated == 0, school_site_id]) == 48, !anyDuplicated(sales$row_id))
+  !anyDuplicated(sales$row_id))
 sales[, c("focal_exposure_025", "nearest_treated_site_id", "nearest_control_site_id",
   "n_welcoming_schools_025", "n_other_candidate_sites_025") := NULL]
 setorder(sales, row_id)

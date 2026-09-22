@@ -1,0 +1,310 @@
+Saved RDS SHA-256: adab512133961a351f645e34f463373f2b959018f229ba17b9be01002dfc2ed7
+Seller-name proxies do not certify distress; unknown names are not classified. Public metadata inspected September 15, 2026.
+
+Dataset: records
+Rows: 15420  Columns: 15
+Key: row_id
+Duplicate or missing keys: 0
+row_id | character | nonmissing: 15420 | distinct nonmissing: 15420
+[1] "7147011"  "7208084"  "7234241"  "7252512"  "7772728"  "96110344"
+pin | character | nonmissing: 15420 | distinct nonmissing: 10117
+[1] "13251090270000" "13251090280000" "13251090300000" "13251100250000"
+[5] "13251160160000" "13251160190000"
+sale_year | integer | nonmissing: 15420 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2011    2015    2014    2017    2018
+group | character | nonmissing: 15420 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+school_site_id | integer | nonmissing: 15420 | distinct nonmissing: 69
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609797  610015  610106  610104  610225  610521
+in_packet | logical | nonmissing: 15420 | distinct nonmissing: 2
+[1] FALSE  TRUE
+seller_known | logical | nonmissing: 15420 | distinct nonmissing: 2
+[1] FALSE  TRUE
+judicial_seller | logical | nonmissing: 15420 | distinct nonmissing: 2
+[1] FALSE  TRUE
+gse_hud_seller | logical | nonmissing: 15420 | distinct nonmissing: 2
+[1] FALSE  TRUE
+bank_lender_seller | logical | nonmissing: 15420 | distinct nonmissing: 2
+[1] FALSE  TRUE
+narrow_seller | logical | nonmissing: 15420 | distinct nonmissing: 2
+[1] FALSE  TRUE
+broad_seller | logical | nonmissing: 15420 | distinct nonmissing: 2
+[1] FALSE  TRUE
+deed_known | logical | nonmissing: 15420 | distinct nonmissing: 2
+[1] FALSE  TRUE
+foreclosure_related_deed | logical | nonmissing: 15420 | distinct nonmissing: 2
+[1] FALSE  TRUE
+in_lieu_deed | logical | nonmissing: 15420 | distinct nonmissing: 2
+[1] FALSE  TRUE
+First six records:
+     row_id            pin sale_year       group school_site_id in_packet
+     <char>         <char>     <int>      <char>          <int>    <lgcl>
+1:  7147011 16032320390000      2018 Stayed open         610106      TRUE
+2:  7208084 25173200260000      2018 Stayed open         610176     FALSE
+3:  7234241 25012240340000      2016 Stayed open         610218      TRUE
+4:  7252512 25201110010000      2011 Stayed open         610176      TRUE
+5:  7772728 25082140300000      2018 Stayed open         610032     FALSE
+6: 96110344 20253010230000      2017 Stayed open         610047      TRUE
+   seller_known judicial_seller gse_hud_seller bank_lender_seller narrow_seller
+         <lgcl>          <lgcl>         <lgcl>             <lgcl>        <lgcl>
+1:         TRUE           FALSE          FALSE              FALSE         FALSE
+2:         TRUE           FALSE          FALSE              FALSE         FALSE
+3:         TRUE           FALSE          FALSE              FALSE         FALSE
+4:         TRUE           FALSE          FALSE              FALSE         FALSE
+5:         TRUE           FALSE          FALSE              FALSE         FALSE
+6:         TRUE           FALSE           TRUE              FALSE          TRUE
+   broad_seller deed_known foreclosure_related_deed in_lieu_deed
+         <lgcl>     <lgcl>                   <lgcl>       <lgcl>
+1:        FALSE       TRUE                    FALSE        FALSE
+2:        FALSE       TRUE                    FALSE        FALSE
+3:        FALSE       TRUE                    FALSE        FALSE
+4:        FALSE       TRUE                    FALSE        FALSE
+5:        FALSE       TRUE                    FALSE        FALSE
+6:         TRUE       TRUE                    FALSE        FALSE
+
+Dataset: annual
+Rows: 44  Columns: 23
+Key: sample, group, sale_year
+Duplicate or missing keys: 0
+sample | character | nonmissing: 44 | distinct nonmissing: 2
+[1] "Before price screens" "Packet"
+group | character | nonmissing: 44 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+sale_year | integer | nonmissing: 44 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+sales | integer | nonmissing: 44 | distinct nonmissing: 41
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  107.0   163.5   487.0   605.1   881.0  1883.0
+parcels | integer | nonmissing: 44 | distinct nonmissing: 44
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  103.0   158.8   453.0   563.1   840.8  1662.0
+seller_known | integer | nonmissing: 44 | distinct nonmissing: 44
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  102.0   155.5   390.0   574.1   872.2  1881.0
+judicial_seller | integer | nonmissing: 44 | distinct nonmissing: 26
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   0.00    3.00    8.00   30.16   34.25  227.00
+gse_hud_seller | integer | nonmissing: 44 | distinct nonmissing: 35
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   0.00    9.75   22.50   53.59  100.00  214.00
+bank_lender_seller | integer | nonmissing: 44 | distinct nonmissing: 42
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   5.00   30.75   60.00  118.09  179.50  400.00
+narrow_seller | integer | nonmissing: 44 | distinct nonmissing: 36
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1.00   19.00   35.00   83.75  126.25  337.00
+broad_seller | integer | nonmissing: 44 | distinct nonmissing: 39
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    6.0    48.0    68.5   177.4   311.2   512.0
+deed_known | integer | nonmissing: 44 | distinct nonmissing: 29
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   0.00    0.75  148.50  321.23  790.75 1243.00
+foreclosure_related_deed | integer | nonmissing: 44 | distinct nonmissing: 19
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   0.00    0.00    4.00   14.36   25.25   76.00
+in_lieu_deed | integer | nonmissing: 44 | distinct nonmissing: 3
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  0.0000  0.0000  0.2727  0.0000  2.0000
+seller_coverage | numeric | nonmissing: 44 | distinct nonmissing: 21
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.4974  0.9880  1.0000  0.9517  1.0000  1.0000
+deed_coverage | numeric | nonmissing: 44 | distinct nonmissing: 34
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+0.0000000 0.0008621 0.6431092 0.4682690 0.8858641 1.0000000
+narrow_share | numeric | nonmissing: 44 | distinct nonmissing: 44
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+0.009804 0.071773 0.142600 0.128157 0.180347 0.259418
+broad_share | numeric | nonmissing: 44 | distinct nonmissing: 44
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.05882 0.22595 0.30902 0.30162 0.38614 0.49448
+narrow_share_all | numeric | nonmissing: 44 | distinct nonmissing: 44
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+0.006173 0.071647 0.142600 0.125196 0.177943 0.258532
+broad_share_all | numeric | nonmissing: 44 | distinct nonmissing: 44
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.03704 0.22399 0.30858 0.29557 0.38603 0.49448
+deed_share | numeric | nonmissing: 33 | distinct nonmissing: 30
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+0.00000 0.02516 0.04145 0.10633 0.05699 1.00000      11
+narrow_upper | numeric | nonmissing: 44 | distinct nonmissing: 44
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.01829 0.08927 0.16767 0.17354 0.21651 0.52582
+broad_upper | numeric | nonmissing: 44 | distinct nonmissing: 44
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.1326  0.2855  0.3531  0.3439  0.4077  0.5525
+First six records:
+                 sample  group sale_year sales parcels seller_known
+                 <char> <char>     <int> <int>   <int>        <int>
+1: Before price screens Closed      2008   164     155          164
+2: Before price screens Closed      2009   149     145          149
+3: Before price screens Closed      2010   147     139          147
+4: Before price screens Closed      2011   139     131          139
+5: Before price screens Closed      2012   176     166          176
+6: Before price screens Closed      2013   209     195          208
+   judicial_seller gse_hud_seller bank_lender_seller narrow_seller broad_seller
+             <int>          <int>              <int>         <int>        <int>
+1:               0              3                 65             3           67
+2:               0             12                 58            12           67
+3:               0              7                 47             7           52
+4:               5             20                 43            25           58
+5:               7             28                 33            35           54
+6:               8             27                 41            35           64
+   deed_known foreclosure_related_deed in_lieu_deed seller_coverage
+        <int>                    <int>        <int>           <num>
+1:          0                        0            0       1.0000000
+2:          0                        0            0       1.0000000
+3:          0                        0            0       1.0000000
+4:          1                        0            0       1.0000000
+5:         19                        1            0       1.0000000
+6:        159                        4            1       0.9952153
+   deed_coverage narrow_share broad_share narrow_share_all broad_share_all
+           <num>        <num>       <num>            <num>           <num>
+1:   0.000000000   0.01829268   0.4085366       0.01829268       0.4085366
+2:   0.000000000   0.08053691   0.4496644       0.08053691       0.4496644
+3:   0.000000000   0.04761905   0.3537415       0.04761905       0.3537415
+4:   0.007194245   0.17985612   0.4172662       0.17985612       0.4172662
+5:   0.107954545   0.19886364   0.3068182       0.19886364       0.3068182
+6:   0.760765550   0.16826923   0.3076923       0.16746411       0.3062201
+   deed_share narrow_upper broad_upper
+        <num>        <num>       <num>
+1:         NA   0.01829268   0.4085366
+2:         NA   0.08053691   0.4496644
+3:         NA   0.04761905   0.3537415
+4: 0.00000000   0.17985612   0.4172662
+5: 0.05263158   0.19886364   0.3068182
+6: 0.02515723   0.17224880   0.3110048
+
+Dataset: deeds
+Rows: 170  Columns: 5
+Key: sale_year, group, mydec_deed_type
+Duplicate or missing keys: 0
+sale_year | integer | nonmissing: 170 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2013    2015    2015    2017    2018
+group | character | nonmissing: 170 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+mydec_deed_type | character | nonmissing: 170 | distinct nonmissing: 19
+[1] ""                            "Administrator's Deed"
+[3] "Commissioner's Deed"         "Deed in lieu of Foreclosure"
+[5] "Deed in Trust"               "Executor Deed"
+records | integer | nonmissing: 170 | distinct nonmissing: 73
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1.00    2.00    7.50   90.71   52.50  906.00
+packet_sales | integer | nonmissing: 170 | distinct nonmissing: 61
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   0.00    1.00    2.50   65.92   35.00  813.00
+First six records:
+   sale_year       group mydec_deed_type records packet_sales
+       <int>      <char>          <char>   <int>        <int>
+1:      2008      Closed                     164          154
+2:      2008 Stayed open                     862          813
+3:      2009      Closed                     149          119
+4:      2009 Stayed open                     906          783
+5:      2010      Closed                     147          116
+6:      2010 Stayed open                     869          748
+
+Dataset: institutional_matches
+Rows: 695  Columns: 6
+Key: seller
+Duplicate or missing keys: 0
+seller | character | nonmissing: 695 | distinct nonmissing: 695
+[1] "21ST MORTGAGE CORPORATION" "ABC BANK FORMERLY KNOWN A"
+[3] "ABC BK"                    "ABN AMRO MTG GRP INC"
+[5] "ALBANY BANK AND TRUST COM" "AMERICAN ENT BK"
+judicial_seller | logical | nonmissing: 695 | distinct nonmissing: 2
+[1] FALSE  TRUE
+gse_hud_seller | logical | nonmissing: 695 | distinct nonmissing: 2
+[1] FALSE  TRUE
+bank_lender_seller | logical | nonmissing: 695 | distinct nonmissing: 2
+[1] FALSE  TRUE
+records | integer | nonmissing: 695 | distinct nonmissing: 49
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  1.000   1.000   1.000   6.563   2.000 268.000
+packet_sales | integer | nonmissing: 695 | distinct nonmissing: 42
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  0.000   1.000   1.000   4.668   2.000 223.000
+First six records:
+                                seller judicial_seller gse_hud_seller
+                                <char>          <lgcl>         <lgcl>
+1:                          FANNIE MAE           FALSE           TRUE
+2:           DEUTSCHE BK NATL TRUST CO           FALSE          FALSE
+3:          FEDERAL HOME LOAN MTG CORP           FALSE           TRUE
+4:                              U S BK           FALSE          FALSE
+5: FEDERAL NATIONAL MORTGAGE ASSOCIATI           FALSE           TRUE
+6:                      WELLS FARGO BK           FALSE          FALSE
+   bank_lender_seller records packet_sales
+               <lgcl>   <int>        <int>
+1:              FALSE     262          223
+2:               TRUE     262          213
+3:               TRUE     124          112
+4:               TRUE     120          111
+5:               TRUE     116          100
+6:               TRUE     100           89
+
+Dataset: source_columns
+Rows: 20  Columns: 2
+Key: field
+Duplicate or missing keys: 0
+field | character | nonmissing: 20 | distinct nonmissing: 20
+[1] "buyer_name"    "class"         "deed_type"     "doc_no"
+[5] "is_multisale"  "is_mydec_date"
+description | character | nonmissing: 20 | distinct nonmissing: 20
+[1] "Assessor neighborhood code, first two digits are township, last three are neighborhood"
+[2] "Deed type from MyDec, more granular than CCAO deed type."
+[3] "Indicates whether a parcel was sold individually or as part of a larger group of PINs"
+[4] "Indicates whether the sale date has been overwritten with a more precise value from IDOR (Illinois Department of Revenue). In the past the Assessor's ingest process truncated sale dates to the first of the month. Not all sales can be updated with dates from IDOR."
+[5] "Indicator for quit claim, executor, beneficiary and missing deed types"
+[6] "Indicator for whether sale is less than $10K FMW"
+First six records:
+           field
+          <char>
+1:           pin
+2:          year
+3: township_code
+4:          nbhd
+5:         class
+6:     sale_date
+                                                                              description
+                                                                                   <char>
+1:                                                     Parcel Identification Number (PIN)
+2:                                                                                   Year
+3:                                                                          Township code
+4: Assessor neighborhood code, first two digits are township, last three are neighborhood
+5:                                                                         Property class
+6:                                                     Sale date (recorded, not executed)
+
+Dataset: sources
+Rows: 6  Columns: 2
+Key: source
+Duplicate or missing keys: 0
+source | character | nonmissing: 6 | distinct nonmissing: 6
+[1] "../input/corrected_sales.csv"  "../input/exposure.parquet"
+[3] "../input/overview.rds"         "../input/raw_sales.csv"
+[5] "../output/sales_metadata.json" "seller_patterns.csv"
+sha256 | character | nonmissing: 6 | distinct nonmissing: 6
+[1] "026714c327576c569ab82d61704c09d94fa7ba57e9be777ea18224a104fcc65e"
+[2] "6e460a832985c47678331de6596d2d10f5dac8f4cd09088cf8c77b9dfdff1bb6"
+[3] "b3acc8952f1888263255fb77f260920d06ef723b45ae173d9ddf6f4986293abc"
+[4] "cec4cc41c883cb7a89b5891cb94809cca277900b0531d1b8edcaf80a03149f68"
+[5] "e8b73cedc4f906bf48e1e994fef1df64213e45045c5714240ac6ef94c4474958"
+[6] "eeaa56fade8b138223e190c5cc89e99db15075e2bd8ba2be89a473591d459c0c"
+First six records:
+                          source
+                          <char>
+1:        ../input/raw_sales.csv
+2:  ../input/corrected_sales.csv
+3:     ../input/exposure.parquet
+4:         ../input/overview.rds
+5: ../output/sales_metadata.json
+6:           seller_patterns.csv
+                                                             sha256
+                                                             <char>
+1: 026714c327576c569ab82d61704c09d94fa7ba57e9be777ea18224a104fcc65e
+2: cec4cc41c883cb7a89b5891cb94809cca277900b0531d1b8edcaf80a03149f68
+3: b3acc8952f1888263255fb77f260920d06ef723b45ae173d9ddf6f4986293abc
+4: 6e460a832985c47678331de6596d2d10f5dac8f4cd09088cf8c77b9dfdff1bb6
+5: e8b73cedc4f906bf48e1e994fef1df64213e45045c5714240ac6ef94c4474958
+6: eeaa56fade8b138223e190c5cc89e99db15075e2bd8ba2be89a473591d459c0c

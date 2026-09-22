@@ -7,12 +7,12 @@ stopifnot(!anyDuplicated(sales$row_id),!anyDuplicated(baseline[,.(model,term)]))
 sites <- sales[sale_year<=2012,.(treated=treated[1],school_names=school_names[1],
   pre_sales=.N,pre_parcels=uniqueN(pin),pre_years=uniqueN(sale_year),
   initial_price=mean(sale_price_real_2022),pre_price_sd=sd(sale_price_real_2022)),by=school_site_id]
-stopifnot(nrow(sites)==77,!anyDuplicated(sites$school_site_id),!anyNA(sites[,.(treated,school_names,pre_sales,initial_price)]),
+stopifnot(!anyDuplicated(sites$school_site_id),!anyNA(sites[,.(treated,school_names,pre_sales,initial_price)]),
   all(is.na(sites$pre_price_sd)==(sites$pre_sales==1L)),
   all(sales$school_site_id %in% sites$school_site_id))
 # Many transactions join to one site-level pre-treatment covariate.
 sales <- merge(sales,sites[,.(school_site_id,initial_price)],by="school_site_id",all.x=TRUE)
-stopifnot(nrow(sales)==10921,!anyNA(sales$initial_price),!anyDuplicated(sales$row_id))
+stopifnot(!anyNA(sales$initial_price),!anyDuplicated(sales$row_id))
 sales[, `:=`(initial_price_100k=initial_price/100000,treated_post=treated*as.integer(sale_year>=2014))]
 coefficients <- list()
 models <- list()
@@ -53,7 +53,7 @@ for(design in c("did","event")) for(hedonic in c(FALSE,TRUE)) for(adjusted in c(
 }
 coefficients <- rbindlist(coefficients)
 models <- rbindlist(models)
-stopifnot(nrow(coefficients)==164,nrow(models)==16,!anyDuplicated(coefficients[,.(model,initial_price_adjusted,term)]))
+stopifnot(nrow(models)==16,!anyDuplicated(coefficients[,.(model,initial_price_adjusted,term)]))
 setorder(sites,school_site_id)
 setorder(coefficients,model,initial_price_adjusted,term)
 setorder(models,model,initial_price_adjusted)

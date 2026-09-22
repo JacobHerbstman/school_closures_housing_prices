@@ -1,0 +1,616 @@
+Saved RDS SHA-256: 72248a34c23571a2c3c9e5ea94f54b19b3988d21345b2afd94da7102be92f7d2
+
+Dataset: sales
+Rows: 11202  Columns: 38
+Key: row_id
+Duplicate or missing keys: 0
+pin | character | nonmissing: 11202 | distinct nonmissing: 8235
+[1] "13251090270000" "13251090280000" "13251090300000" "13251100250000"
+[5] "13251160160000" "13251160190000"
+row_id | character | nonmissing: 11202 | distinct nonmissing: 11202
+[1] "7147011"  "7234241"  "7252512"  "96110344" "96110473" "96110474"
+group | character | nonmissing: 11202 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+school_site_id | integer | nonmissing: 11202 | distinct nonmissing: 68
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609797  610015  610106  610099  610225  610521
+sale_year | integer | nonmissing: 11202 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2011    2014    2013    2016    2018
+price | numeric | nonmissing: 11202 | distinct nonmissing: 9855
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  12015   46250  123954  253592  303630 5585455
+sale_date | IDate/Date | nonmissing: 11202 | distinct nonmissing: 1667
+[1] "2008-01-01" "2008-02-01" "2008-03-01" "2008-04-01" "2008-05-01"
+[6] "2008-06-01"
+sale_date_precision | character | nonmissing: 11202 | distinct nonmissing: 2
+[1] "idor_refined_day" "recording_month"
+res_char_bldg_sf | integer | nonmissing: 11202 | distinct nonmissing: 1862
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    400    1024    1234    1430    1700   10727
+res_char_land_sf | integer | nonmissing: 11202 | distinct nonmissing: 1815
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    406    3044    3570    3610    4020   34000
+res_char_yrblt | integer | nonmissing: 11202 | distinct nonmissing: 153
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1853    1908    1927    1939    1964    2017
+res_char_beds | integer | nonmissing: 11202 | distinct nonmissing: 9
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  1.000   2.000   3.000   3.012   3.000   9.000
+res_char_rooms | integer | nonmissing: 11202 | distinct nonmissing: 17
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  3.000   5.000   6.000   5.872   7.000  20.000
+res_char_fbath | integer | nonmissing: 11202 | distinct nonmissing: 7
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  1.000   1.000   1.000   1.421   2.000   7.000
+analysis_class | integer | nonmissing: 11202 | distinct nonmissing: 12
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  202.0   203.0   203.0   218.3   210.0   295.0
+res_char_type_resd | character | nonmissing: 11202 | distinct nonmissing: 5
+[1] "1 Story"     "1.5 Story"   "2 Story"     "3 Story +"   "Split Level"
+res_char_cnst_qlty | character | nonmissing: 11202 | distinct nonmissing: 3
+[1] "Average" "Deluxe"  "Poor"
+res_char_repair_cnd | character | nonmissing: 11202 | distinct nonmissing: 3
+[1] "Above Average" "Average"       "Below Average"
+hie_correction_eligible | logical | nonmissing: 11202 | distinct nonmissing: 2
+[1] FALSE  TRUE
+hie_start_year_timing_uncertain | logical | nonmissing: 11202 | distinct nonmissing: 2
+[1] FALSE  TRUE
+res_char_renovation | character | nonmissing: 11202 | distinct nonmissing: 2
+[1] ""    "Yes"
+treated | integer | nonmissing: 11202 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  0.0000  0.0000  0.1505  0.0000  1.0000
+log_price | numeric | nonmissing: 11202 | distinct nonmissing: 9855
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  9.394  10.742  11.728  11.733  12.624  15.536
+log_building_sqft | numeric | nonmissing: 11202 | distinct nonmissing: 1862
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  5.991   6.931   7.118   7.191   7.438   9.281
+log_land_sqft | numeric | nonmissing: 11202 | distinct nonmissing: 1815
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  6.006   8.021   8.180   8.112   8.299  10.434
+age_at_sale | integer | nonmissing: 11202 | distinct nonmissing: 153
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    1.0    50.0    85.0    74.8   106.0   155.0
+treated_post | integer | nonmissing: 11202 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.00000 0.00000 0.00000 0.07972 0.00000 1.00000
+repeat_pre_post | logical | nonmissing: 11202 | distinct nonmissing: 2
+[1] FALSE  TRUE
+stable_repeat | logical | nonmissing: 11202 | distinct nonmissing: 2
+[1] FALSE  TRUE
+assessment_year | numeric | nonmissing: 10991 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+   2006    2006    2006    2006    2006    2006     211
+assessment_class | character | nonmissing: 10991 | distinct nonmissing: 23
+[1] "100" "190" "200" "201" "202" "203"
+assessment_row_id | character | nonmissing: 10991 | distinct nonmissing: 8070
+[1] "132510902700002006" "132510902800002006" "132510903000002006"
+[4] "132511002500002006" "132511601600002006" "132511601900002006"
+initial_assessed_total | numeric | nonmissing: 10991 | distinct nonmissing: 6403
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+      0   13072   15838   22942   27046  454985     211
+initial_assessed_building | numeric | nonmissing: 10991 | distinct nonmissing: 6250
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+      0   10176   12497   18434   21517  428893     211
+initial_assessed_land | numeric | nonmissing: 10991 | distinct nonmissing: 2197
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+      0    2804    3414    4508    4994   60274     211
+assessment_status | character | nonmissing: 11202 | distinct nonmissing: 4
+[1] "No 2006 record"            "No positive total"
+[3] "Not single-family in 2006" "Usable 2006 assessment"
+assessment_usable | logical | nonmissing: 11202 | distinct nonmissing: 2
+[1] FALSE  TRUE
+log_initial_value | numeric | nonmissing: 10452 | distinct nonmissing: 6096
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+  8.143   9.495   9.674   9.861  10.187  13.028     750
+First six records:
+              pin   row_id       group school_site_id sale_year     price
+           <char>   <char>      <char>          <int>     <int>     <num>
+1: 16032320390000  7147011 Stayed open         610106      2018  28721.11
+2: 25012240340000  7234241 Stayed open         610218      2016 259190.55
+3: 25201110010000  7252512 Stayed open         610176      2011  18699.37
+4: 20253010230000 96110344 Stayed open         610047      2017  46669.10
+5: 25201190650000 96110473 Stayed open         610225      2018  69418.77
+6: 25201050410000 96110474 Stayed open         610176      2018  83288.78
+    sale_date sale_date_precision res_char_bldg_sf res_char_land_sf
+       <IDat>              <char>            <int>            <int>
+1: 2018-04-03    idor_refined_day             1470             3100
+2: 2016-11-23    idor_refined_day             1367             4166
+3: 2011-07-28    idor_refined_day             1211             5191
+4: 2017-12-20    idor_refined_day             1194             3270
+5: 2018-01-10    idor_refined_day             1080             4602
+6: 2018-02-13    idor_refined_day             1875             6250
+   res_char_yrblt res_char_beds res_char_rooms res_char_fbath analysis_class
+            <int>         <int>          <int>          <int>          <int>
+1:           2014             3              7              2            203
+2:           1955             3              5              1            203
+3:           1926             3              6              1            203
+4:           1920             3              4              2            203
+5:           1964             2              5              1            203
+6:           1924             4              7              1            204
+   res_char_type_resd res_char_cnst_qlty res_char_repair_cnd
+               <char>             <char>              <char>
+1:            1 Story            Average             Average
+2:            1 Story            Average             Average
+3:            1 Story            Average             Average
+4:            1 Story            Average             Average
+5:            1 Story            Average             Average
+6:          1.5 Story            Average             Average
+   hie_correction_eligible hie_start_year_timing_uncertain res_char_renovation
+                    <lgcl>                          <lgcl>              <char>
+1:                   FALSE                           FALSE
+2:                   FALSE                           FALSE
+3:                   FALSE                           FALSE
+4:                   FALSE                           FALSE
+5:                   FALSE                           FALSE
+6:                   FALSE                           FALSE
+   treated log_price log_building_sqft log_land_sqft age_at_sale treated_post
+     <int>     <num>             <num>         <num>       <int>        <int>
+1:       0 10.265388          7.293018      8.039157           4            0
+2:       0 12.465319          7.220374      8.334712          61            0
+3:       0  9.836245          7.099202      8.554682          85            0
+4:       0 10.750838          7.085064      8.092545          97            0
+5:       0 11.147913          6.984716      8.434246          54            0
+6:       0 11.330069          7.536364      8.740337          94            0
+   repeat_pre_post stable_repeat assessment_year assessment_class
+            <lgcl>        <lgcl>           <num>           <char>
+1:           FALSE         FALSE            2006              100
+2:           FALSE         FALSE            2006              203
+3:           FALSE         FALSE            2006              203
+4:           FALSE         FALSE            2006              203
+5:           FALSE         FALSE            2006              203
+6:           FALSE         FALSE            2006              204
+    assessment_row_id initial_assessed_total initial_assessed_building
+               <char>                  <num>                     <num>
+1: 160323203900002006                   5456                         0
+2: 250122403400002006                  16911                     13912
+3: 252011100100002006                  12830                     10754
+4: 202530102300002006                  15403                     12003
+5: 252011906500002006                  13059                     10482
+6: 252010504100002006                  17912                     15412
+   initial_assessed_land         assessment_status assessment_usable
+                   <num>                    <char>            <lgcl>
+1:                  5456 Not single-family in 2006             FALSE
+2:                  2999    Usable 2006 assessment              TRUE
+3:                  2076    Usable 2006 assessment              TRUE
+4:                  3400    Usable 2006 assessment              TRUE
+5:                  2577    Usable 2006 assessment              TRUE
+6:                  2500    Usable 2006 assessment              TRUE
+   log_initial_value
+               <num>
+1:                NA
+2:          9.735720
+3:          9.459541
+4:          9.642318
+5:          9.477233
+6:          9.793226
+
+Dataset: parcels
+Rows: 8235  Columns: 9
+Key: pin
+Duplicate or missing keys: 0
+pin | character | nonmissing: 8235 | distinct nonmissing: 8235
+[1] "13251090270000" "13251090280000" "13251090300000" "13251100250000"
+[5] "13251160160000" "13251160190000"
+group | character | nonmissing: 8235 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+school_site_id | integer | nonmissing: 8235 | distinct nonmissing: 68
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609797  610015  610106  610101  610225  610521
+assessment_status | character | nonmissing: 8235 | distinct nonmissing: 4
+[1] "No 2006 record"            "No positive total"
+[3] "Not single-family in 2006" "Usable 2006 assessment"
+assessment_usable | logical | nonmissing: 8235 | distinct nonmissing: 2
+[1] FALSE  TRUE
+assessment_class | character | nonmissing: 8070 | distinct nonmissing: 23
+[1] "100" "190" "200" "201" "202" "203"
+initial_assessed_total | numeric | nonmissing: 8070 | distinct nonmissing: 6403
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+      0   12912   15944   23182   27800  454985     165
+initial_assessed_building | numeric | nonmissing: 8070 | distinct nonmissing: 6250
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+      0   10032   12550   18620   22082  428893     165
+initial_assessed_land | numeric | nonmissing: 8070 | distinct nonmissing: 2197
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+      0    2797    3480    4562    5118   60274     165
+First six records:
+              pin       group school_site_id         assessment_status
+           <char>      <char>          <int>                    <char>
+1: 13251090270000 Stayed open         609809    Usable 2006 assessment
+2: 13251090280000 Stayed open         609809    Usable 2006 assessment
+3: 13251090300000 Stayed open         609809    Usable 2006 assessment
+4: 13251100250000 Stayed open         609809    Usable 2006 assessment
+5: 13251160160000 Stayed open         609809 Not single-family in 2006
+6: 13251160190000 Stayed open         609809    Usable 2006 assessment
+   assessment_usable assessment_class initial_assessed_total
+              <lgcl>           <char>                  <num>
+1:              TRUE              203                  33036
+2:              TRUE              203                  32289
+3:              TRUE              203                  32308
+4:              TRUE              203                  36393
+5:             FALSE              211                  38889
+6:              TRUE              203                  30119
+   initial_assessed_building initial_assessed_land
+                       <num>                 <num>
+1:                     24972                  8064
+2:                     24225                  8064
+3:                     24244                  8064
+4:                     27844                  8549
+5:                     30969                  7920
+6:                     22199                  7920
+
+Dataset: assessments
+Rows: 8070  Columns: 16
+Key: pin, year
+Duplicate or missing keys: 0
+pin | character | nonmissing: 8070 | distinct nonmissing: 8070
+[1] "13251090270000" "13251090280000" "13251090300000" "13251100250000"
+[5] "13251160160000" "13251160190000"
+year | numeric | nonmissing: 8070 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2006    2006    2006    2006    2006    2006
+class | character | nonmissing: 8070 | distinct nonmissing: 23
+[1] "100" "190" "200" "201" "202" "203"
+township_code | character | nonmissing: 8070 | distinct nonmissing: 6
+[1] "70" "72" "73" "74" "76" "77"
+township_name | character | nonmissing: 8070 | distinct nonmissing: 6
+[1] "Hyde Park"     "Lake"          "Lake View"     "North Chicago"
+[5] "South Chicago" "West Chicago"
+nbhd | character | nonmissing: 8070 | distinct nonmissing: 69
+[1] "70010" "70020" "70030" "70070" "70080" "70091"
+mailed_bldg | numeric | nonmissing: 8070 | distinct nonmissing: 6250
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0   10032   12550   18620   22082  428893
+mailed_land | numeric | nonmissing: 8070 | distinct nonmissing: 2197
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0    2797    3480    4562    5118   60274
+mailed_tot | numeric | nonmissing: 8070 | distinct nonmissing: 6403
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0   12912   15944   23182   27800  454985
+certified_bldg | numeric | nonmissing: 8070 | distinct nonmissing: 6251
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0   10013   12530   18455   22002  428893
+certified_land | numeric | nonmissing: 8070 | distinct nonmissing: 2197
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0    2797    3480    4561    5118   50061
+certified_tot | numeric | nonmissing: 8070 | distinct nonmissing: 6390
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0   12893   15921   23016   27642  454985
+board_bldg | numeric | nonmissing: 8070 | distinct nonmissing: 6251
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0    9959   12490   18106   21608  351255
+board_land | numeric | nonmissing: 8070 | distinct nonmissing: 2198
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0    2797    3480    4561    5118   50061
+board_tot | numeric | nonmissing: 8070 | distinct nonmissing: 6414
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0   12850   15868   22667   27246  377347
+row_id | character | nonmissing: 8070 | distinct nonmissing: 8070
+[1] "132510902700002006" "132510902800002006" "132510903000002006"
+[4] "132511002500002006" "132511601600002006" "132511601900002006"
+First six records:
+              pin  year  class township_code township_name   nbhd mailed_bldg
+           <char> <num> <char>        <char>        <char> <char>       <num>
+1: 13251090270000  2006    203            77  West Chicago  77150       24972
+2: 13251090280000  2006    203            77  West Chicago  77150       24225
+3: 13251090300000  2006    203            77  West Chicago  77150       24244
+4: 13251100250000  2006    203            77  West Chicago  77150       27844
+5: 13251160160000  2006    211            77  West Chicago  77150       30969
+6: 13251160190000  2006    203            77  West Chicago  77150       22199
+   mailed_land mailed_tot certified_bldg certified_land certified_tot
+         <num>      <num>          <num>          <num>         <num>
+1:        8064      33036          24972           8064         33036
+2:        8064      32289          24225           8064         32289
+3:        8064      32308          24244           8064         32308
+4:        8549      36393          27844           8549         36393
+5:        7920      38889          30969           7920         38889
+6:        7920      30119          22199           7920         30119
+   board_bldg board_land board_tot             row_id
+        <num>      <num>     <num>             <char>
+1:      24972       8064     33036 132510902700002006
+2:      24225       8064     32289 132510902800002006
+3:      19999       8064     28063 132510903000002006
+4:      27844       8549     36393 132511002500002006
+5:      30969       7920     38889 132511601600002006
+6:      22199       7920     30119 132511601900002006
+
+Dataset: coverage
+Rows: 8  Columns: 5
+Key: group, assessment_status
+Duplicate or missing keys: 0
+group | character | nonmissing: 8 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+assessment_status | character | nonmissing: 8 | distinct nonmissing: 4
+[1] "No 2006 record"            "No positive total"
+[3] "Not single-family in 2006" "Usable 2006 assessment"
+sales | integer | nonmissing: 8 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   8.00   26.75  164.50 1400.25  662.75 8911.00
+parcels | integer | nonmissing: 8 | distinct nonmissing: 7
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   8.00   20.75  126.50 1029.38  513.00 6497.00
+sites | integer | nonmissing: 8 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   3.00    7.75   14.50   17.25   23.00   45.00
+First six records:
+         group         assessment_status sales parcels sites
+        <char>                    <char> <int>   <int> <int>
+1:      Closed            No 2006 record     8       8     3
+2:      Closed         No positive total    11       8     4
+3:      Closed Not single-family in 2006   126      96    14
+4:      Closed    Usable 2006 assessment  1541    1140    22
+5: Stayed open            No 2006 record   203     157    15
+6: Stayed open         No positive total    32      25     9
+
+Dataset: annual_support
+Rows: 22  Columns: 7
+Key: group, sale_year
+Duplicate or missing keys: 0
+group | character | nonmissing: 22 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+sale_year | integer | nonmissing: 22 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+all_sales | integer | nonmissing: 22 | distinct nonmissing: 21
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  107.0   154.5   424.0   509.2   814.8  1190.0
+matched_sales | integer | nonmissing: 22 | distinct nonmissing: 21
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   99.0   143.8   400.0   475.1   764.0  1103.0
+matched_share | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.8580  0.9192  0.9354  0.9267  0.9422  0.9655
+mean_initial_value | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  20684   22203   24284   25177   28024   32804
+median_initial_value | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  14785   15539   16119   16947   17244   26345
+First six records:
+    group sale_year all_sales matched_sales matched_share mean_initial_value
+   <char>     <int>     <int>         <int>         <num>              <num>
+1: Closed      2008       154           143     0.9285714           22933.98
+2: Closed      2009       119           106     0.8907563           25522.38
+3: Closed      2010       116           112     0.9655172           27879.12
+4: Closed      2011       107            99     0.9252336           24325.32
+5: Closed      2012       141           134     0.9503546           32804.19
+6: Closed      2013       156           147     0.9423077           30926.51
+   median_initial_value
+                  <num>
+1:              15514.0
+2:              16308.5
+3:              17957.5
+4:              16072.0
+5:              26345.0
+6:              20154.0
+
+Dataset: initial_distribution
+Rows: 2  Columns: 6
+Key: group
+Duplicate or missing keys: 0
+group | character | nonmissing: 2 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+parcels | integer | nonmissing: 2 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1140    2479    3818    3818    5158    6497
+mean | numeric | nonmissing: 2 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  22375   23930   25485   25485   27039   28594
+p10 | numeric | nonmissing: 2 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  11236   11397   11559   11559   11720   11882
+median | numeric | nonmissing: 2 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  15686   16119   16551   16551   16984   17416
+p90 | numeric | nonmissing: 2 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  40882   45587   50291   50291   54995   59700
+First six records:
+         group parcels     mean     p10  median     p90
+        <char>   <int>    <num>   <num>   <num>   <num>
+1:      Closed    1140 28594.04 11881.6 17416.5 59699.5
+2: Stayed open    6497 22375.04 11235.8 15686.0 40882.4
+
+Dataset: coefficients
+Rows: 165  Columns: 11
+Key: comparison, estimator, design, term
+Duplicate or missing keys: 0
+term | character | nonmissing: 165 | distinct nonmissing: 11
+[1] "sale_year::2008:treated" "sale_year::2009:treated"
+[3] "sale_year::2010:treated" "sale_year::2011:treated"
+[5] "sale_year::2013:treated" "sale_year::2014:treated"
+estimate | numeric | nonmissing: 165 | distinct nonmissing: 165
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+-32038.812     -0.086     -0.027   4286.473   1557.638  55057.609
+std_error | numeric | nonmissing: 165 | distinct nonmissing: 165
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+    0.046     0.068     0.095  7838.282 16456.420 46911.260
+statistic | numeric | nonmissing: 165 | distinct nonmissing: 165
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+-3.3072 -0.9914 -0.3117 -0.3276  0.3672  1.5485
+p_value | numeric | nonmissing: 165 | distinct nonmissing: 165
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+0.001528 0.245658 0.444381 0.485093 0.737818 0.997715
+conf_low | numeric | nonmissing: 165 | distinct nonmissing: 165
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+-65161.235 -21723.778     -0.267 -11362.090     -0.170     -0.064
+conf_high | numeric | nonmissing: 165 | distinct nonmissing: 165
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+    -0.094      0.087      0.130  19935.035  34413.940 148692.875
+sale_year | integer | nonmissing: 150 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+   2008    2010    2014    2013    2016    2018      15
+comparison | character | nonmissing: 165 | distinct nonmissing: 5
+[1] "All sales: existing model"      "Matched: all premiums by year"
+[3] "Matched: existing model"        "Matched: initial value"
+[5] "Matched: initial value by year"
+estimator | character | nonmissing: 165 | distinct nonmissing: 3
+[1] "OLS dollars" "OLS log"     "PPML"
+design | character | nonmissing: 165 | distinct nonmissing: 2
+[1] "did"   "event"
+First six records:
+                      term   estimate std_error  statistic   p_value  conf_low
+                    <char>      <num>     <num>      <num>     <num>     <num>
+1:            treated_post  34850.791  26667.11  1.3068828 0.1957204 -18376.99
+2: sale_year::2008:treated   7973.082  27416.56  0.2908126 0.7720929 -46750.60
+3: sale_year::2009:treated  15433.206  23601.87  0.6538975 0.5154160 -31676.33
+4: sale_year::2010:treated -15645.202  18511.75 -0.8451500 0.4010351 -52594.80
+5: sale_year::2011:treated  18495.704  14874.10  1.2434838 0.2180231 -11193.12
+6: sale_year::2013:treated  16579.173  21472.74  0.7721033 0.4427682 -26280.59
+   conf_high sale_year                comparison   estimator design
+       <num>     <int>                    <char>      <char> <char>
+1:  88078.57        NA All sales: existing model OLS dollars    did
+2:  62696.76      2008 All sales: existing model OLS dollars  event
+3:  62542.74      2009 All sales: existing model OLS dollars  event
+4:  21304.40      2010 All sales: existing model OLS dollars  event
+5:  48184.53      2011 All sales: existing model OLS dollars  event
+6:  59438.94      2013 All sales: existing model OLS dollars  event
+
+Dataset: models
+Rows: 30  Columns: 14
+Key: comparison, estimator, design
+Duplicate or missing keys: 0
+comparison | character | nonmissing: 30 | distinct nonmissing: 5
+[1] "All sales: existing model"      "Matched: all premiums by year"
+[3] "Matched: existing model"        "Matched: initial value"
+[5] "Matched: initial value by year"
+estimator | character | nonmissing: 30 | distinct nonmissing: 3
+[1] "OLS dollars" "OLS log"     "PPML"
+design | character | nonmissing: 30 | distinct nonmissing: 2
+[1] "did"   "event"
+observations | integer | nonmissing: 30 | distinct nonmissing: 4
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   9462    9462   10306   10102   10452   11202
+parcels | integer | nonmissing: 30 | distinct nonmissing: 4
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   7079    7079    7637    7474    7637    8235
+sites | integer | nonmissing: 30 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   67.0    67.0    67.0    67.2    67.0    68.0
+treated_sales | integer | nonmissing: 30 | distinct nonmissing: 4
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1394    1394    1536    1496    1541    1686
+control_sales | integer | nonmissing: 30 | distinct nonmissing: 4
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   8068    8068    8770    8606    8911    9516
+treated_sites | integer | nonmissing: 30 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+     22      22      22      22      22      22
+control_sites | integer | nonmissing: 30 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   45.0    45.0    45.0    45.2    45.0    46.0
+pretrend_p | numeric | nonmissing: 15 | distinct nonmissing: 15
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+0.01636 0.02836 0.07985 0.12399 0.16847 0.54643      15
+estimated_slopes | integer | nonmissing: 30 | distinct nonmissing: 7
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   28.0    29.0    37.5    86.0    48.0   306.0
+formula | character | nonmissing: 30 | distinct nonmissing: 8
+[1] "y ~ i(sale_year, treated, ref = 2012) + factor(sale_year) * (log_building_sqft +      I(log_building_sqft^2) + log_land_sqft + I(log_land_sqft^2) +      age_at_sale + I(age_at_sale^2) + res_char_beds + res_char_rooms +      res_char_fbath + factor(analysis_class) + factor(res_char_type_resd) +      factor(res_char_cnst_qlty) + factor(res_char_repair_cnd) +      log_initial_value) | school_site_id + sale_year"
+[2] "y ~ i(sale_year, treated, ref = 2012) + log_building_sqft + I(log_building_sqft^2) +      log_land_sqft + I(log_land_sqft^2) + age_at_sale + I(age_at_sale^2) +      res_char_beds + res_char_rooms + res_char_fbath + factor(analysis_class) +      factor(res_char_type_resd) + factor(res_char_cnst_qlty) +      factor(res_char_repair_cnd) + factor(sale_year) * log_initial_value |      school_site_id + sale_year"
+[3] "y ~ i(sale_year, treated, ref = 2012) + log_building_sqft + I(log_building_sqft^2) +      log_land_sqft + I(log_land_sqft^2) + age_at_sale + I(age_at_sale^2) +      res_char_beds + res_char_rooms + res_char_fbath + factor(analysis_class) +      factor(res_char_type_resd) + factor(res_char_cnst_qlty) +      factor(res_char_repair_cnd) + log_initial_value | school_site_id +      sale_year"
+[4] "y ~ i(sale_year, treated, ref = 2012) + log_building_sqft + I(log_building_sqft^2) +      log_land_sqft + I(log_land_sqft^2) + age_at_sale + I(age_at_sale^2) +      res_char_beds + res_char_rooms + res_char_fbath + factor(analysis_class) +      factor(res_char_type_resd) + factor(res_char_cnst_qlty) +      factor(res_char_repair_cnd) | school_site_id + sale_year"
+[5] "y ~ treated_post + factor(sale_year) * (log_building_sqft + I(log_building_sqft^2) +      log_land_sqft + I(log_land_sqft^2) + age_at_sale + I(age_at_sale^2) +      res_char_beds + res_char_rooms + res_char_fbath + factor(analysis_class) +      factor(res_char_type_resd) + factor(res_char_cnst_qlty) +      factor(res_char_repair_cnd) + log_initial_value) | school_site_id +      sale_year"
+[6] "y ~ treated_post + log_building_sqft + I(log_building_sqft^2) +      log_land_sqft + I(log_land_sqft^2) + age_at_sale + I(age_at_sale^2) +      res_char_beds + res_char_rooms + res_char_fbath + factor(analysis_class) +      factor(res_char_type_resd) + factor(res_char_cnst_qlty) +      factor(res_char_repair_cnd) + factor(sale_year) * log_initial_value |      school_site_id + sale_year"
+fixest_version | character | nonmissing: 30 | distinct nonmissing: 1
+[1] "0.12.1"
+First six records:
+                  comparison   estimator design observations parcels sites
+                      <char>      <char> <char>        <int>   <int> <int>
+1: All sales: existing model OLS dollars    did        10159    7642    68
+2: All sales: existing model OLS dollars  event        11202    8235    68
+3: All sales: existing model     OLS log    did        10159    7642    68
+4: All sales: existing model     OLS log  event        11202    8235    68
+5: All sales: existing model        PPML    did        10159    7642    68
+6: All sales: existing model        PPML  event        11202    8235    68
+   treated_sales control_sales treated_sites control_sites pretrend_p
+           <int>         <int>         <int>         <int>      <num>
+1:          1530          8629            22            46         NA
+2:          1686          9516            22            46 0.24431540
+3:          1530          8629            22            46         NA
+4:          1686          9516            22            46 0.03074967
+5:          1530          8629            22            46         NA
+6:          1686          9516            22            46 0.54643118
+   estimated_slopes
+              <int>
+1:               28
+2:               37
+3:               28
+4:               37
+5:               28
+6:               37
+                                                                                                                                                                                                                                                                                                                                                                        formula
+                                                                                                                                                                                                                                                                                                                                                                         <char>
+1:                      y ~ treated_post + log_building_sqft + I(log_building_sqft^2) +      log_land_sqft + I(log_land_sqft^2) + age_at_sale + I(age_at_sale^2) +      res_char_beds + res_char_rooms + res_char_fbath + factor(analysis_class) +      factor(res_char_type_resd) + factor(res_char_cnst_qlty) +      factor(res_char_repair_cnd) | school_site_id + sale_year
+2: y ~ i(sale_year, treated, ref = 2012) + log_building_sqft + I(log_building_sqft^2) +      log_land_sqft + I(log_land_sqft^2) + age_at_sale + I(age_at_sale^2) +      res_char_beds + res_char_rooms + res_char_fbath + factor(analysis_class) +      factor(res_char_type_resd) + factor(res_char_cnst_qlty) +      factor(res_char_repair_cnd) | school_site_id + sale_year
+3:                      y ~ treated_post + log_building_sqft + I(log_building_sqft^2) +      log_land_sqft + I(log_land_sqft^2) + age_at_sale + I(age_at_sale^2) +      res_char_beds + res_char_rooms + res_char_fbath + factor(analysis_class) +      factor(res_char_type_resd) + factor(res_char_cnst_qlty) +      factor(res_char_repair_cnd) | school_site_id + sale_year
+4: y ~ i(sale_year, treated, ref = 2012) + log_building_sqft + I(log_building_sqft^2) +      log_land_sqft + I(log_land_sqft^2) + age_at_sale + I(age_at_sale^2) +      res_char_beds + res_char_rooms + res_char_fbath + factor(analysis_class) +      factor(res_char_type_resd) + factor(res_char_cnst_qlty) +      factor(res_char_repair_cnd) | school_site_id + sale_year
+5:                      y ~ treated_post + log_building_sqft + I(log_building_sqft^2) +      log_land_sqft + I(log_land_sqft^2) + age_at_sale + I(age_at_sale^2) +      res_char_beds + res_char_rooms + res_char_fbath + factor(analysis_class) +      factor(res_char_type_resd) + factor(res_char_cnst_qlty) +      factor(res_char_repair_cnd) | school_site_id + sale_year
+6: y ~ i(sale_year, treated, ref = 2012) + log_building_sqft + I(log_building_sqft^2) +      log_land_sqft + I(log_land_sqft^2) + age_at_sale + I(age_at_sale^2) +      res_char_beds + res_char_rooms + res_char_fbath + factor(analysis_class) +      factor(res_char_type_resd) + factor(res_char_cnst_qlty) +      factor(res_char_repair_cnd) | school_site_id + sale_year
+   fixest_version
+           <char>
+1:         0.12.1
+2:         0.12.1
+3:         0.12.1
+4:         0.12.1
+5:         0.12.1
+6:         0.12.1
+
+Dataset: dropped_terms
+Rows: 267  Columns: 4
+Key: comparison, estimator, design, term
+Duplicate or missing keys: 0
+comparison | character | nonmissing: 267 | distinct nonmissing: 5
+[1] "All sales: existing model"      "Matched: all premiums by year"
+[3] "Matched: existing model"        "Matched: initial value"
+[5] "Matched: initial value by year"
+estimator | character | nonmissing: 267 | distinct nonmissing: 3
+[1] "OLS dollars" "OLS log"     "PPML"
+design | character | nonmissing: 267 | distinct nonmissing: 2
+[1] "did"   "event"
+term | character | nonmissing: 267 | distinct nonmissing: 33
+[1] "factor(res_char_type_resd)Split Level"
+[2] "factor(sale_year)2009"
+[3] "factor(sale_year)2009:factor(analysis_class)208"
+[4] "factor(sale_year)2009:factor(res_char_cnst_qlty)Poor"
+[5] "factor(sale_year)2009:factor(res_char_type_resd)Split Level"
+[6] "factor(sale_year)2010"
+First six records:
+                  comparison   estimator design
+                      <char>      <char> <char>
+1: All sales: existing model OLS dollars    did
+2: All sales: existing model OLS dollars  event
+3: All sales: existing model     OLS log    did
+4: All sales: existing model     OLS log  event
+5: All sales: existing model        PPML    did
+6: All sales: existing model        PPML  event
+                                    term
+                                  <char>
+1: factor(res_char_type_resd)Split Level
+2: factor(res_char_type_resd)Split Level
+3: factor(res_char_type_resd)Split Level
+4: factor(res_char_type_resd)Split Level
+5: factor(res_char_type_resd)Split Level
+6: factor(res_char_type_resd)Split Level
+
+Dataset: sources
+Rows: 2  Columns: 2
+Key: source
+Duplicate or missing keys: 0
+source | character | nonmissing: 2 | distinct nonmissing: 2
+[1] "../input/hedonic_dynamics.rds"
+[2] "../output/assessments_2006_snapshot.tar.gz"
+sha256 | character | nonmissing: 2 | distinct nonmissing: 2
+[1] "65ee79cb29c455c836587364656bb3f96fb8c4dd46b9a7a8a11d9bc1f34a5a98"
+[2] "8a89ecdcbf49156571016b1849223c8980bc0e684ef7e51b0cac81712caa7567"
+First six records:
+                                       source
+                                       <char>
+1:              ../input/hedonic_dynamics.rds
+2: ../output/assessments_2006_snapshot.tar.gz
+                                                             sha256
+                                                             <char>
+1: 8a89ecdcbf49156571016b1849223c8980bc0e684ef7e51b0cac81712caa7567
+2: 65ee79cb29c455c836587364656bb3f96fb8c4dd46b9a7a8a11d9bc1f34a5a98

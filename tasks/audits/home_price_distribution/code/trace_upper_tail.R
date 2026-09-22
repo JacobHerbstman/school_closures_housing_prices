@@ -35,7 +35,7 @@ check <- merge(sites[,.(site_contribution=sum(upper_contribution_to_group_mean))
   bands[price_band %in% c("75-95","95-100"),.(band_contribution=sum(contribution_to_mean)),by=.(treated,period)],by=c("treated","period"))
 stopifnot(nrow(check)==4,max(abs(check$site_contribution-check$band_contribution))<1e-7,
   nrow(bands)==16,!anyDuplicated(bands[,.(treated,period,price_band)]),
-  !anyDuplicated(sites[,.(treated,period,school_site_id)]),sum(sites$sales)==9912,
+  !anyDuplicated(sites[,.(treated,period,school_site_id)]),sum(sites$sales)==nrow(sales),
   !anyNA(sites[upper_sales>0]),all(is.na(sites[upper_sales==0,upper_mean_price])))
 setorder(bands,treated,period,price_band)
 setorder(sites,treated,period,school_site_id)

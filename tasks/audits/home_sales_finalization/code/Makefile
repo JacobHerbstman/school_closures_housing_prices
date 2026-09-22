@@ -11,7 +11,7 @@ all: ../output/finalization.md ../output/sample_comparison.png
 ../output/sample_reconciliation.rds: reconcile_samples.R ../output/class_followups.rds \
 	../input/corrected_home_sale_characteristics_2006_2025.csv \
 	../input/home_sales_with_characteristics_2006_2025.csv ../input/careful_characteristic_updates.rds \
-	../input/home_sales_2008_2018.csv ../input/geocoded_home_sales_2008_2018.csv \
+	../input/home_sales_2008_2018.csv \
 	../input/geocoded_master_home_transactions_2006_2025.csv Makefile ../../../shared/code/shell_functions.make | ../output
 	$(RSCRIPT) $<
 
@@ -30,10 +30,6 @@ all: ../output/finalization.md ../output/sample_comparison.png
 ../input/home_sales_2008_2018.csv: ../../../clean_home_sales/output/home_sales_2008_2018.csv | ../input
 	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
 
-../input/geocoded_home_sales_2008_2018.csv: \
-	../../../build_geocoded_home_sales/output/geocoded_home_sales_2008_2018.csv | ../input
-	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
-
 ../input/geocoded_master_home_transactions_2006_2025.csv: \
 	../../../build_geocoded_home_sales/output/geocoded_master_home_transactions_2006_2025.csv | ../input
 	@test "$$(readlink "$@" 2>/dev/null)" = "$<" || ln -sf "$<" "$@"
@@ -47,7 +43,7 @@ all: ../output/finalization.md ../output/sample_comparison.png
 
 link-inputs: ../input/corrected_home_sale_characteristics_2006_2025.csv \
 	../input/home_sales_with_characteristics_2006_2025.csv ../input/home_sales_2008_2018.csv \
-	../input/geocoded_home_sales_2008_2018.csv ../input/geocoded_master_home_transactions_2006_2025.csv \
+	../input/geocoded_master_home_transactions_2006_2025.csv \
 	../input/careful_characteristic_updates.rds ../input/hie_data.parquet
 
 include ../../../shared/code/generic.make

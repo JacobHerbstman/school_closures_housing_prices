@@ -1,25 +1,38 @@
 # setwd("/Users/jacobherbstman/Desktop/school_closures_house_prices/tasks/audits/home_data_overview/code")
+# radius_miles <- 0.25
+# end_year <- 2018L
+# property_sample <- "all"
+args <- commandArgs(trailingOnly=TRUE)
+stopifnot(length(args)==3L)
+radius_miles <- as.numeric(args[1])
+end_year <- as.integer(args[2])
+property_sample <- args[3]
+stopifnot(property_sample %in% c("all","single_family"))
+stopifnot(end_year %in% c(2018L,2023L))
+stopifnot(radius_miles %in% c(0.125,0.25,0.5))
+radius_feet <- radius_miles*5280
+suffix <- paste0(if(radius_miles==0.25) "" else paste0("_",radius_miles),if(end_year==2018L) "" else paste0("_through_",end_year),if(property_sample=="single_family") "_single_family" else "")
 library(data.table)
 source("../../../shared/code/report_data.R")
-audit <- readRDS("../output/data_review.rds")
+audit <- readRDS(paste0("../output/data_review",suffix,".rds"))
 report <- capture.output({
-  cat("Saved RDS SHA-256:",digest::digest("../output/data_review.rds",file=TRUE,algo="sha256"),"\n")
-  keys <- list(checks="check",schools="school_id",welcoming=c("closed_school_id","school_id"),sites="school_site_id",
+  cat("Saved RDS SHA-256:",digest::digest(paste0("../output/data_review",suffix,".rds"),file=TRUE,algo="sha256"),"\n")
+  keys <- list(overlap="radius_miles",checks="check",schools="school_id",welcoming=c("closed_school_id","school_id"),sites="school_site_id",
    near_sites=c("site1","site2"),attrition=c("group","step"),annual_counts=c("stage","group","sale_year"),
-   complete_prices=c("group","sale_year"),sample_changes=c("group","sale_year"),regression_attrition=c("group","step"),
+   complete_prices=c("group","sale_year"),
    annual_prices=c("group","sale_year"),composition=c("group","sale_year","property_type"),support="school_site_id",
-   site_year=c("school_site_id","sale_year"),geography=c("focal_exposure_025","n_welcoming_schools_025","n_other_candidate_sites_025"),
-   selection=c("group","sale_year"),cutoffs="sale_year",location_variants=c("group","sale_year","variant"),map_sales="row_id",
+   site_year=c("school_site_id","sale_year"),geography=c("focal_exposure","n_welcoming_schools","n_other_candidate_sites"),
+   selection=c("group","sale_year"),location_variants=c("group","sale_year","variant"),map_sales="row_id",
    date_precision=c("group","sale_date_precision"),source_hashes="source")
   # Missing-coordinate exposure counts have undefined nearby-school counts.
   for(name in names(keys)) {
    d <- copy(audit[[name]])
-   if(name=="geography") for(field in c("n_welcoming_schools_025","n_other_candidate_sites_025"))
+   if(name=="geography") for(field in c("n_welcoming_schools","n_other_candidate_sites"))
      d[is.na(get(field)),(field):=-1L]
    report_data(d,name,keys[[name]])
   }
 })
-writeLines(trimws(report, which = "right"), "../report/data_review.txt")
+writeLines(trimws(report, which = "right"), paste0("../report/data_review",suffix,".txt"))
 # Tables recur throughout the evidence note. Escape source notes for Markdown.
 md_table <- function(d) {
  d <- as.data.frame(d)
@@ -34,7 +47,8 @@ md_table <- function(d) {
 }
 writeLines(c(
  "# School and housing data review", "",
- "The descriptive packet now includes 11,600 sales: 3,517 near selected closed schools and 8,083 near controls. Descriptive trends retain sales with incomplete property characteristics. All 10,921 sales in the earlier packet remain, with 679 added. School selection, geography, transaction weights, and the existing regression sample remain unchanged. The independent reconstruction still reproduces all 167,468 citywide complete-characteristics price-sample IDs.","",
+ if(property_sample=="single_family") "Single-family version: corrected classes 202–210, 234, 278, and 295 (houses and townhouses). Apartment buildings are excluded. All count stages restrict to these classes." else "Property sample: houses, townhouses, and 2–6-unit apartment buildings.","",
+ sprintf("This packet uses a %.3g-mile radius and retains %s sales (%s treated, %s control) from the production clean price sample. School definitions are fixed.",radius_miles,format(audit$overlap$retained,big.mark=","),format(audit$overlap$treated,big.mark=","),format(audit$overlap$control,big.mark=",")),"",
  "## School programs, sites, and receiving schools", "",
  "The supplied February list contains 129 programs at 127 sites. Of the 47 programs that closed in 2013, the housing roster retains 30. Appendix A of the Consortium's 2015 report matches every closed program and all 53 receiving-school assignments (48 distinct receiving schools). It documents 15 closed programs whose buildings were taken over by receiving schools. CPS notices independently confirm that Fermi/South Shore and Garfield Park/Faraday already shared facilities. These 17 cases exactly match the closed programs excluded from the 30-school subset.","",
  "The 49 controls are a selected subset of the 82 listed programs that did not close in 2013. The remaining 33 have other recorded actions or receiving roles; their original notes are listed below. All 49 control IDs appear in the 2013-14 report card. Every candidate name also matches the original CPS February list, recovered from the contemporaneous ABC news PDF mirror and checked against the displayed page. The 33 non-control candidates include 18 receiving schools, five turnarounds, two delayed closures, four canceled closure proposals, three co-location cases, and Mason (its high-school program closed). The source notes govern these exclusions; individual final board reports for every non-closure action have not all been reverified. In particular, excluding the four canceled proposals is a comparison-group choice, not a failed merge.","",
@@ -44,18 +58,18 @@ writeLines(c(
  "## Housing construction and assumptions", "",
  "The county extract covers Chicago assessor townships 70-77 and 2006-2025. The master keeps 428,582 single-parcel, non-condo residential transaction records, including transactions later excluded from prices. It excludes bundled sales, condos, and property classes outside the designated small-residential universe. County township coding defines city coverage.","",
  "Property characteristics join on exact parcel ID and sale year. Only single-building-card records enter the price sample. Legacy home-improvement exemptions update eligible pre-2021 characteristics; repeated identical active records count once, unresolved fields remain missing, and the original values remain available. These are administrative records, not verified measurements at the instant of sale. An exemption beginning in the sale year cannot establish whether renovation preceded that sale. Later assessor records are validation evidence, never values copied backward.","",
- "The price sample uses corrected property class, excluding class/use/apartment conflicts and mixed-use class 212. Class 211 means a whole 2-6-unit building. Descriptive prices no longer require complete core characteristics or an observed apartment-unit count. Of the 679 added comparison sales, 673 have blank apartment counts; six additional sales fail other completeness requirements. Apartment-building classification still comes from the assessor class. Building-size summaries use only observed positive floor area; five control sales have no usable floor area and still enter dollar-price summaries. The existing regression sample keeps its completeness requirements.","",
- "County sale-quality flags exclude recorded nominal prices at or below $10,000, selected deed types, and records flagged for the same parcel at the same price within 365 days. The threshold is fixed across years. The separate home_sale_quality_flags audit verifies that source flags survive every merge unchanged and explains overlapping exclusions; about 90% of flagged losses in the comparison have prices at or below $10,000. The $5,000 per-square-foot ceiling is a plausibility screen, not independent proof that each excluded transaction is erroneous. For this comparison, the annual price-per-square-foot cutoffs remain those computed at the 99.9th percentile of the existing citywide complete-characteristics sample. They are not recomputed on the enlarged sample. Price-per-square-foot screens apply only where positive floor area is observed; room consistency is checked only where both counts are observed. Missing values alone no longer exclude a sale. The annual cutoffs still remove one comparison sale per group in this snapshot. No lower-tail trim is applied.","",
+ "Property eligibility follows the corrected assessor class. Class 211 denotes a whole 2-6-unit building. Prices describe the production `clean_home_sales` sample, which this review does not rebuild. That sample removes foreclosure auctions and transfers to lenders, requires complete characteristics (a blank class-211 unit count is kept as unknown), and applies the plausibility screens documented in its README. REO resales, quick resales, identical-name sales, and 1st-99th percentile price tails are flagged, not removed.","",
+ "County sale-quality flags exclude recorded nominal prices at or below $10,000, selected deed types, and records flagged for the same parcel at the same price within 365 days. The threshold is fixed across years. The separate home_sale_quality_flags audit verifies that source flags survive every merge unchanged and explains overlapping exclusions; the original 2008-2018 comparison attributed about 90% of flagged losses to prices at or below $10,000. The $5,000 per-square-foot ceiling is a plausibility screen, not independent proof that each excluded transaction is erroneous. No lower-tail trim is applied.","",
  "Prices are converted using monthly Chicago CPI to the annual-average 2022 price level. Recorded sale dates mix refined transaction dates with monthly recording dates. Annual trends include the whole 2013 transition year; no exact-day treatment assignment is made.","",
- "Historical parcel-year coordinates are checked against their longitude/latitude projections. Missing coordinates stay in the broad master. Straight-line distances and nearest IDs were independently recomputed for all 239,254 study-period transactions against every candidate and receiving location, matching production within one millionth of a foot. All proximity counts match.","",
- "The comparison keeps sales within 1,320 feet of either treatment group, excludes opposite-group overlap, and excludes proximity to receiving schools or other February candidates. Same-status overlaps enter once, assigned to the nearest site. Excluding other schools narrows the geography; it does not prove there are no spillovers beyond a quarter mile. Distances do not identify attendance zones.","",
+ "Historical parcel-year coordinates are checked against their longitude/latitude projections. Missing coordinates stay in the broad master. Straight-line distances and nearest IDs were independently recomputed for all study-period transactions against every candidate and receiving location, matching production within one millionth of a foot. All proximity counts match.","",
+ sprintf("The comparison uses a %.3g-mile radius for study schools, receiving schools, and other candidates. Opposite-group overlaps are excluded; same-group overlaps enter once at the nearest site. This does not establish the absence of spillovers beyond the radius. Distances do not identify attendance zones.",radius_miles),"",
+ "## Treatment-control overlap", "",
+ paste0("Counts below use 2008-",end_year," transactions passing all descriptive price rules before geography. Near either is the union, counting each sale once. Near both is excluded before receiving/other-candidate exclusions; overlap_share = near_both / near_either."), "",md_table(audit$overlap),
  "## Sequential sample counts", "",
  "Citywide counts precede geography. Group columns apply the same geographic comparison at every row. Restrictions accumulate; losses are not double-counted.","",
  md_table(dcast(audit$attrition,step+restriction~group,value.var="sales")),
- "## Sales added by removing completeness requirements", "",
- md_table(audit$sample_changes[,.(sales=sum(sales),complete_sales=sum(complete_sales),added=sum(added),added_blank_apartment_count=sum(added_blank_apartment_count),usable_area_sales=sum(usable_area_sales)),by=group]),
  "## Annual coverage", "",md_table(audit$selection),
- "Market-screened transactions retain the county flags, non-land restriction, and nominal price threshold but do not require complete characteristics. They remain restricted to the non-condo, single-parcel master. Counts have no housing-stock denominator and are not turnover rates.","",
+ "Market-screened transactions retain the county flags, non-land restriction, and nominal price threshold, before foreclosure, property-type, and characteristic restrictions. They remain restricted to the non-condo, single-parcel master. Counts have no housing-stock denominator and are not turnover rates.","",
  "## School sites contributing sales", "",md_table(audit$support[,.(school_site_id,school_names,group,schools,sales,parcels,pre_sales,post_sales)]),
  "## Closed programs excluded because school use continued", "",
  md_table(audit$schools[may2013_closed_47==1 & housing_treat_30==0,.(school_id,school_name_sy1213,notes)]),
@@ -71,4 +85,4 @@ writeLines(c(
  "- [CPS Garfield Park/Faraday notice](https://schoolinfo.cps.edu/SchoolActions/Download.aspx?fid=1708).",
  "- [Original CPS February list, ABC mirror](https://dig.abclocal.go.com/wls/documents/cps-list.pdf); all 129 names and their ID crosswalk are recorded in `code/candidate_reference.csv`. The PDF is an image, so the transcription was checked visually, not inferred from an OCR count.",
  "- School rosters and report cards: supplied files owned by `tasks/raw_school_data`; original flags and notes are retained.",
- "- County parcel sales, residential characteristics, exemptions, parcel coordinates, and CPI: acquisition URLs and vintages in their production-task READMEs.",""),"../output/data_review.md")
+ "- County parcel sales, residential characteristics, exemptions, parcel coordinates, and CPI: acquisition URLs and vintages in their production-task READMEs.",""),paste0("../output/data_review",suffix,".md"))

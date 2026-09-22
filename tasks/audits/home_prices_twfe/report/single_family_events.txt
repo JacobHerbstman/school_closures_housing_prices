@@ -1,0 +1,101 @@
+
+Dataset: coefficients
+Rows: 40  Columns: 9
+Key: model, term
+Duplicate or missing keys: 0
+term | character | nonmissing: 40 | distinct nonmissing: 10
+[1] "sale_year::2008:treated" "sale_year::2009:treated"
+[3] "sale_year::2010:treated" "sale_year::2011:treated"
+[5] "sale_year::2013:treated" "sale_year::2014:treated"
+estimate | numeric | nonmissing: 40 | distinct nonmissing: 40
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+-51571.075     -0.232     -0.126   3483.949   3542.073  51632.043
+std_error | numeric | nonmissing: 40 | distinct nonmissing: 40
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+    0.104     0.135 11535.949 17101.522 31038.770 50474.791
+t_value | numeric | nonmissing: 40 | distinct nonmissing: 40
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+-2.2353 -1.1270 -0.6317 -0.4979  0.1576  1.1394
+p_value | numeric | nonmissing: 40 | distinct nonmissing: 40
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.02842 0.25268 0.38299 0.46600 0.72334 0.99007
+conf_low | numeric | nonmissing: 40 | distinct nonmissing: 40
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+-97542.488 -60211.099 -16072.650 -30591.576     -0.436     -0.195
+conf_high | numeric | nonmissing: 40 | distinct nonmissing: 40
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+ -5599.662      0.115      0.208  37559.475  66180.426 152173.508
+model | character | nonmissing: 40 | distinct nonmissing: 4
+[1] "event_dollars"         "event_hedonic_dollars" "event_hedonic_log"
+[4] "event_log"
+sale_year | integer | nonmissing: 40 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2014    2013    2016    2018
+First six records:
+                      term   estimate std_error    t_value    p_value  conf_low
+                    <char>      <num>     <num>      <num>      <num>     <num>
+1: sale_year::2008:treated -16535.195  35340.27 -0.4678854 0.64124163 -86952.21
+2: sale_year::2009:treated  12425.047  33147.46  0.3748416 0.70885037 -53622.70
+3: sale_year::2010:treated -51571.075  23071.72 -2.2352502 0.02841815 -97542.49
+4: sale_year::2011:treated  -8025.734  28556.15 -0.2810510 0.77945561 -64925.10
+5: sale_year::2013:treated  -3384.290  29766.67 -0.1136939 0.90978832 -62695.67
+6: sale_year::2014:treated   9029.881  30335.88  0.2976635 0.76679411 -51415.67
+   conf_high         model sale_year
+       <num>        <char>     <int>
+1: 53881.823 event_dollars      2008
+2: 78472.793 event_dollars      2009
+3: -5599.662 event_dollars      2010
+4: 48873.629 event_dollars      2011
+5: 55927.095 event_dollars      2013
+6: 69475.432 event_dollars      2014
+
+Dataset: summaries
+Rows: 4  Columns: 5
+Key: model
+Duplicate or missing keys: 0
+model | character | nonmissing: 4 | distinct nonmissing: 4
+[1] "event_dollars"         "event_hedonic_dollars" "event_hedonic_log"
+[4] "event_log"
+observations | integer | nonmissing: 4 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   5643    5643    5643    5643    5643    5643
+sites | integer | nonmissing: 4 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+     75      75      75      75      75      75
+pretrend_p | numeric | nonmissing: 4 | distinct nonmissing: 4
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.08077 0.24316 0.33860 0.34981 0.44525 0.64126
+fixest_version | character | nonmissing: 4 | distinct nonmissing: 1
+[1] "0.12.1"
+First six records:
+                   model observations sites pretrend_p fixest_version
+                  <char>        <int> <int>      <num>         <char>
+1:             event_log         5643    75 0.29729138         0.12.1
+2:         event_dollars         5643    75 0.08076621         0.12.1
+3:     event_hedonic_log         5643    75 0.64125517         0.12.1
+4: event_hedonic_dollars         5643    75 0.37991147         0.12.1
+
+Dataset: support
+Rows: 22  Columns: 4
+Key: group, sale_year
+Duplicate or missing keys: 0
+group | character | nonmissing: 22 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+sale_year | integer | nonmissing: 22 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+sales | integer | nonmissing: 22 | distinct nonmissing: 21
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   98.0   121.8   244.0   256.5   381.2   515.0
+mean_price | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 153635  161150  190104  199764  216380  292058
+First six records:
+    group sale_year sales mean_price
+   <char>     <int> <int>      <num>
+1: Closed      2008   157   197265.6
+2: Closed      2009   130   185418.9
+3: Closed      2010   106   188522.2
+4: Closed      2011    98   156871.9
+5: Closed      2012   100   220514.4
+6: Closed      2013   119   185687.5

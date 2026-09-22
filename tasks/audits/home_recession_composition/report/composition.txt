@@ -1,0 +1,1188 @@
+RDS SHA-256: c1fdd97bc6f3ae0bf70ae6df1c62727c25ebf96074a22c98c8663e749da6adb7
+
+Dataset: sales
+Rows: 11202  Columns: 52
+Key: row_id
+Duplicate or missing keys: 0
+row_id | character | nonmissing: 11202 | distinct nonmissing: 11202
+[1] "7147011"  "7234241"  "7252512"  "96110344" "96110473" "96110474"
+school_site_id | integer | nonmissing: 11202 | distinct nonmissing: 68
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609797  610015  610106  610099  610225  610521
+pin | character | nonmissing: 11202 | distinct nonmissing: 8235
+[1] "13251090270000" "13251090280000" "13251090300000" "13251100250000"
+[5] "13251160160000" "13251160190000"
+group | character | nonmissing: 11202 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+sale_year | integer | nonmissing: 11202 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2011    2014    2013    2016    2018
+price | numeric | nonmissing: 11202 | distinct nonmissing: 9855
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  12015   46250  123954  253592  303630 5585455
+sale_date | IDate/Date | nonmissing: 11202 | distinct nonmissing: 1667
+[1] "2008-01-01" "2008-02-01" "2008-03-01" "2008-04-01" "2008-05-01"
+[6] "2008-06-01"
+sale_date_precision | character | nonmissing: 11202 | distinct nonmissing: 2
+[1] "idor_refined_day" "recording_month"
+res_char_bldg_sf | integer | nonmissing: 11202 | distinct nonmissing: 1862
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    400    1024    1234    1430    1700   10727
+res_char_land_sf | integer | nonmissing: 11202 | distinct nonmissing: 1815
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    406    3044    3570    3610    4020   34000
+res_char_yrblt | integer | nonmissing: 11202 | distinct nonmissing: 153
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1853    1908    1927    1939    1964    2017
+res_char_beds | integer | nonmissing: 11202 | distinct nonmissing: 9
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  1.000   2.000   3.000   3.012   3.000   9.000
+res_char_rooms | integer | nonmissing: 11202 | distinct nonmissing: 17
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  3.000   5.000   6.000   5.872   7.000  20.000
+res_char_fbath | integer | nonmissing: 11202 | distinct nonmissing: 7
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  1.000   1.000   1.000   1.421   2.000   7.000
+analysis_class | integer | nonmissing: 11202 | distinct nonmissing: 12
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  202.0   203.0   203.0   218.3   210.0   295.0
+res_char_type_resd | character | nonmissing: 11202 | distinct nonmissing: 5
+[1] "1 Story"     "1.5 Story"   "2 Story"     "3 Story +"   "Split Level"
+res_char_cnst_qlty | character | nonmissing: 11202 | distinct nonmissing: 3
+[1] "Average" "Deluxe"  "Poor"
+res_char_repair_cnd | character | nonmissing: 11202 | distinct nonmissing: 3
+[1] "Above Average" "Average"       "Below Average"
+hie_correction_eligible | logical | nonmissing: 11202 | distinct nonmissing: 2
+[1] FALSE  TRUE
+hie_start_year_timing_uncertain | logical | nonmissing: 11202 | distinct nonmissing: 2
+[1] FALSE  TRUE
+res_char_renovation | character | nonmissing: 11202 | distinct nonmissing: 2
+[1] ""    "Yes"
+treated | integer | nonmissing: 11202 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  0.0000  0.0000  0.1505  0.0000  1.0000
+log_price | numeric | nonmissing: 11202 | distinct nonmissing: 9855
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  9.394  10.742  11.728  11.733  12.624  15.536
+log_building_sqft | numeric | nonmissing: 11202 | distinct nonmissing: 1862
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  5.991   6.931   7.118   7.191   7.438   9.281
+log_land_sqft | numeric | nonmissing: 11202 | distinct nonmissing: 1815
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  6.006   8.021   8.180   8.112   8.299  10.434
+age_at_sale | integer | nonmissing: 11202 | distinct nonmissing: 153
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    1.0    50.0    85.0    74.8   106.0   155.0
+treated_post | integer | nonmissing: 11202 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.00000 0.00000 0.00000 0.07972 0.00000 1.00000
+repeat_pre_post | logical | nonmissing: 11202 | distinct nonmissing: 2
+[1] FALSE  TRUE
+stable_repeat | logical | nonmissing: 11202 | distinct nonmissing: 2
+[1] FALSE  TRUE
+assessment_year | numeric | nonmissing: 10991 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+   2006    2006    2006    2006    2006    2006     211
+assessment_class | character | nonmissing: 10991 | distinct nonmissing: 23
+[1] "100" "190" "200" "201" "202" "203"
+assessment_row_id | character | nonmissing: 10991 | distinct nonmissing: 8070
+[1] "132510902700002006" "132510902800002006" "132510903000002006"
+[4] "132511002500002006" "132511601600002006" "132511601900002006"
+initial_assessed_total | numeric | nonmissing: 10991 | distinct nonmissing: 6403
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+      0   13072   15838   22942   27046  454985     211
+initial_assessed_building | numeric | nonmissing: 10991 | distinct nonmissing: 6250
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+      0   10176   12497   18434   21517  428893     211
+initial_assessed_land | numeric | nonmissing: 10991 | distinct nonmissing: 2197
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+      0    2804    3414    4508    4994   60274     211
+assessment_status | character | nonmissing: 11202 | distinct nonmissing: 4
+[1] "No 2006 record"            "No positive total"
+[3] "Not single-family in 2006" "Usable 2006 assessment"
+assessment_usable | logical | nonmissing: 11202 | distinct nonmissing: 2
+[1] FALSE  TRUE
+log_initial_value | numeric | nonmissing: 10452 | distinct nonmissing: 6096
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+  8.143   9.495   9.674   9.861  10.187  13.028     750
+school_names | character | nonmissing: 11202 | distinct nonmissing: 68
+[1] "Adam Clayton Powell Paideia Community Academy ES"
+[2] "Alexander Graham Elementary School"
+[3] "Alfred David Kohn Elementary School"
+[4] "Amos Alonzo Stagg Elementary School"
+[5] "Ana Roque de Duprey Elementary School / Alexander von Humboldt Elementary School"
+[6] "Anthony Overton Elementary School"
+seller_known | logical | nonmissing: 11202 | distinct nonmissing: 2
+[1] FALSE  TRUE
+narrow_seller | logical | nonmissing: 11202 | distinct nonmissing: 2
+[1] FALSE  TRUE
+broad_seller | logical | nonmissing: 11202 | distinct nonmissing: 2
+[1] FALSE  TRUE
+bank_lender_seller | logical | nonmissing: 11202 | distinct nonmissing: 2
+[1] FALSE  TRUE
+sale_document_num | character | nonmissing: 11202 | distinct nonmissing: 11202
+[1] "1000426462" "1000447037" "1000512268" "1000533017" "1000535141"
+[6] "1000545060"
+sale_price_nominal | numeric | nonmissing: 11202 | distinct nonmissing: 2340
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  10050   38000  100500  209337  249975 4689900
+buyer_known | logical | nonmissing: 11202 | distinct nonmissing: 2
+[1] FALSE  TRUE
+organization_buyer | logical | nonmissing: 11202 | distinct nonmissing: 2
+[1] FALSE  TRUE
+seller_type | character | nonmissing: 11202 | distinct nonmissing: 4
+[1] "Judicial/GSE/HUD seller" "Other bank/lender name"
+[3] "Other known seller"      "Unknown seller"
+under_50k | logical | nonmissing: 11202 | distinct nonmissing: 2
+[1] FALSE  TRUE
+townhouse | logical | nonmissing: 11202 | distinct nonmissing: 2
+[1] FALSE  TRUE
+log_price_to_initial | numeric | nonmissing: 10452 | distinct nonmissing: 10451
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+ -2.104   1.104   1.851   1.773   2.485   5.260     750
+community_key | character | nonmissing: 11202 | distinct nonmissing: 41
+[1] "ARMOURSQUARE"  "AUBURNGRESHAM" "AUSTIN"        "AVALONPARK"
+[5] "AVONDALE"      "BRIDGEPORT"
+First six records:
+Key: <row_id>
+     row_id school_site_id            pin       group sale_year     price
+     <char>          <int>         <char>      <char>     <int>     <num>
+1:  7147011         610106 16032320390000 Stayed open      2018  28721.11
+2:  7234241         610218 25012240340000 Stayed open      2016 259190.55
+3:  7252512         610176 25201110010000 Stayed open      2011  18699.37
+4: 96110344         610047 20253010230000 Stayed open      2017  46669.10
+5: 96110473         610225 25201190650000 Stayed open      2018  69418.77
+6: 96110474         610176 25201050410000 Stayed open      2018  83288.78
+    sale_date sale_date_precision res_char_bldg_sf res_char_land_sf
+       <IDat>              <char>            <int>            <int>
+1: 2018-04-03    idor_refined_day             1470             3100
+2: 2016-11-23    idor_refined_day             1367             4166
+3: 2011-07-28    idor_refined_day             1211             5191
+4: 2017-12-20    idor_refined_day             1194             3270
+5: 2018-01-10    idor_refined_day             1080             4602
+6: 2018-02-13    idor_refined_day             1875             6250
+   res_char_yrblt res_char_beds res_char_rooms res_char_fbath analysis_class
+            <int>         <int>          <int>          <int>          <int>
+1:           2014             3              7              2            203
+2:           1955             3              5              1            203
+3:           1926             3              6              1            203
+4:           1920             3              4              2            203
+5:           1964             2              5              1            203
+6:           1924             4              7              1            204
+   res_char_type_resd res_char_cnst_qlty res_char_repair_cnd
+               <char>             <char>              <char>
+1:            1 Story            Average             Average
+2:            1 Story            Average             Average
+3:            1 Story            Average             Average
+4:            1 Story            Average             Average
+5:            1 Story            Average             Average
+6:          1.5 Story            Average             Average
+   hie_correction_eligible hie_start_year_timing_uncertain res_char_renovation
+                    <lgcl>                          <lgcl>              <char>
+1:                   FALSE                           FALSE
+2:                   FALSE                           FALSE
+3:                   FALSE                           FALSE
+4:                   FALSE                           FALSE
+5:                   FALSE                           FALSE
+6:                   FALSE                           FALSE
+   treated log_price log_building_sqft log_land_sqft age_at_sale treated_post
+     <int>     <num>             <num>         <num>       <int>        <int>
+1:       0 10.265388          7.293018      8.039157           4            0
+2:       0 12.465319          7.220374      8.334712          61            0
+3:       0  9.836245          7.099202      8.554682          85            0
+4:       0 10.750838          7.085064      8.092545          97            0
+5:       0 11.147913          6.984716      8.434246          54            0
+6:       0 11.330069          7.536364      8.740337          94            0
+   repeat_pre_post stable_repeat assessment_year assessment_class
+            <lgcl>        <lgcl>           <num>           <char>
+1:           FALSE         FALSE            2006              100
+2:           FALSE         FALSE            2006              203
+3:           FALSE         FALSE            2006              203
+4:           FALSE         FALSE            2006              203
+5:           FALSE         FALSE            2006              203
+6:           FALSE         FALSE            2006              204
+    assessment_row_id initial_assessed_total initial_assessed_building
+               <char>                  <num>                     <num>
+1: 160323203900002006                   5456                         0
+2: 250122403400002006                  16911                     13912
+3: 252011100100002006                  12830                     10754
+4: 202530102300002006                  15403                     12003
+5: 252011906500002006                  13059                     10482
+6: 252010504100002006                  17912                     15412
+   initial_assessed_land         assessment_status assessment_usable
+                   <num>                    <char>            <lgcl>
+1:                  5456 Not single-family in 2006             FALSE
+2:                  2999    Usable 2006 assessment              TRUE
+3:                  2076    Usable 2006 assessment              TRUE
+4:                  3400    Usable 2006 assessment              TRUE
+5:                  2577    Usable 2006 assessment              TRUE
+6:                  2500    Usable 2006 assessment              TRUE
+   log_initial_value                                   school_names
+               <num>                                         <char>
+1:                NA      Brian Piccolo Elementary Specialty School
+2:          9.735720                Joseph Warren Elementary School
+3:          9.459541 John D Shoop Math-Science Technical Academy ES
+4:          9.642318                James Madison Elementary School
+5:          9.477233                John Whistler Elementary School
+6:          9.793226 John D Shoop Math-Science Technical Academy ES
+   seller_known narrow_seller broad_seller bank_lender_seller sale_document_num
+         <lgcl>        <lgcl>       <lgcl>             <lgcl>            <char>
+1:         TRUE         FALSE        FALSE              FALSE        2109057039
+2:         TRUE         FALSE        FALSE              FALSE        2126749085
+3:         TRUE         FALSE        FALSE              FALSE        2128822018
+4:         TRUE          TRUE         TRUE              FALSE        1800401093
+5:         TRUE         FALSE        FALSE              FALSE        1805101267
+6:         TRUE          TRUE         TRUE              FALSE        1804612051
+   sale_price_nominal buyer_known organization_buyer             seller_type
+                <num>      <lgcl>             <lgcl>                  <char>
+1:              25000        TRUE               TRUE      Other known seller
+2:             219000        TRUE              FALSE      Other known seller
+3:              15000        TRUE              FALSE      Other known seller
+4:              40000        TRUE              FALSE Judicial/GSE/HUD seller
+5:              60000        TRUE              FALSE      Other known seller
+6:              72000        TRUE               TRUE Judicial/GSE/HUD seller
+   under_50k townhouse log_price_to_initial  community_key
+      <lgcl>    <lgcl>                <num>         <char>
+1:      TRUE     FALSE                   NA   HUMBOLDTPARK
+2:     FALSE     FALSE            2.7295992 CALUMETHEIGHTS
+3:      TRUE     FALSE            0.3767035     MORGANPARK
+4:      TRUE     FALSE            1.1085200     SOUTHSHORE
+5:     FALSE     FALSE            1.6706798     MORGANPARK
+6:     FALSE     FALSE            1.5368429     MORGANPARK
+
+Dataset: annual
+Rows: 22  Columns: 15
+Key: group, sale_year
+Duplicate or missing keys: 0
+group | character | nonmissing: 22 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+sale_year | integer | nonmissing: 22 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+sales | integer | nonmissing: 22 | distinct nonmissing: 21
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  107.0   154.5   424.0   509.2   814.8  1190.0
+median_price | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  73753   88929  140456  141029  161319  266561
+mean_log_price | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  11.46   11.51   11.85   11.81   11.91   12.39
+mean_sqft | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1349    1397    1451    1479    1556    1673
+median_sqft | numeric | nonmissing: 22 | distinct nonmissing: 21
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1178    1214    1249    1325    1442    1584
+median_age | numeric | nonmissing: 22 | distinct nonmissing: 19
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  69.50   80.00   85.25   85.98   92.38  107.00
+townhouse_share | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.04545 0.06782 0.09206 0.08625 0.10256 0.12346
+under_50k_share | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.1271  0.2102  0.2692  0.2781  0.3614  0.4045
+seller_coverage | numeric | nonmissing: 22 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.5343  0.9892  1.0000  0.9554  1.0000  1.0000
+narrow_seller_share | numeric | nonmissing: 22 | distinct nonmissing: 22
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+0.009804 0.060621 0.108296 0.117279 0.173444 0.247178
+broad_seller_share | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.05882 0.21809 0.29940 0.29044 0.38171 0.47510
+buyer_coverage | numeric | nonmissing: 22 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.7990  0.9946  1.0000  0.9788  1.0000  1.0000
+organization_buyer_share | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0365  0.1296  0.1660  0.1584  0.2020  0.2236
+First six records:
+    group sale_year sales median_price mean_log_price mean_sqft median_sqft
+   <char>     <int> <int>        <num>          <num>     <num>       <num>
+1: Closed      2008   154    163117.08       11.84600  1365.786      1227.0
+2: Closed      2009   119    132992.97       11.74105  1562.807      1443.0
+3: Closed      2010   116    133203.96       11.70287  1559.086      1470.5
+4: Closed      2011   107     75173.55       11.50152  1461.841      1414.0
+5: Closed      2012   141    200936.35       11.98325  1547.376      1494.0
+6: Closed      2013   156    136525.90       11.85305  1581.333      1440.0
+   median_age townhouse_share under_50k_share seller_coverage
+        <num>           <num>           <num>           <num>
+1:       85.5      0.04545455       0.2272727               1
+2:       97.0      0.08403361       0.3697479               1
+3:      107.0      0.05172414       0.3534483               1
+4:       98.0      0.05607477       0.3925234               1
+5:       86.0      0.11347518       0.2482270               1
+6:       92.5      0.10256410       0.2884615               1
+   narrow_seller_share broad_seller_share buyer_coverage
+                 <num>              <num>          <num>
+1:          0.01948052          0.4155844              1
+2:          0.08403361          0.4117647              1
+3:          0.04310345          0.3103448              1
+4:          0.18691589          0.3831776              1
+5:          0.17730496          0.2765957              1
+6:          0.17307692          0.2884615              1
+   organization_buyer_share
+                      <num>
+1:                0.1558442
+2:                0.1176471
+3:                0.2155172
+4:                0.1214953
+5:                0.1702128
+6:                0.1410256
+
+Dataset: initial_annual
+Rows: 22  Columns: 8
+Key: group, sale_year
+Duplicate or missing keys: 0
+group | character | nonmissing: 22 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+sale_year | integer | nonmissing: 22 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+sales | integer | nonmissing: 22 | distinct nonmissing: 21
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   99.0   143.8   400.0   475.1   764.0  1103.0
+parcels | integer | nonmissing: 22 | distinct nonmissing: 21
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   95.0   137.0   383.0   452.8   731.5  1050.0
+mean_initial | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  20684   22203   24284   25177   28024   32804
+median_initial | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  14785   15539   16119   16947   17244   26345
+share_above_25k | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.2022  0.2347  0.2846  0.3083  0.3555  0.5000
+mean_log_ratio | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  1.497   1.607   1.744   1.773   1.936   2.122
+First six records:
+    group sale_year sales parcels mean_initial median_initial share_above_25k
+   <char>     <int> <int>   <int>        <num>          <num>           <num>
+1: Closed      2008   143     135     22933.98        15514.0       0.2237762
+2: Closed      2009   106     103     25522.38        16308.5       0.3207547
+3: Closed      2010   112     106     27879.12        17957.5       0.3660714
+4: Closed      2011    99      95     24325.32        16072.0       0.2929293
+5: Closed      2012   134     129     32804.19        26345.0       0.5000000
+6: Closed      2013   147     143     30926.51        20154.0       0.4489796
+   mean_log_ratio
+            <num>
+1:       1.935144
+2:       1.600424
+3:       1.605958
+4:       1.510469
+5:       1.762699
+6:       1.685190
+
+Dataset: parcel_year
+Rows: 9961  Columns: 5
+Key: pin, sale_year
+Duplicate or missing keys: 0
+pin | character | nonmissing: 9961 | distinct nonmissing: 7637
+[1] "13251090270000" "13251090280000" "13251090300000" "13251100250000"
+[5] "13251160190000" "13251160210000"
+group | character | nonmissing: 9961 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+school_site_id | integer | nonmissing: 9961 | distinct nonmissing: 67
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609797  610015  610106  610100  610225  610521
+sale_year | integer | nonmissing: 9961 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2011    2014    2013    2016    2018
+initial_assessed_total | numeric | nonmissing: 9961 | distinct nonmissing: 6096
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   3438   13270   15971   23296   27195  454985
+First six records:
+              pin       group school_site_id sale_year initial_assessed_total
+           <char>      <char>          <int>     <int>                  <num>
+1: 13251090270000 Stayed open         609809      2016                  33036
+2: 13251090270000 Stayed open         609809      2018                  33036
+3: 13251090280000 Stayed open         609809      2012                  32289
+4: 13251090300000 Stayed open         609809      2008                  32308
+5: 13251100250000 Stayed open         609809      2009                  36393
+6: 13251160190000 Stayed open         609809      2009                  30119
+
+Dataset: parcel_annual
+Rows: 22  Columns: 4
+Key: group, sale_year
+Duplicate or missing keys: 0
+group | character | nonmissing: 22 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+sale_year | integer | nonmissing: 22 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+parcels | integer | nonmissing: 22 | distinct nonmissing: 21
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   95.0   137.0   383.0   452.8   731.5  1050.0
+median_initial | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  14801   15552   16164   16849   17502   20880
+First six records:
+    group sale_year parcels median_initial
+   <char>     <int>   <int>          <num>
+1: Closed      2008     135        15496.0
+2: Closed      2009     103        17144.0
+3: Closed      2010     106        17814.5
+4: Closed      2011      95        16072.0
+5: Closed      2012     129        20880.0
+6: Closed      2013     143        20306.0
+
+Dataset: repeated_2012
+Rows: 10  Columns: 7
+Key: row_id
+Duplicate or missing keys: 0
+row_id | character | nonmissing: 10 | distinct nonmissing: 10
+[1] "96196130" "96419644" "97087923" "97495095" "97903566" "98004959"
+pin | character | nonmissing: 10 | distinct nonmissing: 5
+[1] "14072080130000" "16013250120000" "16134070170000" "17054130470000"
+[5] "25012220160000"
+school_names | character | nonmissing: 10 | distinct nonmissing: 5
+[1] "Jean D Lafayette Elementary School"
+[2] "Kate S Buckingham Special Education Center"
+[3] "Lyman Trumbull Elementary School"
+[4] "Near North Elementary School"
+[5] "William H King Elementary School"
+sale_date | IDate/Date | nonmissing: 10 | distinct nonmissing: 8
+[1] "2012-02-01" "2012-04-01" "2012-05-01" "2012-06-01" "2012-07-01"
+[6] "2012-08-01"
+sale_document_num | character | nonmissing: 10 | distinct nonmissing: 10
+[1] "1204757156" "1215718017" "1217941043" "1219312124" "1220734090"
+[6] "1224941010"
+sale_price_nominal | numeric | nonmissing: 10 | distinct nonmissing: 10
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  55000   71225  203750  223240  326500  472000
+initial_assessed_total | numeric | nonmissing: 10 | distinct nonmissing: 5
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  16989   29901   32925   37768   48764   60262
+First six records:
+     row_id            pin                       school_names  sale_date
+     <char>         <char>                             <char>     <IDat>
+1: 98088689 14072080130000   Lyman Trumbull Elementary School 2012-07-01
+2: 96419644 14072080130000   Lyman Trumbull Elementary School 2012-10-01
+3: 97495095 16013250120000 Jean D Lafayette Elementary School 2012-05-01
+4: 97087923 16013250120000 Jean D Lafayette Elementary School 2012-10-01
+5: 98051560 16134070170000   William H King Elementary School 2012-06-01
+6: 98273977 16134070170000   William H King Elementary School 2012-11-01
+   sale_document_num sale_price_nominal initial_assessed_total
+              <char>              <num>                  <num>
+1:        1220734090             335000                  60262
+2:        1230441039             450000                  60262
+3:        1217941043              89900                  29901
+4:        1231826116             243000                  29901
+5:        1219312124              65000                  32925
+6:        1234842014              55000                  32925
+
+Dataset: site_year
+Rows: 629  Columns: 11
+Key: school_site_id, sale_year
+Duplicate or missing keys: 0
+group | character | nonmissing: 629 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+school_site_id | integer | nonmissing: 629 | distinct nonmissing: 67
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609797  610013  610106  610099  610218  610521
+school_names | character | nonmissing: 629 | distinct nonmissing: 67
+[1] "Adam Clayton Powell Paideia Community Academy ES"
+[2] "Alexander Graham Elementary School"
+[3] "Alfred David Kohn Elementary School"
+[4] "Amos Alonzo Stagg Elementary School"
+[5] "Ana Roque de Duprey Elementary School / Alexander von Humboldt Elementary School"
+[6] "Anthony Overton Elementary School"
+sale_year | integer | nonmissing: 629 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+sales | integer | nonmissing: 629 | distinct nonmissing: 77
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1.00    3.00   11.00   16.62   22.00  127.00
+mean_initial | numeric | nonmissing: 629 | distinct nonmissing: 620
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   7239   13645   16309   24912   32237  126713
+median_initial | numeric | nonmissing: 629 | distinct nonmissing: 599
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   7239   13008   15924   23594   29828   79498
+mean_log_price | numeric | nonmissing: 629 | distinct nonmissing: 628
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  9.484  10.747  11.348  11.594  12.504  14.233
+median_sqft | numeric | nonmissing: 629 | distinct nonmissing: 426
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    629    1040    1205    1367    1692    3898
+above_25k | integer | nonmissing: 629 | distinct nonmissing: 40
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  0.000   0.000   0.000   4.432   5.000  65.000
+sale_share | numeric | nonmissing: 629 | distinct nonmissing: 385
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+0.0009066 0.0095238 0.0209790 0.0349762 0.0454545 0.2949640
+First six records:
+    group school_site_id                   school_names sale_year sales
+   <char>          <int>                         <char>     <int> <int>
+1: Closed         609906 Robert Emmet Elementary School      2008     4
+2: Closed         609906 Robert Emmet Elementary School      2009     7
+3: Closed         609906 Robert Emmet Elementary School      2010     9
+4: Closed         609906 Robert Emmet Elementary School      2011     3
+5: Closed         609906 Robert Emmet Elementary School      2012     3
+6: Closed         609906 Robert Emmet Elementary School      2013     2
+   mean_initial median_initial mean_log_price median_sqft above_25k sale_share
+          <num>          <num>          <num>       <num>     <int>      <num>
+1:     17623.75        17589.0       12.22680      1797.5         0 0.02797203
+2:     17423.29        18415.0       10.46435      1716.0         0 0.06603774
+3:     19092.44        18021.0       10.73608      2080.0         2 0.08035714
+4:     17990.33        18654.0       10.91695      1836.0         0 0.03030303
+5:     16146.67        15562.0       11.21267      1687.0         0 0.02238806
+6:     20324.50        20324.5       10.61010      2415.0         0 0.01360544
+
+Dataset: median_neighbors
+Rows: 16  Columns: 6
+Key: rank
+Duplicate or missing keys: 0
+rank | integer | nonmissing: 16 | distinct nonmissing: 16
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  60.00   63.75   67.50   67.50   71.25   75.00
+row_id | character | nonmissing: 16 | distinct nonmissing: 16
+[1] "96306143" "96602842" "96902247" "96929206" "97087923" "97420789"
+pin | character | nonmissing: 16 | distinct nonmissing: 15
+[1] "13364180250000" "13364180280000" "13364180320000" "16013140160000"
+[5] "16013250120000" "16043250370000"
+school_names | character | nonmissing: 16 | distinct nonmissing: 5
+[1] "Ana Roque de Duprey Elementary School / Alexander von Humboldt Elementary School"
+[2] "Francis Scott Key Elementary School"
+[3] "Jean D Lafayette Elementary School"
+[4] "Near North Elementary School"
+[5] "William H King Elementary School"
+initial_assessed_total | numeric | nonmissing: 16 | distinct nonmissing: 15
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  18780   20106   26345   25302   30072   31243
+price | numeric | nonmissing: 16 | distinct nonmissing: 16
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  17228   81789  215712  212537  306322  576217
+First six records:
+    rank   row_id            pin                        school_names
+   <int>   <char>         <char>                              <char>
+1:    60 97420789 16043250370000 Francis Scott Key Elementary School
+2:    61 96902247 16082100080000 Francis Scott Key Elementary School
+3:    62 97867335 16082060040000 Francis Scott Key Elementary School
+4:    63 96602842 16091040140000 Francis Scott Key Elementary School
+5:    64 98125554 16082010210000 Francis Scott Key Elementary School
+6:    65 96929206 16082050200000 Francis Scott Key Elementary School
+   initial_assessed_total     price
+                    <num>     <num>
+1:                  18780  24611.38
+2:                  19443 218919.04
+3:                  19910  17227.96
+4:                  20044  23817.65
+5:                  20127 218425.95
+6:                  20356  31116.09
+
+Dataset: fixed_mix
+Rows: 36  Columns: 5
+Key: group, sale_year, series
+Duplicate or missing keys: 0
+group | character | nonmissing: 36 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+sale_year | integer | nonmissing: 36 | distinct nonmissing: 6
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2009    2010    2010    2012    2013
+median_initial | numeric | nonmissing: 36 | distinct nonmissing: 32
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  14785   15521   15905   16847   16486   29043
+sales | integer | nonmissing: 36 | distinct nonmissing: 24
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   92.0   126.2   368.0   413.7   713.5   843.0
+series | character | nonmissing: 36 | distinct nonmissing: 3
+[1] "All matched sales"
+[2] "Common sites: fixed 2008-11 site shares"
+[3] "Common sites: transaction weights"
+First six records:
+    group sale_year median_initial sales            series
+   <char>     <int>          <num> <int>            <char>
+1: Closed      2008        15514.0   143 All matched sales
+2: Closed      2009        16308.5   106 All matched sales
+3: Closed      2010        17957.5   112 All matched sales
+4: Closed      2011        16072.0    99 All matched sales
+5: Closed      2012        26345.0   134 All matched sales
+6: Closed      2013        20154.0   147 All matched sales
+
+Dataset: common_sites
+Rows: 48  Columns: 3
+Key: group, school_site_id
+Duplicate or missing keys: 0
+group | character | nonmissing: 48 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+school_site_id | integer | nonmissing: 48 | distinct nonmissing: 48
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609809  610019  610078  610093  610196  610347
+years | integer | nonmissing: 48 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      6       6       6       6       6       6
+First six records:
+         group school_site_id years
+        <char>          <int> <int>
+1: Stayed open         610176     6
+2: Stayed open         610225     6
+3: Stayed open         610143     6
+4: Stayed open         609864     6
+5: Stayed open         610218     6
+6: Stayed open         610339     6
+
+Dataset: fixed_weights
+Rows: 48  Columns: 4
+Key: group, school_site_id
+Duplicate or missing keys: 0
+group | character | nonmissing: 48 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+school_site_id | integer | nonmissing: 48 | distinct nonmissing: 48
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609809  610019  610078  610093  610196  610347
+pre_sales | integer | nonmissing: 48 | distinct nonmissing: 45
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   4.00   25.25   46.00   65.88  100.50  207.00
+site_weight | numeric | nonmissing: 48 | distinct nonmissing: 46
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+0.002561 0.015276 0.035594 0.041667 0.050117 0.237762
+First six records:
+         group school_site_id pre_sales site_weight
+        <char>          <int>     <int>       <num>
+1: Stayed open         610176       168  0.06147091
+2: Stayed open         609902        80  0.02927186
+3: Stayed open         610256        49  0.01792902
+4:      Closed         610023        21  0.04895105
+5: Stayed open         610012        41  0.01500183
+6: Stayed open         609809       115  0.04207830
+
+Dataset: decomposition
+Rows: 48  Columns: 11
+Key: group, school_site_id
+Duplicate or missing keys: 0
+group | character | nonmissing: 48 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+school_site_id | integer | nonmissing: 48 | distinct nonmissing: 48
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609809  610019  610078  610093  610196  610347
+school_names | character | nonmissing: 48 | distinct nonmissing: 48
+[1] "Adam Clayton Powell Paideia Community Academy ES"
+[2] "Alexander Graham Elementary School"
+[3] "Alfred David Kohn Elementary School"
+[4] "Amos Alonzo Stagg Elementary School"
+[5] "Ana Roque de Duprey Elementary School / Alexander von Humboldt Elementary School"
+[6] "Arthur A Libby Elementary School"
+sales_2011 | integer | nonmissing: 48 | distinct nonmissing: 25
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1.00    5.00   11.00   14.19   19.75   45.00
+sales_2012 | integer | nonmissing: 48 | distinct nonmissing: 28
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1.00    5.75   12.00   16.33   25.00   65.00
+mean_initial_2011 | numeric | nonmissing: 48 | distinct nonmissing: 48
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   7519   14259   16640   25004   30405   73918
+mean_initial_2012 | numeric | nonmissing: 48 | distinct nonmissing: 48
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   7623   13707   16157   25358   34570   83596
+share_2011 | numeric | nonmissing: 48 | distinct nonmissing: 33
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+0.001698 0.016129 0.032258 0.041667 0.051787 0.239130
+share_2012 | numeric | nonmissing: 48 | distinct nonmissing: 31
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+0.001531 0.016462 0.029096 0.041667 0.048134 0.229008
+between_sites | numeric | nonmissing: 48 | distinct nonmissing: 48
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+-1405.5  -123.0   -24.5   166.3   143.0  2355.3
+within_sites | numeric | nonmissing: 48 | distinct nonmissing: 48
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+-542.243  -31.322    1.762   35.487   32.054 1660.982
+First six records:
+Key: <group, school_site_id, school_names>
+    group school_site_id                        school_names sales_2011
+   <char>          <int>                              <char>      <int>
+1: Closed         609906      Robert Emmet Elementary School          3
+2: Closed         610020 Francis Scott Key Elementary School         11
+3: Closed         610023    William H King Elementary School          3
+4: Closed         610028 Alfred David Kohn Elementary School          8
+5: Closed         610031  Jean D Lafayette Elementary School          1
+6: Closed         610072  Garrett A Morgan Elementary School          4
+   sales_2012 mean_initial_2011 mean_initial_2012 share_2011 share_2012
+        <int>             <num>             <num>      <num>      <num>
+1:          3          17990.33          16146.67 0.03260870 0.02290076
+2:         12          17081.09          17535.83 0.11956522 0.09160305
+3:         12          31790.67          37266.50 0.03260870 0.09160305
+4:          6          13042.50          13704.00 0.08695652 0.04580153
+5:          3          24040.00          27947.33 0.01086957 0.02290076
+6:          4          14941.50          13984.00 0.04347826 0.03053435
+   between_sites within_sites
+           <num>        <num>
+1:     -165.6998    -51.17047
+2:     -483.9821     48.01359
+3:     2036.9916    340.08142
+4:     -550.3760     43.90972
+5:      312.7350     65.97597
+6:     -187.2045    -35.43354
+
+Dataset: mean_decomposition
+Rows: 2  Columns: 5
+Key: group
+Duplicate or missing keys: 0
+group | character | nonmissing: 2 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+mean_2011 | numeric | nonmissing: 2 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  22477   23156   23836   23836   24515   25195
+mean_2012 | numeric | nonmissing: 2 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  24204   26442   28679   28679   30917   33154
+between_sites | numeric | nonmissing: 2 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1973    2982    3992    3992    5001    6010
+within_sites | numeric | nonmissing: 2 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ -245.6   303.0   851.7   851.7  1400.3  1949.0
+First six records:
+Key: <group>
+         group mean_2011 mean_2012 between_sites within_sites
+        <char>     <num>     <num>         <num>        <num>
+1:      Closed  25195.04  33154.02      6010.010    1948.9617
+2: Stayed open  22476.71  24204.15      1973.032    -245.5936
+
+Dataset: foreclosures
+Rows: 1638  Columns: 4
+Key: community_key, sale_year
+Duplicate or missing keys: 0
+community | character | nonmissing: 1638 | distinct nonmissing: 78
+[1] "Albany Park"    "Archer Heights" "Armour Square"  "Ashburn"
+[5] "Auburn Gresham" "Austin"
+sale_year | integer | nonmissing: 1638 | distinct nonmissing: 21
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2005    2010    2015    2015    2020    2025
+filings_per_100 | numeric | nonmissing: 1635 | distinct nonmissing: 83
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+  0.000   0.400   1.100   1.659   2.300  10.500       3
+community_key | character | nonmissing: 1638 | distinct nonmissing: 78
+[1] "ALBANYPARK"    "ARCHERHEIGHTS" "ARMOURSQUARE"  "ASHBURN"
+[5] "AUBURNGRESHAM" "AUSTIN"
+First six records:
+     community sale_year filings_per_100 community_key
+        <char>     <int>           <num>        <char>
+1: Albany Park      2005             0.4    ALBANYPARK
+2: Albany Park      2006             0.7    ALBANYPARK
+3: Albany Park      2007             1.7    ALBANYPARK
+4: Albany Park      2008             2.9    ALBANYPARK
+5: Albany Park      2009             4.0    ALBANYPARK
+6: Albany Park      2010             4.3    ALBANYPARK
+
+Dataset: area_weights
+Rows: 54  Columns: 4
+Key: group, community_key
+Duplicate or missing keys: 0
+group | character | nonmissing: 54 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+community_key | character | nonmissing: 54 | distinct nonmissing: 40
+[1] "ARMOURSQUARE"  "AUBURNGRESHAM" "AUSTIN"        "AVALONPARK"
+[5] "AVONDALE"      "BRIDGEPORT"
+pre_sales | integer | nonmissing: 54 | distinct nonmissing: 45
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1.00   11.25   43.00   64.17   93.25  304.00
+weight | numeric | nonmissing: 54 | distinct nonmissing: 51
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+0.0003368 0.0085828 0.0225404 0.0370370 0.0447120 0.1955645
+First six records:
+    group    community_key pre_sales      weight
+   <char>           <char>     <int>       <num>
+1: Closed    AUBURNGRESHAM         9 0.018145161
+2: Closed           AUSTIN        94 0.189516129
+3: Closed   CALUMETHEIGHTS        97 0.195564516
+4: Closed          CHATHAM        11 0.022177419
+5: Closed EASTGARFIELDPARK         2 0.004032258
+6: Closed        EDGEWATER        45 0.090725806
+
+Dataset: area_rates
+Rows: 756  Columns: 7
+Key: group, community_key, sale_year
+Duplicate or missing keys: 0
+community_key | character | nonmissing: 756 | distinct nonmissing: 40
+[1] "ARMOURSQUARE"  "AUBURNGRESHAM" "AUSTIN"        "AVALONPARK"
+[5] "AVONDALE"      "BRIDGEPORT"
+group | character | nonmissing: 756 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+pre_sales | integer | nonmissing: 756 | distinct nonmissing: 45
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1.00   11.00   43.00   64.17   94.00  304.00
+weight | numeric | nonmissing: 756 | distinct nonmissing: 51
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+0.0003368 0.0080835 0.0225404 0.0370370 0.0447962 0.1955645
+community | character | nonmissing: 756 | distinct nonmissing: 40
+[1] "Armour Square"  "Auburn Gresham" "Austin"         "Avalon Park"
+[5] "Avondale"       "Bridgeport"
+sale_year | integer | nonmissing: 756 | distinct nonmissing: 14
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2005    2008    2012    2012    2015    2018
+filings_per_100 | numeric | nonmissing: 756 | distinct nonmissing: 79
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  0.100   1.500   2.300   2.772   4.000  10.500
+First six records:
+   community_key  group pre_sales     weight      community sale_year
+          <char> <char>     <int>      <num>         <char>     <int>
+1: AUBURNGRESHAM Closed         9 0.01814516 Auburn Gresham      2005
+2: AUBURNGRESHAM Closed         9 0.01814516 Auburn Gresham      2006
+3: AUBURNGRESHAM Closed         9 0.01814516 Auburn Gresham      2007
+4: AUBURNGRESHAM Closed         9 0.01814516 Auburn Gresham      2008
+5: AUBURNGRESHAM Closed         9 0.01814516 Auburn Gresham      2009
+6: AUBURNGRESHAM Closed         9 0.01814516 Auburn Gresham      2010
+   filings_per_100
+             <num>
+1:             3.2
+2:             3.4
+3:             4.5
+4:             5.2
+5:             4.1
+6:             4.5
+
+Dataset: foreclosure_exposure
+Rows: 42  Columns: 3
+Key: group, sale_year
+Duplicate or missing keys: 0
+group | character | nonmissing: 42 | distinct nonmissing: 3
+[1] "Chicago total" "Closed"        "Stayed open"
+sale_year | integer | nonmissing: 42 | distinct nonmissing: 14
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2005    2008    2012    2012    2015    2018
+filings_per_100 | numeric | nonmissing: 42 | distinct nonmissing: 37
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  0.800   1.498   2.238   2.363   3.307   4.763
+First six records:
+           group sale_year filings_per_100
+          <char>     <int>           <num>
+1: Chicago total      2005             1.1
+2: Chicago total      2006             1.5
+3: Chicago total      2007             2.2
+4: Chicago total      2008             2.9
+5: Chicago total      2009             3.0
+6: Chicago total      2010             3.0
+
+Dataset: pairs
+Rows: 503  Columns: 56
+Key: row_id
+Duplicate or missing keys: 0
+row_id | character | nonmissing: 503 | distinct nonmissing: 503
+[1] "7252512"  "96122554" "96123696" "96123840" "96123919" "96124282"
+school_site_id | integer | nonmissing: 503 | distinct nonmissing: 54
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609797  609986  610106  610105  610256  610521
+pin | character | nonmissing: 503 | distinct nonmissing: 484
+[1] "13251170330000" "13251170340000" "13251210260000" "13251320040000"
+[5] "13252080220000" "13252200320000"
+group | character | nonmissing: 503 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+sale_year | integer | nonmissing: 503 | distinct nonmissing: 4
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2009    2010    2011    2011    2012    2012
+price | numeric | nonmissing: 503 | distinct nonmissing: 490
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  14095  118480  176521  225433  223568 4436038
+sale_date | IDate/Date | nonmissing: 503 | distinct nonmissing: 60
+[1] "2009-01-01" "2009-02-01" "2009-03-01" "2009-04-01" "2009-05-01"
+[6] "2009-06-01"
+sale_date_precision | character | nonmissing: 503 | distinct nonmissing: 2
+[1] "idor_refined_day" "recording_month"
+res_char_bldg_sf | integer | nonmissing: 503 | distinct nonmissing: 364
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    616    1020    1202    1386    1591    8380
+res_char_land_sf | integer | nonmissing: 503 | distinct nonmissing: 199
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    692    3125    3750    3814    4128   13300
+res_char_yrblt | integer | nonmissing: 503 | distinct nonmissing: 101
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1877    1910    1924    1932    1955    2011
+res_char_beds | integer | nonmissing: 503 | distinct nonmissing: 7
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  2.000   2.000   3.000   3.004   3.000   8.000
+res_char_rooms | integer | nonmissing: 503 | distinct nonmissing: 12
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  3.000   5.000   6.000   5.813   6.000  16.000
+res_char_fbath | integer | nonmissing: 503 | distinct nonmissing: 4
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1.00    1.00    1.00    1.33    2.00    4.00
+analysis_class | integer | nonmissing: 503 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  202.0   203.0   203.0   210.4   205.0   295.0
+res_char_type_resd | character | nonmissing: 503 | distinct nonmissing: 5
+[1] "1 Story"     "1.5 Story"   "2 Story"     "3 Story +"   "Split Level"
+res_char_cnst_qlty | character | nonmissing: 503 | distinct nonmissing: 2
+[1] "Average" "Poor"
+res_char_repair_cnd | character | nonmissing: 503 | distinct nonmissing: 3
+[1] "Above Average" "Average"       "Below Average"
+hie_correction_eligible | logical | nonmissing: 503 | distinct nonmissing: 2
+[1] FALSE  TRUE
+hie_start_year_timing_uncertain | logical | nonmissing: 503 | distinct nonmissing: 2
+[1] FALSE  TRUE
+res_char_renovation | character | nonmissing: 503 | distinct nonmissing: 2
+[1] ""    "Yes"
+treated | integer | nonmissing: 503 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  0.0000  0.0000  0.1312  0.0000  1.0000
+log_price | numeric | nonmissing: 503 | distinct nonmissing: 490
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  9.554  11.683  12.081  11.938  12.317  15.305
+log_building_sqft | numeric | nonmissing: 503 | distinct nonmissing: 364
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  6.423   6.928   7.092   7.163   7.372   9.034
+log_land_sqft | numeric | nonmissing: 503 | distinct nonmissing: 199
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  6.540   8.047   8.230   8.192   8.326   9.496
+age_at_sale | integer | nonmissing: 503 | distinct nonmissing: 108
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1.00   55.00   86.00   78.82  101.00  134.00
+treated_post | integer | nonmissing: 503 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0       0       0       0       0       0
+repeat_pre_post | logical | nonmissing: 503 | distinct nonmissing: 2
+[1] FALSE  TRUE
+stable_repeat | logical | nonmissing: 503 | distinct nonmissing: 2
+[1] FALSE  TRUE
+assessment_year | numeric | nonmissing: 501 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+   2006    2006    2006    2006    2006    2006       2
+assessment_class | character | nonmissing: 501 | distinct nonmissing: 15
+[1] "100" "202" "203" "204" "205" "206"
+assessment_row_id | character | nonmissing: 501 | distinct nonmissing: 482
+[1] "132511703300002006" "132511703400002006" "132512102600002006"
+[4] "132513200400002006" "132520802200002006" "132522003200002006"
+initial_assessed_total | numeric | nonmissing: 501 | distinct nonmissing: 467
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+      0   13059   15136   20326   18697  395786       2
+initial_assessed_building | numeric | nonmissing: 501 | distinct nonmissing: 470
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+      0   10023   11906   16348   14795  364371       2
+initial_assessed_land | numeric | nonmissing: 501 | distinct nonmissing: 267
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+      0    2713    3194    3978    4032   31415       2
+assessment_status | character | nonmissing: 503 | distinct nonmissing: 4
+[1] "No 2006 record"            "No positive total"
+[3] "Not single-family in 2006" "Usable 2006 assessment"
+assessment_usable | logical | nonmissing: 503 | distinct nonmissing: 2
+[1] FALSE  TRUE
+log_initial_value | numeric | nonmissing: 491 | distinct nonmissing: 457
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+  8.677   9.484   9.627   9.758   9.842  12.889      12
+school_names | character | nonmissing: 503 | distinct nonmissing: 54
+[1] "Adam Clayton Powell Paideia Community Academy ES"
+[2] "Alexander Graham Elementary School"
+[3] "Alfred David Kohn Elementary School"
+[4] "Amos Alonzo Stagg Elementary School"
+[5] "Ana Roque de Duprey Elementary School / Alexander von Humboldt Elementary School"
+[6] "Anthony Overton Elementary School"
+seller_known | logical | nonmissing: 503 | distinct nonmissing: 1
+[1] TRUE
+narrow_seller | logical | nonmissing: 503 | distinct nonmissing: 2
+[1] FALSE  TRUE
+broad_seller | logical | nonmissing: 503 | distinct nonmissing: 2
+[1] FALSE  TRUE
+bank_lender_seller | logical | nonmissing: 503 | distinct nonmissing: 2
+[1] FALSE  TRUE
+sale_document_num | character | nonmissing: 503 | distinct nonmissing: 503
+[1] "1000557060" "1000640101" "1001157036" "1001340126" "1001440007"
+[6] "1001526178"
+sale_price_nominal | numeric | nonmissing: 503 | distinct nonmissing: 265
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  11000   93250  140000  179156  176000 3600000
+buyer_known | logical | nonmissing: 503 | distinct nonmissing: 2
+[1] FALSE  TRUE
+organization_buyer | logical | nonmissing: 503 | distinct nonmissing: 2
+[1] FALSE  TRUE
+seller_type | character | nonmissing: 503 | distinct nonmissing: 3
+[1] "Judicial/GSE/HUD seller" "Other bank/lender name"
+[3] "Other known seller"
+under_50k | logical | nonmissing: 503 | distinct nonmissing: 2
+[1] FALSE  TRUE
+townhouse | logical | nonmissing: 503 | distinct nonmissing: 2
+[1] FALSE  TRUE
+log_price_to_initial | numeric | nonmissing: 491 | distinct nonmissing: 491
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+-0.1447  1.8907  2.4359  2.1732  2.6441  4.2800      12
+community_key | character | nonmissing: 503 | distinct nonmissing: 35
+[1] "AUBURNGRESHAM"  "AUSTIN"         "AVALONPARK"     "AVONDALE"
+[5] "BRIDGEPORT"     "CALUMETHEIGHTS"
+previous_row | character | nonmissing: 503 | distinct nonmissing: 503
+[1] "96115314" "96123910" "96123999" "96124179" "96125731" "96126195"
+previous_year | integer | nonmissing: 503 | distinct nonmissing: 4
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2008    2009    2009    2010    2011
+previous_price | numeric | nonmissing: 503 | distinct nonmissing: 482
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  13332   37754   58104  162473  129482 4677551
+real_change | numeric | nonmissing: 503 | distinct nonmissing: 503
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+-0.9477  0.1850  1.8858  2.1876  3.0906 32.3217
+First six records:
+     row_id school_site_id            pin       group sale_year     price
+     <char>          <int>         <char>      <char>     <int>     <num>
+1:  7252512         610176 25201110010000 Stayed open      2011  18699.37
+2: 96122554         610176 25173150230000 Stayed open      2012  61123.13
+3: 96123696         609864 20321090220000 Stayed open      2011  24839.94
+4: 96123840         610225 25201300050000 Stayed open      2011 161193.14
+5: 96123919         609864 20314110270000 Stayed open      2011 171947.83
+6: 96124282         609864 20293210120000 Stayed open      2011 141009.58
+    sale_date sale_date_precision res_char_bldg_sf res_char_land_sf
+       <IDat>              <char>            <int>            <int>
+1: 2011-07-28    idor_refined_day             1211             5191
+2: 2012-09-01     recording_month             1773             3750
+3: 2011-05-01     recording_month             1240             4000
+4: 2011-04-01     recording_month             1075             3125
+5: 2011-06-01     recording_month             1374             4687
+6: 2011-09-01     recording_month             1080             5400
+   res_char_yrblt res_char_beds res_char_rooms res_char_fbath analysis_class
+            <int>         <int>          <int>          <int>          <int>
+1:           1926             3              6              1            203
+2:           1962             4              7              2            207
+3:           1918             3              5              1            203
+4:           1964             2              7              1            234
+5:           1926             3              6              1            203
+6:           1920             2              5              1            203
+   res_char_type_resd res_char_cnst_qlty res_char_repair_cnd
+               <char>             <char>              <char>
+1:            1 Story            Average             Average
+2:            2 Story            Average             Average
+3:            1 Story            Average             Average
+4:        Split Level            Average             Average
+5:            1 Story            Average             Average
+6:            1 Story            Average             Average
+   hie_correction_eligible hie_start_year_timing_uncertain res_char_renovation
+                    <lgcl>                          <lgcl>              <char>
+1:                   FALSE                           FALSE
+2:                   FALSE                           FALSE
+3:                   FALSE                           FALSE
+4:                   FALSE                           FALSE
+5:                   FALSE                           FALSE
+6:                   FALSE                           FALSE
+   treated log_price log_building_sqft log_land_sqft age_at_sale treated_post
+     <int>     <num>             <num>         <num>       <int>        <int>
+1:       0  9.836245          7.099202      8.554682          85            0
+2:       0 11.020646          7.480428      8.229511          50            0
+3:       0 10.120208          7.122867      8.294050          93            0
+4:       0 11.990359          6.980076      8.047190          47            0
+5:       0 12.054946          7.225481      8.452548          85            0
+6:       0 11.856583          6.984716      8.594154          91            0
+   repeat_pre_post stable_repeat assessment_year assessment_class
+            <lgcl>        <lgcl>           <num>           <char>
+1:           FALSE         FALSE            2006              203
+2:           FALSE         FALSE            2006              207
+3:           FALSE         FALSE            2006              203
+4:           FALSE         FALSE            2006              234
+5:           FALSE         FALSE            2006              203
+6:           FALSE         FALSE            2006              203
+    assessment_row_id initial_assessed_total initial_assessed_building
+               <char>                  <num>                     <num>
+1: 252011100100002006                  12830                     10754
+2: 251731502300002006                  15590                     13490
+3: 203210902200002006                  13566                     10526
+4: 252013000500002006                  12279                      9905
+5: 203141102700002006                  16705                     13331
+6: 202932101200002006                  15292                     11836
+   initial_assessed_land      assessment_status assessment_usable
+                   <num>                 <char>            <lgcl>
+1:                  2076 Usable 2006 assessment              TRUE
+2:                  2100 Usable 2006 assessment              TRUE
+3:                  3040 Usable 2006 assessment              TRUE
+4:                  2374 Usable 2006 assessment              TRUE
+5:                  3374 Usable 2006 assessment              TRUE
+6:                  3456 Usable 2006 assessment              TRUE
+   log_initial_value                                   school_names
+               <num>                                         <char>
+1:          9.459541 John D Shoop Math-Science Technical Academy ES
+2:          9.654385 John D Shoop Math-Science Technical Academy ES
+3:          9.515322                  John W Cook Elementary School
+4:          9.415646                John Whistler Elementary School
+5:          9.723463                  John W Cook Elementary School
+6:          9.635085                  John W Cook Elementary School
+   seller_known narrow_seller broad_seller bank_lender_seller sale_document_num
+         <lgcl>        <lgcl>       <lgcl>             <lgcl>            <char>
+1:         TRUE         FALSE        FALSE              FALSE        2128822018
+2:         TRUE          TRUE         TRUE              FALSE        1228604146
+3:         TRUE          TRUE         TRUE              FALSE        1114512009
+4:         TRUE         FALSE        FALSE              FALSE        1111122068
+5:         TRUE         FALSE        FALSE              FALSE        1118157007
+6:         TRUE         FALSE        FALSE              FALSE        1127231020
+   sale_price_nominal buyer_known organization_buyer             seller_type
+                <num>      <lgcl>             <lgcl>                  <char>
+1:              15000        TRUE              FALSE      Other known seller
+2:              50000        TRUE              FALSE Judicial/GSE/HUD seller
+3:              20000        TRUE              FALSE Judicial/GSE/HUD seller
+4:             129000        TRUE              FALSE      Other known seller
+5:             138500        TRUE              FALSE      Other known seller
+6:             113500        TRUE              FALSE      Other known seller
+   under_50k townhouse log_price_to_initial community_key previous_row
+      <lgcl>    <lgcl>                <num>        <char>       <char>
+1:      TRUE     FALSE            0.3767035    MORGANPARK     97091269
+2:     FALSE     FALSE            1.3662607    MORGANPARK     96708994
+3:      TRUE     FALSE            0.6048862 AUBURNGRESHAM     97674192
+4:     FALSE     FALSE            2.5747128    MORGANPARK     96941111
+5:     FALSE     FALSE            2.3314831 AUBURNGRESHAM     97090449
+6:     FALSE     FALSE            2.2214980 AUBURNGRESHAM     97610762
+   previous_year previous_price real_change
+           <int>          <num>       <num>
+1:          2009       20118.47 -0.07053725
+2:          2008      205460.94 -0.70250729
+3:          2008      227827.32 -0.89097032
+4:          2010      289388.19 -0.44298644
+5:          2010       51893.57  2.31347115
+6:          2009       32150.73  3.38589072
+
+Dataset: pair_summary
+Rows: 8  Columns: 6
+Key: group, sale_year
+Duplicate or missing keys: 0
+group | character | nonmissing: 8 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+sale_year | integer | nonmissing: 8 | distinct nonmissing: 4
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2009    2010    2010    2010    2011    2012
+pairs | integer | nonmissing: 8 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   8.00   18.50   45.00   62.88  123.25  126.00
+parcels | integer | nonmissing: 8 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   8.00   18.50   45.00   62.88  123.25  126.00
+median_change | numeric | nonmissing: 8 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.5325  1.2193  1.5170  1.5463  1.9052  2.4452
+loss_share | numeric | nonmissing: 8 | distinct nonmissing: 8
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.00000 0.08771 0.18817 0.20729 0.32695 0.42308
+First six records:
+         group sale_year pairs parcels median_change loss_share
+        <char>     <int> <int>   <int>         <num>      <num>
+1:      Closed      2009     8       8     1.2375641 0.00000000
+2:      Closed      2010    11      11     1.8496487 0.09090909
+3:      Closed      2011    21      21     1.2198795 0.38095238
+4:      Closed      2012    26      26     0.5324918 0.42307692
+5: Stayed open      2009    64      64     2.0717214 0.07812500
+6: Stayed open      2010   126     126     2.4451676 0.16666667
+
+Dataset: sources
+Rows: 5  Columns: 2
+Key: source
+Duplicate or missing keys: 0
+source | character | nonmissing: 5 | distinct nonmissing: 5
+[1] "../input/assessments.rds"          "../input/distress.rds"
+[3] "../input/overview.rds"             "../input/raw_sales.csv"
+[5] "../output/context_snapshot.tar.gz"
+sha256 | character | nonmissing: 5 | distinct nonmissing: 5
+[1] "026714c327576c569ab82d61704c09d94fa7ba57e9be777ea18224a104fcc65e"
+[2] "6e460a832985c47678331de6596d2d10f5dac8f4cd09088cf8c77b9dfdff1bb6"
+[3] "72248a34c23571a2c3c9e5ea94f54b19b3988d21345b2afd94da7102be92f7d2"
+[4] "8e329bcb9af3e546f17bfd427c4207d7f36d7706a2ead3939bfda120b9037ad7"
+[5] "adab512133961a351f645e34f463373f2b959018f229ba17b9be01002dfc2ed7"
+First six records:
+                              source
+                              <char>
+1:          ../input/assessments.rds
+2:             ../input/overview.rds
+3:             ../input/distress.rds
+4:            ../input/raw_sales.csv
+5: ../output/context_snapshot.tar.gz
+                                                             sha256
+                                                             <char>
+1: 72248a34c23571a2c3c9e5ea94f54b19b3988d21345b2afd94da7102be92f7d2
+2: 6e460a832985c47678331de6596d2d10f5dac8f4cd09088cf8c77b9dfdff1bb6
+3: adab512133961a351f645e34f463373f2b959018f229ba17b9be01002dfc2ed7
+4: 026714c327576c569ab82d61704c09d94fa7ba57e9be777ea18224a104fcc65e
+5: 8e329bcb9af3e546f17bfd427c4207d7f36d7706a2ead3939bfda120b9037ad7

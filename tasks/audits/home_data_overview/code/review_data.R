@@ -1,4 +1,17 @@
 # setwd("/Users/jacobherbstman/Desktop/school_closures_house_prices/tasks/audits/home_data_overview/code")
+# radius_miles <- 0.25
+# end_year <- 2018L
+# property_sample <- "all"
+args <- commandArgs(trailingOnly=TRUE)
+stopifnot(length(args)==3L)
+radius_miles <- as.numeric(args[1])
+end_year <- as.integer(args[2])
+property_sample <- args[3]
+stopifnot(property_sample %in% c("all","single_family"))
+stopifnot(end_year %in% c(2018L,2023L))
+stopifnot(radius_miles %in% c(0.125,0.25,0.5))
+radius_feet <- radius_miles*5280
+suffix <- paste0(if(radius_miles==0.25) "" else paste0("_",radius_miles),if(end_year==2018L) "" else paste0("_through_",end_year),if(property_sample=="single_family") "_single_family" else "")
 suppressPackageStartupMessages({
   library(data.table)
   library(DBI)
@@ -85,7 +98,7 @@ con <- dbConnect(duckdb(), dbdir=":memory:")
 exposure <- as.data.table(dbGetQuery(con,"SELECT * FROM read_parquet('../input/exposure.parquet')"))
 dbDisconnect(con,shutdown=TRUE)
 exposure[,row_id:=as.character(row_id)]
-stopifnot(nrow(sales)==428582, !anyDuplicated(sales$row_id), !anyDuplicated(clean$row_id),
+stopifnot(!anyDuplicated(sales$row_id), !anyDuplicated(clean$row_id),
   !anyDuplicated(geo$row_id),!anyDuplicated(exposure$row_id),setequal(sales$row_id,geo$row_id),
   setequal(sales$row_id,exposure$row_id))
 # Many sales to one historical parcel-year location; compare coordinates in both CRSs.
@@ -97,8 +110,8 @@ parcel_projection_error <- max(sqrt((xy[,1]-geo_keys[has_historical_coordinates=
 stopifnot(parcel_projection_error < 1)
 sales <- merge(sales,geo[,.(row_id,x=centroid_x_crs_3435,y=centroid_y_crs_3435)],by="row_id",all.x=TRUE)
 sales <- merge(sales,exposure,by="row_id",all.x=TRUE)
-stopifnot(nrow(sales)==428582,!anyDuplicated(sales$row_id))
-sales <- sales[sale_year %between% c(2008L,2018L)]
+stopifnot(nrow(sales)==nrow(geo),!anyDuplicated(sales$row_id))
+sales <- sales[sale_year %between% c(2008L,end_year)]
 # Recompute proximity from coordinates, independently of the distance parquet.
 # Every study-period transaction is checked against every relevant location.
 for (category in c("Closed","Stayed open","Other candidate","Welcoming")) {
@@ -109,7 +122,7 @@ for (category in c("Closed","Stayed open","Other candidate","Welcoming")) {
   nearest_id <- rep(NA_integer_, nrow(sales))
   for(i in seq_len(nrow(locations))) {
     distance <- sqrt((sales$x-locations$x[i])^2+(sales$y-locations$y[i])^2)
-    count <- count+as.integer(is.finite(distance) & distance<=1320)
+    count <- count+as.integer(is.finite(distance) & distance<=radius_feet)
     closer <- which(is.finite(distance) & distance<nearest)
     nearest[closer] <- distance[closer]
     nearest_id[closer] <- locations$school_site_id[i]
@@ -117,66 +130,46 @@ for (category in c("Closed","Stayed open","Other candidate","Welcoming")) {
   prefix <- switch(category,Closed="treated_site","Stayed open"="control_site","Other candidate"="other_candidate_site",Welcoming="welcoming_school")
   count_field <- switch(category,Closed="n_treated_sites_025","Stayed open"="n_control_sites_025","Other candidate"="n_other_candidate_sites_025",Welcoming="n_welcoming_schools_025")
   valid <- is.finite(sales$x) & is.finite(sales$y)
-  stopifnot(all(count[valid]==sales[[count_field]][valid]),
+  if(radius_miles==0.25) stopifnot(all(count[valid]==sales[[count_field]][valid]))
+  stopifnot(
     max(abs(nearest[valid]-sales[[paste0("nearest_",prefix,"_distance_feet")]][valid]))<1e-6,
     all(nearest_id[valid]==sales[[paste0("nearest_",prefix,"_id")]][valid]))
+  sales[,(sub("_025$","",count_field)):=count]
 }
-sales[,group:=fcase(focal_exposure_025=="treated_only","Closed",focal_exposure_025=="control_only","Stayed open",default="Outside comparison")]
-sales[,geography_ok:=group!="Outside comparison" & n_welcoming_schools_025==0 & n_other_candidate_sites_025==0]
+sales[,focal_exposure:=fcase(
+ n_treated_sites>0 & n_control_sites>0,"treated_control_overlap",
+ n_treated_sites>0,"treated_only",n_control_sites>0,"control_only",
+ !is.finite(x) | !is.finite(y),"missing_coordinates",default="outside_focal_rings")]
+if(radius_miles==0.25) stopifnot(identical(sales$focal_exposure,sales$focal_exposure_025))
+sales[,group:=fcase(focal_exposure=="treated_only","Closed",focal_exposure=="control_only","Stayed open",default="Outside comparison")]
+sales[,geography_ok:=group!="Outside comparison" & n_welcoming_schools==0 & n_other_candidate_sites==0]
 sales[,school_site_id:=fifelse(group=="Closed",nearest_treated_site_id,nearest_control_site_id)]
-# Independent sequential reconstruction of the price cleaner. Conditions are
-# evaluated on the citywide data before the citywide, within-year tail cutoff.
-conditions <- list(
+# The price sample is the production clean_home_sales sample; its cleaning
+# rules are not repeated here. Earlier stages describe the recorded
+# transactions it starts from. The single-family packet restricts every stage
+# to corrected classes 202-210, 234, 278, and 295.
+if(property_sample=="single_family") sales <- sales[analysis_class %in% c(202:210,234,278,295)]
+clean <- clean[sale_year<=end_year]
+stages <- list(
   "Recorded non-condo transactions"=rep(TRUE,nrow(sales)),
   "County sale-quality flags"=!sales$sale_filter_same_sale_within_365 & !sales$sale_filter_less_than_10k & !sales$sale_filter_deed_type,
   "Non-land sales above $10,000"=is.finite(sales$sale_price_nominal) & sales$sale_price_nominal>10000 & !is.na(sales$sale_type) & sales$sale_type!="LAND",
   "One building record; eligible property type"=sales$single_improvement_card & sales$analysis_class %in% c(202:211,234,278,295),
-  "Complete property characteristics"=is.finite(sales$res_char_yrblt) & is.finite(sales$res_char_bldg_sf) & sales$res_char_bldg_sf>0 &
-    is.finite(sales$res_char_land_sf) & sales$res_char_land_sf>0 & is.finite(sales$res_char_beds) & is.finite(sales$res_char_rooms) & is.finite(sales$res_char_fbath) &
-    !is.na(sales$res_char_type_resd) & nzchar(trimws(sales$res_char_type_resd)) & !is.na(sales$res_char_cnst_qlty) & nzchar(trimws(sales$res_char_cnst_qlty)) &
-    !is.na(sales$res_char_repair_cnd) & nzchar(trimws(sales$res_char_repair_cnd)) & (sales$analysis_class!=211 | sales$res_char_apts %in% c("Two","Three","Four","Five","Six")),
-  "Consistent rooms; price per sq. ft. <= $5,000"=sales$res_char_rooms>=sales$res_char_beds & sales$sale_price_nominal/sales$res_char_bldg_sf<=5000)
+  "Clean price sample"=sales$row_id %in% clean$row_id)
 included <- rep(TRUE, nrow(sales))
 attrition <- list()
 annual_counts <- list()
-for(i in seq_along(conditions)) {
-  included <- included & !is.na(conditions[[i]]) & conditions[[i]]
-  attrition[[i]] <- rbindlist(list(data.table(group="Citywide",sales=sum(included)),sales[included & geography_ok,.(sales=.N),by=group]))[,`:=`(step=i,restriction=names(conditions)[i])]
+for(i in seq_along(stages)) {
+  stopifnot(i<5 || all(included[stages[[i]]]))
+  included <- included & !is.na(stages[[i]]) & stages[[i]]
+  attrition[[i]] <- rbindlist(list(data.table(group="Citywide",sales=sum(included)),sales[included & geography_ok,.(sales=.N),by=group]))[,`:=`(step=i,restriction=names(stages)[i])]
   annual_counts[[i]] <- sales[included & geography_ok,.(sales=.N,parcels=uniqueN(pin)),by=.(group,sale_year)][,stage:=i]
-  if(i==3) sales[,market_sale:=included]
 }
-candidates <- sales[included,.(row_id,sale_year,ppsf=sale_price_nominal/res_char_bldg_sf)]
-candidates[,cutoff:=quantile(ppsf,.999,type=7),by=sale_year]
-cutoffs <- candidates[,.(cutoff=cutoff[1],removed=sum(ppsf>cutoff)),by=sale_year]
-included <- sales$row_id %in% candidates[ppsf<=cutoff,row_id]
-stopifnot(setequal(sales$row_id[included],clean$row_id),sum(included)==167468)
-sales[,price_sample:=included]
-attrition[[7]] <- rbindlist(list(data.table(group="Citywide",sales=sum(included)),sales[included & geography_ok,.(sales=.N),by=group]))[,`:=`(step=7L,restriction="Trim annual top 0.1% of price per sq. ft.")]
-annual_counts[[7]] <- sales[included & geography_ok,.(sales=.N,parcels=uniqueN(pin)),by=.(group,sale_year)][,stage:=7L]
 attrition <- rbindlist(attrition)
 annual_counts <- rbindlist(annual_counts)
-# Descriptive trends retain sales with incomplete characteristics. Keep the
-# existing annual price-per-square-foot cutoffs to isolate this sample change.
-# Missing fields cannot fail checks that require those fields to be observed.
-regression_attrition <- copy(attrition)
-regression_counts <- copy(annual_counts)
-sales[, usable_area := is.finite(res_char_bldg_sf) & res_char_bldg_sf > 0]
-sales[, ppsf := fifelse(usable_area, sale_price_nominal/res_char_bldg_sf, NA_real_)]
-sales[cutoffs, on="sale_year", ppsf_cutoff := i.cutoff]
-sales[, observed_rooms_error := is.finite(res_char_rooms) & is.finite(res_char_beds) & res_char_rooms < res_char_beds]
-broad <- rep(TRUE,nrow(sales))
-for(i in 1:4) broad <- broad & !is.na(conditions[[i]]) & conditions[[i]]
-attrition <- regression_attrition[step<=4]
-annual_counts <- regression_counts[stage<=4]
-attrition <- rbind(attrition,copy(attrition[step==4])[,`:=`(step=5L,restriction="Keep incomplete property characteristics")])
-annual_counts <- rbind(annual_counts,copy(annual_counts[stage==4])[,stage:=5L])
-broad <- broad & !sales$observed_rooms_error & (is.na(sales$ppsf) | sales$ppsf<=5000)
-attrition <- rbind(attrition,rbindlist(list(data.table(group="Citywide",sales=sum(broad)),sales[broad & geography_ok,.(sales=.N),by=group]))[,`:=`(step=6L,restriction="Apply plausibility screens where observed")])
-annual_counts <- rbind(annual_counts,sales[broad & geography_ok,.(sales=.N,parcels=uniqueN(pin)),by=.(group,sale_year)][,stage:=6L])
-sales[,trend_sample:=broad & (is.na(ppsf) | ppsf<=ppsf_cutoff)]
-stopifnot(all(sales[price_sample==TRUE,trend_sample]))
-attrition <- rbind(attrition,rbindlist(list(data.table(group="Citywide",sales=sum(sales$trend_sample)),sales[trend_sample & geography_ok,.(sales=.N),by=group]))[,`:=`(step=7L,restriction="Apply existing annual price-per-sq.-ft. cutoffs")])
-annual_counts <- rbind(annual_counts,sales[trend_sample & geography_ok,.(sales=.N,parcels=uniqueN(pin)),by=.(group,sale_year)][,stage:=7L])
+sales[,price_sample:=included]
+sales[,usable_area:=is.finite(res_char_bldg_sf) & res_char_bldg_sf>0]
+if(property_sample=="all") stopifnot(setequal(sales[price_sample==TRUE,row_id],clean$row_id))
 
 # Inflation adjustment is also reconstructed, using one monthly CPI observation.
 cpi <- fread("../input/cpi.csv")
@@ -187,14 +180,9 @@ sales[cpi,on=.(sale_year,sale_month),deflator:=base_cpi/i.chicago_cpi_all_items]
 sales[,real_price:=sale_price_nominal*deflator]
 stopifnot(max(abs(sales[row_id %in% clean$row_id,real_price]-clean$sale_price_real_2022[match(sales[row_id %in% clean$row_id,row_id],clean$row_id)]))<1e-7)
 # Annual means, medians, and percentiles give each transaction equal weight.
-complete <- sales[price_sample & geography_ok]
-stopifnot(nrow(complete)==10921,complete[group=="Closed",.N]==3287,complete[group=="Stayed open",.N]==7634)
-complete_prices <- complete[,.(sales=.N,mean_price=mean(real_price),median_price=median(real_price)),by=.(group,sale_year)]
-selected <- sales[trend_sample & geography_ok]
-stopifnot(!anyNA(selected$real_price), !anyDuplicated(selected$row_id), all(complete$row_id %in% selected$row_id))
-sample_changes <- selected[,.(sales=.N,complete_sales=sum(price_sample),added=sum(!price_sample),
-  added_blank_apartment_count=sum(!price_sample & analysis_class==211 & (is.na(res_char_apts) | !nzchar(trimws(res_char_apts)))),
-  usable_area_sales=sum(usable_area)),by=.(group,sale_year)]
+selected <- sales[price_sample & geography_ok]
+stopifnot(!anyNA(selected$real_price), !anyDuplicated(selected$row_id))
+complete_prices <- selected[,.(sales=.N,mean_price=mean(real_price),median_price=median(real_price)),by=.(group,sale_year)]
 annual_prices <- selected[,.(sales=.N,mean_price=mean(real_price),median_price=median(real_price),
   nominal_mean=mean(sale_price_nominal),nominal_median=as.numeric(median(sale_price_nominal)),
   p10=quantile(real_price,.10),p25=quantile(real_price,.25),p75=quantile(real_price,.75),p90=quantile(real_price,.90),p95=quantile(real_price,.95),
@@ -207,32 +195,39 @@ composition <- selected[,.(sales=.N,mean_price=mean(real_price),median_price=med
 composition[,share:=sales/sum(sales),by=.(group,sale_year)]
 support <- merge(sites[group!="Other candidate"],selected[,.(sales=.N,parcels=uniqueN(pin),pre_sales=sum(sale_year<=2012),post_sales=sum(sale_year>=2014)),by=school_site_id],by="school_site_id",all.x=TRUE)
 for(field in c("sales","parcels","pre_sales","post_sales")) set(support,which(is.na(support[[field]])),field,0L)
-site_year <- merge(CJ(school_site_id=support$school_site_id,sale_year=2008:2018),selected[,.(sales=.N),by=.(school_site_id,sale_year)],by=c("school_site_id","sale_year"),all.x=TRUE)
+site_year <- merge(CJ(school_site_id=support$school_site_id,sale_year=2008:end_year),selected[,.(sales=.N),by=.(school_site_id,sale_year)],by=c("school_site_id","sale_year"),all.x=TRUE)
 site_year[is.na(sales),sales:=0L]
-geography <- sales[trend_sample == TRUE,.(sales=.N),by=.(focal_exposure_025,n_welcoming_schools_025,n_other_candidate_sites_025)]
-selection <- annual_counts[stage %in% c(3,7)]
+geography <- sales[price_sample == TRUE,.(sales=.N),by=.(focal_exposure,n_welcoming_schools,n_other_candidate_sites)]
+selection <- annual_counts[stage %in% c(3,5)]
 selection <- dcast(selection,group+sale_year~stage,value.var="sales")
-setnames(selection,c("3","7"),c("market_sales","price_sales"))
+setnames(selection,c("3","5"),c("market_sales","price_sales"))
 selection[,retention:=price_sales/market_sales]
 # Sensitivity is descriptive: retain price rules but relax competing-school exclusions.
 location_variants <- rbindlist(list(
- sales[trend_sample & group!="Outside comparison",.(group,sale_year,real_price,variant="Before nearby-school exclusions")],
+ sales[price_sample & group!="Outside comparison",.(group,sale_year,real_price,variant="Before nearby-school exclusions")],
  selected[,.(group,sale_year,real_price,variant="Preferred geography")]))[,.(sales=.N,mean_price=mean(real_price),median_price=median(real_price)),by=.(group,sale_year,variant)]
-checks <- data.table(check=c("February candidate names checked","Master transactions","Study-period transactions","Complete-characteristics citywide prices","Descriptive comparison prices","School projection maximum (feet)","Parcel projection maximum (feet)","Missing master coordinates","Published closure pairs checked","Receiving-school assignments checked","Distinct receiving schools","Nearby distinct candidate site pairs (<300 feet)"),
- value=c(129,428582,nrow(sales),nrow(clean),nrow(selected),max(schools$projection_error_ft),parcel_projection_error,sum(!geo$has_historical_coordinates),47,53,48,nrow(near_sites)))
+checks <- data.table(check=c("February candidate names checked","Master transactions","Study-period transactions","Citywide clean price sample","Comparison price sample","School projection maximum (feet)","Parcel projection maximum (feet)","Missing master coordinates","Published closure pairs checked","Receiving-school assignments checked","Distinct receiving schools","Nearby distinct candidate site pairs (<300 feet)"),
+ value=c(129,nrow(geo),nrow(sales),sum(sales$price_sample),nrow(selected),max(schools$projection_error_ft),parcel_projection_error,sum(!geo$has_historical_coordinates),47,53,48,nrow(near_sites)))
 setorder(schools, school_id)
 setorder(annual_prices, group, sale_year)
 setorder(composition, group, property_type, sale_year)
 setorder(support, group, -sales)
 setorder(annual_counts, stage, group, sale_year)
 setorder(attrition, group, step)
-saveRDS(list(checks=checks,schools=schools[,.(school_id,school_site_id,school_name_sy1213,group,may2013_closed_47,housing_treat_30,housing_control_49,street_address_sy1213,notes,projection_error_ft)],
+# Count each otherwise eligible transaction once before geographic exclusions.
+overlap <- sales[price_sample==TRUE,.(near_either=sum(n_treated_sites>0 | n_control_sites>0),
+ near_both=sum(n_treated_sites>0 & n_control_sites>0),
+ retained=sum(geography_ok),treated=sum(geography_ok & group=="Closed"),
+ control=sum(geography_ok & group=="Stayed open"))]
+overlap[,`:=`(radius_miles=radius_miles,overlap_share=near_both/near_either)]
+stopifnot(overlap$retained==nrow(selected),overlap$near_both<=overlap$near_either)
+saveRDS(list(property_sample=property_sample,end_year=end_year,radius_miles=radius_miles,overlap=overlap,checks=checks,schools=schools[,.(school_id,school_site_id,school_name_sy1213,group,may2013_closed_47,housing_treat_30,housing_control_49,street_address_sy1213,notes,projection_error_ft)],
  welcoming=welcoming,sites=sites,near_sites=near_sites,attrition=attrition,annual_counts=annual_counts,annual_prices=annual_prices,
- complete_prices=complete_prices,sample_changes=sample_changes,regression_attrition=regression_attrition,
- composition=composition,support=support,site_year=site_year,geography=geography,selection=selection,cutoffs=cutoffs,location_variants=location_variants,
+ complete_prices=complete_prices,
+ composition=composition,support=support,site_year=site_year,geography=geography,selection=selection,location_variants=location_variants,
  map_sales=selected[,.(row_id,x,y,group)],date_precision=selected[,.(sales=.N),by=.(group,sale_date_precision)],
  source_hashes=data.table(source=c("school roster","corrected transactions","clean prices","historical locations","exposure","CPI","published school report","reference transcription","February list","February transcription","CPS Fermi notice","CPS Garfield notice"),
- sha256=vapply(c("../input/closure_roster.csv","../input/corrected_sales.csv","../input/clean_sales.csv","../input/geocoded_master.csv","../input/exposure.parquet","../input/cpi.csv","../input/consortium_school_closings_2015.pdf","school_reference.csv","../input/cps_february_2013_list.pdf","candidate_reference.csv","../input/fermi_south_shore_2013.pdf","../input/garfield_faraday_2013.pdf"),digest::digest,character(1),file=TRUE,algo="sha256"))),"../output/data_review.rds")
+ sha256=vapply(c("../input/closure_roster.csv","../input/corrected_sales.csv","../input/clean_sales.csv","../input/geocoded_master.csv","../input/exposure.parquet","../input/cpi.csv","../input/consortium_school_closings_2015.pdf","school_reference.csv","../input/cps_february_2013_list.pdf","candidate_reference.csv","../input/fermi_south_shore_2013.pdf","../input/garfield_faraday_2013.pdf"),digest::digest,character(1),file=TRUE,algo="sha256"))),paste0("../output/data_review",suffix,".rds"))
 print(checks)
 print(attrition)
 print(welcoming[closed_school_id %in% continued, .(closed_school_id, school_name, distance_to_closed_ft)])

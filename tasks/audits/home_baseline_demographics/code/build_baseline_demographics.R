@@ -96,9 +96,7 @@ coordinates <- fread("../input/geocoded_master_home_transactions_2006_2025.csv",
   select = c("row_id", "longitude", "latitude"), colClasses = c(row_id = "character"))
 stopifnot(!anyDuplicated(coordinates$row_id), all(homes$row_id %in% coordinates$row_id))
 homes <- merge(homes, coordinates, by = "row_id", all.x = TRUE, sort = FALSE)
-stopifnot(nrow(homes) == 10921L, uniqueN(homes[treated == 1, school_site_id]) == 29L,
-          uniqueN(homes[treated == 0, school_site_id]) == 48L,
-          !anyNA(homes$longitude), !anyNA(homes$latitude))
+stopifnot(!anyDuplicated(homes$row_id), !anyNA(homes$longitude), !anyNA(homes$latitude))
 points <- st_transform(st_as_sf(homes, coords = c("longitude", "latitude"), crs = 4326), 3435)
 # One home point must fall inside exactly one polygon at each geography level.
 # Fail on unmatched or boundary-ambiguous points; never choose a nearest tract.

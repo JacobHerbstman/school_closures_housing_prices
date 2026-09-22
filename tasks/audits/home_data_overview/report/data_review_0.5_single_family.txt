@@ -1,0 +1,728 @@
+Saved RDS SHA-256: 3e03d029fe0fa6eef5d618f1e5309cb195371aa7e94b766adc3ed8e86b08a2a3
+
+Dataset: overlap
+Rows: 1  Columns: 7
+Key: radius_miles
+Duplicate or missing keys: 0
+near_either | integer | nonmissing: 1 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  12618   12618   12618   12618   12618   12618
+near_both | integer | nonmissing: 1 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    873     873     873     873     873     873
+retained | integer | nonmissing: 1 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   7611    7611    7611    7611    7611    7611
+treated | integer | nonmissing: 1 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1211    1211    1211    1211    1211    1211
+control | integer | nonmissing: 1 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   6400    6400    6400    6400    6400    6400
+radius_miles | numeric | nonmissing: 1 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.5     0.5     0.5     0.5     0.5     0.5
+overlap_share | numeric | nonmissing: 1 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.06919 0.06919 0.06919 0.06919 0.06919 0.06919
+First six records:
+   near_either near_both retained treated control radius_miles overlap_share
+         <int>     <int>    <int>   <int>   <int>        <num>         <num>
+1:       12618       873     7611    1211    6400          0.5    0.06918688
+
+Dataset: checks
+Rows: 12  Columns: 2
+Key: check
+Duplicate or missing keys: 0
+check | character | nonmissing: 12 | distinct nonmissing: 12
+[1] "Citywide clean price sample"      "Comparison price sample"
+[3] "Distinct receiving schools"       "February candidate names checked"
+[5] "Master transactions"              "Missing master coordinates"
+value | numeric | nonmissing: 12 | distinct nonmissing: 12
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+     0.0      4.5     50.5  56958.2  28201.8 428582.0
+First six records:
+                              check        value
+                             <char>        <num>
+1: February candidate names checked 1.290000e+02
+2:              Master transactions 4.285820e+05
+3:        Study-period transactions 1.570480e+05
+4:      Citywide clean price sample 8.997400e+04
+5:          Comparison price sample 7.611000e+03
+6: School projection maximum (feet) 2.258126e-03
+
+Dataset: schools
+Rows: 129  Columns: 10
+Key: school_id
+Duplicate or missing keys: 0
+school_id | integer | nonmissing: 129 | distinct nonmissing: 129
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 400095  609989  610110  608474  610232  610521
+school_site_id | integer | nonmissing: 129 | distinct nonmissing: 127
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 400095  609989  610110  608472  610225  610521
+school_name_sy1213 | character | nonmissing: 129 | distinct nonmissing: 129
+[1] "Adam Clayton Powell Paideia Community Academy ES"
+[2] "Alexander Graham Elementary School"
+[3] "Alexander von Humboldt Elementary School"
+[4] "Alfred David Kohn Elementary School"
+[5] "Amos Alonzo Stagg Elementary School"
+[6] "Ana Roque de Duprey Elementary School"
+group | character | nonmissing: 129 | distinct nonmissing: 3
+[1] "Closed"          "Other candidate" "Stayed open"
+may2013_closed_47 | integer | nonmissing: 129 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  0.0000  0.0000  0.3643  1.0000  1.0000
+housing_treat_30 | integer | nonmissing: 129 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  0.0000  0.0000  0.2326  0.0000  1.0000
+housing_control_49 | integer | nonmissing: 129 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  0.0000  0.0000  0.3798  1.0000  1.0000
+street_address_sy1213 | character | nonmissing: 129 | distinct nonmissing: 127
+[1] "1000 W 52nd St"    "10041 S Union Ave" "1010 E 72nd St"
+[4] "10309 S Morgan St" "1040 N Keeler Ave" "10414 S State St"
+notes | character | nonmissing: 80 | distinct nonmissing: 14
+[1] "2013 co-location proposed/approved: Nkrumah was to relocate into Gresham at 8524 S Green St; action rescinded Aug. 2013 and co-location was not implemented."
+[2] "2013 co-location: O'Toole remained at 6550 S Seeley Ave; Montessori of Englewood relocated into/shared O'Toole facility"
+[3] "2013 co-location: Revere remained at 1010 E 72nd St; Noble-Gary Comer co-located in Revere facility"
+[4] "Approved for delayed closure; closure effective June 30, 2014"
+[5] "Approved for phase-out; closure effective June 30, 2015"
+[6] "Closed"
+projection_error_ft | numeric | nonmissing: 129 | distinct nonmissing: 127
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+0.0001663 0.0008554 0.0011854 0.0011891 0.0015301 0.0022581
+First six records:
+   school_id school_site_id                                  school_name_sy1213
+       <int>          <int>                                              <char>
+1:    400095         400095 Garfield Park Preparatory Academy Elementary School
+2:    609775         609775                    John P Altgeld Elementary School
+3:    609781         609781                   Crispus Attucks Elementary School
+4:    609797         609797                     Jacob Beidler Elementary School
+5:    609809         609809           Lorenz Brentano Math & Science Academy ES
+6:    609812         609812                   William H Brown Elementary School
+             group may2013_closed_47 housing_treat_30 housing_control_49
+            <char>             <int>            <int>              <int>
+1: Other candidate                 1                0                  0
+2: Other candidate                 1                0                  0
+3: Other candidate                 0                0                  0
+4:     Stayed open                 0                0                  1
+5:     Stayed open                 0                0                  1
+6:     Stayed open                 0                0                  1
+   street_address_sy1213
+                  <char>
+1:      3250 W Monroe St
+2:        1340 W 71st St
+3:       5055 S State St
+4:      3151 W Walnut St
+5:  2723 N Fairfield Ave
+6:    54 N Hermitage Ave
+                                                                                                                                                                                  notes
+                                                                                                                                                                                 <char>
+1: Closed; Michael Faraday Elementary School was already operating in the building and continued after closure. Site remained in active school use; exclude from main housing treatment
+2:                               Closed; designated welcoming school relocated into the building for SY2013-14. Site remained in active school use; exclude from main housing treatment
+3:                                                                                                                              Approved for phase-out; closure effective June 30, 2015
+4:                                                                                                                                                                                 <NA>
+5:                                                                                                                                                                                 <NA>
+6:                                                                                                                                                                                 <NA>
+   projection_error_ft
+                 <num>
+1:        0.0013429837
+2:        0.0008383882
+3:        0.0006552015
+4:        0.0008892793
+5:        0.0008009487
+6:        0.0011352546
+
+Dataset: welcoming
+Rows: 53  Columns: 9
+Key: closed_school_id, school_id
+Duplicate or missing keys: 0
+closed_school_id | integer | nonmissing: 53 | distinct nonmissing: 47
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 400095  610028  610160  606177  610241  610395
+school_id | integer | nonmissing: 53 | distinct nonmissing: 48
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609791  609919  610110  610102  610269  610530
+school_name | character | nonmissing: 53 | distinct nonmissing: 48
+[1] "Alex Haley Elementary Academy"
+[2] "Benjamin E Mays Elementary Academy"
+[3] "Burnham Elementary Inclusive Academy"
+[4] "Charles Evans Hughes Elementary School"
+[5] "Charles W Earle Elementary School"
+[6] "Countee Cullen Elementary School"
+address | character | nonmissing: 53 | distinct nonmissing: 48
+[1] "10650 S Eberhart Ave"  "1140 W 66th St"        "11411 S Eggleston Ave"
+[4] "12302 S State St"      "1310 S Ashland Ave"    "1313 N Claremont Ave"
+x | numeric | nonmissing: 53 | distinct nonmissing: 48
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+1138585 1154521 1166113 1165148 1176276 1193433
+y | numeric | nonmissing: 53 | distinct nonmissing: 48
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+1823353 1861069 1892327 1882742 1900585 1934467
+lon | numeric | nonmissing: 53 | distinct nonmissing: 48
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ -87.77  -87.71  -87.67  -87.67  -87.63  -87.57
+lat | numeric | nonmissing: 53 | distinct nonmissing: 48
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  41.67   41.77   41.86   41.83   41.88   41.98
+distance_to_closed_ft | numeric | nonmissing: 53 | distinct nonmissing: 51
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+    0.000     0.001  2047.839  2953.176  2992.421 57128.328
+First six records:
+   closed_school_id school_id                                school_name
+              <int>     <int>                                     <char>
+1:           609775    610223       Daniel S Wentworth Elementary School
+2:           610156    610305            George Leland Elementary School
+3:           610265    610290         Benjamin E Mays Elementary Academy
+4:           610365    609954      John Milton Gregory Elementary School
+5:           610161    609793               Nicholson Technology Academy
+6:           610280    610075 Moses Montefiore Special Elementary School
+              address       x       y       lon      lat distance_to_closed_ft
+               <char>   <num>   <num>     <num>    <num>                 <num>
+1:     1340 W 71st St 1168430 1857717 -87.65821 41.76510          6.205972e-04
+2: 512 S Lavergne Ave 1143309 1897065 -87.74931 41.87358          2.694812e+03
+3: 6656 S Normal Blvd 1174114 1860551 -87.63729 41.77275          4.908721e-04
+4:     3715 W Polk St 1151661 1896078 -87.71867 41.87071          4.501258e+03
+5:   6006 S Peoria St 1171298 1864964 -87.64749 41.78493          2.756551e+03
+6: 1310 S Ashland Ave 1165893 1893999 -87.66648 41.86472          5.712833e+04
+
+Dataset: sites
+Rows: 127  Columns: 6
+Key: school_site_id
+Duplicate or missing keys: 0
+school_site_id | integer | nonmissing: 127 | distinct nonmissing: 127
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 400095  609988  610108  608445  610224  610521
+school_names | character | nonmissing: 127 | distinct nonmissing: 127
+[1] "Adam Clayton Powell Paideia Community Academy ES"
+[2] "Alexander Graham Elementary School"
+[3] "Alfred David Kohn Elementary School"
+[4] "Amos Alonzo Stagg Elementary School"
+[5] "Ana Roque de Duprey Elementary School / Alexander von Humboldt Elementary School"
+[6] "Anna R. Langford Community Academy"
+group | character | nonmissing: 127 | distinct nonmissing: 3
+[1] "Closed"          "Other candidate" "Stayed open"
+x | numeric | nonmissing: 127 | distinct nonmissing: 127
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+1138633 1158047 1170184 1168641 1178594 1199963
+y | numeric | nonmissing: 127 | distinct nonmissing: 127
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+1817245 1858544 1872549 1875132 1897322 1934622
+schools | integer | nonmissing: 127 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  1.000   1.000   1.000   1.016   1.000   2.000
+First six records:
+   school_site_id                                     school_names
+            <int>                                           <char>
+1:         609848                 Ira F Aldridge Elementary School
+2:         609775                 John P Altgeld Elementary School
+3:         610156 Louis Armstrong Math & Science Elementary School
+4:         610268                  Arthur R Ashe Elementary School
+5:         609781                Crispus Attucks Elementary School
+6:         610265              Benjamin Banneker Elementary School
+             group       x       y schools
+            <char>   <num>   <num>   <int>
+1:     Stayed open 1182870 1818598       1
+2: Other candidate 1168430 1857717       1
+3:          Closed 1140614 1897119       1
+4:     Stayed open 1184079 1848753       1
+5: Other candidate 1177176 1871286       1
+6: Other candidate 1174114 1860551       1
+
+Dataset: near_sites
+Rows: 0  Columns: 3
+Key: site1, site2
+Duplicate or missing keys: 0
+site1 | integer | nonmissing: 0 | distinct nonmissing: 0
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+
+site2 | integer | nonmissing: 0 | distinct nonmissing: 0
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+
+distance_ft | numeric | nonmissing: 0 | distinct nonmissing: 0
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+
+First six records:
+Empty data.table (0 rows and 3 cols): site1,site2,distance_ft
+
+Dataset: attrition
+Rows: 15  Columns: 4
+Key: group, step
+Duplicate or missing keys: 0
+group | character | nonmissing: 15 | distinct nonmissing: 3
+[1] "Citywide"    "Closed"      "Stayed open"
+sales | integer | nonmissing: 15 | distinct nonmissing: 12
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1211    2021    9529   44128  104632  157048
+step | integer | nonmissing: 15 | distinct nonmissing: 5
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      1       2       3       3       4       5
+restriction | character | nonmissing: 15 | distinct nonmissing: 5
+[1] "Clean price sample"
+[2] "County sale-quality flags"
+[3] "Non-land sales above $10,000"
+[4] "One building record; eligible property type"
+[5] "Recorded non-condo transactions"
+First six records:
+      group  sales  step                                 restriction
+     <char>  <int> <int>                                      <char>
+1: Citywide 157048     1             Recorded non-condo transactions
+2: Citywide 119606     2                   County sale-quality flags
+3: Citywide 119289     3                Non-land sales above $10,000
+4: Citywide 119289     4 One building record; eligible property type
+5: Citywide  89974     5                          Clean price sample
+6:   Closed   2350     1             Recorded non-condo transactions
+
+Dataset: annual_counts
+Rows: 110  Columns: 5
+Key: stage, group, sale_year
+Duplicate or missing keys: 0
+group | character | nonmissing: 110 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+sale_year | integer | nonmissing: 110 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+sales | integer | nonmissing: 110 | distinct nonmissing: 78
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   64.0   154.0   373.5   515.6   817.8  1883.0
+parcels | integer | nonmissing: 110 | distinct nonmissing: 75
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   63.0   147.0   347.5   487.8   789.8  1662.0
+stage | integer | nonmissing: 110 | distinct nonmissing: 5
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      1       2       3       3       4       5
+First six records:
+    group sale_year sales parcels stage
+   <char>     <int> <int>   <int> <int>
+1: Closed      2008   164     155     1
+2: Closed      2009   149     145     1
+3: Closed      2010   147     139     1
+4: Closed      2011   139     131     1
+5: Closed      2012   176     166     1
+6: Closed      2013   209     195     1
+
+Dataset: complete_prices
+Rows: 22  Columns: 5
+Key: group, sale_year
+Duplicate or missing keys: 0
+group | character | nonmissing: 22 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+sale_year | integer | nonmissing: 22 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+sales | integer | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   64.0   106.8   288.5   346.0   526.0   966.0
+mean_price | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 254335  312138  360666  371347  399437  540720
+median_price | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 163379  188505  216278  245008  262469  442419
+First six records:
+         group sale_year sales mean_price median_price
+        <char>     <int> <int>      <num>        <num>
+1: Stayed open      2018   966   299376.2     183018.5
+2: Stayed open      2016   707   325653.1     191848.2
+3: Stayed open      2011   421   254335.0     163379.3
+4: Stayed open      2012   458   286911.0     165054.6
+5:      Closed      2015   131   489657.6     388809.9
+6: Stayed open      2015   601   378337.9     199335.1
+
+Dataset: annual_prices
+Rows: 22  Columns: 15
+Key: group, sale_year
+Duplicate or missing keys: 0
+group | character | nonmissing: 22 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+sale_year | integer | nonmissing: 22 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+sales | integer | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   64.0   106.8   288.5   346.0   526.0   966.0
+mean_price | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 254335  312138  360666  371347  399437  540720
+median_price | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 163379  188505  216278  245008  262469  442419
+nominal_mean | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 203723  257267  285755  304067  342336  453486
+nominal_median | numeric | nonmissing: 22 | distinct nonmissing: 19
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 131000  152475  167450  200284  219625  360000
+p10 | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  24886   31599   43309   44883   56584   75113
+p25 | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  51111   80008   90154  106483  135379  206048
+p75 | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 315467  408500  498568  541416  663364  863560
+p90 | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 569957  710030  814095  841984  967446 1229721
+p95 | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 801851  914498  989515 1040406 1156511 1452500
+top5_value_share | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.1493  0.1639  0.2106  0.2070  0.2394  0.2871
+mean_ppsf | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  154.4   184.7   210.7   213.4   234.4   279.2
+median_ppsf | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  127.2   150.2   172.5   184.0   207.0   294.2
+First six records:
+    group sale_year sales mean_price median_price nominal_mean nominal_median
+   <char>     <int> <int>      <num>        <num>        <num>          <num>
+1: Closed      2008    90   354614.9     237136.6     275588.9         184000
+2: Closed      2009    64   501418.5     442419.1     385415.2         342500
+3: Closed      2010    79   366717.1     212218.0     285465.8         165000
+4: Closed      2011    66   320713.2     188063.3     256699.2         150000
+5: Closed      2012   103   386234.2     331935.3     313870.3         270000
+6: Closed      2013   109   389293.9     245206.4     320167.9         200000
+        p10       p25      p75       p90       p95 top5_value_share mean_ppsf
+      <num>     <num>    <num>     <num>     <num>            <num>     <num>
+1: 69336.44 162687.82 344906.0  937972.4 1053039.6        0.2058566  235.0978
+2: 75113.10 206047.88 790510.1 1022888.9 1169374.1        0.1492869  279.1653
+3: 26640.99  83147.35 583155.6  974366.4 1053098.7        0.1510495  214.3138
+4: 24886.21  79874.96 541876.0  875427.9  914480.1        0.1851492  189.8678
+5: 40642.36 122947.66 571783.8  685626.0  954764.3        0.1805495  221.9562
+6: 30730.73  72998.45 658636.4  817354.9  916512.8        0.1638753  213.4336
+   median_ppsf
+         <num>
+1:    203.9764
+2:    294.1882
+3:    187.7046
+4:    142.4194
+5:    208.0628
+6:    176.2474
+
+Dataset: composition
+Rows: 22  Columns: 13
+Key: group, sale_year, property_type
+Duplicate or missing keys: 0
+group | character | nonmissing: 22 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+sale_year | integer | nonmissing: 22 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+property_type | character | nonmissing: 22 | distinct nonmissing: 1
+[1] "Houses and townhouses"
+sales | integer | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   64.0   106.8   288.5   346.0   526.0   966.0
+mean_price | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 254335  312138  360666  371347  399437  540720
+median_price | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 163379  188505  216278  245008  262469  442419
+usable_area_sales | integer | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   64.0   106.8   288.5   346.0   526.0   966.0
+mean_sqft | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1435    1476    1524    1561    1657    1748
+median_sqft | numeric | nonmissing: 22 | distinct nonmissing: 20
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1224    1288    1310    1407    1561    1642
+mean_age | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  64.55   69.97   72.12   73.45   76.71   89.96
+hie_share | numeric | nonmissing: 22 | distinct nonmissing: 22
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+0.009709 0.024285 0.031299 0.034741 0.044394 0.071429
+hie_start_year_share | numeric | nonmissing: 22 | distinct nonmissing: 21
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.00000 0.01150 0.01660 0.01862 0.02695 0.04511
+share | numeric | nonmissing: 22 | distinct nonmissing: 1
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      1       1       1       1       1       1
+First six records:
+    group sale_year         property_type sales mean_price median_price
+   <char>     <int>                <char> <int>      <num>        <num>
+1: Closed      2008 Houses and townhouses    90   354614.9     237136.6
+2: Closed      2009 Houses and townhouses    64   501418.5     442419.1
+3: Closed      2010 Houses and townhouses    79   366717.1     212218.0
+4: Closed      2011 Houses and townhouses    66   320713.2     188063.3
+5: Closed      2012 Houses and townhouses   103   386234.2     331935.3
+6: Closed      2013 Houses and townhouses   109   389293.9     245206.4
+   usable_area_sales mean_sqft median_sqft mean_age   hie_share
+               <int>     <num>       <num>    <num>       <num>
+1:                90  1435.456      1306.0 69.62222 0.011111111
+2:                64  1728.156      1577.0 68.43750 0.062500000
+3:                79  1587.734      1512.0 89.96203 0.037974684
+4:                66  1556.379      1484.5 80.25758 0.045454545
+5:               103  1627.194      1512.0 73.43689 0.009708738
+6:               109  1701.725      1622.0 77.49541 0.027522936
+   hie_start_year_share share
+                  <num> <num>
+1:           0.01111111     1
+2:           0.03125000     1
+3:           0.01265823     1
+4:           0.03030303     1
+5:           0.00000000     1
+6:           0.02752294     1
+
+Dataset: support
+Rows: 78  Columns: 10
+Key: school_site_id
+Duplicate or missing keys: 0
+school_site_id | integer | nonmissing: 78 | distinct nonmissing: 78
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609797  610012  610118  610105  610225  610521
+school_names | character | nonmissing: 78 | distinct nonmissing: 78
+[1] "Adam Clayton Powell Paideia Community Academy ES"
+[2] "Alexander Graham Elementary School"
+[3] "Alfred David Kohn Elementary School"
+[4] "Amos Alonzo Stagg Elementary School"
+[5] "Ana Roque de Duprey Elementary School / Alexander von Humboldt Elementary School"
+[6] "Anna R. Langford Community Academy"
+group | character | nonmissing: 78 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+x | numeric | nonmissing: 78 | distinct nonmissing: 78
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+1138633 1158173 1169440 1168656 1177991 1199963
+y | numeric | nonmissing: 78 | distinct nonmissing: 78
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+1817245 1855937 1872316 1873727 1896397 1934622
+schools | integer | nonmissing: 78 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  1.000   1.000   1.000   1.013   1.000   2.000
+sales | integer | nonmissing: 78 | distinct nonmissing: 58
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   0.00    4.25   39.50   97.58  139.50  507.00
+parcels | integer | nonmissing: 78 | distinct nonmissing: 52
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   0.00    3.25   31.00   80.06  113.75  410.00
+pre_sales | integer | nonmissing: 78 | distinct nonmissing: 46
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0     1.0    15.5    33.5    54.0   150.0
+post_sales | integer | nonmissing: 78 | distinct nonmissing: 48
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   0.00    2.25   20.00   55.82   81.00  313.00
+First six records:
+   school_site_id
+            <int>
+1:         610280
+2:         610205
+3:         610210
+4:         610085
+5:         610020
+6:         610023
+                                                                       school_names
+                                                                             <char>
+1:                                       Kate S Buckingham Special Education Center
+2:                                                 Lyman Trumbull Elementary School
+3: Ana Roque de Duprey Elementary School / Alexander von Humboldt Elementary School
+4:                                                     Near North Elementary School
+5:                                              Francis Scott Key Elementary School
+6:                                                 William H King Elementary School
+    group       x       y schools sales parcels pre_sales post_sales
+   <char>   <num>   <num>   <int> <int>   <int>     <int>      <int>
+1: Closed 1194147 1844347       1   223     179        76        135
+2: Closed 1164685 1934622       1   221     176        81        125
+3: Closed 1158554 1909250       2   140     101        40         81
+4: Closed 1167233 1905231       1   104      82        31         61
+5: Closed 1138633 1902956       1   103      90        38         55
+6: Closed 1159806 1896556       1    99      82        22         65
+
+Dataset: site_year
+Rows: 858  Columns: 3
+Key: school_site_id, sale_year
+Duplicate or missing keys: 0
+school_site_id | integer | nonmissing: 858 | distinct nonmissing: 78
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609797  610012  610118  610105  610225  610521
+sale_year | integer | nonmissing: 858 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+sales | integer | nonmissing: 858 | distinct nonmissing: 59
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  0.000   0.000   3.000   8.871  13.000  85.000
+First six records:
+Key: <school_site_id, sale_year>
+   school_site_id sale_year sales
+            <int>     <int> <int>
+1:         609797      2008     0
+2:         609797      2009     0
+3:         609797      2010     1
+4:         609797      2011     0
+5:         609797      2012     0
+6:         609797      2013     0
+
+Dataset: geography
+Rows: 46  Columns: 4
+Key: focal_exposure, n_welcoming_schools, n_other_candidate_sites
+Duplicate or missing keys: 0
+focal_exposure | character | nonmissing: 46 | distinct nonmissing: 4
+[1] "control_only"            "outside_focal_rings"
+[3] "treated_control_overlap" "treated_only"
+n_welcoming_schools | integer | nonmissing: 46 | distinct nonmissing: 4
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  0.000   1.000   1.000   1.304   2.000   3.000
+n_other_candidate_sites | integer | nonmissing: 46 | distinct nonmissing: 5
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  0.000   0.000   1.000   1.304   2.000   4.000
+sales | integer | nonmissing: 46 | distinct nonmissing: 39
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    2.0    21.5    85.0  1956.0   371.0 71716.0
+First six records:
+            focal_exposure n_welcoming_schools n_other_candidate_sites sales
+                    <char>               <int>                   <int> <int>
+1:     outside_focal_rings                   0                       0 71716
+2:            control_only                   0                       0  6400
+3:            control_only                   0                       1   948
+4:            treated_only                   1                       0  1015
+5: treated_control_overlap                   1                       0   110
+6:     outside_focal_rings                   1                       2   448
+
+Dataset: selection
+Rows: 22  Columns: 5
+Key: group, sale_year
+Duplicate or missing keys: 0
+group | character | nonmissing: 22 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+sale_year | integer | nonmissing: 22 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+market_sales | integer | nonmissing: 22 | distinct nonmissing: 21
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  107.0   154.5   424.0   509.8   815.5  1191.0
+price_sales | integer | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   64.0   106.8   288.5   346.0   526.0   966.0
+retention | numeric | nonmissing: 22 | distinct nonmissing: 22
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.5115  0.6140  0.6847  0.6829  0.7477  0.8508
+First six records:
+Key: <group, sale_year>
+    group sale_year market_sales price_sales retention
+   <char>     <int>        <int>       <int>     <num>
+1: Closed      2008          154          90 0.5844156
+2: Closed      2009          119          64 0.5378151
+3: Closed      2010          116          79 0.6810345
+4: Closed      2011          107          66 0.6168224
+5: Closed      2012          141         103 0.7304965
+6: Closed      2013          156         109 0.6987179
+
+Dataset: location_variants
+Rows: 44  Columns: 6
+Key: group, sale_year, variant
+Duplicate or missing keys: 0
+group | character | nonmissing: 44 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+sale_year | integer | nonmissing: 44 | distinct nonmissing: 11
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2018
+variant | character | nonmissing: 44 | distinct nonmissing: 2
+[1] "Before nearby-school exclusions" "Preferred geography"
+sales | integer | nonmissing: 44 | distinct nonmissing: 44
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   64.0   193.2   426.5   439.9   567.2  1239.0
+mean_price | numeric | nonmissing: 44 | distinct nonmissing: 44
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 254335  303213  338039  352571  385774  540720
+median_price | numeric | nonmissing: 44 | distinct nonmissing: 44
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 149935  174981  192663  218859  234881  442419
+First six records:
+         group sale_year                         variant sales mean_price
+        <char>     <int>                          <char> <int>      <num>
+1: Stayed open      2018 Before nearby-school exclusions  1239   284549.4
+2: Stayed open      2016 Before nearby-school exclusions   921   304492.1
+3: Stayed open      2011 Before nearby-school exclusions   548   254354.1
+4:      Closed      2010 Before nearby-school exclusions   221   308306.1
+5:      Closed      2018 Before nearby-school exclusions   550   341500.2
+6: Stayed open      2012 Before nearby-school exclusions   540   285801.4
+   median_price
+          <num>
+1:     171640.0
+2:     179088.6
+3:     149934.6
+4:     172984.2
+5:     171633.5
+6:     164187.5
+
+Dataset: map_sales
+Rows: 7611  Columns: 4
+Key: row_id
+Duplicate or missing keys: 0
+row_id | character | nonmissing: 7611 | distinct nonmissing: 7611
+[1] "7147011"  "7234241"  "7252512"  "96110473" "96110526" "96110733"
+x | numeric | nonmissing: 7611 | distinct nonmissing: 6865
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+1136337 1164521 1170290 1170621 1175277 1199864
+y | numeric | nonmissing: 7611 | distinct nonmissing: 6866
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+1815923 1844141 1868983 1870921 1904265 1937165
+group | character | nonmissing: 7611 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+First six records:
+Key: <row_id>
+     row_id       x       y       group
+     <char>   <num>   <num>      <char>
+1:  7147011 1147315 1907741 Stayed open
+2:  7234241 1191329 1845248 Stayed open
+3:  7252512 1169717 1830399 Stayed open
+4: 96110473 1168035 1828980 Stayed open
+5: 96110526 1160709 1862186 Stayed open
+6: 96110733 1168538 1826954 Stayed open
+
+Dataset: date_precision
+Rows: 4  Columns: 3
+Key: group, sale_date_precision
+Duplicate or missing keys: 0
+group | character | nonmissing: 4 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+sale_date_precision | character | nonmissing: 4 | distinct nonmissing: 2
+[1] "idor_refined_day" "recording_month"
+sales | integer | nonmissing: 4 | distinct nonmissing: 4
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  425.0   695.8  1556.0  1902.8  2763.0  4074.0
+First six records:
+         group sale_date_precision sales
+        <char>              <char> <int>
+1: Stayed open    idor_refined_day  4074
+2: Stayed open     recording_month  2326
+3:      Closed    idor_refined_day   786
+4:      Closed     recording_month   425
+
+Dataset: source_hashes
+Rows: 12  Columns: 2
+Key: source
+Duplicate or missing keys: 0
+source | character | nonmissing: 12 | distinct nonmissing: 12
+[1] "clean prices"           "corrected transactions" "CPI"
+[4] "CPS Fermi notice"       "CPS Garfield notice"    "exposure"
+sha256 | character | nonmissing: 12 | distinct nonmissing: 12
+[1] "0df3dd222123982666fcf19e8cd868afcfb2584a83e1a66bdd1642b4d604a376"
+[2] "23fdd8d201d76459277e91e58f8c62a0da4ea35a0bc22f50bdf6dcc8b6d066f9"
+[3] "94d97c338031c975afc8ff981114e28080ea6712759917ba23699248221a69c6"
+[4] "9aa9d5341315e40a1ca40d317288f99f8a3179fea51ae05e14708479f88768fc"
+[5] "ae01e1fd0e91bfd06224194eb56faa98326b75f6a311ca6c16db9c693875b31e"
+[6] "b3acc8952f1888263255fb77f260920d06ef723b45ae173d9ddf6f4986293abc"
+First six records:
+                   source
+                   <char>
+1:          school roster
+2: corrected transactions
+3:           clean prices
+4:   historical locations
+5:               exposure
+6:                    CPI
+                                                             sha256
+                                                             <char>
+1: d1d1f5ecc2b7149ab7fc4aec68963af03a3045618bb9149d1d87899215c557b5
+2: cec4cc41c883cb7a89b5891cb94809cca277900b0531d1b8edcaf80a03149f68
+3: cc2f6933f9c0ea46a8c8e787d287562fe3b2b053fe7ae654b3cfe50ab8609776
+4: 0df3dd222123982666fcf19e8cd868afcfb2584a83e1a66bdd1642b4d604a376
+5: b3acc8952f1888263255fb77f260920d06ef723b45ae173d9ddf6f4986293abc
+6: dc2e5ee5780eb6eb3ca98601775365f771b81d6368ca56be77ba956e1501435a

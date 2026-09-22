@@ -184,3 +184,35 @@ not the logarithm of the arithmetic mean price.
 
 `report/saved_tables.txt` describes the saved summary tables, verifies their
 keys, and records their checksums. It is rebuilt by the normal Make target.
+
+The annual event studies in `event_studies_through_2023.pdf` extend the
+quarter-mile comparison to 2008–2023. They use 17,212 sales with complete
+property characteristics, equal transaction weights, school-site and year
+fixed effects, and 2012 as the reference year. Four panels compare log and
+dollar prices without and with the existing property controls. Intervals
+are pointwise 95% intervals clustered by school site. The estimation script
+verifies the complete-characteristics sample against the extended overview
+and reproduces the original event coefficients when restricted to 2008–2018.
+`report/long_events.txt` describes the saved estimates and annual sample.
+
+The single-family comparison uses 2008–2018 and a quarter-mile radius.
+It keeps corrected `analysis_class` 202–210, 234, 278, and 295: houses and
+townhouses, excluding apartment buildings. Noah's school flags, geographic
+exclusions, inflation adjustment, and the original citywide price-per-square-foot
+cutoffs remain fixed. The restriction is an exact subset of the broader packet.
+`output/event_studies_single_family.pdf` shows annual log and dollar models,
+without and with property controls. All four use the same 5,643 complete-record
+sales at 75 sites, transaction weights, school-site and year fixed effects,
+2012 reference, and site-clustered intervals. Apartment count is omitted because
+it is constant zero. The shared annual estimation and presentation scripts take
+`single_family` for this 2008–2018 comparison or `all` for the 2008–2023 extension.
+The saved `single_family_events.rds` has a standard report in `report/`.
+
+`event_studies_single_family_0.5.pdf` uses the half-mile single-family packet
+for 2008–2018, with 11,202 complete-characteristics sales at 68 sites.
+Both annual scripts now take property sample and radius in miles. Existing
+quarter-mile recipes pass `0.25`; the new comparison passes `single_family 0.5`.
+The four formulas, weighting, reference year, and clustered intervals are the
+same. One residence-type indicator is collinear in the half-mile hedonic
+models and is omitted automatically; no transactions are removed for this.
+The saved estimates and report use `single_family_events_0.5`.

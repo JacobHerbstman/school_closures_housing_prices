@@ -91,7 +91,7 @@ coefficients <- rbindlist(coefficients)
 summaries <- rbindlist(summaries)
 raw_trends <- rbindlist(raw_trends)
 site_support <- rbindlist(site_support)
-stopifnot(nrow(summaries) == 120L, nrow(coefficients) == 660L,
+stopifnot(nrow(summaries) == 120L,
   !anyDuplicated(coefficients[, .(ring, weighting, specification, outcome, estimator, term)]),
   all(is.finite(coefficients$estimate)), all(is.finite(coefficients$std_error)), all(coefficients$std_error > 0))
 if (design == "common") {

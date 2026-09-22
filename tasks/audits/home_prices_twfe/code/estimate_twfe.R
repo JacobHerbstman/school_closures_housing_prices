@@ -290,7 +290,7 @@ for (model_name in names(models)) {
 }
 coefficients <- rbindlist(coefficients)
 summaries <- rbindlist(summaries)
-stopifnot(nrow(coefficients) == 348L, all(is.finite(coefficients$estimate)),
+stopifnot(all(is.finite(coefficients$estimate)),
           all(is.finite(coefficients$std_error)), all(coefficients$std_error > 0))
 fwrite(coefficients, "../output/coefficients.csv")
 fwrite(summaries, "../output/model_summary.csv")

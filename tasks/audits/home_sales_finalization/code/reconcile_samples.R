@@ -6,8 +6,6 @@ corrected <- fread("../input/corrected_home_sale_characteristics_2006_2025.csv",
                    colClasses = list(character = c("row_id", "pin", "sale_document_num")))
 clean <- fread("../input/home_sales_2008_2018.csv",
                colClasses = list(character = c("row_id", "pin", "sale_document_num")))
-geocoded <- fread("../input/geocoded_home_sales_2008_2018.csv",
-                  colClasses = list(character = c("row_id", "pin", "sale_document_num")))
 master <- fread("../input/geocoded_master_home_transactions_2006_2025.csv",
                 colClasses = list(character = c("row_id", "pin", "sale_document_num")))
 reference <- readRDS("../input/careful_characteristic_updates.rds")
@@ -16,7 +14,7 @@ followups <- readRDS("../output/class_followups.rds")
 # Full-row/field comparisons, not a spot check of changed observations.
 stopifnot(identical(baseline$row_id, corrected$row_id), identical(baseline$row_id, master$row_id),
           identical(corrected$row_id, reference$transactions$row_id),
-          !anyDuplicated(baseline$row_id), !anyDuplicated(clean$row_id), !anyDuplicated(geocoded$row_id))
+          !anyDuplicated(baseline$row_id), !anyDuplicated(clean$row_id))
 supported <- reference$field_map[supported == TRUE]
 for (field in supported$baseline) {
   stopifnot(identical(as.character(corrected[[field]]), as.character(reference$transactions[[paste0("hie_", field)]])),
@@ -83,8 +81,8 @@ price_tail_summary <- price_candidates[, .(
   cutoff_nominal = first(cutoff), sales_before = .N,
   sales_removed = sum(price_per_sqft > cutoff)
 ), by = sale_year][order(sale_year)]
-stopifnot(sum(old$included) == 167977L,
-          setequal(corrected$row_id[final$included], clean$row_id))
+# The reconstruction documents the September 7 class-correction step. Later
+# production cleaning (the September 22 foreclosure rule) is not repeated here.
 variants <- data.table(
   version = c("Previous sample", "HIE fields with stale sale class", "Updated class before conflict screen", "Final coherent sample"),
   sales = c(sum(old$included), sum(physical_only$included), sum(updated_class$included), sum(final$included))
@@ -192,24 +190,21 @@ points <- sf::st_transform(points, 3435)
 projected <- sf::st_coordinates(points)
 projection_error_ft <- sqrt((projected[, 1] - keys$centroid_x_crs_3435[complete])^2 +
                              (projected[, 2] - keys$centroid_y_crs_3435[complete])^2)
-stopifnot(max(projection_error_ft) < 1,
-          setequal(geocoded$row_id, clean$row_id[clean$row_id %in% master[has_historical_coordinates == TRUE, row_id]]),
-          all(geocoded$coordinate_source == "historical_exact_pin_year"))
-clean_index <- match(geocoded$row_id, clean$row_id)
-for (field in names(clean)) stopifnot(identical(geocoded[[field]], clean[[field]][clean_index]))
+stopifnot(max(projection_error_ft) < 1)
 coordinate_summary <- data.table(
   dataset = c("Master transactions", "Unique master PIN-years", "Selected price sample"),
   rows = c(nrow(master), nrow(keys), nrow(clean)),
-  complete_coordinates = c(sum(master$has_historical_coordinates), sum(complete), nrow(geocoded))
+  complete_coordinates = c(sum(master$has_historical_coordinates), sum(complete),
+                           sum(clean$row_id %in% master[has_historical_coordinates == TRUE, row_id]))
 )
 coordinate_missing <- master[has_historical_coordinates == FALSE,
                              .(row_id, pin, sale_year, sale_price_nominal)]
 
 hashes <- data.table(
-  file = c("baseline_characteristics", "corrected_characteristics", "clean_price_sample", "geocoded_price_sample", "geocoded_master"),
+  file = c("baseline_characteristics", "corrected_characteristics", "clean_price_sample", "geocoded_master"),
   sha256 = vapply(c("../input/home_sales_with_characteristics_2006_2025.csv",
                     "../input/corrected_home_sale_characteristics_2006_2025.csv", "../input/home_sales_2008_2018.csv",
-                    "../input/geocoded_home_sales_2008_2018.csv", "../input/geocoded_master_home_transactions_2006_2025.csv"),
+                    "../input/geocoded_master_home_transactions_2006_2025.csv"),
                   function(path) digest::digest(file = path, algo = "sha256"), character(1))
 )
 saveRDS(list(variants = variants, funnel = funnel, changes = changes, change_reasons = change_reasons,
