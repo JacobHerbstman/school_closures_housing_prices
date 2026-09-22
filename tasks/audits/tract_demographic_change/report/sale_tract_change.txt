@@ -1,0 +1,204 @@
+CSV SHA-256: b53cbaa25f676996ef568a1cdba7dc87ff52f93f3079bee7d717c48961d61534
+
+Dataset: sale_tract_change
+Rows: 428576  Columns: 10
+Key: row_id
+Duplicate or missing keys: 0
+geoid10 | character | nonmissing: 428576 | distinct nonmissing: 784
+[1] "17031010100" "17031010201" "17031010202" "17031010300" "17031010400"
+[6] "17031010501"
+row_id | character | nonmissing: 428576 | distinct nonmissing: 428576
+[1] "7087411" "7087412" "7087413" "7087525" "7087529" "7087530"
+change_ba_share | numeric | nonmissing: 428534 | distinct nonmissing: 781
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.     NA's
+-15.1816   0.9311   4.3461   6.2084   9.5026  65.1866       42
+change_nh_white_share | numeric | nonmissing: 428534 | distinct nonmissing: 765
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.     NA's
+-45.5740  -8.7878  -0.5966  -3.4314   1.2158  45.2596       42
+change_nh_black_share | numeric | nonmissing: 428534 | distinct nonmissing: 766
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.     NA's
+-57.7030  -1.7715   0.0000  -0.2969   1.9381  29.1378       42
+change_log_mean_income | numeric | nonmissing: 428534 | distinct nonmissing: 781
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.     NA's
+-0.98033 -0.28254 -0.16082 -0.14459 -0.02077  2.20089       42
+ba_share_2000 | numeric | nonmissing: 428576 | distinct nonmissing: 752
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.9023  8.3998 14.3867 20.2186 24.2178 88.5922
+nh_white_share_2000 | numeric | nonmissing: 428576 | distinct nonmissing: 686
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  0.9975 21.3446 32.8573 66.0173 95.5504
+nh_black_share_2000 | numeric | nonmissing: 428576 | distinct nonmissing: 705
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  0.000   1.255   7.027  40.156  95.993 100.000
+mean_income_2000 | numeric | nonmissing: 428576 | distinct nonmissing: 759
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  13133   56639   68853   72411   80743  244472
+First six records:
+       geoid10  row_id change_ba_share change_nh_white_share
+        <char>  <char>           <num>                 <num>
+1: 17031839900 7087411        9.502648            -5.4731067
+2: 17031330200 7087412        6.471079             0.6103065
+3: 17031590700 7087413        3.323301           -11.3569612
+4: 17031843600 7087525       17.411215             2.1882480
+5: 17031834200 7087529        3.589017            -0.3854752
+6: 17031440300 7087530        7.330213             1.1211828
+   change_nh_black_share change_log_mean_income ba_share_2000
+                   <num>                  <num>         <num>
+1:             0.7904162             0.02696070      16.90141
+2:           -11.8998903            -0.21179425      58.95118
+3:             5.1578059            -0.14346607       7.78781
+4:            -4.1989179            -0.04547021      12.25296
+5:             0.1730952            -0.09935530      17.88597
+6:            -1.2145340            -0.26360046      27.54864
+   nh_white_share_2000 nh_black_share_2000 mean_income_2000
+                 <num>               <num>            <num>
+1:           60.807130           0.2971032         71439.61
+2:           41.383495          46.1974110        137142.21
+3:           27.784850           0.6683641         55672.10
+4:            1.246719          96.9816273         47672.50
+5:            1.090787          96.8954523         53264.04
+6:            0.696999          97.3281704         71415.45
+
+Dataset: tracts
+Rows: 1318  Columns: 27
+Key: geoid10
+Duplicate or missing keys: 0
+geoid10 | character | nonmissing: 1318 | distinct nonmissing: 1318
+[1] "17031010100" "17031010201" "17031010202" "17031010300" "17031010400"
+[6] "17031010501"
+adults_25_2000 | numeric | nonmissing: 1318 | distinct nonmissing: 1194
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0    1727    2553    2620    3423    7158
+ba_plus_2000 | numeric | nonmissing: 1318 | distinct nonmissing: 1009
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0   207.0   517.5   734.9  1087.5  4759.0
+population_2000 | numeric | nonmissing: 1318 | distinct nonmissing: 1228
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0    2708    3992    4077    5278   11287
+nh_white_2000 | numeric | nonmissing: 1318 | distinct nonmissing: 1086
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0     231    1514    1941    3252    7327
+nh_black_2000 | numeric | nonmissing: 1318 | distinct nonmissing: 918
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0    41.0   190.4  1048.1  1598.5  7775.0
+aggregate_household_income_2000 | numeric | nonmissing: 1318 | distinct nonmissing: 1315
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+        0  47285325  79674200  93597609 119938900 648207100
+households_2000 | numeric | nonmissing: 1318 | distinct nonmissing: 1115
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0   982.5  1438.4  1497.4  1922.4  4975.0
+adults_25_2012 | integer | nonmissing: 1318 | distinct nonmissing: 1127
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0    1668    2568    2623    3402   12955
+ba_plus_2012 | integer | nonmissing: 1318 | distinct nonmissing: 947
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0   267.2   651.5   898.5  1327.0  8805.0
+population_2012 | integer | nonmissing: 1318 | distinct nonmissing: 1189
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0    2568    3831    3944    5126   15740
+nh_white_2012 | integer | nonmissing: 1318 | distinct nonmissing: 1032
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+      0     198    1392    1728    2858    8492
+nh_black_2012 | integer | nonmissing: 1318 | distinct nonmissing: 796
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0    58.0   229.0   961.9  1458.2  7764.0
+aggregate_household_income_2012 | integer | nonmissing: 1314 | distinct nonmissing: 1313
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.      NA's
+  2951100  52646950  93875000 114748785 148285325 930120200         4
+households_2012 | integer | nonmissing: 1318 | distinct nonmissing: 999
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    0.0   948.2  1389.5  1467.1  1871.5  9180.0
+ba_share_2000 | numeric | nonmissing: 1314 | distinct nonmissing: 1255
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+ 0.9023  9.7355 19.6749 26.6874 38.4443 89.3542       4
+ba_share_2012 | numeric | nonmissing: 1314 | distinct nonmissing: 1314
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+ 0.8421 13.2009 25.9403 32.7693 48.2286 96.9081       4
+nh_white_share_2000 | numeric | nonmissing: 1314 | distinct nonmissing: 1186
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+  0.000   6.775  47.479  45.202  79.834  97.587       4
+nh_white_share_2012 | numeric | nonmissing: 1314 | distinct nonmissing: 1271
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+  0.000   6.268  39.937  40.898  72.532  98.166       4
+nh_black_share_2000 | numeric | nonmissing: 1314 | distinct nonmissing: 1165
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+  0.000   1.016   4.516  29.187  60.171 100.000       4
+nh_black_share_2012 | numeric | nonmissing: 1314 | distinct nonmissing: 1220
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+  0.000   1.449   6.089  29.273  61.581 100.000       4
+mean_income_2000 | numeric | nonmissing: 1314 | distinct nonmissing: 1264
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+  13133   58505   73071   82310   92620  451773       4
+mean_income_2012 | numeric | nonmissing: 1314 | distinct nonmissing: 1314
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+  16252   48210   63264   73880   87085  374047       4
+change_ba_share | numeric | nonmissing: 1311 | distinct nonmissing: 1311
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.     NA's
+-19.1780   0.7188   4.3857   6.0248   9.3341  65.1866        7
+change_nh_white_share | numeric | nonmissing: 1311 | distinct nonmissing: 1294
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+-45.574 -10.195  -3.091  -4.320   1.261  45.260       7
+change_nh_black_share | numeric | nonmissing: 1311 | distinct nonmissing: 1290
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.      NA's
+-57.70297  -1.96865   0.02379   0.10218   2.21962  36.55779         7
+change_log_mean_income | numeric | nonmissing: 1311 | distinct nonmissing: 1311
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.     NA's
+-0.98033 -0.26364 -0.14757 -0.12996 -0.02831  2.20089        7
+First six records:
+Key: <geoid10>
+       geoid10 adults_25_2000 ba_plus_2000 population_2000 nh_white_2000
+        <char>          <num>        <num>           <num>         <num>
+1: 17031010100       3183.000     907.0000        5391.000     1230.0000
+2: 17031010201       4331.978     997.2247        7450.305     1520.5415
+3: 17031010202       1893.022     435.7753        3255.695      664.4585
+4: 17031010300       4970.000    1858.0000        6649.000     3111.0000
+5: 17031010400       3014.000    1506.0000        5325.000     2879.0000
+6: 17031010501       3078.039    1149.2496        4721.242     2065.5432
+   nh_black_2000 aggregate_household_income_2000 households_2000 adults_25_2012
+           <num>                           <num>           <num>          <int>
+1:      2914.000                        87380600        2238.000           3163
+2:      2537.251                       103750061        2575.526           4288
+3:      1108.749                        45337539        1125.474           1866
+4:      2055.000                       136246200        3030.000           4569
+5:       801.000                        96324600        2350.000           2703
+6:      1147.955                        91448301        2379.171           2999
+   ba_plus_2012 population_2012 nh_white_2012 nh_black_2012
+          <int>           <int>         <int>         <int>
+1:          916            5163          1550          2401
+2:         1481            6752          1486          3062
+3:          640            2557           955           877
+4:         1384            6049          2827          1569
+5:         1603            4690          2784           694
+6:         1495            3995          1992          1480
+   aggregate_household_income_2012 households_2012 ba_share_2000 ba_share_2012
+                             <int>           <int>         <num>         <num>
+1:                        98686700            2154      28.49513      28.95985
+2:                       134912500            2566      23.02008      34.53825
+3:                        57045300            1117      23.02008      34.29796
+4:                       147004200            2721      37.38431      30.29109
+5:                       121620000            2011      49.96682      59.30448
+6:                       100972700            2222      37.33707      49.84995
+   nh_white_share_2000 nh_white_share_2012 nh_black_share_2000
+                 <num>               <num>               <num>
+1:            22.81580            30.02131            54.05305
+2:            20.40912            22.00829            34.05567
+3:            20.40912            37.34846            34.05567
+4:            46.78899            46.73500            30.90690
+5:            54.06573            59.36034            15.04225
+6:            43.75000            49.86233            24.31469
+   nh_black_share_2012 mean_income_2000 mean_income_2012 change_ba_share
+                 <num>            <num>            <num>           <num>
+1:            46.50397         53807.21         45815.55       0.4647179
+2:            45.34953         55514.70         52576.97      11.5181659
+3:            34.29801         55514.70         51070.10      11.2778832
+4:            25.93817         61967.98         54025.80      -7.0932137
+5:            14.79744         56487.83         60477.37       9.3376550
+6:            37.04631         52970.68         45442.26      12.5128792
+   change_nh_white_share change_nh_black_share change_log_mean_income
+                   <num>                 <num>                  <num>
+1:            7.20550132            -7.5490808            -0.16078388
+2:            1.59917746            11.2938563            -0.05436965
+3:           16.93933884             0.2423358            -0.08344863
+4:           -0.05399331            -4.9687317            -0.13715603
+5:            5.29461345            -0.2448122             0.06824411
+6:            6.11232791            12.7316149            -0.15329600

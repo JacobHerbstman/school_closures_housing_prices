@@ -16,7 +16,11 @@ The outcome is log real price (2022 dollars). Every model has school-site and
 sale-year fixed effects, equal weight per transaction, and standard errors
 clustered by site. The event study uses 2012 as the reference year and shows
 2013 as a transition year; the pooled estimate compares 2014--2018 with
-2008--2012 and omits 2013. Two control sets: fixed effects only, and fixed effects plus hedonics
+2008--2012 and omits 2013. Three control sets: fixed effects only; fixed effects plus hedonics; and
+additionally neighborhood trends, year effects that vary with the sale's tract
+change from 2000 to 2008--2012 in bachelor's degree share, non-Hispanic white
+and Black shares, and log real mean household income (from
+`tract_demographic_change`). The hedonic set is
 (log building and lot area and age, each with its square; beds, rooms, full
 baths; residence type, construction quality, repair condition; REO and
 quick-resale indicators; a two-to-six-unit indicator). A unit-count factor with

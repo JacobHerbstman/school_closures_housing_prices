@@ -12,6 +12,11 @@ stopifnot(!anyDuplicated(sales$row_id), !anyDuplicated(exposure$row_id), all(sal
 sales <- merge(sales, exposure, by = "row_id", all.x = TRUE, sort = FALSE)
 stopifnot(!anyDuplicated(sales$row_id))
 sales <- sales[has_school_distances == TRUE]
+# Each sale's 2010 tract and its 2000 to 2008-2012 demographic change.
+tract_change <- fread("../input/sale_tract_change.csv", colClasses = list(character = c("row_id", "geoid10")))
+stopifnot(!anyDuplicated(tract_change$row_id), all(sales$row_id %in% tract_change$row_id))
+sales <- merge(sales, tract_change, by = "row_id", all.x = TRUE, sort = FALSE)
+stopifnot(!anyDuplicated(sales$row_id))
 
 # A sale is treated (control) when a closed (stayed-open) site is within the
 # radius and no site of the other group is. Sales within the radius of a
@@ -54,9 +59,16 @@ hedonics <- paste(
   "i(res_char_type_resd) + i(res_char_cnst_qlty) + i(res_char_repair_cnd) + reo_sale + resale_within_365")
 # A unit-count factor with an unknown level changed no estimate by more than
 # 0.003 log points (September 22), so the 2-6-unit indicator stands in for it.
+# Neighborhood trends let prices follow different paths after 2012 in tracts
+# that changed differently from 2000 to 2008-2012 (education, race, income).
+# Sales in the three tracts without reliable change measures drop from them.
+neighborhood_trends <- paste(
+  "i(sale_year, change_ba_share, ref = 2012) + i(sale_year, change_nh_white_share, ref = 2012) +",
+  "i(sale_year, change_nh_black_share, ref = 2012) + i(sale_year, change_log_mean_income, ref = 2012)")
 control_sets <- c(
   "Fixed effects only" = "",
-  "Fixed effects + hedonics" = paste("+", hedonics, "+ two_to_six_units")
+  "Fixed effects + hedonics" = paste("+", hedonics, "+ two_to_six_units"),
+  "Fixed effects + hedonics + neighborhood trends" = paste("+", hedonics, "+ two_to_six_units +", neighborhood_trends)
 )
 # Robustness to the flagged sales: each variant removes one kind of flagged sale.
 samples[, `:=`(
@@ -99,6 +111,21 @@ samples[site_tiers, on = "school_site_id", `:=`(price_tier = i.price_tier, price
 print(site_tiers[, .(sites = .N, median_of_site_medians = round(median(pre_median_real_price))), by = .(price_tier, treated)])
 print(site_tiers[order(price_quartile), .(sites = .N, min = round(min(pre_median_real_price)), max = round(max(pre_median_real_price))),
                  by = .(price_quartile, treated)])
+
+# Balance: each site's average 2000 to 2008-2012 tract change over its
+# 2008-2012 sales, compared by group within tiers and quartiles.
+site_trends <- samples[sample == "All property" & sale_year <= 2012L,
+                       .(change_ba_share = mean(change_ba_share, na.rm = TRUE),
+                         change_nh_white_share = mean(change_nh_white_share, na.rm = TRUE),
+                         change_nh_black_share = mean(change_nh_black_share, na.rm = TRUE),
+                         change_log_mean_income = mean(change_log_mean_income, na.rm = TRUE)),
+                       by = .(school_site_id, treated)]
+site_trends <- merge(site_trends, site_tiers[, .(school_site_id, price_tier, price_quartile, pre_median_real_price)],
+                     by = "school_site_id")
+stopifnot(!anyDuplicated(site_trends$school_site_id))
+print(site_trends[, lapply(.SD, function(x) round(mean(x), 3)), by = .(price_quartile, treated),
+                  .SDcols = c("change_ba_share", "change_nh_white_share", "change_nh_black_share", "change_log_mean_income")][
+                  order(price_quartile, treated)])
 
 # Log real price; site-clustered errors. The pooled difference-in-differences
 # compares 2014-2018 with 2008-2012. Used by the main grid and the
@@ -234,13 +261,15 @@ setorder(site_tiers, school_site_id)
 setorder(leave_one_out, sample, controls, dropped_site, normalization, sale_year)
 setorder(support, sample, treated, sale_year)
 saveRDS(list(events = events, did = did, models = models, leave_one_out = leave_one_out, support = support,
-             site_tiers = site_tiers, gradient = gradient, gradient_curve = gradient_curve, gradient_events = gradient_events),
+             site_tiers = site_tiers, site_trends = site_trends, gradient = gradient, gradient_curve = gradient_curve,
+             gradient_events = gradient_events),
         "../output/twfe.rds")
 report <- capture.output({
   report_data(events, "events", c("sample", "tier", "variant", "controls", "weighting", "normalization", "sale_year"))
   report_data(did, "did", c("sample", "tier", "variant", "controls", "weighting"))
   report_data(models, "models", c("sample", "tier", "variant", "controls", "design", "weighting"))
   report_data(site_tiers, "site_tiers", "school_site_id")
+  report_data(site_trends, "site_trends", "school_site_id")
   report_data(gradient, "gradient", c("sample", "variant", "controls", "term"))
   report_data(gradient_events, "gradient_events", c("sample", "variant", "controls", "sale_year"))
   report_data(leave_one_out, "leave_one_out", c("sample", "controls", "dropped_site", "normalization", "sale_year"))

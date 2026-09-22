@@ -1,38 +1,40 @@
 
 Dataset: events
-Rows: 1512  Columns: 11
+Rows: 2268  Columns: 11
 Key: sample, tier, variant, controls, weighting, normalization, sale_year
 Duplicate or missing keys: 0
-sample | character | nonmissing: 1512 | distinct nonmissing: 2
+sample | character | nonmissing: 2268 | distinct nonmissing: 2
 [1] "All property"  "Single-family"
-tier | character | nonmissing: 1512 | distinct nonmissing: 7
+tier | character | nonmissing: 2268 | distinct nonmissing: 7
 [1] "All sites"          "Higher-price sites" "Lower-price sites"
 [4] "Price quartile 1"   "Price quartile 2"   "Price quartile 3"
-variant | character | nonmissing: 1512 | distinct nonmissing: 5
+variant | character | nonmissing: 2268 | distinct nonmissing: 5
 [1] "All clean sales"              "Drop 1st-99th price tails"
 [3] "Drop all flagged sales"       "Drop REO resales"
 [5] "Drop resales within 365 days"
-controls | character | nonmissing: 1512 | distinct nonmissing: 2
-[1] "Fixed effects + hedonics" "Fixed effects only"
-weighting | character | nonmissing: 1512 | distinct nonmissing: 2
+controls | character | nonmissing: 2268 | distinct nonmissing: 3
+[1] "Fixed effects + hedonics"
+[2] "Fixed effects + hedonics + neighborhood trends"
+[3] "Fixed effects only"
+weighting | character | nonmissing: 2268 | distinct nonmissing: 2
 [1] "Site-years"   "Transactions"
-normalization | character | nonmissing: 1512 | distinct nonmissing: 2
+normalization | character | nonmissing: 2268 | distinct nonmissing: 2
 [1] "2008-2012 average" "2012"
-sale_year | integer | nonmissing: 1512 | distinct nonmissing: 11
+sale_year | integer | nonmissing: 2268 | distinct nonmissing: 11
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
    2008    2010    2013    2013    2016    2018
-estimate | numeric | nonmissing: 1512 | distinct nonmissing: 1512
-     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
--0.874707 -0.127584  0.003118 -0.024370  0.092067  0.526572
-std_error | numeric | nonmissing: 1512 | distinct nonmissing: 1512
+estimate | numeric | nonmissing: 2268 | distinct nonmissing: 2268
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+-1.0840867 -0.1238101 -0.0008473 -0.0262785  0.0856946  0.5265716
+std_error | numeric | nonmissing: 2268 | distinct nonmissing: 2268
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-0.04457 0.10364 0.13654 0.17440 0.20857 0.87135
-ci_low | numeric | nonmissing: 1512 | distinct nonmissing: 1512
+0.04124 0.10094 0.13181 0.17121 0.20358 0.87135
+ci_low | numeric | nonmissing: 2268 | distinct nonmissing: 2268
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
--2.1819 -0.4963 -0.2609 -0.3662 -0.1353  0.2715
-ci_high | numeric | nonmissing: 1512 | distinct nonmissing: 1512
+-2.1819 -0.4770 -0.2544 -0.3618 -0.1377  0.2715
+ci_high | numeric | nonmissing: 2268 | distinct nonmissing: 2268
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
--0.1499  0.1753  0.2841  0.3175  0.4196  1.7248
+-0.3631  0.1712  0.2678  0.3093  0.4065  1.7248
 First six records:
          sample      tier         variant                 controls  weighting
          <char>    <char>          <char>                   <char>     <char>
@@ -52,84 +54,96 @@ First six records:
 6: 2008-2012 average      2013 -0.041659717 0.09446647 -0.22681400 0.14349456
 
 Dataset: did
-Rows: 72  Columns: 9
+Rows: 108  Columns: 9
 Key: sample, tier, variant, controls, weighting
 Duplicate or missing keys: 0
-sample | character | nonmissing: 72 | distinct nonmissing: 2
+sample | character | nonmissing: 108 | distinct nonmissing: 2
 [1] "All property"  "Single-family"
-tier | character | nonmissing: 72 | distinct nonmissing: 7
+tier | character | nonmissing: 108 | distinct nonmissing: 7
 [1] "All sites"          "Higher-price sites" "Lower-price sites"
 [4] "Price quartile 1"   "Price quartile 2"   "Price quartile 3"
-variant | character | nonmissing: 72 | distinct nonmissing: 5
+variant | character | nonmissing: 108 | distinct nonmissing: 5
 [1] "All clean sales"              "Drop 1st-99th price tails"
 [3] "Drop all flagged sales"       "Drop REO resales"
 [5] "Drop resales within 365 days"
-controls | character | nonmissing: 72 | distinct nonmissing: 2
-[1] "Fixed effects + hedonics" "Fixed effects only"
-weighting | character | nonmissing: 72 | distinct nonmissing: 2
+controls | character | nonmissing: 108 | distinct nonmissing: 3
+[1] "Fixed effects + hedonics"
+[2] "Fixed effects + hedonics + neighborhood trends"
+[3] "Fixed effects only"
+weighting | character | nonmissing: 108 | distinct nonmissing: 2
 [1] "Site-years"   "Transactions"
-estimate | numeric | nonmissing: 72 | distinct nonmissing: 72
+estimate | numeric | nonmissing: 108 | distinct nonmissing: 108
      Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
--0.219872 -0.080946  0.005535  0.014987  0.096626  0.306977
-std_error | numeric | nonmissing: 72 | distinct nonmissing: 72
+-0.280020 -0.077928 -0.006692 -0.002591  0.067427  0.306977
+std_error | numeric | nonmissing: 108 | distinct nonmissing: 108
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-0.06482 0.08729 0.10283 0.12373 0.13499 0.31777
-ci_low | numeric | nonmissing: 72 | distinct nonmissing: 72
+0.05495 0.08095 0.09985 0.11713 0.12974 0.31777
+ci_low | numeric | nonmissing: 108 | distinct nonmissing: 108
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
--0.8193 -0.3415 -0.1602 -0.2275 -0.1009  0.1123
-ci_high | numeric | nonmissing: 72 | distinct nonmissing: 72
+-0.8225 -0.3389 -0.1641 -0.2322 -0.1077  0.1123
+ci_high | numeric | nonmissing: 108 | distinct nonmissing: 108
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-0.05065 0.17397 0.23909 0.25749 0.33399 0.50281
+0.05065 0.14349 0.22239 0.22699 0.29281 0.50281
 First six records:
-         sample      tier                   variant                 controls
-         <char>    <char>                    <char>                   <char>
-1: All property All sites           All clean sales Fixed effects + hedonics
-2: All property All sites           All clean sales Fixed effects + hedonics
-3: All property All sites           All clean sales       Fixed effects only
-4: All property All sites           All clean sales       Fixed effects only
-5: All property All sites Drop 1st-99th price tails Fixed effects + hedonics
-6: All property All sites Drop 1st-99th price tails       Fixed effects only
-      weighting     estimate  std_error     ci_low   ci_high
-         <char>        <num>      <num>      <num>     <num>
-1:   Site-years -0.009646074 0.07462571 -0.1559125 0.1366203
-2: Transactions  0.050412831 0.08945710 -0.1249231 0.2257488
-3:   Site-years -0.002825254 0.07957876 -0.1587996 0.1531491
-4: Transactions  0.055306502 0.10029755 -0.1412767 0.2518897
-5: Transactions  0.063367546 0.08381933 -0.1009183 0.2276534
-6: Transactions  0.074739796 0.09321742 -0.1079663 0.2574459
+         sample      tier         variant
+         <char>    <char>          <char>
+1: All property All sites All clean sales
+2: All property All sites All clean sales
+3: All property All sites All clean sales
+4: All property All sites All clean sales
+5: All property All sites All clean sales
+6: All property All sites All clean sales
+                                         controls    weighting     estimate
+                                           <char>       <char>        <num>
+1:                       Fixed effects + hedonics   Site-years -0.009646074
+2:                       Fixed effects + hedonics Transactions  0.050412831
+3: Fixed effects + hedonics + neighborhood trends   Site-years -0.024987455
+4: Fixed effects + hedonics + neighborhood trends Transactions -0.022214685
+5:                             Fixed effects only   Site-years -0.002825254
+6:                             Fixed effects only Transactions  0.055306502
+    std_error     ci_low   ci_high
+        <num>      <num>     <num>
+1: 0.07462571 -0.1559125 0.1366203
+2: 0.08945710 -0.1249231 0.2257488
+3: 0.06481769 -0.1520301 0.1020552
+4: 0.07588638 -0.1709520 0.1265226
+5: 0.07957876 -0.1587996 0.1531491
+6: 0.10029755 -0.1412767 0.2518897
 
 Dataset: models
-Rows: 144  Columns: 11
+Rows: 216  Columns: 11
 Key: sample, tier, variant, controls, design, weighting
 Duplicate or missing keys: 0
-sample | character | nonmissing: 144 | distinct nonmissing: 2
+sample | character | nonmissing: 216 | distinct nonmissing: 2
 [1] "All property"  "Single-family"
-tier | character | nonmissing: 144 | distinct nonmissing: 7
+tier | character | nonmissing: 216 | distinct nonmissing: 7
 [1] "All sites"          "Higher-price sites" "Lower-price sites"
 [4] "Price quartile 1"   "Price quartile 2"   "Price quartile 3"
-variant | character | nonmissing: 144 | distinct nonmissing: 5
+variant | character | nonmissing: 216 | distinct nonmissing: 5
 [1] "All clean sales"              "Drop 1st-99th price tails"
 [3] "Drop all flagged sales"       "Drop REO resales"
 [5] "Drop resales within 365 days"
-controls | character | nonmissing: 144 | distinct nonmissing: 2
-[1] "Fixed effects + hedonics" "Fixed effects only"
-design | character | nonmissing: 144 | distinct nonmissing: 2
+controls | character | nonmissing: 216 | distinct nonmissing: 3
+[1] "Fixed effects + hedonics"
+[2] "Fixed effects + hedonics + neighborhood trends"
+[3] "Fixed effects only"
+design | character | nonmissing: 216 | distinct nonmissing: 2
 [1] "did"   "event"
-weighting | character | nonmissing: 144 | distinct nonmissing: 2
+weighting | character | nonmissing: 216 | distinct nonmissing: 2
 [1] "Site-years"   "Transactions"
-observations | integer | nonmissing: 144 | distinct nonmissing: 68
+observations | integer | nonmissing: 216 | distinct nonmissing: 68
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
     650    1476    2653    3673    4922   11042
-treated_sites | integer | nonmissing: 144 | distinct nonmissing: 9
+treated_sites | integer | nonmissing: 216 | distinct nonmissing: 9
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
    5.00    8.00   13.50   15.83   28.00   29.00
-control_sites | integer | nonmissing: 144 | distinct nonmissing: 8
+control_sites | integer | nonmissing: 216 | distinct nonmissing: 8
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
   11.00   11.00   22.50   26.39   47.00   48.00
-pre_trend_p_value | numeric | nonmissing: 72 | distinct nonmissing: 72
-    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.     NA's
-0.000004 0.147768 0.412026 0.448519 0.791214 0.998232       72
-dropped_terms | character | nonmissing: 144 | distinct nonmissing: 11
+pre_trend_p_value | numeric | nonmissing: 108 | distinct nonmissing: 108
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+ 0.0000  0.1315  0.4291  0.4673  0.8364  0.9982     108
+dropped_terms | character | nonmissing: 216 | distinct nonmissing: 11
 [1] ""
 [2] "i(factor_var = res_char_cnst_qlty, ref_special = TRUE); reo_saleTRUE"
 [3] "i(factor_var = res_char_cnst_qlty, ref_special = TRUE); reo_saleTRUE; two_to_six_units"
@@ -203,82 +217,142 @@ First six records:
 5: Price quartile 1         -1.0921095
 6: Price quartile 3          0.2573519
 
+Dataset: site_trends
+Rows: 77  Columns: 9
+Key: school_site_id
+Duplicate or missing keys: 0
+school_site_id | integer | nonmissing: 77 | distinct nonmissing: 77
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609797  610013  610119  610109  610225  610521
+treated | integer | nonmissing: 77 | distinct nonmissing: 2
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  0.0000  0.0000  0.3766  1.0000  1.0000
+change_ba_share | numeric | nonmissing: 77 | distinct nonmissing: 77
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ -5.687   1.742   4.076   7.756  10.725  49.701
+change_nh_white_share | numeric | nonmissing: 77 | distinct nonmissing: 77
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+-5.0389 -0.1407  1.0060  3.5640  3.0261 31.3518
+change_nh_black_share | numeric | nonmissing: 77 | distinct nonmissing: 77
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+-51.1082  -4.1597  -0.3886  -2.2249   0.9061  20.2673
+change_log_mean_income | numeric | nonmissing: 77 | distinct nonmissing: 77
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+-0.8073 -0.3061 -0.1497 -0.1067  0.1022  0.9033
+price_tier | character | nonmissing: 77 | distinct nonmissing: 2
+[1] "Higher-price sites" "Lower-price sites"
+price_quartile | character | nonmissing: 77 | distinct nonmissing: 4
+[1] "Price quartile 1" "Price quartile 2" "Price quartile 3" "Price quartile 4"
+pre_median_real_price | numeric | nonmissing: 77 | distinct nonmissing: 77
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  21719   45752   64734  146307  173472  654723
+First six records:
+Key: <school_site_id>
+   school_site_id treated change_ba_share change_nh_white_share
+            <int>   <int>           <num>                 <num>
+1:         609797       0        8.262042            3.19312427
+2:         609809       0       21.616150           12.44597339
+3:         609812       0        6.725734           15.47456100
+4:         609819       0       21.053207            0.56311399
+5:         609848       0        3.236224           -0.45876236
+6:         609864       0        3.996739           -0.09280485
+   change_nh_black_share change_log_mean_income         price_tier
+                   <num>                  <num>             <char>
+1:            -2.8842402            -0.10884363  Lower-price sites
+2:             1.1071567             0.02618698 Higher-price sites
+3:           -13.0211073             0.12534692 Higher-price sites
+4:            -0.3885811             0.19044137 Higher-price sites
+5:             5.6274850            -0.38426831  Lower-price sites
+6:            -0.4417037            -0.37025462 Higher-price sites
+     price_quartile pre_median_real_price
+             <char>                 <num>
+1: Price quartile 2              54409.53
+2: Price quartile 4             401936.64
+3: Price quartile 4             275509.79
+4: Price quartile 4             265798.54
+5: Price quartile 1              21718.62
+6: Price quartile 3              83732.86
+
 Dataset: gradient
-Rows: 16  Columns: 8
+Rows: 24  Columns: 8
 Key: sample, variant, controls, term
 Duplicate or missing keys: 0
-sample | character | nonmissing: 16 | distinct nonmissing: 2
+sample | character | nonmissing: 24 | distinct nonmissing: 2
 [1] "All property"  "Single-family"
-variant | character | nonmissing: 16 | distinct nonmissing: 2
+variant | character | nonmissing: 24 | distinct nonmissing: 2
 [1] "All clean sales"  "Drop REO resales"
-controls | character | nonmissing: 16 | distinct nonmissing: 2
-[1] "Fixed effects + hedonics" "Fixed effects only"
-term | character | nonmissing: 16 | distinct nonmissing: 2
+controls | character | nonmissing: 24 | distinct nonmissing: 3
+[1] "Fixed effects + hedonics"
+[2] "Fixed effects + hedonics + neighborhood trends"
+[3] "Fixed effects only"
+term | character | nonmissing: 24 | distinct nonmissing: 2
 [1] "Effect at median baseline price"
 [2] "Slope per log point of baseline price"
-estimate | numeric | nonmissing: 16 | distinct nonmissing: 16
+estimate | numeric | nonmissing: 24 | distinct nonmissing: 24
     Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
--0.09130 -0.05393  0.05883  0.04921  0.15536  0.18032
-std_error | numeric | nonmissing: 16 | distinct nonmissing: 16
+-0.09130 -0.06138  0.05706  0.04413  0.14348  0.18032
+std_error | numeric | nonmissing: 24 | distinct nonmissing: 24
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-0.06044 0.07568 0.08597 0.08934 0.10136 0.12828
-ci_low | numeric | nonmissing: 16 | distinct nonmissing: 16
+0.06044 0.07363 0.08394 0.08789 0.10056 0.12828
+ci_low | numeric | nonmissing: 24 | distinct nonmissing: 24
     Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
--0.31830 -0.22981 -0.09464 -0.12588 -0.01312  0.02262
-ci_high | numeric | nonmissing: 16 | distinct nonmissing: 16
+-0.32119 -0.23310 -0.09777 -0.12814 -0.01788  0.02262
+ci_high | numeric | nonmissing: 24 | distinct nonmissing: 24
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-0.05257 0.16107 0.21742 0.22431 0.30514 0.38944
+0.05257 0.14644 0.21742 0.21639 0.30189 0.38944
 First six records:
-         sample          variant                 controls
-         <char>           <char>                   <char>
-1: All property  All clean sales       Fixed effects only
-2: All property  All clean sales       Fixed effects only
-3: All property  All clean sales Fixed effects + hedonics
-4: All property  All clean sales Fixed effects + hedonics
-5: All property Drop REO resales       Fixed effects only
-6: All property Drop REO resales       Fixed effects only
-                                    term    estimate  std_error      ci_low
-                                  <char>       <num>      <num>       <num>
-1:       Effect at median baseline price -0.04378667 0.10399543 -0.24761771
-2: Slope per log point of baseline price  0.15401766 0.08784043 -0.01814958
-3:       Effect at median baseline price -0.05904532 0.08409778 -0.22387696
-4: Slope per log point of baseline price  0.15937522 0.07702752  0.00840129
-5:       Effect at median baseline price -0.05222259 0.12827566 -0.30364289
-6: Slope per log point of baseline price  0.17191380 0.10048358 -0.02503401
+         sample         variant                                       controls
+         <char>          <char>                                         <char>
+1: All property All clean sales                             Fixed effects only
+2: All property All clean sales                             Fixed effects only
+3: All property All clean sales                       Fixed effects + hedonics
+4: All property All clean sales                       Fixed effects + hedonics
+5: All property All clean sales Fixed effects + hedonics + neighborhood trends
+6: All property All clean sales Fixed effects + hedonics + neighborhood trends
+                                    term    estimate  std_error       ci_low
+                                  <char>       <num>      <num>        <num>
+1:       Effect at median baseline price -0.04378667 0.10399543 -0.247617713
+2: Slope per log point of baseline price  0.15401766 0.08784043 -0.018149580
+3:       Effect at median baseline price -0.05904532 0.08409778 -0.223876959
+4: Slope per log point of baseline price  0.15937522 0.07702752  0.008401290
+5:       Effect at median baseline price -0.06404645 0.08378022 -0.228255690
+6: Slope per log point of baseline price  0.13916030 0.07429913 -0.006465996
      ci_high
        <num>
 1: 0.1600444
 2: 0.3261849
 3: 0.1057863
 4: 0.3103492
-5: 0.1991977
-6: 0.3688616
+5: 0.1001628
+6: 0.2847866
 
 Dataset: gradient_events
-Rows: 80  Columns: 8
+Rows: 120  Columns: 8
 Key: sample, variant, controls, sale_year
 Duplicate or missing keys: 0
-sample | character | nonmissing: 80 | distinct nonmissing: 2
+sample | character | nonmissing: 120 | distinct nonmissing: 2
 [1] "All property"  "Single-family"
-variant | character | nonmissing: 80 | distinct nonmissing: 2
+variant | character | nonmissing: 120 | distinct nonmissing: 2
 [1] "All clean sales"  "Drop REO resales"
-controls | character | nonmissing: 80 | distinct nonmissing: 2
-[1] "Fixed effects + hedonics" "Fixed effects only"
-sale_year | integer | nonmissing: 80 | distinct nonmissing: 10
+controls | character | nonmissing: 120 | distinct nonmissing: 3
+[1] "Fixed effects + hedonics"
+[2] "Fixed effects + hedonics + neighborhood trends"
+[3] "Fixed effects only"
+sale_year | integer | nonmissing: 120 | distinct nonmissing: 10
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
    2008    2010    2014    2013    2016    2018
-estimate | numeric | nonmissing: 80 | distinct nonmissing: 80
+estimate | numeric | nonmissing: 120 | distinct nonmissing: 120
     Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
--0.09970  0.07866  0.16215  0.15549  0.24595  0.36587
-std_error | numeric | nonmissing: 80 | distinct nonmissing: 80
+-0.09970  0.08168  0.15546  0.15479  0.25054  0.36587
+std_error | numeric | nonmissing: 120 | distinct nonmissing: 120
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-0.06664 0.09386 0.10934 0.11271 0.12896 0.18359
-ci_low | numeric | nonmissing: 80 | distinct nonmissing: 80
+0.06562 0.09072 0.10769 0.11135 0.12638 0.19067
+ci_low | numeric | nonmissing: 120 | distinct nonmissing: 120
      Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
--0.314100 -0.125314 -0.055358 -0.065413 -0.007046  0.142734
-ci_high | numeric | nonmissing: 80 | distinct nonmissing: 80
+-0.314100 -0.121650 -0.055358 -0.063466 -0.003359  0.142734
+ci_high | numeric | nonmissing: 120 | distinct nonmissing: 120
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-0.07112 0.26662 0.36785 0.37640 0.50114 0.66038
+0.07112 0.26515 0.36400 0.37304 0.49880 0.67646
 First six records:
          sample         variant           controls sale_year      estimate
          <char>          <char>             <char>     <int>         <num>
@@ -298,43 +372,45 @@ First six records:
 6: 0.08260794 -0.12147639 0.20234674
 
 Dataset: leave_one_out
-Rows: 2394  Columns: 11
+Rows: 3591  Columns: 11
 Key: sample, controls, dropped_site, normalization, sale_year
 Duplicate or missing keys: 0
-dropped_site | integer | nonmissing: 2394 | distinct nonmissing: 29
+dropped_site | integer | nonmissing: 3591 | distinct nonmissing: 29
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
  609906  610085  610161  610159  610241  610365
-normalization | character | nonmissing: 2394 | distinct nonmissing: 2
+normalization | character | nonmissing: 3591 | distinct nonmissing: 2
 [1] "2008-2012 average" "2012"
-sale_year | integer | nonmissing: 2394 | distinct nonmissing: 11
+sale_year | integer | nonmissing: 3591 | distinct nonmissing: 11
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
    2008    2010    2013    2013    2016    2018
-estimate | numeric | nonmissing: 2394 | distinct nonmissing: 2394
+estimate | numeric | nonmissing: 3591 | distinct nonmissing: 3591
      Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
--0.312154 -0.062459  0.015687 -0.001568  0.059830  0.223159
-std_error | numeric | nonmissing: 2394 | distinct nonmissing: 2394
+-0.312154 -0.061378  0.008405 -0.004564  0.056329  0.223159
+std_error | numeric | nonmissing: 3591 | distinct nonmissing: 3591
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-0.04392 0.07973 0.09825 0.09828 0.11160 0.19984
-sample | character | nonmissing: 2394 | distinct nonmissing: 2
+0.04189 0.07573 0.09445 0.09450 0.10829 0.19984
+sample | character | nonmissing: 3591 | distinct nonmissing: 2
 [1] "All property"  "Single-family"
-controls | character | nonmissing: 2394 | distinct nonmissing: 2
-[1] "Fixed effects + hedonics" "Fixed effects only"
-dropped_site_sales | integer | nonmissing: 2394 | distinct nonmissing: 50
+controls | character | nonmissing: 3591 | distinct nonmissing: 3
+[1] "Fixed effects + hedonics"
+[2] "Fixed effects + hedonics + neighborhood trends"
+[3] "Fixed effects only"
+dropped_site_sales | integer | nonmissing: 3591 | distinct nonmissing: 50
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
    2.00   28.00   75.00   81.91  102.00  236.00
-site_name | character | nonmissing: 2394 | distinct nonmissing: 29
+site_name | character | nonmissing: 3591 | distinct nonmissing: 29
 [1] "Alfred David Kohn Elementary School"
 [2] "Ana Roque de Duprey Elementary School / Alexander von Humboldt Elementary School"
 [3] "Anthony Overton Elementary School"
 [4] "Arna Wendell Bontemps Elementary School"
 [5] "Betsy Ross Elementary School"
 [6] "Elihu Yale Elementary School"
-ci_low | numeric | nonmissing: 2394 | distinct nonmissing: 2394
+ci_low | numeric | nonmissing: 3591 | distinct nonmissing: 3591
     Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
--0.64250 -0.24737 -0.17438 -0.19419 -0.10974  0.07893
-ci_high | numeric | nonmissing: 2394 | distinct nonmissing: 2394
+-0.64250 -0.24135 -0.17182 -0.18978 -0.10762  0.07893
+ci_high | numeric | nonmissing: 3591 | distinct nonmissing: 3591
     Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
--0.04385  0.12764  0.19087  0.19105  0.25074  0.39742
+-0.04385  0.12113  0.17659  0.18065  0.24029  0.39742
 First six records:
    dropped_site     normalization sale_year    estimate  std_error       sample
           <int>            <char>     <int>       <num>      <num>       <char>

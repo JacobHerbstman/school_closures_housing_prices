@@ -10,11 +10,12 @@ events <- all_events[tier == "All sites"]
 did <- all_did[tier == "All sites"]
 models <- all_models[tier == "All sites"]
 leave_one_out <- estimates$leave_one_out
-control_levels <- c("Fixed effects only", "Fixed effects + hedonics")
+control_levels <- c("Fixed effects only", "Fixed effects + hedonics", "Fixed effects + hedonics + neighborhood trends")
 variant_levels <- c("All clean sales", "Drop REO resales", "Drop resales within 365 days",
                     "Drop 1st-99th price tails", "Drop all flagged sales")
-colors <- setNames(c("#2a78d6", "#eb6834"), control_levels)
-shapes <- setNames(c(16, 17), control_levels)
+colors <- setNames(c("#2a78d6", "#eb6834", "#1baf7a"), control_levels)
+shapes <- setNames(c(16, 17, 15), control_levels)
+short_controls <- setNames(c("FE only", "FE + hedonics", "FE + hedonics + trends"), control_levels)
 theme_set(theme_minimal(base_size = 11) + theme(
   panel.grid.minor = element_blank(), panel.grid.major = element_line(color = "#E6E8E9", linewidth = 0.3),
   legend.position = "top", legend.title = element_blank(), strip.text = element_text(face = "bold"),
@@ -181,11 +182,11 @@ curve <- copy(estimates$gradient_curve)[, controls := factor(controls, levels = 
 quartile_points[, controls := factor(controls, levels = control_levels)]
 gradient_terms <- dcast(estimates$gradient, sample + variant + controls ~ term, value.var = c("estimate", "ci_low", "ci_high"))
 gradient_labels <- gradient_terms[, .(sample, variant, controls, label = sprintf("%s slope: %.2f [%.2f, %.2f]",
-  fifelse(controls == "Fixed effects only", "FE only", "FE + hedonics"),
+  short_controls[controls],
   `estimate_Slope per log point of baseline price`, `ci_low_Slope per log point of baseline price`,
   `ci_high_Slope per log point of baseline price`))]
-gradient_labels[, `:=`(controls = factor(controls, levels = control_levels),
-                       y = fifelse(controls == "Fixed effects only", 0.62, 0.52))]
+gradient_labels[, `:=`(y = c(0.64, 0.54, 0.44)[match(controls, control_levels)],
+                       controls = factor(controls, levels = control_levels))]
 gradient_page <- ggplot(curve, aes(baseline_price, estimate, color = controls, fill = controls)) +
   geom_hline(yintercept = 0, color = "#52514e", linewidth = 0.4) +
   geom_ribbon(aes(ymin = ci_low, ymax = ci_high), alpha = 0.12, color = NA) +
@@ -221,6 +222,26 @@ slope_page <- ggplot(slope_events, aes(sale_year, estimate, color = controls, sh
        x = NULL, y = "Log points per log point of baseline price",
        caption = "The model also includes year effects varying with baseline price for all sites. 95% intervals clustered by school site.")
 
+# Balance: were closed sites already changing differently before 2013?
+trend_labels <- c(change_ba_share = "Bachelor's degree share (pp)", change_nh_white_share = "Non-Hispanic white share (pp)",
+                  change_nh_black_share = "Non-Hispanic Black share (pp)", change_log_mean_income = "Log real mean household income")
+site_trends <- melt(estimates$site_trends, id.vars = c("school_site_id", "treated", "price_tier", "price_quartile", "pre_median_real_price"),
+                    variable.name = "measure")
+site_trends[, `:=`(group = fifelse(treated == 1L, "Closed", "Stayed open"), measure = factor(trend_labels[as.character(measure)], levels = trend_labels),
+                   price_quartile = factor(price_quartile, levels = rev(quartile_levels)))]
+trend_means <- site_trends[, .(value = mean(value, na.rm = TRUE)), by = .(measure, price_quartile, group)]
+balance_page <- ggplot(site_trends, aes(value, price_quartile, color = group)) +
+  geom_vline(xintercept = 0, color = "#52514e", linewidth = 0.4) +
+  geom_point(position = position_jitterdodge(jitter.height = 0.12, dodge.width = 0.6, seed = 1), size = 1.3, alpha = 0.55) +
+  geom_point(data = trend_means, position = position_dodge(width = 0.6), size = 3.2, shape = 18) +
+  facet_wrap(~measure, scales = "free_x") +
+  scale_color_manual(values = c("Closed" = "#AF493D", "Stayed open" = "#1F6FAE")) +
+  labs(title = "Tract change from 2000 to 2008-2012 around each school site, by baseline price quartile",
+       subtitle = "Small points: sites (average over their 2008-2012 sales); diamonds: group means",
+       x = "Change, 2000 to 2008-2012", y = NULL,
+       caption = paste("Tracts from 2010 boundaries; 2000 Census SF3 allocated to 2010 tracts by population share. Income in 2012 dollars.",
+                       "Quartiles of each site's 2008-2012 median sale price.", sep = "\n"))
+
 pdf("../output/event_studies.pdf", width = 11, height = 8.5, onefile = TRUE, useDingbats = FALSE)
 print(variant_page("Fixed effects + hedonics"))
 print(variant_page("Fixed effects only"))
@@ -233,4 +254,5 @@ print(tier_did_page)
 print(quartile_event_page)
 print(gradient_page)
 print(slope_page)
+print(balance_page)
 invisible(dev.off())
