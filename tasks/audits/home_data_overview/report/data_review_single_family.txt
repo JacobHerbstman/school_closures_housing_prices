@@ -1,4 +1,4 @@
-Saved RDS SHA-256: 02b6d28d8748ff1fc9c6563b213ff84ac63611d66e42eae2d48755c3f433026c
+Saved RDS SHA-256: acdb398113268f0e103e5e44cdbfe0b7c49ca94297385921aafd2bd500864cec
 
 Dataset: overlap
 Rows: 1  Columns: 7
@@ -6,29 +6,29 @@ Key: radius_miles
 Duplicate or missing keys: 0
 near_either | integer | nonmissing: 1 | distinct nonmissing: 1
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   4011    4011    4011    4011    4011    4011
+   5933    5933    5933    5933    5933    5933
 near_both | integer | nonmissing: 1 | distinct nonmissing: 1
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-     45      45      45      45      45      45
+     71      71      71      71      71      71
 retained | integer | nonmissing: 1 | distinct nonmissing: 1
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   3665    3665    3665    3665    3665    3665
+   5419    5419    5419    5419    5419    5419
 treated | integer | nonmissing: 1 | distinct nonmissing: 1
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-    963     963     963     963     963     963
+   1408    1408    1408    1408    1408    1408
 control | integer | nonmissing: 1 | distinct nonmissing: 1
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   2702    2702    2702    2702    2702    2702
+   4011    4011    4011    4011    4011    4011
 radius_miles | numeric | nonmissing: 1 | distinct nonmissing: 1
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
    0.25    0.25    0.25    0.25    0.25    0.25
 overlap_share | numeric | nonmissing: 1 | distinct nonmissing: 1
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-0.01122 0.01122 0.01122 0.01122 0.01122 0.01122
+0.01197 0.01197 0.01197 0.01197 0.01197 0.01197
 First six records:
    near_either near_both retained treated control radius_miles overlap_share
          <int>     <int>    <int>   <int>   <int>        <num>         <num>
-1:        4011        45     3665     963    2702         0.25    0.01121915
+1:        5933        71     5419    1408    4011         0.25    0.01196696
 
 Dataset: checks
 Rows: 12  Columns: 2
@@ -40,15 +40,15 @@ check | character | nonmissing: 12 | distinct nonmissing: 12
 [5] "Master transactions"              "Missing master coordinates"
 value | numeric | nonmissing: 12 | distinct nonmissing: 12
     Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
-     0.0      4.5     50.5  56629.3  25242.2 428582.0
+     0.0      4.5     50.5  58888.9  32898.0 428582.0
 First six records:
                               check        value
                              <char>        <num>
 1: February candidate names checked 1.290000e+02
 2:              Master transactions 4.285820e+05
 3:        Study-period transactions 1.570480e+05
-4:      Citywide clean price sample 8.997400e+04
-5:          Comparison price sample 3.665000e+03
+4:      Citywide clean price sample 1.153350e+05
+5:          Comparison price sample 5.419000e+03
 6: School projection maximum (feet) 2.258126e-03
 
 Dataset: schools
@@ -254,7 +254,7 @@ group | character | nonmissing: 15 | distinct nonmissing: 3
 [1] "Citywide"    "Closed"      "Stayed open"
 sales | integer | nonmissing: 15 | distinct nonmissing: 12
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-    963    1872    4186   42277  104632  157048
+   1408    1872    4186   44084  117312  157048
 step | integer | nonmissing: 15 | distinct nonmissing: 5
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
       1       2       3       3       4       5
@@ -271,7 +271,7 @@ First six records:
 2: Citywide 119606     2                   County sale-quality flags
 3: Citywide 119289     3                Non-land sales above $10,000
 4: Citywide 119289     4 One building record; eligible property type
-5: Citywide  89974     5                          Clean price sample
+5: Citywide 115335     5                          Clean price sample
 6:   Closed   2281     1             Recorded non-condo transactions
 
 Dataset: annual_counts
@@ -283,12 +283,12 @@ group | character | nonmissing: 110 | distinct nonmissing: 2
 sale_year | integer | nonmissing: 110 | distinct nonmissing: 11
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
    2008    2010    2013    2013    2016    2018
-sales | integer | nonmissing: 110 | distinct nonmissing: 66
+sales | integer | nonmissing: 110 | distinct nonmissing: 65
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   54.0   126.2   207.0   263.1   394.0   837.0
-parcels | integer | nonmissing: 110 | distinct nonmissing: 70
+   95.0   132.0   281.0   279.1   396.2   837.0
+parcels | integer | nonmissing: 110 | distinct nonmissing: 69
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   51.0   123.2   188.0   248.7   372.0   721.0
+   91.0   125.0   270.5   263.6   376.0   721.0
 stage | integer | nonmissing: 110 | distinct nonmissing: 5
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
       1       2       3       3       4       5
@@ -313,22 +313,22 @@ sale_year | integer | nonmissing: 22 | distinct nonmissing: 11
    2008    2010    2013    2013    2016    2018
 sales | integer | nonmissing: 22 | distinct nonmissing: 21
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  54.00   73.25  164.50  166.59  229.25  417.00
+   95.0   114.5   236.5   246.3   365.8   490.0
 mean_price | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 210967  238767  257284  269248  299689  376954
+ 156516  164962  195142  204643  219079  301974
 median_price | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 130876  158664  170626  176867  197007  247088
+  49228   69580   99997   97852  125138  141710
 First six records:
          group sale_year sales mean_price median_price
         <char>     <int> <int>      <num>        <num>
-1: Stayed open      2018   417   252511.8     158435.3
-2: Stayed open      2016   283   246465.9     169605.2
-3: Stayed open      2011   183   210967.0     144082.6
-4:      Closed      2018   163   292977.1     160459.7
-5: Stayed open      2012   175   236743.8     149397.0
-6:      Closed      2011    64   217275.6     171647.2
+1: Stayed open      2018   490   227819.5    130627.79
+2: Stayed open      2016   375   200063.1    112674.76
+3: Stayed open      2011   274   161571.6     64581.30
+4:      Closed      2018   199   251885.8    128585.21
+5: Stayed open      2012   295   162518.2     58847.69
+6:      Closed      2011    95   160356.6     68564.35
 
 Dataset: annual_prices
 Rows: 22  Columns: 15
@@ -341,68 +341,68 @@ sale_year | integer | nonmissing: 22 | distinct nonmissing: 11
    2008    2010    2013    2013    2016    2018
 sales | integer | nonmissing: 22 | distinct nonmissing: 21
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  54.00   73.25  164.50  166.59  229.25  417.00
+   95.0   114.5   236.5   246.3   365.8   490.0
 mean_price | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 210967  238767  257284  269248  299689  376954
+ 156516  164962  195142  204643  219079  301974
 median_price | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 130876  158664  170626  176867  197007  247088
+  49228   69580   99997   97852  125138  141710
 nominal_mean | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 168803  193430  213075  220389  238640  316369
-nominal_median | numeric | nonmissing: 22 | distinct nonmissing: 22
+ 120264  137462  155145  168128  182470  252253
+nominal_median | numeric | nonmissing: 22 | distinct nonmissing: 20
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 110000  133500  139474  144220  158250  207700
+  38000   56812   77500   80560  102712  121000
 p10 | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  15464   25728   30263   30746   34439   46344
+  15165   18822   21094   21659   23392   30070
 p25 | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  43053   54472   65025   70554   76794  118117
+  19392   29881   38112   37483   43261   57481
 p75 | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 255102  319039  369776  368872  408268  507001
+ 174823  202564  236408  257309  269392  441025
 p90 | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 469472  581903  635494  672360  730366  939987
+ 409016  480483  545517  565441  576525  851626
 p95 | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 619556  696127  758454  822287  932550 1245273
+ 562969  605610  704230  744708  790213 1138269
 top5_value_share | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 0.1748  0.2013  0.2061  0.2074  0.2179  0.2419
+ 0.2074  0.2347  0.2501  0.2463  0.2612  0.2826
 mean_ppsf | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  132.8   152.1   164.2   171.2   193.1   219.5
+  102.3   110.5   136.3   131.3   143.7   176.1
 median_ppsf | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  98.68  121.28  133.12  137.82  154.21  188.09
+  44.99   57.30   83.95   75.97   92.71  105.75
 First six records:
     group sale_year sales mean_price median_price nominal_mean nominal_median
    <char>     <int> <int>      <num>        <num>        <num>          <num>
-1: Closed      2008    88   301926.4     215218.0     235610.6         165000
-2: Closed      2009    65   318672.5     220337.7     245435.4         170000
-3: Closed      2010    54   264936.3     190600.3     206314.8         148250
-4: Closed      2011    64   217275.6     171647.2     173944.5         137500
-5: Closed      2012    69   276135.6     199143.0     224416.9         160000
-6: Closed      2013    70   258847.8     151642.7     212994.0         124500
-        p10       p25      p75      p90      p95 top5_value_share mean_ppsf
-      <num>     <num>    <num>    <num>    <num>            <num>     <num>
-1: 45021.98 103402.83 340501.5 738895.2 944144.4        0.2030682  219.4648
-2: 28924.14  90497.71 460226.4 746894.7 952814.6        0.2025679  194.1117
-3: 32786.86  96830.21 283178.1 657557.5 743219.7        0.1807084  190.0609
-4: 15464.11  43053.08 327602.7 469472.4 619555.9        0.2248891  150.3012
-5: 26355.13  61611.65 449765.0 632564.2 687785.2        0.2008511  173.0141
-6: 23762.78  45308.19 381685.8 699419.3 780203.3        0.2115944  160.5329
+1: Closed      2008   157   197265.6     96915.54     153825.8          75000
+2: Closed      2009   125   190579.3     49227.67     146716.1          38000
+3: Closed      2010   102   193019.0    113879.19     150254.9          88500
+4: Closed      2011    95   160356.6     68564.35     128390.0          55000
+5: Closed      2012   100   220514.4    129113.90     179138.9         104950
+6: Closed      2013   111   190175.0     84846.14     156464.4          70000
+        p10      p25      p75      p90      p95 top5_value_share mean_ppsf
+      <num>    <num>    <num>    <num>    <num>            <num>     <num>
+1: 27401.76 43135.15 234835.3 495612.4 784840.2        0.2627134  146.4267
+2: 15724.48 19392.37 236995.7 565218.5 756998.1        0.2790527  118.7584
+3: 19359.11 38517.14 235821.2 514930.3 712663.8        0.2506118  139.1553
+4: 15165.18 25200.67 218435.2 409015.7 562969.1        0.2449871  112.1296
+5: 18389.90 36722.76 301674.7 573843.3 675420.5        0.2093914  136.4023
+6: 18171.65 31818.89 213047.1 627527.5 735459.8        0.2519257  118.5521
    median_ppsf
          <num>
-1:   188.08508
-2:   183.06749
-3:   175.86641
-4:   134.92502
-5:   141.15876
-6:    98.68013
+1:    84.92832
+2:    44.98792
+3:    82.97864
+4:    52.73158
+5:    85.80350
+6:    51.17998
 
 Dataset: composition
 Rows: 22  Columns: 13
@@ -417,59 +417,59 @@ property_type | character | nonmissing: 22 | distinct nonmissing: 1
 [1] "Houses and townhouses"
 sales | integer | nonmissing: 22 | distinct nonmissing: 21
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  54.00   73.25  164.50  166.59  229.25  417.00
+   95.0   114.5   236.5   246.3   365.8   490.0
 mean_price | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 210967  238767  257284  269248  299689  376954
+ 156516  164962  195142  204643  219079  301974
 median_price | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 130876  158664  170626  176867  197007  247088
+  49228   69580   99997   97852  125138  141710
 usable_area_sales | integer | nonmissing: 22 | distinct nonmissing: 21
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  54.00   73.25  164.50  166.59  229.25  417.00
+   95.0   114.5   236.5   246.3   365.8   490.0
 mean_sqft | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   1334    1430    1463    1479    1529    1664
-median_sqft | numeric | nonmissing: 22 | distinct nonmissing: 22
+   1278    1374    1399    1430    1504    1633
+median_sqft | numeric | nonmissing: 22 | distinct nonmissing: 20
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   1165    1222    1288    1306    1381    1530
+   1107    1177    1200    1243    1326    1465
 mean_age | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  69.62   76.32   79.22   79.99   84.10   90.43
+  75.08   78.47   80.59   81.85   85.01   92.05
 hie_share | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-0.00000 0.02187 0.03220 0.03193 0.04587 0.05600
-hie_start_year_share | numeric | nonmissing: 22 | distinct nonmissing: 19
+0.00000 0.01415 0.02579 0.02437 0.03209 0.04717
+hie_start_year_share | numeric | nonmissing: 22 | distinct nonmissing: 18
     Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
-0.000000 0.006775 0.015505 0.016744 0.025481 0.042857
+0.000000 0.005061 0.009871 0.012001 0.018217 0.037736
 share | numeric | nonmissing: 22 | distinct nonmissing: 1
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
       1       1       1       1       1       1
 First six records:
     group sale_year         property_type sales mean_price median_price
    <char>     <int>                <char> <int>      <num>        <num>
-1: Closed      2008 Houses and townhouses    88   301926.4     215218.0
-2: Closed      2009 Houses and townhouses    65   318672.5     220337.7
-3: Closed      2010 Houses and townhouses    54   264936.3     190600.3
-4: Closed      2011 Houses and townhouses    64   217275.6     171647.2
-5: Closed      2012 Houses and townhouses    69   276135.6     199143.0
-6: Closed      2013 Houses and townhouses    70   258847.8     151642.7
+1: Closed      2008 Houses and townhouses   157   197265.6     96915.54
+2: Closed      2009 Houses and townhouses   125   190579.3     49227.67
+3: Closed      2010 Houses and townhouses   102   193019.0    113879.19
+4: Closed      2011 Houses and townhouses    95   160356.6     68564.35
+5: Closed      2012 Houses and townhouses   100   220514.4    129113.90
+6: Closed      2013 Houses and townhouses   111   190175.0     84846.14
    usable_area_sales mean_sqft median_sqft mean_age  hie_share
                <int>     <num>       <num>    <num>      <num>
-1:                88  1351.966      1167.5 77.40909 0.02272727
-2:                65  1643.738      1530.0 84.50769 0.03076923
-3:                54  1333.704      1177.5 89.87037 0.00000000
-4:                64  1473.578      1295.5 81.50000 0.04687500
-5:                69  1529.739      1386.0 80.24638 0.01449275
-6:                70  1571.371      1416.0 89.55714 0.04285714
+1:               157  1278.325        1107 85.28662 0.01273885
+2:               125  1500.112        1386 88.57600 0.02400000
+3:               102  1395.020        1181 91.06863 0.00000000
+4:                95  1406.200        1224 82.31579 0.03157895
+5:               100  1511.650        1326 77.94000 0.01000000
+6:               111  1562.757        1400 84.18018 0.02702703
    hie_start_year_share share
                   <num> <num>
-1:           0.01136364     1
-2:           0.01538462     1
-3:           0.00000000     1
-4:           0.01562500     1
-5:           0.00000000     1
-6:           0.04285714     1
+1:          0.006369427     1
+2:          0.008000000     1
+3:          0.000000000     1
+4:          0.010526316     1
+5:          0.000000000     1
+6:          0.027027027     1
 
 Dataset: support
 Rows: 78  Columns: 10
@@ -496,35 +496,35 @@ y | numeric | nonmissing: 78 | distinct nonmissing: 78
 schools | integer | nonmissing: 78 | distinct nonmissing: 2
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
   1.000   1.000   1.000   1.013   1.000   2.000
-sales | integer | nonmissing: 78 | distinct nonmissing: 61
+sales | integer | nonmissing: 78 | distinct nonmissing: 60
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   0.00   15.25   34.00   46.99   63.75  179.00
-parcels | integer | nonmissing: 78 | distinct nonmissing: 53
+   0.00   24.50   51.00   69.47   97.00  279.00
+parcels | integer | nonmissing: 78 | distinct nonmissing: 51
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   0.00   13.25   28.00   38.77   53.00  140.00
-pre_sales | integer | nonmissing: 78 | distinct nonmissing: 36
+   0.00   19.50   40.00   52.79   76.50  191.00
+pre_sales | integer | nonmissing: 78 | distinct nonmissing: 46
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   0.00    4.00   13.00   16.37   22.00   66.00
-post_sales | integer | nonmissing: 78 | distinct nonmissing: 47
+   0.00    9.25   21.50   28.05   42.00  107.00
+post_sales | integer | nonmissing: 78 | distinct nonmissing: 53
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   0.00    9.00   17.50   26.81   39.00  100.00
+   0.00   13.00   25.50   35.08   50.75  143.00
 First six records:
    school_site_id                               school_names  group       x
             <int>                                     <char> <char>   <num>
 1:         610280 Kate S Buckingham Special Education Center Closed 1194147
 2:         610205           Lyman Trumbull Elementary School Closed 1164685
-3:         610023           William H King Elementary School Closed 1159806
-4:         609932   Jesse Owens Elementary Community Academy Closed 1178488
-5:         610224             West Pullman Elementary School Closed 1174831
-6:         610028        Alfred David Kohn Elementary School Closed 1178053
+3:         610224             West Pullman Elementary School Closed 1174831
+4:         610028        Alfred David Kohn Elementary School Closed 1178053
+5:         609932   Jesse Owens Elementary Community Academy Closed 1178488
+6:         610023           William H King Elementary School Closed 1159806
          y schools sales parcels pre_sales post_sales
      <num>   <int> <int>   <int>     <int>      <int>
-1: 1844347       1   124      98        52         65
-2: 1934622       1   116      88        43         65
-3: 1896556       1    66      53        19         40
-4: 1822184       1    64      52        22         39
-5: 1825539       1    63      54        17         41
-6: 1835838       1    55      41        20         31
+1: 1844347       1   191     134        82         91
+2: 1934622       1   118      90        45         65
+3: 1825539       1   112      85        37         60
+4: 1835838       1    92      72        44         42
+5: 1822184       1    91      65        37         50
+6: 1896556       1    86      67        32         46
 
 Dataset: site_year
 Rows: 858  Columns: 3
@@ -536,16 +536,16 @@ school_site_id | integer | nonmissing: 858 | distinct nonmissing: 78
 sale_year | integer | nonmissing: 858 | distinct nonmissing: 11
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
    2008    2010    2013    2013    2016    2018
-sales | integer | nonmissing: 858 | distinct nonmissing: 26
+sales | integer | nonmissing: 858 | distinct nonmissing: 33
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  0.000   1.000   3.000   4.272   6.000  26.000
+  0.000   2.000   4.000   6.316   9.000  33.000
 First six records:
 Key: <school_site_id, sale_year>
    school_site_id sale_year sales
             <int>     <int> <int>
-1:         609797      2008     1
-2:         609797      2009     2
-3:         609797      2010     0
+1:         609797      2008     3
+2:         609797      2009     3
+3:         609797      2010     2
 4:         609797      2011     0
 5:         609797      2012     1
 6:         609797      2013     2
@@ -563,18 +563,18 @@ n_welcoming_schools | integer | nonmissing: 19 | distinct nonmissing: 3
 n_other_candidate_sites | integer | nonmissing: 19 | distinct nonmissing: 3
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
  0.0000  0.0000  0.0000  0.6316  1.0000  2.0000
-sales | integer | nonmissing: 19 | distinct nonmissing: 18
+sales | integer | nonmissing: 19 | distinct nonmissing: 19
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-    1.0    11.5    41.0  4735.5   956.5 82866.0
+      1      19      65    6070    1404  104881
 First six records:
-            focal_exposure n_welcoming_schools n_other_candidate_sites sales
-                    <char>               <int>                   <int> <int>
-1:     outside_focal_rings                   0                       0 82866
-2:            control_only                   0                       0  2702
-3:            treated_only                   1                       0    93
-4: treated_control_overlap                   0                       0    41
-5:     outside_focal_rings                   0                       1  1019
-6:     outside_focal_rings                   1                       0  1010
+            focal_exposure n_welcoming_schools n_other_candidate_sites  sales
+                    <char>               <int>                   <int>  <int>
+1:     outside_focal_rings                   0                       0 104881
+2:            control_only                   0                       0   4011
+3:            treated_only                   1                       0    134
+4: treated_control_overlap                   0                       0     65
+5:     outside_focal_rings                   0                       1   1472
+6:     outside_focal_rings                   1                       0   1400
 
 Dataset: selection
 Rows: 22  Columns: 5
@@ -590,20 +590,20 @@ market_sales | integer | nonmissing: 22 | distinct nonmissing: 21
    98.0   121.8   244.0   256.7   382.0   517.0
 price_sales | integer | nonmissing: 22 | distinct nonmissing: 21
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  54.00   73.25  164.50  166.59  229.25  417.00
+   95.0   114.5   236.5   246.3   365.8   490.0
 retention | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 0.4798  0.5615  0.6522  0.6417  0.7220  0.8066
+ 0.9328  0.9479  0.9614  0.9616  0.9737  1.0000
 First six records:
 Key: <group, sale_year>
     group sale_year market_sales price_sales retention
    <char>     <int>        <int>       <int>     <num>
-1: Closed      2008          157          88 0.5605096
-2: Closed      2009          130          65 0.5000000
-3: Closed      2010          106          54 0.5094340
-4: Closed      2011           98          64 0.6530612
-5: Closed      2012          101          69 0.6831683
-6: Closed      2013          119          70 0.5882353
+1: Closed      2008          157         157 1.0000000
+2: Closed      2009          130         125 0.9615385
+3: Closed      2010          106         102 0.9622642
+4: Closed      2011           98          95 0.9693878
+5: Closed      2012          101         100 0.9900990
+6: Closed      2013          119         111 0.9327731
 
 Dataset: location_variants
 Rows: 44  Columns: 6
@@ -616,46 +616,46 @@ sale_year | integer | nonmissing: 44 | distinct nonmissing: 11
    2008    2010    2013    2013    2016    2018
 variant | character | nonmissing: 44 | distinct nonmissing: 2
 [1] "Before nearby-school exclusions" "Preferred geography"
-sales | integer | nonmissing: 44 | distinct nonmissing: 41
+sales | integer | nonmissing: 44 | distinct nonmissing: 43
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   54.0    86.5   169.0   173.4   233.5   426.0
+   95.0   138.8   255.5   256.4   377.2   503.0
 mean_price | numeric | nonmissing: 44 | distinct nonmissing: 44
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 210967  237151  257284  268875  297809  376954
-median_price | numeric | nonmissing: 44 | distinct nonmissing: 37
+ 156516  166838  198323  203933  217128  306164
+median_price | numeric | nonmissing: 44 | distinct nonmissing: 42
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 127385  158347  170297  174455  190600  247088
+  49228   68452   96916   96730  115785  157425
 First six records:
          group sale_year                         variant sales mean_price
         <char>     <int>                          <char> <int>      <num>
-1: Stayed open      2018 Before nearby-school exclusions   426   250893.3
-2: Stayed open      2016 Before nearby-school exclusions   291   248583.7
-3: Stayed open      2011 Before nearby-school exclusions   187   212318.7
-4:      Closed      2010 Before nearby-school exclusions    70   284651.0
-5:      Closed      2018 Before nearby-school exclusions   193   282313.2
-6: Stayed open      2012 Before nearby-school exclusions   176   235703.1
+1: Stayed open      2018 Before nearby-school exclusions   503   226322.9
+2: Stayed open      2016 Before nearby-school exclusions   385   202827.8
+3: Stayed open      2011 Before nearby-school exclusions   281   162619.2
+4:      Closed      2010 Before nearby-school exclusions   123   206999.2
+5:      Closed      2018 Before nearby-school exclusions   237   241346.5
+6: Stayed open      2012 Before nearby-school exclusions   298   161340.2
    median_price
           <num>
-1:     158081.7
-2:     171977.3
-3:     144082.6
-4:     190600.3
-5:     149250.7
-6:     149106.4
+1:    129676.00
+2:    114009.38
+3:     65749.50
+4:    116634.88
+5:    122403.20
+6:     58088.67
 
 Dataset: map_sales
-Rows: 3665  Columns: 4
+Rows: 5419  Columns: 4
 Key: row_id
 Duplicate or missing keys: 0
-row_id | character | nonmissing: 3665 | distinct nonmissing: 3665
-[1] "7147011"  "7234241"  "7252512"  "96110589" "96110958" "96111019"
-x | numeric | nonmissing: 3665 | distinct nonmissing: 3301
+row_id | character | nonmissing: 5419 | distinct nonmissing: 5419
+[1] "7147011"  "7234241"  "7252512"  "96110589" "96110653" "96110958"
+x | numeric | nonmissing: 5419 | distinct nonmissing: 4593
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-1137516 1164243 1171043 1170749 1179321 1199842
-y | numeric | nonmissing: 3665 | distinct nonmissing: 3300
+1137516 1164493 1170870 1170640 1178597 1200036
+y | numeric | nonmissing: 5419 | distinct nonmissing: 4592
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-1817591 1843170 1866979 1868519 1896761 1935854
-group | character | nonmissing: 3665 | distinct nonmissing: 2
+1817537 1840538 1861357 1865466 1891439 1935854
+group | character | nonmissing: 5419 | distinct nonmissing: 2
 [1] "Closed"      "Stayed open"
 First six records:
 Key: <row_id>
@@ -665,8 +665,8 @@ Key: <row_id>
 2:  7234241 1191329 1845248 Stayed open
 3:  7252512 1169717 1830399 Stayed open
 4: 96110589 1186074 1855824 Stayed open
-5: 96110958 1170180 1855290 Stayed open
-6: 96111019 1169878 1840312 Stayed open
+5: 96110653 1178656 1868980 Stayed open
+6: 96110958 1170180 1855290 Stayed open
 
 Dataset: date_precision
 Rows: 4  Columns: 3
@@ -675,17 +675,17 @@ Duplicate or missing keys: 0
 group | character | nonmissing: 4 | distinct nonmissing: 2
 [1] "Closed"      "Stayed open"
 sale_date_precision | character | nonmissing: 4 | distinct nonmissing: 2
-[1] "idor_refined_day" "recording_month"
+[1] "idor_refined_day" "sale_month"
 sales | integer | nonmissing: 4 | distinct nonmissing: 4
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  350.0   547.2   792.0   916.2  1161.0  1731.0
+  593.0   759.5  1237.5  1354.8  1832.8  2351.0
 First six records:
          group sale_date_precision sales
         <char>              <char> <int>
-1: Stayed open    idor_refined_day  1731
-2: Stayed open     recording_month   971
-3:      Closed    idor_refined_day   613
-4:      Closed     recording_month   350
+1: Stayed open    idor_refined_day  2351
+2: Stayed open          sale_month  1660
+3:      Closed    idor_refined_day   815
+4:      Closed          sale_month   593
 
 Dataset: source_hashes
 Rows: 12  Columns: 2
@@ -695,12 +695,12 @@ source | character | nonmissing: 12 | distinct nonmissing: 12
 [1] "clean prices"           "corrected transactions" "CPI"
 [4] "CPS Fermi notice"       "CPS Garfield notice"    "exposure"
 sha256 | character | nonmissing: 12 | distinct nonmissing: 12
-[1] "0df3dd222123982666fcf19e8cd868afcfb2584a83e1a66bdd1642b4d604a376"
-[2] "23fdd8d201d76459277e91e58f8c62a0da4ea35a0bc22f50bdf6dcc8b6d066f9"
-[3] "94d97c338031c975afc8ff981114e28080ea6712759917ba23699248221a69c6"
-[4] "9aa9d5341315e40a1ca40d317288f99f8a3179fea51ae05e14708479f88768fc"
-[5] "ae01e1fd0e91bfd06224194eb56faa98326b75f6a311ca6c16db9c693875b31e"
-[6] "b3acc8952f1888263255fb77f260920d06ef723b45ae173d9ddf6f4986293abc"
+[1] "23fdd8d201d76459277e91e58f8c62a0da4ea35a0bc22f50bdf6dcc8b6d066f9"
+[2] "75ed0204fad68cf0a00c11fdcb1641a262b3729af0abd14d9e24e280dc38cfe1"
+[3] "90b67018d2a90f3856b4e834d2e59766d859b9e27eb61e8ee333824c9b145f04"
+[4] "94d97c338031c975afc8ff981114e28080ea6712759917ba23699248221a69c6"
+[5] "9aa9d5341315e40a1ca40d317288f99f8a3179fea51ae05e14708479f88768fc"
+[6] "ae01e1fd0e91bfd06224194eb56faa98326b75f6a311ca6c16db9c693875b31e"
 First six records:
                    source
                    <char>
@@ -713,8 +713,8 @@ First six records:
                                                              sha256
                                                              <char>
 1: d1d1f5ecc2b7149ab7fc4aec68963af03a3045618bb9149d1d87899215c557b5
-2: cec4cc41c883cb7a89b5891cb94809cca277900b0531d1b8edcaf80a03149f68
-3: cc2f6933f9c0ea46a8c8e787d287562fe3b2b053fe7ae654b3cfe50ab8609776
-4: 0df3dd222123982666fcf19e8cd868afcfb2584a83e1a66bdd1642b4d604a376
-5: b3acc8952f1888263255fb77f260920d06ef723b45ae173d9ddf6f4986293abc
-6: dc2e5ee5780eb6eb3ca98601775365f771b81d6368ca56be77ba956e1501435a
+2: bbf3a096ea9ea2f8c2f56c8bd9dd48dc4141766ee9037fc581146afa574dd18c
+3: f6920ff7de3bc58ba39585ae92ee0cc46d56c06aa57d7e26cab57cad48d1b9d4
+4: 75ed0204fad68cf0a00c11fdcb1641a262b3729af0abd14d9e24e280dc38cfe1
+5: 90b67018d2a90f3856b4e834d2e59766d859b9e27eb61e8ee333824c9b145f04
+6: ef3e21b10c9e245bab67715ee291fdf532c77745e1bef64172e8a147107daf0f

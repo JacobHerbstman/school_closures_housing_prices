@@ -1,0 +1,192 @@
+
+Dataset: summary_stats
+Rows: 24  Columns: 18
+Key: sample, group, period
+Duplicate or missing keys: 0
+sample | character | nonmissing: 24 | distinct nonmissing: 4
+[1] "All property, 0.25 mile"  "All property, 0.5 mile"
+[3] "Single-family, 0.25 mile" "Single-family, 0.5 mile"
+group | character | nonmissing: 24 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+period | character | nonmissing: 24 | distinct nonmissing: 3
+[1] "2008-2012" "2013"      "2014-2018"
+sales | integer | nonmissing: 24 | distinct nonmissing: 24
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  111.0   611.8  1281.0  1852.2  2339.8  7188.0
+sites_with_sales | integer | nonmissing: 24 | distinct nonmissing: 15
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  18.00   22.75   33.50   34.54   46.25   48.00
+median_real_price | numeric | nonmissing: 24 | distinct nonmissing: 24
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  68430   90732  120315  131417  153805  305635
+mean_real_price | numeric | nonmissing: 24 | distinct nonmissing: 24
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 160543  200945  219091  247158  279959  437897
+mean_building_sqft | numeric | nonmissing: 24 | distinct nonmissing: 24
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1347    1435    1754    1811    2131    2475
+mean_age | numeric | nonmissing: 24 | distinct nonmissing: 24
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  72.58   79.65   85.70   85.83   92.27  100.04
+share_two_to_six_units | numeric | nonmissing: 24 | distinct nonmissing: 13
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  0.0000  0.1814  0.2428  0.4690  0.6078
+share_unknown_unit_count | numeric | nonmissing: 24 | distinct nonmissing: 13
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.00000 0.00000 0.01331 0.02379 0.03842 0.08041
+share_reo | numeric | nonmissing: 24 | distinct nonmissing: 24
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.1572  0.2281  0.3642  0.3236  0.4004  0.4710
+share_resale_365 | numeric | nonmissing: 24 | distinct nonmissing: 24
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.04505 0.09130 0.09916 0.09721 0.10903 0.12104
+share_price_tail | numeric | nonmissing: 24 | distinct nonmissing: 24
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+0.006431 0.018659 0.023157 0.024627 0.031376 0.048991
+share_same_party | numeric | nonmissing: 24 | distinct nonmissing: 11
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
+0.0000000 0.0000000 0.0000000 0.0005073 0.0009149 0.0021834
+share_unflagged | numeric | nonmissing: 24 | distinct nonmissing: 24
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.4187  0.4827  0.5604  0.5740  0.6548  0.7522
+median_real_price_unflagged | numeric | nonmissing: 24 | distinct nonmissing: 24
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 146663  171223  202572  237155  282591  471911
+share_month_only_date | numeric | nonmissing: 24 | distinct nonmissing: 24
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.02429 0.03209 0.09111 0.36603 0.97539 0.98793
+First six records:
+                    sample       group    period sales sites_with_sales
+                    <char>      <char>    <char> <int>            <int>
+1: All property, 0.25 mile      Closed 2008-2012  1412               29
+2: All property, 0.25 mile      Closed      2013   283               29
+3: All property, 0.25 mile      Closed 2014-2018  1597               29
+4: All property, 0.25 mile Stayed open 2008-2012  3308               48
+5: All property, 0.25 mile Stayed open      2013   713               48
+6: All property, 0.25 mile Stayed open 2014-2018  3729               48
+   median_real_price mean_real_price mean_building_sqft  mean_age
+               <num>           <num>              <num>     <num>
+1:         122881.66        214346.9           2309.717  96.67139
+2:         133258.74        227174.8           2475.389  98.27208
+3:         182968.19        321410.8           2392.815 100.04195
+4:          69777.39        160542.6           2054.226  90.79444
+5:          78560.05        168832.4           2151.262  91.43478
+6:         117748.27        206339.1           2094.285  93.85197
+   share_two_to_six_units share_unknown_unit_count share_reo share_resale_365
+                    <num>                    <num>     <num>            <num>
+1:              0.5949008               0.07223796 0.4206799       0.11898017
+2:              0.6077739               0.06360424 0.3215548       0.06360424
+3:              0.5654352               0.04884158 0.1972448       0.09016907
+4:              0.5142080               0.08041112 0.4709794       0.10943168
+5:              0.4628331               0.02805049 0.3786816       0.09817672
+6:              0.4591043               0.03781175 0.2282113       0.09224993
+   share_price_tail share_same_party share_unflagged
+              <num>            <num>           <num>
+1:       0.02620397     0.0007082153       0.4553824
+2:       0.03180212     0.0000000000       0.6077739
+3:       0.03631810     0.0012523482       0.7019411
+4:       0.02388150     0.0000000000       0.4186820
+5:       0.02805049     0.0000000000       0.5217391
+6:       0.02547600     0.0010726736       0.6728345
+   median_real_price_unflagged share_month_only_date
+                         <num>                 <num>
+1:                    252125.9            0.98087819
+2:                    211217.8            0.10954064
+3:                    271198.0            0.03256105
+4:                    171455.8            0.98790810
+5:                    146662.6            0.09677419
+6:                    163961.9            0.02574417
+
+Dataset: period_series
+Rows: 880  Columns: 10
+Key: frequency, version, sample, group, period_start
+Duplicate or missing keys: 0
+frequency | character | nonmissing: 880 | distinct nonmissing: 2
+[1] "annual"    "quarterly"
+sample | character | nonmissing: 880 | distinct nonmissing: 4
+[1] "All property, 0.25 mile"  "All property, 0.5 mile"
+[3] "Single-family, 0.25 mile" "Single-family, 0.5 mile"
+group | character | nonmissing: 880 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+period_start | numeric | nonmissing: 880 | distinct nonmissing: 44
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   2008    2010    2013    2013    2016    2019
+version | character | nonmissing: 880 | distinct nonmissing: 2
+[1] "All clean sales"         "Excluding flagged sales"
+sales | integer | nonmissing: 880 | distinct nonmissing: 335
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+    5.0    41.0    86.5   159.2   189.2  1676.0
+median_real_price | numeric | nonmissing: 880 | distinct nonmissing: 846
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  38834  111717  167360  193486  231260  700443
+mean_real_price | numeric | nonmissing: 880 | distinct nonmissing: 880
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 102594  215019  276240  294551  349952  669515
+share_reo | numeric | nonmissing: 880 | distinct nonmissing: 389
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+0.00000 0.00000 0.02564 0.15953 0.31506 0.68098
+share_resale_365 | numeric | nonmissing: 880 | distinct nonmissing: 346
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 0.0000  0.0000  0.0000  0.0505  0.1015  0.2549
+First six records:
+   frequency                  sample  group period_start         version sales
+      <char>                  <char> <char>        <num>          <char> <int>
+1:    annual All property, 0.25 mile Closed         2008 All clean sales   349
+2:    annual All property, 0.25 mile Closed         2009 All clean sales   310
+3:    annual All property, 0.25 mile Closed         2010 All clean sales   272
+4:    annual All property, 0.25 mile Closed         2011 All clean sales   241
+5:    annual All property, 0.25 mile Closed         2012 All clean sales   240
+6:    annual All property, 0.25 mile Closed         2013 All clean sales   283
+   median_real_price mean_real_price share_reo share_resale_365
+               <num>           <num>     <num>            <num>
+1:         200498.92        265539.5 0.4297994       0.12893983
+2:          88025.34        198750.1 0.5129032       0.13225806
+3:          90953.93        178859.2 0.5073529       0.09926471
+4:         101874.76        183363.4 0.3360996       0.13278008
+5:         155797.30        231382.5 0.2750000       0.09583333
+6:         133258.74        227174.8 0.3215548       0.06360424
+
+Dataset: site_prices
+Rows: 566  Columns: 7
+Key: sample, school_site_id, period
+Duplicate or missing keys: 0
+school_site_id | integer | nonmissing: 566 | distinct nonmissing: 78
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+ 609797  610012  610114  610102  610224  610521
+sample | character | nonmissing: 566 | distinct nonmissing: 4
+[1] "All property, 0.25 mile"  "All property, 0.5 mile"
+[3] "Single-family, 0.25 mile" "Single-family, 0.5 mile"
+group | character | nonmissing: 566 | distinct nonmissing: 2
+[1] "Closed"      "Stayed open"
+period | character | nonmissing: 566 | distinct nonmissing: 2
+[1] "2008-2012" "2014-2018"
+sales | integer | nonmissing: 566 | distinct nonmissing: 192
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+   1.00   18.00   47.00   71.25   90.00  576.00
+median_real_price | numeric | nonmissing: 566 | distinct nonmissing: 539
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  18302   45528   88631  194420  265556 1078765
+school_names | character | nonmissing: 566 | distinct nonmissing: 78
+[1] "Adam Clayton Powell Paideia Community Academy ES"
+[2] "Alexander Graham Elementary School"
+[3] "Alfred David Kohn Elementary School"
+[4] "Amos Alonzo Stagg Elementary School"
+[5] "Ana Roque de Duprey Elementary School / Alexander von Humboldt Elementary School"
+[6] "Anna R. Langford Community Academy"
+First six records:
+   school_site_id                  sample  group    period sales
+            <int>                  <char> <char>    <char> <int>
+1:         609906 All property, 0.25 mile Closed 2008-2012    19
+2:         609906 All property, 0.25 mile Closed 2014-2018    45
+3:         609932 All property, 0.25 mile Closed 2008-2012    37
+4:         609932 All property, 0.25 mile Closed 2014-2018    50
+5:         610020 All property, 0.25 mile Closed 2008-2012    35
+6:         610020 All property, 0.25 mile Closed 2014-2018    45
+   median_real_price                             school_names
+               <num>                                   <char>
+1:          52473.16           Robert Emmet Elementary School
+2:          88589.78           Robert Emmet Elementary School
+3:          82668.68 Jesse Owens Elementary Community Academy
+4:          88673.03 Jesse Owens Elementary Community Academy
+5:          54682.54      Francis Scott Key Elementary School
+6:         159822.01      Francis Scott Key Elementary School

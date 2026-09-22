@@ -15,12 +15,12 @@ school_names | character | nonmissing: 77 | distinct nonmissing: 77
 [6] "Anna R. Langford Community Academy"
 group | character | nonmissing: 77 | distinct nonmissing: 2
 [1] "Closed"      "Stayed open"
-pre_sales | integer | nonmissing: 77 | distinct nonmissing: 49
+pre_sales | integer | nonmissing: 77 | distinct nonmissing: 58
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   1.00   18.00   28.00   32.71   44.00   80.00
+   1.00   36.00   60.00   61.78   86.00  177.00
 pre_median | numeric | nonmissing: 77 | distinct nonmissing: 77
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  19878   97489  171647  213870  275510  715367
+  21719   45752   64734  146165  173472  654723
 price_group | character | nonmissing: 77 | distinct nonmissing: 2
 [1] "Above pre-period median"       "Below/equal pre-period median"
 First six records:
@@ -34,12 +34,12 @@ First six records:
 6:         609864             John W Cook Elementary School Stayed open
    pre_sales pre_median                   price_group
        <int>      <num>                        <char>
-1:        26   108617.9 Below/equal pre-period median
-2:        62   458855.8       Above pre-period median
-3:         2   275509.8       Above pre-period median
-4:        10   277124.9       Above pre-period median
-5:         3    19878.0 Below/equal pre-period median
-6:        54   192376.9       Above pre-period median
+1:        67   54409.53 Below/equal pre-period median
+2:        74  401936.64       Above pre-period median
+3:         2  275509.79       Above pre-period median
+4:        15  265798.54       Above pre-period median
+5:        10   21718.62 Below/equal pre-period median
+6:       101   83732.86       Above pre-period median
 
 Dataset: pre_price_counts
 Rows: 44  Columns: 4
@@ -52,19 +52,19 @@ price_group | character | nonmissing: 44 | distinct nonmissing: 2
 sale_year | integer | nonmissing: 44 | distinct nonmissing: 11
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
    2008    2010    2013    2013    2016    2018
-sales | integer | nonmissing: 44 | distinct nonmissing: 37
+sales | integer | nonmissing: 44 | distinct nonmissing: 40
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   44.0    98.5   155.5   163.4   199.5   436.0
+   69.0   160.2   225.0   253.0   333.0   563.0
 First six records:
 Key: <group, price_group, sale_year>
     group             price_group sale_year sales
    <char>                  <char>     <int> <int>
-1: Closed Above pre-period median      2008   135
-2: Closed Above pre-period median      2009   100
-3: Closed Above pre-period median      2010    84
-4: Closed Above pre-period median      2011   109
-5: Closed Above pre-period median      2012   129
-6: Closed Above pre-period median      2013   139
+1: Closed Above pre-period median      2008   180
+2: Closed Above pre-period median      2009   142
+3: Closed Above pre-period median      2010   146
+4: Closed Above pre-period median      2011   140
+5: Closed Above pre-period median      2012   176
+6: Closed Above pre-period median      2013   182
 
 Dataset: pre_price_definition
 Rows: 1  Columns: 3
@@ -72,7 +72,7 @@ Key: cutoff
 Duplicate or missing keys: 0
 cutoff | numeric | nonmissing: 1 | distinct nonmissing: 1
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 171647  171647  171647  171647  171647  171647
+  64734   64734   64734   64734   64734   64734
 sites | integer | nonmissing: 1 | distinct nonmissing: 1
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
      77      77      77      77      77      77
@@ -82,7 +82,7 @@ unclassified_sales | integer | nonmissing: 1 | distinct nonmissing: 1
 First six records:
      cutoff sites unclassified_sales
       <num> <int>              <int>
-1: 171647.2    77                  0
+1: 64733.55    77                  0
 
 Dataset: annual
 Rows: 22  Columns: 13
@@ -95,115 +95,123 @@ sale_year | integer | nonmissing: 22 | distinct nonmissing: 11
    2008    2010    2013    2013    2016    2018
 sales | integer | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  129.0   188.0   316.5   326.8   415.5   754.0
+  244.0   294.5   468.0   506.0   703.5   907.0
 mean | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 198632  242178  266275  288497  323625  437737
+ 140100  170571  207430  219543  258869  352143
 median | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 138964  167885  202350  211486  237915  358606
+  54798   79495  122145  122763  159201  210075
 p75 | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 257292  323512  395225  409097  483317  627224
+ 184395  205744  276833  309203  395826  539698
 p95 | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 623024  717376  772462  830543  911669 1264577
+ 480721  598698  667031  724097  773786 1108968
 nominal_mean | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 158890  193451  224438  236379  266212  367251
+ 107673  139056  170275  180561  207017  295448
 mean_ppsf | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  104.6   122.7   129.8   138.1   159.3   190.2
-over_500k | integer | nonmissing: 22 | distinct nonmissing: 21
+  76.61   87.86  104.11  105.45  119.83  154.55
+over_500k | integer | nonmissing: 22 | distinct nonmissing: 20
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  17.00   34.50   51.50   55.45   74.00  111.00
-over_1m | integer | nonmissing: 22 | distinct nonmissing: 14
+  17.00   37.25   53.50   57.55   76.00  112.00
+over_1m | integer | nonmissing: 22 | distinct nonmissing: 15
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  0.000   3.000   6.500   8.818  12.250  25.000
+  0.000   3.000   6.500   8.955  12.250  25.000
 contribution_over_500k | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  65551   85978  119759  141964  174759  315283
+  29976   57642   76842   99294  103852  242318
 mean_below_500k | numeric | nonmissing: 22 | distinct nonmissing: 22
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 143833  165618  176128  180895  181893  262078
+ 107267  121787  142562  138933  149969  188787
 First six records:
-         group sale_year sales     mean   median      p75      p95 nominal_mean
-        <char>     <int> <int>    <num>    <num>    <num>    <num>        <num>
-1: Stayed open      2015   425 244278.2 173209.0 328857.7 752309.1     203919.6
-2: Stayed open      2010   338 218407.0 160771.2 321729.5 633139.7     170071.3
-3: Stayed open      2018   754 265421.4 172898.6 335207.9 835314.5     230983.2
-4: Stayed open      2009   314 252838.4 195447.6 405560.2 679079.9     194424.7
-5: Stayed open      2011   327 198632.2 142399.1 257291.6 639778.0     158890.4
-6: Stayed open      2017   639 254924.1 174992.5 318766.6 820629.7     217944.2
-   mean_ppsf over_500k over_1m contribution_over_500k mean_below_500k
-       <num>     <int>   <int>                  <num>           <num>
-1:  128.9642        58       8              102464.77        164225.3
-2:  121.7470        34       0               65550.58        169952.1
-3:  130.6023       111      22              120620.53        169797.6
-4:  139.8812        34       1               72965.11        201715.0
-5:  104.5960        31       3               68434.88        143832.8
-6:  126.9790        84      13              104950.15        172672.7
+         group sale_year sales     mean    median      p75      p95
+        <char>     <int> <int>    <num>     <num>    <num>    <num>
+1: Stayed open      2015   591 196212.2 105672.24 245008.7 645174.2
+2: Stayed open      2010   672 142968.4  59138.74 192755.7 526708.8
+3: Stayed open      2018   907 237800.6 149494.13 288106.6 779839.1
+4: Stayed open      2011   540 146272.4  62286.52 184394.9 533262.9
+5: Stayed open      2009   802 140099.5  54798.36 184432.6 480721.3
+6: Stayed open      2017   837 213497.6 134226.94 265384.0 746976.0
+   nominal_mean mean_ppsf over_500k over_1m contribution_over_500k
+          <num>     <num>     <int>   <int>                  <num>
+1:     163766.3 104.57355        58       8               73684.48
+2:     111314.6  77.96792        38       0               36573.47
+3:     206919.9 118.66465       112      22              101172.45
+4:     116986.6  77.37845        35       3               45958.17
+5:     107673.3  76.61242        36       1               29976.28
+6:     182513.8 107.64422        85      13               81172.49
+   mean_below_500k
+             <num>
+1:        135861.0
+2:        112771.9
+3:        155876.4
+4:        107266.7
+5:        115298.7
+6:        147282.1
 
 Dataset: site_year
-Rows: 799  Columns: 12
+Rows: 821  Columns: 12
 Key: group, school_site_id, sale_year
 Duplicate or missing keys: 0
-group | character | nonmissing: 799 | distinct nonmissing: 2
+group | character | nonmissing: 821 | distinct nonmissing: 2
 [1] "Closed"      "Stayed open"
-school_site_id | integer | nonmissing: 799 | distinct nonmissing: 77
+school_site_id | integer | nonmissing: 821 | distinct nonmissing: 77
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 609797  610013  610119  610110  610225  610521
-school_names | character | nonmissing: 799 | distinct nonmissing: 77
+ 609797  610013  610119  610109  610225  610521
+school_names | character | nonmissing: 821 | distinct nonmissing: 77
 [1] "Adam Clayton Powell Paideia Community Academy ES"
 [2] "Alexander Graham Elementary School"
 [3] "Alfred David Kohn Elementary School"
 [4] "Amos Alonzo Stagg Elementary School"
 [5] "Ana Roque de Duprey Elementary School / Alexander von Humboldt Elementary School"
 [6] "Anna R. Langford Community Academy"
-sale_year | integer | nonmissing: 799 | distinct nonmissing: 11
+sale_year | integer | nonmissing: 821 | distinct nonmissing: 11
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
    2008    2010    2013    2013    2016    2018
-sales | integer | nonmissing: 799 | distinct nonmissing: 34
+sales | integer | nonmissing: 821 | distinct nonmissing: 45
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  1.000   4.000   7.000   8.999  12.000  40.000
-total | numeric | nonmissing: 799 | distinct nonmissing: 799
+   1.00    7.00   12.00   13.56   19.00   54.00
+total | numeric | nonmissing: 821 | distinct nonmissing: 821
     Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
-   17511   500037  1188115  2488659  2663358 28710214
-mean | numeric | nonmissing: 799 | distinct nonmissing: 799
+   15348   678568  1535084  2816274  3187726 28710214
+mean | numeric | nonmissing: 821 | distinct nonmissing: 821
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  15210   99174  158472  238531  297296 1404744
-median | numeric | nonmissing: 799 | distinct nonmissing: 792
+  15348   75491  118437  204944  249515 1404744
+median | numeric | nonmissing: 821 | distinct nonmissing: 819
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  15519   76188  154639  223368  296151 1404744
-over_500k | integer | nonmissing: 799 | distinct nonmissing: 25
+  15348   45954   85840  177949  225450 1404744
+over_500k | integer | nonmissing: 821 | distinct nonmissing: 26
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  0.000   0.000   0.000   1.527   1.000  29.000
-mean_ppsf | numeric | nonmissing: 799 | distinct nonmissing: 799
+  0.000   0.000   0.000   1.542   1.000  29.000
+mean_ppsf | numeric | nonmissing: 821 | distinct nonmissing: 821
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  7.046  50.453  86.228 114.058 147.207 496.359
-share | numeric | nonmissing: 799 | distinct nonmissing: 350
+  5.921  38.818  64.552  96.414 113.688 496.359
+share | numeric | nonmissing: 821 | distinct nonmissing: 443
     Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
-0.001326 0.013826 0.022293 0.027534 0.034483 0.164773
-contribution | numeric | nonmissing: 799 | distinct nonmissing: 799
-     Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
-    41.63   1580.67   3467.49   7943.59   7930.81 119396.85
+0.001103 0.014006 0.022444 0.026797 0.034913 0.122449
+contribution | numeric | nonmissing: 821 | distinct nonmissing: 821
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+   25.48  1353.48  2811.79  5883.02  5877.57 83461.80
 First six records:
          group school_site_id                    school_names sale_year sales
         <char>          <int>                          <char>     <int> <int>
-1: Stayed open         609797 Jacob Beidler Elementary School      2015     9
-2: Stayed open         609797 Jacob Beidler Elementary School      2010     4
-3: Stayed open         609797 Jacob Beidler Elementary School      2018    12
-4: Stayed open         609797 Jacob Beidler Elementary School      2009    10
-5: Stayed open         609797 Jacob Beidler Elementary School      2011     6
-6: Stayed open         609797 Jacob Beidler Elementary School      2017     8
-       total     mean    median over_500k mean_ppsf      share contribution
-       <num>    <num>     <num>     <int>     <num>      <num>        <num>
-1: 1910862.0 212318.0 241497.50         0  89.19859 0.02117647     4496.146
-2:  634978.9 158744.7 139810.38         0  41.06871 0.01183432     1878.636
-3: 2136423.7 178035.3 156004.85         0  81.64684 0.01591512     2833.453
-4: 2299570.0 229957.0 160862.94         1 110.24755 0.03184713     7323.471
-5:  627234.4 104539.1  44920.08         0  38.68481 0.01834862     1918.148
-6: 1933943.0 241742.9 212436.73         0  90.51102 0.01251956     3026.515
+1: Stayed open         609797 Jacob Beidler Elementary School      2015    11
+2: Stayed open         609797 Jacob Beidler Elementary School      2010    15
+3: Stayed open         609797 Jacob Beidler Elementary School      2018    15
+4: Stayed open         609797 Jacob Beidler Elementary School      2011    12
+5: Stayed open         609797 Jacob Beidler Elementary School      2009    26
+6: Stayed open         609797 Jacob Beidler Elementary School      2017    10
+       total      mean    median over_500k mean_ppsf      share contribution
+       <num>     <num>     <num>     <int>     <num>      <num>        <num>
+1: 2058120.9 187101.90 155523.96         0  78.98447 0.01861252     3482.438
+2: 1190761.1  79384.08  51351.59         0  26.74539 0.02232143     1771.966
+3: 2718522.3 181234.82 165873.49         0  77.48763 0.01653804     2997.268
+4:  935625.3  77968.77  39734.75         0  31.06256 0.02222222     1732.639
+5: 3026785.4 116414.82  61427.81         1  53.40736 0.03241895     3774.047
+6: 2222454.4 222245.44 205188.58         0  84.48280 0.01194743     2655.262
 
 Dataset: changes
 Rows: 154  Columns: 15
@@ -221,75 +229,67 @@ school_names | character | nonmissing: 154 | distinct nonmissing: 77
 [4] "Amos Alonzo Stagg Elementary School"
 [5] "Ana Roque de Duprey Elementary School / Alexander von Humboldt Elementary School"
 [6] "Anna R. Langford Community Academy"
-n_before | integer | nonmissing: 154 | distinct nonmissing: 32
+n_before | integer | nonmissing: 154 | distinct nonmissing: 37
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   0.00    5.25   10.00   11.34   15.75   38.00
-mean_before | numeric | nonmissing: 148 | distinct nonmissing: 148
+   0.00    7.25   14.00   14.93   19.75   45.00
+mean_before | numeric | nonmissing: 151 | distinct nonmissing: 151
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
-  17511   97620  157146  261374  333496 1404744       6
-share_before | numeric | nonmissing: 154 | distinct nonmissing: 82
+  15348   76976  125638  242421  314694 1404744       3
+share_before | numeric | nonmissing: 154 | distinct nonmissing: 91
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-0.00000 0.01252 0.02014 0.02597 0.03286 0.11152
-contribution_before | numeric | nonmissing: 154 | distinct nonmissing: 149
+0.00000 0.01351 0.02031 0.02597 0.03509 0.08857
+contribution_before | numeric | nonmissing: 154 | distinct nonmissing: 152
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-      0    1389    3004    8716    8393   88248
-n_after | integer | nonmissing: 154 | distinct nonmissing: 29
+      0    1379    2788    7116    7141   67825
+n_after | integer | nonmissing: 154 | distinct nonmissing: 36
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   0.00    7.00   13.00   13.94   20.00   40.00
-mean_after | numeric | nonmissing: 152 | distinct nonmissing: 76
-   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
-  43749  121603  175129  299898  402223 1021973       2
-share_after | numeric | nonmissing: 154 | distinct nonmissing: 41
+   1.00    9.00   16.00   16.92   25.00   43.00
+mean_after | numeric | nonmissing: 154 | distinct nonmissing: 77
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-0.00000 0.01194 0.02194 0.02597 0.03448 0.10031
+  35438  104002  158033  284351  380782 1017621
+share_after | numeric | nonmissing: 154 | distinct nonmissing: 55
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
+0.001103 0.012626 0.025253 0.025974 0.033076 0.080808
 contribution_after | numeric | nonmissing: 154 | distinct nonmissing: 77
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-      0    1763    3983    8001    8034   90001
+  113.5  1924.5  3795.2  6954.7  6702.6 72500.5
 start_year | integer | nonmissing: 154 | distinct nonmissing: 2
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
    2016    2016    2016    2016    2017    2017
 change | numeric | nonmissing: 154 | distinct nonmissing: 153
     Min.  1st Qu.   Median     Mean  3rd Qu.     Max.
--53546.3   -979.3    544.2   -715.8   1690.2   8783.9
-within | numeric | nonmissing: 154 | distinct nonmissing: 147
+-40328.9   -640.6    520.2   -161.8   1774.2   9596.3
+within | numeric | nonmissing: 154 | distinct nonmissing: 152
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
--4371.4  -172.0   380.8   766.0  1214.4 18150.6
+-3446.7     0.0   523.3   795.6  1377.9 14066.9
 mix | numeric | nonmissing: 154 | distinct nonmissing: 153
      Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
--71696.91  -1185.99     38.98  -1481.76   1243.17  11875.02
+-54395.86   -924.62     48.85   -957.40    812.08  12522.01
 First six records:
-    group school_site_id
-   <char>          <int>
-1: Closed         610119
-2: Closed         610085
-3: Closed         610023
-4: Closed         610031
-5: Closed         610210
-6: Closed         610187
-                                                                       school_names
-                                                                             <char>
-1:                                              Elizabeth Peabody Elementary School
-2:                                                     Near North Elementary School
-3:                                                 William H King Elementary School
-4:                                               Jean D Lafayette Elementary School
-5: Ana Roque de Duprey Elementary School / Alexander von Humboldt Elementary School
-6:                                                 Graeme Stewart Elementary School
-   n_before mean_before share_before contribution_before n_after mean_after
-      <int>       <num>        <num>               <num>   <int>      <num>
-1:       28    728787.3  0.104089219           75858.899       7  1016817.3
-2:       17    807330.7  0.063197026           51020.900      11   778693.3
-3:       22    428555.5  0.081784387           35049.146      13   466544.4
-4:       30    571230.1  0.111524164           63705.961      24   650753.4
-5:       21    620321.1  0.078066914           48426.555      19   669099.0
-6:        2   1176172.6  0.007434944            8744.777       1   948237.6
-   share_after contribution_after start_year     change    within        mix
-         <num>              <num>      <int>      <num>     <num>      <num>
-1: 0.021943574          22312.606       2016 -53546.293 18150.616 -71696.909
-2: 0.034482759          26851.494       2016 -24169.406 -1398.646 -22770.759
-3: 0.040752351          19012.780       2016 -16036.366  2327.518 -18363.884
-4: 0.075235110          48959.504       2016 -14746.458  7425.855 -22172.313
-5: 0.059561129          39852.291       2016  -8574.264  3356.602 -11930.866
-6: 0.003134796           2972.532       2016  -5772.246 -1204.607  -4567.639
+    group school_site_id                        school_names n_before
+   <char>          <int>                              <char>    <int>
+1: Closed         610119 Elizabeth Peabody Elementary School       28
+2: Closed         610085        Near North Elementary School       17
+3: Closed         610023    William H King Elementary School       24
+4: Closed         610031  Jean D Lafayette Elementary School       31
+5: Closed         610187    Graeme Stewart Elementary School        2
+6: Closed         610277   Anthony Overton Elementary School        7
+   mean_before share_before contribution_before n_after mean_after share_after
+         <num>        <num>               <num>   <int>      <num>       <num>
+1:    728787.3  0.080000000           58302.982       7  1016817.3 0.017676768
+2:    807330.7  0.048571429           39213.206      11   778693.3 0.027777778
+3:    414338.9  0.068571429           28411.811      15   426703.0 0.037878788
+4:    566556.6  0.088571429           50180.725      25   641266.9 0.063131313
+5:   1176172.6  0.005714286            6720.986       1   948237.6 0.002525253
+6:    431838.8  0.020000000            8636.777       5   365353.1 0.012626263
+   contribution_after start_year     change     within        mix
+                <num>      <int>      <num>      <num>      <num>
+1:          17974.044       2016 -40328.939 14066.9220 -54395.861
+2:          21630.370       2016 -17582.835 -1093.2205 -16489.615
+3:          16162.993       2016 -12248.817   658.0817 -12906.899
+4:          40484.021       2016  -9696.704  5666.8804 -15363.584
+5:           2394.539       2016  -4326.447  -939.0395  -3387.407
+6:           4613.045       2016  -4023.732 -1084.5901  -2939.142
 
 Dataset: omissions
 Rows: 319  Columns: 5
@@ -298,27 +298,27 @@ Duplicate or missing keys: 0
 sale_year | integer | nonmissing: 319 | distinct nonmissing: 11
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
    2008    2010    2013    2013    2016    2018
-mean | numeric | nonmissing: 319 | distinct nonmissing: 306
+mean | numeric | nonmissing: 319 | distinct nonmissing: 314
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 209577  287908  328247  335404  380760  452785
-median | numeric | nonmissing: 319 | distinct nonmissing: 175
+ 145082  198575  265163  258743  313365  371560
+median | numeric | nonmissing: 319 | distinct nonmissing: 195
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 169599  211693  229592  252496  282756  379536
-sales | integer | nonmissing: 319 | distinct nonmissing: 124
+  72415  106223  161834  152011  186127  237500
+sales | integer | nonmissing: 319 | distinct nonmissing: 131
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  111.0   157.0   178.0   197.4   255.0   319.0
+  215.0   250.0   279.0   296.2   343.0   395.0
 omitted_site | integer | nonmissing: 319 | distinct nonmissing: 29
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
  609906  610085  610161  610162  610241  610365
 First six records:
-   sale_year     mean   median sales omitted_site
-       <int>    <num>    <num> <int>        <int>
-1:      2011 242753.1 187075.6   159       609906
-2:      2014 327347.0 229015.2   200       609906
-3:      2017 407813.3 280125.8   281       609906
-4:      2018 356682.4 225497.0   308       609906
-5:      2008 380109.2 357212.5   200       609906
-6:      2015 390800.1 276112.4   166       609906
+   sale_year     mean    median sales omitted_site
+       <int>    <num>     <num> <int>        <int>
+1:      2011 185038.0 106223.08   241       609906
+2:      2014 270029.9 164487.24   268       609906
+3:      2010 178095.7  89842.08   277       609906
+4:      2009 196637.9  86174.26   318       609906
+5:      2012 225358.7 140417.81   242       609906
+6:      2017 333889.8 183787.29   363       609906
 
 Dataset: composition
 Rows: 44  Columns: 8
@@ -331,38 +331,38 @@ sale_year | integer | nonmissing: 44 | distinct nonmissing: 11
    2008    2010    2013    2013    2016    2018
 property_type | character | nonmissing: 44 | distinct nonmissing: 2
 [1] "Apartment buildings" "Houses/townhouses"
-sales | integer | nonmissing: 44 | distinct nonmissing: 42
+sales | integer | nonmissing: 44 | distinct nonmissing: 43
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  54.00   99.75  155.50  163.41  189.75  417.00
+   95.0   151.8   238.5   253.0   342.8   490.0
 mean | numeric | nonmissing: 44 | distinct nonmissing: 44
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 175638  235300  258961  285478  325746  483821
+ 127530  167280  199488  217540  249055  391735
 median | numeric | nonmissing: 44 | distinct nonmissing: 44
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 116740  159121  186664  211671  227051  453214
+  49228   73252  109275  122487  145867  311159
 mean_ppsf | numeric | nonmissing: 44 | distinct nonmissing: 44
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  65.75   98.29  143.18  138.60  165.71  219.46
+  48.76   74.11  110.19  106.86  136.43  176.13
 share | numeric | nonmissing: 44 | distinct nonmissing: 44
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 0.3793  0.4356  0.5000  0.5000  0.5644  0.6207
+  0.363   0.434   0.500   0.500   0.566   0.637
 First six records:
-         group sale_year       property_type sales     mean   median mean_ppsf
-        <char>     <int>              <char> <int>    <num>    <num>     <num>
-1: Stayed open      2015 Apartment buildings   175 228532.4 177672.3  79.62431
-2: Stayed open      2010 Apartment buildings   155 203576.4 140950.1  77.86762
-3: Stayed open      2018   Houses/townhouses   417 252511.8 158435.3 156.89318
-4: Stayed open      2018 Apartment buildings   337 281395.5 202062.5  98.07035
-5: Stayed open      2009   Houses/townhouses   166 255720.7 182727.8 175.91580
-6: Stayed open      2011 Apartment buildings   144 182956.6 137581.3  68.79842
+         group sale_year       property_type sales     mean    median mean_ppsf
+        <char>     <int>              <char> <int>    <num>     <num>     <num>
+1: Stayed open      2015 Apartment buildings   256 178330.1 102580.75  62.75518
+2: Stayed open      2010 Apartment buildings   357 127529.9  51252.90  48.76000
+3: Stayed open      2018   Houses/townhouses   490 227819.5 130627.79 144.47822
+4: Stayed open      2011 Apartment buildings   266 130512.9  59973.84  50.04998
+5: Stayed open      2009 Apartment buildings   464 128141.1  52425.80  52.21836
+6: Stayed open      2018 Apartment buildings   417 249529.0 172377.40  88.33216
        share
        <num>
-1: 0.4117647
-2: 0.4585799
-3: 0.5530504
-4: 0.4469496
-5: 0.5286624
-6: 0.4403670
+1: 0.4331641
+2: 0.5312500
+3: 0.5402426
+4: 0.4925926
+5: 0.5785536
+6: 0.4597574
 
 Dataset: monthly
 Rows: 264  Columns: 5
@@ -376,63 +376,63 @@ sale_year | integer | nonmissing: 264 | distinct nonmissing: 11
 sale_month | integer | nonmissing: 264 | distinct nonmissing: 12
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
    1.00    3.75    6.50    6.50    9.25   12.00
-sales | integer | nonmissing: 264 | distinct nonmissing: 56
+sales | integer | nonmissing: 264 | distinct nonmissing: 71
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   6.00   16.00   25.00   27.23   35.00   81.00
+  11.00   25.00   39.00   42.17   58.00  103.00
 mean | numeric | nonmissing: 264 | distinct nonmissing: 264
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 126628  222029  268626  284908  328807  656072
+  99877  159725  199542  218014  265595  528296
 First six records:
          group sale_year sale_month sales     mean
         <char>     <int>      <int> <int>    <num>
-1: Stayed open      2015         12    36 198277.3
-2: Stayed open      2010          3    33 183494.0
-3: Stayed open      2018         10    67 308739.3
-4: Stayed open      2018          1    55 204270.4
-5: Stayed open      2009         12    37 252927.6
-6: Stayed open      2018          4    71 306714.0
+1: Stayed open      2015         12    54 162502.9
+2: Stayed open      2010          3    62 116651.8
+3: Stayed open      2018         10    79 268581.3
+4: Stayed open      2011          9    36 173086.2
+5: Stayed open      2009          2    47 133691.0
+6: Stayed open      2018          1    76 177714.8
 
 Dataset: expensive
-Rows: 665  Columns: 12
+Rows: 681  Columns: 12
 Key: row_id
 Duplicate or missing keys: 0
-row_id | character | nonmissing: 665 | distinct nonmissing: 665
+row_id | character | nonmissing: 681 | distinct nonmissing: 681
 [1] "96110355" "96110741" "96111308" "96111311" "96112159" "96114024"
-pin | character | nonmissing: 665 | distinct nonmissing: 622
+pin | character | nonmissing: 681 | distinct nonmissing: 637
 [1] "13251340370000" "13251340420000" "13251350100000" "13251350310000"
 [5] "13251350320000" "13251350330000"
-group | character | nonmissing: 665 | distinct nonmissing: 2
+group | character | nonmissing: 681 | distinct nonmissing: 2
 [1] "Closed"      "Stayed open"
-school_site_id | integer | nonmissing: 665 | distinct nonmissing: 29
+school_site_id | integer | nonmissing: 681 | distinct nonmissing: 29
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 609809  610015  610062  610066  610205  610345
-school_names | character | nonmissing: 665 | distinct nonmissing: 29
+ 609809  610015  610062  610067  610205  610345
+school_names | character | nonmissing: 681 | distinct nonmissing: 29
 [1] "Alexander Graham Elementary School"
 [2] "Ana Roque de Duprey Elementary School / Alexander von Humboldt Elementary School"
 [3] "Anthony Overton Elementary School"
 [4] "Carter G Woodson South Elementary School"
 [5] "Charles Kozminski Elementary Community Academy"
 [6] "Edmond Burke Elementary School"
-sale_year | integer | nonmissing: 665 | distinct nonmissing: 4
+sale_year | integer | nonmissing: 681 | distinct nonmissing: 4
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
    2015    2016    2017    2017    2018    2018
-sale_month | integer | nonmissing: 665 | distinct nonmissing: 12
+sale_month | integer | nonmissing: 681 | distinct nonmissing: 12
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  1.000   4.000   6.000   6.647   9.000  12.000
-real_price | numeric | nonmissing: 665 | distinct nonmissing: 639
+  1.000   4.000   6.000   6.621   9.000  12.000
+real_price | numeric | nonmissing: 681 | distinct nonmissing: 654
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 500201  600049  721952  813745  936925 2420960
-sale_price_nominal | numeric | nonmissing: 665 | distinct nonmissing: 311
+ 500201  600244  729488  813190  936925 2420960
+sale_price_nominal | numeric | nonmissing: 681 | distinct nonmissing: 318
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 419000  510000  620000  693410  800000 2075000
-property_type | character | nonmissing: 665 | distinct nonmissing: 2
+ 419000  510000  624900  692672  800000 2075000
+property_type | character | nonmissing: 681 | distinct nonmissing: 2
 [1] "Apartment buildings" "Houses/townhouses"
-res_char_bldg_sf | integer | nonmissing: 665 | distinct nonmissing: 507
+res_char_bldg_sf | integer | nonmissing: 681 | distinct nonmissing: 516
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-    652    2012    2496    2939    3486   10860
-real_ppsf | numeric | nonmissing: 665 | distinct nonmissing: 663
+    652    2017    2499    2945    3510   10860
+real_ppsf | numeric | nonmissing: 681 | distinct nonmissing: 679
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  52.91  228.50  297.75  320.30  405.30 1045.36
+  52.91  227.36  297.75  320.45  403.64 1199.32
 First six records:
      row_id            pin  group school_site_id
      <char>         <char> <char>          <int>
@@ -483,18 +483,18 @@ recorded | integer | nonmissing: 830 | distinct nonmissing: 68
 market | integer | nonmissing: 830 | distinct nonmissing: 51
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
    0.00    7.00   13.00   14.65   20.00   61.00
-school_names | character | nonmissing: 799 | distinct nonmissing: 77
+school_names | character | nonmissing: 821 | distinct nonmissing: 77
 [1] "Adam Clayton Powell Paideia Community Academy ES"
 [2] "Alexander Graham Elementary School"
 [3] "Alfred David Kohn Elementary School"
 [4] "Amos Alonzo Stagg Elementary School"
 [5] "Ana Roque de Duprey Elementary School / Alexander von Humboldt Elementary School"
 [6] "Anna R. Langford Community Academy"
-group | character | nonmissing: 799 | distinct nonmissing: 2
+group | character | nonmissing: 821 | distinct nonmissing: 2
 [1] "Closed"      "Stayed open"
-retained | integer | nonmissing: 799 | distinct nonmissing: 34
+retained | integer | nonmissing: 821 | distinct nonmissing: 45
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
-  1.000   4.000   7.000   8.999  12.000  40.000      31
+   1.00    7.00   12.00   13.56   19.00   54.00       9
 First six records:
 Key: <school_site_id, sale_year>
    school_site_id sale_year recorded market                    school_names
@@ -507,12 +507,12 @@ Key: <school_site_id, sale_year>
 6:         609797      2013        8      7 Jacob Beidler Elementary School
          group retained
         <char>    <int>
-1: Stayed open        3
-2: Stayed open       10
-3: Stayed open        4
-4: Stayed open        6
-5: Stayed open        3
-6: Stayed open        4
+1: Stayed open        8
+2: Stayed open       26
+3: Stayed open       15
+4: Stayed open       12
+5: Stayed open        6
+6: Stayed open        7
 
 Dataset: fixed
 Rows: 6  Columns: 6
@@ -525,22 +525,22 @@ sale_year | integer | nonmissing: 6 | distinct nonmissing: 3
    2016    2016    2017    2017    2018    2018
 fixed_mean | numeric | nonmissing: 6 | distinct nonmissing: 6
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 244601  280086  370279  376279  482740  502269
+ 199519  231603  301692  305275  388078  403634
 observed_mean | numeric | nonmissing: 6 | distinct nonmissing: 6
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
- 244601  258282  309113  328235  393424  443717
+ 199519  219280  267169  271406  321130  352143
 sites | integer | nonmissing: 6 | distinct nonmissing: 2
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-   26.0    26.0    35.5    35.5    45.0    45.0
+   29.0    29.0    37.5    37.5    46.0    46.0
 sales | integer | nonmissing: 6 | distinct nonmissing: 6
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  264.0   289.2   432.0   465.7   613.8   750.0
+  350.0   378.0   567.0   599.7   812.2   905.0
 First six records:
          group sale_year fixed_mean observed_mean sites sales
         <char>     <int>      <num>         <num> <int> <int>
-1:      Closed      2016   443717.3      443717.3    26   264
-2:      Closed      2017   495747.7      406706.2    26   281
-3:      Closed      2018   502268.5      353576.4    26   314
-4: Stayed open      2018   296840.9      264648.7    45   750
-5: Stayed open      2017   274500.5      256160.0    45   635
-6: Stayed open      2016   244600.9      244600.9    45   550
+1:      Closed      2018   403634.1      297711.3    29   396
+2:      Closed      2016   352142.9      352142.9    29   350
+3:      Closed      2017   400056.8      328936.7    29   372
+4: Stayed open      2018   251240.4      236626.4    46   905
+5: Stayed open      2017   225057.7      213497.6    46   837
+6: Stayed open      2016   199519.1      199519.1    46   738
