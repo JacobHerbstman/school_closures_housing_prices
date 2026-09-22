@@ -24,13 +24,13 @@ Home sales within one-quarter mile of these schools form the comparison.
 We exclude homes near both groups, schools designated to receive displaced
 students ("welcoming schools"), or other schools on the candidate list.
 Each remaining sale enters once, assigned to the nearest study school of its
-treatment status. The 30 closed programs occupy 29 physical sites. The descriptive
-sample contains 11,600 sales during 2008–2018 around those 29 sites and 48 of
-the 49 control sites. Missing property characteristics are retained. Each
-transaction receives equal weight. Existing regressions use the 10,921-sale
-complete-characteristics sample. This is the working cleaning definition adopted
-on September 7, 2026. It retains Cook County's three legacy sale filters, including
-the deed-type exclusions. The [county-flag audit](tasks/audits/home_sale_quality_flags/)
+treatment status. The 30 closed programs occupy 29 physical sites. Each
+transaction receives equal weight; sample counts are in the data-overview
+report. Since September 22, 2026, descriptive packets use the production clean
+sample, which removes foreclosure auctions and transfers to lenders, flags REO
+resales and other judgment calls, and requires complete characteristics.
+Regression audits have not yet been rerun on it. The sample retains Cook
+County's three legacy sale filters, including the deed-type exclusions. The [county-flag audit](tasks/audits/home_sale_quality_flags/)
 verifies their implementation and records the exclusions.
 
 Exploratory regressions remain in the [price-analysis audit](tasks/audits/home_prices_twfe/).
@@ -44,8 +44,8 @@ findings and research decisions.
 The [housing tasks](tasks/) assemble Cook County Assessor transactions for
 2006–2025, attach property characteristics and historical parcel locations,
 and construct the 2008–2018 samples of houses, townhouses, and two-to-six-unit
-apartment buildings. Descriptive prices retain missing characteristics;
-regressions require complete values for their property controls. The [sales-cleaning README](tasks/clean_home_sales/) explains
+apartment buildings, with complete characteristics and without
+foreclosure auctions or transfers to lenders. The [sales-cleaning README](tasks/clean_home_sales/) explains
 property eligibility, sale-quality filters, price-per-square-foot exclusions,
 and the conversion to 2022 dollars.
 
