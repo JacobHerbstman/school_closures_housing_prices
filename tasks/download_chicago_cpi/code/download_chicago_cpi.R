@@ -1,3 +1,4 @@
+# setwd("/Users/jacobherbstman/Desktop/school_closures_house_prices/tasks/download_chicago_cpi/code")
 suppressPackageStartupMessages(library(data.table))
 
 cpi <- fread(
@@ -17,7 +18,7 @@ setorder(cpi, observation_date)
 
 required_months <- seq(
   as.IDate("2008-01-01"),
-  as.IDate("2022-12-01"),
+  as.IDate("2023-12-01"),
   by = "month"
 )
 required_cpi <- cpi[observation_date %between% range(required_months)]
@@ -30,8 +31,6 @@ stopifnot(
   all(required_cpi$chicago_cpi_all_items > 0)
 )
 
-fwrite(
-  cpi,
-  "../output/chicago_cpi_all_items.csv",
-  na = "NA"
-)
+# Publish only a complete, checked series.
+fwrite(cpi, "../output/chicago_cpi_all_items.csv.tmp", na = "NA")
+stopifnot(file.rename("../output/chicago_cpi_all_items.csv.tmp", "../output/chicago_cpi_all_items.csv"))

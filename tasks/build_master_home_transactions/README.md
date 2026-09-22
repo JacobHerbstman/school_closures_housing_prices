@@ -18,8 +18,13 @@ judgment. The earlier condo-and-parking recovery pipeline is preserved under
 `tasks/audits/build_all_home_sales_with_condos` and does not enter the main
 cleaning graph.
 
-Buyer and seller names are not used to define the sample. `is_mydec_date`
-identifies dates refined using Illinois transfer declarations. Other recorded
-sale dates are not precise enough to classify transactions relative to an
-announcement on a particular day. The output is one row per transaction, keyed by the source
+Buyer and seller names are not used to define the sample. `sale_date` is the
+deed date. `is_mydec_date` identifies dates refined to the day using Illinois
+transfer declarations (MyDec), almost all sales from 2013. Other dates are the
+deed month with the day set to 1 (`sale_date_precision` = `sale_month`). They
+are not recording months: the recorder document number encodes the recording
+day, and recording falls in the same month (29 percent), the next month (51
+percent) or later. Refined dates precede recording by a median of 15 days.
+Neither date records when the price was agreed, typically a month or more
+before closing. The output is one row per transaction, keyed by the source
 `row_id`.

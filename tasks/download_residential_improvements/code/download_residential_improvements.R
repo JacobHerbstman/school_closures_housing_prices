@@ -1,28 +1,11 @@
+# setwd("/Users/jacobherbstman/Desktop/school_closures_house_prices/tasks/download_residential_improvements/code")
 suppressPackageStartupMessages(library(data.table))
 
-arguments <- commandArgs(trailingOnly = TRUE)
-if (length(arguments) != 2L) {
-  stop(
-    "Usage: Rscript download_residential_improvements.R START_YEAR END_YEAR",
-    call. = FALSE
-  )
-}
-
-start_year <- suppressWarnings(as.integer(arguments[1]))
-end_year <- suppressWarnings(as.integer(arguments[2]))
-if (!is.finite(start_year) || !is.finite(end_year) || start_year > end_year) {
-  stop("START_YEAR and END_YEAR must define a valid year range.", call. = FALSE)
-}
 if (!requireNamespace("curl", quietly = TRUE) ||
     !requireNamespace("jsonlite", quietly = TRUE)) {
   stop("The curl and jsonlite R packages are required.", call. = FALSE)
 }
 
-output_file <- sprintf(
-  "../output/residential_improvements_%d_%d.csv",
-  start_year,
-  end_year
-)
 stale_downloads <- list.files(
   "../temp",
   pattern = "^improvements_.*\\.json$",
@@ -31,18 +14,11 @@ stale_downloads <- list.files(
 unlink(stale_downloads)
 
 master_transactions <- fread(
-  sprintf(
-    "../input/master_home_transactions_%d_%d.csv",
-    start_year,
-    end_year
-  ),
+  "../input/master_home_transactions_2006_2025.csv",
   select = c("pin", "sale_year"),
   colClasses = list(character = "pin")
 )
-residential_keys <- unique(master_transactions[
-  sale_year %between% c(start_year, end_year),
-  .(pin, year = sale_year)
-])
+residential_keys <- unique(master_transactions[, .(pin, year = sale_year)])
 if (nrow(residential_keys) == 0L || any(nchar(residential_keys$pin) != 14L)) {
   stop("The master transactions contain no valid residential PIN-years.", call. = FALSE)
 }
@@ -218,7 +194,10 @@ cat(sprintf(
 setorder(improvements, year, pin, card)
 setcolorder(improvements, source_columns)
 
-fwrite(improvements, output_file)
+# Publish only a complete, checked extract.
+fwrite(improvements, "../temp/residential_improvements_2006_2025.csv")
+stopifnot(file.rename("../temp/residential_improvements_2006_2025.csv",
+                      "../output/residential_improvements_2006_2025.csv"))
 cat(sprintf(
   "Wrote %s PIN-year-card records.\n",
   format(nrow(improvements), big.mark = ",")

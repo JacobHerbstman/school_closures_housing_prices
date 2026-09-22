@@ -1,27 +1,19 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-if [[ "$#" -ne 2 ]]; then
-  printf "Usage: %s START_YEAR END_YEAR\n" "$0" >&2
-  exit 1
-fi
-
-start_year="$1"
-end_year="$2"
-if ! [[ "$start_year" =~ ^[0-9]{4}$ && "$end_year" =~ ^[0-9]{4}$ ]] || ((start_year > end_year)); then
-  printf "START_YEAR and END_YEAR must define a valid year range.\n" >&2
-  exit 1
-fi
-
-output_file="../output/parcel_sales_${start_year}_${end_year}.csv"
+# Run from this task's code/ directory: bash download_parcel_sales.sh
+output_file="../output/parcel_sales_2006_2025.csv"
 api_csv="https://datacatalog.cookcountyil.gov/resource/wvhk-k5uv.csv"
 api_json="https://datacatalog.cookcountyil.gov/resource/wvhk-k5uv.json"
 batch_size=500000
-where_clause="township_code in('70','71','72','73','74','75','76','77') and year between ${start_year} and ${end_year}"
+where_clause="township_code in('70','71','72','73','74','75','76','77') and year between 2006 and 2025"
 select_columns="pin,year,township_code,nbhd as neighborhood_code,class,sale_date,is_mydec_date,sale_price,doc_no as sale_document_num,deed_type as sale_deed_type,mydec_deed_type,seller_name as sale_seller_name,is_multisale,num_parcels_sale,buyer_name as sale_buyer_name,sale_type,sale_filter_same_sale_within_365,sale_filter_less_than_10k,sale_filter_deed_type,row_id"
 
+# Assemble the extract in a temporary file; publish it only after every check
+# passes, so a failed transfer leaves the previous snapshot in place.
 temporary_directory=$(mktemp -d "../output/.parcel_sales.XXXXXX")
 trap 'rm -rf "$temporary_directory"' EXIT
+assembled_file="$temporary_directory/parcel_sales.csv"
 
 read_source_count() {
   curl --fail --show-error --silent --retry 5 --retry-delay 2 --retry-connrefused \
@@ -78,8 +70,7 @@ offset=0
 batch_index=0
 expected_header=""
 
-printf "Downloading %s Cook County parcel-sale records for %s--%s.\n" \
-  "$expected_records" "$start_year" "$end_year"
+printf "Downloading %s Cook County parcel-sale records for 2006--2025.\n" "$expected_records"
 
 while ((offset < expected_records)); do
   batch_file="$temporary_directory/batch_${batch_index}.csv"
@@ -95,13 +86,13 @@ while ((offset < expected_records)); do
 
   if ((batch_index == 0)); then
     expected_header="$batch_header"
-    cp "$batch_file" "$output_file"
+    cp "$batch_file" "$assembled_file"
   else
     if [[ "$batch_header" != "$expected_header" ]]; then
       printf "CSV header changed at offset %s.\n" "$offset" >&2
       exit 1
     fi
-    tail -n +2 "$batch_file" >> "$output_file"
+    tail -n +2 "$batch_file" >> "$assembled_file"
   fi
 
   offset=$((offset + records_in_batch))
@@ -109,7 +100,7 @@ while ((offset < expected_records)); do
   printf "  %s of %s records downloaded.\n" "$offset" "$expected_records"
 done
 
-final_inspection=$(inspect_csv "$output_file")
+final_inspection=$(inspect_csv "$assembled_file")
 actual_records=$(printf "%s\n" "$final_inspection" | sed -n '1p')
 ending_records=$(read_source_count)
 
@@ -123,4 +114,5 @@ if ((ending_records != expected_records)); then
   exit 1
 fi
 
+mv "$assembled_file" "$output_file"
 printf "Wrote %s source records to %s.\n" "$actual_records" "$output_file"

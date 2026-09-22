@@ -1,15 +1,5 @@
+# setwd("/Users/jacobherbstman/Desktop/school_closures_house_prices/tasks/build_master_home_transactions/code")
 suppressPackageStartupMessages(library(data.table))
-
-arguments <- commandArgs(trailingOnly = TRUE)
-if (length(arguments) != 2L) {
-  stop("Usage: Rscript build_master_home_transactions.R START_YEAR END_YEAR", call. = FALSE)
-}
-
-start_year <- suppressWarnings(as.integer(arguments[1]))
-end_year <- suppressWarnings(as.integer(arguments[2]))
-if (!is.finite(start_year) || !is.finite(end_year) || start_year > end_year) {
-  stop("START_YEAR and END_YEAR must define a valid year range.", call. = FALSE)
-}
 
 required_columns <- c(
   "pin", "year", "township_code", "neighborhood_code", "class", "sale_date",
@@ -18,10 +8,7 @@ required_columns <- c(
   "sale_filter_same_sale_within_365", "sale_filter_less_than_10k",
   "sale_filter_deed_type", "row_id"
 )
-input_columns <- names(fread(
-  sprintf("../input/parcel_sales_%d_%d.csv", start_year, end_year),
-  nrows = 0L
-))
+input_columns <- names(fread("../input/parcel_sales_2006_2025.csv", nrows = 0L))
 missing_columns <- setdiff(required_columns, input_columns)
 if (length(missing_columns) > 0L) {
   stop(
@@ -31,7 +18,7 @@ if (length(missing_columns) > 0L) {
 }
 
 sales <- fread(
-  sprintf("../input/parcel_sales_%d_%d.csv", start_year, end_year),
+  "../input/parcel_sales_2006_2025.csv",
   select = required_columns,
   na.strings = NULL,
   colClasses = list(character = c(
@@ -84,8 +71,7 @@ sales[, sale_date := sale_date_parsed]
 
 cat(sprintf("Source records: %s\n", format(nrow(sales), big.mark = ",")))
 sales <- sales[
-  sale_year %between% c(start_year, end_year) &
-    property_class %in% c(202:212, 234, 278, 295) &
+  property_class %in% c(202:212, 234, 278, 295) &
     num_parcels_sale == 1L &
     is_multisale == FALSE
 ]
@@ -108,7 +94,9 @@ if (anyDuplicated(documented_sales[, .(sale_year, sale_document_num)]) > 0L) {
 sales[, `:=`(
   sale_month = as.integer(format(sale_date, "%m")),
   sale_quarter = (as.integer(format(sale_date, "%m")) - 1L) %/% 3L + 1L,
-  sale_date_precision = fifelse(is_mydec_date, "idor_refined_day", "recording_month"),
+  # Unrefined dates are the deed month (day set to 1), not the recording month:
+  # document numbers show recording typically falls in that month or the next.
+  sale_date_precision = fifelse(is_mydec_date, "idor_refined_day", "sale_month"),
   property_type = fifelse(
     property_class == 212L,
     "mixed_use_small_residential",
@@ -132,10 +120,6 @@ output_columns <- c(
   "is_multisale", "num_parcels_sale", "sale_filter_same_sale_within_365",
   "sale_filter_less_than_10k", "sale_filter_deed_type"
 )
-output_file <- sprintf(
-  "../output/master_home_transactions_%d_%d.csv",
-  start_year,
-  end_year
-)
+output_file <- "../output/master_home_transactions_2006_2025.csv"
 fwrite(sales[, ..output_columns], output_file)
 cat(sprintf("Wrote %s master transactions to %s.\n", nrow(sales), output_file))

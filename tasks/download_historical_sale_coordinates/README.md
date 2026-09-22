@@ -14,5 +14,12 @@ a requested key or returns duplicate keys. It does not substitute current
 parcel coordinates for missing historical coordinates.
 
 Longitude/latitude are EPSG:4326; projected centroids are EPSG:3435 in US survey
-feet. The finalization audit independently checks the transformation. Run
-`make` from `code/`.
+feet. The finalization audit independently checks the transformation. The
+extract is written to `../temp` and moved into `output/` only after every
+request succeeds and the key checks pass. Run `make` from `code/`.
+
+Current snapshot: retrieved September 22, 2026; 399,882 PIN-years, 399,876 with
+complete coordinates; SHA-256
+`71e7c3841cf9396fd24a75fb51749c984df2620f329e071344548aa4aec1ae77`,
+byte-identical to the September 7, 2026 extract preserved in
+`data_raw/county_snapshots_2026-09-07/`.

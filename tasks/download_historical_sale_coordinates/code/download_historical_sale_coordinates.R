@@ -1,20 +1,9 @@
+# setwd("/Users/jacobherbstman/Desktop/school_closures_house_prices/tasks/download_historical_sale_coordinates/code")
 suppressPackageStartupMessages(library(data.table))
 
-arguments <- commandArgs(trailingOnly = TRUE)
-if (length(arguments) != 2L) {
-  stop("Usage: Rscript download_historical_sale_coordinates.R START_YEAR END_YEAR", call. = FALSE)
-}
-
-start_year <- suppressWarnings(as.integer(arguments[1]))
-end_year <- suppressWarnings(as.integer(arguments[2]))
-if (!is.finite(start_year) || !is.finite(end_year) || start_year > end_year) {
-  stop("START_YEAR and END_YEAR must define a valid year range.", call. = FALSE)
-}
 if (!requireNamespace("curl", quietly = TRUE) || !requireNamespace("jsonlite", quietly = TRUE)) {
   stop("The curl and jsonlite R packages are required.", call. = FALSE)
 }
-
-output_file <- sprintf("../output/historical_sale_coordinates_%d_%d.csv", start_year, end_year)
 
 sales <- fread(
   "../input/master_home_transactions_2006_2025.csv",
@@ -27,8 +16,6 @@ if (nrow(sales) == 0L || anyDuplicated(sales$row_id) > 0L) {
 if (any(nchar(sales$pin) != 14L) || anyNA(sales$sale_year)) {
   stop("Master transactions contain an invalid PIN or sale year.", call. = FALSE)
 }
-sales <- sales[sale_year %between% c(start_year, end_year)]
-stopifnot(nrow(sales) > 0L)
 
 sale_keys <- unique(sales[, .(pin, sale_year)])
 setorder(sale_keys, sale_year, pin)
@@ -183,10 +170,13 @@ if (any(!coordinates[has_historical_coordinates == TRUE, longitude] %between% c(
 }
 
 setorder(coordinates, sale_year, pin)
-fwrite(coordinates, output_file)
+# Publish only a complete, checked extract.
+fwrite(coordinates, "../temp/historical_sale_coordinates_2006_2025.csv")
+stopifnot(file.rename("../temp/historical_sale_coordinates_2006_2025.csv",
+                      "../output/historical_sale_coordinates_2006_2025.csv"))
 cat(sprintf(
   "Historical coordinates are complete for %s of %s PIN-years.\n",
   format(sum(coordinates$has_historical_coordinates), big.mark = ","),
   format(nrow(coordinates), big.mark = ",")
 ))
-cat(sprintf("Wrote %s PIN-year coordinate records to %s.\n", nrow(coordinates), output_file))
+cat(sprintf("Wrote %s PIN-year coordinate records.\n", nrow(coordinates)))
