@@ -26,5 +26,5 @@ for point-distance calculations.
 The cleaner requires unique school IDs in the 2013–14 report card before
 matching programs to receiving schools. `report/schools.txt` describes the saved
 129-row output, its key, missing values, and column distributions. Independent
-checks of the original list, closure assignments, and locations are in the
-`home_data_overview` audit.
+checks of the original list, closure assignments, and locations were in the
+retired `home_data_overview` audit (commit `9762b40`).

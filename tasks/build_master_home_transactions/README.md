@@ -15,7 +15,7 @@ A PIN is a parcel identification number. The task retains only single-PIN,
 non-multisale transactions. Multi-PIN sales
 cannot be assigned to one physical residential property without additional
 judgment. The earlier condo-and-parking recovery pipeline is preserved under
-`tasks/audits/build_all_home_sales_with_condos` and does not enter the main
+the retired `build_all_home_sales_with_condos` audit (commit `9762b40`) and does not enter the main
 cleaning graph.
 
 Buyer and seller names are not used to define the sample. `sale_date` is the

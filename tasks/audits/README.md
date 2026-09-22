@@ -1,15 +1,13 @@
-# Audit tasks
+# Audits
 
-Use this directory for diagnostics, validation, robustness checks, and alternative specifications that should remain separate from the production pipeline. Audit tasks follow the same `input/`, `code/`, and `output/` contract as production tasks.
+Exploratory analyses that read production outputs but never feed them.
 
-Start with [`home_data_overview`](home_data_overview/): school-source checks,
-independent sample reconstruction, and a descriptive packet of raw housing trends.
-[`home_sale_quality_flags`](home_sale_quality_flags/) checks the county flags
-against the saved source and separates low-price, deed-type, and repeat exclusions.
+- [`home_sample_summary`](home_sample_summary/): summary statistics and annual
+  and quarterly descriptive plots for the analysis sample.
+- [`home_prices_twfe`](home_prices_twfe/): quarter-mile event studies and pooled
+  difference-in-differences, with sale-sample variants and pre-period diagnostics.
 
-The current working 30/49 quarter-mile comparison is in
-[`home_prices_twfe`](home_prices_twfe/), using equal weight per transaction as the working specification
-and equal-site-period weights as a sensitivity check. [`home_school_exposure`](home_school_exposure/) provides exposure and
-support diagnostics. [`home_price_rings`](home_price_rings/) retains all closer/farther
-annuli, strict any-site overlap exclusions, and common-site comparisons as
-alternative specifications. Ring results are not inputs to the working baseline.
+Earlier audits (data-overview packets, county-flag and exemption validation,
+distance rings, benchmarks, condo recovery, and others) were retired on
+September 22, 2026. They remain in Git history, last present in commit
+`9762b40`; logbook exhibits drawn from them are frozen in `logbook/exhibits/`.

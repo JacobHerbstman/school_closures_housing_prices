@@ -18,5 +18,5 @@ on 2026-09-02; exact URLs are in the Makefile.
   the local snapshot is preserved.
 
 The correction task verifies SHA-256 fingerprints for both pinned binary
-sources. The original HIE audit uses these same raw files; production never
+sources. The retired HIE audit (commit `9762b40`) used these same raw files; production never
 depends on audit outputs.

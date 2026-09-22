@@ -9,7 +9,7 @@ characteristics and property types to the sales cleaner. Run `make` from `code/`
 
 The task uses a recorded version of the Assessor's field map and categorical
 dictionaries to update 27 characteristics. The
-[home-improvement audit](../audits/home_improvement_exemptions/) checks these
+retired home-improvement audit (`home_improvement_exemptions`, commit `9762b40`) checked these
 calculations against the Assessor's implementation. The correction rules are:
 
 1. Link only exemptions whose inclusive start–expiry interval contains the
@@ -60,9 +60,9 @@ master, with unknown analysis type, rather than receiving a guessed type.
 The rule applies equally to HIE-corrected and uncorrected records.
 
 Later records are only audit evidence. They cannot establish conversion dates
-or be copied backward. See `tasks/audits/home_sales_finalization/` for full
+or be copied backward. The retired finalization audit (commit `9762b40`) checked full
 production/reference parity, class follow-up, sample reconciliation, and
-coordinate checks; see the original HIE audit for source-method validation.
+coordinate checks, and the home-improvement audit validated the source method.
 
 The normal build also writes a standard data report in `report/`, including
 the saved CSV checksum, transaction key checks, missingness, and distributions.

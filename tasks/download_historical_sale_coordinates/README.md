@@ -14,7 +14,7 @@ a requested key or returns duplicate keys. It does not substitute current
 parcel coordinates for missing historical coordinates.
 
 Longitude/latitude are EPSG:4326; projected centroids are EPSG:3435 in US survey
-feet. The finalization audit independently checks the transformation. The
+feet. A retired finalization audit (commit `9762b40`) independently checked the transformation. The
 extract is written to `../temp` and moved into `output/` only after every
 request succeeds and the key checks pass. Run `make` from `code/`.
 

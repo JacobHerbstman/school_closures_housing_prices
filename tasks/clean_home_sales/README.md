@@ -11,9 +11,9 @@ at the same recorded price within 365 days. The repeat flag does not exclude
 every property resold within a year. The deed flag covers quitclaim, executor,
 and beneficial-interest instruments and source SQL NULL types; a blank exported
 type is not sufficient to reconstruct that rule. These reproduce the county's
-legacy filters and do not independently establish an arm's-length sale. The
-source-to-output check and exclusion counts are in
-`tasks/audits/home_sale_quality_flags/`.
+legacy filters and do not independently establish an arm's-length sale. A
+source-to-output check of the flags (retired audit `home_sale_quality_flags`,
+commit `9762b40`) confirmed their implementation.
 
 The task then removes foreclosure auctions (judicial-sale companies, sheriffs,
 selling officers as seller) and transfers to a lender, servicer, Fannie Mae,
@@ -94,8 +94,7 @@ monthly Chicago-Naperville-Elgin CPI-U all-items index. The output retains
 `sale_price_real_2022`, and `price_per_building_sqft_real_2022`. No CPI values
 are interpolated.
 
-Run `make` from `code/`. Before/after membership, counts, and price trends are
-documented in `tasks/audits/home_sales_finalization/`.
+Run `make` from `code/`.
 
 The normal build also writes a standard data report in `report/`, including
 the saved CSV checksum, transaction key checks, missingness, and distributions.

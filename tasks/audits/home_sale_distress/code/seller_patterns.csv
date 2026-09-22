@@ -1,4 +1,0 @@
-indicator,pattern,meaning,limitation
-judicial_seller,JUDICIAL SALE|SHERIFF,Judicial sales company or sheriff named as seller,Identifies a sale intermediary rather than every foreclosure or REO resale
-gse_hud_seller,FANNIE|FREDDIE|FEDERAL (NATL|NATIONAL) (MTG|MORTGAGE)|FEDERAL H(OME|M) (LOAN|LN)|HOUSING (AND )?URBAN|SECRETARY OF HOUSING|^HUD$,Fannie Mae or Freddie Mac or HUD seller including abbreviated names,Suggestive of lender repossession and resale but not an independently verified foreclosure history
-bank_lender_seller,(^| )(BANK|BK|BANC|MORTGAGE|MTG)( |$)|CITIMORTGAGE|CITIBANK|COUNTRYWIDE|AURORA LOAN|BAYVIEW LOAN|OCWEN|JPMORGAN|JP MORGAN|WELLS FARGO|^HSBC|^CHASE,Bank or mortgage company seller including common abbreviations,Can include land trustees or other non-distressed transfers and misses unrecognized entities
